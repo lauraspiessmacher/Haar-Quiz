@@ -107,7 +107,7 @@ ul.list li.has-img{display:flex;gap:14px;align-items:flex-start}
 
 <script>
 const CATS = [
- {id:"fein", label:"Feines Haar", desc:"Das einzelne Haar ist sehr dünn und fällt schnell platt. Hier stehen nur die leichtesten Sprays, Fluids und Seren. Fang mit wenig an und gib es vor allem in Längen und Spitzen."},
+ {id:"fein", label:"Feines Haar", desc:"Für Feenhaar: Das einzelne Haar ist hauchdünn und fällt sofort platt. Hier stehen nur sehr leichte Sprays und wässrige Seren, ohne schwere Öle, Cremes oder viel Silikon. Sparsam in Längen und Spitzen geben."},
  {id:"duenn", label:"Dünnes Haar", desc:"Du hast eher wenige Haare und wenig Fülle, das einzelne Haar ist aber nicht besonders fein. Leichte Produkte, die pflegen, ohne dir die Fülle zu nehmen."},
  {id:"normal", label:"Normales Haar", desc:"Die solide Mitte. Hier darfst du nach deinem Haarzustand auswählen, zum Beispiel nach mehr Glanz, weniger Frizz oder mehr Pflege für strapaziertes Haar."},
  {id:"dick", label:"Dickes Haar", desc:"Kräftiges Haar, das Pflege gut verträgt. Cremes und Seren mit Silikon, Ölen oder Fettalkoholen machen es geschmeidig, ohne dass es platt wirkt."},
@@ -142,7 +142,7 @@ const D = [
  ["Langhaarmädchen","Spitzenserum Lovely Long","duenn normal kaputt","Leichtes Fluid mit Arganöl, Weizenprotein und Aminosäuren","dünn bis normal","lange Haare, trockene Spitzen","Alkohol steht an 3. Stelle. Spliss versiegeln kann es nicht, nur vorbeugen. Fast die gleiche Basis wie das Balea Over Night Fluid."],
  ["NEQI","Leave-In Creme Moisture Mystery","normal dick","Silikonfreie Creme mit Glycerin, macht weich ohne zu beschweren","normal bis dick","normal bis trocken",""],
  ["Pomélo+Co","Haarmaske Molecular Repair","normal kaputt","Silikonfreie Leave-in-Maske mit Weizenprotein, Panthenol und Mandelöl","normal","strapaziert, brüchig","„Phytokeratin“ heißt hier pflanzliche Proteine, kein echtes Keratin."],
- ["Dejan Garz","Leave-In Serum The Foundation","fein duenn normal","Leichtes Gel-Serum mit Amodimethicone, Glycerin und Panthenol","fein bis normal","normal","Fast die gleiche Rezeptur wie der Balea Professional Feuchtigkeitsfiller Aqua Hyaluron."],
+ ["Dejan Garz","Leave-In Serum The Foundation","duenn normal","Leichtes Gel-Serum mit Amodimethicone, Glycerin und Panthenol","dünn bis normal","normal","Fast die gleiche Rezeptur wie der Balea Professional Feuchtigkeitsfiller Aqua Hyaluron."],
  ["Balea Professional","Leave-In Serum Plex Care","normal kaputt","Pflegendes Serum mit Keratin, Erbsenprotein und Rizinusöl","normal","gefärbt, blondiert, strapaziert",""],
  ["Jean&Len","Leave-In Haarmaske Peptide Intense Repair","normal","Silikonfreie Leave-in-Maske mit Proteinen und Peptiden","normal","strapaziert","Alkohol steht an 2. Stelle. Bei sehr trockenem Haar wähle lieber ein anderes Produkt."],
  ["Bali Curls","Bonding Repair Overnight Elixir No.4","dick sehrdick","Silikonfreie Nachtpflege mit Sheabutter und Pflanzenproteinen","dick bis sehr dick","strapaziert, chemisch behandelt","„Pflanzliche Keratin-Alternative“ heißt hier: Proteine aus Mais, Weizen und Soja."],
@@ -151,9 +151,9 @@ const D = [
  ["Garnier Wahre Schätze","Leave-In Haarkur Honig","dick sehrdick","Silikonfreie Creme mit Sonnenblumenöl und Honig, gegen Frizz","dick bis sehr dick","strapaziert, frizzig","dm zeigt „vegan“ an, obwohl Honig drin ist."],
  ["Bali Curls","Leave-In Cream Bonding Repair No.3","dick sehrdick","Wasserfreie Creme aus Ölen und Estern, legt einen Pflegefilm aufs Haar","dick bis sehr dick","trocken","Enthält kein Wasser. Die versprochene Feuchtigkeit kommt also nicht aus dem Produkt. Am besten ins feuchte Haar geben."],
  ["Pantene Pro-V","Leave-In Haarserum Miracles Milk To Water","duenn normal","Silikon und Paraffin legen sich als Schutzfilm ums Haar","dünn bis normal","trockene Spitzen","Die Werbung verspricht, Spliss zu reparieren. Das kann kein Produkt. Fast die gleiche Rezeptur wie Aussie 100 Hours Hydration."],
- ["OGX","Overnight Serum Rescue Fusions","fein duenn normal kaputt","Leichtes, silikonfreies Serum mit echtem Keratin, Weizenprotein und Panthenol","fein bis normal","strapaziert, brüchig",""],
+ ["OGX","Overnight Serum Rescue Fusions","duenn normal kaputt","Silikonfreies Serum mit echtem Keratin, Weizenprotein und Panthenol, dazu etwas Weizenkeim- und Kamelienöl","dünn bis normal","strapaziert, brüchig",""],
  ["Herbal Essences","Haarserum Fiji mit Kokosnussöl","duenn normal","Silikon und Paraffin legen sich als Schutzfilm ums Haar, dazu etwas Kokosöl","dünn bis normal","trocken","Fast die gleiche Rezeptur wie Aussie 100 Hours Hydration."],
- ["Balea Professional","Feuchtigkeitsfiller Aqua Hyaluron","fein duenn normal","Leichtes Gel-Serum mit Amodimethicone, Glycerin und Aloe","fein bis normal","normal bis leicht trocken","Fast die gleiche Rezeptur wie das Dejan Garz Leave-In Serum The Foundation."],
+ ["Balea Professional","Feuchtigkeitsfiller Aqua Hyaluron","duenn normal","Leichtes Gel-Serum mit Amodimethicone, Glycerin und Aloe","dünn bis normal","normal bis leicht trocken","Fast die gleiche Rezeptur wie das Dejan Garz Leave-In Serum The Foundation."],
  ["Schwarzkopf Gliss","Sprühnebel Night Glanz","fein duenn","Mehr Alkohol als Wasser und kaum Pflegestoffe","fein bis dünn","normal","Alkohol steht an 1. Stelle, noch vor Wasser. Für Haare, die geschmeidig bleiben sollen, eignet sich ein anderes Produkt besser."],
  ["Balea Professional","Haarserum Glow & Shine","normal","Pflegendes Serum mit Rizinusöl, Silikon und Glanzpigmenten","normal","glanzlos, frizzig",""],
  ["Balea","Sprühpflege Seidenglanz 5in1","duenn normal","Einfaches, leichtes Spray mit Rizinusöl, Panthenol und Niacinamid","dünn bis normal","glanzlos",""],
