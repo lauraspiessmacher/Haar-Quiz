@@ -198,15 +198,19 @@ q.addEventListener("input", draw);
 const DICKE = ["fein","duenn","normal","dick","sehrdick"];
 const VON = ["Feines","Dünnes","Normales","Dickes","Sehr dickes"];
 const BIS = ["feines","dünnes","normal dickes","dickes","sehr dickes"];
-function passtZu(p){
+function dickeText(p){
   const idx = DICKE.map((d,i)=>p.cats.includes(d)?i:-1).filter(i=>i>=0);
   const lo = Math.min(...idx), hi = Math.max(...idx);
-  const text = (lo===hi ? VON[lo] : `${VON[lo]} bis ${BIS[hi]}`) + " Haar";
+  return (lo===hi ? BIS[lo] : `${VON[lo].toLowerCase()} bis ${BIS[hi]}`) + " Haar";
+}
+const gross = t => t[0].toUpperCase() + t.slice(1);
+function passtZu(p){
+  const text = gross(dickeText(p));
   return p.cats.includes("kaputt") ? `${text} und kaputte Haare` : text;
 }
 function hairHtml(p){
   const [dicke,zustand] = p.hair;
-  return `<div class="hair"><b>Haardicke:</b> ${esc(dicke)}</div><div class="hair"><b>Haarzustand:</b> ${esc(zustand)}</div>${p.rep?`<div class="rep"><b>Repair-Wirkstoffe</b><ul>${p.rep.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>`:""}`;
+  return `<div class="hair"><b>Haardicke:</b> ${esc(dickeText(p))}</div><div class="hair"><b>Haarzustand:</b> ${esc(zustand)}</div>${p.rep?`<div class="rep"><b>Repair-Wirkstoffe</b><ul>${p.rep.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>`:""}`;
 }
 function itemHtml(p, extra){
   return `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${hairHtml(p)}${p.tip?`<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`:""}${extra}</div></li>`;
