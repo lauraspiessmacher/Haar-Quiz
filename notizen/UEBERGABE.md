@@ -35,5 +35,5 @@
 - Schatten: rembg (isnet-general-use) mit eigener Kontur schneiden (Schnittmenge) entfernt Schatten; bei weißen Deckeln auf Weiß Vereinigung nehmen.
 
 ## Offen
-- 13 Shampoos ohne Bild: ISANA Professional (Arganöl & Pflege, Plex, Glycol & Glanz, Glycolic Shine, Tiefenreinigung), ISANA MED (Totes Meer Anti-Juckreiz, Jeden Tag Ultra Sensitiv, Ultra Sensitiv+ Anti-Schuppen), Gliss Sealing Miracle, NIVEA Hairmilk Shine, OGX Strength & Length Keratin Oil, Salthouse Anti-Fett, Garnier Fructis Ananas Hair Food. Vichy „Ultra Apaisant“: Bild = Ultra-Sensitiv für trockene Kopfhaut.
+- Shampoos ohne Bild: siehe Liste unten im Chat; Rossmann-Bilder kamen als Screenshots von Laura (ausgeschnitten mit Kontur + rembg).
 - Guides sind nur auf dem Branch, noch nicht online/in main.
