@@ -247,7 +247,7 @@ const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'
 
 chips.innerHTML = [`<button class="chip" data-id="alle" aria-pressed="true">Alle</button>`]
   .concat(CATS.map(c=>`<button class="chip" data-id="${c.id}" aria-pressed="false">${c.label}</button>`))
-  .concat([`<button class="chip" data-id="liste" aria-pressed="false">Nur Namen</button>`]).join("");
+  .concat([`<button class="chip" data-id="liste" aria-pressed="false">Liste</button>`]).join("");
 chips.querySelectorAll(".chip").forEach(b => b.onclick = () => {
   active = b.dataset.id;
   chips.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x===b));
@@ -280,7 +280,7 @@ const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 
 function drawListe(term){
   let shown = 0;
-  out.innerHTML = `<section class="cat" id="liste"><h2>Nur Namen</h2><p class="cat-desc">Alle Produkte pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</p>` +
+  out.innerHTML = `<section class="cat" id="liste"><h2>Liste</h2><p class="cat-desc">Alle Produkte pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</p>` +
     CATS.map(c => {
       const items = P.filter(p => p.cats.includes(c.id) && matches(p, term)).sort(byName);
       if(!items.length) return "";
