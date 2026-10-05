@@ -185,7 +185,6 @@ segBox.querySelectorAll("button").forEach(b => b.onclick = () => {
   draw();
 });
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const labelOf = id => CATS.find(c=>c.id===id).label;
 
 chips.innerHTML = [`<button class="chip" data-id="alle" aria-pressed="true">Alle</button>`]
   .concat(CATS.map(c=>`<button class="chip" data-id="${c.id}" aria-pressed="false">${c.label}</button>`)).join("");
@@ -226,10 +225,7 @@ function draw(){
     return `<section class="cat" id="${c.id}">
       <h2>${c.label}<span class="count">${items.length}</span></h2>
       <p class="cat-desc">${c.desc}</p>
-      <ul class="list">${items.map(p => {
-        const other = p.cats.filter(x=>x!==c.id).map(labelOf);
-        return itemHtml(p, other.length?`<span class="also">Auch bei: ${other.join(", ")}</span>`:"");
-      }).join("")}</ul>
+      <ul class="list">${items.map(p => itemHtml(p, `<span class="also">Passt zu: ${CATS.filter(x=>p.cats.includes(x.id)).map(x=>x.label).join(", ")}</span>`)).join("")}</ul>
     </section>`;
   }).join("");
   empty.hidden = shown > 0;
