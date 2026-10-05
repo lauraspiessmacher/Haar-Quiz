@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dein Shampoo-Guide</title>
+<style>
+:root{
+  --bg:#F3ECE2;
+  --card:#EBE2D6;
+  --ink:#382F2E;
+  --muted:#6E615C;
+  --taupe:#9E8C80;
+  --line:rgba(56,47,46,.22);
+  --line-soft:rgba(56,47,46,.12);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Noto Serif",Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#F3ECE2; --ink:#382F2E; } }
+:root[data-theme="dark"]{ --bg:#F3ECE2; --ink:#382F2E; }
+*,*::before,*::after{box-sizing:inherit}
+html{background:var(--bg);scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding:30px 22px 56px}
+h1,h2{font-family:var(--serif);font-weight:500;margin:0;line-height:1.1}
+p{margin:0 0 14px}
+:focus-visible{outline:2px solid var(--taupe);outline-offset:3px}
+
+.by{font-size:14px;color:var(--muted);margin-bottom:22px}
+.head{position:relative}
+.head svg{position:absolute;right:-6px;top:-6px;width:90px;height:150px;opacity:.7}
+h1{font-size:clamp(42px,12vw,60px);max-width:9ch;margin-bottom:8px}
+.lead{font-size:18px;max-width:36ch}
+.how{color:var(--muted);font-size:15px;max-width:42ch}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:14px 0 12px;margin:18px 0 6px;z-index:2;border-bottom:1px solid var(--line-soft)}
+.search{width:100%;font:inherit;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:11px 18px;margin-bottom:12px}
+.search::placeholder{color:var(--muted)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:inherit;font-size:14.5px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+section.cat{padding-top:30px}
+section.cat h2{font-size:30px;margin-bottom:8px}
+.cat-desc{color:var(--muted);font-size:15.5px;margin-bottom:16px;max-width:46ch}
+.count{font-family:var(--sans);font-size:14px;color:var(--muted);margin-left:8px;font-weight:400}
+ul.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+ul.list li{padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.brand{font-size:13.5px;color:var(--muted);letter-spacing:.01em}
+.name{font-family:var(--serif);font-size:20px;line-height:1.25}
+.note{font-size:14.5px;color:var(--muted);margin-top:2px}
+h3{font-family:var(--serif);font-weight:500;font-size:21px;margin:22px 0 4px}
+.sub-desc{color:var(--muted);font-size:14.5px;margin-bottom:10px}
+.hair{font-size:14.5px;color:var(--muted);margin-top:2px}
+.hair b{font-weight:500;color:var(--ink)}
+.also{display:inline-block;font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:0 9px;margin-top:6px;color:var(--muted)}
+.box{background:var(--card);border-radius:16px;padding:16px 18px 4px;margin:18px 0 0;font-size:15px}
+.empty{color:var(--muted);padding:30px 0}
+.fine{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
+.switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;margin-bottom:12px}
+.switch button{font:inherit;font-size:14.5px;color:var(--ink);background:transparent;border:0;border-radius:999px;padding:6px 14px;cursor:pointer}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.tag{flex:0 0 auto;font-size:12px;background:var(--card);border-radius:999px;padding:1px 9px;color:var(--muted)}
+ul.list li.has-img{display:flex;gap:14px;align-items:flex-start}
+.txt{flex:1;min-width:0}
+.pic{flex:0 0 auto;width:52px;height:90px;object-fit:contain;order:2}
+ul.plain{list-style:none;margin:0 0 6px;padding:0;border-top:1px solid var(--line-soft)}
+ul.plain li{padding:6px 0;border-bottom:1px solid var(--line-soft);font-size:15.5px}
+.copy{font:inherit;font-size:13.5px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin:0 0 10px;cursor:pointer}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="head">
+    <svg viewBox="0 0 60 100" fill="none" aria-hidden="true">
+      <path d="M22 4 C 14 30, 30 55, 20 96" stroke="#382F2E" stroke-width="1.2"/>
+      <path d="M40 4 C 32 30, 48 55, 38 96" stroke="#9E8C80" stroke-width="1.2"/>
+    </svg>
+    <div class="by">Von Laura, deiner Haarpflege-Bestie</div>
+    <h1>Dein Shampoo-Guide</h1>
+    <p class="lead">Dein Shampoo wählst du in erster Linie nach deinem Kopfhauttyp und erst in zweiter Linie nach deinen Haaren. Hier findest du Shampoos aus der Drogerie und aus dem High-End-Bereich, sortiert nach Kopfhauttypen.</p>
+    <p class="how">Eingeordnet habe ich jedes Shampoo nach seinen Inhaltsstoffen und nicht nach dem Werbeversprechen. Deshalb steht manches Produkt woanders, als der Name vermuten lässt. Du weißt deinen Kopfhauttyp noch nicht? Dann frag mich nach meinem Kopfhaut-Check.</p>
+  </div>
+
+  <div class="bar">
+    <div class="switch" id="seg" role="group" aria-label="Drogerie oder High-End">
+      <button data-seg="alle" aria-pressed="true">Alle</button><button data-seg="Drogerie" aria-pressed="false">Drogerie</button><button data-seg="High-End" aria-pressed="false">High-End</button>
+    </div>
+    <input class="search" id="q" type="search" placeholder="Marke oder Produkt suchen" aria-label="Marke oder Produkt suchen">
+    <div class="chips" id="chips" role="group" aria-label="Kopfhauttyp auswählen"></div>
+  </div>
+
+  <div id="out"></div>
+  <p class="empty" id="empty" hidden>Dazu habe ich gerade kein Shampoo in der Liste.</p>
+
+  <p class="fine">Stand: Oktober 2026. Rezepturen können sich ändern, deshalb lohnt sich vor dem Kauf ein kurzer Blick auf die Inhaltsstoffe. Die Einordnung ist eine Orientierung, jede Kopfhaut reagiert etwas anders. Ich bin keine Ärztin, bei anhaltenden Kopfhautproblemen lass das bitte ärztlich abklären.</p>
+</main>
+
+<script>
+const CATS = [
+ {id:"normal", label:"Normale Kopfhaut", desc:"Die solide Mitte. Reinigt zuverlässig, ohne auszutrocknen und ohne zu beschweren. Hier darfst du nach deinem Haarwunsch auswählen, zum Beispiel nach mehr Glanz oder mehr Pflege."},
+ {id:"trocken", label:"Trockene Kopfhaut", desc:"Mild reinigend und reichhaltiger formuliert. Passt zu trockener Kopfhaut und trockenem, dickem oder krausem Haar. Feines Haar kann davon schnell platt werden."},
+ {id:"kraeftig", label:"Fettende Kopfhaut", desc:"Kräftigere Reinigung für schnell fettende Kopfhaut. Passt auch, wenn feines Haar schnell platt fällt. Reinigt gründlich, ohne zu beschweren."},
+ {id:"sensibel", label:"Sensible Kopfhaut", desc:"Mild reinigend und meist mit beruhigenden Wirkstoffen. Für Kopfhaut, die schnell mit Brennen, Rötung oder Spannen reagiert."},
+ {id:"juckreiz", label:"Juckreiz", desc:"Mit beruhigenden Wirkstoffen wie Urea, Bisabolol oder Allantoin. Menthol kühlt sofort, kann sehr empfindliche Kopfhaut aber auch reizen. Kommt der Juckreiz mit Schuppen, schau auch bei Schuppen. Hält er länger an, lass es ärztlich anschauen."},
+ {id:"schuppen", label:"Schuppen", desc:"Gegen Schuppen, bei denen ein Hefepilz eine Rolle spielt. Kosmetische Shampoos arbeiten mit Wirkstoffen wie Piroctone Olamine, medizinische mit Ketoconazol aus der Apotheke. Wird es nach etwa vier Wochen nicht besser, lass es ärztlich anschauen."},
+ {id:"tief", label:"Tiefenreinigung", desc:"Für den Neustart zwischendurch, ein- bis zweimal im Monat. Entfernt Rückstände von Styling und Öl. Die Shampoos in der ersten Gruppe lösen zusätzlich Kalk und passen deshalb besonders bei hartem Wasser. Als Alltagsshampoo ist es zu kräftig, danach immer Conditioner oder Maske."},
+ {id:"kinder", label:"Kinder", desc:"Für Babys und Kinder. Ganz milde Tenside, möglichst ohne Parfum und ohne Menthol, Säuren oder Anti-Schuppen-Wirkstoffe. Sortiert von der mildesten Formel abwärts."}
+];
+
+/* Feste Felder: brand, name, segment, cats, note. So lässt sich die Liste später mit Website oder App verbinden. */
+const P = [
+ // Normale Kopfhaut
+ {brand:"Wella Professionals", name:"Ultimate Smooth Shampoo", cats:["normal"], note:"Glättend, ohne zu beschweren"},
+ {brand:"Keune", name:"Velvet Smooth Shampoo", cats:["normal"], note:"Glättend, ohne zu beschweren"},
+ {brand:"Redken", name:"All Soft Shampoo", cats:["normal"], note:"Pflegend, aber leichter als die Mega-Curls-Variante"},
+ {brand:"Kérastase", name:"Discipline Bain Fluidealiste", cats:["normal"], note:"Glättet und hilft gegen Frizz"},
+ {brand:"Redken", name:"Extreme Shampoo", cats:["normal"], note:"Mit Proteinen"},
+ {brand:"Redken", name:"Extreme Length Shampoo", cats:["normal"], note:"Pflegend"},
+ {brand:"Goldwell", name:"Just Smooth Shampoo", cats:["normal"], note:"Glättet und hilft gegen Frizz"},
+ {brand:"L'Oréal Professionnel", name:"Metal DX Shampoo", cats:["normal"], note:"Soll Metallrückstände vom Färben binden"},
+ {brand:"Christophe Robin", name:"Hydrating Shampoo mit Aloe Vera", cats:["normal"], note:"Leicht und feuchtigkeitsspendend mit Aloe"},
+ {brand:"Color Wow", name:"Money Laundering Shampoo", cats:["normal"], note:"Sulfatfrei, mild und leicht"},
+ {brand:"Living Proof", name:"No Frizz Shampoo", cats:["normal"], note:"Leicht, glättet gegen Frizz"},
+ {brand:"OUAI", name:"Medium Hair Shampoo", cats:["normal"], note:"Zwischen leicht und pflegend"},
+ {brand:"Kérastase", name:"Genesis Bain Hydra-Fortifiant", cats:["normal"], note:"Leicht, ohne Öle und Silikone"},
+  {brand:"Maria Nila", name:"Mirror Gloss Shampoo", cats:["normal"], note:"Sulfatfrei und mild, für mehr Glanz"},
+ {brand:"Oribe", name:"Shampoo for Supershine", cats:["normal"], note:"Sulfatfrei, Silikone für Glanz"},
+ {brand:"Amika", name:"Mirrorball Shampoo", cats:["normal"], note:"Sulfatfrei, Glanz ohne Silikone"},
+ {brand:"Kérastase", name:"Gloss Absolu Bain Hydra-Glaze", cats:["normal"], note:"Die leichte Variante für Glanz, mit Hyaluron"},
+ {brand:"Redken", name:"Acidic Color Gloss Shampoo", cats:["normal"], note:"Sulfatfrei, Silikon für Glanz"},
+ {brand:"L'Oréal Professionnel", name:"Keratin Alpha Sleek Shampoo", cats:["normal"], note:"Sulfatfrei und glättend"},
+ {brand:"Keune", name:"Radiant Gloss Shampoo", cats:["normal"], note:"Normale Reinigung, Silikon für Glanz"},
+ // Trocken
+ {brand:"Redken", name:"All Soft Mega Curls Shampoo", cats:["trocken"], note:"Reichhaltig"},
+ {brand:"Kérastase", name:"Gloss Absolu Bain Crème Hydra-Glaze", cats:["trocken"], note:"Die reichhaltige Crème-Variante für Glanz"},
+ {brand:"Kérastase", name:"Elixir Ultime Le Bain", cats:["trocken"], note:"Reichhaltig mit fünf Ölen"},
+ {brand:"Amika", name:"Hydro Rush Shampoo", cats:["trocken"], note:"Mild und feuchtigkeitsspendend"},
+ {brand:"Coco & Eve", name:"Like a Virgin Shampoo", cats:["trocken"], note:"Mild und feuchtigkeitsspendend"},
+ {brand:"Oribe", name:"Eternal Curls Shampoo", cats:["trocken"], note:"Mild und pflegend"},
+ {brand:"Oribe", name:"Hair Alchemy Resilience Shampoo", cats:["trocken"], note:"Mild und pflegend"},
+ {brand:"Gisou", name:"Honey Gloss Shampoo", cats:["trocken"], note:"Pflegend, für mehr Glanz"},
+ {brand:"Redken", name:"Acidic Bonding Concentrate Shampoo", cats:["trocken"], note:"Pflegend"},
+ {brand:"Maria Nila", name:"True Soft Shampoo", cats:["trocken"], note:"Mild und pflegend"},
+ {brand:"Olaplex", name:"No.4 Bond Maintenance Shampoo", cats:["trocken"], note:"Sulfatfrei und pflegend"},
+ {brand:"OUAI", name:"Thick Hair Shampoo", cats:["trocken"], note:"Reichhaltig mit Sheabutter"},
+ {brand:"Goldwell", name:"Rich Repair Shampoo", cats:["trocken"], note:"Reichhaltig"},
+ {brand:"Coco & Eve", name:"Bond Therapy Shampoo", cats:["trocken"], note:"Sulfatfrei und pflegend"},
+ // Fettig oder fein
+ {brand:"Kérastase", name:"Specifique Bain Divalent", cats:["kraeftig"], note:"Reinigt den schnell fettenden Ansatz gründlich"},
+ {brand:"Redken", name:"Amino-Mint Shampoo", cats:["kraeftig"], note:"Reinigt gründlich, Menthol erfrischt"},
+ {brand:"L'Oréal Professionnel", name:"Scalp Advanced Anti-Oiliness", cats:["kraeftig"], note:"Reinigt gründlich"},
+ {brand:"Redken", name:"Volume Injection Shampoo", cats:["kraeftig"], note:"Leichte Formel"},
+ {brand:"Goldwell", name:"Ultra Volume Bodifying Shampoo", cats:["kraeftig"], note:"Leichte Formel"},
+ {brand:"Oribe", name:"Shampoo for Magnificent Volume", cats:["kraeftig"], note:"Leichte Formel"},
+ {brand:"OUAI", name:"Fine Hair Shampoo", cats:["kraeftig"], note:"Leichte Formel"},
+ {brand:"Maria Nila", name:"Pure Volume Shampoo", cats:["kraeftig"], note:"Leichte Formel"},
+ {brand:"Olaplex", name:"No.4 FINE Bond Maintenance Shampoo", cats:["kraeftig"], note:"Sulfatfrei und leicht"},
+ {brand:"Coco & Eve", name:"Boost Therapy Shampoo", cats:["kraeftig"], note:"Leichte Formel"},
+ {brand:"Redken", name:"Acidic Grow Full Shampoo", cats:["kraeftig"], note:"Leichte Formel"},
+ {brand:"Kérastase", name:"Nutritive Bain Satin", cats:["kraeftig"], note:"Trotz Pflege-Versprechen kräftig reinigend"},
+ {brand:"Wella Professionals", name:"Ultimate Repair Shampoo", cats:["kraeftig"], note:"Reinigt kräftig"},
+ // Sensibel
+ {brand:"Vichy", name:"Dercos Ultra Apaisant", cats:["sensibel","juckreiz"], note:"Beruhigt bei Juckreiz und Brennen, in Varianten für fettige oder trockene Kopfhaut"},
+ {brand:"Oribe", name:"Serene Scalp Balancing Shampoo", cats:["sensibel"], note:"Beruhigend mit Niacinamid und Panthenol"},
+ {brand:"Eucerin", name:"DermoCapillaire Urea Shampoo", cats:["sensibel","juckreiz"], note:"Ohne Parfum, mit Urea für trockene Kopfhaut"},
+ {brand:"Maria Nila", name:"Head & Hair Heal Shampoo", cats:["sensibel","schuppen"], note:"Mild, mit Piroctone Olamine gegen Schuppen und Aloe"},
+ {brand:"Kérastase", name:"Symbiose Bain Crème Anti-Pelliculaire", cats:["sensibel","schuppen"], note:"Mild, mit Piroctone Olamine gegen Schuppen"},
+ {brand:"L'Oréal Professionnel", name:"Scalp Advanced Anti-Discomfort", cats:["sensibel"], note:"Beruhigend mit Niacinamid, reinigt etwas kräftiger"},
+ // Schuppen
+ {brand:"Vichy", name:"Dercos Anti-Schuppen K", cats:["schuppen"], note:"Mit Piroctone Olamine gegen Schuppen und Salicylsäure"},
+ {brand:"Ketozolin", name:"2% Shampoo", cats:["schuppen"], note:"Medizinisch, mit Ketoconazol, aus der Apotheke"},
+ // Tiefenreinigung
+ {brand:"K18", name:"Peptide Prep Detox Shampoo", cats:["tief"], note:"Löst Rückstände und Kalk, mit Aktivkohle und Salicylsäure"},
+ {brand:"OUAI", name:"Detox Shampoo", cats:["tief"], note:"Löst Rückstände und Kalk, mit Apfelessig"},
+ {brand:"Living Proof", name:"Clarifying Detox Shampoo", cats:["tief"], note:"Löst Rückstände und Kalk, mit Aktivkohle"},
+ {brand:"Olaplex", name:"No.4C Clarifying Shampoo", cats:["tief"], note:"Sulfatfrei, löst Rückstände und Kalk"},
+ {brand:"Keune", name:"Perfect Clarity Shampoo", cats:["tief"], note:"Löst Rückstände, mit Apfelessig"},
+ {brand:"Coco & Eve", name:"Clarifying Detox Shampoo", cats:["tief"], note:"Löst Rückstände und Kalk mit mehreren Kalklösern, reinigt etwas kräftiger"}
+].map(p => ({segment:"High-End", ...p}));
+
+/* Drogerie: [Marke, Produkt, Kategorien, Notiz, Rang für Kinder] */
+const D = [
+ ["Garnier Wahre Schätze","Sanfte Hafermilch","normal","Trotz des Namens normal reinigend, mit etwas Salicylsäure"],
+ ["OGX","Thick & Full Biotin & Collagen","normal","Sulfatfrei und mild, ein Silikon macht das Haar geschmeidiger"],
+ ["sebamed","Every-Day Shampoo","normal sensibel","Sehr milde Reinigung, enthält aber Parfum"],
+ ["Herbal Essences","Repair Arganöl","normal","Normale Reinigung, leicht pflegend mit Arganöl"],
+ ["Schwarzkopf Gliss","Liquid Silk","normal","Normale Reinigung, leicht pflegend mit Aprikosenkernöl"],
+ ["Jean&Len","Hydration Pfirsich & Chia","normal","Normale Reinigung mit Panthenol für Feuchtigkeit"],
+ ["Langhaarmädchen","Lovely Long","normal","Normale Reinigung, leicht pflegend mit Arganöl"],
+ ["Jean&Len","Green Apple & Lemongrass","normal","Normale Reinigung, leicht, mit Panthenol"],
+ ["Dejan Garz","The Foundation","normal","Normale Reinigung mit Panthenol, Hyaluron und etwas Salicylsäure"],
+ ["John Frieda","Frizz Ease Wunder-Reparatur","normal","Normale Reinigung, Öle machen das Haar geschmeidiger"],
+ ["L'Oréal Elvital","Full Resist","normal","Normale Reinigung, Silikone machen das Haar geschmeidiger"],
+ ["Balea","Reparierend beauty essentials","normal","Reinigt etwas kräftiger, Mangobutter und Avocadoöl gleichen aus"],
+ ["Balea med","pH 5,5 hautneutral","normal","Normale Reinigung mit hautfreundlichem pH-Wert und Panthenol"],
+ ["Balea Professional","Plex Care","normal","Normale Reinigung, ein Silikon macht das Haar geschmeidiger"],
+ ["John Frieda","Frizz Ease Traumlocken","normal","Reinigt etwas kräftiger, mit Panthenol"],
+ ["Balea","Intensivpflege","normal","Normale Reinigung mit Panthenol, Niacinamid und Mandelöl"],
+ ["Balea Professional","Keratin Repair","normal","Normale Reinigung mit Proteinen. Im Shampoo bleibt deren Wirkung klein"],
+ ["OGX","Bond Protein Repair","normal","Sulfatfrei und mild, ein Silikon macht das Haar geschmeidiger"],
+ ["Schwarzkopf Gliss","Aqua Revive","normal","Normale Reinigung, leicht, mit Hyaluron"],
+ ["Pomélo+Co","Shine Therapy","normal","Normale Reinigung mit Panthenol"],
+ ["OGX","Coconut Miracle Oil","normal","Reinigt etwas kräftiger, Kokosöl und ein Silikon gleichen aus"],
+ ["Santé","Glossy Shine","normal","Naturkosmetik, normale Reinigung mit Aloe"],
+ ["Balea Professional","Brilliant Blond","normal","Normale Reinigung mit etwas Jojobaöl (kein Silbershampoo)"],
+ ["Pomélo+Co","Molecular Repair","normal","Normale Reinigung mit Proteinen und Kupferpeptid. Im Shampoo bleibt deren Wirkung klein"],
+ ["NEQI","Moisture Mystery","normal","Reinigt etwas kräftiger. Enthält den Konservierer MIT, der öfter Allergien auslöst"],
+ ["ISANA Professional","Arganöl & Pflege","normal","Normale Reinigung, leicht pflegend mit Argan- und Pflaumenkernöl"],
+ ["ISANA Professional","Plex Shampoo","normal","Normale Reinigung mit Proteinen und Panthenol"],
+ ["Schwarzkopf Gliss","Sealing Miracle","normal","Normale Reinigung, leicht und silikonfrei"],
+ ["NIVEA","Hairmilk Shine","normal","Normale Reinigung, leicht pflegend mit Mandelöl, silikonfrei"],
+
+ ["Aussie","Oh My Gloss","normal","Sulfatfrei und mild, mit Silikon für Glanz"],
+ ["L'Oréal Elvital","Dream Length","normal","Normale Reinigung, Silikone glätten und geben Glanz"],
+ ["L'Oréal Elvital","Color Glanz","normal","Normale Reinigung, Silikone für Glanz"],
+ ["Langhaarmädchen","Hydrate & Shine","normal","Normale Reinigung mit Glykolsäure für eine glattere Oberfläche"],
+ ["Aussie","Miracle Moist","normal","Reinigt kräftig, Silikone und Macadamiaöl gleichen aus"],
+ ["L'Oréal Elvital","Glycolic Gloss Spiegelglanz (250 ml)","normal","Normale Reinigung mit Glykolsäure und Silikonen für Glanz"],
+ ["Pantene Pro-V","LOVE Edition Repair & Care","normal","Reinigt etwas kräftiger, Silikone gleichen aus und geben Glanz"],
+ ["ISANA Professional","Glycol & Glanz","normal","Normale Reinigung mit Glykolsäure und Silikon für Glanz"],
+ ["ISANA Professional","Glycolic Shine","normal","Normale Reinigung mit Glykolsäure für Glanz, silikonfrei"],
+ ["syoss","Intense Glaze","normal","Normale Reinigung, Silikone für Glanz"],
+
+ ["Herbal Essences","Fiji","trocken","Sulfatfrei und mild reinigend"],
+ ["Herbal Essences","Feuchtigkeit Aloe Vera","trocken","Sulfatfrei und mild reinigend, mit Aloe"],
+ ["Aussie","Bouncy Curls","trocken","Sulfatfrei und mild reinigend"],
+ ["Bali Curls","Nourishing","trocken","Sulfatfrei und mild, mit Glycerin und Panthenol"],
+ ["Balea Professional","Traumlocken","trocken","Reichhaltig mit Sheabutter und Ölen"],
+ ["Garnier Wahre Schätze","Kokosmilch & Macadamia","trocken","Reichhaltig mit Macadamia- und Kokosöl"],
+ ["Balea Professional","Oil Repair Intensiv","trocken","Reichhaltig mit drei Ölen, kann feines Haar beschweren"],
+ ["Langhaarmädchen","Beautiful Curls","trocken","Sulfatfrei und mild, mit Leinsamen"],
+ ["Pantene Pro-V","Moisture Boost","trocken","Reichhaltig, Silikone machen das Haar geschmeidig"],
+ ["Schwarzkopf Gliss","Oil Nutritive","trocken","Reichhaltig mit Aprikosenkern- und Marulaöl"],
+ ["MONDAY","Moisture Feuchtigkeit","trocken","Sulfatfrei und mild, mit Kokosöl und Shea"],
+ ["OGX","Renewing+ Argan Oil of Morocco","trocken","Sulfatfrei und mild, mit Arganöl und Silikon"],
+ ["IDA WARG","Beauty Repair Shampoo","trocken","Sulfatfrei und mild reinigend"],
+ ["OGX","Strength & Length Keratin Oil","trocken","Sulfatfrei und mild, mit Arganöl und Silikon"],
+ ["Jean&Len","Ölpflege Monoiöl & Maracuja","trocken","Pflegend mit Kokos- und Sonnenblumenöl"],
+
+ ["L'Oréal Elvital","Glycolic Gloss (200 ml)","kraeftig","Sulfatfrei, reinigt trotzdem kräftig, mit Glykolsäure und Salicylsäure"],
+ ["Garnier Fructis","Coco Water","kraeftig","Reinigt den Ansatz gründlich, mit Salicylsäure"],
+ ["Herbal Essences","Dolce Vita","kraeftig","Reinigt kräftig, Menthol erfrischt"],
+ ["Garnier Wahre Schätze","Honig Schätze","kraeftig","Reinigt kräftig"],
+ ["L'Oréal Elvital","Hydra Hyaluronic Pure","kraeftig","Leicht und gründlich, mit Salicylsäure"],
+ ["L'Oréal Elvital","Bond Repair","kraeftig","Trotz Repair-Name kräftig reinigend"],
+ ["Schwarzkopf Gliss","Scalp Balance Tiefenreinigung","kraeftig tief","Reinigt gründlich, löst aber keinen Kalk"],
+ ["Balea Professional","Tiefenreinigung","kraeftig tief","Reinigt gründlich, mit Menthol, löst aber keinen Kalk"],
+ ["ISANA Professional","Tiefenreinigung","kraeftig tief","Reinigt gründlich, mit Menthol, löst aber keinen Kalk"],
+ ["OGX","ProGrowth + Peptide","kraeftig","Reinigt kräftig, mit Mandelsäure und Niacinamid"],
+ ["L'Oréal Elvital","Fiber Booster","kraeftig","Reinigt kräftig, mit Niacinamid"],
+ ["Garnier Fructis","Hydra Aloe","kraeftig","Reinigt kräftig, mit etwas Salicylsäure"],
+ ["Pantene Pro-V","Volumen Pur","kraeftig tief","Leichte Formel ohne viel Pflege, reinigt gründlich"],
+ ["Garnier Fructis","Hair Food Aloe Vera","kraeftig","Reinigt kräftig, mit Aloe und etwas Salicylsäure"],
+ ["Bali Curls","Bonding Repair","kraeftig","Sulfatfrei, reinigt trotzdem kräftig"],
+ ["L'Oréal Elvital","Collagen Lifter","kraeftig","Leicht und gründlich, mit Peptiden"],
+ ["Santé","Intense Hydration","kraeftig","Trotz des Namens kräftig reinigend"],
+ ["Garnier Wahre Schätze","Reiswasser Ritual & Stärke","kraeftig","Reinigt kräftig"],
+ ["NEQI","Repair Reveal","kraeftig","Trotz Repair-Name eher kräftig reinigend"],
+ ["Balea Professional","Hydra Volume","kraeftig","Leicht und ohne beschwerende Pflegestoffe"],
+ ["NEQI","Diamond Glass","kraeftig","Reinigt eher kräftig"],
+ ["John Frieda","Volume Lift","kraeftig","Leichte Formel mit Pflanzenproteinen"],
+ ["Salthouse","Totes Meer Therapie Anti-Fett","kraeftig","Reinigt kräftig, Menthol erfrischt"],
+ ["Garnier Fructis","Ananas Hair Food","kraeftig","Reinigt kräftig, mit etwas Salicylsäure"],
+
+ ["Santé","Simply Sensitive","sensibel","Ohne Parfum, mit Panthenol und Aloe"],
+ ["Balea med","Duschgel & Shampoo 5% Urea","sensibel juckreiz schuppen","Mit Urea für trockene Kopfhaut und Piroctone Olamine gegen Schuppen, auch als Duschgel"],
+ ["Balea med","Totes Meer Ultra Sensitive","sensibel","Ohne Parfum, mit Panthenol und Niacinamid"],
+ ["Salthouse","Totes Meer Therapie Anti-Juckreiz","juckreiz","Mit Urea, Menthol kühlt. Bei sehr empfindlicher Kopfhaut erst testen"],
+ ["ISANA MED","Totes Meer Anti-Juckreiz","juckreiz","Beruhigt mit Allantoin und Bisabolol. Enthält Menthol und Parfum"],
+ ["ISANA MED","Jeden Tag Ultra Sensitiv","sensibel","Ohne Parfum, mit Panthenol und Allantoin"],
+
+ ["sebamed","Anti-Schuppen Plus","schuppen","Mit Piroctone Olamine gegen Schuppen, Menthol kühlt"],
+ ["sebamed","Anti-Schuppen","schuppen","Mit Piroctone Olamine gegen Schuppen"],
+ ["Balea med","Anti-Schuppen Ultra Sensitive","schuppen sensibel","Mit Piroctone Olamine gegen Schuppen, ohne Parfum"],
+ ["Salthouse","Anti-Schuppen Totes Meer","schuppen","Mit Piroctone Olamine gegen Schuppen und Teebaumöl"],
+ ["head&shoulders","Derma x Pro Density & Growth","schuppen","Mit Piroctone Olamine gegen Schuppen, dazu Menthol und Silikone"],
+ ["Pantene Pro-V","Grow Abundant","schuppen","Mit Piroctone Olamine gegen Schuppen, obwohl es als Anti-Haarverlust verkauft wird"],
+ ["ISANA MED","Ultra Sensitiv+ Anti-Schuppen","schuppen sensibel","Mit Piroctone Olamine gegen Schuppen, ohne Parfum"],
+
+ ["Herbal Essences","Limettenduft Tiefenreinigung & Glanz","tief","Löst Rückstände und Kalk"],
+ ["Jean&Len","Purify my hair Grapefruit","tief","Löst Rückstände und Kalk mit mehreren Kalklösern"],
+
+ ["lavera","Baby & Kind Waschlotion & Shampoo","kinder sensibel","Die mildeste Reinigung im Guide, ohne Parfum",1],
+ ["babylove","Waschbalsam Kopf bis Fuß ultra sensitive","kinder sensibel","Sehr mild, für Haut und Haar, ohne Parfum",2],
+ ["Dejan Garz","The Sensitive","kinder sensibel","Milde Reinigung, ohne Parfum",3],
+ ["babylove","Babyshampoo mild","kinder","Milde Reinigung, enthält aber Parfum",4],
+ ["LILLYDOO","Shampoo & Waschlotion 2in1","kinder","Ohne Parfum, reinigt aber etwas kräftiger als die anderen",5]
+].map(([brand,name,c,note,rank]) => ({segment:"Drogerie", brand, name, cats:c.split(" "), note, rank}));
+P.push(...D);
+const HAIR = {"Garnier Wahre Schätze|Sanfte Hafermilch": ["fein bis normal", "normal"], "OGX|Thick & Full Biotin & Collagen": ["fein bis normal", "normal, auch gefärbt"], "sebamed|Every-Day Shampoo": ["alle", "alle"], "Herbal Essences|Repair Arganöl": ["normal", "normal bis leicht strapaziert"], "Schwarzkopf Gliss|Liquid Silk": ["normal", "glanzlos"], "Jean&Len|Hydration Pfirsich & Chia": ["normal", "normal bis leicht trocken"], "Langhaarmädchen|Lovely Long": ["normal", "lang, leicht strapaziert"], "Jean&Len|Green Apple & Lemongrass": ["fein bis normal", "normal"], "Dejan Garz|The Foundation": ["alle", "normal"], "John Frieda|Frizz Ease Wunder-Reparatur": ["normal bis dick", "frizzig, strapaziert"], "L'Oréal Elvital|Full Resist": ["normal bis dick", "strapaziert, brüchig"], "Balea|Reparierend beauty essentials": ["normal bis dick", "strapaziert"], "Balea med|pH 5,5 hautneutral": ["alle", "normal"], "Balea Professional|Plex Care": ["normal", "strapaziert, gefärbt oder blondiert"], "John Frieda|Frizz Ease Traumlocken": ["normal", "lockig oder wellig"], "Balea|Intensivpflege": ["normal bis dick", "normal bis trocken"], "Balea Professional|Keratin Repair": ["normal", "strapaziert"], "OGX|Bond Protein Repair": ["normal", "strapaziert, gefärbt oder blondiert"], "Schwarzkopf Gliss|Aqua Revive": ["fein bis normal", "normal"], "Pomélo+Co|Shine Therapy": ["fein bis normal", "glanzlos"], "OGX|Coconut Miracle Oil": ["normal bis dick", "trocken"], "Santé|Glossy Shine": ["fein bis normal", "normal"], "Balea Professional|Brilliant Blond": ["normal", "blond oder blondiert"], "Pomélo+Co|Molecular Repair": ["normal", "strapaziert"], "NEQI|Moisture Mystery": ["fein bis normal", "normal"], "ISANA Professional|Arganöl & Pflege": ["normal", "leicht strapaziert"], "ISANA Professional|Plex Shampoo": ["normal", "strapaziert, gefärbt oder blondiert"], "Schwarzkopf Gliss|Sealing Miracle": ["fein bis normal", "normal"], "NIVEA|Hairmilk Shine": ["normal", "normal"], "Aussie|Oh My Gloss": ["normal", "glanzlos, auch gefärbt"], "L'Oréal Elvital|Dream Length": ["normal bis dick", "lang, strapaziert"], "L'Oréal Elvital|Color Glanz": ["normal", "gefärbt"], "Langhaarmädchen|Hydrate & Shine": ["fein bis normal", "glanzlos"], "Aussie|Miracle Moist": ["dick", "trocken"], "L'Oréal Elvital|Glycolic Gloss Spiegelglanz (250 ml)": ["normal bis dick", "glanzlos"], "Pantene Pro-V|LOVE Edition Repair & Care": ["normal bis dick", "strapaziert, glanzlos"], "ISANA Professional|Glycol & Glanz": ["normal", "stumpf, glanzlos"], "ISANA Professional|Glycolic Shine": ["fein bis normal", "stumpf, glanzlos"], "syoss|Intense Glaze": ["normal bis dick", "glanzlos"], "Herbal Essences|Fiji": ["normal bis dick", "trocken, auch gefärbt"], "Herbal Essences|Feuchtigkeit Aloe Vera": ["normal", "trocken"], "Aussie|Bouncy Curls": ["normal bis dick", "lockig oder wellig"], "Bali Curls|Nourishing": ["normal bis dick", "lockig oder wellig"], "Balea Professional|Traumlocken": ["dick", "lockig, trocken"], "Garnier Wahre Schätze|Kokosmilch & Macadamia": ["dick", "trocken"], "Balea Professional|Oil Repair Intensiv": ["dick", "trocken, strapaziert"], "Langhaarmädchen|Beautiful Curls": ["normal bis dick", "lockig oder wellig"], "Pantene Pro-V|Moisture Boost": ["dick", "trocken"], "Schwarzkopf Gliss|Oil Nutritive": ["normal bis dick", "trocken"], "MONDAY|Moisture Feuchtigkeit": ["normal bis dick", "trocken, auch lockig"], "OGX|Renewing+ Argan Oil of Morocco": ["normal bis dick", "trocken, strapaziert"], "IDA WARG|Beauty Repair Shampoo": ["normal", "trocken, strapaziert, auch gefärbt"], "OGX|Strength & Length Keratin Oil": ["normal bis dick", "strapaziert, brüchig"], "Jean&Len|Ölpflege Monoiöl & Maracuja": ["normal bis dick", "trocken, frizzig"], "L'Oréal Elvital|Glycolic Gloss (200 ml)": ["fein bis normal", "normal"], "Garnier Fructis|Coco Water": ["fein bis normal", "fettiger Ansatz, trockene Spitzen"], "Herbal Essences|Dolce Vita": ["fein bis normal", "normal"], "Garnier Wahre Schätze|Honig Schätze": ["normal", "normal"], "L'Oréal Elvital|Hydra Hyaluronic Pure": ["fein", "normal"], "L'Oréal Elvital|Bond Repair": ["fein bis normal", "normal"], "Schwarzkopf Gliss|Scalp Balance Tiefenreinigung": ["fein bis normal", "normal"], "Balea Professional|Tiefenreinigung": ["fein bis normal", "normal"], "ISANA Professional|Tiefenreinigung": ["fein bis normal", "normal"], "OGX|ProGrowth + Peptide": ["fein", "normal"], "L'Oréal Elvital|Fiber Booster": ["fein", "normal"], "Garnier Fructis|Hydra Aloe": ["fein bis normal", "normal"], "Pantene Pro-V|Volumen Pur": ["fein", "platt, ohne Volumen"], "Garnier Fructis|Hair Food Aloe Vera": ["normal", "normal"], "Bali Curls|Bonding Repair": ["fein bis normal", "lockig oder wellig"], "L'Oréal Elvital|Collagen Lifter": ["fein", "platt, ohne Volumen"], "Santé|Intense Hydration": ["normal", "normal"], "Garnier Wahre Schätze|Reiswasser Ritual & Stärke": ["fein", "normal"], "NEQI|Repair Reveal": ["fein bis normal", "normal"], "Balea Professional|Hydra Volume": ["fein", "platt, ohne Volumen"], "NEQI|Diamond Glass": ["fein bis normal", "normal"], "John Frieda|Volume Lift": ["fein", "platt, ohne Volumen"], "Salthouse|Totes Meer Therapie Anti-Fett": ["alle", "alle"], "Garnier Fructis|Ananas Hair Food": ["normal", "lang"], "Santé|Simply Sensitive": ["alle", "alle"], "Balea med|Duschgel & Shampoo 5% Urea": ["alle", "alle"], "Balea med|Totes Meer Ultra Sensitive": ["alle", "alle"], "Salthouse|Totes Meer Therapie Anti-Juckreiz": ["alle", "alle"], "ISANA MED|Totes Meer Anti-Juckreiz": ["alle", "alle"], "ISANA MED|Jeden Tag Ultra Sensitiv": ["alle", "alle"], "sebamed|Anti-Schuppen Plus": ["alle", "alle"], "sebamed|Anti-Schuppen": ["alle", "alle"], "Balea med|Anti-Schuppen Ultra Sensitive": ["alle", "alle"], "Salthouse|Anti-Schuppen Totes Meer": ["alle", "alle"], "head&shoulders|Derma x Pro Density & Growth": ["alle", "alle"], "Pantene Pro-V|Grow Abundant": ["alle", "alle"], "ISANA MED|Ultra Sensitiv+ Anti-Schuppen": ["alle", "alle"], "Herbal Essences|Limettenduft Tiefenreinigung & Glanz": ["alle", "alle"], "Jean&Len|Purify my hair Grapefruit": ["alle", "alle"], "lavera|Baby & Kind Waschlotion & Shampoo": "Baby- und Kinderhaar", "babylove|Waschbalsam Kopf bis Fuß ultra sensitive": "Baby- und Kinderhaar", "Dejan Garz|The Sensitive": ["alle", "alle"], "babylove|Babyshampoo mild": "Baby- und Kinderhaar", "LILLYDOO|Shampoo & Waschlotion 2in1": "Baby- und Kinderhaar", "Wella Professionals|Ultimate Smooth Shampoo": ["normal", "frizzig"], "Keune|Velvet Smooth Shampoo": ["normal", "frizzig"], "Redken|All Soft Shampoo": ["normal", "normal bis trocken"], "Kérastase|Discipline Bain Fluidealiste": ["normal bis dick", "frizzig"], "Redken|Extreme Shampoo": ["normal", "strapaziert"], "Redken|Extreme Length Shampoo": ["normal", "lang, strapaziert"], "Goldwell|Just Smooth Shampoo": ["normal bis dick", "frizzig"], "L'Oréal Professionnel|Metal DX Shampoo": ["normal", "gefärbt"], "Christophe Robin|Hydrating Shampoo mit Aloe Vera": ["fein bis normal", "normal"], "Color Wow|Money Laundering Shampoo": ["fein bis normal", "normal, auch gefärbt"], "Living Proof|No Frizz Shampoo": ["fein bis normal", "frizzig"], "OUAI|Medium Hair Shampoo": ["normal", "normal"], "Kérastase|Genesis Bain Hydra-Fortifiant": ["normal", "brüchig"], "Maria Nila|Mirror Gloss Shampoo": ["normal", "glanzlos"], "Oribe|Shampoo for Supershine": ["normal", "glanzlos"], "Amika|Mirrorball Shampoo": ["fein bis normal", "glanzlos"], "Kérastase|Gloss Absolu Bain Hydra-Glaze": ["fein bis normal", "glanzlos"], "Redken|Acidic Color Gloss Shampoo": ["normal", "gefärbt"], "L'Oréal Professionnel|Keratin Alpha Sleek Shampoo": ["normal bis dick", "frizzig"], "Keune|Radiant Gloss Shampoo": ["normal", "glanzlos"], "Redken|All Soft Mega Curls Shampoo": ["normal bis dick", "lockig"], "Kérastase|Gloss Absolu Bain Crème Hydra-Glaze": ["dick", "glanzlos"], "Kérastase|Elixir Ultime Le Bain": ["dick", "trocken"], "Amika|Hydro Rush Shampoo": ["normal bis dick", "trocken"], "Coco & Eve|Like a Virgin Shampoo": ["normal bis dick", "trocken"], "Oribe|Eternal Curls Shampoo": ["normal bis dick", "lockig"], "Oribe|Hair Alchemy Resilience Shampoo": ["normal", "strapaziert"], "Gisou|Honey Gloss Shampoo": ["normal bis dick", "trocken, glanzlos"], "Redken|Acidic Bonding Concentrate Shampoo": ["normal bis dick", "gefärbt oder blondiert"], "Maria Nila|True Soft Shampoo": ["normal bis dick", "trocken"], "Olaplex|No.4 Bond Maintenance Shampoo": ["normal bis dick", "blondiert, strapaziert"], "OUAI|Thick Hair Shampoo": ["dick", "normal bis trocken"], "Goldwell|Rich Repair Shampoo": ["normal bis dick", "trocken, strapaziert"], "Coco & Eve|Bond Therapy Shampoo": ["normal bis dick", "strapaziert"], "Kérastase|Specifique Bain Divalent": ["alle", "fettiger Ansatz, trockene Spitzen"], "Redken|Amino-Mint Shampoo": ["alle", "alle"], "L'Oréal Professionnel|Scalp Advanced Anti-Oiliness": ["alle", "alle"], "Redken|Volume Injection Shampoo": ["fein", "platt, ohne Volumen"], "Goldwell|Ultra Volume Bodifying Shampoo": ["fein", "platt, ohne Volumen"], "Oribe|Shampoo for Magnificent Volume": ["fein", "platt, ohne Volumen"], "OUAI|Fine Hair Shampoo": ["fein", "platt, ohne Volumen"], "Maria Nila|Pure Volume Shampoo": ["fein", "platt, ohne Volumen"], "Olaplex|No.4 FINE Bond Maintenance Shampoo": ["fein", "normal, auch blondiert"], "Coco & Eve|Boost Therapy Shampoo": ["fein", "dünner werdend"], "Redken|Acidic Grow Full Shampoo": ["fein", "platt, ohne Volumen"], "Kérastase|Nutritive Bain Satin": ["normal", "normal"], "Wella Professionals|Ultimate Repair Shampoo": ["normal", "strapaziert"], "Vichy|Dercos Ultra Apaisant": ["alle", "alle"], "Oribe|Serene Scalp Balancing Shampoo": ["alle", "alle"], "Eucerin|DermoCapillaire Urea Shampoo": ["alle", "alle"], "Maria Nila|Head & Hair Heal Shampoo": ["alle", "alle"], "Kérastase|Symbiose Bain Crème Anti-Pelliculaire": ["alle", "alle"], "L'Oréal Professionnel|Scalp Advanced Anti-Discomfort": ["alle", "alle"], "Vichy|Dercos Anti-Schuppen K": ["alle", "alle"], "Ketozolin|2% Shampoo": ["alle", "alle"], "K18|Peptide Prep Detox Shampoo": ["alle", "alle"], "OUAI|Detox Shampoo": ["alle", "alle"], "Living Proof|Clarifying Detox Shampoo": ["alle", "alle"], "Olaplex|No.4C Clarifying Shampoo": ["alle", "alle"], "Keune|Perfect Clarity Shampoo": ["alle", "alle"], "Coco & Eve|Clarifying Detox Shampoo": ["alle", "alle"]};
+P.forEach(p => p.hair = HAIR[p.brand+"|"+p.name]);
+const KALK = ["K18|Peptide Prep Detox Shampoo", "OUAI|Detox Shampoo", "Living Proof|Clarifying Detox Shampoo", "Olaplex|No.4C Clarifying Shampoo", "Coco & Eve|Clarifying Detox Shampoo", "Herbal Essences|Limettenduft Tiefenreinigung & Glanz", "Jean&Len|Purify my hair Grapefruit"];
+P.forEach(p => p.kalk = KALK.includes(p.brand+"|"+p.name));
+/* Produktbilder, klein neben dem Produkt */
+const IMG = {};
+P.forEach(p => p.img = IMG[p.brand+"|"+p.name]);
+
+
+const chips = document.getElementById("chips"), out = document.getElementById("out"), q = document.getElementById("q"), empty = document.getElementById("empty");
+let active = "alle", seg = "alle";
+const segBox = document.getElementById("seg");
+segBox.querySelectorAll("button").forEach(b => b.onclick = () => {
+  seg = b.dataset.seg;
+  segBox.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x===b));
+  draw();
+});
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const labelOf = id => CATS.find(c=>c.id===id).label;
+
+chips.innerHTML = [`<button class="chip" data-id="alle" aria-pressed="true">Alle</button>`]
+  .concat(CATS.map(c=>`<button class="chip" data-id="${c.id}" aria-pressed="false">${c.label}</button>`))
+  .concat([`<button class="chip" data-id="liste" aria-pressed="false">Liste</button>`]).join("");
+chips.querySelectorAll(".chip").forEach(b => b.onclick = () => {
+  active = b.dataset.id;
+  chips.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x===b));
+  draw();
+});
+q.addEventListener("input", draw);
+
+function listHtml(items,c){
+  return `<ul class="list">${items.map(p => {
+        const other = p.cats.filter(x=>x!==c.id).map(labelOf);
+        return `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${hairHtml(p)}${other.length?`<span class="also">Auch bei: ${other.join(", ")}</span>`:""}</div></li>`;
+      }).join("")}</ul>`;
+}
+function hairHtml(p){
+  const h = p.hair; if(!h) return "";
+  if(typeof h==="string") return `<div class="hair"><b>Für dein Haar:</b> ${esc(h)}</div>`;
+  if(h[0]==="alle" && h[1]==="alle") return `<div class="hair"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div>`;
+  return `<div class="hair"><b>Haardicke:</b> ${esc(h[0])}</div><div class="hair"><b>Haarzustand:</b> ${esc(h[1])}</div>`;
+}
+const matchTerm = (p, term) => !term || [p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ").toLowerCase().includes(term);
+function drawListe(term){
+  let shown = 0;
+  out.innerHTML = `<section class="cat" id="liste"><h2>Liste</h2><p class="cat-desc">Alle Shampoos pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</p>` +
+    CATS.map(c => {
+      const items = P.filter(p => p.cats.includes(c.id) && (seg==="alle" || p.segment===seg) && matchTerm(p, term))
+        .sort((a,b)=> c.id==="kinder" ? (a.rank||99)-(b.rank||99) : (a.brand+a.name).localeCompare(b.brand+b.name,"de"));
+      if(!items.length) return "";
+      shown += items.length;
+      const lines = items.map(p => `${p.brand} – ${p.name}`);
+      return `<h3>${c.label}<span class="count">${items.length}</span></h3>
+        <button class="copy" type="button" data-text="${esc(c.label + "\n" + lines.join("\n"))}">Liste kopieren</button>
+        <ul class="plain">${lines.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`;
+    }).join("") + `</section>`;
+  out.querySelectorAll(".copy").forEach(b => b.onclick = async () => {
+    const t = b.dataset.text;
+    try { await navigator.clipboard.writeText(t); }
+    catch(e){ const ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy");}catch(_){} ta.remove(); }
+    b.textContent = "Kopiert ✓"; setTimeout(()=>b.textContent="Liste kopieren",1500);
+  });
+  empty.hidden = shown > 0;
+}
+function draw(){
+  const term = q.value.trim().toLowerCase();
+  let shown = 0;
+  if(active==="liste"){ drawListe(term); return; }
+  if(active==="alle"){
+    const items = P.filter(p => (seg==="alle" || p.segment===seg) && (!term || [p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ").toLowerCase().includes(term)))
+                   .sort((a,b)=> (a.brand+a.name).localeCompare(b.brand+b.name,"de"));
+    const title = seg==="alle" ? "Alle Shampoos" : (seg==="Drogerie" ? "Alle Drogerie-Shampoos" : "Alle High-End-Shampoos");
+    out.innerHTML = items.length ? `<section class="cat" id="alle">
+      <h2>${title}<span class="count">${items.length}</span></h2>
+      <ul class="list">${items.map(p => `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${hairHtml(p)}<span class="also">Passt zu: ${CATS.filter(c=>p.cats.includes(c.id)).map(c=>c.label).join(", ")}</span></div></li>`).join("")}</ul>
+    </section>` : "";
+    empty.hidden = items.length > 0;
+    return;
+  }
+  out.innerHTML = CATS.filter(c => active==="alle" || c.id===active).map(c => {
+    const items = P.filter(p => p.cats.includes(c.id) && (seg==="alle" || p.segment===seg) && (!term || [p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ").toLowerCase().includes(term)))
+                   .sort((a,b)=> c.id==="kinder" ? (a.rank||99)-(b.rank||99) : (a.brand+a.name).localeCompare(b.brand+b.name,"de"));
+    if(!items.length) return "";
+    shown += items.length;
+    return `<section class="cat" id="${c.id}">
+      <h2>${c.label}<span class="count">${items.length}</span></h2>
+      <p class="cat-desc">${c.desc}</p>
+      ${c.id==="tief"
+        ? [["Löst Rückstände und Kalk","Mit Kalklösern, ideal bei hartem Wasser.",items.filter(p=>p.kalk)],["Löst Rückstände, aber keinen Kalk","Reinigen gründlich, ohne Kalklöser.",items.filter(p=>!p.kalk)]]
+            .filter(g=>g[2].length).map(g=>`<h3>${g[0]}<span class="count">${g[2].length}</span></h3><p class="sub-desc">${g[1]}</p>${listHtml(g[2],c)}`).join("")
+        : listHtml(items,c)}
+    </section>`;
+  }).join("");
+  empty.hidden = shown > 0;
+}
+draw();
+</script>
+</body>
+</html>
