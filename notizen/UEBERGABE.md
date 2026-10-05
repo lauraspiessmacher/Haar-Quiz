@@ -3,7 +3,7 @@
 ## Dateien
 - `index.html` – Haar-Quiz (war ursprünglich eine umbenannte ZIP, jetzt entpackt)
 - `leave-in-guide.html` – Leave-in-Guide, 101 Produkte (56 Drogerie, 45 High-End), alle mit freigestelltem Bild
-- `shampoo-guide.html` – Shampoo-Guide, 159 Produkte, 1:1 von Laura übernommen, Reiter „Liste“ ergänzt, **noch ohne Produktbilder**
+- `shampoo-guide.html` – Shampoo-Guide, 159 Produkte, Reiter „Liste“, 146 Produktbilder (13 fehlen noch, siehe unten)
 - `notizen/leave-in-inhaltsstoffe.md` – abgeschriebene INCI-Listen aller Leave-ins
 
 ## Aufbau der Guides (beide gleich)
@@ -27,6 +27,13 @@
 - Keine Fachwörter wie „Ester“ (stattdessen „leichter Ölersatz“).
 - Laura ist keine Technikerin: Antworten auf Deutsch, einfach, ohne Fachbegriffe.
 
+## Bildquellen (was funktioniert)
+- dm: Suche `product-search.services.dmtech.com/de/search/crawl?query=…`, Bilder von `products.dm-static.com` als PNG mit `f_png,c_fit,h_1000,w_1000` – schon freigestellt. Erstes Bild prüfen (L'Oréal hat oft einen Kreis dahinter → zweites Bild).
+- High-End: Lookfantastic, Hagel-Shop (hagel-shop.de, sehr saubere Packshots), Marken-Shops (Shopify: `/products/<handle>.js`), Breuninger, Vichy.de, Shop-Apotheke.
+- Müller (mueller.de) für einige Drogerie-Produkte, die dm nicht hat.
+- Rossmann, Douglas, Flaconi, Notino: blocken automatische Abrufe (Sicherheitsabfrage), auch bei vollem Netzzugang.
+- Schatten: rembg (isnet-general-use) mit eigener Kontur schneiden (Schnittmenge) entfernt Schatten; bei weißen Deckeln auf Weiß Vereinigung nehmen.
+
 ## Offen
-- Produktbilder für alle 159 Shampoos im Shampoo-Guide (dm/Rossmann).
+- 13 Shampoos ohne Bild: ISANA Professional (Arganöl & Pflege, Plex, Glycol & Glanz, Glycolic Shine, Tiefenreinigung), ISANA MED (Totes Meer Anti-Juckreiz, Jeden Tag Ultra Sensitiv, Ultra Sensitiv+ Anti-Schuppen), Gliss Sealing Miracle, NIVEA Hairmilk Shine, OGX Strength & Length Keratin Oil, Salthouse Anti-Fett, Garnier Fructis Ananas Hair Food. Vichy „Ultra Apaisant“: Bild = Ultra-Sensitiv für trockene Kopfhaut.
 - Guides sind nur auf dem Branch, noch nicht online/in main.
