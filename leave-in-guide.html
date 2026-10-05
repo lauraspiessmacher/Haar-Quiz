@@ -74,6 +74,9 @@ ul.list .rep li{padding:0;border:0;display:list-item}
 .switch button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .tag{flex:0 0 auto;font-size:12px;background:var(--card);border-radius:999px;padding:1px 9px;color:var(--muted)}
+ul.plain{list-style:none;margin:0 0 6px;padding:0;border-top:1px solid var(--line-soft)}
+ul.plain li{padding:6px 0;border-bottom:1px solid var(--line-soft);font-size:15.5px}
+.copy{font:inherit;font-size:13.5px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin:0 0 10px;cursor:pointer}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -243,7 +246,8 @@ segBox.querySelectorAll("button").forEach(b => b.onclick = () => {
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 chips.innerHTML = [`<button class="chip" data-id="alle" aria-pressed="true">Alle</button>`]
-  .concat(CATS.map(c=>`<button class="chip" data-id="${c.id}" aria-pressed="false">${c.label}</button>`)).join("");
+  .concat(CATS.map(c=>`<button class="chip" data-id="${c.id}" aria-pressed="false">${c.label}</button>`))
+  .concat([`<button class="chip" data-id="liste" aria-pressed="false">Nur Namen</button>`]).join("");
 chips.querySelectorAll(".chip").forEach(b => b.onclick = () => {
   active = b.dataset.id;
   chips.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x===b));
@@ -274,9 +278,30 @@ function itemHtml(p, extra){
 const matches = (p, term) => (seg==="alle" || p.segment===seg) && (!term || [p.brand,p.name,p.note,p.tip,(p.rep||[]).join(" "),p.sil.length?"silikone "+p.sil.join(" "):"silikonfrei",p.hair.join(" ")].join(" ").toLowerCase().includes(term));
 const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 
+function drawListe(term){
+  let shown = 0;
+  out.innerHTML = `<section class="cat" id="liste"><h2>Nur Namen</h2><p class="cat-desc">Alle Produkte pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</p>` +
+    CATS.map(c => {
+      const items = P.filter(p => p.cats.includes(c.id) && matches(p, term)).sort(byName);
+      if(!items.length) return "";
+      shown += items.length;
+      const lines = items.map(p => `${p.brand} – ${p.name}`);
+      return `<h3>${c.label}<span class="count">${items.length}</span></h3>
+        <button class="copy" type="button" data-text="${esc(c.label + "\n" + lines.join("\n"))}">Liste kopieren</button>
+        <ul class="plain">${lines.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`;
+    }).join("") + `</section>`;
+  out.querySelectorAll(".copy").forEach(b => b.onclick = async () => {
+    const t = b.dataset.text;
+    try { await navigator.clipboard.writeText(t); }
+    catch(e){ const ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy");}catch(_){} ta.remove(); }
+    b.textContent = "Kopiert ✓"; setTimeout(()=>b.textContent="Liste kopieren",1500);
+  });
+  empty.hidden = shown > 0;
+}
 function draw(){
   const term = q.value.trim().toLowerCase();
   let shown = 0;
+  if(active==="liste"){ drawListe(term); return; }
   if(active==="alle"){
     const items = P.filter(p => matches(p, term)).sort(byName);
     const title = seg==="alle" ? "Alle Leave-ins" : (seg==="Drogerie" ? "Alle Drogerie-Leave-ins" : "Alle High-End-Leave-ins");
