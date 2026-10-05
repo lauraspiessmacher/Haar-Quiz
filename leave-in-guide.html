@@ -195,6 +195,15 @@ chips.querySelectorAll(".chip").forEach(b => b.onclick = () => {
 });
 q.addEventListener("input", draw);
 
+const DICKE = ["fein","duenn","normal","dick","sehrdick"];
+const VON = ["Feines","Dünnes","Normales","Dickes","Sehr dickes"];
+const BIS = ["feines","dünnes","normal dickes","dickes","sehr dickes"];
+function passtZu(p){
+  const idx = DICKE.map((d,i)=>p.cats.includes(d)?i:-1).filter(i=>i>=0);
+  const lo = Math.min(...idx), hi = Math.max(...idx);
+  const text = (lo===hi ? VON[lo] : `${VON[lo]} bis ${BIS[hi]}`) + " Haar";
+  return p.cats.includes("kaputt") ? `${text} und kaputte Haare` : text;
+}
 function hairHtml(p){
   const [dicke,zustand] = p.hair;
   return `<div class="hair"><b>Haardicke:</b> ${esc(dicke)}</div><div class="hair"><b>Haarzustand:</b> ${esc(zustand)}</div>${p.rep?`<div class="rep"><b>Repair-Wirkstoffe</b><ul>${p.rep.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>`:""}`;
@@ -213,7 +222,7 @@ function draw(){
     const title = seg==="alle" ? "Alle Leave-ins" : (seg==="Drogerie" ? "Alle Drogerie-Leave-ins" : "Alle High-End-Leave-ins");
     out.innerHTML = items.length ? `<section class="cat" id="alle">
       <h2>${title}<span class="count">${items.length}</span></h2>
-      <ul class="list">${items.map(p => itemHtml(p, `<span class="also">Passt zu: ${CATS.filter(c=>p.cats.includes(c.id)).map(c=>c.label).join(", ")}</span>`)).join("")}</ul>
+      <ul class="list">${items.map(p => itemHtml(p, `<span class="also">Passt zu: ${passtZu(p)}</span>`)).join("")}</ul>
     </section>` : "";
     empty.hidden = items.length > 0;
     return;
@@ -225,7 +234,7 @@ function draw(){
     return `<section class="cat" id="${c.id}">
       <h2>${c.label}<span class="count">${items.length}</span></h2>
       <p class="cat-desc">${c.desc}</p>
-      <ul class="list">${items.map(p => itemHtml(p, `<span class="also">Passt zu: ${CATS.filter(x=>p.cats.includes(x.id)).map(x=>x.label).join(", ")}</span>`)).join("")}</ul>
+      <ul class="list">${items.map(p => itemHtml(p, `<span class="also">Passt zu: ${passtZu(p)}</span>`)).join("")}</ul>
     </section>`;
   }).join("");
   empty.hidden = shown > 0;
