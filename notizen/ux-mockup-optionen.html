@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Drei Optionen im Vergleich</title>
+<style>
+:root{
+  --bg:#F3ECE2; --card:#EBE2D6; --ink:#382F2E; --muted:#6E615C; --taupe:#9E8C80;
+  --line:rgba(56,47,46,.22); --line-soft:rgba(56,47,46,.12);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Noto Serif",Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#F3ECE2; --ink:#382F2E; } }
+:root[data-theme="dark"]{ --bg:#F3ECE2; --ink:#382F2E; }
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding:24px 16px 48px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.15}
+h1{font-size:clamp(32px,8vw,44px);margin-bottom:8px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 20px}
+.lead a{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;align-items:start}
+.opt h2{font-size:24px;margin-bottom:2px}
+.opt .sub{font-size:14px;color:var(--muted);margin-bottom:10px;min-height:42px}
+.rec{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:var(--bg);border-radius:999px;padding:2px 10px;margin-bottom:6px}
+.phone{border:1px solid var(--line);border-radius:28px;padding:14px 12px 0;background:var(--bg);height:560px;overflow:hidden;position:relative;box-shadow:0 8px 30px rgba(56,47,46,.12)}
+.ph-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);font-size:15px;margin-bottom:10px}
+.pill{font-family:var(--sans);font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px}
+.s{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:var(--muted);margin-bottom:10px}
+.s.big{padding:12px 14px;font-size:15px;border-color:var(--ink);color:var(--ink)}
+.card{background:var(--card);border-radius:14px;padding:10px 12px;font-size:12.5px;margin-bottom:10px}
+.card b{font-weight:600}
+.lbl{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:10px 0 6px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.tile{border:1px solid var(--line);border-radius:10px;padding:7px 9px;font-family:var(--serif);font-size:14px}
+.tile small{display:block;font-family:var(--sans);font-size:10.5px;color:var(--muted)}
+.tile.w{grid-column:1/3}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.chip{font-size:11.5px;border:1px solid var(--line);border-radius:999px;padding:3px 9px}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.q{font-family:var(--serif);font-size:20px;margin:8px 0 10px}
+.ans{border:1px solid var(--line);border-radius:12px;padding:9px 11px;font-size:13px;margin-bottom:6px}
+.ans.on{border-color:var(--ink);background:var(--card)}
+.prog{height:3px;background:var(--line-soft);border-radius:2px;margin-bottom:6px}
+.prog i{display:block;width:33%;height:100%;background:var(--ink);border-radius:2px}
+.step{display:flex;gap:8px;align-items:center;border-top:1px solid var(--line-soft);padding:7px 0;font-size:12.5px}
+.step .n{width:20px;height:20px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:11px;flex:0 0 auto}
+.step .bottles{margin-left:auto;display:flex;gap:3px}
+.step .bottles i{width:10px;height:22px;border:1px solid var(--taupe);border-radius:3px 3px 2px 2px}
+.res{border-top:1px solid var(--line-soft);padding:7px 0;font-size:12.5px}
+.res b{font-family:var(--serif);font-weight:500;font-size:14px;display:block}
+.nav{position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);text-align:center;font-size:10.5px;color:var(--muted);padding:8px 0 10px;background:var(--bg)}
+.nav b{color:var(--ink)}
+ul.pc{margin:10px 0 0;padding-left:18px;font-size:14.5px}
+ul.pc li{margin-bottom:4px}
+.pro{color:var(--ink)}
+.con{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Drei Wege, die Seite aufzubauen</h1>
+  <p class="lead">Nur zum Vergleichen: So sieht der erste Bildschirm auf dem Handy bei jeder Option aus. Die empfohlene Option 1 kannst du in <a href="ux-mockup.html">ux-mockup.html</a> durchklicken.</p>
+  <div class="grid">
+
+    <section class="opt">
+      <span class="rec">Empfehlung</span>
+      <h2>1 · Regal</h2>
+      <div class="sub">Produktart zuerst, wie die Einzel-Guides. „Meine Haare“ und Suche helfen dazu.</div>
+      <div class="phone" aria-label="Skizze Option 1">
+        <div class="ph-top">Laura · Healthy Hair <span class="pill">Teilen</span></div>
+        <div class="s">Produkt oder Marke suchen</div>
+        <div class="card"><b>Deine Routine</b> · feines Haar, fettende Kopfhaut<br>1 Shampoo › 2 Conditioner › 3 Leave-in › + Kopfhaut</div>
+        <div class="lbl">1 · Waschen</div>
+        <div class="tiles"><div class="tile w">Shampoo<small>nach Kopfhauttyp · 163</small></div></div>
+        <div class="lbl">2 · Pflegen</div>
+        <div class="tiles"><div class="tile">Conditioner<small>nach Haardicke · 94</small></div><div class="tile">Maske<small>nach Haardicke · 61</small></div></div>
+        <div class="lbl">3 · Schützen</div>
+        <div class="tiles"><div class="tile">Leave-in<small>103</small></div><div class="tile">Haaröl<small>bald</small></div></div>
+        <div class="lbl">+ Kopfhaut</div>
+        <div class="tiles"><div class="tile w">Kopfhautpflege<small>nach Kopfhauttyp · 52</small></div></div>
+        <div class="nav"><b>Produkte</b><span>Quiz</span><span>Wissen</span><span>Meine Haare</span></div>
+      </div>
+      <ul class="pc"><li class="pro">+ sieht aus wie die Guides, die deine Follower kennen</li><li class="pro">+ jede Frage in 1–2 Tipps, ohne Pflicht-Fragen</li><li class="con">– Routine-Idee muss man bewusst sichtbar machen</li></ul>
+    </section>
+
+    <section class="opt">
+      <h2>2 · Routine zuerst</h2>
+      <div class="sub">Die Seite fragt erst nach deinen Haaren und zeigt dann eine fertige Routine.</div>
+      <div class="phone" aria-label="Skizze Option 2">
+        <div class="ph-top">Laura · Healthy Hair <span class="pill">Überspringen</span></div>
+        <div class="prog"><i></i></div>
+        <div style="font-size:11px;color:var(--muted)">Frage 1 von 3</div>
+        <div class="q">Wie dick ist ein einzelnes Haar?</div>
+        <div class="ans on">Fein, kaum zu spüren</div><div class="ans">Dünn, eher wenige Haare</div><div class="ans">Normal</div><div class="ans">Dick / sehr dick</div>
+        <div class="lbl">danach: deine Routine</div>
+        <div class="step"><span class="n">1</span>Shampoo · fettende Kopfhaut<span class="bottles"><i></i><i></i><i></i></span></div>
+        <div class="step"><span class="n">2</span>Conditioner · feines Haar<span class="bottles"><i></i><i></i><i></i></span></div>
+        <div class="step"><span class="n">3</span>Leave-in · feines Haar<span class="bottles"><i></i><i></i><i></i></span></div>
+        <div class="nav"><span>Produkte</span><span>Quiz</span><span>Wissen</span><b>Meine Haare</b></div>
+      </div>
+      <ul class="pc"><li class="pro">+ beantwortet „Was soll ich kaufen?“ am besten</li><li class="con">– wer nur ein Shampoo nachschauen will, muss erst Fragen überspringen</li><li class="con">– fühlt sich wie ein zweites Quiz an, Produktbereich weicht von den Guides ab</li></ul>
+    </section>
+
+    <section class="opt">
+      <h2>3 · Frag Laura</h2>
+      <div class="sub">Ein großes Suchfeld zuerst, das Marken und Schlagwörter versteht.</div>
+      <div class="phone" aria-label="Skizze Option 3">
+        <div class="ph-top">Laura · Healthy Hair <span class="pill">Teilen</span></div>
+        <div class="q">Wonach suchst du?</div>
+        <div class="s big">feine Haare fettige Kopfhaut</div>
+        <div class="chips"><span class="chip on">Feines Haar</span><span class="chip on">Fettende Kopfhaut</span></div>
+        <div class="lbl">Beispiele</div>
+        <div class="chips"><span class="chip">Balea</span><span class="chip">Schuppen</span><span class="chip">blondiert</span><span class="chip">dicke Locken Frizz</span></div>
+        <div class="lbl">Ergebnisse</div>
+        <div class="res"><b>Shampoo · 12</b>Coco Water, Hydra Hyaluronic Pure …</div>
+        <div class="res"><b>Conditioner · 7</b>Wonder Water, Mirror Rinse …</div>
+        <div class="res"><b>Leave-in · 9</b>Sunkiss Glow Spray …</div>
+        <div class="nav"><b>Produkte</b><span>Quiz</span><span>Wissen</span><span>Meine Haare</span></div>
+      </div>
+      <ul class="pc"><li class="pro">+ am schnellsten für „Hat Laura das drin?“</li><li class="con">– auf dem Handy tippen ist mühsam, viele wissen nicht, was sie eingeben sollen</li><li class="con">– du wolltest die Schlagwort-Suche eher versteckt haben</li></ul>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>

@@ -269,7 +269,7 @@ const TYPES = [
    lead:"Ein- bis zweimal pro Woche statt Conditioner. Masken pflegen intensiver, gewählt wird wieder nach Haardicke und Haarzustand.", wissen:"haardicke"},
   {id:"leavein", label:"Leave-in", plural:"Leave-ins", step:3, rule:"nach Haardicke und Zustand", total:103, by:"dicke",
    lead:"Ein Leave-in hält deine Haare weich und flexibel, auch zwischen den Wäschen. Meine LL-Methode: nach jeder Wäsche und am besten täglich etwas ins trockene Haar. Schaffst du das nicht täglich: lieber nur nach der Wäsche als gar nicht.", wissen:"haardicke"},
-  {id:"oel", label:"Haaröl", plural:"Haaröle", step:3, rule:"nach Haardicke", total:45, by:"dicke", soon:true,
+  {id:"oel", label:"Haaröl", plural:"Haaröle", step:3, rule:"nach Haardicke", total:45, by:"dicke", placeholder:true,
    lead:"Öle machen die Längen geschmeidig und schützen vor Reibung. Für feines und dünnes Haar gibt es leichte, trockene Öle.", wissen:"haardicke"},
   {id:"kopfhaut", label:"Kopfhaut", plural:"Kopfhautpflegen", step:"+", rule:"nach Kopfhauttyp", total:52, by:"kopf",
    lead:"Gesunde Haare fangen an der Kopfhaut an. Seren, Tonika, Öle und Peelings, sortiert nach Kopfhauttyp. In jedem Reiter steht oben das Beste.", wissen:"kopfhauttyp"}
@@ -545,10 +545,10 @@ function viewType(type, catId) {
   const tabs = TYPES.map(x => `<a class="tab" href="#/${x.id}" ${x.id === type ? 'aria-current="page"' : ""}><span class="n" aria-hidden="true">${x.step}</span>${x.label}</a>`).join("");
   let h = header() + `<div class="bar"><nav class="tabs" aria-label="Produktart">${tabs}</nav>
     <div class="chips" role="group" aria-label="${t.by === "kopf" ? "Kopfhauttyp" : "Haardicke oder Haarzustand"} wählen">${chipHtml}</div></div>`;
-  if (S.sent) h += sentBanner();
+  if (S.sent) h += `<div class="mebar"><span class="who">Von Laura für: <b>${esc(profileText(S.sent))}</b></span><span class="btns" style="margin:0"><button type="button" class="linkbtn" style="min-height:32px;padding:0" data-keep-sent>Speichern</button><button type="button" class="linkbtn" style="min-height:32px;padding:0" data-drop-sent>Schließen</button></span></div>`;
   else if (m) h += `<div class="mebar"><span class="who">Für dich: <b>${esc(profileText(m))}</b> <button type="button" class="linkbtn" style="min-height:0;padding:0;font-size:13.5px" data-open-me>Ändern</button></span>
       <span class="switch" role="group" aria-label="Filter"><button type="button" data-me-on="1" aria-pressed="${on}">Nur passende</button><button type="button" data-me-on="0" aria-pressed="${!on}">Alle</button></span></div>`;
-  if (t.soon) h += `<div class="soonbox">Vorschau: Der Öl-Guide ist noch in Arbeit. Die drei Öle hier sind nur Platzhalter, damit man sieht, wie es später aussieht.</div>`;
+  if (t.placeholder) h += `<div class="soonbox">Im Mockup nur drei Platzhalter. Der echte Öl-Guide mit 45 Ölen ist fertig und kommt beim Zusammenbau automatisch dazu.</div>`;
   h += `<div class="tools"><label class="sr" for="q">In ${t.plural} suchen</label><input class="search" id="q" type="search" placeholder="In ${t.plural} suchen" value="${esc(S.q)}" autocomplete="off">
     <span class="switch" role="group" aria-label="Drogerie oder High-End">${["alle","Drogerie","High-End"].map(s => `<button type="button" data-seg="${s}" aria-pressed="${S.seg === s}">${s === "alle" ? "Alle" : s}</button>`).join("")}</span></div>
     <div id="list"></div>`;
@@ -562,7 +562,9 @@ function typeList(type, catId) {
         `<h3 class="lh">${esc(c.label)} <span class="count">${l.length}</span></h3><button type="button" class="copy" data-copy="${esc(c.label + "\n" + l.join("\n"))}">Liste kopieren</button><ul class="plain">${l.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""; }).join("") + `</section>`;
   }
   const c = CATS[type].find(x => x.id === catId);
-  const list = items(type, {cat:catId, words});
+  let list = items(type, {cat:catId, words}), fallback = false;
+  /* Kein leerer Bildschirm: passt in dieser Kategorie nichts zu „Meine Haare“, zeige ich trotzdem alles, mit Hinweis */
+  if (!list.length && filterOn()) { const all = items(type, {cat:catId, words, ignoreProfile:true}); if (all.length) { list = all; fallback = true; } }
   const title = c ? c.label : "Alle " + t.plural;
   const desc = c ? c.desc : t.lead;
   let h = `<section class="cat" aria-labelledby="ct"><div class="cathead"><h2 id="ct">${esc(title)}</h2><span class="count">${list.length}</span>
@@ -570,6 +572,7 @@ function typeList(type, catId) {
     <p class="cat-desc${S.openDesc ? "" : " clamp"}" id="cdesc">${esc(desc)}</p>
     <div class="desclinks">${desc.length > 100 ? `<button type="button" class="more" data-toggle-desc aria-expanded="${S.openDesc}" aria-controls="cdesc">${S.openDesc ? "Weniger" : "Weiterlesen"}</button>` : ""}
     <a class="wlink" href="#/wissen/${t.wissen}">${esc(WISSEN.find(w => w.id === t.wissen).title)} ›</a></div>`;
+  if (fallback) h += `<div class="soonbox" role="status" style="color:var(--ink)">Für deine Haare (${esc(profileText(profile()))}) ist hier nichts dabei. Damit du trotzdem schauen kannst, zeige ich dir ${list.length === 1 ? "das eine Produkt aus dieser Kategorie" : "alle " + list.length}.</div>`;
   if (list.length) h += `<ul class="list">${list.map(card).join("")}</ul>`;
   else h += emptyType(type, catId, words);
   if (words.length) {
