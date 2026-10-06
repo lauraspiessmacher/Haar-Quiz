@@ -53,7 +53,7 @@ for k in P:
 t = setobj(t, 'IMG', imgs)
 
 CATS = '''const CATS = [
- {id:"fein", label:"Feines Haar", desc:"Für Feenhaar: Das einzelne Haar ist hauchdünn und fällt sofort platt. Hier stehen flüssige Conditioner wie Wonder Water. Sie sind noch leichter als normale Conditioner und beschweren kaum. Ins nasse Haar in Längen und Spitzen geben, kurz einwirken lassen und gründlich ausspülen."},
+ {id:"fein", label:"Feines Haar", desc:"Für Feenhaar: Das einzelne Haar ist hauchdünn und fällt sofort platt. Hier stehen flüssige Conditioner wie Wonder Water. Sie sind noch leichter als normale Conditioner und beschweren kaum."},
  {id:"duenn", label:"Dünnes Haar", desc:"Du hast eher wenige Haare und wenig Fülle, das einzelne Haar ist aber nicht besonders fein. Leichte Conditioner, die pflegen, ohne dir die Fülle zu nehmen. Nicht an den Ansatz geben."},
  {id:"normal", label:"Normales Haar", desc:"Die solide Mitte. Hier darfst du nach deinem Haarzustand auswählen, zum Beispiel nach mehr Glanz, weniger Frizz oder mehr Pflege für trockenes oder strapaziertes Haar."},
  {id:"dick", label:"Dickes Haar", desc:"Kräftiges Haar, das viel Pflege verträgt. Conditioner mit Silikon, Ölen, Butter oder Fettalkoholen machen es weich und geschmeidig, ohne dass es platt wirkt."},
@@ -77,6 +77,9 @@ t = t[:i] + '''Ein Conditioner ist der Pflegeschritt nach jeder Haarwäsche. Er 
       <p><b>Gut zu wissen:</b> Kein Conditioner repariert Spliss. Ist die Haarspitze einmal gespalten, wächst sie nicht wieder zusammen. Ein Conditioner kann Spliss nur vorbeugen und kurz kaschieren. Weg geht er nur, wenn man ihn abschneidet.</p>
       <p><b>So verwendest du ihn:</b> Nach jedem Shampoo in Längen und Spitzen geben, kurz einwirken lassen und gründlich ausspülen. Ein- bis zweimal pro Woche kannst du stattdessen eine Maske nehmen. Danach am besten noch ein Leave-in. Und wenn es mal schnell gehen muss: Lieber ein Conditioner als gar keine Pflege.</p>
     ''' + t[j:]
+a = '${p.tip?`<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`:""}'
+assert a in t
+t = t.replace(a, '${p.tip?`<div class="tip">${p.tip.startsWith("Anwendung: ")?`<b>Anwendung:</b> ${esc(p.tip.slice(11))}`:`<b>Gut zu wissen:</b> ${esc(p.tip)}`}</div>`:""}')
 open('/home/user/Haar-Quiz/conditioner-guide.html', 'w').write(t)
 print('ok', len(P), 'Produkte,', len(imgs), 'Bilder; ohne Bild:', [k for k in P if keyname(k) not in imgs])
 print('Silikone Beispiele:', {k: silikone(k) for k in ['c01','r13','o1','h1','h2','h3','h9']})
