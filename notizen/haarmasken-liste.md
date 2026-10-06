@@ -32,8 +32,64 @@ Bild und INCI holt Claude per dm-Artikelnummer selbst (products.dm.de/product/pr
 | Garnier Fructis | Haarmaske Keratin Sleek, Anti-Frizz Kur, 370 ml | 3042310 |
 | Dejan Garz | Haarmaske The Foundation, 200 ml | 3094993 |
 
+## Drogerie (dm) – Inhaltsstoffe, abgerufen bei dm am 6.10.2026
+
+### Garnier Wahre Schätze – Haarkur 1-Minute Kokosmilch & Macadamia, 340 ml (dm 1679234)
+AQUA / WATER • CETEARYL ALCOHOL • GLYCERIN • ISOPROPYL MYRISTATE • STEARAMIDOPROPYL DIMETHYLAMINE • GLYCINE SOJA OIL / SOYBEAN OIL • PARFUM / FRAGRANCE • MACADAMIA INTEGRIFOLIA SEED OIL • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • COCOS NUCIFERA OIL / COCONUT OIL • COCO-CAPRYLATE/CAPRATE • HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • CAPRYLYL GLYCOL • TARTARIC ACID • CETYL ESTERS • BENZOIC ACID • LINALOOL • LIMONENE • BENZYL ALCOHOL • BENZYL SALICYLATE
+
+### Garnier Wahre Schätze – Haarkur 1-Minute Reiswasser Ritual & Stärke, 340 ml (dm 1324786)
+AQUA / WATER • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • ISOPROPYL MYRISTATE • CETYL ESTERS • PARFUM / FRAGRANCE • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER • SORBITOL • SACCHAROMYCES/RICE FERMENT FILTRATE • CAPRYLYL GLYCOL • CITRIC ACID • PENTYLENE GLYCOL • TARTARIC ACID • BENZOIC ACID • LINALOOL
+
+### Garnier Wahre Schätze – Haarkur 1-Minute Honig Schätze, 340 ml (dm 1679237)
+AQUA / WATER • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • ISOPROPYL MYRISTATE • CETYL ESTERS • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER • MEL / HONEY • MEL EXTRACT / HONEY EXTRACT • GLYCERIN • CAPRYLYL GLYCOL • CITRIC ACID • TARTARIC ACID • POTASSIUM SORBATE • SODIUM BENZOATE • BENZOIC ACID • CARAMEL • COUMARIN • LIMONENE • BENZYL ALCOHOL • BENZYL SALICYLATE • PARFUM / FRAGRANCE
+
+### Pantene Pro-V – Haarmaske miracles Hydra Glow Deep Hydration, 300 ml (dm 1343858)
+Aqua, Cetyl Alcohol, Bis-Aminopropyl Dimethicone, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Glycerin, Glutamic Acid, Parfum, Benzyl Alcohol, Sodium Benzoate, Citric Acid, Behentrimonium Methosulfate, Hexyl Cinnamal, Disodium EDTA, Polysorbate 20, Limonene, Panthenol, Panthenyl Ethyl Ether, Linalool, Benzyl Salicylate, Isopropyl Alcohol, Histidine, Hydroxycitronellal, CI 77492, Biotin, Methicone
+
+### Pantene Pro-V – Haarkur Glowtox, 300 ml (dm 3153507)
+Aqua, Stearyl Alcohol, Stearamidopropyl Dimethylamine, Cetyl Alcohol, Bis-Aminopropyl Dimethicone, Glutamic Acid, Parfum, Benzyl Alcohol, Oleic Acid, Sodium Benzoate, Polysorbate 20, Citric Acid, Behentrimonium Methosulfate, Disodium EDTA, Panthenol, Tetramethyl Acetyloctahydronaphthalenes, Isopropyl Alcohol, Histidine, CI 77492, Vanillin, Linalool, Biotin, Methicone, Panthenyl Ethyl Ether
+
+### Garnier Fructis – Haarmaske Aloe Vera Hair Food 3in1, trockenes Haar, 400 ml (dm 1676340)
+AQUA / WATER • CETEARYL ALCOHOL • GLYCERIN • ISOPROPYL MYRISTATE • GLYCINE SOJA OIL / SOYBEAN OIL • STEARAMIDOPROPYL DIMETHYLAMINE • ALOE BARBADENSIS LEAF JUICE POWDER • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • GLYCERYL LINOLEATE • GLYCERYL LINOLENATE • GLYCERYL OLEATE • COCO-CAPRYLATE/CAPRATE • ASCORBYL GLUCOSIDE • HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • CAPRYLYL GLYCOL • TARTARIC ACID • CETYL ESTERS • TOCOPHEROL • SALICYLIC ACID • LINALOOL • GERANIOL • GERANYL ACETATE • ROSE KETONES • TRIMETHYLCYCLOPENTENYL METHYLISOPENTENOL • CITRONELLOL • BENZYL ALCOHOL • PARFUM / FRAGRANCE
+
+### Garnier Fructis – Haarkur Ananas Hair Food 3in1 Maske, 400 ml (dm 1681614)
+AQUA / WATER • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • ISOPROPYL MYRISTATE • CETYL ESTERS • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • GLYCINE SOJA OIL / SOYBEAN OIL • ANANAS SATIVUS FRUIT EXTRACT / PINEAPPLE FRUIT EXTRACT • BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER • GLYCERIN • GLYCERYL LINOLEATE • GLYCERYL LINOLENATE • GLYCERYL OLEATE • KAOLIN • ASCORBYL GLUCOSIDE • CAPRYLYL GLYCOL • CITRIC ACID • TARTARIC ACID • TOCOPHEROL • POTASSIUM SORBATE • SODIUM BENZOATE • SALICYLIC ACID • CARAMEL • LINALOOL • GERANIOL • COUMARIN • LIMONENE • CITRONELLOL • BENZYL ALCOHOL • BENZYL SALICYLATE • PARFUM / FRAGRANCE
+
+### Garnier Fructis – Haarkur Kiwi Menthol Hair Food 3in1 Maske, 400 ml (dm 3115738)
+AQUA / WATER • CETEARYL ALCOHOL • GLYCERIN • ISOPROPYL MYRISTATE • STEARAMIDOPROPYL DIMETHYLAMINE • GLYCINE SOJA OIL / SOYBEAN OIL • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • ACTINIDIA CHINENSIS FRUIT WATER / KIWI FRUIT WATER • COCO- CAPRYLATE/CAPRATE • HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • CAPRYLYL GLYCOL • TARTARIC ACID • CETYL ESTERS • SALICYLIC ACID • LINALOOL • BETA-CARYOPHYLLENE • PINENE • ROSE KETONES • LIMONENE • CITRONELLOL • CITRUS AURANTIUM PEEL OIL • MENTHOL • CARVONE • HEXYL CINNAMAL • BENZYL ALCOHOL • PARFUM / FRAGRANCE
+
+### Garnier Fructis – Haarmaske Keratin Sleek, Anti-Frizz Kur, 370 ml (dm 3042310)
+AQUA / WATER • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • ISOPROPYL MYRISTATE • CETYL ESTERS • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • ARGANIA SPINOSA KERNEL OIL • BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER • HYDROLYZED CORN PROTEIN • HYDROLYZED SOY PROTEIN • HYDROLYZED WHEAT PROTEIN • CAPRYLYL GLYCOL • CITRIC ACID • TARTARIC ACID • PHENOXYETHANOL • BENZOIC ACID • LINALOOL • AMYL CINNAMAL • HEXYL CINNAMAL • BENZYL ALCOHOL • PARFUM / FRAGRANCE
+
+### L'Oréal Elvital – Haarmaske Hydra Hyaluronic, 300 ml (dm 3122676)
+AQUA / WATER • GLYCERIN • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • PARFUM / FRAGRANCE • SORBITAN ISOSTEARATE • MYRISTYL ALCOHOL • CI 17200 / RED 33 • CI 42090 / BLUE 1 • LACTIC ACID • COCO-BETAINE • SODIUM HYALURONATE • SODIUM CHLORIDE • SODIUM HYDROXIDE • PHENOXYETHANOL • DIMETHYL PHENETHYL ACETATE • LIMONENE • BENZOIC ACID • AMODIMETHICONE • TARTARIC ACID • CARVONE • CETYL ESTERS • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • CITRUS AURANTIUM PEEL OIL • CITRIC ACID • COUMARIN
+
+### L'Oréal Elvital – Haarmaske Dream Length, 300 ml (dm 3122685)
+AQUA / WATER • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • ISOPROPYL MYRISTATE • CETYL ESTERS • PARFUM / FRAGRANCE • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER • RICINUS COMMUNIS SEED OIL / CASTOR SEED OIL • HYDROXYCITRONELLAL • HYDROLYZED WHEAT PROTEIN • HYDROLYZED CORN PROTEIN • HYDROLYZED SOY PROTEIN • PHENOXYETHANOL • TRIMETHYLCYCLOPENTENYL METHYLISOPENTENOL • SALICYLIC ACID • LIMONENE • BENZYL ALCOHOL • LINALYL ACETATE • BENZYL SALICYLATE • LINALOOL • CAPRYLYL GLYCOL • ALPHA-ISOMETHYL IONONE • TARTARIC ACID • CARVONE • GERANIOL • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • CITRONELLOL • CITRUS AURANTIUM PEEL OIL • COUMARIN • HEXYL CINNAMAL
+
+### L'Oréal Elvital – Haarmaske Glycolic Gloss Spiegelglanz, 300 ml (dm 3137211)
+AQUA / WATER • GLYCERIN • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • PARFUM / FRAGRANCE • SORBITAN ISOSTEARATE
+
+### NEQI – Haarkur Repair Reveal, 250 ml (dm 1455211)
+Aqua [Water], Myristyl alcohol, Cetearyl alcohol, Cetrimonium chloride, Soy amino acids, Wheat amino acids, Avena sativa (Oat) peptide, Gardenia taitensis flower extract, Lycium barbarum fruit extract, Malva sylvestris (Mallow)  extract, Amodimethicone, Citrus aurantium peel oil, Juniperus virginiana oil, Synthetic fluorphlogopite, Titanium dioxide, Tetramethyl acetyloctahydronaphthalenes, Caramel, C13-15 alkane, Propylene glycol, Glycerin, Ethylhexyl methoxycinnamate, Citric acid, Trideceth-10, Diethylamino hydroxybenzoyl hexyl benzoate, Tin oxide, Methylchloroisothiazolinone, Arginine HCl, Serine, Threonine, Methylisothiazolinone, 1,2-Hexanediol, Caprylyl glycol, Phenoxyethanol, Parfum [Fragrance], Hexyl cinnamal, Limonene, Linalool
+
+### OGX – Haarkur Coconut Miracle Oil, 300 ml (dm 2170211)
+Aqua/Water/Eau, Cetearyl Alcohol, Cetyl Alcohol, Behentrimonium Chloride, Glycerin, PPG-3 Benzyl Ether Myristate, Amodimethicone, Steareth-20, Cocos Nucifera (Coconut) Oil, Gardenia Taitensis (Tiare) Flower Extract, Vanilla Planifolia Fruit Extract, Polyquaternium-47, Polyquaternium-37, PPG-1 Trideceth-6, Sorbitan Oleate, Glycol Distearate, Propylene Glycol Dicaprylate/Dicaprate, Isopropyl Alcohol, Citric Acid, Sodium Hydroxide, Disodium EDTA, Sodium Benzoate, Phenoxyethanol, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Parfum/Fragrance, Linalool, Benzyl Salicylate.
+
+### Balea – Haarmaske Intensivpflege 3in1, 300 ml (dm 1671219)
+Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Dicaprylyl Ether, Ricinus Communis Seed Oil, Panthenol, Niacinamide, Helianthus Annuus Hybrid Oil, Prunus Amygdalus Dulcis Oil, Parfum, Distearoylethyl Hydroxyethylmonium Methosulfate, Isopropyl Alcohol, Sodium Benzoate, Potassium Sorbate, Vanillin, Tetramethyl Acetyloctahydronaphthalenes, Citric Acid
+
+### Schwarzkopf Gliss – Haarmaske 4in1 Total Repair, 400 ml (dm 1431891)
+Aqua (Water, Eau), Cetearyl Alcohol, Glycerin, Behentrimonium Chloride, Distearoylethyl Hydroxyethylmonium Methosulfate, Isopropyl Myristate, Behenamidopropyl Dimethylamine, Hydroxypropylgluconamide, Hydroxypropylammonium Gluconate, Hydrolyzed Keratin, Lactic Acid, Parfum (Fragrance), Amodimethicone, Butyrospermum Parkii (Shea) Butter, Isopropyl Alcohol, Prunus Armeniaca (Apricot) Kernel Oil, Sodium Benzoate, Ceteareth-20, Trideceth-10, Citrus Aurantium Peel Oil, Limonene, Phenoxyethanol, Benzyl Alcohol, Alpha-Isomethyl Ionone, Vanillin, Rose Ketones, Potassium Sorbate, Benzaldehyde, Anise Alcohol
+
+### Bali Curls – Haarmaske Deep Repair, 200 ml (dm 3106327)
+AQUA, CETEARYL ALCOHOL, GLY-CERIN, BUTYROSPERMUM PARKII BUTTER, COCOS NUCIFERA OIL, GLYCINE SOJA OIL, PERSEA GRA- TISSIMA OIL, CETRIMONIUM CHLORIDE, BETAINE. BEHENTRIMONIUM METHOSULFATE, PANTHENOL, SODIUM BENZOATE, PARFUM, HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, GLYCERYL STEARATE SE, POTASSIUM SORBATE, LACTIC ACID, LINALOOL, CITRIC ACID, LIMONENE. CANANGA ODORATA FLOWER EXTRACT.
+
+### Dejan Garz – Haarmaske The Foundation, 200 ml (dm 3094993)
+AQUA, CETEARYL ALCOHOL, GLYCERIN, DIMETHICONE, COCOS NUCIFERA OIL, BEHENTRIMONIUM CHLORIDE, AMODIMETHICONE, CETRIMONIUM CHLORIDE, PANTHENOL, ARGANIA SPINOSA KERNEL OIL, RICINUS COMMUNIS SEED OIL, SIMMONDSIA CHINENSIS SEED OIL, INULIN, SPHINGOLIPIDS, PHOSPHOLIPIDS, TRIDECETH-15, TRIDECETH-3, SODIUM HYALURONATE, PENTYLENE GLYCOL, LACTIC ACID, CITRIC ACID, TOCOPHEROL,  PHENOXYETHANOL, SODIUM CITRATE, ACETIC ACID, p-ANISIC ACID, ISOPROPYL ALCOHOL, SODIUM BENZOATE, POTASSIUM SORBATE, PARFUM, HEXYL CINNAMAL, LINALOOL
+
 ## Drogerie (Rossmann)
-Rossmann blockt Abrufe. INCI hier aus Lauras Screenshots abgeschrieben (6.10.2026). Bilder: Laura muss die Vorderseiten-Screenshots noch als Datei schicken (kamen nur als Vorschau an).
+Rossmann blockt Abrufe. INCI hier aus Lauras Screenshots abgeschrieben (6.10.2026). Bilder: alle als Datei in notizen/masken-bilder/.
 
 ### IDA WARG Beauty – Repair Hair Mask, 250 ml (Art.-Nr. 222065) – Bild: notizen/masken-bilder/ida-warg-repair.png
 AQUA (WATER), CETEARYL ALCOHOL, BEHENTRIMONIUM CHLORIDE, CETYL ALCOHOL, BUTYROSPERMUM PARKII (SHEA) BUTTER, COCOS NUCIFERA OIL, GLYCERIN, VITIS VINIFERA (GRAPE) SEED OIL, SALVIA HISPANICA SEED EXTRACT, GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, SODIUM BENZOATE, SODIUM GLUCONATE, POTASSIUM SORBATE, GLUCONOLACTONE, CITRIC ACID, LEUCONOSTOC/RADISH ROOT FERMENT FILTRATE, LINALOOL, LINALYL ACETATE, TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES, HEXAMETHYLINDANOPYRAN, BENZYL SALICYLATE, PARFUM (FRAGRANCE)
@@ -59,7 +115,6 @@ Aqua (Water, Eau), Cetearyl Alcohol, Distearoylethyl Hydroxyethylmonium Methosul
 ### Pantene Pro-V – Grow Abundant Anti-Haarverlust Haarmaske, 300 ml (Art.-Nr. 210077) – Bild: notizen/masken-bilder/pantene-grow-abundant.jpg
 Aqua, Cetyl Alcohol, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Bis-Aminopropyl Dimethicone, Glutamic Acid, Benzyl Alcohol, Sodium Benzoate, Parfum, Citric Acid, Behentrimonium Methosulfate, Disodium EDTA, Polysorbate 20, Panthenol, Panthenyl Ethyl Ether, Isopropyl Alcohol, Histidine, Linalool, CI 77491, Hexyl Cinnamal, Silica, Biotin
 
-## High-End
 
 ### Syoss – Intense Keratin Haarmaske, 400 ml (Rossmann 181171) – Bild: notizen/masken-bilder/syoss-intense-keratin.png
 Aqua (Water, Eau), Cetearyl Alcohol, Glycerin, Behentrimonium Chloride, Distearoylethyl Hydroxyethylmonium Methosulfate, Hydrolyzed Keratin, Isopropyl Myristate, Behenamidopropyl Dimethylamine, Lactic Acid, Amodimethicone, Parfum (Fragrance), Butyrospermum Parkii (Shea) Butter, Isopropyl Alcohol, Sodium Benzoate, Tetramethyl Acetyloctahydronaphthalenes, Ceteareth-20, Sodium Hydroxide, Trideceth-10, Linalool, Linalyl Acetate, Acetyl Cedrene, Phenoxyethanol
