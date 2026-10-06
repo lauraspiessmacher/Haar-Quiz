@@ -211,4 +211,12 @@ P = [
  "Leichtes Spray mit Glycerin, Koffein und Hyaluron, dazu Fermente und etwas Azelainsäure.",
  "Koffein, Hyaluron, Glycerin","mit Parfum, ohne Alkohol",
  "Ohne Alkohol und ohne Öl, deshalb gut für normale und schnell fettende Kopfhaut. Mehr Fülle verspricht vor allem das zugehörige System aus Shampoo und Conditioner.",H),
+("kmp","Kérastase","Symbiose Micro-Peeling Cellulaire","peeling schuppen","Peeling grob",
+ "Eher ein Peeling-Shampoo: Es reinigt mit zwei Sulfat-Tensiden, dazu 1,9 % Salicylsäure und gemahlene Argan- und Aprikosenkerne.",
+ "Salicylsäure, Argan- und Aprikosenkern-Pulver, Squalan","mit Parfum und Menthol",
+ "Laut Kérastase für sensible Kopfhaut mit Schuppen. Mit Sulfaten, Menthol und Parfum sehe ich das bei sensibler Kopfhaut kritisch. Gegen Schuppen hilft vor allem die Salicylsäure, sie löst die Schuppen. Einen Anti-Pilz-Wirkstoff hat es nicht.",H),
+("kpo","Kérastase","Spécifique Potentialiste","normal fettend","Serum · ohne Ausspülen",
+ "Alkohol steht an 2. Stelle, dann Bifidus-Ferment, ein Vitamin-C-Abkömmling und Präbiotika aus Zuckern.",
+ "Bifidus-Ferment, Vitamin-C-Abkömmling, Präbiotika","mit Parfum, Alkohol an 2. Stelle",
+ "Kérastase bewirbt es für alle Kopfhauttypen, auch für trockene und sensible. Mit Alkohol an 2. Stelle und Parfum würde ich es dort eher nicht nehmen. Die Wirkung auf das Mikrobiom der Kopfhaut ist bisher vor allem mit Studien des Herstellers belegt.",H),
 ]

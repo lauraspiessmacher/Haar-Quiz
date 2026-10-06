@@ -207,7 +207,8 @@ Aqua, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Triethanolamine
 
 ### Bilder-Stand (06.10.2026)
 - Fertig freigestellt (notizen/kopfhaut-bilder/fertig/*.webp): alle dm-Produkte, alle High-End bis auf Vichy Anti-Dandruff Serum; Pantene Grow Abundant = Karton (mytime.de); Vichy REGEN = Bild von frenchbeautyhub (frz. Etikett).
-- FEHLT: Vichy Dercos Anti-Dandruff Serum (kein Bild gefunden, in DE kaum gelistet) → Laura nach Screenshot fragen.
+- Vichy Serum 10 + Lee Stafford: Bild von Laura (Datei) eingebaut. Potentialiste: Bild von Hagel.
+- NOCH OHNE BILD (Lauras Screenshots kamen nur als Vorschau): ISANA Peeling, ISANA Sensitive, NEQI Scalp Care, Alterra, Salt House Forte, Salt House Akut.
 - Rossmann ist für mich gesperrt („Client Challenge“). Rossmann-Bilder als Datei vorhanden: OGX ProGrowth, Salt House Anti-Haarverlust, Australian Bodycare (notizen/kopfhaut-bilder/). Nur als Vorschau angekommen (Bild fehlt): Lee Stafford, ISANA Sensitive, ISANA Peeling, NEQI Scalp Care Treatment, Alterra Elixier, Salt House Forte, Salt House Akut → andere Quelle suchen oder Laura nochmal als Datei.
 
 ### Runde 4 (Lauras Screenshots)
