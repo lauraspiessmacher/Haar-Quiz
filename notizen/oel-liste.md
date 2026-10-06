@@ -119,3 +119,6 @@ Hinweise: „Pantene Keratin Öl“ = Keratin Protect Oil Repair & Care (d13), �
 
 ## Lauras Ideen zur Überarbeitung (gesammelt, NICHT umsetzen vor ihrem schriftlichen Go)
 1. Einleitungstext: Formulierung „So reiben deine Haare weniger aneinander und brechen seltener ab“ anpassen. Einbauen: Haaröl ist ein Must-have, aber ein Add-on. Nicht nur mit Öl als Föhnpflege arbeiten, es dient zur Versiegelung und schließt andere Texturen (Leave-in usw.) ein. Erst das Gesamtpaket hilft gegen Haarbruch und Spliss. „Das Öl wählst du nach deiner Haardicke. Je feiner dein Haar, desto leichter sollte das Öl sein“ passt so.
+2. „Was ist ein trockenes Öl?“: aus dem Kasten oben raus und in die Beschreibung unter „Feines Haar“ verschieben. Der Text ist zu massiv → kürzen.
+3. „Gut zu wissen“: Kein Öl und generell kein Leave-in repariert Spliss. Ist das Haar einmal aufgespalten, wächst es nicht mehr zusammen, man kann es nur optisch versiegeln. Empfehlung: Spliss in den Spitzen → Spitzenschnitt; Spliss im ganzen Haar → Splissschnitt.
+4. „So verwendest du es“: Mit einem Pumpstoß starten, wie eine Handcreme in den Händen verreiben, zuerst in die Spitzen, dann nach oben arbeiten. Wenn nicht jedes Haar etwas abbekommen hat: zweiter Pumpstoß. So bei sehr feinem/dünnem Haar anfangen; bei normalem bis dickem Haar sind auch zwei Pumpstöße als Start okay. Text so kurz wie möglich halten.
