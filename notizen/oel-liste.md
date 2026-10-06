@@ -104,3 +104,4 @@ Helianthus Annuus Hybrid Oil, Argania Spinosa Kernel Oil, Cocos Nucifera Oil, Or
 #### [d17] NEQI Haaröl Diamond Glass, 50 ml (dm DAN 3124935)
 Caprylic/capric triglyceride, Disiloxane, C13-14 isoparaffin, Parfum [Fragrance], Juniperus virginiana oil, Hippophae rhamnoides oil, C13-15 alkane, Citrus aurantium peel oil, Tetramethyl acetyloctahydronaphthalenes, Tocopheryl acetate, Linalyl acetate, Hexyl cinnamal, Geranyl acetate, Pinene, Limonene, Linalool, Geraniol.
 Hinweise: „Pantene Keratin Öl“ = Keratin Protect Oil Repair & Care (d13), „Pantene Repair & Care“ = LOVE Edition Repair & Care (d15); „Balea Oil Repair“ = Haaröl Oil Repair Intensiv 100 ml (d07); „OGX Argan Oil of Morocco“ = Moroccan Argan Penetrating Oil (d02, das Dry Oil o14 kam schon von Zalando).
+- Laura: Beide Pantene-Öle (d13 Keratin Protect + d15 LOVE Edition) trotzdem rein.
