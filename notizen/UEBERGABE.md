@@ -19,6 +19,11 @@
 - Shop-Abzeichen („Neu“, „Top bewertet“, dm-Badges) vorher übermalen, sonst bleiben sie hängen oder schneiden Deckel ab.
 - Immer auf knallpinkem Hintergrund kontrollieren, dann sieht man jeden Rest.
 
+## Arbeitsweise mit Lauras Screenshots (WICHTIG)
+- Sobald Laura ein Bild/Screenshot schickt: SOFORT Produktname + Inhaltsstoffe in die passende Notiz abschreiben und, falls als Datei vorhanden, das Bild nach `notizen/…-bilder/` kopieren, committen, pushen. Nicht auf später verschieben.
+- Bilder kommen manchmal nur als Vorschau an (keine Datei) und verschwinden später aus der Ansicht. Wenige Bilder ohne Text kommen meist als Datei an.
+- Sonst so arbeiten, wie es am schnellsten geht (z. B. dm selbst abrufen).
+
 ## Inhaltliche Regeln (Lauras Haltung)
 - Einordnung nach Inhaltsstoffen, nicht nach Werbung. Ehrliche „Gut zu wissen“-Hinweise, positiv formuliert.
 - Spliss-Hinweis nur oben in der Einleitung, nicht bei Produkten.
