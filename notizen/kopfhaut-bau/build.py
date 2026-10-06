@@ -36,7 +36,8 @@ html = '''<!DOCTYPE html>
     </svg>
     <div class="by">Von Laura, deiner Haarpflege-Bestie</div>
     <h1>Dein Kopfhaut-Guide</h1>
-    <p class="lead">Gesunde Haare fangen an der Kopfhaut an. Hier findest du Seren, Tonika, Öle und Peelings, sortiert nach deinem Kopfhauttyp. Eingeordnet habe ich alles nach den Inhaltsstoffen, nicht nach dem, was auf der Packung steht.</p>
+    <p class="lead">Gesunde Haare fangen an der Kopfhaut an. Denn nur auf einer gesunden Kopfhaut, die in Balance ist, können deine Haare auch gesund wachsen. Hier findest du Seren, Tonika, Öle und Kopfhautpeelings, sortiert nach deinem Kopfhauttyp.</p>
+    <p class="how">(Eingeordnet habe ich alles nach den Inhaltsstoffen, nicht nach dem, was auf der Packung steht.)</p>
     <div class="box">
       <p><b>So verwendest du sie:</b> Kopfhautpflege kommt direkt auf die Kopfhaut, nicht in die Längen. Am besten klappt das mit der Scheiteltechnik: Zieh dir vier bis fünf Scheitel über die ganze Kopfhaut und gib das Produkt mit dem Applikator, der Pipette oder dem Spray direkt auf die Scheitel. Danach sanft mit den Fingerkuppen einmassieren.</p>
       <p><b>Wann?</b> Am besten nach dem Waschen auf die noch feuchte Kopfhaut, vor dem Föhnen. Viele Seren sind für jeden Tag gedacht. Auch dann ist die Scheiteltechnik am saubersten, weil kaum Produkt in die Haare kommt und sie nicht beschwert.</p>
