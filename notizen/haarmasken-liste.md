@@ -1,5 +1,12 @@
 # Haarmasken-Guide: gesammelte Produkte
 
+## Aufbau (Lauras Wunsch, 6.10.2026)
+- Gleicher Aufbau wie Leave-in-Guide: Reiter Feines, Dünnes, Normales, Dickes, Sehr dickes Haar + „Kaputte Haare“ + „Liste“.
+- Unter jedem Produkt: „Haarzustand:“ mit Claudes Einschätzung (wie im Leave-in-Guide).
+- „Kaputte Haare“: alle Masken mit Bond-Wirkstoffen (stabilisieren im Inneren) ODER Repair von außen (Proteine, Keratin). Unter dem Produkt vermerken, ob es im Inneren wirkt oder mit Proteinen von außen.
+- Regel bleibt: Proteine/Bond-Wirkstoffe müssen vor Parfum und Konservierern stehen.
+- Kein Extra-Reiter für „Wonder Water“ – das kommt später in den Conditioner-Guide.
+
 Stand: Laura schickt Screenshots (dm, Rossmann) bzw. Namen (High-End). Bilder/INCI von dm holt Claude per dm-Artikelnummer selbst.
 
 ## Drogerie (dm)
