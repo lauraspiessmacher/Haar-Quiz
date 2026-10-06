@@ -268,3 +268,10 @@ Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Parfum, Cetrimonium Chloride, P
 ## Nachtrag Drogerie (Lauras ZIP 20:47, in notizen/conditioner-bilder/highend/)
 #### [o1] OGX ProGrowth + Peptide Conditioner (Bild 20.47.17, INCI 20.47.22)
 Aqua/Water/Eau, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, Parfum/Fragrance, Pisum Sativum Peptide, Hydrolyzed Rice Protein, Niacinamide, Dimethicone, Isopropyl Myristate, Stearamidopropyl Dimethylamine, Isopropyl Alcohol, Coco-Caprylate/Caprate, Panthenol, Leuconostoc/Radish Root Ferment Filtrate, Steareth-20, Sodium Benzoate, Citric Acid, Sodium Hydroxide
+
+## Stand (06.10.2026, spät)
+- Eingebaut: 9 High-End (h1–h9) + OGX ProGrowth (o1, Drogerie) → 86 Conditioner, alle mit Bild.
+- Kaputt neu: h1 Coco & Eve (Pflanzenprotein vor Parfum, von außen; Bond-Wirkstoffe erst hinter Parfum), h3 Olaplex No.5 FINE (Bond-Wirkstoff vor Konservierer + Parfum, wirkt im Inneren).
+- Nicht kaputt: h2 Redken Extreme (Proteine hinter Parfum), h4 Olaplex CURL (kein Bond-Wirkstoff), h9 OUAI (Keratin hinter Parfum), o1 OGX ProGrowth (Peptid hinter Parfum).
+- Silikone: h1 Quaternium-80 (von Hand ergänzt), h2/h9/o1 automatisch.
+- Offen: being Curl Power (INCI fehlt).

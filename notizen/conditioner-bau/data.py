@@ -102,3 +102,20 @@ REP.update({
 "r04": [AUSSEN, ["Keratin (Hydrolyzed Keratin)"]],
 "r14": [AUSSEN, ["Erbsenprotein (Hydrolyzed Pea Protein)","Pflanzenprotein (Hydrolyzed Vegetable Protein)"]],
 })
+H = "High-End"
+P.update({
+"o1": ("OGX","ProGrowth + Peptide Conditioner","duenn normal","Pflegende Spülung mit Fettalkohol, Glycerin und etwas Silikon","dünner werdend","Peptid und Reisprotein stehen hinter dem Parfum, nur in kleiner Menge. Gegen Haarverlust kann eine Spülung kaum etwas tun.",D),
+"h1": ("Coco & Eve","Bond Therapy Pro Bond Conditioner","normal dick kaputt","Pflegende Spülung mit Kokos, Arganöl, leichtem Ölersatz und Pflanzenprotein","strapaziert, chemisch behandelt","Die Bond-Wirkstoffe stehen hinter dem Parfum, nur in kleiner Menge. Den Repair-Effekt bringt hier das Pflanzenprotein.",H),
+"h2": ("Redken","Extreme Conditioner","normal dick","Pflegende Spülung mit Fettalkohol, Glycerin, leichtem Ölersatz und etwas Silikon","strapaziert","Die Proteine stehen hinter Parfum und Konservierer, nur in Spuren. Darum nicht bei „Kaputte Haare“.",H),
+"h3": ("Olaplex","No.5 FINE Bond Maintenance Conditioner","fein duenn kaputt","Leichte, silikonfreie Spülung mit Bond-Wirkstoff, Glycerin und leichtem Ölersatz","fein, strapaziert, chemisch behandelt","",H),
+"h4": ("Olaplex","No.5 CURL Bond Shaper Hydrating Curl Conditioner","dick sehrdick","Reichhaltige, silikonfreie Spülung mit Olivenöl-Ersatz, Rapsöl, Avocadoöl und Glycerin","lockig, trocken","Anders als beim No.5 FINE finde ich hier keinen Bond-Wirkstoff in der Liste. Sie pflegt Locken, repariert aber nicht.",H),
+"h5": ("Living Proof","Full Conditioner","fein duenn","Sehr leichte, silikonfreie Spülung mit Fettalkohol und leichtem Ölersatz","fein, platt","",H),
+"h6": ("Living Proof","Restore Conditioner","normal dick","Silikonfreie Spülung mit Jojoba-Estern, Sonnenblumenwachs und Rizinusöl-Ersatz","strapaziert","Pflegt strapaziertes Haar geschmeidig. Für echten Aufbau zusätzlich eine Repair-Maske.",H),
+"h7": ("Living Proof","Perfect hair Day Conditioner","normal dick","Silikonfreie Spülung mit Fettalkoholen, Jojoba-Estern und Sonnenblumenwachs","glanzlos, trocken","",H),
+"h8": ("Living Proof","No Frizz Conditioner","normal dick","Silikonfreie Spülung mit Jojoba-Estern, Sonnenblumenwachs und einem Anti-Feuchtigkeits-Wirkstoff","frizzig","",H),
+"h9": ("OUAI","Thick Hair Conditioner","dick sehrdick","Reichhaltige Spülung mit mehreren Silikonen, Avocadoöl und Sheabutter","dick, trocken","Das Keratin steht hinter dem Parfum, nur in kleiner Menge. Darum nicht bei „Kaputte Haare“.",H),
+})
+REP.update({
+"h1": [AUSSEN, ["Pflanzenprotein (Hydrolyzed Vegetable Protein PG-Propyl Silanetriol)"]],
+"h3": ["Wirkt im Inneren: Der Bond-Wirkstoff stabilisiert das Haar von innen. Eine Spülung wirkt nur kurz, für mehr Aufbau zusätzlich eine Repair-Maske.", ["Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate)"]],
+})

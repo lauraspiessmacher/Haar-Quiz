@@ -12,16 +12,18 @@ dm = json.load(open(f'{S}/dm.json'))
 for k, v in dm.items():
     inci[k] = v['groups'].get('Inhaltsstoffe', '')
 notes = open('/home/user/Haar-Quiz/notizen/conditioner-liste.md').read()
-for m in re.finditer(r'#### \[(r\d+)\][^\n]*\n([^\n#]*)', notes):
+for m in re.finditer(r'#### \[([rho]\d+)\][^\n]*\n([^\n#]*)', notes):
     inci[m.group(1)] = m.group(2)
 SILRE = re.compile(r'(?i)\b([A-Za-z\-/ ]*?(?:methicone|methiconol|siloxane|silicone quaternium-\d+))\b')
+EXTRA = {'h1': ['Quaternium-80']}  # Silikon-Quat, fällt nicht unter die Regex
 def silikone(k):
-    out = []
+    out = list(EXTRA.get(k, []))
     for part in re.split(r'[,•|·]', inci.get(k, '')):
         p = part.strip()
         if re.search(r'(?i)methicon|siloxan|silicone quaternium', p):
             name = re.sub(r'\s*\(.*?\)', '', p).strip().title().replace('-Di', '-di')
             name = re.sub(r'(?i)^silicone quaternium', 'Silicone Quaternium', name)
+            name = re.sub(r'(?i)\b(peg|ppg)\b', lambda m: m.group(1).upper(), name)
             if name and name not in out: out.append(name)
     return out
 
@@ -56,7 +58,7 @@ CATS = '''const CATS = [
  {id:"normal", label:"Normales Haar", desc:"Die solide Mitte. Hier darfst du nach deinem Haarzustand auswählen, zum Beispiel nach mehr Glanz, weniger Frizz oder mehr Pflege für trockenes oder strapaziertes Haar."},
  {id:"dick", label:"Dickes Haar", desc:"Kräftiges Haar, das viel Pflege verträgt. Conditioner mit Silikon, Ölen, Butter oder Fettalkoholen machen es weich und geschmeidig, ohne dass es platt wirkt."},
  {id:"sehrdick", label:"Sehr dickes Haar", desc:"Sehr kräftiges Haar, oft auch trocken, lockig oder kraus. Hier stehen die reichhaltigsten Conditioner mit viel Butter, Öl oder Silikon. Feineres Haar fällt damit schnell platt."},
- {id:"kaputt", label:"Kaputte Haare", desc:"Hier stehen nur Conditioner mit einem echten Repair-Effekt: Keratin, Proteine oder Peptide stehen vor Parfum und Konservierer und weit genug vorne in der Liste. Ein Conditioner wirkt nur kurz ein, deshalb wirken sie von außen: Sie legen sich an beschädigte Stellen an und machen das Haar widerstandsfähiger. Für mehr Aufbau zusätzlich eine Repair-Maske."}
+ {id:"kaputt", label:"Kaputte Haare", desc:"Hier stehen nur Conditioner mit einem echten Repair-Effekt: Bond-Wirkstoffe, Keratin, Proteine oder Peptide stehen vor Parfum und Konservierer und weit genug vorne in der Liste. Proteine legen sich von außen an beschädigte Stellen an und machen das Haar widerstandsfähiger, Bond-Wirkstoffe stabilisieren es von innen. Ein Conditioner wirkt nur kurz ein. Für mehr Aufbau zusätzlich eine Repair-Maske."}
 ];'''
 t = re.sub(r'const CATS = \[.*?\n\];', lambda m: CATS, t, count=1, flags=re.S)
 
@@ -77,4 +79,4 @@ t = t[:i] + '''Ein Conditioner ist der Pflegeschritt nach jeder Haarwäsche. Er 
     ''' + t[j:]
 open('/home/user/Haar-Quiz/conditioner-guide.html', 'w').write(t)
 print('ok', len(P), 'Produkte,', len(imgs), 'Bilder; ohne Bild:', [k for k in P if keyname(k) not in imgs])
-print('Silikone Beispiele:', {k: silikone(k) for k in ['c01','c04','c30','r05','r13','c07']})
+print('Silikone Beispiele:', {k: silikone(k) for k in ['c01','r13','o1','h1','h2','h3','h9']})
