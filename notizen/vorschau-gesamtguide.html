@@ -102,7 +102,8 @@ li.open .detail{display:block}
 
 /* Empfehlungs-Leiste */
 .tray{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--ink);color:var(--bg);transform:translateY(110%);transition:transform .2s}
-.tray.show{transform:none}
+.tray.show{transform:none;visibility:visible}
+.tray{visibility:hidden}
 .tray-in{max-width:720px;margin:0 auto;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center}
 .tray-txt{flex:1;min-width:0;font-size:14px}
 .tray-txt div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#D8CCC4;font-size:12.5px}
@@ -132,18 +133,45 @@ ul.full .tip b,ul.full .repbox b{font-weight:500}
 h3.lh{font-family:var(--serif);font-size:20px;margin:18px 0 4px}
 ul.plain{margin:0 0 6px;padding-left:18px;font-size:14.5px}
 .copy{font-size:13px;background:transparent;border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer;margin-bottom:6px}
+
+/* Website-Rahmen */
+.site{display:flex;align-items:center;gap:6px;margin:-6px 0 18px;flex-wrap:wrap}
+.site .logo{font-family:var(--serif);font-size:18px;margin-right:auto}
+.site a{font-size:14px;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:999px}
+.site a.on{background:var(--ink);color:var(--bg)}
+.site a.later{border:1px dashed var(--taupe)}
+/* Mein Haar */
+.me{border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-bottom:16px;background:#fff4}
+.me-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.me-top .lbl{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.me-top .val{font-family:var(--serif);font-size:18px;flex:1;min-width:150px}
+.me-top .edit{background:none;border:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:14px;padding:0}
+.switch{display:flex;border:1px solid var(--line);border-radius:999px;padding:2px;margin-top:10px;width:max-content}
+.switch button{border:0;background:transparent;border-radius:999px;padding:5px 12px;font-size:13.5px;cursor:pointer}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.me-edit{margin-top:12px;border-top:1px solid var(--line-soft);padding-top:10px}
+.examples{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 4px}
+.examples button{font-size:13.5px;background:var(--card);border:0;border-radius:999px;padding:6px 12px;cursor:pointer}
+.needs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:6px 0 10px}
+.need{border:1px dashed var(--taupe);border-radius:12px;padding:9px 11px;font-size:13.5px;color:var(--muted)}
+.need b{display:block;color:var(--ink);font-weight:600;font-size:14.5px}
+.need.hit{border-style:solid;border-color:var(--ink);background:var(--card)}
+.tag.me{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="site" aria-label="Bereiche"><span class="logo">Laura · Haarpflege</span><a href="#" class="on">Produkte</a><a href="#" class="later" title="kommt später">Quiz</a><a href="#" class="later" title="kommt später">Wissen</a></nav>
   <div class="preview">Vorschau · noch nicht fertig</div>
   <h1>Haarpflege-Finder</h1>
-  <p class="lead">Alle Guides in einem Tool: Shampoo, Conditioner, Maske, Leave-in und Kopfhaut. Zum schnellen Nachschlagen in der 1:1-Beratung. Oben kannst du zwischen zwei Aufbau-Ideen wechseln.</p>
+  <p class="lead">Alle Produkte aus meinen Guides an einem Ort: Shampoo, Conditioner, Maske, Leave-in und Kopfhautpflege, jeweils mit meiner Einschätzung. Stell unter „Mein Haar“ dein Haar ein, dann siehst du nur, was zu dir passt.</p>
 
   <div class="variant" role="group" aria-label="Ansicht wählen">
-    <button type="button" data-v="A" aria-pressed="true"><b>Ansicht A: Beratung</b><span>Eintippen, z. B. „feine Haare fettige Kopfhaut“</span></button>
+    <button type="button" data-v="A" aria-pressed="true"><b>Ansicht A: Beratung</b><span>Suchen wie im Gespräch, z. B. „feine Haare Schuppen“</span></button>
     <button type="button" data-v="B" aria-pressed="false"><b>Ansicht B: Nach Produkt</b><span>Wie die Guides, nur alle zusammen</span></button>
   </div>
+
+  <div class="me" id="me"></div>
 
   <div class="bar">
     <input class="search" id="q" type="search" placeholder="z. B. feine Haare fettige Kopfhaut" aria-label="In allen Produkten suchen">
@@ -156,11 +184,11 @@ ul.plain{margin:0 0 6px;padding-left:18px;font-size:14.5px}
   <div class="ideas">
     <h3>Was du hier ausprobieren kannst</h3>
     <ul>
-      <li><b>Ansicht A:</b> Tipp in die Suche zum Beispiel „feine Haare“, „dicke Haare kaputt“ oder „dünne Haare Schuppen“. Darunter siehst du, was erkannt wurde, und alle passenden Produkte in der Reihenfolge der Routine. Du kannst auch nur eine Marke eintippen oder beides kombinieren, z. B. „feine Haare Olaplex“.</li>
-      <li>Statt zu tippen, kannst du auch die Kürzel unter der Suche antippen.</li>
-      <li><b>Ansicht B:</b> oben die Produktart, darunter die Reiter wie im jeweiligen Guide, mit „Alle“ und „Liste“. Die Suche filtert dort nur nach Marke und Name, wie in den Guides jetzt.</li>
-      <li>Mit <b>+</b> sammelst du Produkte für die Empfehlung und kopierst sie unten als Text.</li>
-      <li>Conditioner und Kopfhautpflege sind als Platz eingeplant und kommen später dazu.</li>
+      <li><b>Mein Haar:</b> Oben einstellen, z. B. Dünn, Schuppen, Blondiert. Mit „Nur passende“ und „Alle“ schaltest du zwischen deiner Auswahl und allen Produkten um. Das gilt in beiden Ansichten.</li>
+      <li><b>Ansicht A:</b> Schlagwörter kombinieren, z. B. „feine Haare fettiger Ansatz“, „dünne Haare Schuppen blondiert“, „dicke Locken Frizz“ oder „trockene Spitzen gefärbt“. Unter der Suche steht, was erkannt wurde.</li>
+      <li><b>Kopfhautpflege:</b> Hier siehst du, wie die Bereiche nach Bedürfnis aussehen könnten. Das Passende ist hervorgehoben, die anderen Themen stehen daneben.</li>
+      <li><b>Ansicht B:</b> wie die einzelnen Guides, nur alle zusammen.</li>
+      <li>Oben im Menü sind „Quiz“ und „Wissen“ nur angedeutet, für die spätere Webseite.</li>
     </ul>
   </div>
 </div>
@@ -186,47 +214,78 @@ const TYPES = [
 ];
 const TYPE_LABEL = {shampoo:"Shampoo", maske:"Maske", leavein:"Leave-in"};
 const ORDER = ["fein","duenn","normal","dick","sehrdick"];
+const DICKE = {fein:"Fein", duenn:"Dünn", normal:"Normal", dick:"Dick", sehrdick:"Sehr dick"};
 const DICKE_LABEL = {fein:"Feines Haar", duenn:"Dünnes Haar", normal:"Normales Haar", dick:"Dickes Haar", sehrdick:"Sehr dickes Haar"};
 const DICKE_DAT = {fein:"feinem", duenn:"dünnem", normal:"normalem", dick:"dickem", sehrdick:"sehr dickem"};
-const DICKE_Q = {fein:"feine Haare", duenn:"dünne Haare", normal:"normale Haare", dick:"dicke Haare", sehrdick:"sehr dicke Haare"};
-const KOPF_LABEL = {normal:"Normale Kopfhaut", trocken:"Trockene Kopfhaut", kraeftig:"Fettende Kopfhaut", sensibel:"Sensible Kopfhaut", juckreiz:"Juckreiz", schuppen:"Schuppen"};
-const KOPF_Q = {normal:"normale Kopfhaut", trocken:"trockene Kopfhaut", kraeftig:"fettige Kopfhaut", sensibel:"sensible Kopfhaut", juckreiz:"Juckreiz", schuppen:"Schuppen"};
+const KOPF = {normal:"Normal", trocken:"Trocken", kraeftig:"Fettend", sensibel:"Sensibel", juckreiz:"Juckreiz", schuppen:"Schuppen", ausfall:"Haarausfall"};
+const KOPF_LABEL = {normal:"Normale Kopfhaut", trocken:"Trockene Kopfhaut", kraeftig:"Fettende Kopfhaut", sensibel:"Sensible Kopfhaut", juckreiz:"Juckreiz", schuppen:"Schuppen", ausfall:"Haarausfall", tief:"Tiefenreinigung", kinder:"Kinder"};
+const ZUSTAND = {blondiert:"Blondiert", gefaerbt:"Gefärbt", kaputt:"Kaputt", strapaziert:"Strapaziert", trocken:"Trocken", frizz:"Frizz", locken:"Locken", glanz:"Glanzlos", volumen:"Platt"};
+const ZUSTAND_LABEL = {blondiert:"Blondiert", gefaerbt:"Gefärbt", kaputt:"Kaputte Haare", strapaziert:"Strapaziert", trocken:"Trockene Haare", frizz:"Frizz", locken:"Locken/Wellen", glanz:"Glanzlos", volumen:"Platt/ohne Volumen"};
+/* Woran ein Haarzustand in den Guide-Texten erkannt wird */
+const ZUSTAND_RE = {blondiert:/blond|chemisch/, gefaerbt:/gefarbt|blond/, kaputt:/stark strapaz|bruch|chemisch|geschwacht/, strapaziert:/strapaz|bruchig|poros|geschwacht/,
+  trocken:/trocken|sprod|strohig|feuchtigkeit/, frizz:/frizz|kraus|widerspenstig/, locken:/lock|well|kraus/, glanz:/glanzlos|stumpf/, volumen:/platt|volumen|dunner werdend/};
+/* Kopfhautpflege nach Bedürfnis (Platzhalter, Einteilung folgt mit den Produkten) */
+const NEEDS = [
+  {id:"feucht", label:"Feuchtigkeit", txt:"bei trockener, spannender Kopfhaut", kopf:["trocken"]},
+  {id:"schuppen", label:"Schuppen", txt:"gegen Schuppen und Hefepilz", kopf:["schuppen"]},
+  {id:"ausfall", label:"Haarausfall", txt:"soll die Ausfallphase hinauszögern", kopf:["ausfall"]},
+  {id:"ruhe", label:"Beruhigend", txt:"bei Juckreiz, Rötung, Empfindlichkeit", kopf:["sensibel","juckreiz"]},
+  {id:"fett", label:"Ausgleichend", txt:"bei schnell fettender Kopfhaut", kopf:["kraeftig"]}
+];
 
 const ALL = [];
-for (const t of ["shampoo","maske","leavein"]) DATA[t].items.forEach((p, i) => { p.type = t; p.key = t + i; ALL.push(p); });
-
+for (const t of ["shampoo","maske","leavein"]) DATA[t].items.forEach((p, i) => {
+  p.type = t; p.key = t + i; ALL.push(p);
+  const h = p.h, z = Array.isArray(h) ? (h[1] || "") : (h || "");
+  p.zText = plain(z);
+});
+function plain(s) { return String(s).toLowerCase().replace(/ß/g, "ss").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’'`´]/g, ""); }
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const plain = s => String(s).toLowerCase().replace(/ß/g, "ss").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’'`´]/g, "");
 const flat = s => plain(s).replace(/[^a-z0-9]/g, "");
 const byName = (a, b) => (a.b + a.n).localeCompare(b.b + b.n, "de");
 
-/* ---------- Suchtext verstehen ---------- */
-const FILL = new Set(["haar","haare","haaren","und","mit","bei","fur","die","der","das","eher","sehr","kopfhaut"]);
+/* ---------- Suchtext verstehen: Schlagwörter frei kombinierbar ---------- */
+const FILL = new Set(("haar haare haaren und mit bei fur die der das den dem eher sehr kopfhaut meine mein meiner ich habe hab hat sind ist aber auch stark leicht etwas " +
+  "eine ein einen sie total extrem ziemlich spitzen langen laengen ansatz am an in im oft schnell viel wenig zu nach was welche welches produkt produkte ab aus mir mich meinem seit immer total richtig so nur").split(" "));
+const RULES = [
+  /* Kopfhaut */
+  [/ (normal\w*) kopfhaut /, r => r.kopf.add("normal")],
+  [/ (trocken\w*|spannend\w*) kopfhaut | kopfhaut (ist |)(trocken\w*|spannt) | spannt /, r => r.kopf.add("trocken")],
+  [/ (fettig\w*|fettend\w*|fettet\w*|olig\w*|fett) /, r => r.kopf.add("kraeftig")],
+  [/ (sensib\w*|empfindlich\w*|gereizt\w*|rot\w*|rotung\w*|brennt|brennen\w*) /, r => r.kopf.add("sensibel")],
+  [/ (juck\w*) /, r => r.kopf.add("juckreiz")],
+  [/ (schupp\w*) /, r => r.kopf.add("schuppen")],
+  [/ (haarausfall\w*|ausfall\w*|haarverlust\w*|fallen aus|gehen aus|lichter\w*|dunner werdend\w*|geheimratsecken) /, r => r.kopf.add("ausfall")],
+  [/ (tiefenreinig\w*|ruckstand\w*|build ?up|detox\w*|kalk\w*|hartes wasser) /, r => r.kopf.add("tief")],
+  [/ (kind\w*|baby\w*) /, r => r.kopf.add("kinder")],
+  /* Haarzustand */
+  [/ (blondiert\w*|gebleicht\w*|aufgehellt\w*|strahnen|balayage|blond\w*) /, r => { r.z.add("blondiert"); r.z.add("kaputt"); }],
+  [/ (kaputt\w*|geschadigt\w*|zerstort\w*|haarbruch\w*|bricht\w*|brechen\w*|abbrechen\w*|chemisch\w*|dauerwelle\w*|bond\w*|protein\w*|repair) /, r => r.z.add("kaputt")],
+  [/ (gefarbt\w*|coloriert\w*|farbe\w*|getont\w*|henna) /, r => r.z.add("gefaerbt")],
+  [/ (strapaziert\w*|bruchig\w*|spliss\w*|poros\w*) /, r => r.z.add("strapaziert")],
+  [/ (trocken\w*|sprod\w*|strohig\w*|feuchtigkeit\w*) /, r => r.z.add("trocken")],
+  [/ (frizz\w*|kraus\w*|widerspenstig\w*|fliegend\w*|puffig\w*) /, r => r.z.add("frizz")],
+  [/ (lock\w*|wellig\w*|wellen|curl\w*) /, r => r.z.add("locken")],
+  [/ (glanzlos\w*|stumpf\w*|matt) /, r => r.z.add("glanz")],
+  [/ (platt\w*|ohne volumen|kein volumen|volumen) /, r => r.z.add("volumen")],
+  /* Haardicke */
+  [/ sehr dick\w* | sehr viel\w* haar\w* /, r => r.dicke = "sehrdick"],
+  [/ (fein\w*|feenhaar\w*) /, r => r.dicke = "fein"],
+  [/ (dunn\w*|duenn\w*|wenig\w* haar\w*) /, r => r.dicke = "duenn"],
+  [/ (dick\w*|kraftig\w* haar\w*|viel\w* haar\w*) /, r => r.dicke = "dick"],
+  [/ (normal\w*|mittel\w*) /, r => r.dicke = r.dicke || "normal"]
+];
 function parse(q) {
   let t = " " + plain(q).replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ") + " ";
-  const r = {dicke:null, kopf:null, kaputt:false, words:[]};
-  const take = (re, fn) => { if (re.test(t)) { fn(); t = t.replace(re, " "); } };
-  /* Kopfhaut zuerst, damit „normale/trockene Kopfhaut“ nicht als Haar zählt */
-  take(/ (normal\w*) kopfhaut /, () => r.kopf = "normal");
-  take(/ (trocken\w*) kopfhaut /, () => r.kopf = "trocken");
-  take(/ (fettig\w*|fettend\w*|olig\w*|fett) /, () => r.kopf = "kraeftig");
-  take(/ (sensib\w*|empfindlich\w*|gereizt\w*) /, () => r.kopf = "sensibel");
-  take(/ (juck\w*) /, () => r.kopf = "juckreiz");
-  take(/ (schupp\w*) /, () => r.kopf = "schuppen");
-  take(/ sehr dick\w* /, () => r.dicke = "sehrdick");
-  take(/ (fein\w*|feenhaar\w*) /, () => r.dicke = "fein");
-  take(/ (dunn\w*|duenn\w*) /, () => r.dicke = "duenn");
-  take(/ (dick\w*) /, () => r.dicke = "dick");
-  take(/ (normal\w*) (haar\w*|$)/, () => r.dicke = "normal");
-  take(/ (normal\w*) /, () => r.dicke = r.dicke || "normal");
-  take(/ (trocken\w*) /, () => r.kopf = r.kopf || "trocken");
-  take(/ (kaputt\w*|strapaziert\w*|geschadigt\w*|bruch\w*|haarbruch\w*|blondiert\w*|gebleicht\w*|repair|spliss\w*) /, () => r.kaputt = true);
+  const r = {dicke:null, kopf:new Set(), z:new Set(), words:[]};
+  for (const [re, fn] of RULES) {
+    const g = new RegExp(re.source, "g");
+    if (g.test(t)) { fn(r); t = t.replace(g, " "); t = t.replace(g, " "); }
+  }
   r.words = t.trim().split(" ").filter(w => w && !FILL.has(w)).map(flat).filter(Boolean);
   return r;
 }
-function buildQ(r) {
-  return [r.dicke && DICKE_Q[r.dicke], r.kopf && KOPF_Q[r.kopf], r.kaputt && "kaputt"].filter(Boolean).concat(r.raw || []).join(" ");
-}
+const hasProfile = r => !!(r.dicke || r.kopf.size || r.z.size);
 
 /* Haardicken-Angabe beim Shampoo ("fein bis normal", "alle") in Stufen umrechnen */
 function stufen(txt) {
@@ -240,10 +299,31 @@ function stufen(txt) {
   return found;
 }
 const shampooFits = (p, d) => stufen(Array.isArray(p.h) ? (p.h[0] || "") : (p.h || "")).includes(d);
+const zHits = (p, r) => [...r.z].filter(z => z !== "kaputt" && ZUSTAND_RE[z].test(p.zText));
 
-const S = {v:"A", q:"", seg:"alle", tab:"shampoo", catB:"alle", open:new Set(), pick:[], more:new Set()};
+/* ---------- Mein Haar (bleibt im Browser gespeichert) ---------- */
+let ME = {dicke:null, kopf:[], z:[], on:true};
+try { const s = JSON.parse(localStorage.getItem("meinHaar") || "null"); if (s) ME = Object.assign(ME, s); } catch (_) {}
+const saveMe = () => { try { localStorage.setItem("meinHaar", JSON.stringify(ME)); } catch (_) {} };
+const meR = () => ({dicke:ME.dicke, kopf:new Set(ME.kopf), z:new Set(ME.z.concat(ME.z.includes("blondiert") ? ["kaputt"] : [])), words:[]});
+const meActive = () => ME.on && hasProfile(meR());
+
+const S = {v:"A", q:"", seg:"alle", tab:"shampoo", catB:"alle", open:new Set(), pick:[], more:new Set(), editMe:false};
 const segOk = p => S.seg === "alle" || p.s === S.seg;
 const textOk = (p, words) => words.every(w => flat(p.b + " " + p.n).includes(w));
+
+/* Passt ein Produkt zum Profil? (für Ansicht B und „Nur passende“) */
+function fits(p, r) {
+  if (p.type === "shampoo") {
+    const k = [...r.kopf].filter(x => x !== "ausfall");
+    if (k.length && !k.some(x => p.c.includes(x))) return false;
+    if (!k.includes("kinder") && p.c.includes("kinder") && p.c.length === 1) return false;
+    if (r.dicke && !shampooFits(p, r.dicke)) return false;
+    return true;
+  }
+  if (r.z.has("kaputt") && p.c.includes("kaputt")) return true;
+  return !r.dicke || p.c.includes(r.dicke);
+}
 
 /* ---------- Bausteine ---------- */
 function hairInfo(p) {
@@ -262,8 +342,9 @@ const catLabels = p => p.c.map(c => (DATA[p.type].cats.find(x => x.id === c) || 
 function tagsHtml(p, opts) {
   const tags = [];
   if (opts.showType) tags.push(`<span class="tag type">${TYPE_LABEL[p.type]}</span>`);
+  if (opts.me) tags.push(`<span class="tag me">passt zu dir</span>`);
   tags.push(`<span class="tag">${esc(p.s)}</span>`);
-  if (opts.hi) tags.push(`<span class="tag hi">${esc(opts.hi)}</span>`);
+  (opts.hi || []).forEach(h => tags.push(`<span class="tag hi">${esc(h)}</span>`));
   if (p.c.includes("kaputt") && p.type !== "shampoo") tags.push(`<span class="tag rep">Repair</span>`);
   if (p.he) tags.push(`<span class="tag">Hitzeschutz ${p.he} °C</span>`);
   return `<div class="meta">${tags.join("")}</div>`;
@@ -271,7 +352,6 @@ function tagsHtml(p, opts) {
 const addBtn = p => { const on = S.pick.includes(p.key); return `<button type="button" class="add" data-pick="${p.key}" aria-pressed="${on}" aria-label="Zur Empfehlung">${on ? "✓" : "+"}</button>`; };
 const detailHtml = p => `<div class="note">${esc(p.no)}</div>${hairInfo(p)}${p.t ? `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.t)}</div>` : ""}${repInfo(p)}${p.si && p.si.length ? `<div class="hair"><b>Silikone:</b> ${esc(p.si.join(", "))}</div>` : ""}`;
 
-/* kompakte Zeile zum Aufklappen (Ansicht A) */
 function item(p, opts = {}) {
   const open = S.open.has(p.key);
   return `<li class="${open ? "open" : ""}">
@@ -284,10 +364,9 @@ function item(p, opts = {}) {
     <div class="detail">${detailHtml(p)}<div class="hair"><b>Steht bei:</b> ${esc(catLabels(p))}</div></div>
   </li>`;
 }
-/* volle Karte wie in den Guides (Ansicht B) */
-function card(p) {
+function card(p, opts = {}) {
   return `<li>${p.i ? `<img class="pic" src="${p.i}" alt="" loading="lazy">` : ""}
-    <div class="txt"><div class="brand">${esc(p.b)}</div><div class="name">${esc(p.n)}</div>${tagsHtml(p, {})}${detailHtml(p)}
+    <div class="txt"><div class="brand">${esc(p.b)}</div><div class="name">${esc(p.n)}</div>${tagsHtml(p, opts)}${detailHtml(p)}
       <span class="also">Passt zu: ${esc(catLabels(p))}</span></div>${addBtn(p)}</li>`;
 }
 function list(id, items, opts = {}, limit = 4) {
@@ -297,58 +376,80 @@ function list(id, items, opts = {}, limit = 4) {
     (items.length > limit ? `<button type="button" class="more" data-more="${id}">${all ? "Weniger zeigen" : `Alle ${items.length} zeigen`}</button>` : "");
 }
 const SEGS = [{id:"alle", label:"Alle"}, {id:"Drogerie", label:"Drogerie"}, {id:"High-End", label:"High-End"}];
-const segRow = () => `<div class="chips">${SEGS.map(o => `<button type="button" class="chip" data-seg="${o.id}" aria-pressed="${S.seg === o.id}">${o.label}</button>`).join("")}</div>`;
+const segChips = () => SEGS.map(o => `<button type="button" class="chip" data-seg="${o.id}" aria-pressed="${S.seg === o.id}">${o.label}</button>`).join("");
 const block = (step, title, count, why, body) => `<section class="block"><div class="bhead">${step ? `<span class="step">${step}</span>` : ""}<h2>${title}</h2>${count != null ? `<span class="count">${count}</span>` : ""}</div>${why ? `<div class="bwhy">${why}</div>` : ""}${body}</section>`;
+const foundTags = r => [r.dicke && DICKE_LABEL[r.dicke], ...[...r.kopf].map(k => KOPF_LABEL[k]), ...[...r.z].filter(z => !(z === "kaputt" && r.z.has("blondiert"))).map(z => ZUSTAND_LABEL[z])].filter(Boolean);
 
-/* ---------- Ansicht A: Suche wie ein Beratungs-Tool ---------- */
-function renderA() {
-  const r = parse(S.q);
-  const quick = (attr, obj, cur) => Object.entries(obj).map(([id, l]) => `<button type="button" class="chip" data-${attr}="${id}" aria-pressed="${cur === id}">${l}</button>`).join("");
-  document.getElementById("tabsB").innerHTML = "";
-  document.getElementById("filters").innerHTML = `
-    <div class="frow"><div class="flabel">Haardicke</div><div class="chips">${quick("dicke", {fein:"Fein", duenn:"Dünn", normal:"Normal", dick:"Dick", sehrdick:"Sehr dick"}, r.dicke)}</div></div>
-    <div class="frow"><div class="flabel">Kopfhaut</div><div class="chips">${quick("kopf", {normal:"Normal", trocken:"Trocken", kraeftig:"Fettend", sensibel:"Sensibel", juckreiz:"Juckreiz", schuppen:"Schuppen"}, r.kopf)}</div></div>
-    <div class="frow"><div class="flabel">Extra</div><div class="chips"><button type="button" class="chip" data-kaputt aria-pressed="${r.kaputt}">Kaputt</button>${segRow().replace(/^<div class="chips">|<\/div>$/g, "")}</div></div>`;
+/* ---------- Mein-Haar-Kasten ---------- */
+function renderMe() {
+  const r = meR(), tags = foundTags({dicke:ME.dicke, kopf:new Set(ME.kopf), z:new Set(ME.z)});
+  const multi = (attr, obj, cur) => Object.entries(obj).map(([id, l]) => `<button type="button" class="chip" data-${attr}="${id}" aria-pressed="${cur.includes(id)}">${l}</button>`).join("");
+  document.getElementById("me").innerHTML = `
+    <div class="me-top"><span class="lbl">Mein Haar</span>
+      <span class="val">${tags.length ? esc(tags.join(" · ")) : "noch nicht eingestellt"}</span>
+      <button type="button" class="edit" data-editme>${S.editMe ? "Fertig" : tags.length ? "Ändern" : "Einstellen"}</button></div>
+    ${tags.length ? `<div class="switch" role="group" aria-label="Filter"><button type="button" data-meon="1" aria-pressed="${ME.on}">Nur passende</button><button type="button" data-meon="0" aria-pressed="${!ME.on}">Alle</button></div>` : ""}
+    ${S.editMe ? `<div class="me-edit">
+      <div class="frow"><div class="flabel">Haardicke</div><div class="chips">${multi("medicke", DICKE, ME.dicke ? [ME.dicke] : [])}</div></div>
+      <div class="frow"><div class="flabel">Kopfhaut <small>(mehrere möglich)</small></div><div class="chips">${multi("mekopf", KOPF, ME.kopf)}</div></div>
+      <div class="frow"><div class="flabel">Haarzustand <small>(mehrere möglich)</small></div><div class="chips">${multi("mez", ZUSTAND, ME.z)}</div></div>
+    </div>` : ""}`;
+}
 
-  const found = [r.dicke && DICKE_LABEL[r.dicke], r.kopf && KOPF_LABEL[r.kopf], r.kaputt && "Kaputte Haare", r.words.length && "Name: „" + r.words.join(" ") + "“"].filter(Boolean);
-  let html = found.length
-    ? `<div class="found">Erkannt: ${found.map(f => `<span class="tag hi">${esc(f)}</span>`).join("")}</div>`
-    : `<div class="summary">Wonach suchst du?</div><div class="summary-sub">Tipp z. B. „feine Haare“, „dicke Haare kaputt“ oder „fettige Kopfhaut“ ein, oder tipp oben auf die Kürzel. Eine Marke geht auch.</div>`;
-  if (!found.length) { document.getElementById("out").innerHTML = html; return; }
-
-  const onlyText = !r.dicke && !r.kopf && !r.kaputt;
-  let step = 0;
+/* ---------- Routine (Ansicht A) ---------- */
+function routine(r, fromMe) {
+  const dTxt = r.dicke ? DICKE_DAT[r.dicke] + " Haar" : "";
+  let html = "", step = 0;
   for (const t of TYPES) {
     step++;
-    if (t.soon) {
-      const need = t.id === "kopfhaut" && !r.kopf && !onlyText ? " Sie erscheint, wenn du auch die Kopfhaut eintippst." : "";
-      html += block(step, t.label, null, "", `<div class="soonbox">Kommt noch: Hier erscheinen die passenden ${t.id === "kopfhaut" ? "Kopfhautprodukte, sortiert nach Kopfhauttyp" : "Conditioner, sortiert nach Haardicke"}.${need}</div>`);
+    if (t.id === "conditioner") {
+      html += block(step, "Conditioner", null, "", `<div class="soonbox">Kommt noch: Hier erscheinen die passenden Conditioner, nach Haardicke und Haarzustand.</div>`);
+      continue;
+    }
+    if (t.id === "kopfhaut") {
+      const hit = NEEDS.filter(n => n.kopf.some(k => r.kopf.has(k)));
+      html += block(step, "Kopfhautpflege", null, hit.length ? "Dein Thema ist hervorgehoben. Die anderen Themen stehen daneben, falls die Kopfhaut gerade etwas anderes braucht." : "Nach Kopfhaut-Bedürfnis. Schreib die Kopfhaut dazu, dann wird das passende Thema hervorgehoben.",
+        `<div class="needs">${NEEDS.map(n => `<div class="need${hit.includes(n) ? " hit" : ""}"><b>${n.label}</b>${n.txt}</div>`).join("")}</div><div class="soonbox">Kommt noch: Die Produkte folgen, sobald der Kopfhaut-Guide fertig ist.</div>`);
       continue;
     }
     const base = DATA[t.id].items.filter(p => segOk(p) && textOk(p, r.words));
-    if (onlyText) {
-      if (base.length) html += block(step, t.label, base.length, "", list("A-" + t.id, base, {}, 6));
-      continue;
-    }
+    if (!hasProfile(r)) { if (base.length) html += block(step, t.label, base.length, "", list("A-" + t.id, base, {}, 6)); continue; }
     if (t.id === "shampoo") {
-      let fit = base;
-      if (r.kopf) fit = fit.filter(p => p.c.includes(r.kopf));
-      if (r.dicke && !r.kopf) fit = fit.filter(p => shampooFits(p, r.dicke) && !p.c.includes("kinder"));
-      if (r.dicke && r.kopf) fit = fit.filter(p => shampooFits(p, r.dicke)).concat(fit.filter(p => !shampooFits(p, r.dicke)));
-      const why = r.kopf ? (r.dicke ? `Nach Kopfhaut ausgewählt. Was auch zu ${DICKE_DAT[r.dicke]} Haar passt, steht oben.` : "Nach Kopfhaut ausgewählt.")
-        : r.dicke ? `Alle Shampoos, die laut Haardicken-Angabe zu ${DICKE_DAT[r.dicke]} Haar passen. Für eine genauere Auswahl die Kopfhaut dazuschreiben.` : "Shampoos haben keine Kategorie „kaputt“. Schreib Haardicke oder Kopfhaut dazu.";
-      if (!r.dicke && !r.kopf) { html += block(step, "Shampoo", null, why, ""); continue; }
-      html += block(step, "Shampoo", fit.length, why, list("A-sh", fit, p => ({hi: r.dicke && r.kopf && shampooFits(p, r.dicke) ? "passt zu " + DICKE_DAT[r.dicke] + " Haar" : ""})));
+      const k = [...r.kopf].filter(x => x !== "ausfall");
+      if (!k.length && !r.dicke) { html += block(step, "Shampoo", null, "Das Shampoo richtet sich nach der Kopfhaut. Schreib sie dazu, z. B. „fettige Kopfhaut“.", ""); continue; }
+      const score = p => (k.filter(x => p.c.includes(x)).length * 100) + (r.dicke && shampooFits(p, r.dicke) ? 10 : 0) + zHits(p, r).length;
+      const fit = base.filter(p => fits(p, {dicke: k.length ? null : r.dicke, kopf: new Set(k), z: r.z})).sort((a, b) => score(b) - score(a));
+      const why = k.length ? `Nach Kopfhaut ausgewählt${k.length > 1 ? ". Was mehrere Punkte abdeckt, steht oben" : ""}${r.dicke ? `. Was auch zu ${dTxt} passt, ist markiert` : ""}.`
+        : `Alle Shampoos, die zu ${dTxt} passen. Genauer wird es mit der Kopfhaut.`;
+      html += block(step, "Shampoo", fit.length, why + (r.kopf.has("ausfall") ? " Gegen Haarausfall selbst hilft eher die Kopfhautpflege." : ""),
+        list("A-sh", fit, p => ({hi: [...(k.length > 1 ? k.filter(x => p.c.includes(x)).map(x => KOPF_LABEL[x]) : []), ...(r.dicke && k.length && shampooFits(p, r.dicke) ? ["passt zu " + dTxt] : []), ...zHits(p, r).map(z => ZUSTAND[z])]})));
     } else {
-      const fit = r.dicke ? base.filter(p => p.c.includes(r.dicke)) : [];
-      const rep = r.kaputt ? base.filter(p => p.c.includes("kaputt")) : [];
-      if (!r.dicke && !r.kaputt) { html += block(step, t.label, null, `${t.label === "Maske" ? "Masken" : "Leave-ins"} richten sich nach der Haardicke. Schreib sie dazu, z. B. „feine Haare“.`, ""); continue; }
+      const kap = r.z.has("kaputt");
+      if (!r.dicke && !kap && !r.z.size) { html += block(step, t.label, null, `${t.label === "Maske" ? "Masken" : "Leave-ins"} richten sich nach Haardicke und Haarzustand. Schreib z. B. „feine Haare“ dazu.`, ""); continue; }
+      const score = p => zHits(p, r).length;
+      const rep = kap ? base.filter(p => p.c.includes("kaputt")).sort((a, b) => (r.dicke ? (b.c.includes(r.dicke) - a.c.includes(r.dicke)) * 10 : 0) + score(b) - score(a)) : [];
+      const fit = (r.dicke ? base.filter(p => p.c.includes(r.dicke)) : base).filter(p => r.dicke || score(p)).sort((a, b) => score(b) - score(a));
+      const hi = p => [...(r.dicke && kap && p.c.includes(r.dicke) ? ["passt zu " + dTxt] : []), ...zHits(p, r).map(z => ZUSTAND[z])];
       let body = "";
-      if (r.kaputt) body += `<div class="sub">Repair für kaputte Haare</div>` + list("A-rep-" + t.id, rep, p => ({hi: r.dicke && p.c.includes(r.dicke) ? "passt zu " + DICKE_DAT[r.dicke] + " Haar" : ""}), 3);
-      if (r.dicke) body += (r.kaputt ? `<div class="sub">Passend zur Haardicke</div>` : "") + list("A-" + t.id, fit);
-      html += block(step, t.label, new Set(fit.concat(rep)).size, r.dicke ? "Nach Haardicke ausgewählt." : "", body);
+      if (kap) body += `<div class="sub">Aufbau für kaputte Haare (Protein &amp; Bond)</div>` + list("A-rep-" + t.id, rep, p => ({hi: hi(p)}), 3);
+      body += (kap ? `<div class="sub">${r.dicke ? "Passend zur Haardicke" : "Passend zum Haarzustand"}</div>` : "") + list("A-" + t.id, fit, p => ({hi: hi(p)}));
+      html += block(step, t.label, new Set(fit.concat(rep)).size, r.dicke ? `Nach Haardicke ausgewählt${r.z.size ? ", Passendes zum Haarzustand steht oben" : ""}.` : "Nach Haarzustand ausgewählt. Mit Haardicke wird es genauer.", body);
     }
   }
+  return html;
+}
+
+const EXAMPLES = ["feine Haare fettige Kopfhaut", "feine Haare Schuppen", "dünne Haare blondiert", "dicke Locken Frizz", "trockene Spitzen gefärbt", "juckende Kopfhaut", "Haarausfall", "normale Haare fettiger Ansatz kaputt", "Olaplex"];
+function renderA() {
+  document.getElementById("tabsB").innerHTML = "";
+  document.getElementById("filters").innerHTML = `<div class="frow" style="margin-top:2px"><div class="chips">${segChips()}</div></div>`;
+  let r = parse(S.q), note = "";
+  if (!hasProfile(r) && meActive()) { const m = meR(); m.words = r.words; r = m; note = "Mein Haar"; }
+  const tags = foundTags(r).concat(r.words.length ? ["Name: „" + r.words.join(" ") + "“"] : []);
+  let html;
+  if (!tags.length) html = `<div class="summary">Wonach suchst du?</div><div class="summary-sub">Kombinier Schlagwörter, wie du sie im Gespräch hörst. Zum Beispiel:</div>
+    <div class="examples">${EXAMPLES.map(e => `<button type="button" data-ex="${esc(e)}">${esc(e)}</button>`).join("")}</div>`;
+  else html = `<div class="found">${note ? "Aus „Mein Haar“:" : "Erkannt:"} ${tags.map(f => `<span class="tag hi">${esc(f)}</span>`).join("")}</div>` + routine(r);
   document.getElementById("out").innerHTML = html;
 }
 
@@ -359,24 +460,31 @@ function renderB() {
   const t = TYPES.find(x => x.id === S.tab);
   if (t.soon) {
     document.getElementById("filters").innerHTML = "";
-    document.getElementById("out").innerHTML = `<div class="soonbox" style="margin-top:20px">Kommt noch: Hier steht später der ${t.label}-Guide, mit seinen eigenen Reitern, genau wie die anderen.</div>`;
+    document.getElementById("out").innerHTML = t.id === "kopfhaut"
+      ? `<div class="summary">Kopfhautpflege</div><div class="cat-desc">So könnten die Reiter aussehen, sobald der Kopfhaut-Guide da ist:</div><div class="needs">${NEEDS.map(n => `<div class="need"><b>${n.label}</b>${n.txt}</div>`).join("")}</div>`
+      : `<div class="soonbox" style="margin-top:20px">Kommt noch: Hier steht später der Conditioner-Guide, mit Reitern nach Haardicke und „Kaputte Haare“, genau wie bei den Masken.</div>`;
     return;
   }
   const words = plain(S.q).split(/\s+/).map(flat).filter(Boolean);
-  const cats = DATA[t.id].cats, items = DATA[t.id].items.filter(p => segOk(p) && textOk(p, words)).sort(byName);
+  const me = meActive() ? meR() : null;
+  const cats = DATA[t.id].cats, items = DATA[t.id].items.filter(p => segOk(p) && textOk(p, words) && (!me || fits(p, me))).sort(byName);
   const chips = [{id:"alle", label:"Alle"}].concat(cats).concat([{id:"liste", label:"Liste"}]);
-  document.getElementById("filters").innerHTML = `<div class="frow"><div class="chips scroll">${chips.map(c =>
-      `<button type="button" class="chip" data-catb="${c.id}" aria-pressed="${S.catB === c.id}">${esc(c.label)}</button>`).join("")}</div></div><div class="frow">${segRow()}</div>`;
+  document.getElementById("filters").innerHTML = `<div class="frow"><div class="chips scroll">${chips.map(c => {
+      const n = c.id === "alle" || c.id === "liste" ? null : items.filter(p => p.c.includes(c.id)).length;
+      return `<button type="button" class="chip" data-catb="${c.id}" aria-pressed="${S.catB === c.id}"${n === 0 ? ' style="opacity:.45"' : ""}>${esc(c.label)}${n != null ? `<span class="n">${n}</span>` : ""}</button>`; }).join("")}</div></div>
+    <div class="frow"><div class="chips">${segChips()}</div></div>`;
+  const plural = t.label === "Maske" ? "Masken" : t.label + "s";
+  const meNote = me ? `<div class="summary-sub">Gefiltert nach „Mein Haar“. Oben auf „Alle“ schalten, um alles zu sehen.</div>` : "";
   let html;
   if (S.catB === "liste") {
-    html = `<div class="summary">Liste</div><div class="cat-desc">Alle ${t.label === "Maske" ? "Masken" : t.label + "s"} pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</div>` +
+    html = `<div class="summary">Liste</div><div class="cat-desc">Alle ${plural} pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</div>${meNote}` +
       cats.map(c => { const l = items.filter(p => p.c.includes(c.id)).map(p => `${p.b} – ${p.n}`); return l.length ?
         `<h3 class="lh">${esc(c.label)} <span class="count">${l.length}</span></h3><button type="button" class="copy" data-text="${esc(c.label + "\n" + l.join("\n"))}">Liste kopieren</button><ul class="plain">${l.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""; }).join("");
   } else {
     const c = cats.find(x => x.id === S.catB);
     const fit = c ? items.filter(p => p.c.includes(c.id)) : items;
-    html = `<div class="summary">${c ? esc(c.label) : "Alle " + (t.label === "Maske" ? "Masken" : t.label + "s")} <span class="count">${fit.length}</span></div>
-      ${c ? `<div class="cat-desc">${esc(c.desc)}</div>` : ""}<ul class="full">${fit.map(card).join("")}</ul>`;
+    html = `<div class="summary">${c ? esc(c.label) : "Alle " + plural} <span class="count">${fit.length}</span></div>
+      ${c ? `<div class="cat-desc">${esc(c.desc)}</div>` : ""}${meNote}${fit.length ? `<ul class="full">${fit.map(p => card(p, {me: !!me})).join("")}</ul>` : `<div class="empty">Hier passt mit deinem Haar gerade nichts. Schalte oben auf „Alle“.</div>`}`;
   }
   document.getElementById("out").innerHTML = html;
 }
@@ -384,10 +492,10 @@ function renderB() {
 function render() {
   document.querySelectorAll(".variant button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === S.v));
   document.getElementById("q").placeholder = S.v === "A" ? "z. B. feine Haare fettige Kopfhaut" : "Marke oder Produkt suchen";
+  renderMe();
   S.v === "A" ? renderA() : renderB();
   renderTray();
 }
-
 function renderTray() {
   const picked = S.pick.map(k => ALL.find(p => p.key === k));
   document.getElementById("tray").classList.toggle("show", picked.length > 0);
@@ -402,21 +510,19 @@ function copy(txt, el, label) {
     try { document.execCommand("copy"); } catch (_) {} ta.remove(); done();
   });
 }
-/* Kürzel antippen schreibt den Begriff in die Suche */
-function setQ(change) {
-  const r = parse(S.q); change(r);
-  r.raw = r.words.length ? plain(S.q).split(/\s+/).filter(w => r.words.includes(flat(w))) : [];
-  S.q = buildQ(r); document.getElementById("q").value = S.q;
-}
+const toggle = (arr, v) => arr.includes(v) ? arr.filter(x => x !== v) : arr.concat(v);
 
 document.addEventListener("click", e => {
   const el = e.target.closest("button");
   if (!el) return;
   const d = el.dataset;
   if (d.v) { if (S.v !== d.v) { S.v = d.v; S.q = ""; document.getElementById("q").value = ""; S.more.clear(); } }
-  else if (d.dicke) setQ(r => r.dicke = r.dicke === d.dicke ? null : d.dicke);
-  else if (d.kopf) setQ(r => r.kopf = r.kopf === d.kopf ? null : d.kopf);
-  else if ("kaputt" in d) setQ(r => r.kaputt = !r.kaputt);
+  else if ("editme" in d) S.editMe = !S.editMe;
+  else if (d.meon) { ME.on = d.meon === "1"; saveMe(); }
+  else if (d.medicke) { ME.dicke = ME.dicke === d.medicke ? null : d.medicke; ME.on = true; saveMe(); }
+  else if (d.mekopf) { ME.kopf = toggle(ME.kopf, d.mekopf); ME.on = true; saveMe(); }
+  else if (d.mez) { ME.z = toggle(ME.z, d.mez); ME.on = true; saveMe(); }
+  else if (d.ex) { S.q = d.ex; document.getElementById("q").value = S.q; }
   else if (d.seg) S.seg = d.seg;
   else if (d.tab) { S.tab = d.tab; S.catB = "alle"; }
   else if (d.catb) S.catB = d.catb;

@@ -54,3 +54,11 @@
 - Shampoo-Guide: fertig, 162 Shampoos (3× neboa von Rossmann ergänzt), alle mit Bild.
 - Rossmann-Bilder kamen als Screenshots von Laura (je Screenshot eine Nachricht, sonst kommen sie nur als Vorschau an).
 - Guides sind nur auf dem Branch, noch nicht online/in main.
+
+## Großes Ziel (Laura, 06.10.2026) – beim Fertigbauen berücksichtigen
+- Irgendwann EIN Tool / eine Webseite: alle Guides + alle Quiz + Wissensteil (Erklärtexte zu Themen, z. B. „Haarausfall“: was es gibt, was man tun kann – dort KEINE Produktempfehlungen, nur Erklärung). Soll sich wie eine Experience/Infoseite anfühlen, „von Laura für ihre Follower“.
+- Follower sollen nachschauen können: „Neues Shampoo in der Drogerie – hat Laura es schon drin, für welchen Kopfhauttyp?“
+- „Mein Haar“: Haardicke, Kopfhaut (mehrere), Haarzustand (mehrere, z. B. blondiert) einstellen → nur passende Produkte; Regler „Nur passende / Alle“.
+- Gesamt-Guide: Ansicht A (Suche mit kombinierbaren Schlagwörtern, Routine Shampoo→Conditioner→Maske→Leave-in→Kopfhautpflege) UND Ansicht B (wie die Einzel-Guides). Laura will beide.
+- Regeln: Shampoo nach KOPFHAUTTYP. Maske, Leave-in, Conditioner nach HAARDICKE + HAARZUSTAND. „Kaputte Haare“ = Aufbau (Protein/Bond), z. B. bei stark blondiert.
+- Kopfhautpflege (Guide kommt noch) nach Bedürfnis: Feuchtigkeit, Schuppen, Haarausfall (Ausfallphase hinauszögern/blocken), evtl. beruhigend/ausgleichend. Ob immer alle Themen gezeigt werden oder nur das passende: mit Laura klären, wenn die Produkte da sind (Vorschau: passendes hervorgehoben, andere daneben).
