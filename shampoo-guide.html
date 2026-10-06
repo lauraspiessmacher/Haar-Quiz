@@ -55,9 +55,10 @@ ul.list li{padding:13px 0;border-bottom:1px solid var(--line-soft)}
 .note{font-size:14.5px;color:var(--muted);margin-top:2px}
 h3{font-family:var(--serif);font-weight:500;font-size:21px;margin:22px 0 4px}
 .sub-desc{color:var(--muted);font-size:14.5px;margin-bottom:10px}
-.hair{font-size:14.5px;color:var(--muted);margin-top:2px}
+.hairbox{margin-top:6px}
+.hair{font-size:13px;color:var(--muted);margin-top:1px}
 .hair b{font-weight:500;color:var(--ink)}
-.also{display:inline-block;font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:0 9px;margin-top:6px;color:var(--muted)}
+.also{display:inline-block;font-size:15px;border:1px solid var(--ink);border-radius:999px;padding:2px 12px;margin-top:8px;color:var(--ink)}
 .box{background:var(--card);border-radius:16px;padding:16px 18px 4px;margin:18px 0 0;font-size:15px}
 .empty{color:var(--muted);padding:30px 0}
 .fine{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
@@ -327,14 +328,14 @@ q.addEventListener("input", draw);
 function listHtml(items,c){
   return `<ul class="list">${items.map(p => {
         const other = p.cats.filter(x=>x!==c.id).map(labelOf);
-        return `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${hairHtml(p)}${other.length?`<span class="also">Auch bei: ${other.join(", ")}</span>`:""}</div></li>`;
+        return `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${other.length?`<span class="also">Auch bei: ${other.join(", ")}</span>`:""}${hairHtml(p)}</div></li>`;
       }).join("")}</ul>`;
 }
 function hairHtml(p){
   const h = p.hair; if(!h) return "";
-  if(typeof h==="string") return `<div class="hair"><b>Für dein Haar:</b> ${esc(h)}</div>`;
-  if(h[0]==="alle" && h[1]==="alle") return `<div class="hair"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div>`;
-  return `<div class="hair"><b>Haardicke:</b> ${esc(h[0])}</div><div class="hair"><b>Haarzustand:</b> ${esc(h[1])}</div>`;
+  if(typeof h==="string") return `<div class="hairbox"><div class="hair"><b>Für dein Haar:</b> ${esc(h)}</div></div>`;
+  if(h[0]==="alle" && h[1]==="alle") return `<div class="hairbox"><div class="hair"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div></div>`;
+  return `<div class="hairbox"><div class="hair"><b>Haardicke:</b> ${esc(h[0])}</div><div class="hair"><b>Haarzustand:</b> ${esc(h[1])}</div></div>`;
 }
 const matchTerm = (p, term) => !term || [p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ").toLowerCase().includes(term);
 function drawListe(term){
@@ -368,7 +369,7 @@ function draw(){
     const title = seg==="alle" ? "Alle Shampoos" : (seg==="Drogerie" ? "Alle Drogerie-Shampoos" : "Alle High-End-Shampoos");
     out.innerHTML = items.length ? `<section class="cat" id="alle">
       <h2>${title}<span class="count">${items.length}</span></h2>
-      <ul class="list">${items.map(p => `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${hairHtml(p)}<span class="also">Passt zu: ${CATS.filter(c=>p.cats.includes(c.id)).map(c=>c.label).join(", ")}</span></div></li>`).join("")}</ul>
+      <ul class="list">${items.map(p => `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}<span class="also">Passt zu: ${CATS.filter(c=>p.cats.includes(c.id)).map(c=>c.label).join(", ")}</span>${hairHtml(p)}</div></li>`).join("")}</ul>
     </section>` : "";
     empty.hidden = items.length > 0;
     return;
