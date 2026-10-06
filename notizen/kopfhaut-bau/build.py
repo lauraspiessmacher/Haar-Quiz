@@ -5,7 +5,7 @@ sys.path.insert(0, S)
 from data import CATS, P, ANW
 
 tpl = open('/home/user/Haar-Quiz/masken-guide.html').read()
-css = tpl[tpl.index('<style>'):tpl.index('</style>')] + '.tip.anw{font-size:13px;line-height:1.45;padding:5px 10px}\n.hint{font-size:13px;color:var(--muted);margin-top:6px;font-style:italic}\n</style>'
+css = tpl[tpl.index('<style>'):tpl.index('</style>')] + '.also{border-radius:12px;line-height:1.5;padding:2px 10px}\n.tip.anw{font-size:13px;line-height:1.45;padding:5px 10px}\n.hint{font-size:13px;color:var(--muted);margin-top:6px;font-style:italic}\n</style>'
 
 imgs = {}
 for key, *_ in P:
@@ -97,7 +97,7 @@ function itemHtml(p){
     <div class="note">${esc(p.note)}</div>
     <div class="hair"><b>Wichtige Inhaltsstoffe:</b> ${esc(p.wirk)}</div>
     <div class="hair"><b>Duft und Alkohol:</b> ${esc(p.duft)}</div>
-    <div class="hair"><b>Passt zu:</b> ${esc(passtZu(p))}</div>
+    <span class="also">Passt zu: ${esc(passtZu(p))}</span>
     <div class="tip anw"><b>Anwendung:</b> ${esc(p.anw)}</div>
     ${p.hint?`<div class="hint">${esc(p.hint)}</div>`:""}
   </div></li>`;

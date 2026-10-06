@@ -236,3 +236,13 @@ Aqua, Alcohol Denat., Bifida Ferment Lysate, Ascorbyl Glucoside, Aminomethyl Pro
 - ÖLE NIE über Nacht empfehlen (Poren können verstopfen): 1–2 Std. vor der Wäsche, einmassieren, auswaschen.
 - Australian Bodycare Tea Tree Kur: laut Hersteller trockene Kopfhaut, mind. 30 Min. (über Nacht erlaubt), 1–3×/Woche → bei uns 30 Min. bis 1 Std. vor der Wäsche, kein „über Nacht“.
 - Layout: „Passt zu“ über der Anwendung, Anwendung kleiner geschrieben.
+
+### Lauras Korrekturen (Version 4)
+- „Passt zu“ wieder EINGEKREIST (Pille), über der Anwendung.
+- Pflege-Anwendung: „Täglich mit der Scheiteltechnik auf die trockene Kopfhaut auftragen (so vermeidest du, dass deine Haare beschwert werden), ideal auch nach dem Waschen auf die feuchte Kopfhaut.“
+- Teebaum-Kur: 1–2× pro Woche. Öle: 1–2 Std. vor der Wäsche auf trockene Kopfhaut (keine Scheiteltechnik nötig), „(nicht über Nacht drauflassen)“.
+- Peelings enden mit „Danach wie gewohnt waschen.“
+- NIE „Alkohol an X. Stelle“ schreiben → nur bei „Duft und Alkohol“: „mit Alkohol“.
+- Bei pflegearmen Seren: „Nicht ideal für trockene Kopfhaut als alleinige Pflege“ (Seren lassen sich kombinieren).
+- Lee Stafford: Satz zu Haarbruch/Längen raus.
+- Dejan Garz Sebum Spray: laut Hersteller Leave-in, täglich (bei Bedarf 2×), nicht ausspülen – keine Kur.
