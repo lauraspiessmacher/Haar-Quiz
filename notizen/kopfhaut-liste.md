@@ -130,3 +130,13 @@ Laura: L'Oréal Fiber Booster Serum kommt rein; head&shoulders Density Booster M
 - Bali Curls Haar- & Kopfhautöl Rosmarin, 30 ml (dm 3111428) [bcr]: Glycine Soja Oil, Ricinus Communis Seed Oil, Pouteria Sapota Seed Oil, Cocos Nucifera Oil, Simmondsia Chinensis Seed Oil, Rosmarinus Officinalis Leaf Oil, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Oil, Prunus Amygdalus Dulcis Oil, Vitis Vinifera Seed Oil, Isopropyl Myristate, Helianthus Annuus Hybrid Oil, Pinene, Tocopherol, Camphor, Nannochloropsis Oceanica Extract, Menthol, Rosmarinus Officinalis Leaf Extract, Beta-Caryophyllene, Helianthus Annuus Seed Oil, Limonene, Terpineol, Linalool, Alpha-Terpinene, Terpinolene, Equisetum Arvense Extract, Aloe Barbadensis Leaf Extract. Für dünner werdendes Haar, Über-Nacht-Kur.
 - Dr. Scheller Körperöl Jojoba, 30 ml (dm 1675203) [dsj]: Simmondsia Chinensis (Jojoba) Seed Oil (bio). 100 % rein.
 - Dr. Scheller Körperöl Argan, 30 ml (dm 1675202) [dsa]: Argania Spinosa Kernel Oil (bio). 100 % rein.
+
+### High-End Kopfhautpflegen (Lauras Liste, selbst suchen)
+1. Eucerin – DermoCapillaire Urea kopfhautberuhigendes Intensiv-Tonikum
+2. The Ordinary – Multi-Peptide Serum for Hair Density
+3. Niche Beauty Lab – Hair Density Scalp Treatment („Anti-Aging Serum für die Kopfhaut“)
+4. Kérastase – Genesis Sérum Anti-Chute („Anti-QT“ diktiert)
+5. Living Proof – Scalp Care Density Serum
+6. The Ordinary – Natural Moisturizing Factors + HA for Scalp
+7. Kérastase – Symbiose Sérum
+8. Nioxin – Night Density Rescue Serum
