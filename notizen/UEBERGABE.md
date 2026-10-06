@@ -5,6 +5,7 @@
 - `leave-in-guide.html` – Leave-in-Guide, 101 Produkte (56 Drogerie, 45 High-End), alle mit freigestelltem Bild
 - `shampoo-guide.html` – Shampoo-Guide, 162 Produkte, Reiter „Liste“, alle mit freigestelltem Bild
 - `masken-guide.html` – Haarmasken-Guide, 58 Masken (18 dm, 13 Rossmann, 27 High-End inkl. Olaplex Rich Hydration + Weightless Nourishing); Olaplex No.8 bewusst NICHT drin (nicht mehr im Handel), Aufbau wie Leave-in-Guide, Repair-Box mit „Wirkt im Inneren/von außen“
+- `notizen/vorschau-gesamtguide.html` – klickbare VORSCHAU für einen Gesamt-Guide (alle Guides zusammen, Ansicht A Beratung / Ansicht B nach Produkt, Suche über alles, Empfehlung kopieren). Noch nicht final, Laura entscheidet den Aufbau.
 - `notizen/haarmasken-liste.md` – alle Masken mit Inhaltsstoffen, `notizen/masken-bilder/` – Lauras Rossmann-Produktbilder
 - `notizen/leave-in-inhaltsstoffe.md` – abgeschriebene INCI-Listen aller Leave-ins
 
