@@ -181,3 +181,23 @@ Aqua, Cetearyl Alcohol, Behenamidopropyl Dimethylamine, Dicocoylethyl Hydroxyeth
 - Redken – Acidic Bonding Concentrate Maske
 - Kérastase – Résistance Maske für extrem geschädigtes Haar (vermutlich Masque Thérapiste)
 
+### Inhaltsstoffe der neuen Repair-Masken
+
+#### Kérastase PREMIÈRE Haarmaske Masque Filler Réparateur 200 ml (Quelle: Hagel)
+AQUA / WATER / EAU • CETEARYL ALCOHOL • BEHENTRIMONIUM METHOSULFATE • AMODIMETHICONE • BIS-BEHENYL/ISOSTEARYL/PHYTOSTERYL DIMER DILINOLEYL DIMER DILINOLEATE • PARFUM / FRAGRANCE • BEHENTRIMONIUM CHLORIDE • LAURYL LAURATE • CAPRYLIC/CAPRIC TRIGLYCERIDE • BUTYLENE GLYCOL • HYDROXYPROPYL STARCH PHOSPHATE • AMINOPROPYL DIMETHICONE • SODIUM HYDROXIDE • PHENOXYETHANOL • ISODODECANE • HYDROGENATED CASTOR OIL/SEBACIC ACID COPOLYMER • LIMONENE • ISOPROPYL ALCOHOL • PVP • TRIDECETH-6 • HYDROLYZED VEGETABLE PROTEIN PG-PROPYL SILANETRIOL • GLYCINE • CITRIC ACID • LINALOOL • CETRIMONIUM CHLORIDE • CITRAL • SODIUM BENZOATE • POTASSIUM SORBATE • TOCOPHEROL (F.I.L. N70029760/1).
+
+#### Wella Professionals Ultimate Repair Haarmaske 150 ml (Quelle: Hagel)
+Aqua/Water/Eau, Stearyl Alcohol, Behentrimonium Chloride, Cetyl Alcohol, Propylene Glycol, Quaternium-80, Phenoxyethanol, Parfum/Fragrance, Isopropyl Alcohol, Malic Acid, Aminomethyl Propanol, Glyceryl Oleate, Tocopheryl Acetate, Oleic Acid, Squalane, Linalool, Citronellol, Citric Acid, Histidine, Lecithin, Ascorbyl Palmitate, Tocopherol, Hydrogenated Palm Glycerides Citrate
+
+#### L'Oréal Professionnel Absolut Repair Molecular Maske 250 ml (Quelle: Hagel)
+AQUA / WATER • GLYCERIN • CETEARYL ALCOHOL • DISTARCH PHOSPHATE • QUATERNIUM-87 • DIMETHICONE • BEHENTRIMONIUM CHLORIDE • PROPYLENE GLYCOL • PHENOXYETHANOL • PEG-150/DECYL ALCOHOL/SMDI COPOLYMER • AMODIMETHICONE • ISOPROPYL ALCOHOL • TRIDECETH-10 • CHLORHEXIDINE DIGLUCONATE • PEG-100 STEARATE • STEARETH-6 • LINALOOL • TRIDECETH-3 • GLYCINE • ARGININE • SERINE • TYROSINE • CITRIC ACID • GLUTAMIC ACID • ACETIC ACID • PARFUM / FRAGRANCE
+
+#### Redken Acidic Bonding Concentrate 5-Min Liquid Mask 250 ml (Quelle: Lookfantastic)
+Aqua/Water, Cetearyl Alcohol, Behentrimonium Chloride, Dimethicone, Amodimethicone, Isopropyl Alcohol, Sodium Citrate, Glycerin, Citric Acid, C15-19 Alkane, Dicetyldimonium Chloride, Parfum/Fragrance, Phenoxyethanol, Cetyl Esters, Hydroxypropyl Guar, Limonene, Trideceth-6, Dilauryl Thiodipropionate, Cetrimonium Chloride, Linalool, Citronellol, Trisodium HEDTA
+
+#### Kérastase Resistance Haarmaske Therapiste 200 ml (Quelle: Hagel)
+AQUA / WATER • CETEARYL ALCOHOL • PARAFFINUM LIQUIDUM / MINERAL OIL • ORBIGNYA OLEIFERA SEED OIL • DIPALMITOYLETHYL HYDROXYETHYLMONIUM METHOSULFATE • PARFUM / FRAGRANCE • CETYL ESTERS • CETRIMONIUM CHLORIDE • CAPRYLYL GLYCOL • LINALOOL • 2-OLEAMIDO-1,3-OCTADECANEDIOL • CITRONELLOL • DILAURYL THIODIPROPIONATE • GLYCINE • ARGININE • PROLINE • TYROSINE • GLUTAMIC ACID • CITRIC ACID • GERANIOL • SERINE • HYDROXYPROPYLTRIMONIUM HYDROLYZED WHEAT PROTEIN • BENZYL ALCOHOL • SAFFLOWER GLUCOSIDE • ISOEUGENOL • GLYCERIN • PHENOXYETHANOL • TREHALOSE • TAMARINDUS INDICA SEED POLYSACCHARIDE • MYROTHAMNUS FLABELLIFOLIA LEAF EXTRACT • DISODIUM PHOSPHATE • TOCOPHEROL • SODIUM CITRATE
+
+#### Maria Nila Structure Repair Masque 250 ml (Quelle: Datenbank incidecoder/skinsafe (Hagel zeigt falsche Liste))
+Aqua, Cetearyl Alcohol, Polyglyceryl-3 Polyricinoleate, Butyrospermum Parkii (Shea) Butter, Stearamidopropyl Dimethylamine, Glycerin, Cetrimonium Chloride, Cystoseira Compressa Extract, Helianthus Annuus Seed Oil, Phyllostachys Nigra Leaf Extract, Moringa Oleifera Seed Oil, Linolenic Acid, Linoleic Acid, Oleic Acid, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Tocopherol, Amodimethicone/Morpholinomethyl Silsesquioxane Copolymer, Gluconolactone, Propanediol, Trideceth-5, Dimethicone, Dimethiconol, Behentrimonium Chloride, Potassium Sorbate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Dehydroacetic Acid, Calcium Gluconate, Zea Mays Starch, Disodium EDTA, Quaternium-95, Lactic Acid, Ethylhexylglycerin, Benzyl Alcohol, Sodium Benzoate, Phenoxyethanol, Parfum
+
