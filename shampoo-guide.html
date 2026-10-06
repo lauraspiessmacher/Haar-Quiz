@@ -337,7 +337,9 @@ function hairHtml(p){
   if(h[0]==="alle" && h[1]==="alle") return `<div class="hairbox"><div class="hair"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div></div>`;
   return `<div class="hairbox"><div class="hair"><b>Haardicke:</b> ${esc(h[0])}</div><div class="hair"><b>Haarzustand:</b> ${esc(h[1])}</div></div>`;
 }
-const matchTerm = (p, term) => !term || [p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ").toLowerCase().includes(term);
+/* Suche ohne Akzente, Apostrophe, Leer- und Sonderzeichen: „kerastase“ findet „Kérastase“, „loreal“ findet „L'Oréal“. Jedes Suchwort wird einzeln gesucht. */
+const plain = s => s.toLowerCase().replace(/ß/g,"ss").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"");
+const matchTerm = (p, term) => { if(!term.length) return true; const h = plain([p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ")); return term.every(w => h.includes(w)); };
 function drawListe(term){
   let shown = 0;
   out.innerHTML = `<section class="cat" id="liste"><h2>Liste</h2><p class="cat-desc">Alle Shampoos pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</p>` +
@@ -360,11 +362,11 @@ function drawListe(term){
   empty.hidden = shown > 0;
 }
 function draw(){
-  const term = q.value.trim().toLowerCase();
+  const term = q.value.split(/\s+/).map(plain).filter(Boolean);
   let shown = 0;
   if(active==="liste"){ drawListe(term); return; }
   if(active==="alle"){
-    const items = P.filter(p => (seg==="alle" || p.segment===seg) && (!term || [p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ").toLowerCase().includes(term)))
+    const items = P.filter(p => (seg==="alle" || p.segment===seg) && matchTerm(p, term))
                    .sort((a,b)=> (a.brand+a.name).localeCompare(b.brand+b.name,"de"));
     const title = seg==="alle" ? "Alle Shampoos" : (seg==="Drogerie" ? "Alle Drogerie-Shampoos" : "Alle High-End-Shampoos");
     out.innerHTML = items.length ? `<section class="cat" id="alle">
@@ -375,7 +377,7 @@ function draw(){
     return;
   }
   out.innerHTML = CATS.filter(c => active==="alle" || c.id===active).map(c => {
-    const items = P.filter(p => p.cats.includes(c.id) && (seg==="alle" || p.segment===seg) && (!term || [p.brand,p.name,p.note,[].concat(p.hair||[]).join(" ")].join(" ").toLowerCase().includes(term)))
+    const items = P.filter(p => p.cats.includes(c.id) && (seg==="alle" || p.segment===seg) && matchTerm(p, term))
                    .sort((a,b)=> c.id==="kinder" ? (a.rank||99)-(b.rank||99) : (a.brand+a.name).localeCompare(b.brand+b.name,"de"));
     if(!items.length) return "";
     shown += items.length;
