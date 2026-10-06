@@ -53,3 +53,21 @@ Aqua (Water, Eau), Cetearyl Alcohol, Distearoylethyl Hydroxyethylmonium Methosul
 Aqua, Cetyl Alcohol, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Bis-Aminopropyl Dimethicone, Glutamic Acid, Benzyl Alcohol, Sodium Benzoate, Parfum, Citric Acid, Behentrimonium Methosulfate, Disodium EDTA, Polysorbate 20, Panthenol, Panthenyl Ethyl Ether, Isopropyl Alcohol, Histidine, Linalool, CI 77491, Hexyl Cinnamal, Silica, Biotin
 
 ## High-End
+
+### Syoss – Intense Keratin Haarmaske, 400 ml (Rossmann 181171)
+Aqua (Water, Eau), Cetearyl Alcohol, Glycerin, Behentrimonium Chloride, Distearoylethyl Hydroxyethylmonium Methosulfate, Hydrolyzed Keratin, Isopropyl Myristate, Behenamidopropyl Dimethylamine, Lactic Acid, Amodimethicone, Parfum (Fragrance), Butyrospermum Parkii (Shea) Butter, Isopropyl Alcohol, Sodium Benzoate, Tetramethyl Acetyloctahydronaphthalenes, Ceteareth-20, Sodium Hydroxide, Trideceth-10, Linalool, Linalyl Acetate, Acetyl Cedrene, Phenoxyethanol
+
+### Garnier Fructis – Locken Methode Feuchtigkeitsauffüllende Haarmaske, 370 ml (Rossmann 153828)
+AQUA / WATER, CETEARYL ALCOHOL, STEARAMIDOPROPYL DIMETHYLAMINE, ISOPROPYL MYRISTATE, CETYL ESTERS, HELIANTHUS ANNUUS SEED OIL, BUTYROSPERMUM PARKII BUTTER, SODIUM HYALURONATE, ARGININE, CAPRYLYL GLYCOL, CITRIC ACID, TARTARIC ACID, SALICYLIC ACID, LINALOOL, GERANIOL, METHYL 2-OCTYNOATE, COUMARIN, LIMONENE, CITRONELLOL, BENZYL ALCOHOL, PARFUM
+
+### Garnier Fructis – Keratin Sleek Maske, 370 ml (Rossmann 179679 = dm 3042310)
+AQUA / WATER, CETEARYL ALCOHOL, STEARAMIDOPROPYL DIMETHYLAMINE, ISOPROPYL MYRISTATE, CETYL ESTERS, HELIANTHUS ANNUUS SEED OIL, ARGANIA SPINOSA KERNEL OIL, BUTYROSPERMUM PARKII BUTTER, HYDROLYZED CORN PROTEIN, HYDROLYZED SOY PROTEIN, HYDROLYZED WHEAT PROTEIN, CAPRYLYL GLYCOL, CITRIC ACID, TARTARIC ACID, PHENOXYETHANOL, BENZOIC ACID, LINALOOL, AMYL CINNAMAL, HEXYL CINNAMAL, BENZYL ALCOHOL, PARFUM
+
+### Garnier Wahre Schätze – Haarkur 1-Minute Honig Schätze, 340 ml (Rossmann 130575)
+AQUA / WATER, CETEARYL ALCOHOL, STEARAMIDOPROPYL DIMETHYLAMINE, ISOPROPYL MYRISTATE, CETYL ESTERS, HELIANTHUS ANNUUS SEED OIL, BUTYROSPERMUM PARKII BUTTER, MEL / HONEY, CERA ALBA / BEESWAX, CAPRYLYL GLYCOL, CITRIC ACID, TARTARIC ACID, BENZOIC ACID, CARAMEL, COUMARIN, LIMONENE, BENZYL ALCOHOL, BENZYL SALICYLATE, PARFUM
+
+### L'Oréal Elvital – Dream Length Super Spitzen Retter Maske, 300 ml (Rossmann 214063, auch dm)
+AQUA / WATER, CETEARYL ALCOHOL, STEARAMIDOPROPYL DIMETHYLAMINE, ISOPROPYL MYRISTATE, CETYL ESTERS, PARFUM / FRAGRANCE, HELIANTHUS ANNUUS SEED OIL, BUTYROSPERMUM PARKII BUTTER, RICINUS COMMUNIS SEED OIL, HYDROXYCITRONELLAL, HYDROLYZED WHEAT PROTEIN, HYDROLYZED CORN PROTEIN, HYDROLYZED SOY PROTEIN, PHENOXYETHANOL, TRIMETHYLCYCLOPENTENYL METHYLISOPENTENOL, SALICYLIC ACID, LIMONENE, BENZYL ALCOHOL, LINALYL ACETATE, BENZYL SALICYLATE, LINALOOL, CAPRYLYL GLYCOL, ALPHA-ISOMETHYL IONONE, TARTARIC ACID, CARVONE, GERANIOL, TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES, CITRONELLOL, CITRUS AURANTIUM PEEL OIL, COUMARIN, HEXYL CINNAMAL
+
+### Dejan Garz – Haarmaske The Foundation, 200 ml (dm 3094993)
+Aqua, Cetearyl Alcohol, Glycerin, Dimethicone, Cocos Nucifera Oil, Behentrimonium Chloride, Amodimethicone, Cetrimonium Chloride, Panthenol, Argania Spinosa Kernel Oil, Ricinus Communis Seed Oil, Simmondsia Chinensis Seed Oil, Inulin, Sphingolipids, Phospholipids, Trideceth-15, Trideceth-3, Sodium Hyaluronate, Pentylene Glycol, Lactic Acid, Citric Acid, Tocopherol, Phenoxyethanol, Sodium Citrate, Acetic Acid, p-Anisic Acid, Isopropyl Alcohol, Sodium Benzoate, Potassium Sorbate, Parfum, Hexyl Cinnamal, Linalool
