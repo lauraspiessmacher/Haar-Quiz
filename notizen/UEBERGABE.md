@@ -24,6 +24,7 @@
 - Spliss-Hinweis nur oben in der Einleitung, nicht bei Produkten.
 - „Kaputte Haare“ nur, wenn Proteine/Peptide/Aminosäuren/Bond-Wirkstoffe **vor Parfum und Konservierungsstoffen** stehen. Ausnahme auf Lauras Wunsch: Redken Acidic Bonding (Zitronensäure) zählt als Repair.
 - Feines Haar = „Feenhaar“: nur sehr leichte, wässrige Produkte.
+- Fettende Kopfhaut: nur kräftige Reinigung ohne Silikon/Öle weit vorne. Silikon weit vorne → Normale Kopfhaut. Mit pflegenden Polymeren/Perlglanz/etwas Ölersatz → bleibt, aber Haardicke „normal bis dick“ (Okt. 2026 von Laura so gewünscht).
 - Keine Fachwörter wie „Ester“ (stattdessen „leichter Ölersatz“).
 - Laura ist keine Technikerin: Antworten auf Deutsch, einfach, ohne Fachbegriffe.
 
