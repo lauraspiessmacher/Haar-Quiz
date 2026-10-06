@@ -134,3 +134,4 @@ Hinweise: „Pantene Keratin Öl“ = Keratin Protect Oil Repair & Care (d13), �
 - Fein-Öle = feines bis normales Haar. „Passt zu“ entfernt. „Ölersatz“ nur noch bei Première + Glaze Drops (keine Pflanzenöle danach).
 - Hitzeschutz laut Hersteller im Gut zu wissen: Kérastase Elixir 230, Première 230, Olaplex No.7 Oil 232, Olaplex Mist 232, OUAI 232, Metal DX 230, Molecular Oil 230, Coco & Eve 220, amika 230, Redken naked gloss 230, Dejan Britney 230, Gisou Honey Oil 230, Öl Magique 230, Balea Oil Repair 230; ohne Gradzahl: Balea Plex Care, OGX Argan Penetrating. Kein Hitzeschutz: Living Proof Vanishing Oil, Dejan Gentle. Rest: keine Angabe gefunden.
 - „Repair/Keratin/Plex im Namen“ freundlich umformuliert; „X steht hinter dem Parfum“-Hinweise gestrichen.
+- Laura: Gisou Collagen Drops Gut zu wissen raus. Geprüft, ob „fein“ passt: nein (Dimethicone an 1. Stelle, Propoliswachs, viele Pflanzenöle, Octyldodecanol) → bleibt dünn bis dick. Herbal Essences passt so.

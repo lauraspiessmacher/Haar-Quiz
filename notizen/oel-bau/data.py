@@ -50,6 +50,6 @@ P = {
 "o22": ("Living Proof","No Frizz Vanishing Oil","fein duenn normal","Trockenes Öl mit Sanddorn-, Sonnenblumen- und Jojobaöl","frizzig","Silikonfrei: Den glättenden Film übernehmen hier Polymere statt Silikone.",H,True),
 "o23": ("Gisou","Honey Infused Hair Oil","normal dick sehrdick","Glättendes Silikon-Serum mit Honig, Mandel-, Kokos- und Arganöl","trocken, glanzlos","Mit Hitzeschutz bis 230 °C.",H,False),
 "o24": ("Kérastase","Gloss Absolu Glaze Drops","fein duenn normal","Trockenes Öl mit Silikon und leichtem Ölersatz, ohne Pflanzenöle","glanzlos, frizzig","Fast die gleiche Rezeptur wie Kérastase Première Huile Gloss und Redken naked gloss.",H,True),
-"o25": ("Gisou","Honey Gloss Collagen Drops","duenn normal dick","Glanz-Serum mit Silikon, Honig, Kollagen und mehreren Pflanzenölen","glanzlos","Das Kollagen steht weit vorne und macht das Haar spürbar glatter. Laut Gisou für feines bis mittleres Haar gedacht, bei sehr feinem Haar sparsam dosieren.",H,False),
+"o25": ("Gisou","Honey Gloss Collagen Drops","duenn normal dick","Glanz-Serum mit Silikon, Honig, Kollagen und mehreren Pflanzenölen","glanzlos","",H,False),
 "o26": ("Sebastian Professional","Dark Oil","dick sehrdick",SER,"glanzlos, frizzig","",H,False),
 }
