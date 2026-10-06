@@ -85,9 +85,6 @@ Aqua/Water/Eau, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, PPG-3 Benzy
 ### MONDAY Haircare – Smooth Anti-Frizz Haarmaske + Jojoba-Öl, 250 ml (Rossmann) – Bild: notizen/masken-bilder/monday-smooth-anti-frizz.png
 Aqua (Water), Glycerin, Cetearyl Alcohol, Dimethicone, Cocos Nucifera (Coconut) Oil, Dipropylene Glycol, Stearyl Alcohol, Dimethiconol, Butyrospermum Parkii (Shea) Butter, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Behentrimonium Chloride, Hydroxyethylcellulose, PEG-100 Stearate, Glyceryl Stearate, Isopropyl Alcohol, Polysorbate 80, C12-15 Pareth-3, Disodium EDTA, TEA-Dodecylbenzenesulfonate, Cocamidopropyl Betaine, Guar Hydroxypropyltrimonium Chloride, Citric Acid, Disodium Phosphate, Polysorbate 60, Sodium Phosphate, Phenoxyethanol, Chlorphenesin, Parfum (Fragrance), Hexyl Cinnamal, Linalool
 
-### SheaMoisture – Coconut & Hibiscus Curl Enhancing Smoothie, 326 ml (Rossmann) – Bild: notizen/masken-bilder/sheamoisture-coconut-hibiscus-curl-smoothie.png
-INCI fehlt noch (nur Vorderseite geschickt). Hinweis: Das ist eigentlich eine Styling-/Leave-in-Creme, keine Maske – mit Laura klären.
-
 ### Pantene Pro-V – Miracles Deep Hydration Intensive Haarmaske, 300 ml (Rossmann 153919) – Bild: notizen/masken-bilder/pantene-miracles-deep-hydration.jpg
 Aqua, Cetyl Alcohol, Bis-Aminopropyl Dimethicone, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Glycerin, Glutamic Acid, Parfum, Benzyl Alcohol, Sodium Benzoate, Citric Acid, Behentrimonium Methosulfate, Hexyl Cinnamal, Disodium EDTA, Polysorbate 20, Limonene, Panthenol, Panthenyl Ethyl Ether, Linalool, Benzyl Salicylate, Isopropyl Alcohol, Histidine, Hydroxycitronellal, CI 77492, Biotin, Methicone
 
