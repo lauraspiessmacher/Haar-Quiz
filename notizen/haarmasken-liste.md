@@ -206,3 +206,13 @@ Aqua, Cetearyl Alcohol, Polyglyceryl-3 Polyricinoleate, Butyrospermum Parkii (Sh
 - L'Oréal Professionnel – Metal DX Maske
 - Redken – Extreme Maske
 
+#### L'Oréal Professionnel Metal DX Maske 250 ml (Hagel)
+AQUA / WATER / EAU, CETEARYL ALCOHOL, AMODIMETHICONE, BEHENTRIMONIUM CHLORIDE, CETYL ESTERS, PARFUM / FRAGRANCE, ISOPROPYL ALCOHOL, TRIDECETH-6, PHENOXYETHANOL, LIMONENE, CETRIMONIUM CHLORIDE, HEXYL CINNAMAL, LINALOOL, CHLORHEXIDINE DIHYDROCHLORIDE, CITRAL, GERANIOL, GLYCINE, TOCOPHEROL, POLYQUATERNIUM-7, SODIUM BENZOATE
+
+#### Redken Extreme Mask 250 ml, Zwei-Kammer-Tube (Lookfantastic)
+Außen: Aqua, Cetearyl Alcohol, Aminopropyl Triethoxysilane, Paraffinum Liquidum, Lactic Acid, Dipalmitoylethyl Hydroxyethylmonium Methosulfate, Cetyl Esters, Cetrimonium Chloride, Citric Acid, Polyquaternium-6, Phenoxyethanol, 2-Oleamido-1,3-Octadecanediol, Parfum, Chlorhexidine Digluconate, Arginine, Hydrolyzed Soy Protein, Sodium Cocoyl Amino Acids, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Potassium Dimethicone PEG-7 Panthenyl Phosphate, Sodium Sarcosinate, Propylene Glycol, Sodium Chloride, Potassium Sorbate, Tetrasodium EDTA
+Innen: Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Amodimethicone, Glycerin, Octyldodecanol, Isopropyl Alcohol, Phenoxyethanol, Caprylyl Glycol, Parfum, Benzoic Acid, Trideceth-6, Citric Acid, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Cetyl Alcohol, Arginine, Hydrolyzed Soy Protein, … (Rest: Konservierer, Duft)
+
+#### Olaplex No.8 Bond Intense Moisture Mask
+Laut Olaplex nicht mehr im Sortiment (US-Shop Sept. 2026), Hagel hat sie nicht. Nachfolger: Olaplex Rich Hydration Mask und Weightless Nourishing Mask – Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate) steht dort erst hinter Parfum und Konservierer. Laura fragen, ob eine davon rein soll.
+
