@@ -216,3 +216,17 @@ Innen: Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Amodimethicone, Glycerin
 #### Olaplex No.8 Bond Intense Moisture Mask
 Laut Olaplex nicht mehr im Sortiment (US-Shop Sept. 2026), Hagel hat sie nicht. Nachfolger: Olaplex Rich Hydration Mask und Weightless Nourishing Mask – Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate) steht dort erst hinter Parfum und Konservierer. Laura fragen, ob eine davon rein soll.
 
+## Weitere Masken (Laura, nur Namen, 6.10.2026, Runde 3)
+- Kérastase – Gloss Absolu Maske
+- Kérastase – Nutritive Maske
+- Kérastase – Genesis Maske
+- Redken – All Soft Maske
+- Redken – Acidic Color Gloss Maske
+- Amika – Hydro Rush Maske
+- Color Wow – Money Masque
+- Maria Nila – True Soft Masque
+- K18 – Leave-In Molecular Repair Hair Mask → aufnehmen, Hinweis: wird NICHT ausgespült
+- Olaplex – No.8 Bond Intense Moisture Mask → prüfen (laut Olaplex aus dem Sortiment)
+- Kérastase – Première Maske im Tiegel (= Masque Filler Réparateur, schon drin)
+- Kérastase – Première Concentré Décalcifiant → aufnehmen, Hinweis: Pre-Shampoo-Treatment
+
