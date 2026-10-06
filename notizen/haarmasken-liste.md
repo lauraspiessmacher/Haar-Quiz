@@ -82,10 +82,16 @@ Aqua, Cetearyl Alcohol, Glycerin, Dimethicone, Cocos Nucifera Oil, Behentrimoniu
 ### OGX – Extra Strength Hydrate & Revive + Argan Oil of Morocco Hair Mask, 300 ml (Rossmann) – Bild als Datei: notizen/masken-bilder/ogx-argan-oil-extra-strength.jpg
 Aqua/Water/Eau, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, PPG-3 Benzyl Ether Myristate, Amodimethicone, Steareth-20, Argania Spinosa Kernel Oil, Cocodimonium Hydroxypropyl Silk Amino Acids, Polyquaternium-47, Polyquaternium-37, PPG-1 Trideceth-6, Sorbitan Oleate, Propylene Glycol Dicaprylate/Dicaprate, Glycol Distearate, Isopropyl Alcohol, Citric Acid, Sodium Hydroxide, Disodium EDTA, Benzyl Alcohol, Potassium Sorbate, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Sodium Benzoate, Parfum/Fragrance, Hexyl Cinnamal, Linalool, Benzyl Salicylate, Alpha-Isomethyl Ionone, Limonene, Benzyl Benzoate, CI 19140, CI 16035
 
+### MONDAY Haircare – Smooth Anti-Frizz Haarmaske + Jojoba-Öl, 250 ml (Rossmann) – Bild: notizen/masken-bilder/monday-smooth-anti-frizz.png
+Aqua (Water), Glycerin, Cetearyl Alcohol, Dimethicone, Cocos Nucifera (Coconut) Oil, Dipropylene Glycol, Stearyl Alcohol, Dimethiconol, Butyrospermum Parkii (Shea) Butter, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Behentrimonium Chloride, Hydroxyethylcellulose, PEG-100 Stearate, Glyceryl Stearate, Isopropyl Alcohol, Polysorbate 80, C12-15 Pareth-3, Disodium EDTA, TEA-Dodecylbenzenesulfonate, Cocamidopropyl Betaine, Guar Hydroxypropyltrimonium Chloride, Citric Acid, Disodium Phosphate, Polysorbate 60, Sodium Phosphate, Phenoxyethanol, Chlorphenesin, Parfum (Fragrance), Hexyl Cinnamal, Linalool
+
+### SheaMoisture – Coconut & Hibiscus Curl Enhancing Smoothie, 326 ml (Rossmann) – Bild: notizen/masken-bilder/sheamoisture-coconut-hibiscus-curl-smoothie.png
+INCI fehlt noch (nur Vorderseite geschickt). Hinweis: Das ist eigentlich eine Styling-/Leave-in-Creme, keine Maske – mit Laura klären.
+
 ### Pantene Pro-V – Miracles Deep Hydration Intensive Haarmaske, 300 ml (Rossmann 153919)
 Aqua, Cetyl Alcohol, Bis-Aminopropyl Dimethicone, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Glycerin, Glutamic Acid, Parfum, Benzyl Alcohol, Sodium Benzoate, Citric Acid, Behentrimonium Methosulfate, Hexyl Cinnamal, Disodium EDTA, Polysorbate 20, Limonene, Panthenol, Panthenyl Ethyl Ether, Linalool, Benzyl Salicylate, Isopropyl Alcohol, Histidine, Hydroxycitronellal, CI 77492, Biotin, Methicone
 
-### MONDAY Haircare – Deep Moisture Intensive Feuchtigkeit Haarmaske, 250 ml (Rossmann)
+### MONDAY Haircare – Deep Moisture Intensive Feuchtigkeit Haarmaske, 250 ml (Rossmann) – Bild: notizen/masken-bilder/monday-deep-moisture.png
 Aqua (Water), Glycerin, Cetearyl Alcohol, Dimethicone, Cocos Nucifera (Coconut) Oil, Stearyl Alcohol, Dipropylene Glycol, Dimethiconol, Butyrospermum Parkii (Shea) Butter, Theobroma Cacao (Cocoa) Seed Butter, Argania Spinosa Kernel Oil, Hydrolyzed Keratin, Behentrimonium Chloride, Phenoxyethanol, Hydroxyethylcellulose, PEG-100 Stearate, Glyceryl Stearate, Isopropyl Alcohol, Polysorbate 80, Chlorphenesin, C12-15 Pareth-3, Disodium EDTA, TEA-Dodecylbenzenesulfonate, Cocamidopropyl Betaine, Guar Hydroxypropyltrimonium Chloride, Citric Acid, Disodium Phosphate, Polysorbate 60, Sodium Phosphate, Parfum (Fragrance), Hexyl Cinnamal, Linalool
 
 (Weitere offene Rossmann-Tabs bei Laura: ogx Extra…, Shine Haa…, MONDAY (2.), Shea Mois…, neboa Hy…, Anti-Frizz… – Screenshots fehlen noch.)
