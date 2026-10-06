@@ -201,3 +201,8 @@ AQUA / WATER • CETEARYL ALCOHOL • PARAFFINUM LIQUIDUM / MINERAL OIL • ORBI
 #### Maria Nila Structure Repair Masque 250 ml (Quelle: Datenbank incidecoder/skinsafe (Hagel zeigt falsche Liste))
 Aqua, Cetearyl Alcohol, Polyglyceryl-3 Polyricinoleate, Butyrospermum Parkii (Shea) Butter, Stearamidopropyl Dimethylamine, Glycerin, Cetrimonium Chloride, Cystoseira Compressa Extract, Helianthus Annuus Seed Oil, Phyllostachys Nigra Leaf Extract, Moringa Oleifera Seed Oil, Linolenic Acid, Linoleic Acid, Oleic Acid, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Tocopherol, Amodimethicone/Morpholinomethyl Silsesquioxane Copolymer, Gluconolactone, Propanediol, Trideceth-5, Dimethicone, Dimethiconol, Behentrimonium Chloride, Potassium Sorbate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Dehydroacetic Acid, Calcium Gluconate, Zea Mays Starch, Disodium EDTA, Quaternium-95, Lactic Acid, Ethylhexylglycerin, Benzyl Alcohol, Sodium Benzoate, Phenoxyethanol, Parfum
 
+## Weitere Masken (Laura, nur Namen, 6.10.2026)
+- Olaplex – No.8 Bond Intense Moisture Mask
+- L'Oréal Professionnel – Metal DX Maske
+- Redken – Extreme Maske
+
