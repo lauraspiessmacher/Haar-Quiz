@@ -163,3 +163,19 @@ Water/Eau/Aqua, Glycerin, Polysorbate 20, Glycyrrhiza Glabra (Licorice) Root Ext
 Anwendung: 2–3 Pipetten auf trockene oder frisch gewaschene Kopfhaut, einmassieren, nicht ausspülen, täglich.
 #### The Ordinary Natural Moisturizing Factors + HA for Scalp, 60 ml [tos] (Quelle: incidecoder/Suche)
 Aqua (Water), Squalane, C12-13 Alkyl Glyceryl Hydrolyzed Hyaluronate, Arginine, Aspartic Acid, Glycine, Alanine, Serine, Valine, Isoleucine, Proline, Threonine, Histidine, Phenylalanine, Glutamic Acid, Glucose, Fructose, Sucrose, PCA, Sodium PCA, Zinc PCA, Magnesium PCA, Manganese PCA, Urea, Sodium Lactate, Lactic Acid, Hexyl Nicotinate, Lauryl Glucoside, Myristyl Glucoside, Polyglyceryl-6 Laurate, Isoceteth-20, Dextrin, Hexylene Glycol, Potassium Sorbate, Phenoxyethanol, Chlorphenesin
+
+### Runde 3 (Lauras Liste, diktiert)
+High-End Pflegen (nicht bei dm):
+9. Vichy – Dercos Aminexil Clinical „Region/Regrowth Booster“ Serum (Name prüfen)
+10. Vichy – Dercos Anti-Dandruff Serum („Serum 10“? Name prüfen)
+11. Redken – Acidic Grow Full Serum / Kopfhautpflege
+12. Kérastase – Spécifique „Divalent“-Serum (Name prüfen)
+dm:
+- Pantene Pro-V – Grow Abundant Anti-Haarverlust Serum
+High-End Kopfhaut-PEELINGS:
+- The INKEY List – Salicylic Acid Scalp Treatment
+- Living Proof – Scalp Care Exfoliator
+- Maria Nila – Purifying Cleanse Exfoliating Serum (Name prüfen)
+- Aromatica – Rosemary Scalp Scrub (grob)
+- Moroccanoil – Scalp Purifying Scrub (grob, Name prüfen)
+- Nioxin – Scalp Purifying Exfoliator
