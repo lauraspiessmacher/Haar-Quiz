@@ -236,3 +236,10 @@ Aqua, Cetearyl Alcohol, Prunus Amygdalus Dulcis Oil, Behenamidopropyl Dimethylam
 #### [r15] MONDAY Smooth Antifrizz Conditioner (Bild 18.22.44) – ACHTUNG: Rossmann-INCI identisch mit MONDAY Moisture (dm) → evtl. falsch hinterlegt
 Aqua, Cetearyl Alcohol, Glycerin, Behentrimonium Chloride, Amodimethicone, Stearamidopropyl Dimethylamine, Phenoxyethanol, Isopropyl Alcohol, Hydroxyethylcellulose, Sodium Benzoate, Butyrospermum Parkii Butter, Hydroxypropyl Guar Hydroxypropyltrimonium Chloride, Isododecane, Sodium PCA, Citric Acid, Cocos Nucifera Oil, Benzyl Alcohol, Panthenol, Ethylhexylglycerin, Cetrimonium Chloride, Trideceth-12, Parfum, Tetrasodium EDTA, Tocopheryl Acetate, Hexyl Cinnamal, Sodium Hydroxide, Tocopherol
 #### [r16] being Curl Power Locken Conditioner (Bild 18.22.52) – INCI FEHLT
+
+## Stand (06.10.2026 abends)
+- conditioner-guide.html gebaut: 76 Drogerie-Conditioner (61 dm + 15 Rossmann), alle mit Bild. Bau: notizen/conditioner-bau/ (data.py, build.py, dm.json; Vorlage masken-guide.html).
+- Kaputt = Protein/Keratin/Peptid vor Parfum + Konservierer und weit genug vorne (14 Produkte, alle „wirkt von außen“).
+- Fehlt: OGX ProGrowth + Peptide Conditioner (nicht bei dm, nicht in Rossmann-ZIP), being Curl Power (INCI fehlt).
+- Laura: beide Glycolic-Gloss-Versionen (150 ml + Spiegelglanz 200 ml) kommen rein. „Oseal Oh My Gloss“ = Aussie.
+- Als Nächstes: High-End-Conditioner (Laura schickt Liste).
