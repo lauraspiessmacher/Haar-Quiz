@@ -3,11 +3,18 @@
 Stand: Laura schickt Screenshots (dm, Rossmann) bzw. Namen (High-End). Bilder/INCI von dm holt Claude per dm-Artikelnummer selbst.
 
 ## Drogerie (dm)
-| Marke | Produkt | dm-Nr. | INCI |
-|---|---|---|---|
-| Garnier Wahre Schätze | Haarkur 1-Minute Kokosmilch & Macadamia, 340 ml | 1679234 | Screenshot vorhanden |
-| Pantene Pro-V | Haarmaske Miracles Hydra Glow Deep Hydration, 300 ml | 1343858 | Screenshot vorhanden |
-| Garnier Fructis | Haarmaske Aloe Vera Hair Food 3in1, 400 ml | (holt Claude) | von dm |
+Bild und INCI holt Claude per dm-Artikelnummer selbst (products.dm.de/product/products/detail/DE/dan/<Nr>).
+
+| Marke | Produkt | dm-Nr. / GTIN |
+|---|---|---|
+| Garnier Wahre Schätze | Haarkur 1-Minute Kokosmilch & Macadamia, 340 ml | 1679234 |
+| Garnier Wahre Schätze | Haarkur 1-Minute Reiswasser Ritual & Stärke, 340 ml | 1324786 |
+| Pantene Pro-V | Haarmaske Miracles Hydra Glow Deep Hydration, 300 ml | 1343858 |
+| Pantene Pro-V | Haarkur Glowtox, 300 ml | 3153507 |
+| Garnier Fructis | Haarmaske Aloe Vera Hair Food 3in1, 400 ml | 1676340 |
+| Garnier Fructis | Haarkur Ananas Hair Food 3in1 Maske, 400 ml | (über Suche) |
+| L'Oréal Elvital | Haarmaske Hydra Hyaluronic, 300 ml | 3122676 |
+| L'Oréal Elvital | Haarmaske Dream Length (Super Spitzen Retter), 300 ml | GTIN 3600524245696 |
 
 ## Drogerie (Rossmann)
 
