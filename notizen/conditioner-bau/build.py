@@ -12,10 +12,10 @@ dm = json.load(open(f'{S}/dm.json'))
 for k, v in dm.items():
     inci[k] = v['groups'].get('Inhaltsstoffe', '')
 notes = open('/home/user/Haar-Quiz/notizen/conditioner-liste.md').read()
-for m in re.finditer(r'#### \[([rho]\d+)\][^\n]*\n([^\n#]*)', notes):
+for m in re.finditer(r'#### \[([rhow]\d+)\][^\n]*\n([^\n#]*)', notes):
     inci[m.group(1)] = m.group(2)
 SILRE = re.compile(r'(?i)\b([A-Za-z\-/ ]*?(?:methicone|methiconol|siloxane|silicone quaternium-\d+))\b')
-EXTRA = {'h1': ['Quaternium-80']}  # Silikon-Quat, fällt nicht unter die Regex
+EXTRA = {'h1': ['Quaternium-80'], 'w1': ['Polysilicone-29'], 'w5': ['Quaternium-80']}  # Silikon-Quat, fällt nicht unter die Regex
 def silikone(k):
     out = list(EXTRA.get(k, []))
     for part in re.split(r'[,•|·]', inci.get(k, '')):
@@ -53,7 +53,7 @@ for k in P:
 t = setobj(t, 'IMG', imgs)
 
 CATS = '''const CATS = [
- {id:"fein", label:"Feines Haar", desc:"Für Feenhaar: Das einzelne Haar ist hauchdünn und fällt sofort platt. Hier stehen nur die leichtesten Conditioner, ohne schwere Öle und Butter. Nur in Längen und Spitzen geben und gründlich ausspülen."},
+ {id:"fein", label:"Feines Haar", desc:"Für Feenhaar: Das einzelne Haar ist hauchdünn und fällt sofort platt. Hier stehen flüssige Conditioner wie Wonder Water. Sie sind noch leichter als normale Conditioner und beschweren kaum. Ins nasse Haar in Längen und Spitzen geben, kurz einwirken lassen und gründlich ausspülen."},
  {id:"duenn", label:"Dünnes Haar", desc:"Du hast eher wenige Haare und wenig Fülle, das einzelne Haar ist aber nicht besonders fein. Leichte Conditioner, die pflegen, ohne dir die Fülle zu nehmen. Nicht an den Ansatz geben."},
  {id:"normal", label:"Normales Haar", desc:"Die solide Mitte. Hier darfst du nach deinem Haarzustand auswählen, zum Beispiel nach mehr Glanz, weniger Frizz oder mehr Pflege für trockenes oder strapaziertes Haar."},
  {id:"dick", label:"Dickes Haar", desc:"Kräftiges Haar, das viel Pflege verträgt. Conditioner mit Silikon, Ölen, Butter oder Fettalkoholen machen es weich und geschmeidig, ohne dass es platt wirkt."},

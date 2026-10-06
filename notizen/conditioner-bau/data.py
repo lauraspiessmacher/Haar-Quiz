@@ -120,3 +120,17 @@ REP.update({
 "h3": ["Wirkt im Inneren: Der Bond-Wirkstoff stabilisiert das Haar von innen. Eine Spülung wirkt nur kurz, für mehr Aufbau zusätzlich eine Repair-Maske.", ["Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate)"]],
 })
 P["r16"] = ("being","Curl Power Locken Conditioner","dick sehrdick","Reichhaltige, silikonfreie Spülung mit Kokos-, Traubenkernöl und Sheabutter","lockig","",D)
+# Wonder Water und andere flüssige Conditioner: Laura will sie in „Feines Haar“
+P.update({
+"w1": ("NEQI","Diamond Glass Mirror Rinse","fein","Flüssige Spülung mit Glycerin, Glykolsäure und etwas Silikon","glanzlos","Haferpeptid und Pflanzenextrakte stehen hinter dem Parfum, nur in kleiner Menge.",D),
+"w2": ("Schwarzkopf Gliss","Ultimate Repair Express-Repair-Kur 7 sec","fein","Flüssige, silikonfreie Spülung mit Glycerin und leichtem Ölersatz","strapaziert","Bond-Wirkstoffe und Keratin stehen hinter dem Parfum, nur in kleiner Menge. Darum nicht bei „Kaputte Haare“.",D),
+"w3": ("ISANA Professional","Haarfluid Wunder Express","fein kaputt","Flüssige, silikonfreie Spülung mit Glycerin und Weizenprotein","strapaziert","",D),
+"w4": ("Kérastase","Chroma Absolu Soin Acide Chroma Gloss","fein","Flüssige Spülung mit leichtem Ölersatz, Milchsäure und etwas Silikon","gefärbt, glanzlos","Laut Flasche 0,7 % Milchsäure. Der saure pH glättet die Oberfläche, das bringt Glanz.",H),
+"w5": ("L'Oréal Professionnel","Serie Expert Absolut Repair Molecular Rinse-Off Serum","fein kaputt","Flüssige Spülung mit Glycerin, Aminosäuren und etwas Silikon","stark strapaziert","„Molecular“ und „Peptide Bonder“ klingen nach Bond-Wirkstoff. Drin sind vor allem Aminosäuren und Weizenprotein, die von außen pflegen.",H),
+"w6": ("L'Oréal Paris Elvital","Dream Length Wonder Water","fein","Flüssige, silikonfreie Spülung mit leichtem Ölersatz","lang, strapazierte Spitzen","Das Weizenprotein steht hinter dem Parfum, nur in kleiner Menge.",D),
+"w7": ("amika","flash instant shine mask","fein","Flüssige Spülung mit Glycerin, Leinsamen, Aminosäuren und etwas Silikon","glanzlos","Die Aminosäuren stehen hinter vielen Pflanzenextrakten, also nur in kleiner Menge. Darum nicht bei „Kaputte Haare“.",H),
+})
+REP.update({
+"w3": [AUSSEN, ["Weizenprotein (Hydroxypropyltrimonium Hydrolyzed Wheat Protein)"]],
+"w5": ["Wirkt vor allem von außen: Die Aminosäure Glycin lagert sich an, die kleinen Bausteine dringen auch etwas ins Haar ein. Eine Spülung wirkt nur kurz, für mehr Aufbau zusätzlich eine Repair-Maske.", ["Aminosäure Glycin (Glycine)"]],
+})
