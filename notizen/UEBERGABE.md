@@ -3,7 +3,7 @@
 ## Dateien
 - `index.html` – Haar-Quiz (war ursprünglich eine umbenannte ZIP, jetzt entpackt)
 - `leave-in-guide.html` – Leave-in-Guide, 101 Produkte (56 Drogerie, 45 High-End), alle mit freigestelltem Bild
-- `shampoo-guide.html` – Shampoo-Guide, 159 Produkte, Reiter „Liste“, alle 159 mit freigestelltem Bild
+- `shampoo-guide.html` – Shampoo-Guide, 162 Produkte, Reiter „Liste“, alle mit freigestelltem Bild
 - `notizen/leave-in-inhaltsstoffe.md` – abgeschriebene INCI-Listen aller Leave-ins
 
 ## Aufbau der Guides (beide gleich)
@@ -42,6 +42,6 @@
 - Schatten: rembg (isnet-general-use) mit eigener Kontur schneiden (Schnittmenge) entfernt Schatten; bei weißen Deckeln auf Weiß Vereinigung nehmen.
 
 ## Offen
-- Shampoo-Guide: fertig, alle 159 Bilder drin.
+- Shampoo-Guide: fertig, 162 Shampoos (3× neboa von Rossmann ergänzt), alle mit Bild.
 - Rossmann-Bilder kamen als Screenshots von Laura (je Screenshot eine Nachricht, sonst kommen sie nur als Vorschau an).
 - Guides sind nur auf dem Branch, noch nicht online/in main.
