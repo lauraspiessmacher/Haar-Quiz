@@ -79,6 +79,9 @@ AQUA / WATER, CETEARYL ALCOHOL, STEARAMIDOPROPYL DIMETHYLAMINE, ISOPROPYL MYRIST
 ### Dejan Garz – Haarmaske The Foundation, 200 ml (dm 3094993)
 Aqua, Cetearyl Alcohol, Glycerin, Dimethicone, Cocos Nucifera Oil, Behentrimonium Chloride, Amodimethicone, Cetrimonium Chloride, Panthenol, Argania Spinosa Kernel Oil, Ricinus Communis Seed Oil, Simmondsia Chinensis Seed Oil, Inulin, Sphingolipids, Phospholipids, Trideceth-15, Trideceth-3, Sodium Hyaluronate, Pentylene Glycol, Lactic Acid, Citric Acid, Tocopherol, Phenoxyethanol, Sodium Citrate, Acetic Acid, p-Anisic Acid, Isopropyl Alcohol, Sodium Benzoate, Potassium Sorbate, Parfum, Hexyl Cinnamal, Linalool
 
+### OGX – Extra Strength Hydrate & Revive + Argan Oil of Morocco Hair Mask, 300 ml (Rossmann) – Bild als Datei: notizen/masken-bilder/ogx-argan-oil-extra-strength.jpg
+Aqua/Water/Eau, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, PPG-3 Benzyl Ether Myristate, Amodimethicone, Steareth-20, Argania Spinosa Kernel Oil, Cocodimonium Hydroxypropyl Silk Amino Acids, Polyquaternium-47, Polyquaternium-37, PPG-1 Trideceth-6, Sorbitan Oleate, Propylene Glycol Dicaprylate/Dicaprate, Glycol Distearate, Isopropyl Alcohol, Citric Acid, Sodium Hydroxide, Disodium EDTA, Benzyl Alcohol, Potassium Sorbate, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Sodium Benzoate, Parfum/Fragrance, Hexyl Cinnamal, Linalool, Benzyl Salicylate, Alpha-Isomethyl Ionone, Limonene, Benzyl Benzoate, CI 19140, CI 16035
+
 ### Pantene Pro-V – Miracles Deep Hydration Intensive Haarmaske, 300 ml (Rossmann 153919)
 Aqua, Cetyl Alcohol, Bis-Aminopropyl Dimethicone, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Glycerin, Glutamic Acid, Parfum, Benzyl Alcohol, Sodium Benzoate, Citric Acid, Behentrimonium Methosulfate, Hexyl Cinnamal, Disodium EDTA, Polysorbate 20, Limonene, Panthenol, Panthenyl Ethyl Ether, Linalool, Benzyl Salicylate, Isopropyl Alcohol, Histidine, Hydroxycitronellal, CI 77492, Biotin, Methicone
 
