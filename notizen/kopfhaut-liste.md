@@ -209,3 +209,12 @@ Aqua, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Triethanolamine
 - Fertig freigestellt (notizen/kopfhaut-bilder/fertig/*.webp): alle dm-Produkte, alle High-End bis auf Vichy Anti-Dandruff Serum; Pantene Grow Abundant = Karton (mytime.de); Vichy REGEN = Bild von frenchbeautyhub (frz. Etikett).
 - FEHLT: Vichy Dercos Anti-Dandruff Serum (kein Bild gefunden, in DE kaum gelistet) → Laura nach Screenshot fragen.
 - Rossmann ist für mich gesperrt („Client Challenge“). Rossmann-Bilder als Datei vorhanden: OGX ProGrowth, Salt House Anti-Haarverlust, Australian Bodycare (notizen/kopfhaut-bilder/). Nur als Vorschau angekommen (Bild fehlt): Lee Stafford, ISANA Sensitive, ISANA Peeling, NEQI Scalp Care Treatment, Alterra Elixier, Salt House Forte, Salt House Akut → andere Quelle suchen oder Laura nochmal als Datei.
+
+### Runde 4 (Lauras Screenshots)
+- Bilder: Lee Stafford Grow Strong & Long, Vichy Dercos Anti-Dandruff Serum 10 (beide als Datei in notizen/kopfhaut-bilder/).
+#### Kérastase Symbiose Micro-Peeling Cellulaire, 200 ml (Salicylsäure 1,9 %, „à rincer“, sensible Kopfhaut mit Schuppen) [kmp] – NEUES PEELING
+Aqua, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Glycerin, Cocamide MEA, Salicylic Acid, Coco-Betaine, Laureth-5 Carboxylic Acid, Acrylates Copolymer, Cocamide MIPA, Sodium Hydroxide, Citric Acid, Sodium Benzoate, Argania Spinosa Shell Powder, Prunus Armeniaca Seed Powder, Hexylene Glycol, Sodium Chloride, Menthol, Polyquaternium-10, Isopropyl Myristate, PEG-55 Propylene Glycol Oleate, Propylene Glycol, Limonene, Squalane, Capryloyl Salicylic Acid, Benzyl Salicylate, Benzyl Alcohol, Linalool, Citronellol, Citral, Geraniol, Artemisia Umbelliformis Flower Extract, Potassium Sorbate, Parfum.
+(Zuordnung: Artemisia Umbelliformis + Salicylsäure + Arganschalen/Aprikosenkern = Symbiose Micro-Peeling)
+#### Kérastase Spécifique Potentialiste (= Lauras „Divalent-Serum“, INCI-Screenshot ohne Produktbild; Bild von Hagel) [kpo]
+Aqua, Alcohol Denat., Bifida Ferment Lysate, Ascorbyl Glucoside, Aminomethyl Propanol, PEG-40 Hydrogenated Castor Oil, Carbomer, Mannose, Polysorbate 21, Alpha-Glucan Oligosaccharide, Phenoxyethanol, Glycerin, Pentylene Glycol, Polymnia Sonchifolia Root Juice, Faex Extract, Sodium Benzoate, Maltodextrin, Limonene, Geraniol, Hexyl Cinnamal, Benzyl Benzoate, Benzyl Alcohol, Lactobacillus, Linalool, Citral, Parfum.
+(Zuordnung: Bifida-Ferment + Vitamin-C-Abkömmling + Präbiotika = Potentialiste)
