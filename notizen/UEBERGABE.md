@@ -4,7 +4,7 @@
 - `index.html` – Haar-Quiz (war ursprünglich eine umbenannte ZIP, jetzt entpackt)
 - `leave-in-guide.html` – Leave-in-Guide, 101 Produkte (56 Drogerie, 45 High-End), alle mit freigestelltem Bild
 - `shampoo-guide.html` – Shampoo-Guide, 162 Produkte, Reiter „Liste“, alle mit freigestelltem Bild
-- `masken-guide.html` – Haarmasken-Guide, 38 Masken (18 dm, 13 Rossmann, 7 High-End), Aufbau wie Leave-in-Guide, Repair-Box mit „Wirkt im Inneren/von außen“
+- `masken-guide.html` – Haarmasken-Guide, 44 Masken (18 dm, 13 Rossmann, 13 High-End), Aufbau wie Leave-in-Guide, Repair-Box mit „Wirkt im Inneren/von außen“
 - `notizen/haarmasken-liste.md` – alle Masken mit Inhaltsstoffen, `notizen/masken-bilder/` – Lauras Rossmann-Produktbilder
 - `notizen/leave-in-inhaltsstoffe.md` – abgeschriebene INCI-Listen aller Leave-ins
 
