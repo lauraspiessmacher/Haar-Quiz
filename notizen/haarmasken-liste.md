@@ -173,3 +173,11 @@ Wasser, Sorbitol, Dimethicone, Hydriertes Rapsöl, Isopentyldiol, Behentrimonium
 ### Gisou – Honey Gloss Ceramide Therapy Haarmaske, 75 ml (Sephora)
 Aqua, Cetearyl Alcohol, Behenamidopropyl Dimethylamine, Dicocoylethyl Hydroxyethylmonium Methosulfate, Butyrospermum Parkii (Shea) Butter, Lactic Acid, Mel (Honey), Propolis Cera, Ceramide NP, Hydrolyzed Sodium Hyaluronate, Sodium Hyaluronate, Hydroxypropyltrimonium Hyaluronate, Panthenol, Squalane, Tocopherol, Glycerin, Ethylhexylglycerin, 1,2-Hexanediol, Sunflower Seed Oil Glycerides, Hydrogenated Ethylhexyl Olivate, Vitis Vinifera Seed Oil, Carthamus Tinctorius Seed Oil, Calendula Officinalis Flower Extract, Hydrogenated Olive Oil Unsaponifiables, Oenothera Biennis Oil, Rosa Canina Fruit Oil, Helianthus Annuus Seed Oil, Helianthus Annuus Sprout Extract, Citrus Aurantium Bergamia Fruit Extract, Daucus Carota Root Extract, Caesalpinia Spinosa Fruit Extract, Parfum, Sodium Benzoate, Maltodextrin, Citrus Aurantium … (Rest abgeschnitten)
 
+## Neue Repair-Masken (Laura, nur Namen, 6.10.2026) – Bild/INCI holt Claude
+- Kérastase – Première Masque Filler Réparateur
+- Wella Professionals – Ultimate Repair Mask
+- L'Oréal Professionnel – Absolut Repair Molecular Maske (Laura schrieb „L'Oréal Paris“)
+- Maria Nila – Structure Repair Masque
+- Redken – Acidic Bonding Concentrate Maske
+- Kérastase – Résistance Maske für extrem geschädigtes Haar (vermutlich Masque Thérapiste)
+
