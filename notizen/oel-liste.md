@@ -66,7 +66,7 @@ Isododecane, Dimethicone, Camellia Oleifera Seed Oil, Argania Spinosa Kernel Oil
 #### [o28] Dejan Garz Sensitive Hair Oil The Gentle 50 ml, Rossmann (Bild 18.57.31, INCI 18.57.37) – ohne Parfum
 Isododecane, Dimethicone, Avena Sativa Kernel Oil, Squalane, Amodimethicone, Phenyl Trimethicone, Bisabolol, Tocopherol
 
-## Stand: 28 Öle (o01–o28) gesichert, dazu 17 von dm (d01–d17) → 45. Wartet auf Lauras „Go“.
+## Stand: 28 Öle (o01–o28) gesichert, dazu 17 von dm (d01–d17) → 45. Go von Laura am 06.10. abends, gebaut.
 
 ## dm (Lauras Liste, per dm-Schnittstelle geholt: Name, Bild, INCI; Rohdaten notizen/oel-bau/dm.json)
 #### [d01] OGX Haaröl Coconut Miracle Oil, 100 ml (dm DAN 2322377)
@@ -105,3 +105,8 @@ Helianthus Annuus Hybrid Oil, Argania Spinosa Kernel Oil, Cocos Nucifera Oil, Or
 Caprylic/capric triglyceride, Disiloxane, C13-14 isoparaffin, Parfum [Fragrance], Juniperus virginiana oil, Hippophae rhamnoides oil, C13-15 alkane, Citrus aurantium peel oil, Tetramethyl acetyloctahydronaphthalenes, Tocopheryl acetate, Linalyl acetate, Hexyl cinnamal, Geranyl acetate, Pinene, Limonene, Linalool, Geraniol.
 Hinweise: „Pantene Keratin Öl“ = Keratin Protect Oil Repair & Care (d13), „Pantene Repair & Care“ = LOVE Edition Repair & Care (d15); „Balea Oil Repair“ = Haaröl Oil Repair Intensiv 100 ml (d07); „OGX Argan Oil of Morocco“ = Moroccan Argan Penetrating Oil (d02, das Dry Oil o14 kam schon von Zalando).
 - Laura: Beide Pantene-Öle (d13 Keratin Protect + d15 LOVE Edition) trotzdem rein.
+
+## Gebaut (oel-guide.html, Bau: notizen/oel-bau/ data.py + build.py + dm.json, Vorlage masken-guide.html, Bilder: notizen/oel-bilder/fertig/)
+- 45 Öle (25 Drogerie, 20 High-End). Reiter nur nach Haardicke (kein „Kaputte Haare“), Pille „Trockenes Öl“ (33 Öle) = Basis aus flüchtigen Stoffen (Isododecane, Cyclopentasiloxane, Isoalkane, Disiloxane …).
+- Regeln: Fein = sehr leichte/trockene Öle ohne nennenswerte Pflanzenöle vor dem Parfum. Silikon-Serum mit Dimethicone an 1. Stelle (OGX, MONDAY, Gliss, Goldwell, Gisou Honey) = normal bis sehr dick. Reine Pflanzenöle (Balea med, Balea Traumlocken) = dick + sehr dick, Hinweis: nicht über Nacht auf der Kopfhaut.
+- Ehrliche Hinweise: Pantene Keratin ohne Keratin, Wella SP „Keratin Protection“ ohne Keratin, Balea Plex ohne Bond-Wirkstoff, Kérastase Première „Réparatrice“ ohne Repair-Wirkstoff, Gliss „repariert“ ohne Repair-Wirkstoff, Olaplex No.7 mit Bond-Wirkstoff weit vorne.
