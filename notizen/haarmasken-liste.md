@@ -5,6 +5,7 @@
 - Unter jedem Produkt: „Haarzustand:“ mit Claudes Einschätzung (wie im Leave-in-Guide).
 - „Kaputte Haare“: alle Masken mit Bond-Wirkstoffen (stabilisieren im Inneren) ODER Repair von außen (Proteine, Keratin). Unter dem Produkt vermerken, ob es im Inneren wirkt oder mit Proteinen von außen.
 - Regel bleibt: Proteine/Bond-Wirkstoffe müssen vor Parfum und Konservierern stehen.
+- NEU (Laura, 6.10.): In „Kaputte Haare“ nur Masken mit ECHTEM Repair-Effekt – Wirkstoffe weit vorne, nicht nur knapp vor dem Konservierer. Bond bevorzugt, Proteine von außen auch ok. Drin: Gliss Total Repair, Gliss Oil Nutritive, syoss Intense Keratin, NEQI Repair Reveal, Fructis Keratin Sleek (Laura will sie drin). Raus: MONDAY Deep Moisture, OUAI, fino, OGX Argan. Laura schickt noch weitere Bond-Repair-Masken.
 - Kein Extra-Reiter für „Wonder Water“ – das kommt später in den Conditioner-Guide.
 
 Stand: Laura schickt Screenshots (dm, Rossmann) bzw. Namen (High-End). Bilder/INCI von dm holt Claude per dm-Artikelnummer selbst.
