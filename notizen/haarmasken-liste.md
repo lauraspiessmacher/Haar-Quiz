@@ -53,7 +53,7 @@ Aqua, Cetearyl Alcohol, Dicaprylyl Ether, Coco-Caprylate, Behentrimonium Chlorid
 ### ISANA Professional – Haarmaske Locken Traum, 250 ml (Art.-Nr. 096111) – Bild: notizen/masken-bilder/isana-locken-traum.jpg
 AQUA, CETEARYL ALCOHOL, COCO-CAPRYLATE, BEHENTRIMONIUM CHLORIDE, TRITICUM VULGARE BRAN EXTRACT, TRITICUM VULGARE GERM EXTRACT, TRITICUM VULGARE GERM OIL, CAMELLIA OLEIFERA SEED OIL, GLYCERIN, PANTHENOL, STEARAMIDOPROPYL DIMETHYLAMINE, COCOS NUCIFERA OIL, BUTYROSPERMUM PARKII BUTTER, LINOLEIC ACID, ISOPROPYL ALCOHOL, LAURYL ALCOHOL, DICAPRYLYL ETHER, CETEARYL NONANOATE, CAPRYLIC/CAPRIC TRIGLYCERIDE, QUARTZ POWDER, XANTHAN GUM, LACTIC ACID, CITRIC ACID, PARFUM, LINALOOL, HEXYL CINNAMAL, LIMONENE, BENZYL ALCOHOL, TOCOPHEROL, TOCOPHERYL ACETATE, POTASSIUM SORBATE, SODIUM BENZOATE
 
-### Gliss – Oil Nutritive Nährpflege 4-in-1 Bonding Haarmaske, 400 ml (Art.-Nr. 153982)
+### Gliss – Oil Nutritive Nährpflege 4-in-1 Bonding Haarmaske, 400 ml (Art.-Nr. 153982) – Bild: notizen/masken-bilder/gliss-oil-nutritive-bonding.jpg
 Aqua (Water, Eau), Cetearyl Alcohol, Distearoylethyl Hydroxyethylmonium Methosulfate, Glycerin, Isopropyl Myristate, Behenamidopropyl Dimethylamine, Hydroxypropylgluconamide, Hydroxypropylammonium Gluconate, Sclerocarya Birrea Seed Oil, Behentrimonium Chloride, Parfum (Fragrance), Amodimethicone, Butyrospermum Parkii (Shea) Butter, Lactic Acid, Isopropyl Alcohol, Ceteareth-20, Sodium Benzoate, Prunus Armeniaca (Apricot) Kernel Oil, Trideceth-10, Linalool, Limonene, Phenoxyethanol, Alpha-Isomethyl Ionone, Geraniol, Benzyl Alcohol, Potassium Sorbate
 
 ### Pantene Pro-V – Grow Abundant Anti-Haarverlust Haarmaske, 300 ml (Art.-Nr. 210077) – Bild: notizen/masken-bilder/pantene-grow-abundant.jpg
