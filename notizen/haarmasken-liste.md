@@ -22,7 +22,28 @@ Bild und INCI holt Claude per dm-Artikelnummer selbst (products.dm.de/product/pr
 | L'Oréal Elvital | Haarmaske Glycolic Gloss Spiegelglanz, 300 ml | 3137211 (dm zeigt nur 6 Inhaltsstoffe, Liste unvollständig → woanders prüfen) |
 | Schwarzkopf Gliss | Haarmaske 4in1 Total Repair, 400 ml | (über Suche) |
 | Bali Curls | Haarmaske Deep Repair, 200 ml | 3106327 |
+| Garnier Fructis | Haarmaske Keratin Sleek, Anti-Frizz Kur, 370 ml | 3042310 |
+| Dejan Garz | Haarmaske The Foundation, 200 ml | 3094993 |
 
 ## Drogerie (Rossmann)
+Rossmann blockt Abrufe. INCI hier aus Lauras Screenshots abgeschrieben (6.10.2026). Bilder: Laura muss die Vorderseiten-Screenshots noch als Datei schicken (kamen nur als Vorschau an).
+
+### IDA WARG Beauty – Repair Hair Mask, 250 ml (Art.-Nr. 222065)
+AQUA (WATER), CETEARYL ALCOHOL, BEHENTRIMONIUM CHLORIDE, CETYL ALCOHOL, BUTYROSPERMUM PARKII (SHEA) BUTTER, COCOS NUCIFERA OIL, GLYCERIN, VITIS VINIFERA (GRAPE) SEED OIL, SALVIA HISPANICA SEED EXTRACT, GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, SODIUM BENZOATE, SODIUM GLUCONATE, POTASSIUM SORBATE, GLUCONOLACTONE, CITRIC ACID, LEUCONOSTOC/RADISH ROOT FERMENT FILTRATE, LINALOOL, LINALYL ACETATE, TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES, HEXAMETHYLINDANOPYRAN, BENZYL SALICYLATE, PARFUM (FRAGRANCE)
+
+### IDA WARG Beauty – Intense Moisture Hair Mask, 250 ml (Art.-Nr. 224523)
+Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Cetyl Alcohol, Butyrospermum Parkii Butter, Passiflora Edulis Seed Oil, Sodium PCA, Guar Hydroxypropyltrimonium Chloride, Glycerin, Lactic Acid, Caprylyl Glycol, Phenoxyethanol, Benzyl Benzoate, Parfum
+
+### ISANA Professional – Haarmaske Arganöl & Pflege, 250 ml (Art.-Nr. 040908)
+AQUA, CETEARYL ALCOHOL, GLYCERIN, ISOPROPYL PALMITATE, PROPYLENE GLYCOL, PRUNUS AMYGDALUS DULCIS OIL, CETRIMONIUM CHLORIDE, PANTHENOL, ARGANIA SPINOSA KERNEL OIL, QUATERNIUM-87, PARFUM, LIMONENE, CITRIC ACID, SODIUM CITRATE, SODIUM BENZOATE
+
+### Herbal Essences – Haarmaske Repair Arganöl, 300 ml (Art.-Nr. 154534)
+Aqua, Cetyl Alcohol, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Bis-Aminopropyl Dimethicone, Glutamic Acid, Parfum, Benzyl Alcohol, Argania Spinosa Kernel Oil, Sodium Benzoate, Citric Acid, Disodium EDTA, Polysorbate 20, Benzyl Benzoate, Hexyl Cinnamal, Histidine, Limonene, Alpha-Isomethyl Ionone, Coumarin, CI 19140, CI 17200
+
+### ISANA Professional – Haarmaske Intensiv & Pflege, 250 ml (Art.-Nr. 040879)
+Aqua, Cetearyl Alcohol, Dicaprylyl Ether, Coco-Caprylate, Behentrimonium Chloride, Aloe Barbadensis Leaf Juice, Prunus Amygdalus Dulcis Oil, Panthenol, Glycerin, Butylene Glycol, Oryza Sativa Bran Oil, Nelumbo Nucifera Flower Extract, Oryza Sativa Extract, Stearamidopropyl Dimethylamine, Tocopherol, Isopropyl Alcohol, Citric Acid, Parfum, Benzyl Alcohol, Linalool, Benzyl Salicylate, Sorbic Acid, Sodium Benzoate, Potassium Sorbate
+
+### ISANA Professional – Haarmaske Locken Traum, 250 ml
+INCI fehlt noch (nur Vorderseite geschickt).
 
 ## High-End
