@@ -220,3 +220,13 @@ Aqua, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Glycerin, Cocamide MEA, Sal
 #### Kérastase Spécifique Potentialiste (= Lauras „Divalent-Serum“, INCI-Screenshot ohne Produktbild; Bild von Hagel) [kpo]
 Aqua, Alcohol Denat., Bifida Ferment Lysate, Ascorbyl Glucoside, Aminomethyl Propanol, PEG-40 Hydrogenated Castor Oil, Carbomer, Mannose, Polysorbate 21, Alpha-Glucan Oligosaccharide, Phenoxyethanol, Glycerin, Pentylene Glycol, Polymnia Sonchifolia Root Juice, Faex Extract, Sodium Benzoate, Maltodextrin, Limonene, Geraniol, Hexyl Cinnamal, Benzyl Benzoate, Benzyl Alcohol, Lactobacillus, Linalool, Citral, Parfum.
 (Zuordnung: Bifida-Ferment + Vitamin-C-Abkömmling + Präbiotika = Potentialiste)
+
+### Lauras Korrekturen (06.10.2026, Version 2)
+- Oben: Scheiteltechnik erklären (4–5 Scheitel, Applikator/Pipette/Spray auf die Scheitel, am besten nach dem Waschen auf feuchter Kopfhaut vor dem Föhnen; täglich = Scheiteltechnik am saubersten). Absatz „Alkohol und Parfum“ RAUS (Duft/Alkohol bei den Produkten bleibt).
+- Reiter „Bei Haarausfall“ mit ehrlicher Beschreibung (statt Hinweise bei jedem Produkt).
+- Weniger Text pro Produkt; statt „Gut zu wissen“ jetzt „Anwendung“:
+  - Pflegen: täglich, Scheiteltechnik, feuchte Kopfhaut nach Wäsche / trockene an anderen Tagen
+  - flüssige Peelings: 15–20 Min. vor der Wäsche mit Applikator auf trockene Kopfhaut
+  - grobe Peelings: feuchte Kopfhaut, Fingerspitzen; notfalls unter der Dusche Scheitel ziehen
+  - head&shoulders Scalp Reset: feuchte Kopfhaut vor Shampoo, ~3 Min massieren, dann waschen
+- Hinweise kurz und positiv formulieren („nicht ideal für sehr sensible Kopfhaut“), nicht negativ.

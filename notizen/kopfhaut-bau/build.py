@@ -2,10 +2,10 @@ import sys, json, io, base64, os, re
 from PIL import Image
 S = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, S)
-from data import CATS, P
+from data import CATS, P, ANW
 
 tpl = open('/home/user/Haar-Quiz/masken-guide.html').read()
-css = tpl[tpl.index('<style>'):tpl.index('</style>') + 8]
+css = tpl[tpl.index('<style>'):tpl.index('</style>')] + '.hint{font-size:13.5px;color:var(--muted);margin-top:6px;font-style:italic}\n</style>'
 
 imgs = {}
 for key, *_ in P:
@@ -16,7 +16,7 @@ for key, *_ in P:
     b = io.BytesIO(); im.save(b, 'WEBP', quality=85, method=6)
     imgs[key] = 'data:image/webp;base64,' + base64.b64encode(b.getvalue()).decode()
 
-rows = [[k, b, n, c, a, no, w, d, t, s] for k, b, n, c, a, no, w, d, t, s in P]
+rows = [[k, b, n, c, a, no, w, d, ANW.get(an, an), hi, s] for k, b, n, c, a, no, w, d, an, hi, s in P]
 cats = [{"id": i, "label": l, "desc": d} for i, l, d in CATS]
 
 html = '''<!DOCTYPE html>
@@ -38,9 +38,8 @@ html = '''<!DOCTYPE html>
     <h1>Dein Kopfhaut-Guide</h1>
     <p class="lead">Gesunde Haare fangen an der Kopfhaut an. Hier findest du Seren, Tonika, Öle und Peelings, sortiert nach deinem Kopfhauttyp. Eingeordnet habe ich alles nach den Inhaltsstoffen, nicht nach dem, was auf der Packung steht.</p>
     <div class="box">
-      <p><b>So verwendest du sie:</b> Kopfhautpflege kommt direkt auf die Kopfhaut, nicht in die Längen. Am besten scheitelweise auftragen und sanft mit den Fingerkuppen einmassieren, nicht mit den Nägeln. Die meisten Seren und Tonika bleiben drin, Öle und Peelings werden ausgewaschen.</p>
-      <p><b>Alkohol und Parfum:</b> Viele Seren haben Alkohol weit vorne. Das fühlt sich frisch an und passt bei schnell fettender Kopfhaut. Trockene oder sensible Kopfhaut kann es aber zusätzlich reizen. Deshalb steht bei jedem Produkt, ob und wo Alkohol und Parfum drin sind.</p>
-      <p><b>Gegen Haarausfall:</b> Viele Produkte werden mit Koffein, Aminexil, Rosmarin oder Peptiden gegen Haarverlust beworben. Belegt ist das bei Kosmetik nur schwach, meist mit Studien der Hersteller. Erblich bedingten Haarausfall hält keine Kosmetik auf. Fallen dir über Wochen deutlich mehr Haare aus, lass das beim Hautarzt abklären.</p>
+      <p><b>So verwendest du sie:</b> Kopfhautpflege kommt direkt auf die Kopfhaut, nicht in die Längen. Am besten klappt das mit der Scheiteltechnik: Zieh dir vier bis fünf Scheitel über die ganze Kopfhaut und gib das Produkt mit dem Applikator, der Pipette oder dem Spray direkt auf die Scheitel. Danach sanft mit den Fingerkuppen einmassieren.</p>
+      <p><b>Wann?</b> Am besten nach dem Waschen auf die noch feuchte Kopfhaut, vor dem Föhnen. Viele Seren sind für jeden Tag gedacht. Auch dann ist die Scheiteltechnik am saubersten, weil kaum Produkt in die Haare kommt und sie nicht beschwert.</p>
     </div>
   </div>
 
@@ -61,10 +60,10 @@ html = '''<!DOCTYPE html>
 <script>
 const CATS = ''' + json.dumps(cats, ensure_ascii=False) + ''';
 
-/* [Kürzel, Marke, Produkt, Kategorien, Art, Einschätzung, wichtige Inhaltsstoffe, Duft und Alkohol, Gut zu wissen, Segment] */
+/* [Kürzel, Marke, Produkt, Kategorien, Art, Einschätzung, wichtige Inhaltsstoffe, Duft und Alkohol, Anwendung, Hinweis, Segment] */
 const P = [
 ''' + ',\n'.join(' ' + json.dumps(r, ensure_ascii=False) for r in rows) + '''
-].map(([key,brand,name,c,art,note,wirk,duft,tip,segment]) => ({key, segment, brand, name, cats:c.split(" "), art, note, wirk, duft, tip}));
+].map(([key,brand,name,c,art,note,wirk,duft,anw,hint,segment]) => ({key, segment, brand, name, cats:c.split(" "), art, note, wirk, duft, anw, hint}));
 /* Produktbilder, klein neben dem Produkt */
 const IMG = ''' + json.dumps(imgs) + ''';
 P.forEach(p => p.img = IMG[p.key]);
@@ -91,23 +90,21 @@ q.addEventListener("input", draw);
 
 const LABEL = Object.fromEntries(CATS.map(c => [c.id, c.label]));
 const passtZu = p => p.cats.map(c => LABEL[c]).join(", ");
-const artTag = p => p.art.split(" · ")[0];
-const artText = p => p.art.replace(" · ", ", ");
 function itemHtml(p){
   return `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
-    <div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags"><span class="tag">${p.segment}</span><span class="heat">${esc(artTag(p))}</span></span></div>
+    <div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags"><span class="tag">${p.segment}</span><span class="heat">${esc(p.art)}</span></span></div>
     <div class="name">${esc(p.name)}</div>
     <div class="note">${esc(p.note)}</div>
     <div class="hair"><b>Wichtige Inhaltsstoffe:</b> ${esc(p.wirk)}</div>
     <div class="hair"><b>Duft und Alkohol:</b> ${esc(p.duft)}</div>
-    <div class="hair"><b>Art:</b> ${esc(artText(p))}</div>
-    ${p.tip?`<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`:""}
+    <div class="tip"><b>Anwendung:</b> ${esc(p.anw)}</div>
+    ${p.hint?`<div class="hint">${esc(p.hint)}</div>`:""}
     <span class="also">Passt zu: ${esc(passtZu(p))}</span>
   </div></li>`;
 }
 /* Suche ohne Akzente, Apostrophe, Leer- und Sonderzeichen: „kerastase“ findet „Kérastase“, „loreal“ findet „L'Oréal“. Jedes Suchwort wird einzeln gesucht. */
 const plain = s => s.toLowerCase().replace(/ß/g,"ss").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9]/g,"");
-const matches = (p, term) => { if(!(seg==="alle" || p.segment===seg)) return false; if(!term.length) return true; const h = plain([p.brand,p.name,p.note,p.wirk,p.duft,p.art,p.tip].join(" ")); return term.every(t => h.includes(t)); };
+const matches = (p, term) => { if(!(seg==="alle" || p.segment===seg)) return false; if(!term.length) return true; const h = plain([p.brand,p.name,p.note,p.wirk,p.duft,p.art,p.anw,p.hint].join(" ")); return term.every(t => h.includes(t)); };
 const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 
 function drawListe(term){
