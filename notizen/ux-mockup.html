@@ -751,8 +751,8 @@ document.addEventListener("click", e => {
   else if ("shareRoutine" in d) { const m = profile(); share(location.href.split("#")[0] + "#/?haare=" + [m.dicke, ...m.kopf, ...m.zustand].filter(Boolean).join(","), "Deine Routine"); }
   else if ("keepSent" in d) { ME = Object.assign({}, S.sent, {on:true}); S.sent = null; saveMe(); history.replaceState(null, "", location.hash.split("?")[0] || "#/"); render(true); toast("In „Meine Haare“ gespeichert"); }
   else if ("dropSent" in d) { S.sent = null; history.replaceState(null, "", location.hash.split("?")[0] || "#/"); render(true); }
-  else if (d.saveQuery) { const {m} = parseQuery(d.saveQuery); ME = Object.assign(m, {on:true}); saveMe(); S.q = ""; location.hash = "#/"; render(); toast("In „Meine Haare“ gespeichert"); }
-  else if ("quizApply" in d) { ME = {dicke:"fein", kopf:["fettend"], zustand:["blondiert"], on:true}; saveMe(); location.hash = "#/"; toast("Aus dem Quiz übernommen"); }
+  else if (d.saveQuery) { const {m} = parseQuery(d.saveQuery); ME = Object.assign(m, {on:true}); saveMe(); S.q = ""; location.hash = "#/"; setTimeout(() => toast("In „Meine Haare“ gespeichert"), 80); }
+  else if ("quizApply" in d) { ME = {dicke:"fein", kopf:["fettend"], zustand:["blondiert"], on:true}; saveMe(); location.hash = "#/"; setTimeout(() => toast("Aus dem Quiz übernommen"), 80); }
   else if (d.setDicke) { ME.dicke = ME.dicke === d.setDicke ? null : d.setDicke; ME.on = true; saveMe(); render(true); toast(ME.dicke ? "Haardicke gespeichert" : "Haardicke entfernt"); }
 });
 window.addEventListener("hashchange", () => { document.getElementById("toast").classList.remove("on"); const was = current[0]; S.openDesc = false; if (route()[0] !== was && route()[0] !== "suche") S.q = ""; render(T[was] && T[route()[0]] && was === route()[0]); });
