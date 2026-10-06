@@ -119,3 +119,9 @@ Aqua, Glycerin, Maris Sal (Dead Sea Salt), Panthenol, Sodium PCA, Arginine, Alla
 Aqua, Sorbitol, Propylene Glycol, Glycerin, Lactic Acid, Gluconolactone, Panthenol, Xanthan Gum, Sodium Hydroxide, Citric Acid, Sodium Benzoate, Potassium Sorbate.
 => Damit ist das Erbsenpeptid-INCI (oben) vermutlich OGX ProGrowth + Peptide Scalp Serum (Peptid + Koffein passen zum Namen) → bestätigen.
 Laura: L'Oréal Fiber Booster Serum kommt rein; head&shoulders Density Booster MIT Karton als Bild (dm-Kartonbild hsd_0 nehmen).
+
+### Öle (dm, Lauras Liste)
+- Balea med – Haaröl Ultra Sensitive 3in1
+- Bali Curls – Haar- und Kopfhautöl Rosmarin („Barley Curls“ diktiert)
+- Dr. Scheller – Jojobaöl
+- Dr. Scheller – Arganöl
