@@ -39,3 +39,37 @@
 29. Langhaarmädchen – Lovely Long
 30. Balea Professional – Plex Care
 (Laura: „es kommen noch mehr“)
+### Runde 2
+31. OGX – Biotin & Collagen
+32. OGX – Protein Repair (Name prüfen)
+33. Balea Professional – Keratin Repair
+34. Balea – Feuchtigkeit Conditioner
+35. Bali Curls – Bonding Repair
+36. Santé – Intense Hydration
+37. Balea – Locken beauty essentials
+38. NEQI – Diamond Glass
+39. John Frieda – Unendlich Smooth
+40. Balea – Intensivpflege
+41. Pantene Pro-V – Moisture Boost
+42. „Oseal“ – Oh My Gloss (Marke prüfen)
+43. NEQI – Repair Reveal
+44. Balea Professional – Hydra Volume
+45. Santé – Glossy Shine
+46. OGX – Coconut Miracle Oil
+47. Pomélo+Co – Shine Therapy
+48. Balea Professional – Glossy Color
+49. Pantene Pro-V – Miracles Lift Volume
+50. Balea – Molecular Care
+51. Pantene Pro-V – Glowtox
+52. NEQI – Moisture Mystery
+53. Pomélo+Co – Molecular Repair
+54. Garnier Wahre Schätze – Reiswasser Ritual
+55. Syoss – Intense Glaze
+56. Schwarzkopf (Gliss) – Aqua Revive
+57. Pantene – Repair & Care (doppelt mit Nr. 3)
+58. MONDAY – Moisture
+59. Balea – Glow & Shine
+60. Balea – Brilliant Blond
+61. alverde – Ultra Sensitiv
+62. OGX – ProGrowth + Peptide
+63. Balea – Traumlocken
