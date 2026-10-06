@@ -276,3 +276,4 @@ Aqua/Water/Eau, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, Parfum/Frag
 - Nicht kaputt: h2 Redken Extreme (Proteine hinter Parfum), h4 Olaplex CURL (kein Bond-Wirkstoff), h9 OUAI (Keratin hinter Parfum), o1 OGX ProGrowth (Peptid hinter Parfum).
 - Silikone: h1 Quaternium-80 (von Hand ergänzt), h2/h9/o1 automatisch.
 - being Curl Power (r16) nachgetragen: dick + sehr dick, silikonfrei. Damit 87 Conditioner, nichts mehr offen.
+- Laura (06.10. spät): Alle 13 aus „Feines Haar“ nach „Dünnes Haar“ verschoben (waren schon alle auch in Dünn). „Fein“ ist jetzt leer und bekommt die Wonder-Water-Produkte, die Laura schickt.
