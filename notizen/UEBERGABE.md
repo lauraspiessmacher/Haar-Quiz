@@ -75,3 +75,9 @@
 - Nachtrag 06.10. spät (notizen/nachtrag-liste.md): Wella Ultimate Smooth Miracle Oil Serum + 24/7 Silky Milk → Leave-in; Wella Ultimate Smooth Mask, Oil Reflections Mask, Coco & Eve Pre-Shampoo → Masken; The Ordinary Glycolic Toner (Peeling) + Goldwell Scalp Rebalance Fluid → Kopfhaut (jetzt 52); Goldwell Deep Cleansing Shampoo → Shampoo (Fettend).
 - OFFENE FRAGE an Laura VOR einer Live-Website: Sollen Hinweise wie „Fast die gleiche Basis/Rezeptur wie …“ in den Guides bleiben? (Laura findet sie für sich gut, würde sie für live evtl. rausnehmen – unbedingt nachfragen.)
 - OFFENE FRAGE: Dünn-Text „wenige Haare und wenig Fülle“ auch im Conditioner-, Masken- und Leave-in-Guide an die neue Definition (Dicke des einzelnen Haares, nicht Fülle) anpassen?
+
+## Stand 06.10.2026 spät – NÄCHSTER SCHRITT: Gesamtseite bauen
+- Alle 6 Einzel-Guides fertig: shampoo-guide.html (163), conditioner-guide.html (94), masken-guide.html (61), leave-in-guide.html (103), kopfhaut-guide.html (52), oel-guide.html (45).
+- UX-Konzept: notizen/ux-konzept.md + notizen/ux-mockup.html (+ ux-mockup-optionen.html). Empfehlung Option 1 „Regal“ (Produktart zuerst, Leiste unten Produkte·Quiz·Wissen·Meine Haare, Routine-Schritte, Teilen-Links, Bilder als einzelne WebP-Dateien mit Nachladen). Laura hat die Richtung noch NICHT bestätigt.
+- Vor dem Bauen mit Laura klären (aus ux-konzept.md Abschnitt 6): Startseite mit Routine-Kacheln oder direkt Shampoo? Welche Haarzustände bei „Meine Haare“, was macht „Gefärbt“? Quiz (Fein/Mittel/Dick) → 5 Haardicken? Webadresse + wer lädt hoch? Dazu: Dünn-Text in Conditioner/Masken/Leave-in angleichen? „Fast die gleiche Basis wie …“ live behalten?
+- Laura wollte die Zusammenführung mit ihr gemeinsam starten (Limit fast erreicht).
