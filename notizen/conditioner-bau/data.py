@@ -119,3 +119,4 @@ REP.update({
 "h1": [AUSSEN, ["Pflanzenprotein (Hydrolyzed Vegetable Protein PG-Propyl Silanetriol)"]],
 "h3": ["Wirkt im Inneren: Der Bond-Wirkstoff stabilisiert das Haar von innen. Eine Spülung wirkt nur kurz, für mehr Aufbau zusätzlich eine Repair-Maske.", ["Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate)"]],
 })
+P["r16"] = ("being","Curl Power Locken Conditioner","dick sehrdick","Reichhaltige, silikonfreie Spülung mit Kokos-, Traubenkernöl und Sheabutter","lockig","",D)

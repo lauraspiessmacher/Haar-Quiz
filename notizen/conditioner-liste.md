@@ -275,4 +275,4 @@ Aqua/Water/Eau, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, Parfum/Frag
 - Kaputt neu: h1 Coco & Eve (Pflanzenprotein vor Parfum, von außen; Bond-Wirkstoffe erst hinter Parfum), h3 Olaplex No.5 FINE (Bond-Wirkstoff vor Konservierer + Parfum, wirkt im Inneren).
 - Nicht kaputt: h2 Redken Extreme (Proteine hinter Parfum), h4 Olaplex CURL (kein Bond-Wirkstoff), h9 OUAI (Keratin hinter Parfum), o1 OGX ProGrowth (Peptid hinter Parfum).
 - Silikone: h1 Quaternium-80 (von Hand ergänzt), h2/h9/o1 automatisch.
-- Offen: being Curl Power (INCI fehlt).
+- being Curl Power (r16) nachgetragen: dick + sehr dick, silikonfrei. Damit 87 Conditioner, nichts mehr offen.
