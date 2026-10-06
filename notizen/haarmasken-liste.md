@@ -214,7 +214,7 @@ Außen: Aqua, Cetearyl Alcohol, Aminopropyl Triethoxysilane, Paraffinum Liquidum
 Innen: Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Amodimethicone, Glycerin, Octyldodecanol, Isopropyl Alcohol, Phenoxyethanol, Caprylyl Glycol, Parfum, Benzoic Acid, Trideceth-6, Citric Acid, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Cetyl Alcohol, Arginine, Hydrolyzed Soy Protein, … (Rest: Konservierer, Duft)
 
 #### Olaplex No.8 Bond Intense Moisture Mask
-Laut Olaplex nicht mehr im Sortiment (US-Shop Sept. 2026), Hagel hat sie nicht. Nachfolger: Olaplex Rich Hydration Mask und Weightless Nourishing Mask – Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate) steht dort erst hinter Parfum und Konservierer. Laura fragen, ob eine davon rein soll.
+NICHT MEHR IM HANDEL – geprüft 06.10.2026: weder olaplex.de noch olaplex.com führen sie, Hagel auch nicht, nur noch Restbestände bei Drittanbietern. Laura: dann NICHT in den Guide. Nachfolger: Olaplex Rich Hydration Mask und Weightless Nourishing Mask – Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate) steht dort erst hinter Parfum und Konservierer. Wenn überhaupt, dann nur in die Haardicke-Tabs, nicht in „Kaputte Haare“ (Laura: „sonst können wir Olaplex skippen“).
 
 ## Weitere Masken (Laura, nur Namen, 6.10.2026, Runde 3)
 - Kérastase – Gloss Absolu Maske
@@ -226,7 +226,7 @@ Laut Olaplex nicht mehr im Sortiment (US-Shop Sept. 2026), Hagel hat sie nicht. 
 - Color Wow – Money Masque
 - Maria Nila – True Soft Masque
 - K18 – Leave-In Molecular Repair Hair Mask → aufnehmen, Hinweis: wird NICHT ausgespült
-- Olaplex – No.8 Bond Intense Moisture Mask → prüfen (laut Olaplex aus dem Sortiment)
+- Olaplex – No.8 Bond Intense Moisture Mask → raus, nicht mehr im Handel (geprüft 06.10.2026)
 - Kérastase – Première Maske im Tiegel (= Masque Filler Réparateur, schon drin)
 - Kérastase – Première Concentré Décalcifiant → aufnehmen, Hinweis: Pre-Shampoo-Treatment
 
