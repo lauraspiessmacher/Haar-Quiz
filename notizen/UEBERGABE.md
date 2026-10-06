@@ -62,3 +62,10 @@
 - Gesamt-Guide: Ansicht A (Suche mit kombinierbaren Schlagwörtern, Routine Shampoo→Conditioner→Maske→Leave-in→Kopfhautpflege) UND Ansicht B (wie die Einzel-Guides). Laura will beide.
 - Regeln: Shampoo nach KOPFHAUTTYP. Maske, Leave-in, Conditioner nach HAARDICKE + HAARZUSTAND. „Kaputte Haare“ = Aufbau (Protein/Bond), z. B. bei stark blondiert.
 - Kopfhautpflege (Guide kommt noch) nach Bedürfnis: Feuchtigkeit, Schuppen, Haarausfall (Ausfallphase hinauszögern/blocken), evtl. beruhigend/ausgleichend. Ob immer alle Themen gezeigt werden oder nur das passende: mit Laura klären, wenn die Produkte da sind (Vorschau: passendes hervorgehoben, andere daneben).
+
+- UPDATE (Laura, 06.10. nachmittags): KEINE Buttons „Ansicht A / Ansicht B“ mehr (Follower wären verwirrt). Stattdessen:
+  - Oben Menü: Produkte · Quiz · Wissen + ein Button „Meine Haare“ (oben im Menü oder dort, wo vorher Ansicht A war).
+  - „Meine Haare“ ist freiwillig: Haardicke/Haartyp, Kopfhauttyp, Kopfhautproblem, strapaziert/blondiert/stark geschädigt auswählen → nur passende Produkte (Regler Nur passende/Alle). Kann man auslassen.
+  - Ohne Einstellung: normal nach Produkten suchen; Produktbereich aufgebaut wie die Einzel-Guides (Reiter pro Produktart, darunter Kategorien), mit Lauras Einschätzung unter jedem Produkt.
+  - Die Schlagwort-Suche (feine Haare Schuppen …) darf versteckt weiter funktionieren, Laura weiß, wie es geht.
+  - Bauen ab 15:30 (Lauras Limit). Quiz: index.html = „Finde deinen Haartyp“; Laura hat insgesamt 3 Quiz, die anderen 2 schickt sie. Wissenstexte schreibt sie noch.
