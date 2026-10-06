@@ -214,7 +214,7 @@ Außen: Aqua, Cetearyl Alcohol, Aminopropyl Triethoxysilane, Paraffinum Liquidum
 Innen: Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Amodimethicone, Glycerin, Octyldodecanol, Isopropyl Alcohol, Phenoxyethanol, Caprylyl Glycol, Parfum, Benzoic Acid, Trideceth-6, Citric Acid, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Cetyl Alcohol, Arginine, Hydrolyzed Soy Protein, … (Rest: Konservierer, Duft)
 
 #### Olaplex No.8 Bond Intense Moisture Mask
-NICHT MEHR IM HANDEL – geprüft 06.10.2026: weder olaplex.de noch olaplex.com führen sie, Hagel auch nicht, nur noch Restbestände bei Drittanbietern. Laura: dann NICHT in den Guide. Nachfolger: Olaplex Rich Hydration Mask und Weightless Nourishing Mask – Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate) steht dort erst hinter Parfum und Konservierer. Wenn überhaupt, dann nur in die Haardicke-Tabs, nicht in „Kaputte Haare“ (Laura: „sonst können wir Olaplex skippen“).
+NICHT MEHR IM HANDEL – geprüft 06.10.2026: weder olaplex.de noch olaplex.com führen sie, Hagel auch nicht, nur noch Restbestände bei Drittanbietern. Laura: dann NICHT in den Guide. Nachfolger: Olaplex Rich Hydration Mask und Weightless Nourishing Mask – Bond-Wirkstoff (Bis-Aminopropyl Diglycol Dimaleate) steht dort erst hinter Parfum und Konservierer. Laura: beide einbauen (06.10.2026) – Rich Hydration → normal/dick, Weightless Nourishing → dünn/normal, NICHT in „Kaputte Haare“.
 
 ## Weitere Masken (Laura, nur Namen, 6.10.2026, Runde 3)
 - Kérastase – Gloss Absolu Maske
