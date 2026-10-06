@@ -2,7 +2,7 @@ import sys, json, io, base64, os, re
 from PIL import Image
 S = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, S)
-from data import CATS, P, ANW
+from data import CATS, P, ANW, RANK_HAARAUSFALL
 
 tpl = open('/home/user/Haar-Quiz/masken-guide.html').read()
 css = tpl[tpl.index('<style>'):tpl.index('</style>')] + '.also{border-radius:12px;line-height:1.5;padding:2px 10px}\n.tip.anw{font-size:13px;line-height:1.45;padding:5px 10px}\n.hint{font-size:13px;color:var(--muted);margin-top:6px;font-style:italic}\n</style>'
@@ -106,6 +106,9 @@ function itemHtml(p){
 const plain = s => s.toLowerCase().replace(/ß/g,"ss").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9]/g,"");
 const matches = (p, term) => { if(!(seg==="alle" || p.segment===seg)) return false; if(!term.length) return true; const h = plain([p.brand,p.name,p.note,p.wirk,p.duft,p.art,p.anw,p.hint].join(" ")); return term.every(t => h.includes(t)); };
 const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
+/* Reiter Haarausfall: nach Stärke der Wirkstoffe sortiert, nicht nach Name */
+const RANK = ''' + json.dumps(RANK_HAARAUSFALL) + ''';
+const byRank = (a,b) => RANK.indexOf(a.key) - RANK.indexOf(b.key);
 
 function drawListe(term){
   let shown = 0;
@@ -142,7 +145,7 @@ function draw(){
     return;
   }
   out.innerHTML = CATS.filter(c => c.id===active).map(c => {
-    const items = P.filter(p => p.cats.includes(c.id) && matches(p, term)).sort(byName);
+    const items = P.filter(p => p.cats.includes(c.id) && matches(p, term)).sort(c.id==="haarausfall" ? byRank : byName);
     if(!items.length) return "";
     shown += items.length;
     return `<section class="cat" id="${c.id}">

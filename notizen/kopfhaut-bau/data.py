@@ -7,7 +7,7 @@ CATS = [
  ("sensibel", "Sensible Kopfhaut", "Die Kopfhaut reagiert schnell, wird rot oder brennt. Hier stehen nur milde Pflegen ohne Parfum und ohne viel Alkohol, meist mit beruhigenden Wirkstoffen wie Panthenol, Allantoin oder Bisabolol."),
  ("schuppen", "Schuppige Kopfhaut", "Gegen Schuppen, bei denen ein Hefepilz eine Rolle spielt. Wirklich dagegen arbeitet vor allem Piroctone Olamine. Hier stehen Pflegen, die so einen Wirkstoff enthalten. Am besten zusammen mit einem Anti-Schuppen-Shampoo."),
  ("fettend", "Schnell fettende Kopfhaut", "Der Ansatz ist schnell wieder fettig. Hier stehen leichte Pflegen ohne Öle: welche, die den Talg regulieren sollen, zum Beispiel mit Niacinamid oder Zink, und leichte Feuchtigkeitspflegen. Auch eine fettige Kopfhaut kann Feuchtigkeit brauchen."),
- ("haarausfall", "Bei Haarausfall", "Diese Produkte werden gegen Haarverlust beworben, meist mit Koffein, Aminexil, Rosmarin oder Peptiden. Sie pflegen die Kopfhaut, und eine gesunde Kopfhaut ist eine gute Grundlage für deine Haare. Dass Haare dadurch messbar dichter werden, ist bei Kosmetik aber kaum belegt, die Studien kommen meist von den Herstellern. Erblich bedingten Haarausfall halten sie nicht auf. Fallen dir über Wochen deutlich mehr Haare aus, lass das beim Hautarzt abklären."),
+ ("haarausfall", "Bei Haarausfall", "Diese Produkte werden gegen Haarverlust beworben, meist mit Koffein, Aminexil, Rosmarin oder Peptiden. Sie pflegen die Kopfhaut, und eine gesunde Kopfhaut ist eine gute Grundlage für deine Haare. Dass Haare dadurch messbar dichter werden, ist bei Kosmetik aber kaum belegt, die Studien kommen meist von den Herstellern. Erblich bedingten Haarausfall halten sie nicht auf. Fallen dir über Wochen deutlich mehr Haare aus, lass das beim Hautarzt abklären. Sortiert nach Inhaltsstoffen: Oben stehen die Produkte mit den meisten und am weitesten vorne stehenden Wirkstoffen gegen Haarausfall, unten die schwächsten."),
  ("peeling", "Kopfhautpeeling", "Ein Peeling ist kein Pflegeprodukt für einen bestimmten Kopfhauttyp, sondern eine Reinigung zwischendurch. Es löst Rückstände, Talg und Hautschüppchen. Flüssige Peelings arbeiten mit Säuren, grobe mit kleinen Körnchen. Ein- bis zweimal pro Woche reicht, nie auf gereizter oder verletzter Kopfhaut."),
 ]
 
@@ -182,3 +182,6 @@ P = [
  "Mit Bifidus-Ferment, Vitamin-C-Abkömmling und Präbiotika.",
  "Bifidus-Ferment, Vitamin C, Präbiotika","mit Parfum und Alkohol","pflege","Nicht ideal für sensible Kopfhaut und für trockene Kopfhaut als alleinige Pflege.",H),
 ]
+
+# Reihenfolge im Reiter „Bei Haarausfall“: stärkste Wirkstoffe oben
+RANK_HAARAUSFALL = ["kgs","vab","lfb","tom","nbl","hsd","nnd","rag","shv","ogx","nqt","lpd","pga"]
