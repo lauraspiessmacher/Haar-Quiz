@@ -87,3 +87,12 @@ Anwendung: TÄGLICH ANWENDEN. IM FEUCHTEN ODER TROCKENEN HAAR ANWENDEN. HAAR IN 
 #### L'Oréal Paris Elvital – Haarserum Fiber Booster, Anti-Haarverlust, 102 ml (dm 2976343) [lfb]
 AQUA / WATER • ALCOHOL DENAT. • NIACINAMIDE • PROPYLENE GLYCOL • DIAMINOPYRIMIDINE OXIDE • LACTIC ACID • ACETYL CEDRENE • PEG-40 HYDROGENATED CASTOR OIL • POGOSTEMON CABLIN OIL • AMINOMETHYL PROPANOL • TRIMETHYLBENZENEPROPANOL • LIMONENE • ZINGIBER OFFICINALE ROOT EXTRACT / GINGER ROOT EXTRACT • LINALYL ACETATE • BENZYL ALCOHOL • LINALOOL • PINENE • ACRYLATES/BEHENETH- 25 METHACRYLATE COPOLYMER • PIROCTONE OLAMINE • CARVONE • TERPINEOL • CITRUS AURANTIUM PEEL OIL • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • CITRONELLOL • CITRAL • HEXYL CINNAMAL • PARFUM / FRAGRANCE
 Anwendung: Das Elvital Fiber Booster Anti-Haarverlust Serum 5 bis 7 Mal pro Woche mithilfe des feinen Applikators direkt auf die Kopfhaut auftragen und mit den Fingern und kreisenden Bewegungen sanft in die Kopfhaut einmassieren – ohne es abschließend auszuspülen. Bei Kontakt mit den Augen sofort und gründlich ausspülen. Das Fiber Booster Serum ist der dritte
+
+### Rossmann (Lauras Screenshots, Bilder in notizen/kopfhaut-bilder/)
+#### OGX – ProGrowth + Peptide Scalp Serum, 10 ml (Strengthen & Density)
+INCI: fehlt noch (kein Screenshot angekommen)
+#### Salt House Totes Meer – Anti-Haarverlust Kopfhaut-Fluid Aktiv (empfindliche & trockene Kopfhaut, ohne Ausspülen, „Depot-Wirkung“, mit Totes-Meer-Mineralien, Panthenol & Koffein)
+Aqua, Glycerin, Alcohol Denat., Panthenol, Xanthan Gum, Caffeine, Maris Sal (Dead Sea Salt), Niacinamide, Urea, Sodium Benzoate, Caprylyl/Capryl Glucoside, Citric Acid, Sodium Cocoyl Glutamate, Glyceryl Caprylate, Polyglyceryl-6 Oleate, Mentha Arvensis Leaf Oil, Menthol, Parfum, Sodium Surfactin.
+#### Australian Bodycare – Scalp Serum Treatment Mask (Tea Tree Oil)
+Aqua/Water, Glycerin, PEG-7 Glyceryl Cocoate, Sodium Caproyl/Lauroyl Lactylate, Caprylic/Capric Triglyceride, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Phenoxyethanol, Carbomer, Macadamia Ternifolia Seed Oil/Macadamia Integrifolia Seed Oil, Sodium Hydroxide, Xanthan Gum, Beta-Caryophyllene, Allantoin, Tetrasodium Iminodisuccinate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ethylhexylglycerin, Tocopherol, Menthol, Tasmannia Lanceolata Fruit Extract, Limonene, Linalool.
+(Zuordnung der INCI: Totes-Meer-Salz/Koffein → Salt House; Tea Tree → Australian Bodycare)
