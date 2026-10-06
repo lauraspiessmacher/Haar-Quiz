@@ -19,7 +19,9 @@ Bild und INCI holt Claude per dm-Artikelnummer selbst (products.dm.de/product/pr
 | NEQI | Haarkur Repair Reveal, 250 ml | 1455211 |
 | OGX | Haarkur Coconut Miracle Oil, 300 ml (nur online) | 2170211 |
 | Balea | Haarmaske Intensivpflege 3in1, 300 ml | 1671219 |
-| L'Oréal Elvital | Haarmaske Glycolic Gloss Spiegelglanz, 300 ml | (über Suche) |
+| L'Oréal Elvital | Haarmaske Glycolic Gloss Spiegelglanz, 300 ml | 3137211 (dm zeigt nur 6 Inhaltsstoffe, Liste unvollständig → woanders prüfen) |
+| Schwarzkopf Gliss | Haarmaske 4in1 Total Repair, 400 ml | (über Suche) |
+| Bali Curls | Haarmaske Deep Repair, 200 ml | 3106327 |
 
 ## Drogerie (Rossmann)
 
