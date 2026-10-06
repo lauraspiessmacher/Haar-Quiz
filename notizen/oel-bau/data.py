@@ -7,9 +7,9 @@ P = {
 "o03": ("Aussie","Curls Öl Lightweight Oil","fein duenn normal","Sehr leichtes Silikon-Öl, verdunstet fast vollständig","lockig, frizzig","Das Macadamiaöl steht hinter dem Parfum, nur in kleiner Menge. Die Pflege macht das Silikon.",D,True),
 "o07": ("Garnier Wahre Schätze","Schwereloses Haar-Öl Argan & Camelia","fein duenn normal","Trockenes Öl mit Silikon, etwas Argan- und Kamelienöl","trocken, glanzlos","",D,True),
 "o14": ("OGX","Argan Oil of Morocco Weightless Reviving Dry Oil","duenn normal dick","Trockenes Sprühöl mit leichtem Ölersatz, etwas Silikon, Kokos- und Arganöl","trocken, glanzlos","",D,True),
-"o20": ("OGX","Bond Protein Repair 3-in-1 Oil Mist","fein duenn normal","Leichter Pflegenebel auf Wasserbasis mit leichtem Öl und Glycerin, ohne Silikon","strapaziert","Eher ein Pflegespray als ein Öl. Weizenprotein und Bond-Wirkstoffe stehen hinter dem Parfum, nur in kleiner Menge.",D,False),
-"o27": ("Dejan Garz","Violet Hair Oil The Britney","duenn normal dick","Trockenes Öl mit Silikon, Kamelien-, Argan- und Jojobaöl","blond, blondiert, strapaziert","",D,True),
-"o28": ("Dejan Garz","Sensitive Hair Oil The Gentle","duenn normal dick","Trockenes Öl mit Silikon, Haferöl und Squalan, ohne Parfum","strapaziert, empfindlich","Ohne Parfum, gut bei Duftallergie oder empfindlicher Haut.",D,True),
+"o20": ("OGX","Bond Protein Repair 3-in-1 Oil Mist","duenn normal","Leichter Pflegenebel auf Wasserbasis mit leichtem Öl und Glycerin, ohne Silikon","strapaziert","Eher ein Pflegespray als ein Öl. Weizenprotein und Bond-Wirkstoffe stehen hinter dem Parfum, nur in kleiner Menge.",D,False),
+"o27": ("Dejan Garz","Violet Hair Oil The Britney","fein duenn normal dick","Trockenes Öl mit Silikon, Kamelien-, Argan- und Jojobaöl","blond, blondiert, strapaziert","",D,True),
+"o28": ("Dejan Garz","Sensitive Hair Oil The Gentle","fein duenn normal dick","Trockenes Öl mit Silikon, Haferöl und Squalan, ohne Parfum","strapaziert, empfindlich","Ohne Parfum, gut bei Duftallergie oder empfindlicher Haut.",D,True),
 # ---------- Drogerie (dm) ----------
 "d01": ("OGX","Coconut Miracle Oil","normal dick sehrdick","Glättendes Serum mit Silikon, leichtem Ölersatz, Argan- und Kokosöl","trocken, strapaziert","Fast die gleiche Basis wie das OGX Argan Penetrating Oil, dazu etwas Kokosöl.",D,False),
 "d02": ("OGX","Moroccan Argan Penetrating Oil","normal dick sehrdick","Glättendes Serum mit Silikon, leichtem Ölersatz und Arganöl","trocken","Die Pflege macht vor allem das Silikon, das Arganöl kommt erst danach.",D,False),
