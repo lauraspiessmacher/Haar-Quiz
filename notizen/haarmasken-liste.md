@@ -44,7 +44,7 @@ Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Cetyl Alcohol, Butyrospermum Pa
 ### ISANA Professional – Haarmaske Arganöl & Pflege, 250 ml (Art.-Nr. 040908) – Bild: notizen/masken-bilder/isana-arganoel-pflege.jpg
 AQUA, CETEARYL ALCOHOL, GLYCERIN, ISOPROPYL PALMITATE, PROPYLENE GLYCOL, PRUNUS AMYGDALUS DULCIS OIL, CETRIMONIUM CHLORIDE, PANTHENOL, ARGANIA SPINOSA KERNEL OIL, QUATERNIUM-87, PARFUM, LIMONENE, CITRIC ACID, SODIUM CITRATE, SODIUM BENZOATE
 
-### Herbal Essences – Haarmaske Repair Arganöl, 300 ml (Art.-Nr. 154534)
+### Herbal Essences – Haarmaske Repair Arganöl, 300 ml (Art.-Nr. 154534) – Bild: notizen/masken-bilder/herbal-essences-repair-arganoel.jpg
 Aqua, Cetyl Alcohol, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Bis-Aminopropyl Dimethicone, Glutamic Acid, Parfum, Benzyl Alcohol, Argania Spinosa Kernel Oil, Sodium Benzoate, Citric Acid, Disodium EDTA, Polysorbate 20, Benzyl Benzoate, Hexyl Cinnamal, Histidine, Limonene, Alpha-Isomethyl Ionone, Coumarin, CI 19140, CI 17200
 
 ### ISANA Professional – Haarmaske Intensiv & Pflege, 250 ml (Art.-Nr. 040879) – Bild: notizen/masken-bilder/isana-intensiv-pflege.png
@@ -56,15 +56,15 @@ AQUA, CETEARYL ALCOHOL, COCO-CAPRYLATE, BEHENTRIMONIUM CHLORIDE, TRITICUM VULGAR
 ### Gliss – Oil Nutritive Nährpflege 4-in-1 Bonding Haarmaske, 400 ml (Art.-Nr. 153982)
 Aqua (Water, Eau), Cetearyl Alcohol, Distearoylethyl Hydroxyethylmonium Methosulfate, Glycerin, Isopropyl Myristate, Behenamidopropyl Dimethylamine, Hydroxypropylgluconamide, Hydroxypropylammonium Gluconate, Sclerocarya Birrea Seed Oil, Behentrimonium Chloride, Parfum (Fragrance), Amodimethicone, Butyrospermum Parkii (Shea) Butter, Lactic Acid, Isopropyl Alcohol, Ceteareth-20, Sodium Benzoate, Prunus Armeniaca (Apricot) Kernel Oil, Trideceth-10, Linalool, Limonene, Phenoxyethanol, Alpha-Isomethyl Ionone, Geraniol, Benzyl Alcohol, Potassium Sorbate
 
-### Pantene Pro-V – Grow Abundant Anti-Haarverlust Haarmaske, 300 ml (Art.-Nr. 210077)
+### Pantene Pro-V – Grow Abundant Anti-Haarverlust Haarmaske, 300 ml (Art.-Nr. 210077) – Bild: notizen/masken-bilder/pantene-grow-abundant.jpg
 Aqua, Cetyl Alcohol, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Bis-Aminopropyl Dimethicone, Glutamic Acid, Benzyl Alcohol, Sodium Benzoate, Parfum, Citric Acid, Behentrimonium Methosulfate, Disodium EDTA, Polysorbate 20, Panthenol, Panthenyl Ethyl Ether, Isopropyl Alcohol, Histidine, Linalool, CI 77491, Hexyl Cinnamal, Silica, Biotin
 
 ## High-End
 
-### Syoss – Intense Keratin Haarmaske, 400 ml (Rossmann 181171)
+### Syoss – Intense Keratin Haarmaske, 400 ml (Rossmann 181171) – Bild: notizen/masken-bilder/syoss-intense-keratin.png
 Aqua (Water, Eau), Cetearyl Alcohol, Glycerin, Behentrimonium Chloride, Distearoylethyl Hydroxyethylmonium Methosulfate, Hydrolyzed Keratin, Isopropyl Myristate, Behenamidopropyl Dimethylamine, Lactic Acid, Amodimethicone, Parfum (Fragrance), Butyrospermum Parkii (Shea) Butter, Isopropyl Alcohol, Sodium Benzoate, Tetramethyl Acetyloctahydronaphthalenes, Ceteareth-20, Sodium Hydroxide, Trideceth-10, Linalool, Linalyl Acetate, Acetyl Cedrene, Phenoxyethanol
 
-### Garnier Fructis – Locken Methode Feuchtigkeitsauffüllende Haarmaske, 370 ml (Rossmann 153828)
+### Garnier Fructis – Locken Methode Feuchtigkeitsauffüllende Haarmaske, 370 ml (Rossmann 153828) – Bild: notizen/masken-bilder/fructis-locken-methode.png
 AQUA / WATER, CETEARYL ALCOHOL, STEARAMIDOPROPYL DIMETHYLAMINE, ISOPROPYL MYRISTATE, CETYL ESTERS, HELIANTHUS ANNUUS SEED OIL, BUTYROSPERMUM PARKII BUTTER, SODIUM HYALURONATE, ARGININE, CAPRYLYL GLYCOL, CITRIC ACID, TARTARIC ACID, SALICYLIC ACID, LINALOOL, GERANIOL, METHYL 2-OCTYNOATE, COUMARIN, LIMONENE, CITRONELLOL, BENZYL ALCOHOL, PARFUM
 
 ### Garnier Fructis – Keratin Sleek Maske, 370 ml (Rossmann 179679 = dm 3042310)
@@ -88,7 +88,7 @@ Aqua (Water), Glycerin, Cetearyl Alcohol, Dimethicone, Cocos Nucifera (Coconut) 
 ### SheaMoisture – Coconut & Hibiscus Curl Enhancing Smoothie, 326 ml (Rossmann) – Bild: notizen/masken-bilder/sheamoisture-coconut-hibiscus-curl-smoothie.png
 INCI fehlt noch (nur Vorderseite geschickt). Hinweis: Das ist eigentlich eine Styling-/Leave-in-Creme, keine Maske – mit Laura klären.
 
-### Pantene Pro-V – Miracles Deep Hydration Intensive Haarmaske, 300 ml (Rossmann 153919)
+### Pantene Pro-V – Miracles Deep Hydration Intensive Haarmaske, 300 ml (Rossmann 153919) – Bild: notizen/masken-bilder/pantene-miracles-deep-hydration.jpg
 Aqua, Cetyl Alcohol, Bis-Aminopropyl Dimethicone, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Glycerin, Glutamic Acid, Parfum, Benzyl Alcohol, Sodium Benzoate, Citric Acid, Behentrimonium Methosulfate, Hexyl Cinnamal, Disodium EDTA, Polysorbate 20, Limonene, Panthenol, Panthenyl Ethyl Ether, Linalool, Benzyl Salicylate, Isopropyl Alcohol, Histidine, Hydroxycitronellal, CI 77492, Biotin, Methicone
 
 ### MONDAY Haircare – Deep Moisture Intensive Feuchtigkeit Haarmaske, 250 ml (Rossmann) – Bild: notizen/masken-bilder/monday-deep-moisture.png
