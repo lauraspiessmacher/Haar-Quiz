@@ -43,7 +43,13 @@ Aqua, Cetyl Alcohol, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Bis-Aminop
 ### ISANA Professional – Haarmaske Intensiv & Pflege, 250 ml (Art.-Nr. 040879)
 Aqua, Cetearyl Alcohol, Dicaprylyl Ether, Coco-Caprylate, Behentrimonium Chloride, Aloe Barbadensis Leaf Juice, Prunus Amygdalus Dulcis Oil, Panthenol, Glycerin, Butylene Glycol, Oryza Sativa Bran Oil, Nelumbo Nucifera Flower Extract, Oryza Sativa Extract, Stearamidopropyl Dimethylamine, Tocopherol, Isopropyl Alcohol, Citric Acid, Parfum, Benzyl Alcohol, Linalool, Benzyl Salicylate, Sorbic Acid, Sodium Benzoate, Potassium Sorbate
 
-### ISANA Professional – Haarmaske Locken Traum, 250 ml
-INCI fehlt noch (nur Vorderseite geschickt).
+### ISANA Professional – Haarmaske Locken Traum, 250 ml (Art.-Nr. 096111)
+AQUA, CETEARYL ALCOHOL, COCO-CAPRYLATE, BEHENTRIMONIUM CHLORIDE, TRITICUM VULGARE BRAN EXTRACT, TRITICUM VULGARE GERM EXTRACT, TRITICUM VULGARE GERM OIL, CAMELLIA OLEIFERA SEED OIL, GLYCERIN, PANTHENOL, STEARAMIDOPROPYL DIMETHYLAMINE, COCOS NUCIFERA OIL, BUTYROSPERMUM PARKII BUTTER, LINOLEIC ACID, ISOPROPYL ALCOHOL, LAURYL ALCOHOL, DICAPRYLYL ETHER, CETEARYL NONANOATE, CAPRYLIC/CAPRIC TRIGLYCERIDE, QUARTZ POWDER, XANTHAN GUM, LACTIC ACID, CITRIC ACID, PARFUM, LINALOOL, HEXYL CINNAMAL, LIMONENE, BENZYL ALCOHOL, TOCOPHEROL, TOCOPHERYL ACETATE, POTASSIUM SORBATE, SODIUM BENZOATE
+
+### Gliss – Oil Nutritive Nährpflege 4-in-1 Bonding Haarmaske, 400 ml (Art.-Nr. 153982)
+Aqua (Water, Eau), Cetearyl Alcohol, Distearoylethyl Hydroxyethylmonium Methosulfate, Glycerin, Isopropyl Myristate, Behenamidopropyl Dimethylamine, Hydroxypropylgluconamide, Hydroxypropylammonium Gluconate, Sclerocarya Birrea Seed Oil, Behentrimonium Chloride, Parfum (Fragrance), Amodimethicone, Butyrospermum Parkii (Shea) Butter, Lactic Acid, Isopropyl Alcohol, Ceteareth-20, Sodium Benzoate, Prunus Armeniaca (Apricot) Kernel Oil, Trideceth-10, Linalool, Limonene, Phenoxyethanol, Alpha-Isomethyl Ionone, Geraniol, Benzyl Alcohol, Potassium Sorbate
+
+### Pantene Pro-V – Grow Abundant Anti-Haarverlust Haarmaske, 300 ml (Art.-Nr. 210077)
+Aqua, Cetyl Alcohol, Stearamidopropyl Dimethylamine, Stearyl Alcohol, Bis-Aminopropyl Dimethicone, Glutamic Acid, Benzyl Alcohol, Sodium Benzoate, Parfum, Citric Acid, Behentrimonium Methosulfate, Disodium EDTA, Polysorbate 20, Panthenol, Panthenyl Ethyl Ether, Isopropyl Alcohol, Histidine, Linalool, CI 77491, Hexyl Cinnamal, Silica, Biotin
 
 ## High-End
