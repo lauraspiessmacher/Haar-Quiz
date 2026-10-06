@@ -230,3 +230,38 @@ Laut Olaplex nicht mehr im Sortiment (US-Shop Sept. 2026), Hagel hat sie nicht. 
 - Kérastase – Première Maske im Tiegel (= Masque Filler Réparateur, schon drin)
 - Kérastase – Première Concentré Décalcifiant → aufnehmen, Hinweis: Pre-Shampoo-Treatment
 
+### Inhaltsstoffe Runde 3
+
+#### Kérastase Gloss Absolu Masque Crème Hydra Glaze 200 ml
+Aqua / Water / Eau, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, Isopropyl Myristate, Cetyl Esters, Amodimethicone, Phenoxyethanol, Isopropyl Alcohol, Carvone, Limonene, Glycolic Acid, Citrus Limon Peel Oil, Sodium Hyaluronate, Caprylic/Capric Triglyceride, Coco-Betaine, Citrus Aurantium Peel Oil, Linalyl Acetate, Linalool, Tetramethyl Acetyloctahydronaphthalenes, Sodium Hydroxide, Pinene, Citronellol, Sodium Chloride, Hexyl Cinnamal, Rosa Canina Flower Extract, Citric Acid, Ci 19140 / Yellow 5, Ci 14700 / Red 4, Parfum / Fragrance
+
+#### Kérastase Genesis Haarmaske Reconstituant 200 ml
+Aqua / Water / Eau, Cetearyl Alcohol, Amodimethicone, Behentrimonium Chloride, Cetyl Esters, Isopropyl Alcohol, Trideceth-6, Phenoxyethanol, Limonene, Cetrimonium Chloride, Linalool, Chlorhexidine Dihydrochloride, Benzyl Salicylate, Coumarin, Glycerin, Zingiber Officinale Root Extract / Ginger Root Extract, Citral, Benzyl Alcohol, Citronellol, Xylitylglucoside, Anhydroxylitol, Leontopodium Alpinum Callus Culture Extract, Xylitol, Citric Acid, Xanthan Gum, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Parfum / Fragrance
+
+#### Kérastase Nutritive Masquintense 200 ml
+Aqua / Water / Eau, Cetearyl Alcohol, Dimethicone, Glycerin, Behentrimonium Chloride, Amodimethicone, Cetrimonium Chloride, Phenoxyethanol, Isopropyl Alcohol, Sodium Laureth Sulfate , Niacinamide, Lactic Acid, Butylene Glycol, Linalool, Benzyl Alcohol, Hydroxycitronellal, Hexyl Cinnamal, Citronellol, Coumarin, Alpha-Isomethyl Ionone, Geraniol, Hydrolyzed Wheat Protein, Hydrolyzed Corn Protein, Hydrolyzed Soy Protein, Iris Florentina Root Extract, Parfum / Fragrance. N70018348/1
+
+#### Redken All Soft Heavy Cream 250 ml
+Aqua/Water/Eau, Cetearyl Alcohol, Behentrimonium Chloride, Amodimethicone, Glycerin, Octyldodecanol, Isopropyl Alcohol, Phenoxyethanol, Caprylyl Glycol, Parfum/Fragrance, Sodium PCA, Benzoic Acid, Trideceth-6, Cetrimonium Chloride, Citric Acid, Argania Spinosa Kernel Oil, Arginine, Hydrolyzed Soy Protein, … (Quelle: incidecoder/Websuche)
+
+#### Redken Acidic Color Gloss Mask 250 ml
+1400544RK12 - INGREDIENTS: AQUA / WATER • GLYCERIN • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • ACETUM / VINEGAR • PARFUM / FRAGRANCE • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • CETYL ESTERS • HYDROXYPROPYL GUAR • CITRIC ACID • GLYCERYL STEARATE • TARTARIC ACID • CARVONE • LIMONENE • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • CITRUS AURANTIUM PEEL OIL • LINALOOL • BENZYL SALICYLATE • LINALYL ACETATE • BENZYL ALCOHOL • ALPHA-ISOMETHYL IONONE • PINENE • LACTIC ACID • ROSE KETONES • JUNIPERUS VIRGINIANA OIL (F.I.L. Z70068930/1).
+
+#### amika: Hydro Rush Intense Moisture Hair Mask 250 ml
+Water/Eau/Aqua, Cetearyl Alcohol, Cetyl Alcohol, Glycerin, Isopropyl Myristate, Behentrimonium Chloride*, Myristyl Alcohol, Polyester-37, Ethyl Macadamiate, Hyaluronic Acid, Polyglutamic Acid, Squalane, Butyrospermum Parkii (Shea/Karite) Butter, Brassica Campestris (Rapeseed/Colza) Seed Oil, Cocos Nucifera (Coconut/Nuix de Coco) Oil, Hippophae Rhamnoides (Sea Buckthorn/Argousier) Fruit/Seed Oil, Sesamum Indicum (Sesame/Sésame) Seed Oil, Spirulina Platensis (Blue Green Algae /Algues Bleu-Verte) Extract, Cocos Nucifera (Coconut/Nuix de Coco) Water, Emblica Officinalis (Gooseberry/Groseille à Maquereau) Fruit Extract, Curcuma Longa (Turmeric) Root Extract, Isododecane, Cetrimonium Chloride*, Ethylhexylglycerin, Ethyl Canolate, Neopentyl Glycol Diheptanoate, Lauryl Alcohol, Panthenol, Tocopheryl Acetate, Tocopherol, Leuconostoc/Radish Root Ferment Filtrate, Guar Hydroxypropyltrimonium Chloride, Propanediol, Potassium Sorbate, Sodium Benzoate, Isopropyl Alcohol, Malic Acid, Citric Acid, Phenoxyethanol, Fragrance/Parfum, Hydroxycitronellal, Benzyl Benzoate, Limonene *antistatic agent/agent antistatique
+
+#### COLOR WOW Money Masque 215 ml
+Aqua (Water), Stearyl Alcohol, Cetyl Alcohol, Dimethicone, Stearamidopropyl Dimethylamine, Butylene Glycol, Dicetyldimonium Chloride, Behentrimonium Chloride, Propanediol, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Citric Acid, Chlorella Pyrenoidosa Extract, Chondrus Crispus (Carrageenan) Extract, Undaria Pinnatifida Extract, Laminaria Saccharina Extract, Ceteareth-20, Dimethiconol, Phenoxyethanol, PPG-26-Buteth-26, Apigenin, Oleanolic Acid, Biotinoyl Tripeptide-1, Crambe Maritima (Blue Sea Kale) Leaf Extract, Fragrance, Chlorphenesin, PEG-40 Hydrogenated Castor Oil, Caprylyl Glycol, Propylene Glycol, Potassium Benzoate, Potassium Sorbate, Disodium EDTA, Benzyl Salicylate, Alpha-isomethyl ionone, CI 42090, CI 60730 FORMULA #205-1
+
+#### Maria Nila True Soft Masque 250 ml
+Aqua, Cetearyl Alcohol, Polyglyceryl-3 Polyricinoleate, Butyrospermum Parkii (Shea) Butter, Stearamidopropyl Dimethylamine, Glycerin, Cetrimonium Chloride, Argania Spinosa Kernel Oil, Helianthus Annuus Seed Oil, Phyllostachys Nigra Leaf Extract, Moringa Oleifera Seed Oil, Sodium PCA, Amodimethicone/Morpholinomethyl Silsesquioxane Copolymer, Behentrimonium Chloride, Dimethicone, Dimethiconol, Trideceth-5, Propanediol, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Quaternium-95, Lactic Acid, Ethylhexylglycerin, Alpha-Isomethyl Ionone, Phenoxyethanol, Parfum (Quelle: incidecoder/Websuche)
+
+#### K18 Leave-In Molecular Repair Hair Mask 50 ml
+Water (Aqua) (Eau), Alcohol Denat., Propylene Glycol, Cetearyl Alcohol, Dicaprylyl Ether, Cetyl Esters, Behentrimonium Chloride, Polysorbate 20, sh-Oligopeptide-78, Hydrolyzed Wheat Protein, Hydrolyzed Wheat Starch, Isopropyl Alcohol, Tocopherol, Phenoxyethanol, Potassium Sorbate, Citric Acid, Fragrance (Parfum), Geraniol, Linalool, Hexyl Cinnamal, Benzyl Alcohol.
+
+#### Kérastase PREMIÈRE Pre-Shampoo Concentré Décalcifiant 250 ml
+AQUA / WATER / EAU • GLYCERIN • PROPYLENE GLYCOL • GLYCINE • CITRIC ACID • PEG-40 HYDROGENATED CASTOR OIL • SODIUM HYDROXIDE • PARFUM / FRAGRANCE • CETRIMONIUM CHLORIDE • POLYSORBATE 20 • POLYSORBATE 80 • PHENOXYETHANOL • HYDROLYZED VEGETABLE PROTEIN PG-PROPYL SILANETRIOL • HYDROXYPROPYL GUAR • HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • QUATERNIUM-80 • LIMONENE • LINALOOL • SODIUM BENZOATE • CITRAL • POTASSIUM SORBATE (F.I.L. N70030006/1)
+
+#### Olaplex No.8 Bond Intense Moisture Mask 100 ml
+Water, Dimethicone, Cetyl Alcohol, Persea Gratissima (Avocado) Oil, Glycerin, Stearyl Alcohol, Ethylhexyl Olivate, Behentrimonium Chloride, Cetrimonium Bromide, Limnanthes Alba Seed Oil, Oryza Sativa Bran Oil, Quaternium-80, Rosa Canina Seed Extract, Ceramide AP, Ceramide NP, Hydrolyzed Jojoba Esters, Sodium Hyaluronate, Sodium PCA, Bis-Aminopropyl Diglycol Dimaleate, Arginine, Cannabis Sativa Seed Oil, Jojoba Esters, Panthenol, Squalane, Carthamus Tinctorius Seed Oil, Glycine, Alanine, Serine, Valine, Isoleucine, Proline, Threonine, Guar Hydroxypropyltrimonium Chloride, Histidine, Hydroxyethylcellulose, Phenylalanine, Aspartic Acid, PCA, Phosphatidylcholine, Citric Acid, Sodium Lactate, Ethylhexylglycerin, Sodium Benzoate, Phenoxyethanol, Bis-Cetearyl Amodimethicone, Parfum, Citral, Hexyl Cinnamal, Limonene (Quelle: incidecoder/Websuche)
+
