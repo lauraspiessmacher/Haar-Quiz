@@ -118,4 +118,4 @@ Aqua, Glycerin, Maris Sal (Dead Sea Salt), Panthenol, Sodium PCA, Arginine, Alla
 #### INCI mit Milchsäure + Gluconolacton (PHA) – vermutlich ISANA Professional Kopfhaut-Peeling Tiefenreinigung (parfümfrei passt, Peeling-Säuren passen) → bei Laura bestätigen
 Aqua, Sorbitol, Propylene Glycol, Glycerin, Lactic Acid, Gluconolactone, Panthenol, Xanthan Gum, Sodium Hydroxide, Citric Acid, Sodium Benzoate, Potassium Sorbate.
 => Damit ist das Erbsenpeptid-INCI (oben) vermutlich OGX ProGrowth + Peptide Scalp Serum (Peptid + Koffein passen zum Namen) → bestätigen.
-Laura hat außerdem head&shoulders Density Booster (Karton) und L'Oréal Fiber Booster nochmal als Rossmann-Bild geschickt – beide schon von dm vorhanden.
+Laura: L'Oréal Fiber Booster Serum kommt rein; head&shoulders Density Booster MIT Karton als Bild (dm-Kartonbild hsd_0 nehmen).
