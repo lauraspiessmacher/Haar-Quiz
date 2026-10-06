@@ -28,6 +28,12 @@
 - Keine Fachwörter wie „Ester“ (stattdessen „leichter Ölersatz“).
 - Laura ist keine Technikerin: Antworten auf Deutsch, einfach, ohne Fachbegriffe.
 
+## Hitzeschutz im Leave-in-Guide
+- `HEAT` = Gradzahl laut Hersteller (dm-Produktseite, Müller, Hagel, Lookfantastic, Marken-Shops). Nur mit Gradzahl wird das Feld angezeigt.
+- Hitzeschutz ohne Gradzahl (deshalb ohne Feld): Pantene Wunder Haarcreme, Herbal Essences Blütensanft Spray, Bali Curls Leave-In Cream N°3, Oribe Priming Lotion.
+- Wella Miracle Hair Rescue und Night Serum: laut Wella kein Hitzeschutz.
+- Beschreibungen positiv formulieren: „pflegt leicht“ statt „kaum Pflegestoffe“.
+
 ## Bildquellen (was funktioniert)
 - dm: Suche `product-search.services.dmtech.com/de/search/crawl?query=…`, Bilder von `products.dm-static.com` als PNG mit `f_png,c_fit,h_1000,w_1000` – schon freigestellt. Erstes Bild prüfen (L'Oréal hat oft einen Kreis dahinter → zweites Bild).
 - High-End: Lookfantastic, Hagel-Shop (hagel-shop.de, sehr saubere Packshots), Marken-Shops (Shopify: `/products/<handle>.js`), Breuninger, Vichy.de, Shop-Apotheke.
