@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haarpflege-Finder</title>
+<style>
+:root{
+  --bg:#F3ECE2;
+  --card:#EBE2D6;
+  --ink:#382F2E;
+  --muted:#6E615C;
+  --taupe:#9E8C80;
+  --rose:#C9A49A;
+  --line:rgba(56,47,46,.22);
+  --line-soft:rgba(56,47,46,.12);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Noto Serif",Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#F3ECE2; --ink:#382F2E; } }
+:root[data-theme="dark"]{ --bg:#F3ECE2; --ink:#382F2E; }
+*,*::before,*::after{box-sizing:inherit}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:22px 16px 120px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.15}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--taupe);outline-offset:3px}
+
+.preview{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px dashed var(--taupe);border-radius:999px;display:inline-block;padding:3px 12px;margin-bottom:12px}
+h1{font-size:clamp(34px,9vw,48px);margin-bottom:6px}
+.lead{color:var(--muted);font-size:15px;max-width:52ch;margin:0 0 18px}
+
+/* Umschalter Ansicht A / B */
+.variant{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.variant button{background:transparent;border:1px solid var(--line);border-radius:14px;padding:10px 12px;text-align:left;cursor:pointer}
+.variant button b{display:block;font-weight:600;font-size:15px}
+.variant button span{font-size:13px;color:var(--muted)}
+.variant button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.variant button[aria-pressed="true"] span{color:#D8CCC4}
+
+.bar{position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:3;border-bottom:1px solid var(--line-soft)}
+.search{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff8;border:1px solid var(--line);border-radius:999px;padding:11px 18px}
+.search::placeholder{color:var(--muted)}
+
+.filters{padding:14px 0 4px}
+.frow{margin-bottom:12px}
+.flabel{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.flabel small{text-transform:none;letter-spacing:0;font-size:12.5px}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chips.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips.scroll::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:999px;padding:6px 13px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.soon{border-style:dashed;color:var(--muted)}
+.chip .n{opacity:.6;margin-left:4px;font-size:12.5px}
+
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);margin-top:10px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;background:transparent;border:0;border-bottom:2px solid transparent;padding:10px 12px 9px;cursor:pointer;font-size:15px;color:var(--muted)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
+.tab.soon{font-style:italic}
+
+.summary{font-family:var(--serif);font-size:21px;margin:18px 0 2px}
+.summary-sub{font-size:14px;color:var(--muted);margin-bottom:6px}
+
+section.block{margin-top:22px;border:1px solid var(--line-soft);border-radius:16px;padding:14px 14px 6px;background:#fff3}
+.bhead{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.step{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;display:grid;place-items:center;transform:translateY(-2px)}
+.bhead h2{font-size:23px}
+.bhead .count{font-size:13.5px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.bwhy{font-size:13.5px;color:var(--muted);margin:0 0 6px 34px}
+.sub{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 2px}
+.soonbox{font-size:14.5px;color:var(--muted);border:1px dashed var(--taupe);border-radius:12px;padding:12px 14px;margin:6px 0 10px}
+
+ul.list{list-style:none;margin:0;padding:0}
+ul.list > li{border-top:1px solid var(--line-soft)}
+.row{display:flex;gap:12px;align-items:center;padding:10px 0;cursor:pointer;width:100%;background:none;border:0;text-align:left}
+.pic{flex:0 0 auto;width:40px;height:62px;object-fit:contain}
+.txt{flex:1;min-width:0}
+.brand{font-size:12.5px;color:var(--muted)}
+.name{font-family:var(--serif);font-size:17.5px;line-height:1.25}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.tag{font-size:11.5px;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted);white-space:nowrap}
+.tag.type{background:var(--card);border-color:transparent;color:var(--ink)}
+.tag.hi{border-color:var(--ink);color:var(--ink)}
+.tag.rep{background:var(--rose);border-color:transparent;color:var(--ink)}
+.add{flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:19px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.add[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.detail{display:none;padding:0 0 12px 52px;font-size:14px}
+li.open .detail{display:block}
+.detail .note{color:var(--muted)}
+.detail .hair{color:var(--muted);margin-top:2px}
+.detail .hair b{color:var(--ink);font-weight:500}
+.detail .tip{background:var(--card);border-radius:10px;padding:6px 10px;margin-top:6px}
+.detail .tip b,.detail .repbox b{font-weight:500}
+.detail .repbox{border:1px solid var(--line);border-radius:10px;padding:6px 10px;margin-top:6px}
+.detail .repbox ul{margin:2px 0 0;padding-left:18px}
+.more{background:none;border:0;color:var(--ink);text-decoration:underline;text-underline-offset:3px;font-size:14px;padding:8px 0 10px;cursor:pointer}
+.empty{color:var(--muted);font-size:14.5px;padding:10px 0}
+
+/* Empfehlungs-Leiste */
+.tray{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--ink);color:var(--bg);transform:translateY(110%);transition:transform .2s}
+.tray.show{transform:none}
+.tray-in{max-width:720px;margin:0 auto;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center}
+.tray-txt{flex:1;min-width:0;font-size:14px}
+.tray-txt div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#D8CCC4;font-size:12.5px}
+.tray button{background:var(--bg);color:var(--ink);border:0;border-radius:999px;padding:8px 14px;font-size:14px;cursor:pointer;white-space:nowrap}
+.tray button.ghost{background:transparent;color:var(--bg);border:1px solid #fff6}
+
+.ideas{margin-top:34px;font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+.ideas h3{font-size:20px;color:var(--ink);margin-bottom:6px}
+.ideas li{margin-bottom:6px}
+
+.found{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:13px;color:var(--muted)}
+.found .tag{font-size:12.5px;padding:2px 10px}
+.hint{font-size:13.5px;color:var(--muted);margin:8px 2px 0}
+.hint button{background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:3px;color:var(--ink);cursor:pointer;font-size:13.5px}
+.cat-desc{color:var(--muted);font-size:15px;margin:4px 0 12px;max-width:52ch}
+ul.full{list-style:none;margin:0;padding:0}
+.summary .count,h3.lh .count{font-family:var(--sans);font-size:14px;color:var(--muted);margin-left:6px}
+ul.full > li{border-top:1px solid var(--line-soft);padding:12px 0;display:flex;gap:12px;align-items:flex-start}
+ul.full .pic{width:48px;height:84px}
+ul.full .note,ul.full .hair{font-size:14px;color:var(--muted);margin-top:2px}
+ul.full .hair b{color:var(--ink);font-weight:500}
+ul.full .tip{font-size:13.5px;background:var(--card);border-radius:10px;padding:6px 10px;margin-top:6px}
+ul.full .repbox{font-size:13.5px;border:1px solid var(--line);border-radius:10px;padding:6px 10px;margin-top:6px}
+ul.full .repbox ul{margin:2px 0 0;padding-left:18px}
+ul.full .tip b,ul.full .repbox b{font-weight:500}
+.also{display:inline-block;font-size:13px;border:1px solid var(--ink);border-radius:999px;padding:1px 9px;margin-top:6px}
+h3.lh{font-family:var(--serif);font-size:20px;margin:18px 0 4px}
+ul.plain{margin:0 0 6px;padding-left:18px;font-size:14.5px}
+.copy{font-size:13px;background:transparent;border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer;margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="preview">Vorschau · noch nicht fertig</div>
+  <h1>Haarpflege-Finder</h1>
+  <p class="lead">Alle Guides in einem Tool: Shampoo, Conditioner, Maske, Leave-in und Kopfhaut. Zum schnellen Nachschlagen in der 1:1-Beratung. Oben kannst du zwischen zwei Aufbau-Ideen wechseln.</p>
+
+  <div class="variant" role="group" aria-label="Ansicht wählen">
+    <button type="button" data-v="A" aria-pressed="true"><b>Ansicht A: Beratung</b><span>Eintippen, z. B. „feine Haare fettige Kopfhaut“</span></button>
+    <button type="button" data-v="B" aria-pressed="false"><b>Ansicht B: Nach Produkt</b><span>Wie die Guides, nur alle zusammen</span></button>
+  </div>
+
+  <div class="bar">
+    <input class="search" id="q" type="search" placeholder="z. B. feine Haare fettige Kopfhaut" aria-label="In allen Produkten suchen">
+    <div id="tabsB"></div>
+  </div>
+
+  <div id="filters" class="filters"></div>
+  <div id="out"></div>
+
+  <div class="ideas">
+    <h3>Was du hier ausprobieren kannst</h3>
+    <ul>
+      <li><b>Ansicht A:</b> Tipp in die Suche zum Beispiel „feine Haare“, „dicke Haare kaputt“ oder „dünne Haare Schuppen“. Darunter siehst du, was erkannt wurde, und alle passenden Produkte in der Reihenfolge der Routine. Du kannst auch nur eine Marke eintippen oder beides kombinieren, z. B. „feine Haare Olaplex“.</li>
+      <li>Statt zu tippen, kannst du auch die Kürzel unter der Suche antippen.</li>
+      <li><b>Ansicht B:</b> oben die Produktart, darunter die Reiter wie im jeweiligen Guide, mit „Alle“ und „Liste“. Die Suche filtert dort nur nach Marke und Name, wie in den Guides jetzt.</li>
+      <li>Mit <b>+</b> sammelst du Produkte für die Empfehlung und kopierst sie unten als Text.</li>
+      <li>Conditioner und Kopfhautpflege sind als Platz eingeplant und kommen später dazu.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="tray" id="tray" aria-live="polite">
+  <div class="tray-in">
+    <div class="tray-txt"><b id="trayN">0 Produkte</b><div id="trayList"></div></div>
+    <button type="button" class="ghost" id="trayClear">Leeren</button>
+    <button type="button" id="trayCopy">Text kopieren</button>
+  </div>
+</div>
+
+<script>
+const DATA = __DATA__;
+
+const TYPES = [
+  {id:"shampoo", label:"Shampoo"},
+  {id:"conditioner", label:"Conditioner", soon:true},
+  {id:"maske", label:"Maske"},
+  {id:"leavein", label:"Leave-in"},
+  {id:"kopfhaut", label:"Kopfhautpflege", soon:true}
+];
+const TYPE_LABEL = {shampoo:"Shampoo", maske:"Maske", leavein:"Leave-in"};
+const ORDER = ["fein","duenn","normal","dick","sehrdick"];
+const DICKE_LABEL = {fein:"Feines Haar", duenn:"Dünnes Haar", normal:"Normales Haar", dick:"Dickes Haar", sehrdick:"Sehr dickes Haar"};
+const DICKE_DAT = {fein:"feinem", duenn:"dünnem", normal:"normalem", dick:"dickem", sehrdick:"sehr dickem"};
+const DICKE_Q = {fein:"feine Haare", duenn:"dünne Haare", normal:"normale Haare", dick:"dicke Haare", sehrdick:"sehr dicke Haare"};
+const KOPF_LABEL = {normal:"Normale Kopfhaut", trocken:"Trockene Kopfhaut", kraeftig:"Fettende Kopfhaut", sensibel:"Sensible Kopfhaut", juckreiz:"Juckreiz", schuppen:"Schuppen"};
+const KOPF_Q = {normal:"normale Kopfhaut", trocken:"trockene Kopfhaut", kraeftig:"fettige Kopfhaut", sensibel:"sensible Kopfhaut", juckreiz:"Juckreiz", schuppen:"Schuppen"};
+
+const ALL = [];
+for (const t of ["shampoo","maske","leavein"]) DATA[t].items.forEach((p, i) => { p.type = t; p.key = t + i; ALL.push(p); });
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const plain = s => String(s).toLowerCase().replace(/ß/g, "ss").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’'`´]/g, "");
+const flat = s => plain(s).replace(/[^a-z0-9]/g, "");
+const byName = (a, b) => (a.b + a.n).localeCompare(b.b + b.n, "de");
+
+/* ---------- Suchtext verstehen ---------- */
+const FILL = new Set(["haar","haare","haaren","und","mit","bei","fur","die","der","das","eher","sehr","kopfhaut"]);
+function parse(q) {
+  let t = " " + plain(q).replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ") + " ";
+  const r = {dicke:null, kopf:null, kaputt:false, words:[]};
+  const take = (re, fn) => { if (re.test(t)) { fn(); t = t.replace(re, " "); } };
+  /* Kopfhaut zuerst, damit „normale/trockene Kopfhaut“ nicht als Haar zählt */
+  take(/ (normal\w*) kopfhaut /, () => r.kopf = "normal");
+  take(/ (trocken\w*) kopfhaut /, () => r.kopf = "trocken");
+  take(/ (fettig\w*|fettend\w*|olig\w*|fett) /, () => r.kopf = "kraeftig");
+  take(/ (sensib\w*|empfindlich\w*|gereizt\w*) /, () => r.kopf = "sensibel");
+  take(/ (juck\w*) /, () => r.kopf = "juckreiz");
+  take(/ (schupp\w*) /, () => r.kopf = "schuppen");
+  take(/ sehr dick\w* /, () => r.dicke = "sehrdick");
+  take(/ (fein\w*|feenhaar\w*) /, () => r.dicke = "fein");
+  take(/ (dunn\w*|duenn\w*) /, () => r.dicke = "duenn");
+  take(/ (dick\w*) /, () => r.dicke = "dick");
+  take(/ (normal\w*) (haar\w*|$)/, () => r.dicke = "normal");
+  take(/ (normal\w*) /, () => r.dicke = r.dicke || "normal");
+  take(/ (trocken\w*) /, () => r.kopf = r.kopf || "trocken");
+  take(/ (kaputt\w*|strapaziert\w*|geschadigt\w*|bruch\w*|haarbruch\w*|blondiert\w*|gebleicht\w*|repair|spliss\w*) /, () => r.kaputt = true);
+  r.words = t.trim().split(" ").filter(w => w && !FILL.has(w)).map(flat).filter(Boolean);
+  return r;
+}
+function buildQ(r) {
+  return [r.dicke && DICKE_Q[r.dicke], r.kopf && KOPF_Q[r.kopf], r.kaputt && "kaputt"].filter(Boolean).concat(r.raw || []).join(" ");
+}
+
+/* Haardicken-Angabe beim Shampoo ("fein bis normal", "alle") in Stufen umrechnen */
+function stufen(txt) {
+  const t = plain(txt).replace(/dunn/g, "duenn").replace(/sehr dick/g, "sehrdick");
+  if (/alle/.test(t)) return ORDER;
+  const found = ORDER.filter(o => new RegExp("\\b" + o + "\\b").test(t));
+  if (/\bbis\b/.test(t) && found.length >= 2) {
+    const a = ORDER.indexOf(found[0]), b = ORDER.indexOf(found[found.length - 1]);
+    return ORDER.slice(Math.min(a, b), Math.max(a, b) + 1);
+  }
+  return found;
+}
+const shampooFits = (p, d) => stufen(Array.isArray(p.h) ? (p.h[0] || "") : (p.h || "")).includes(d);
+
+const S = {v:"A", q:"", seg:"alle", tab:"shampoo", catB:"alle", open:new Set(), pick:[], more:new Set()};
+const segOk = p => S.seg === "alle" || p.s === S.seg;
+const textOk = (p, words) => words.every(w => flat(p.b + " " + p.n).includes(w));
+
+/* ---------- Bausteine ---------- */
+function hairInfo(p) {
+  const h = p.h;
+  if (!h || (Array.isArray(h) && !h[0] && !h[1])) return "";
+  if (typeof h === "string") return `<div class="hair"><b>Für dein Haar:</b> ${esc(h)}</div>`;
+  if (h[0] === "alle" && h[1] === "alle") return `<div class="hair"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div>`;
+  return (h[0] ? `<div class="hair"><b>Haardicke:</b> ${esc(h[0])}</div>` : "") + (h[1] ? `<div class="hair"><b>Haarzustand:</b> ${esc(h[1])}</div>` : "");
+}
+function repInfo(p) {
+  if (!p.r) return "";
+  const list = Array.isArray(p.r) ? p.r : p.r.list, art = Array.isArray(p.r) ? "" : p.r.art;
+  return `<div class="repbox"><b>Repair-Wirkstoffe</b>${art ? `<div>${esc(art)}</div>` : ""}<ul>${list.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>`;
+}
+const catLabels = p => p.c.map(c => (DATA[p.type].cats.find(x => x.id === c) || {}).label).filter(Boolean).join(", ");
+function tagsHtml(p, opts) {
+  const tags = [];
+  if (opts.showType) tags.push(`<span class="tag type">${TYPE_LABEL[p.type]}</span>`);
+  tags.push(`<span class="tag">${esc(p.s)}</span>`);
+  if (opts.hi) tags.push(`<span class="tag hi">${esc(opts.hi)}</span>`);
+  if (p.c.includes("kaputt") && p.type !== "shampoo") tags.push(`<span class="tag rep">Repair</span>`);
+  if (p.he) tags.push(`<span class="tag">Hitzeschutz ${p.he} °C</span>`);
+  return `<div class="meta">${tags.join("")}</div>`;
+}
+const addBtn = p => { const on = S.pick.includes(p.key); return `<button type="button" class="add" data-pick="${p.key}" aria-pressed="${on}" aria-label="Zur Empfehlung">${on ? "✓" : "+"}</button>`; };
+const detailHtml = p => `<div class="note">${esc(p.no)}</div>${hairInfo(p)}${p.t ? `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.t)}</div>` : ""}${repInfo(p)}${p.si && p.si.length ? `<div class="hair"><b>Silikone:</b> ${esc(p.si.join(", "))}</div>` : ""}`;
+
+/* kompakte Zeile zum Aufklappen (Ansicht A) */
+function item(p, opts = {}) {
+  const open = S.open.has(p.key);
+  return `<li class="${open ? "open" : ""}">
+    <div style="display:flex;align-items:center;gap:8px">
+      <button type="button" class="row" data-open="${p.key}" aria-expanded="${open}">
+        ${p.i ? `<img class="pic" src="${p.i}" alt="" loading="lazy">` : `<span class="pic"></span>`}
+        <span class="txt"><div class="brand">${esc(p.b)}</div><div class="name">${esc(p.n)}</div>${tagsHtml(p, opts)}</span>
+      </button>${addBtn(p)}
+    </div>
+    <div class="detail">${detailHtml(p)}<div class="hair"><b>Steht bei:</b> ${esc(catLabels(p))}</div></div>
+  </li>`;
+}
+/* volle Karte wie in den Guides (Ansicht B) */
+function card(p) {
+  return `<li>${p.i ? `<img class="pic" src="${p.i}" alt="" loading="lazy">` : ""}
+    <div class="txt"><div class="brand">${esc(p.b)}</div><div class="name">${esc(p.n)}</div>${tagsHtml(p, {})}${detailHtml(p)}
+      <span class="also">Passt zu: ${esc(catLabels(p))}</span></div>${addBtn(p)}</li>`;
+}
+function list(id, items, opts = {}, limit = 4) {
+  if (!items.length) return `<div class="empty">Keine passenden Produkte.</div>`;
+  const all = S.more.has(id), shown = all ? items : items.slice(0, limit);
+  return `<ul class="list">${shown.map(p => item(p, typeof opts === "function" ? opts(p) : opts)).join("")}</ul>` +
+    (items.length > limit ? `<button type="button" class="more" data-more="${id}">${all ? "Weniger zeigen" : `Alle ${items.length} zeigen`}</button>` : "");
+}
+const SEGS = [{id:"alle", label:"Alle"}, {id:"Drogerie", label:"Drogerie"}, {id:"High-End", label:"High-End"}];
+const segRow = () => `<div class="chips">${SEGS.map(o => `<button type="button" class="chip" data-seg="${o.id}" aria-pressed="${S.seg === o.id}">${o.label}</button>`).join("")}</div>`;
+const block = (step, title, count, why, body) => `<section class="block"><div class="bhead">${step ? `<span class="step">${step}</span>` : ""}<h2>${title}</h2>${count != null ? `<span class="count">${count}</span>` : ""}</div>${why ? `<div class="bwhy">${why}</div>` : ""}${body}</section>`;
+
+/* ---------- Ansicht A: Suche wie ein Beratungs-Tool ---------- */
+function renderA() {
+  const r = parse(S.q);
+  const quick = (attr, obj, cur) => Object.entries(obj).map(([id, l]) => `<button type="button" class="chip" data-${attr}="${id}" aria-pressed="${cur === id}">${l}</button>`).join("");
+  document.getElementById("tabsB").innerHTML = "";
+  document.getElementById("filters").innerHTML = `
+    <div class="frow"><div class="flabel">Haardicke</div><div class="chips">${quick("dicke", {fein:"Fein", duenn:"Dünn", normal:"Normal", dick:"Dick", sehrdick:"Sehr dick"}, r.dicke)}</div></div>
+    <div class="frow"><div class="flabel">Kopfhaut</div><div class="chips">${quick("kopf", {normal:"Normal", trocken:"Trocken", kraeftig:"Fettend", sensibel:"Sensibel", juckreiz:"Juckreiz", schuppen:"Schuppen"}, r.kopf)}</div></div>
+    <div class="frow"><div class="flabel">Extra</div><div class="chips"><button type="button" class="chip" data-kaputt aria-pressed="${r.kaputt}">Kaputt</button>${segRow().replace(/^<div class="chips">|<\/div>$/g, "")}</div></div>`;
+
+  const found = [r.dicke && DICKE_LABEL[r.dicke], r.kopf && KOPF_LABEL[r.kopf], r.kaputt && "Kaputte Haare", r.words.length && "Name: „" + r.words.join(" ") + "“"].filter(Boolean);
+  let html = found.length
+    ? `<div class="found">Erkannt: ${found.map(f => `<span class="tag hi">${esc(f)}</span>`).join("")}</div>`
+    : `<div class="summary">Wonach suchst du?</div><div class="summary-sub">Tipp z. B. „feine Haare“, „dicke Haare kaputt“ oder „fettige Kopfhaut“ ein, oder tipp oben auf die Kürzel. Eine Marke geht auch.</div>`;
+  if (!found.length) { document.getElementById("out").innerHTML = html; return; }
+
+  const onlyText = !r.dicke && !r.kopf && !r.kaputt;
+  let step = 0;
+  for (const t of TYPES) {
+    step++;
+    if (t.soon) {
+      const need = t.id === "kopfhaut" && !r.kopf && !onlyText ? " Sie erscheint, wenn du auch die Kopfhaut eintippst." : "";
+      html += block(step, t.label, null, "", `<div class="soonbox">Kommt noch: Hier erscheinen die passenden ${t.id === "kopfhaut" ? "Kopfhautprodukte, sortiert nach Kopfhauttyp" : "Conditioner, sortiert nach Haardicke"}.${need}</div>`);
+      continue;
+    }
+    const base = DATA[t.id].items.filter(p => segOk(p) && textOk(p, r.words));
+    if (onlyText) {
+      if (base.length) html += block(step, t.label, base.length, "", list("A-" + t.id, base, {}, 6));
+      continue;
+    }
+    if (t.id === "shampoo") {
+      let fit = base;
+      if (r.kopf) fit = fit.filter(p => p.c.includes(r.kopf));
+      if (r.dicke && !r.kopf) fit = fit.filter(p => shampooFits(p, r.dicke) && !p.c.includes("kinder"));
+      if (r.dicke && r.kopf) fit = fit.filter(p => shampooFits(p, r.dicke)).concat(fit.filter(p => !shampooFits(p, r.dicke)));
+      const why = r.kopf ? (r.dicke ? `Nach Kopfhaut ausgewählt. Was auch zu ${DICKE_DAT[r.dicke]} Haar passt, steht oben.` : "Nach Kopfhaut ausgewählt.")
+        : r.dicke ? `Alle Shampoos, die laut Haardicken-Angabe zu ${DICKE_DAT[r.dicke]} Haar passen. Für eine genauere Auswahl die Kopfhaut dazuschreiben.` : "Shampoos haben keine Kategorie „kaputt“. Schreib Haardicke oder Kopfhaut dazu.";
+      if (!r.dicke && !r.kopf) { html += block(step, "Shampoo", null, why, ""); continue; }
+      html += block(step, "Shampoo", fit.length, why, list("A-sh", fit, p => ({hi: r.dicke && r.kopf && shampooFits(p, r.dicke) ? "passt zu " + DICKE_DAT[r.dicke] + " Haar" : ""})));
+    } else {
+      const fit = r.dicke ? base.filter(p => p.c.includes(r.dicke)) : [];
+      const rep = r.kaputt ? base.filter(p => p.c.includes("kaputt")) : [];
+      if (!r.dicke && !r.kaputt) { html += block(step, t.label, null, `${t.label === "Maske" ? "Masken" : "Leave-ins"} richten sich nach der Haardicke. Schreib sie dazu, z. B. „feine Haare“.`, ""); continue; }
+      let body = "";
+      if (r.kaputt) body += `<div class="sub">Repair für kaputte Haare</div>` + list("A-rep-" + t.id, rep, p => ({hi: r.dicke && p.c.includes(r.dicke) ? "passt zu " + DICKE_DAT[r.dicke] + " Haar" : ""}), 3);
+      if (r.dicke) body += (r.kaputt ? `<div class="sub">Passend zur Haardicke</div>` : "") + list("A-" + t.id, fit);
+      html += block(step, t.label, new Set(fit.concat(rep)).size, r.dicke ? "Nach Haardicke ausgewählt." : "", body);
+    }
+  }
+  document.getElementById("out").innerHTML = html;
+}
+
+/* ---------- Ansicht B: wie die einzelnen Guides ---------- */
+function renderB() {
+  document.getElementById("tabsB").innerHTML = `<div class="tabs" role="tablist">${TYPES.map(t =>
+    `<button type="button" role="tab" class="tab${t.soon ? " soon" : ""}" data-tab="${t.id}" aria-selected="${S.tab === t.id}">${t.label}</button>`).join("")}</div>`;
+  const t = TYPES.find(x => x.id === S.tab);
+  if (t.soon) {
+    document.getElementById("filters").innerHTML = "";
+    document.getElementById("out").innerHTML = `<div class="soonbox" style="margin-top:20px">Kommt noch: Hier steht später der ${t.label}-Guide, mit seinen eigenen Reitern, genau wie die anderen.</div>`;
+    return;
+  }
+  const words = plain(S.q).split(/\s+/).map(flat).filter(Boolean);
+  const cats = DATA[t.id].cats, items = DATA[t.id].items.filter(p => segOk(p) && textOk(p, words)).sort(byName);
+  const chips = [{id:"alle", label:"Alle"}].concat(cats).concat([{id:"liste", label:"Liste"}]);
+  document.getElementById("filters").innerHTML = `<div class="frow"><div class="chips scroll">${chips.map(c =>
+      `<button type="button" class="chip" data-catb="${c.id}" aria-pressed="${S.catB === c.id}">${esc(c.label)}</button>`).join("")}</div></div><div class="frow">${segRow()}</div>`;
+  let html;
+  if (S.catB === "liste") {
+    html = `<div class="summary">Liste</div><div class="cat-desc">Alle ${t.label === "Maske" ? "Masken" : t.label + "s"} pro Kategorie, nur mit Namen. Zum Kopieren auf „Liste kopieren“ tippen.</div>` +
+      cats.map(c => { const l = items.filter(p => p.c.includes(c.id)).map(p => `${p.b} – ${p.n}`); return l.length ?
+        `<h3 class="lh">${esc(c.label)} <span class="count">${l.length}</span></h3><button type="button" class="copy" data-text="${esc(c.label + "\n" + l.join("\n"))}">Liste kopieren</button><ul class="plain">${l.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""; }).join("");
+  } else {
+    const c = cats.find(x => x.id === S.catB);
+    const fit = c ? items.filter(p => p.c.includes(c.id)) : items;
+    html = `<div class="summary">${c ? esc(c.label) : "Alle " + (t.label === "Maske" ? "Masken" : t.label + "s")} <span class="count">${fit.length}</span></div>
+      ${c ? `<div class="cat-desc">${esc(c.desc)}</div>` : ""}<ul class="full">${fit.map(card).join("")}</ul>`;
+  }
+  document.getElementById("out").innerHTML = html;
+}
+
+function render() {
+  document.querySelectorAll(".variant button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === S.v));
+  document.getElementById("q").placeholder = S.v === "A" ? "z. B. feine Haare fettige Kopfhaut" : "Marke oder Produkt suchen";
+  S.v === "A" ? renderA() : renderB();
+  renderTray();
+}
+
+function renderTray() {
+  const picked = S.pick.map(k => ALL.find(p => p.key === k));
+  document.getElementById("tray").classList.toggle("show", picked.length > 0);
+  document.getElementById("trayN").textContent = picked.length + (picked.length === 1 ? " Produkt" : " Produkte") + " in der Empfehlung";
+  document.getElementById("trayList").textContent = picked.map(p => p.b + " " + p.n).join(" · ");
+}
+const trayText = () => S.pick.map(k => ALL.find(p => p.key === k)).map(p => `${TYPE_LABEL[p.type]}: ${p.b} – ${p.n}`).join("\n");
+function copy(txt, el, label) {
+  const done = () => { el.textContent = "Kopiert ✓"; setTimeout(() => el.textContent = label, 1500); };
+  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(done, () => {
+    const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (_) {} ta.remove(); done();
+  });
+}
+/* Kürzel antippen schreibt den Begriff in die Suche */
+function setQ(change) {
+  const r = parse(S.q); change(r);
+  r.raw = r.words.length ? plain(S.q).split(/\s+/).filter(w => r.words.includes(flat(w))) : [];
+  S.q = buildQ(r); document.getElementById("q").value = S.q;
+}
+
+document.addEventListener("click", e => {
+  const el = e.target.closest("button");
+  if (!el) return;
+  const d = el.dataset;
+  if (d.v) { if (S.v !== d.v) { S.v = d.v; S.q = ""; document.getElementById("q").value = ""; S.more.clear(); } }
+  else if (d.dicke) setQ(r => r.dicke = r.dicke === d.dicke ? null : d.dicke);
+  else if (d.kopf) setQ(r => r.kopf = r.kopf === d.kopf ? null : d.kopf);
+  else if ("kaputt" in d) setQ(r => r.kaputt = !r.kaputt);
+  else if (d.seg) S.seg = d.seg;
+  else if (d.tab) { S.tab = d.tab; S.catB = "alle"; }
+  else if (d.catb) S.catB = d.catb;
+  else if (d.more) { S.more.has(d.more) ? S.more.delete(d.more) : S.more.add(d.more); }
+  else if (d.open) { S.open.has(d.open) ? S.open.delete(d.open) : S.open.add(d.open); }
+  else if (d.pick) { const i = S.pick.indexOf(d.pick); i >= 0 ? S.pick.splice(i, 1) : S.pick.push(d.pick); }
+  else if (d.text) { copy(d.text, el, "Liste kopieren"); return; }
+  else if (el.id === "trayClear") S.pick = [];
+  else if (el.id === "trayCopy") { copy(trayText(), el, "Text kopieren"); return; }
+  else return;
+  const y = window.scrollY; render(); window.scrollTo(0, y);
+});
+document.getElementById("q").addEventListener("input", e => { S.q = e.target.value; S.more.clear(); render(); });
+render();
+</script>
+</body>
+</html>
