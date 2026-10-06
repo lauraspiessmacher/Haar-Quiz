@@ -54,9 +54,9 @@ for k in P:
 t = setobj(t, 'IMG', imgs)
 
 CATS = '''const CATS = [
- {id:"fein", label:"Feines Haar", desc:"Für Feenhaar: Das einzelne Haar ist hauchdünn und fällt sofort platt. Hier stehen nur echte trockene Öle. Sie verdunsten zum größten Teil und hinterlassen nur einen hauchdünnen Pflegefilm, ohne schweres Silikon-Serum. Ein Pumpstoß oder ein paar Tropfen nur in die Spitzen."},
- {id:"duenn", label:"Dünnes Haar", desc:"Du hast eher wenige Haare und wenig Fülle, das einzelne Haar ist aber nicht besonders fein. Trockene Öle und leichte Öl-Seren, die Glanz geben und pflegen, ohne dir die Fülle zu nehmen. Sparsam dosieren und nicht an den Ansatz geben."},
- {id:"normal", label:"Normales Haar", desc:"Die solide Mitte. Hier darfst du nach deinem Haarzustand auswählen, zum Beispiel nach mehr Glanz, weniger Frizz oder mehr Pflege für trockene Spitzen."},
+ {id:"fein", label:"Feines Haar", desc:"Für Feenhaar: Das einzelne Haar ist hauchdünn und beschwert sehr schnell. Hier empfehle ich sehr trockene Öle. Sie hinterlassen einen hauchdünnen Pflegefilm und versiegeln so das Haar. Ein trockenes Öl zieht schnell ein, fettet kaum und fühlt sich nicht ölig an. Du erkennst es an der Markierung „Trockenes Öl“."},
+ {id:"duenn", label:"Dünnes Haar", desc:"Das einzelne Haar ist dünn, aber nicht hauchdünn. Wie viele Haare du hast, spielt dabei keine Rolle. Hier passen trockene Öle und sehr leichte Öle. Sparsam dosieren und nicht an den Ansatz geben."},
+ {id:"normal", label:"Normales Haar", desc:"Die solide Mitte. Hier darfst du nach deinem Haarzustand oder deinem Wunschergebnis wählen, zum Beispiel ein Öl für super viel Glanz, weniger Frizz oder mehr Pflege für trockene Spitzen."},
  {id:"dick", label:"Dickes Haar", desc:"Kräftiges Haar, das Pflege gut verträgt. Klassische Silikon-Seren und Öle mit mehr Pflanzenöl machen es geschmeidig und bändigen Frizz, ohne dass es platt wirkt."},
  {id:"sehrdick", label:"Sehr dickes Haar", desc:"Sehr kräftiges Haar, oft auch trocken, lockig oder kraus. Hier stehen die reichhaltigsten Öle: glättende Seren mit viel Silikon und reine Pflanzenöle. Feineres Haar fällt damit schnell platt."}
 ];'''
@@ -84,12 +84,14 @@ rep = [
 for a, b in rep:
     assert a in t, a; t = t.replace(a, b)
 i, j = between(t, '<p class="lead">', '</div>\n  </div>')
-t = t[:i] + '''Ein Haaröl ist der letzte Schritt deiner Pflege. Es legt sich wie ein Schutzfilm um die Längen und Spitzen, macht sie geschmeidig und glänzend und bändigt Frizz. So reiben deine Haare weniger aneinander und brechen seltener ab. Dein Öl wählst du nach deiner Haardicke: Je feiner dein Haar, desto leichter sollte das Öl sein.</p>
+t = t[:i] + '''Ein Haaröl ist ein echtes Must-have, aber ein Add-on: Es ersetzt keine Pflege, sondern versiegelt sie. Als letzter Schritt über deinem Leave-in schließt es die Pflege darunter ein und macht Längen und Spitzen geschmeidig und glänzend. Erst das Gesamtpaket schützt deine Haare vor Haarbruch und Spliss. Dein Öl wählst du nach deiner Haardicke: Je feiner dein Haar, desto leichter sollte das Öl sein.</p>
     <div class="box">
-      <p><b>Was ist ein trockenes Öl?</b> Es besteht vor allem aus leichten Stoffen, die nach dem Auftragen verdunsten. Zurück bleibt nur ein hauchdünner Film. Deshalb fettet es kaum und passt auch zu feinem Haar. Du erkennst es an der Markierung „Trockenes Öl“. Nicht jedes leichte Öl ist ein trockenes Öl: Klassische Silikon-Seren glätten stark und geben viel Glanz, legen sich aber als dickerer Film um das Haar und beschweren feines Haar schnell.</p>
-      <p><b>Gut zu wissen:</b> Kein Öl repariert Spliss. Ist die Haarspitze einmal gespalten, wächst sie nicht wieder zusammen. Ein Öl kann Spliss nur vorbeugen und kurz kaschieren. Weg geht er nur, wenn man ihn abschneidet.</p>
-      <p><b>So verwendest du es:</b> Ein bis drei Pumpstöße in den Handflächen verreiben und in Längen und Spitzen geben, nicht an den Ansatz. Entweder ins handtuchtrockene Haar vor dem Föhnen oder ins trockene Haar gegen Frizz und für Glanz. Bei feinem Haar mit einem Tropfen anfangen.</p>
+      <p><b>Gut zu wissen:</b> Kein Öl und überhaupt kein Leave-in repariert Spliss. Ist ein Haar einmal gespalten, wächst es nicht mehr zusammen, man kann es nur optisch versiegeln. Bei Spliss in den Spitzen hilft ein Spitzenschnitt, bei Spliss im ganzen Haar ein Splissschnitt.</p>
+      <p><b>So verwendest du es:</b> Starte mit einem Pumpstoß, verreibe ihn wie eine Handcreme in den Händen und gib ihn zuerst in die Spitzen, dann arbeitest du dich nach oben. Hat nicht jedes Haar etwas abbekommen, nimm einen zweiten Pumpstoß. Bei normalem bis dickem Haar kannst du auch mit zwei Pumpstößen starten.</p>
     ''' + t[j:]
+a = 'itemHtml(p, `<span class="also">Passt zu: ${passtZu(p)}</span>`)'
+assert t.count(a) == 2
+t = t.replace(a, 'itemHtml(p, "")')
 open('/home/user/Haar-Quiz/oel-guide.html', 'w').write(t)
 print('ok', len(P), 'Öle,', len(imgs), 'Bilder')
 print({k: silikone(k) for k in ['o22','d10','d16','o20','o06','d17']})

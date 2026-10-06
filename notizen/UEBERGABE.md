@@ -73,3 +73,5 @@
   - Die Schlagwort-Suche (feine Haare Schuppen …) darf versteckt weiter funktionieren, Laura weiß, wie es geht.
   - REIHENFOLGE: erst Einzel-Guides fertig (Masken, Conditioner, Kopfhautpflege), DANN den großen Guide bauen. Quiz: index.html = „Finde deinen Haartyp“; Laura hat insgesamt 3 Quiz, die anderen 2 schickt sie. Wissenstexte schreibt sie noch.
 - Nachtrag 06.10. spät (notizen/nachtrag-liste.md): Wella Ultimate Smooth Miracle Oil Serum + 24/7 Silky Milk → Leave-in; Wella Ultimate Smooth Mask, Oil Reflections Mask, Coco & Eve Pre-Shampoo → Masken; The Ordinary Glycolic Toner (Peeling) + Goldwell Scalp Rebalance Fluid → Kopfhaut (jetzt 52); Goldwell Deep Cleansing Shampoo → Shampoo (Fettend).
+- OFFENE FRAGE an Laura VOR einer Live-Website: Sollen Hinweise wie „Fast die gleiche Basis/Rezeptur wie …“ in den Guides bleiben? (Laura findet sie für sich gut, würde sie für live evtl. rausnehmen – unbedingt nachfragen.)
+- OFFENE FRAGE: Dünn-Text „wenige Haare und wenig Fülle“ auch im Conditioner-, Masken- und Leave-in-Guide an die neue Definition (Dicke des einzelnen Haares, nicht Fülle) anpassen?
