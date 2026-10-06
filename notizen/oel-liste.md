@@ -66,4 +66,41 @@ Isododecane, Dimethicone, Camellia Oleifera Seed Oil, Argania Spinosa Kernel Oil
 #### [o28] Dejan Garz Sensitive Hair Oil The Gentle 50 ml, Rossmann (Bild 18.57.31, INCI 18.57.37) – ohne Parfum
 Isododecane, Dimethicone, Avena Sativa Kernel Oil, Squalane, Amodimethicone, Phenyl Trimethicone, Bisabolol, Tocopherol
 
-## Stand: 28 Öle (o01–o28) gesichert. Wartet auf Lauras „Go“.
+## Stand: 28 Öle (o01–o28) gesichert, dazu 17 von dm (d01–d17) → 45. Wartet auf Lauras „Go“.
+
+## dm (Lauras Liste, per dm-Schnittstelle geholt: Name, Bild, INCI; Rohdaten notizen/oel-bau/dm.json)
+#### [d01] OGX Haaröl Coconut Miracle Oil, 100 ml (dm DAN 2322377)
+Dimethicone, Isopropyl Myristate, Dimethiconol, C12-15 Alkyl Benzoate, Argania Spinosa Kernel Oil, Cocos Nucifera (Coconut) Oil, Gardenia Taitensis Flower Extract, Vanilla Planifolia Fruit Extract, Carthamus Tinctorius (Safflower) Seed Oil, Tocopheryl Acetate, Parfum/Fragrance, Benzyl Benzoate, Linalool, Benzyl Salicylate, Limonene, Benzyl Alcohol, Coumarin
+#### [d02] OGX Haaröl Moroccan Argan Penetrating Oil, 100 ml (dm DAN 1442285)
+Dimethicone, Isopropyl Myristate, Dimethiconol, C12-15 Alkyl Benzoate, Argania Spinosa Kernel Oil, Parfum/Fragrance, Alpha-Isomethyl Ionone, Limonene
+#### [d03] L'ORÉAL PARiS ELVITAL Haaröl Öl Magique, für alle Haartypen, 100 ml (dm DAN 1621820)
+ISODODECANE, DIMETHICONE, DIMETHICONOL, COCOS NUCIFERA OIL / COCONUT OIL, TOCOPHEROL, POGOSTEMON CABLIN OIL, ANISE ALCOHOL, SCLEROCARYA BIRREA SEED OIL, CAMELLIA JAPONICA SEED OIL, LIMONENE, LINALOOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, CARVONE, GARDENIA TAITENSIS FLOWER, ROSE KETONES, ROSA CANINA FLOWER EXTRACT, CITRUS AURANTIUM PEEL OIL, TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES, COUMARIN, HEXYL CINNAMAL, PARFUM / FRAGRANCE
+#### [d04] L'ORÉAL PARiS ELVITAL Haaröl Öl Magique Jojoba, 100 ml (dm DAN 1621825)
+ISODODECANE, DIMETHICONE, DIMETHICONOL, COCOS NUCIFERA OIL / COCONUT OIL, HYDROGENATED JOJOBA OIL, ANISE ALCOHOL, LIMONENE, SIMMONDSIA CHINENSIS SEED OIL / JOJOBA SEED OIL, LINALOOL, COUMARIN, HEXYL CINNAMAL, PARFUM / FRAGRANCE
+#### [d05] Balea PROFESSIONAL Haaröl Plex Care, 50 ml (dm DAN 1343983)
+Isododecane, C11-13 Isoalkane, Dimethiconol, Isohexadecane, Helianthus Annuus Hybrid Oil, Dimethicone, Helianthus Annuus Seed Oil, Zea Mays Oil, Parfum, Benzyl Alcohol, Tetramethyl Acetyloctahydronaphthalenes
+#### [d06] Herbal Essences Haaröl Arganöl Elixir, Tiefenreparatur, 95 ml (dm DAN 3115710)
+Cyclopentasiloxane, Dimethiconol, Argania Spinosa Kernel Oil, Parfum, Hexamethylindanopyran, Benzyl Benzoate, Tetramethyl Acetyloctahydronaphthalenes, Hexyl Cinnamal, Linalyl Acetate, Limonene, Alpha-Isomethyl Ionone, Coumarin, Vanillin, Citrus Limon Peel Oil, Pinene, Trimethylcyclopentenyl Methylisopentenol, Eugenol, Benzyl Alcohol, Cinnamomum Zeylanicum Bark Oil
+#### [d07] Balea PROFESSIONAL Haaröl Oil Repair Intensiv, 100 ml (dm DAN 1700841)
+Isododecane, C11-13 Isoalkane, Dimethiconol, Isohexadecane, Helianthus Annuus Hybrid Oil, Dimethicone, Helianthus Annuus Seed Oil, Argania Spinosa Kernel Oil, Orbignya Oleifera Seed Oil, Sclerocarya Birrea Seed Oil, Parfum, Citrus Aurantium Peel Oil, Tetramethyl Acetyloctahydronaphthalenes, Limonene, Benzaldehyde, CI 40800
+#### [d08] GARNIER FRUCTIS Haaröl Oil Repair Wunder-Öl, 150 ml (dm DAN 1499815)
+ISODODECANE, DIMETHICONE, DIMETHICONOL, OLEA EUROPAEA FRUIT OIL / OLIVE FRUIT OIL, HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL, ROSMARINUS OFFICINALIS LEAF EXTRACT / ROSEMARY LEAF EXTRACT, COCOS NUCIFERA OIL / COCONUT OIL, PERSEA GRATISSIMA OIL / AVOCADO OIL, BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER, TOCOPHEROL, LINALOOL, LINALYL ACETATE, GERANIOL, VANILLIN, POGOSTEMON CABLIN OIL, LIMONENE, TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES, CITRONELLOL, CARVONE, HEXYL CINNAMAL, BENZALDEHYDE, BENZYL ALCOHOL, PARFUM / FRAGRANCE
+#### [d09] Schwarzkopf GLISS Haaröl Tägliches Öl Elixier, 75 ml (dm DAN 1534910)
+Dimethicone, Dimethiconol, Undecane, Dicaprylyl Ether, Tridecane, Helianthus Annuus (Sunflower) Seed Oil, Hydroxyoctanone, Argania Spinosa Kernel Oil, Parfum (Fragrance), Tetramethyl Acetyloctahydronaphthalenes, Benzyl Alcohol, Geraniol, Hexyl Cinnamal, Citronellol, Limonene, Benzyl Salicylate, Alpha-Isomethyl Ionone, Linalool, Terpineol, Citrus Aurantium Peel Oil, Coumarin, Pinene, Citral, Citrus Limon (Lemon) Peel Oil, CI 40800 (Beta-Carotene)
+#### [d10] Balea med Haaröl Ultra Sensitive 3in1, 100 ml (dm DAN 3130747)
+HELIANTHUS ANNUUS HYBRID OIL, SIMMONDSIA CHINENSIS SEED OIL, PANTHENYL ETHYL ETHER, TOCOPHEROL, CERAMIDE NP, AQUA
+#### [d11] PANTENE PRO-V Haaröl Glowtox, 100 ml (dm DAN 3153515)
+Isododecane, C11-13 Isoalkane, Isohexadecane, Dimethiconol, Dimethicone, Parfum, Oleic Acid, Tocopheryl Acetate, Tetramethyl Acetyloctahydronaphthalenes, Vanillin, Linalool, Dimethyl Phenethyl Acetate, Juniperus Virginiana Oil, Panthenol, Coumarin, Rose Ketones
+#### [d12] PANTENE PRO-V Haaröl Coconut Infused Oil, 100 ml (dm DAN 1612745)
+Cyclopentasiloxane, Dimethiconol, Alcohol Denat., Parfum, Panthenol, Panthenyl Ethyl Ether, Linalool, Coumarin, Aqua, Limonene, Cocos Nucifera Oil
+#### [d13] PANTENE PRO-V Trocken Öl mit Vitamin E Keratin Protect Oil Repair & Care, 100 ml (dm DAN 1395948)
+Cyclopentasiloxane, Dimethiconol, Alcohol Denat., Parfum, Tocopheryl Acetate, Panthenyl Ethyl Ether, Panthenol, Benzyl Salicylate, Hexyl Cinnamal, Alpha-Isomethyl Ionone, Aqua, Linalool, Citronellol, Limonene
+#### [d14] PANTENE PRO-V Haarkur Glatt & Seidig Arganöl Argan Infused Oil, 100 ml (dm DAN 1523357)
+Cyclopentasiloxane, Dimethiconol, Alcohol Denat., Parfum, Argania Spinosa Kernel Oil, Panthenyl Ethyl Ether, Panthenol,  Benzyl Salicylate, Hexyl Cinnamal, Alpha-Isomethyl Ionone, Aqua, Linalool, Citronellol, Limonene
+#### [d15] PANTENE PRO-V Haaröl LOVE Edition Repair & Care, 100 ml (dm DAN 3130932)
+Cyclopentasiloxane, Dimethiconol, Alcohol Denat., Parfum, Tocopheryl Acetate, Panthenol, Panthenyl Ethyl Ether, Geranyl Acetate, Hexamethylindanopyran, Benzyl Salicylate, Hexyl Cinnamal, Alpha-Isomethyl Ionone, Aqua, Linalool, Tetramethyl Acetyloctahydronaphthalenes, Citrus Aurantium Peel Oil, Dimethyl Phenethyl Acetate, Isoeugenyl Acetate, Terpineol, Citronellol, Limonene, Rose Ketones
+#### [d16] Balea PROFESSIONAL Haaröl Traumlocken, 100 ml (dm DAN 1635760)
+Helianthus Annuus Hybrid Oil, Argania Spinosa Kernel Oil, Cocos Nucifera Oil, Orbignya Oleifera Seed Oil, Simmondsia Chinensis Seed Oil, Triticum Vulgare Germ Oil, Helianthus Annuus Seed Oil, AMP-Isostearoyl Wheat/Corn/Soy Amino Acids, Triticum Vulgare Bran Extract, Triticum Vulgare Germ Extract, Camellia Oleifera Seed Oil, Cetearyl Nonanoate, Caprylic/Capric Triglyceride, Tocopheryl Acetate, Tocopherol, Linoleic Acid, Parfum, Amyl Salicylate, Tetramethyl Acetyloctahydronaphthalenes, CI 40800
+#### [d17] NEQI Haaröl Diamond Glass, 50 ml (dm DAN 3124935)
+Caprylic/capric triglyceride, Disiloxane, C13-14 isoparaffin, Parfum [Fragrance], Juniperus virginiana oil, Hippophae rhamnoides oil, C13-15 alkane, Citrus aurantium peel oil, Tetramethyl acetyloctahydronaphthalenes, Tocopheryl acetate, Linalyl acetate, Hexyl cinnamal, Geranyl acetate, Pinene, Limonene, Linalool, Geraniol.
+Hinweise: „Pantene Keratin Öl“ = Keratin Protect Oil Repair & Care (d13), „Pantene Repair & Care“ = LOVE Edition Repair & Care (d15); „Balea Oil Repair“ = Haaröl Oil Repair Intensiv 100 ml (d07); „OGX Argan Oil of Morocco“ = Moroccan Argan Penetrating Oil (d02, das Dry Oil o14 kam schon von Zalando).
