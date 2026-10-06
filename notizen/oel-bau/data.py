@@ -11,7 +11,7 @@ P = {
 "o07": ("Garnier Wahre Schätze","Schwereloses Haar-Öl Argan & Camelia","duenn normal dick","Leichtes Öl-Serum mit Silikon, Argan- und Kamelienöl","trocken, glanzlos","",D,False),
 "o14": ("OGX","Argan Oil of Morocco Weightless Reviving Dry Oil","duenn normal dick","Trockenes Sprühöl mit Silikon, Kokos- und Arganöl","trocken, glanzlos","",D,True),
 "o20": ("OGX","Bond Protein Repair 3-in-1 Oil Mist","duenn normal","Leichter Pflegenebel auf Wasserbasis mit Pflanzenölen, Glycerin und Weizenprotein","strapaziert","Eher ein leichtes Pflegespray als ein klassisches Öl. Silikonfrei.",D,False),
-"o27": ("Dejan Garz","Violet Hair Oil The Britney","fein duenn normal","Trockenes Öl mit Silikon, Kamelien-, Argan- und Jojobaöl","blond, blondiert, strapaziert","Mit Hitzeschutz bis 230 °C. Laut Dejan Garz ohne Farbstich auf hellem Haar.",D,True),
+"o27": ("Dejan Garz","Violet Hair Oil The Britney","fein duenn normal","Trockenes Öl mit Silikon, Kamelien-, Argan- und Jojobaöl","blond, blondiert, strapaziert","Mit Hitzeschutz bis 230 °C. Hinterlässt keinen violetten Schleier auf hellem Haar.",D,True),
 "o28": ("Dejan Garz","Sensitive Hair Oil The Gentle","fein duenn normal","Trockenes Öl mit Silikon, Haferöl und Squalan","strapaziert, empfindlich","Ohne Parfum, gut bei Duftallergie oder empfindlicher Haut.",D,True),
 # ---------- Drogerie (dm) ----------
 "d01": ("OGX","Coconut Miracle Oil","normal dick sehrdick","Glättendes Silikon-Serum mit Argan- und Kokosöl","trocken, strapaziert","Fast die gleiche Basis wie das OGX Argan Penetrating Oil, dazu Kokosöl.",D,False),
