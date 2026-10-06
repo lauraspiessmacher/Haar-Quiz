@@ -68,4 +68,4 @@
   - „Meine Haare“ ist freiwillig: Haardicke/Haartyp, Kopfhauttyp, Kopfhautproblem, strapaziert/blondiert/stark geschädigt auswählen → nur passende Produkte (Regler Nur passende/Alle). Kann man auslassen.
   - Ohne Einstellung: normal nach Produkten suchen; Produktbereich aufgebaut wie die Einzel-Guides (Reiter pro Produktart, darunter Kategorien), mit Lauras Einschätzung unter jedem Produkt.
   - Die Schlagwort-Suche (feine Haare Schuppen …) darf versteckt weiter funktionieren, Laura weiß, wie es geht.
-  - Bauen ab 15:30 (Lauras Limit). Quiz: index.html = „Finde deinen Haartyp“; Laura hat insgesamt 3 Quiz, die anderen 2 schickt sie. Wissenstexte schreibt sie noch.
+  - REIHENFOLGE: erst Einzel-Guides fertig (Masken, Conditioner, Kopfhautpflege), DANN den großen Guide bauen. Quiz: index.html = „Finde deinen Haartyp“; Laura hat insgesamt 3 Quiz, die anderen 2 schickt sie. Wissenstexte schreibt sie noch.
