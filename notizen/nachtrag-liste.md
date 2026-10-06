@@ -22,3 +22,10 @@ Aqua, Alcohol Denat., Glycerin, Lactitol, Xylitol, Cetrimonium Chloride, Panthen
 Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Laureth-4 Carboxylic Acid, Hydroxyacetophenone, Disodium EDTA, Sodium Chloride, Zinc PCA, PEG-150 Pentaerythrityl Tetrastearate, Panthenol, Octyldodecyl PCA, Sodium PCA, Glycerin, Sodium Hydroxide, PPG-2 Hydroxyethyl Cocamide, Citric Acid, Rubus Idaeus Seed Oil, Glycoproteins, Salix Nigra Bark Extract, Helianthus Annuus Seed Oil, Rosmarinus Officinalis Leaf Extract, Sodium Benzoate, Potassium Sorbate, Parfum, Alpha-Isomethyl Ionone, Amyl Cinnamal, Limonene, Linalool
 
 Laura: „Go“ für die Zuordnung (Coco & Eve Pre-Shampoo → Masken-Guide, Anwendung vor dem Shampoo).
+
+## Eingebaut
+- Leave-in: n1 Miracle Oil Serum (normal–sehr dick, fast reines Silikon, kein HEAT-Feld, da ohne Gradzahl), n3 Silky Milk (dünn + normal, HEAT 230).
+- Masken: n2 Ultimate Smooth (dünn + normal), n4 Oil Reflections (normal + dick, Öle ganz am Ende), n6 Coco & Eve Pre-Shampoo (normal + dick, Anwendung im „Gut zu wissen“: 10–20 Min. vor dem Shampoo, kein Bond-Wirkstoff). Keins davon „kaputt“.
+- Kopfhaut: tog The Ordinary Toner (Peeling), gwf Goldwell Fluid (normal + fettend wegen Alkohol, trotz Werbung für trockene Kopfhaut). RANK ergänzt.
+- Shampoo: Goldwell Deep Cleansing → Fettende Kopfhaut (nicht Tiefenreinigung: normales Tensid, kein extra Kalklöser).
+- Bilder: notizen/nachtrag-bilder/fertig/n1–n8.webp

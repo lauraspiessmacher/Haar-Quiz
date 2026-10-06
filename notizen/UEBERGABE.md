@@ -2,11 +2,11 @@
 
 ## Dateien
 - `index.html` – Haar-Quiz (war ursprünglich eine umbenannte ZIP, jetzt entpackt)
-- `leave-in-guide.html` – Leave-in-Guide, 101 Produkte (56 Drogerie, 45 High-End), alle mit freigestelltem Bild
-- `shampoo-guide.html` – Shampoo-Guide, 162 Produkte, Reiter „Liste“, alle mit freigestelltem Bild
+- `leave-in-guide.html` – Leave-in-Guide, 103 Produkte (56 Drogerie, 47 High-End), alle mit freigestelltem Bild
+- `shampoo-guide.html` – Shampoo-Guide, 163 Produkte, Reiter „Liste“, alle mit freigestelltem Bild
 - `kopfhaut-guide.html` – Kopfhaut-Guide, 50 Produkte (Reiter: Normale, Trockene, Sensible, Juckende, Schuppige, Schnell fettende Kopfhaut, Kopfhautpeeling, Liste). Daten + Bau-Skript: notizen/kopfhaut-bau/ (data.py, build.py; Bilder als PNG im scratchpad kh/cut, gesichert als webp in notizen/kopfhaut-bilder/fertig). Notizen/INCI: notizen/kopfhaut-liste.md. Regel (Laura): nach INCI einordnen, nicht nach Marketing; Peeling = eigene Sektion; normale + fettende Kopfhaut bekommen auch Feuchtigkeitspflegen.
 - `conditioner-guide.html` – Conditioner-Guide: 94 Conditioner (82 Drogerie, 12 High-End), davon 7 flüssige (Wonder Water) in „Feines Haar“. Bau: notizen/conditioner-bau/, Notizen/INCI: notizen/conditioner-liste.md.
-- `masken-guide.html` – Haarmasken-Guide, 58 Masken (18 dm, 13 Rossmann, 27 High-End inkl. Olaplex Rich Hydration + Weightless Nourishing); Olaplex No.8 bewusst NICHT drin (nicht mehr im Handel), Aufbau wie Leave-in-Guide, Repair-Box mit „Wirkt im Inneren/von außen“
+- `masken-guide.html` – Haarmasken-Guide, 61 Masken (18 dm, 13 Rossmann, 30 High-End inkl. Olaplex Rich Hydration + Weightless Nourishing); Olaplex No.8 bewusst NICHT drin (nicht mehr im Handel), Aufbau wie Leave-in-Guide, Repair-Box mit „Wirkt im Inneren/von außen“
 - `notizen/vorschau-gesamtguide.html` – klickbare VORSCHAU für den Gesamt-Guide. Laura will BEIDE Ansichten: A = Suche versteht „feine Haare fettige Kopfhaut kaputt“ + Marke, zeigt Routine (Shampoo nach Kopfhaut, Maske/Leave-in nach Haardicke, Kopfhautprodukte nur wenn Kopfhaut eingetippt); B = wie die einzelnen Guides (Reiter pro Produktart, darunter Alle/Kategorien/Liste). Später automatisch aus den Einzel-Guides zusammenbauen. Bau-Skripte: notizen/gesamtguide-bau/ (dump.js liest die Guides per Playwright aus → data.json, in template.html für __DATA__ einsetzen).
 - `notizen/haarmasken-liste.md` – alle Masken mit Inhaltsstoffen, `notizen/masken-bilder/` – Lauras Rossmann-Produktbilder
 - `notizen/leave-in-inhaltsstoffe.md` – abgeschriebene INCI-Listen aller Leave-ins
@@ -71,3 +71,4 @@
   - Ohne Einstellung: normal nach Produkten suchen; Produktbereich aufgebaut wie die Einzel-Guides (Reiter pro Produktart, darunter Kategorien), mit Lauras Einschätzung unter jedem Produkt.
   - Die Schlagwort-Suche (feine Haare Schuppen …) darf versteckt weiter funktionieren, Laura weiß, wie es geht.
   - REIHENFOLGE: erst Einzel-Guides fertig (Masken, Conditioner, Kopfhautpflege), DANN den großen Guide bauen. Quiz: index.html = „Finde deinen Haartyp“; Laura hat insgesamt 3 Quiz, die anderen 2 schickt sie. Wissenstexte schreibt sie noch.
+- Nachtrag 06.10. spät (notizen/nachtrag-liste.md): Wella Ultimate Smooth Miracle Oil Serum + 24/7 Silky Milk → Leave-in; Wella Ultimate Smooth Mask, Oil Reflections Mask, Coco & Eve Pre-Shampoo → Masken; The Ordinary Glycolic Toner (Peeling) + Goldwell Scalp Rebalance Fluid → Kopfhaut (jetzt 52); Goldwell Deep Cleansing Shampoo → Shampoo (Fettend).

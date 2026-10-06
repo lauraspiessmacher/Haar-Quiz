@@ -20,6 +20,9 @@ ANW = {
 
 P = [
 # ---------- Peelings ----------
+("tog","The Ordinary","Glycolic Acid 7% Exfoliating Toner","peeling","Peeling flüssig",
+ "Eigentlich ein Gesichtstoner, wird aber auch gern für die Kopfhaut genutzt: Säurepeeling mit 7 % Glykolsäure, dazu Aloe, Aminosäuren und Glycerin.",
+ "Glykolsäure, Aloe, Aminosäuren, Glycerin","ohne Parfum, ohne Alkohol","peel_fl","Ideal bei fettender Kopfhaut. Nicht ideal für sensible Kopfhaut.",H),
 ("bpp","Balea Professional","Kopfhautpflege Peeling Tiefenreinigung","peeling","Peeling flüssig",
  "Klares AHA-Peeling mit Glykolsäure, laut Etikett 4 %, dazu etwas Panthenol.",
  "Glykolsäure, Panthenol","ohne Parfum, ohne Alkohol","peel_fl","Nicht ideal für sehr sensible Kopfhaut.",D),
@@ -147,6 +150,9 @@ P = [
 ("euc","Eucerin","DermoCapillaire Urea Intensiv-Tonikum","normal trocken sensibel","Tonikum",
  "Feuchtigkeitspflege mit Urea und Laktat, dazu Polidocanol gegen Juckreiz und Licochalcone aus Süßholz.",
  "Urea, Laktat, Polidocanol, Licochalcone A","ohne Parfum, ohne Alkohol","pflege","",H),
+("gwf","Goldwell","Dualsenses Scalp Specialist Scalp Rebalance & Hydrate Fluid","normal fettend","Fluid",
+ "Leichtes Feuchtigkeitsfluid mit Glycerin, Panthenol und Zuckeraustauschstoffen, die Feuchtigkeit binden. Goldwell bewirbt es für trockene Kopfhaut, durch den Alkohol passt es aber besser zu normaler oder fettender.",
+ "Glycerin, Panthenol, Lactitol, Xylitol, Rotalgenextrakt","ohne Parfum, mit Alkohol","pflege","Nicht ideal für trockene Kopfhaut als alleinige Pflege.",H),
 ("tom","The Ordinary","Multi-Peptide Serum for Hair Density","normal sensibel fettend haarausfall","Serum",
  "Leichtes Serum mit Koffein, Peptiden und Pflanzenextrakten, ohne Öl.",
  "Koffein, Peptide, Rotklee","ohne Parfum, ohne Alkohol","pflege","",H),
@@ -185,10 +191,10 @@ P = [
 
 # Reihenfolge pro Reiter: oben das Beste für diesen Kopfhauttyp (nach Inhaltsstoffen), unten das Schwächste
 RANK = {
- "normal":   ["dgs","euc","tos","iss","bps","sha","bmt","sts","alk","alt","tom","ogx","nbl","lpd","rag","nst","gsf","bkt","shv","kpo","lsg","dsj","bmo","dsa","bcr"],
+ "normal":   ["dgs","euc","tos","iss","bps","sha","bmt","sts","alk","alt","gwf","tom","ogx","nbl","lpd","rag","nst","gsf","bkt","shv","kpo","lsg","dsj","bmo","dsa","bcr"],
  "trocken":  ["euc","dgs","tos","iss","bps","sha","bmt","sts","alk","alt","bmo","dsj","dsa","bcr"],
  "sensibel": ["euc","dgs","bmt","iss","bps","sha","sts","alk","alt","dgl","tom","ogx","bmo","dsj"],
  "schuppen": ["ksy","vad","shf","pga","hsd","hsl","kgs","kmp","abc"],
- "fettend":  ["dgl","gsk","lpd","hsd","hsl","pga","vab","lfb","alt","sts","bmt","gsf","tom","rag","kpo","kgs","nqt","bkt","nnd","shv","lsg"],
+ "fettend":  ["dgl","gsk","lpd","hsd","hsl","pga","vab","lfb","alt","sts","bmt","gwf","gsf","tom","rag","kpo","kgs","nqt","bkt","nnd","shv","lsg"],
  "haarausfall": ["kgs","vab","lfb","tom","nbl","hsd","nnd","rag","shv","ogx","nqt","lpd","pga"],
 }
