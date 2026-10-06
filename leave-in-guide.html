@@ -280,7 +280,9 @@ function hairHtml(p){
 function itemHtml(p, extra){
   return `<li class="${p.img?"has-img":""}">${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt"><div class="row"><span class="brand">${esc(p.brand)}</span><span class="tag">${p.segment}</span></div><div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${hairHtml(p)}${p.tip?`<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`:""}${extra}</div></li>`;
 }
-const matches = (p, term) => (seg==="alle" || p.segment===seg) && (!term || [p.brand,p.name,p.note,p.tip,(p.rep||[]).join(" "),p.sil.length?"silikone "+p.sil.join(" "):"silikonfrei",p.hair.join(" ")].join(" ").toLowerCase().includes(term));
+/* Suche ohne Akzente, Apostrophe, Leer- und Sonderzeichen: „kerastase“ findet „Kérastase“, „loreal“ findet „L'Oréal“. Jedes Suchwort wird einzeln gesucht. */
+const plain = s => s.toLowerCase().replace(/ß/g,"ss").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"");
+const matches = (p, term) => { if(!(seg==="alle" || p.segment===seg)) return false; if(!term.length) return true; const h = plain([p.brand,p.name,p.note,p.tip,(p.rep||[]).join(" "),p.sil.length?"silikone "+p.sil.join(" "):"silikonfrei",p.hair.join(" ")].join(" ")); return term.every(w => h.includes(w)); };
 const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 
 function drawListe(term){
@@ -304,7 +306,7 @@ function drawListe(term){
   empty.hidden = shown > 0;
 }
 function draw(){
-  const term = q.value.trim().toLowerCase();
+  const term = q.value.split(/\s+/).map(plain).filter(Boolean);
   let shown = 0;
   if(active==="liste"){ drawListe(term); return; }
   if(active==="alle"){
