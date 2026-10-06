@@ -230,3 +230,9 @@ Aqua, Alcohol Denat., Bifida Ferment Lysate, Ascorbyl Glucoside, Aminomethyl Pro
   - grobe Peelings: feuchte Kopfhaut, Fingerspitzen; notfalls unter der Dusche Scheitel ziehen
   - head&shoulders Scalp Reset: feuchte Kopfhaut vor Shampoo, ~3 Min massieren, dann waschen
 - Hinweise kurz und positiv formulieren („nicht ideal für sehr sensible Kopfhaut“), nicht negativ.
+
+### Lauras Korrekturen (Version 3)
+- ALLE Pflegen (Serum/Spray/Tonikum/Fluid) gleiche, kurze Anwendung: „Täglich mit der Scheiteltechnik auftragen, ideal nach dem Waschen auf die feuchte Kopfhaut.“ Keine Sonderzeiten (kein „15 Min.“, kein „abends“).
+- ÖLE NIE über Nacht empfehlen (Poren können verstopfen): 1–2 Std. vor der Wäsche, einmassieren, auswaschen.
+- Australian Bodycare Tea Tree Kur: laut Hersteller trockene Kopfhaut, mind. 30 Min. (über Nacht erlaubt), 1–3×/Woche → bei uns 30 Min. bis 1 Std. vor der Wäsche, kein „über Nacht“.
+- Layout: „Passt zu“ über der Anwendung, Anwendung kleiner geschrieben.
