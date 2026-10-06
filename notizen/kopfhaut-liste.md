@@ -122,6 +122,11 @@ Laura: L'Oréal Fiber Booster Serum kommt rein; head&shoulders Density Booster M
 
 ### Öle (dm, Lauras Liste)
 - Balea med – Haaröl Ultra Sensitive 3in1
-- Bali Curls – Haar- und Kopfhautöl Rosmarin („Barley Curls“ diktiert)
+- Bali Curls – Haar- & Kopfhautöl Rosmarin („Barley Curls“ diktiert)
 - Dr. Scheller – Jojobaöl
 - Dr. Scheller – Arganöl
+#### INCI Öle (dm)
+- Balea med Haaröl Ultra Sensitive 3in1, 100 ml (dm 3130747) [bmo]: Helianthus Annuus Hybrid Oil, Simmondsia Chinensis Seed Oil, Panthenyl Ethyl Ether, Tocopherol, Ceramide NP, Aqua. Anwendung: Pre-Wash, Kopfhaut-Oiling (mind. 1 h oder über Nacht), Spitzenpflege.
+- Bali Curls Haar- & Kopfhautöl Rosmarin, 30 ml (dm 3111428) [bcr]: Glycine Soja Oil, Ricinus Communis Seed Oil, Pouteria Sapota Seed Oil, Cocos Nucifera Oil, Simmondsia Chinensis Seed Oil, Rosmarinus Officinalis Leaf Oil, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Oil, Prunus Amygdalus Dulcis Oil, Vitis Vinifera Seed Oil, Isopropyl Myristate, Helianthus Annuus Hybrid Oil, Pinene, Tocopherol, Camphor, Nannochloropsis Oceanica Extract, Menthol, Rosmarinus Officinalis Leaf Extract, Beta-Caryophyllene, Helianthus Annuus Seed Oil, Limonene, Terpineol, Linalool, Alpha-Terpinene, Terpinolene, Equisetum Arvense Extract, Aloe Barbadensis Leaf Extract. Für dünner werdendes Haar, Über-Nacht-Kur.
+- Dr. Scheller Körperöl Jojoba, 30 ml (dm 1675203) [dsj]: Simmondsia Chinensis (Jojoba) Seed Oil (bio). 100 % rein.
+- Dr. Scheller Körperöl Argan, 30 ml (dm 1675202) [dsa]: Argania Spinosa Kernel Oil (bio). 100 % rein.
