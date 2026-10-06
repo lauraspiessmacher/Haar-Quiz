@@ -112,3 +112,10 @@ AQUA, GLYCERIN, BETAINE, INULIN, SODIUM BENZOATE, ZINC PCA, POTASSIUM SORBATE, L
 #### Salt House Totes Meer – Anti-Schuppen Kopfhaut-Fluid Forte (trockene & empfindliche Kopfhaut, ohne Ausspülen, mit Totes-Meer-Mineralien, Teebaumöl & Piroctone Olamine)
 Aqua, Glycerin, Maris Sal (Dead Sea Salt), Alcohol Denat., Panthenol, Xanthan Gum, Citric Acid, Niacinamide, Sodium Benzoate, Sodium Hydroxide, Caprylyl/Capryl Glucoside, Benzyl Alcohol, Melaleuca Alternifolia Leaf Oil, Piroctone Olamine, Sodium Lactate, Zinc Chloride, Sodium Cocoyl Glutamate, Mentha Arvensis Leaf Oil, Glyceryl Caprylate, Polyglyceryl-6 Oleate, Sodium Surfactin, Limonene
 Hinweis: Reihenfolge bei Laura = erst INCI, dann Produktbild. Bilder dieser Runde kamen nur als Vorschau (nicht als Datei) → Produktbilder bei Rossmann/Hersteller holen.
+
+#### Salt House Totes Meer – Anti-Juckreiz Kopfhaut-Fluid Akut (juckende & empfindliche Kopfhaut, ohne Ausspülen, „Sofort-Effekt“, Totes-Meer-Mineralien, Urea & Allantoin)
+Aqua, Glycerin, Maris Sal (Dead Sea Salt), Panthenol, Sodium PCA, Arginine, Allantoin, Niacinamide, Inositol, Disodium Adenosine Triphosphate, Pyridoxine HCl, Rutin, Biotin, Benzyl Alcohol, Xanthan Gum, Alcohol Denat., Sodium Lactate, Benzoic Acid, Citric Acid, Sodium Hydroxide, Sorbic Acid, Glycine, Sodium Benzoate, Fructose, Urea, Lactic Acid.
+#### INCI mit Milchsäure + Gluconolacton (PHA) – vermutlich ISANA Professional Kopfhaut-Peeling Tiefenreinigung (parfümfrei passt, Peeling-Säuren passen) → bei Laura bestätigen
+Aqua, Sorbitol, Propylene Glycol, Glycerin, Lactic Acid, Gluconolactone, Panthenol, Xanthan Gum, Sodium Hydroxide, Citric Acid, Sodium Benzoate, Potassium Sorbate.
+=> Damit ist das Erbsenpeptid-INCI (oben) vermutlich OGX ProGrowth + Peptide Scalp Serum (Peptid + Koffein passen zum Namen) → bestätigen.
+Laura hat außerdem head&shoulders Density Booster (Karton) und L'Oréal Fiber Booster nochmal als Rossmann-Bild geschickt – beide schon von dm vorhanden.
