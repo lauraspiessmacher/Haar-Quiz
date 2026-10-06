@@ -26,3 +26,18 @@ Anwendung: Haare anfeuchten, mit Applikator auf die Kopfhaut, ca. 3 Min. massier
 Aqua, Alcohol Denat., Butylene Glycol, Hydroxyethylpiperazine Ethane Sulfonic Acid, Propanediol, Glycolic Acid, Sodium Hydroxide, PEG-40 Hydrogenated Castor Oil, Parfum, Caprylyl Glycol, Xanthan Gum, Potassium Sorbate, Tetrasodium Glutamate Diacetate, Mentha Piperita Oil, Salicylic Acid, Limonene, Sodium Hyaluronate, Coumarin
 Anwendung: auf die TROCKENE Kopfhaut, 5 Min. einmassieren, 15 Min. einwirken, dann Shampoo. Marke: „6 % Pure-Komplex“ (Hyaluron-, Glykol-, Salicylsäure), für fettige Kopfhaut.
 Bilder: scratchpad kh/cut/bpp.png, hsr.png, lps.png (alle schon freigestellt)
+
+### Kopfhautpflege (Serum, Tonic, Lotion) – Lauras Liste (diktiert, Schreibweise noch prüfen)
+1. Balea Professional – Kopfhautpflege Serum Sensitiv
+2. „Niki“ Haar Tonic „Finish/Fresh“ Rosemary (vermutlich NEQI)
+3. Balea (Essentials) – Kopfhaut Tonikum
+4. Schwarzkopf Gliss – Scalp Balance feuchtigkeitsspendendes Serum
+5. head&shoulders – Leave-In Serum Derma x Pro
+6. „Dian Guards“ – Leave-In Serum Spray De-Sensitive (Marke prüfen)
+7. „Dian Guards“ – Haar Serum De-Sensitive Scalp (Marke prüfen)
+8. Santé – Leave-In Haar Serum Tonikum Simply Sensitive
+9. Balea MED – Kopfhaut Tonikum Ultra Sensitive Totes Meer
+10. alverde – Haar Serum Kopfhaut Balance
+11. Schwarzkopf Gliss – Haar Serum Scalp Balance Clarifying
+12. head&shoulders – Kopfhaut Serum Derma x Pro Density Booster (dm 3160029)
+13. L'Oréal Paris Elvital – Haarserum Fiber Booster Anti-Haarverlust (dm 2976343)
