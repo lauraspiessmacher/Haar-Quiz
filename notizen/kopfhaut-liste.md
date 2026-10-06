@@ -246,3 +246,8 @@ Aqua, Alcohol Denat., Bifida Ferment Lysate, Ascorbyl Glucoside, Aminomethyl Pro
 - Bei pflegearmen Seren: „Nicht ideal für trockene Kopfhaut als alleinige Pflege“ (Seren lassen sich kombinieren).
 - Lee Stafford: Satz zu Haarbruch/Längen raus.
 - Dejan Garz Sebum Spray: laut Hersteller Leave-in, täglich (bei Bedarf 2×), nicht ausspülen – keine Kur.
+
+### Lauras Korrekturen (Version 5)
+- Trockene + juckende Kopfhaut = EIN Reiter „Trockene / juckende Kopfhaut“.
+- „Bei Haarausfall“: Balea Kopfhaut Tonikum und Bali Curls Rosmarinöl raus (Laura). Lee Stafford auch raus (meine Prüfung: keine Wirkstoffe gegen Haarausfall, Marke wirbt mit Haarbruch/Länge).
+- Geprüft und drin gelassen: head&shoulders Density Booster (Koffein + Piroctone Olamine), NEQI Rosmarin-Tonic (Rosmarinöl + Koffein weit vorne), Pantene Grow Abundant (Piroctone Olamine, kein Koffein – schwächster Kandidat), Salt House Anti-Haarverlust (Koffein).
