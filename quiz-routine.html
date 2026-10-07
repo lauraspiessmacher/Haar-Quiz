@@ -311,7 +311,8 @@ function plan(a){
           + ({kaum:0,spliss:1,bruch:3}[a.spliss] || 0)
           + ({selten:0,manchmal:1,taeglich:2}[a.hitze] || 0);
   const st = a.zustand === "gummi" ? 3 : dmg <= 2 ? 0 : dmg < 6 ? 1 : 2;
-  const bond = st >= 2 || blond;
+  /* Bond Repair nur bei strukturgeschädigtem Haar (Blondieren, Chemie, nass wie Gummi) */
+  const bond = blond || a.zustand === "gummi";
   const n = Math.min(7, +a.wash || 2);
   const sporty = a.sport && a.sport !== "nein";
   const sportDays = sporty ? (a.sporttage || []).map(Number).sort() : [];
@@ -330,7 +331,8 @@ function plan(a){
   m = Math.max(1, m);
   const maskDays = spread(wash, m);
   /* Balance: Repair bzw. Bond Repair ein- bis zweimal pro Woche, sonst Feuchtigkeit */
-  const repair = bond || st >= 1, repName = bond ? "Bond-Repair" : "Repair";
+  /* Repair nur bei Schädigung durch Färben, Blondieren oder sehr viel Hitze, nicht bei bloßer Trockenheit */
+  const repair = bond || chem.includes("gefaerbt") || a.hitze === "taeglich", repName = bond ? "Bond-Repair" : "Repair";
   const moistMask = thick ? "eine nährende Feuchtigkeitsmaske" : fine ? "eine leichte Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske";
   const repMaskIdx = repair && m > 1 ? spread([...Array(m).keys()], m >= 3 ? 2 : 1) : [];
   const maskKind = k => {
@@ -414,7 +416,7 @@ function plan(a){
     `**Nach jeder Wäsche ein Leave-in:** ${LEAVE_FEUCHT[dk]} ins noch feuchte Haar.`,
     `**Jeden Tag die LL-Methode:** Auch zwischen den Wäschen kommt ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen.`,
     `**Immer Hitzeschutz:** vor dem Föhnen, Glätten und Locken.`,
-    `**Zum Abschluss versiegeln:** ${OEL[dk].charAt(0).toUpperCase() + OEL[dk].slice(1)}. Ich empfehle es immer, ein Muss ist es aber nicht. Öl ersetzt keine andere Pflege, es ist ein Add-on und versiegelt, was vorher an Pflege drin ist.${fine ? " Bei feinen Haaren ist ein trockenes, leichtes Öl wichtig, damit nichts beschwert." : ""}`,
+    `**Zum Abschluss versiegeln:** ${OEL[dk].charAt(0).toUpperCase() + OEL[dk].slice(1)}. Ich empfehle es immer, es ist ein schönes Add-on-Produkt. Öl ersetzt keine andere Pflege, sondern versiegelt, was vorher an Pflege drin ist.${fine ? " Bei feinen Haaren ist ein trockenes, leichtes Öl wichtig, damit nichts beschwert." : ""}`,
     `**Conditioner:** ${COND[dk].charAt(0).toUpperCase() + COND[dk].slice(1)} schließt jede Wäsche ab.`
   ]});
 
@@ -429,7 +431,7 @@ function plan(a){
 
   const zp = [];
   if(kopfOk) zp.push(`**Trockenshampoo:** Einmal pro Woche ist völlig okay, um eine Wäsche zu überbrücken oder zu schieben. Mehrmals pro Woche würde ich es nicht nehmen, wenn es nicht unbedingt nötig ist. Wenn du es benutzt hast, mach in der Woche danach vor einer Wäsche ein Kopfhautpeeling${a.styling !== "kaum" ? ". Weil du auch Styling-Produkte benutzt, gehört außerdem regelmäßig eine Tiefenreinigung mit einem Tiefenreinigungsshampoo dazu" : ""}.${tsSensitiv ? ` Weil deine Kopfhaut ${a.kopf === "trocken" ? "eher trocken" : "sensibel"} ist: Achte darauf, dass es ein Sensitiv-Trockenshampoo ist. Sobald du Beschwerden merkst, zum Beispiel Jucken, Spannen oder Brennen, nutz es nicht mehr, denn Trockenshampoo kann austrocknen und durch Duftstoffe auch reizen.` : ""}`);
-  else zp.push(`**Trockenshampoo** habe ich bei dir bewusst weggelassen. Bei ${KOPFNAME[a.kopf] || "deiner"} Kopfhaut kann es zusätzlich reizen oder austrocknen. Wasch lieber, wenn es nötig ist.`);
+  else zp.push("**Trockenshampoo** habe ich bei dir erst einmal weggelassen. Kümmere dich zuerst um deine Schuppen, das ist jetzt wichtiger. Wenn die Schuppen weg sind, kannst du es wieder nutzen.");
   zp.push(`**Tiefenreinigung:** ${tiefText.charAt(0).toUpperCase() + tiefText.slice(1)}. Sie entfernt Rückstände von Styling und Pflege, damit deine Haare nicht schwer und strähnig werden.`);
   T.push({h:"Zwischen den Wäschen", p:zp});
 
@@ -462,13 +464,14 @@ function plan(a){
 
   if(repair){
     T.push({h:"Repair, Bond Repair und Feuchtigkeit: die Balance", p:[
-      bond ? "Weil deine Haare stark beansprucht sind, lohnt es sich, auf Bond-Produkte umzusteigen. Wichtig ist aber, dass du dabei immer die Balance mit Feuchtigkeit hältst." : "Weil deine Haare schon etwas beansprucht sind, lohnt sich stabilisierende Pflege. Wichtig ist aber, dass du dabei immer die Balance mit Feuchtigkeit hältst."],
+      (bond ? "Weil deine Haare strukturell geschädigt sind, zum Beispiel durch Blondieren oder chemische Behandlungen, lohnt es sich, auf Bond-Produkte umzusteigen." : "Weil deine Haare durch Färben oder sehr viele Hitzeanwendungen beansprucht sind, lohnt sich Repair-Pflege.") + " Wichtig ist aber, dass du dabei immer die Balance mit Feuchtigkeit hältst.",
+      "Trockene Haare sind übrigens nicht automatisch geschädigt. Trockenheit braucht Feuchtigkeit, kein Repair. Wer zu viel Repair benutzt, hat irgendwann zu viele Proteine im Haar, die Haare werden steif und können sogar brechen."],
       li:[
       "**Bond-Produkte** stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter, und manche wirken nur während dem Blondieren beim Friseur.",
       "**Repair mit Proteinen wie Keratin** füllt poröse Stellen auf, das Haar fühlt sich fester und griffiger an. Es gibt auch schwächere Repair-Produkte, deren Proteine sich nur von außen anlagern.",
       "**Feuchtigkeit** macht das Haar weich und geschmeidig. Fühlen sich deine Haare nach viel Repair steif oder strohig an, brauchen sie wieder mehr Feuchtigkeit.",
       "**Halte die Balance:** Hab nicht nur eine Repair-Maske zu Hause, sondern auch eine, die Feuchtigkeit spendet, und genauso beim Leave-in. Ich wasche meine Haare zum Beispiel täglich. Mein Bond-Repair-Leave-in nutze ich ein- bis zweimal pro Woche, an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in, und genauso mache ich es mit der Maske.",
-      "**Wo sich Repair lohnt:** In der Maske und im Leave-in auf feuchtem Haar. Im Shampoo und im Conditioner ist es nur ganz kurz auf dem Haar, und im Leave-in auf trockenem Haar kann es kaum eindringen, deshalb macht es dort nicht so viel Sinn.",
+      "**Wo ich Repair empfehle:** In der Maske und im Leave-in auf feuchtem Haar. Ein Shampoo wäscht du ja ganz schnell wieder aus. Im Conditioner kannst du Repair natürlich auch nutzen, ich empfehle aber eher eine Maske, weil du sie meistens länger einwirken lässt. Im Leave-in auf feuchtem Haar bleiben die Wirkstoffe wirklich drin und werden nicht ausgewaschen. Auf trockenem Haar macht Repair wenig Sinn, weil es hier um Flexibilität und Geschmeidigkeit geht und kaum Wirkstoffe eindringen können.",
       "**Kein fester Plan:** Wie oft genau, kann ich hier nicht festlegen, weil es total auf deine Produkte ankommt. Nimm deinen Wochenplan als Vorschlag. Wichtig ist der Gedanke dahinter: Repair und Feuchtigkeit im Wechsel."
     ]});
   }

@@ -1,43 +1,243 @@
 {
- "hinweis": "Produktkategorie Hitzeschutz. Produkte werden aus dem Leave-in- und Öl-Guide übernommen (quelle + Marke + Name müssen genau stimmen). form = trocken | spray | serum | creme | oel. heat = Temperatur, wenn sie nicht schon im Text steht. Neue eigene Produkte später unter 'eigene'.",
+ "hinweis": "Produktkategorie Hitzeschutz. Produkte werden aus dem Leave-in- und Öl-Guide übernommen (quelle + Marke + Name müssen genau stimmen). form = trocken | spray | serum | creme | oel. heat = Temperatur, wenn sie nicht schon im Text steht. Neue eigene Produkte später unter 'eigene'. heat = 'ja', wenn der Hersteller Hitzeschutz nennt, aber keine Temperatur.",
  "cats": [
-  {"id": "trocken", "label": "Trockener Hitzeschutz", "desc": "Von der Textur wie Haarspray oder Trockenshampoo. Beschwert nicht und ist ideal auf trockenem Haar vor dem Styling, auch für feine und dünne Haare. Diese Produkte kommen nach und nach dazu."},
-  {"id": "spray", "label": "Hitzeschutzspray", "desc": "Der Klassiker fürs feuchte Haar, du kannst es aber auch auf trockenem Haar nutzen. Vor Lockenstab und Glätteisen gut antrocknen lassen. Ein Blick auf die Inhaltsstoffe lohnt sich, weil auch hier beschwerende Stoffe drin sein können."},
-  {"id": "serum", "label": "Serum und Fluid", "desc": "Leave-in-Seren und Föhnfluids mit Hitzeschutz pflegen und schützen in einem Schritt."},
-  {"id": "creme", "label": "Creme und Föhnmilch", "desc": "Leave-in-Cremes und Föhnmilch mit Hitzeschutz. Ideal für dicke bis sehr dicke Haare."},
-  {"id": "oel", "label": "Öl", "desc": "Haaröle mit Hitzeschutz. Achte auf die Reichhaltigkeit: Öle empfehle ich nur für normale bis sehr dicke Haare, nicht für feine oder dünne."}
+  {
+   "id": "trocken",
+   "label": "Trockener Hitzeschutz",
+   "desc": "Von der Textur wie Haarspray oder Trockenshampoo. Beschwert nicht und ist ideal auf trockenem Haar vor dem Styling, auch für feine und dünne Haare. Diese Produkte kommen nach und nach dazu."
+  },
+  {
+   "id": "spray",
+   "label": "Hitzeschutzspray",
+   "desc": "Der Klassiker fürs feuchte Haar, du kannst es aber auch auf trockenem Haar nutzen. Vor Lockenstab und Glätteisen gut antrocknen lassen. Ein Blick auf die Inhaltsstoffe lohnt sich, weil auch hier beschwerende Stoffe drin sein können."
+  },
+  {
+   "id": "serum",
+   "label": "Serum und Fluid",
+   "desc": "Leave-in-Seren und Föhnfluids mit Hitzeschutz pflegen und schützen in einem Schritt."
+  },
+  {
+   "id": "creme",
+   "label": "Creme und Föhnmilch",
+   "desc": "Leave-in-Cremes und Föhnmilch mit Hitzeschutz. Ideal für dicke bis sehr dicke Haare."
+  },
+  {
+   "id": "oel",
+   "label": "Öl",
+   "desc": "Haaröle mit Hitzeschutz. Achte auf die Reichhaltigkeit: Öle empfehle ich nur für normale bis sehr dicke Haare, nicht für feine oder dünne."
+  }
  ],
  "produkte": [
-  {"quelle": "leavein", "brand": "OGX", "name": "ProGrowth + Peptide Serum Styling Spray", "form": "spray"},
-  {"quelle": "leavein", "brand": "OGX", "name": "Bond Protein Repair Leave-in Conditioning Mist", "form": "spray"},
-  {"quelle": "leavein", "brand": "Kérastase", "name": "Gloss Absolu Anti-Frizz Glaze Milk", "form": "spray"},
-  {"quelle": "leavein", "brand": "Kérastase", "name": "Blond Absolu Blonde Guard", "form": "spray", "heat": "232"},
-  {"quelle": "leavein", "brand": "Redken", "name": "Acidic Color Gloss Heat Protection Treatment", "form": "spray"},
-  {"quelle": "leavein", "brand": "Gisou", "name": "Honey Milk Active Repair Leave-In Conditioner Mist", "form": "spray"},
-  {"quelle": "leavein", "brand": "Wella Professionals", "name": "Ultimate Smooth 24/7 Silky Milk", "form": "spray"},
-  {"quelle": "leavein", "brand": "Kérastase", "name": "Genesis Défense Thermique", "form": "serum"},
-  {"quelle": "leavein", "brand": "Kérastase", "name": "Première Sérum Filler Fondamental", "form": "serum"},
-  {"quelle": "leavein", "brand": "Olaplex", "name": "No.9 Bond Protector Nourishing Hair Serum", "form": "serum"},
-  {"quelle": "leavein", "brand": "Pantene Pro-V", "name": "Leave-In Moisture Boost Heat & Glow", "form": "creme", "heat": "230"},
-  {"quelle": "leavein", "brand": "Wella Professionals", "name": "Ultimate Repair Protective Leave-In", "form": "creme"},
-  {"quelle": "leavein", "brand": "Kérastase", "name": "Résistance Ciment Thermique", "form": "creme"},
-  {"quelle": "leavein", "brand": "Kérastase", "name": "Nutritive Nectar Thermique", "form": "creme"},
-  {"quelle": "oel", "brand": "amika", "name": "superfruit star lightweight hair styling oil", "form": "oel"},
-  {"quelle": "oel", "brand": "Balea Professional", "name": "Haaröl Oil Repair Intensiv", "form": "oel"},
-  {"quelle": "oel", "brand": "Balea Professional", "name": "Haaröl Plex Care", "form": "oel"},
-  {"quelle": "oel", "brand": "Coco & Eve", "name": "Like A Virgin Miracle Hair Elixir", "form": "oel"},
-  {"quelle": "oel", "brand": "Dejan Garz", "name": "Violet Hair Oil The Britney", "form": "oel"},
-  {"quelle": "oel", "brand": "Gisou", "name": "Honey Infused Hair Oil", "form": "oel"},
-  {"quelle": "oel", "brand": "Kérastase", "name": "Elixir Ultime L'Huile Originale", "form": "oel"},
-  {"quelle": "oel", "brand": "Kérastase", "name": "Première Huile Gloss Réparatrice", "form": "oel"},
-  {"quelle": "oel", "brand": "L'Oréal Paris Elvital", "name": "Öl Magique", "form": "oel"},
-  {"quelle": "oel", "brand": "L'Oréal Professionnel", "name": "Serie Expert Absolut Repair Molecular Oil", "form": "oel"},
-  {"quelle": "oel", "brand": "L'Oréal Professionnel", "name": "Serie Expert Metal DX Professional Concentrated Oil", "form": "oel"},
-  {"quelle": "oel", "brand": "OGX", "name": "Moroccan Argan Penetrating Oil", "form": "oel"},
-  {"quelle": "oel", "brand": "Olaplex", "name": "No.7 Bonding Oil", "form": "oel"},
-  {"quelle": "oel", "brand": "Olaplex", "name": "No.7 Shine Serum Oil Mist", "form": "oel"},
-  {"quelle": "oel", "brand": "OUAI", "name": "Hair Oil", "form": "oel"},
-  {"quelle": "oel", "brand": "Redken", "name": "naked gloss lightweight shine oil", "form": "oel"}
+  {
+   "quelle": "leavein",
+   "brand": "OGX",
+   "name": "ProGrowth + Peptide Serum Styling Spray",
+   "form": "spray"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "OGX",
+   "name": "Bond Protein Repair Leave-in Conditioning Mist",
+   "form": "spray"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Kérastase",
+   "name": "Gloss Absolu Anti-Frizz Glaze Milk",
+   "form": "spray"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Kérastase",
+   "name": "Blond Absolu Blonde Guard",
+   "form": "spray",
+   "heat": "232"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Redken",
+   "name": "Acidic Color Gloss Heat Protection Treatment",
+   "form": "spray"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Gisou",
+   "name": "Honey Milk Active Repair Leave-In Conditioner Mist",
+   "form": "spray"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Wella Professionals",
+   "name": "Ultimate Smooth 24/7 Silky Milk",
+   "form": "spray"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Schwarzkopf Gliss",
+   "name": "Sprühkur Bonding Micro Repair",
+   "form": "spray",
+   "heat": "230"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Schwarzkopf Gliss",
+   "name": "Sprüh-Conditioner Express-Repair Aqua Revive",
+   "form": "spray",
+   "heat": "230"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Schwarzkopf Gliss",
+   "name": "Sprüh-Conditioner Express-Repair Liquid Silk",
+   "form": "spray",
+   "heat": "230"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Color Wow",
+   "name": "Money Mist",
+   "form": "spray",
+   "heat": "ja"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Kérastase",
+   "name": "Genesis Défense Thermique",
+   "form": "serum"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Kérastase",
+   "name": "Première Sérum Filler Fondamental",
+   "form": "serum"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Olaplex",
+   "name": "No.9 Bond Protector Nourishing Hair Serum",
+   "form": "serum"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Pantene Pro-V",
+   "name": "Leave-In Moisture Boost Heat & Glow",
+   "form": "creme",
+   "heat": "230"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Wella Professionals",
+   "name": "Ultimate Repair Protective Leave-In",
+   "form": "creme"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Kérastase",
+   "name": "Résistance Ciment Thermique",
+   "form": "creme"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Kérastase",
+   "name": "Nutritive Nectar Thermique",
+   "form": "creme"
+  },
+  {
+   "quelle": "oel",
+   "brand": "amika",
+   "name": "superfruit star lightweight hair styling oil",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Balea Professional",
+   "name": "Haaröl Oil Repair Intensiv",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Balea Professional",
+   "name": "Haaröl Plex Care",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Coco & Eve",
+   "name": "Like A Virgin Miracle Hair Elixir",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Dejan Garz",
+   "name": "Violet Hair Oil The Britney",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Gisou",
+   "name": "Honey Infused Hair Oil",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Kérastase",
+   "name": "Elixir Ultime L'Huile Originale",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Kérastase",
+   "name": "Première Huile Gloss Réparatrice",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "L'Oréal Paris Elvital",
+   "name": "Öl Magique",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "L'Oréal Professionnel",
+   "name": "Serie Expert Absolut Repair Molecular Oil",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "L'Oréal Professionnel",
+   "name": "Serie Expert Metal DX Professional Concentrated Oil",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "OGX",
+   "name": "Moroccan Argan Penetrating Oil",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Olaplex",
+   "name": "No.7 Bonding Oil",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Olaplex",
+   "name": "No.7 Shine Serum Oil Mist",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "OUAI",
+   "name": "Hair Oil",
+   "form": "oel"
+  },
+  {
+   "quelle": "oel",
+   "brand": "Redken",
+   "name": "naked gloss lightweight shine oil",
+   "form": "oel"
+  }
  ],
  "eigene": []
 }

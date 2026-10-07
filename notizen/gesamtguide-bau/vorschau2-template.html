@@ -881,7 +881,7 @@ function itemHtml(p){
   const tags = [`<span class="tag">${p.segment}</span>`];
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
   if(p.dry) tags.push(`<span class="pill">Trockenes Öl</span>`);
-  if(p.heat) tags.push(`<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
+  if(p.heat) tags.push(p.heat==="ja" ? `<span class="pill">Mit Hitzeschutz</span>` : `<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
   if(p.kalk) tags.push(`<span class="pill">Löst auch Kalk</span>`);
   let body = "";
   if(p.type==="shampoo"){
