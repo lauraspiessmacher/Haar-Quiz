@@ -128,7 +128,6 @@ h3.sec{font-size:24px;margin:24px 0 12px}
 .tags{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px}
 .tag{font-size:12px;background:var(--card);border-radius:999px;padding:1px 9px;color:var(--muted);white-space:nowrap}
 .pill{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:0 8px;white-space:nowrap}
-.pill.rank{background:var(--ink);color:var(--bg);border-color:var(--ink);font-variant-numeric:tabular-nums}
 .name{font-family:var(--serif);font-size:19px;line-height:1.25;margin-top:1px}
 .note{font-size:14px;color:var(--muted);margin-top:3px}
 .line{font-size:14px;color:var(--muted);margin-top:2px}
@@ -782,6 +781,7 @@ const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 function sorter(type, cat){
   if(type==="kopfhaut" && DATA.kopfhaut.rank && DATA.kopfhaut.rank[cat]){ const r=DATA.kopfhaut.rank[cat]; return (a,b)=>r.indexOf(a.key)-r.indexOf(b.key); }
   if(type==="shampoo" && cat==="kinder") return (a,b)=>(a.rank||99)-(b.rank||99);
+  if(type==="shampoo" && DATA.shampoo.rank && DATA.shampoo.rank[cat]){ const r=DATA.shampoo.rank[cat]; return (a,b)=>r.indexOf(a.brand+"|"+a.name)-r.indexOf(b.brand+"|"+b.name); }
   if(type==="shampoo" && cat==="tief") return (a,b)=>(b.kalk?1:0)-(a.kalk?1:0) || byName(a,b);
   return byName;
 }
@@ -878,9 +878,8 @@ function merkItemHtml(p){
   return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<div class="mtxt"><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span><span class="tag">${p.segment}</span>${buyHtml(p,true)}</div></li>`;
 }
 
-function itemHtml(p, platz){
+function itemHtml(p){
   const tags = [`<span class="tag">${p.segment}</span>`];
-  if(platz) tags.unshift(`<span class="pill rank">Platz ${platz}</span>`);
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
   if(p.dry) tags.push(`<span class="pill">Trockenes Öl</span>`);
   if(p.heat) tags.push(p.heat==="ja" ? `<span class="pill">Mit Hitzeschutz</span>` : `<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
@@ -972,10 +971,7 @@ function renderGuide(){
     const r = applyMine(items, state.type); items = r.items.slice().sort(sorter(state.type, state.cat));
     const title = state.cat==="alle" ? `Alle ${PLURAL[state.type]}` : label(state.type,state.cat);
     html += `<h3 class="sec">${esc(title)}<span class="count">${items.length}</span></h3>${desc?`<p class="catdesc">${desc}</p>`:""}${r.note?`<p class="catdesc">${r.note}</p>`:""}`;
-    /* Kopfhautpflege: Rangliste sichtbar machen, das Beste für diesen Kopfhauttyp steht oben */
-    const ranked = state.type==="kopfhaut" && DATA.kopfhaut.rank && DATA.kopfhaut.rank[state.cat];
-    if(ranked && items.length) html += `<p class="catdesc rankinfo">${state.cat==="alle" ? "Sortiert nach Wirksamkeit und Inhaltsstoffen: Die stärksten Produkte stehen oben, die mildesten unten. Die Kopfhautpeelings stehen am Ende, nach Stärke sortiert." : "Sortiert nach Wirksamkeit und Inhaltsstoffen für diesen Kopfhauttyp: Platz 1 passt am besten, nach unten wird es schwächer."}</p>`;
-    html += items.length ? `<ul class="grid">${items.map((p,i) => itemHtml(p, ranked ? i+1 : 0)).join("")}</ul>` : `<p class="empty">Dazu habe ich gerade kein Produkt in der Liste.</p>`;
+    html += items.length ? `<ul class="grid">${items.map(p => itemHtml(p)).join("")}</ul>` : `<p class="empty">Dazu habe ich gerade kein Produkt in der Liste.</p>`;
   }
   guide.innerHTML = html + `</div>`;
   bindControls();
