@@ -1,30 +1,31 @@
 [
  {
-  "id": "leavein",
-  "titel": "Haarbruch & Spliss vorbeugen",
-  "teaser": "Was eine Leave-in-Pflege gegen Haarbruch und Spliss tun kann und wo sie aufhört.",
-  "datei": "leavein.html",
-  "arzt": false
- },
- {
-  "id": "reparatur",
-  "titel": "Kann man Haar reparieren?",
-  "teaser": "Protein, Keratin und Bond Repair im Vergleich: was wirklich wirkt.",
-  "datei": "reparatur.html",
-  "arzt": false
- },
- {
-  "id": "prewash",
-  "titel": "Pre-Wash-Routinen",
-  "teaser": "ÖWC, CWC, MWC und LWC: Pflege, bevor das Shampoo kommt.",
-  "datei": "prewash.html",
-  "arzt": false
+  "id": "genetik",
+  "titel": "Was ist genetisch bedingt?",
+  "teaser": "Haardicke, Struktur, Länge: Was euch eure Gene mitgeben und was ihr trotzdem beeinflussen könnt.",
+  "datei": "genetik.html",
+  "arzt": false,
+  "entwurf": true
  },
  {
   "id": "haarzyklus",
   "titel": "Der Haarzyklus",
   "teaser": "Wie eure Haare wachsen, ruhen und ausfallen und was ihr selbst beeinflussen könnt.",
   "datei": "haarzyklus.html",
+  "arzt": true
+ },
+ {
+  "id": "porositaet",
+  "titel": "Haarporosität",
+  "teaser": "Was Porosität bedeutet und was sie für eure Pflege heißt.",
+  "datei": "porositaet.html",
+  "arzt": false
+ },
+ {
+  "id": "kopfhaut",
+  "titel": "Kopfhautgesundheit",
+  "teaser": "Warum gesunde Haare auf der Kopfhaut beginnen und worauf ihr achten könnt.",
+  "datei": "kopfhaut.html",
   "arzt": true
  },
  {
@@ -42,10 +43,39 @@
   "arzt": false
  },
  {
+  "id": "reparatur",
+  "titel": "Kann man Haar reparieren?",
+  "teaser": "Protein, Keratin und Bond Repair im Vergleich: was wirklich wirkt.",
+  "datei": "reparatur.html",
+  "arzt": false
+ },
+ {
+  "id": "repair",
+  "titel": "Was bedeutet „Repair“ eigentlich?",
+  "teaser": "Feuchtigkeit, Proteine oder Bond Repair? Warum trockene Haare nicht automatisch kaputt sind.",
+  "datei": "repair.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "leavein",
+  "titel": "Haarbruch & Spliss vorbeugen",
+  "teaser": "Was eine Leave-in-Pflege gegen Haarbruch und Spliss tun kann und wo sie aufhört.",
+  "datei": "leavein.html",
+  "arzt": false
+ },
+ {
   "id": "llmethode",
   "titel": "Die LL-Methode",
   "teaser": "Meine tägliche Leave-in-Routine zwischen den Wäschen.",
   "datei": "llmethode.html",
+  "arzt": false
+ },
+ {
+  "id": "prewash",
+  "titel": "Pre-Wash-Routinen",
+  "teaser": "ÖWC, CWC, MWC und LWC: Pflege, bevor das Shampoo kommt.",
+  "datei": "prewash.html",
   "arzt": false
  },
  {
@@ -56,24 +86,66 @@
   "arzt": false
  },
  {
-  "id": "kopfhaut",
-  "titel": "Kopfhautgesundheit",
-  "teaser": "Warum gesunde Haare auf der Kopfhaut beginnen und worauf ihr achten könnt.",
-  "datei": "kopfhaut.html",
-  "arzt": true
+  "id": "silikone",
+  "titel": "Silikone",
+  "teaser": "Nicht gut, nicht schlecht: Für wen Silikone total Sinn machen und für wen eher nicht.",
+  "datei": "silikone.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "seide",
+  "titel": "Seide oder Satin?",
+  "teaser": "Was beim Kissenbezug und bei der Haube wichtig ist und wo Satin völlig reicht.",
+  "datei": "seide.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "buersten",
+  "titel": "Haarbürsten",
+  "teaser": "Welche Bürste wofür, und wie ihr bürstet, ohne eure Haare kaputt zu machen.",
+  "datei": "buersten.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "splissschnitt",
+  "titel": "Der Splissschnitt",
+  "teaser": "Spliss loswerden, ohne Länge zu verlieren, und wie ich ihn mir selbst schneide.",
+  "datei": "splissschnitt.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "scheren",
+  "titel": "Haarschere ist nicht gleich Haarschere",
+  "teaser": "Warum sich eine Friseurschere lohnt, wenn ihr selbst schneidet.",
+  "datei": "scheren.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "haarfarbe",
+  "titel": "Haarfarbe verstehen",
+  "teaser": "Blondieren, Färben, Tönen, Glossing: Was wächst raus, was wäscht sich raus?",
+  "datei": "haarfarbe.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "farbstiche",
+  "titel": "Farbstiche und der Farbkreis",
+  "teaser": "Rot-, Orange- oder Gelbstich? Eure Mini-Farbberatung mit dem Farbkreis.",
+  "datei": "farbstiche.html",
+  "arzt": false,
+  "entwurf": true
  },
  {
   "id": "mythen",
   "titel": "Haarmythen",
   "teaser": "Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?",
   "datei": "mythen.html",
-  "arzt": false
- },
- {
-  "id": "porositaet",
-  "titel": "Haarporosität",
-  "teaser": "Was Porosität bedeutet und was sie für eure Pflege heißt.",
-  "datei": "porositaet.html",
   "arzt": false
  }
 ]
