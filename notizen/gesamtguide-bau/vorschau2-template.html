@@ -350,6 +350,7 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .note{background:#F1EBE6;border-left:2px solid #382F2E;border-radius:0 12px 12px 0;padding:18px 20px;margin:26px 0 8px}
 .wart .note h3{margin-top:0}
 .wart .note p:last-child,.wart .note ul:last-child{margin-bottom:0}
+.wdraft{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#7A6A65;border:1px dashed rgba(56,47,46,.35);border-radius:4px;padding:5px 10px;margin:0 0 18px}
 .wfine{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:16px;margin-top:30px}
 
 /* ---------- Hair Journey als Buch ---------- */
@@ -596,12 +597,11 @@ __ROUTINE__
   <section class="view" id="v-wissen" hidden>
     <div id="wissenListe"><div class="intro"><h1>Wissen</h1><p>Haarpflege einfach erklärt: ehrlich, ohne Marketing-Versprechen.</p></div>
     <div class="cards" id="wissenCards">
-      <div class="card soon"><span class="kap">Bald</span><h3>Spliss & Haarbruch: der Unterschied</h3><p>Was Spliss von Haarbruch unterscheidet, warum Spliss nicht repariert werden kann und was wirklich hilft.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><span class="kap">Bald</span><h3>Die LL-Methode</h3><p>Tägliche Leave-in-Pflege zwischen den Wäschen.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><span class="kap">Bald</span><h3>Haaröle erklärt</h3><p>Welches Öl zu deinen Haaren passt und was ein trockenes Öl ausmacht.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><span class="kap">Bald</span><h3>Kopfhautgesundheit</h3><p>Was deiner Kopfhaut guttut und worauf du achten kannst.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><span class="kap">Bald</span><h3>Haarmythen</h3><p>Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><span class="kap">Bald</span><h3>Haarporosität</h3><p>Was Porosität bedeutet und was sie für deine Pflege heißt.</p><span class="go">Kommt bald</span></div>
+
+
+
+
+
     </div></div>
     <article class="wart" id="wissenArt" hidden></article>
   </section>
@@ -763,7 +763,7 @@ function sorter(type, cat){
 /* ---------- Wissen ---------- */
 (function(){
   const box = document.getElementById("wissenCards");
-  box.insertAdjacentHTML("afterbegin", WISSEN.map((w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
+  box.insertAdjacentHTML("afterbegin", WISSEN.map((w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}${w.entwurf?" · Entwurf":""}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
   /* jedes Buch bekommt Seiten dahinter, die beim Drüberfahren leicht blättern */
   box.querySelectorAll(".card").forEach(c => {
     const w = document.createElement("div"); w.className = "shelfbook";
@@ -803,7 +803,7 @@ function renderWissen(){
   const art = document.getElementById("wissenArt"); art.hidden = !w;
   if(!w){ art.innerHTML = ""; return; }
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
-  art.innerHTML = back + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;
+  art.innerHTML = back + (w.entwurf ? `<p class="wdraft">Entwurf: Dieser Text ist noch nicht von Laura geprüft.</p>` : "") + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;
   art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
 }
 

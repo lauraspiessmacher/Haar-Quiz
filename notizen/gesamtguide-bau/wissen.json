@@ -33,5 +33,53 @@
   "teaser": "Welche Arten es gibt und was dabei in eurer Kopfhaut passiert.",
   "datei": "haarausfall.html",
   "arzt": true
+ },
+ {
+  "id": "unterschied",
+  "titel": "Spliss & Haarbruch: der Unterschied",
+  "teaser": "Was Spliss von Haarbruch unterscheidet und warum beides zusammenhängt.",
+  "datei": "unterschied.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "llmethode",
+  "titel": "Die LL-Methode",
+  "teaser": "Meine tägliche Leave-in-Routine zwischen den Wäschen.",
+  "datei": "llmethode.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "haaroele",
+  "titel": "Haaröle erklärt",
+  "teaser": "Welches Öl zu euren Haaren passt und was ein trockenes Öl ausmacht.",
+  "datei": "haaroele.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "kopfhaut",
+  "titel": "Kopfhautgesundheit",
+  "teaser": "Warum gesunde Haare auf der Kopfhaut beginnen und worauf ihr achten könnt.",
+  "datei": "kopfhaut.html",
+  "arzt": true,
+  "entwurf": true
+ },
+ {
+  "id": "mythen",
+  "titel": "Haarmythen",
+  "teaser": "Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?",
+  "datei": "mythen.html",
+  "arzt": false,
+  "entwurf": true
+ },
+ {
+  "id": "porositaet",
+  "titel": "Haarporosität",
+  "teaser": "Was Porosität bedeutet und was sie für eure Pflege heißt.",
+  "datei": "porositaet.html",
+  "arzt": false,
+  "entwurf": true
  }
 ]

@@ -193,3 +193,5 @@
   Kleine Ergänzung von mir: „kurzfristig“ bei „verhindern, dass sich der Spliss weiter aufspaltet“.
 - Wissen Kapitel 2–5 (reparatur, prewash, haarzyklus, haarausfall) im Stil von Kapitel 1 umgeschrieben: „ihr“, wärmer/persönlicher, Fakten unverändert, keine erfundenen Erlebnisse. Alte Fassungen: notizen/wissen/*-fassung-1.html.
   Kleine inhaltliche Ergänzungen: reparatur „Deshalb ist es so wichtig, dass jede Wäsche mit Pflege endet“; prewash ÖWC-Einwirkzeit „(nur in den Längen)“; Feuchtigkeit „geschmeidig und flexibel“ statt „elastisch“. Ärztin-Hinweis auf „lasst“ umgestellt.
+- Wissen Kapitel 6–11 als ENTWÜRFE geschrieben (von mir, Laura liest noch): unterschied, llmethode, haaroele, kopfhaut, mythen, porositaet. In wissen.json "entwurf": true → Karte „Kapitel N · Entwurf“, im Text Hinweis „Entwurf: noch nicht von Laura geprüft“. Nach Freigabe "entwurf" entfernen.
+  Alle grauen „Kommt bald“-Kacheln sind damit weg. Offene Fragen: LL-Methode (wofür steht LL? genaue Schritte/Menge/Häufigkeit), Haarmythen (weitere Mythen von Laura?).
