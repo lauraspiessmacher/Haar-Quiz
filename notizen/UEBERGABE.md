@@ -206,3 +206,4 @@
 - Kapitel 8 (Haaröle) FREIGEGEBEN.
 - Kapitel 9 (Kopfhaut) nach Lauras Feedback: Seren/Tonika bleiben, Peelings werden ausgespült; „statt wild über Kopfhaut und durch die Haare“; Öl nur auf trockene Kopfhaut, nie über Nacht (Poren verstopfen);
   Gewohnheiten neu: tägliche Kopfhautmassage 5–10 Min., Fingerkuppen statt Nägel, Probleme (Juckreiz, Schuppen, Rötungen) aktiv angehen. Alte 3 Gewohnheiten (ausspülen, lauwarm, Ansatz föhnen) noch drin – Laura fragen. Noch Entwurf.
+- Kapitel 9: Gewohnheiten ergänzt (Kissenbezug wechseln, Haarbürsten reinigen, Tiefenreinigung 1–3x/Monat je nach Kopfhauttyp/Styling).
