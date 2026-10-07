@@ -23,14 +23,14 @@
  {
   "id": "haarzyklus",
   "titel": "Der Haarzyklus",
-  "teaser": "Wie dein Haar wächst, ruht und ausfällt und was du selbst beeinflussen kannst.",
+  "teaser": "Wie eure Haare wachsen, ruhen und ausfallen und was ihr selbst beeinflussen könnt.",
   "datei": "haarzyklus.html",
   "arzt": true
  },
  {
   "id": "haarausfall",
   "titel": "Haarausfall",
-  "teaser": "Welche Arten es gibt und was dabei in deiner Kopfhaut passiert.",
+  "teaser": "Welche Arten es gibt und was dabei in eurer Kopfhaut passiert.",
   "datei": "haarausfall.html",
   "arzt": true
  }

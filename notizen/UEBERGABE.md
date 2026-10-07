@@ -191,3 +191,5 @@
 - Wissen Kapitel 1 (leavein) nach Lauras Diktat neu geschrieben (Fassung 1 gesichert in notizen/wissen/leavein-fassung-1.html, Diktat in notizen/wissen/leavein-diktat.md).
   Neu: Definition Leave-in, persönliche Geschichte (Holy Grail), Abschnitt „Warum es sich lohnt …“, Mikrofaser-Empfehlung, „Mehr Flexibilität“, Splissschnitt ~1 cm oberhalb, Abschnitt „Welche Leave-in-Pflege zu euch passt“, Haaröl = Add-on. Sonne gestrichen. Ansprache „ihr“.
   Kleine Ergänzung von mir: „kurzfristig“ bei „verhindern, dass sich der Spliss weiter aufspaltet“.
+- Wissen Kapitel 2–5 (reparatur, prewash, haarzyklus, haarausfall) im Stil von Kapitel 1 umgeschrieben: „ihr“, wärmer/persönlicher, Fakten unverändert, keine erfundenen Erlebnisse. Alte Fassungen: notizen/wissen/*-fassung-1.html.
+  Kleine inhaltliche Ergänzungen: reparatur „Deshalb ist es so wichtig, dass jede Wäsche mit Pflege endet“; prewash ÖWC-Einwirkzeit „(nur in den Längen)“; Feuchtigkeit „geschmeidig und flexibel“ statt „elastisch“. Ärztin-Hinweis auf „lasst“ umgestellt.

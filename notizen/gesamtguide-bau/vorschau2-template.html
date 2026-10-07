@@ -803,7 +803,7 @@ function renderWissen(){
   const art = document.getElementById("wissenArt"); art.hidden = !w;
   if(!w){ art.innerHTML = ""; return; }
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
-  art.innerHTML = back + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lass das bitte ärztlich abklären.</p>` : "") + back;
+  art.innerHTML = back + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;
   art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
 }
 
