@@ -396,18 +396,25 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 }
 @media (prefers-reduced-motion:reduce){ #wissenCards .card{transition:none} }
 
-/* ---------- Buch öffnet sich (Übergang zum Kapitel) ---------- */
-.bookfly{position:fixed;z-index:3000;perspective:2200px;pointer-events:none;transition:top .55s cubic-bezier(.5,0,.2,1),left .55s cubic-bezier(.5,0,.2,1),width .55s cubic-bezier(.5,0,.2,1),height .55s cubic-bezier(.5,0,.2,1),opacity .4s ease}
-.bookfly .bf-page{position:absolute;inset:0;background:var(--bg);border-radius:3px 10px 10px 3px;box-shadow:inset 18px 0 30px -18px rgba(56,47,46,.35);transition:border-radius .55s}
-.bookfly .bf-cover{position:absolute;inset:0;background:#382F2E;color:#F3ECE2;border-radius:3px 10px 10px 3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:30px;
-  transform-origin:left center;transition:transform .7s cubic-bezier(.55,.05,.3,1),border-radius .55s,opacity .7s;backface-visibility:hidden;box-shadow:6px 0 30px rgba(0,0,0,.25)}
-.bookfly .bf-cover .kap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#E9DFD2}
-.bookfly .bf-cover h3{font-family:var(--serif);font-weight:400;color:#F3ECE2;font-size:clamp(30px,5vw,56px);line-height:1.05;margin:0}
-.bookfly .bf-cover p,.bookfly .bf-cover .go{display:none}
-.bookfly.grow .bf-page,.bookfly.grow .bf-cover{border-radius:0}
-.bookfly.opencover .bf-cover{transform:rotateY(-105deg);opacity:.6}
+/* ---------- Buch klappt auf und man zoomt hinein (Übergang zum Kapitel) ---------- */
+.bookfly{position:fixed;z-index:3000;perspective:1600px;pointer-events:none;transform-origin:0 0;transition:transform .7s cubic-bezier(.6,0,.25,1),opacity .45s ease}
+.bookfly .bf-page{position:absolute;inset:0;background:#FBF7F1;border-radius:2px 8px 8px 2px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:16% 12% 0;text-align:center;
+  box-shadow:inset 14px 0 18px -14px rgba(56,47,46,.45),0 14px 30px -14px rgba(56,47,46,.5)}
+.bookfly .bf-page .kap{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#7A6A65}
+.bookfly .bf-page .t{font-family:var(--serif);font-size:17px;line-height:1.1;color:#382F2E}
+.bookfly .bf-page .lines{width:100%;flex:1;margin-top:10px;background:repeating-linear-gradient(180deg,transparent 0 9px,rgba(56,47,46,.13) 9px 10px);-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
+html[data-stil="rouje"] .bookfly .bf-page .t{text-transform:uppercase}
+.bookfly .bf-cover{position:absolute;inset:0;transform-origin:left center;transform-style:preserve-3d;transition:transform .72s cubic-bezier(.5,.05,.3,1)}
+.bookfly .bf-cover .front,.bookfly .bf-cover .back{position:absolute;inset:0;border-radius:3px 10px 10px 3px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.bookfly .bf-cover .front{background:#382F2E;color:#F3ECE2;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:28px 18px 20px 30px}
+.bookfly .bf-cover .front .kap{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#E9DFD2;margin-top:4px}
+.bookfly .bf-cover .front h3{font-family:var(--serif);font-weight:400;color:#F3ECE2;font-size:24px;line-height:1.1;margin:6px 0 0}
+.bookfly .bf-cover .front p{margin:0;color:#E9DFD2;font-size:13.5px;line-height:1.45}
+.bookfly .bf-cover .front .go{display:none}
+.bookfly .bf-cover .back{transform:rotateY(180deg);background:linear-gradient(270deg,#EFE7DC,#F7F2EA 70%,#E6DDD1);box-shadow:inset -14px 0 18px -14px rgba(56,47,46,.4)}
+html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
+.bookfly.open .bf-cover{transform:rotateY(-172deg)}
 .bookfly.fade{opacity:0}
-html[data-stil="rouje"] .bookfly .bf-cover h3{text-transform:uppercase}
 </style>
 <!--DESIGN-->
 </head>
@@ -742,22 +749,24 @@ function sorter(type, cat){
   box.querySelectorAll(".wcard").forEach(b => b.onclick = () => openBook(b, () => open(b.dataset.w)));
 
 })();
-/* Buch öffnet sich über die ganze Seite und blendet in den Text über */
+/* Buch klappt im Regal auf, dann zoomt man in die rechte Seite hinein, daraus wird die neue Seite */
 function openBook(card, done){
   const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   if(reduce || !card.getBoundingClientRect){ done(); return; }
   const r = card.getBoundingClientRect();
+  const kap = (card.querySelector(".kap")||{}).textContent || "", tit = (card.querySelector("h3")||{}).textContent || "";
   const fly = document.createElement("div"); fly.className = "bookfly";
-  fly.innerHTML = `<div class="bf-page"></div><div class="bf-cover">${card.innerHTML}</div>`;
+  fly.innerHTML = `<div class="bf-page"><span class="kap">${esc(kap)}</span><span class="t">${esc(tit)}</span><span class="lines"></span></div>
+    <div class="bf-cover"><div class="front">${card.innerHTML}</div><div class="back"></div></div>`;
   Object.assign(fly.style, {top:r.top+"px", left:r.left+"px", width:r.width+"px", height:r.height+"px"});
-  document.body.appendChild(fly);
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    fly.classList.add("grow");
-    Object.assign(fly.style, {top:"0px", left:"0px", width:window.innerWidth+"px", height:window.innerHeight+"px"});
-  }));
-  setTimeout(() => { fly.classList.add("opencover"); }, 380);
-  setTimeout(() => { done(); fly.classList.add("fade"); }, 1050);
-  setTimeout(() => fly.remove(), 1500);
+  document.body.appendChild(fly); card.style.visibility = "hidden";
+  const vw = window.innerWidth, vh = window.innerHeight;
+  const sc = Math.max(vw / r.width, vh / r.height) * 1.02;
+  const dx = (vw - r.width*sc)/2 - r.left, dy = -r.top; /* oben an der Seite mit dem Titel bleiben */
+  requestAnimationFrame(() => requestAnimationFrame(() => fly.classList.add("open")));
+  setTimeout(() => { fly.classList.add("zoom"); fly.style.transform = `translate(${dx}px,${dy}px) scale(${sc})`; }, 760);
+  setTimeout(() => { done(); card.style.visibility = ""; fly.classList.add("fade"); }, 1480);
+  setTimeout(() => fly.remove(), 1950);
 }
 function renderWissen(){
   const w = WISSEN.find(x => x.id === state.wissen);
