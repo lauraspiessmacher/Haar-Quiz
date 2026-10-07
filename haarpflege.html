@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Haarpflege einfach erklärt</title>
 <style>
 :root{
@@ -172,7 +177,8 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .toast.on{opacity:1}
 .fine{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
 </style>
-
+</head>
+<body>
 <header class="top">
   <div class="in">
     <button class="logo" id="home" type="button"><b>Haarpflege einfach erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span></button>
@@ -187,7 +193,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 </header>
 
 <main class="in">
-  <p class="note-banner">Vorschau mit allen echten Produkten aus deinen 6 Guides. Quiz und Wissen sind noch Platzhalter.</p>
+  <p class="note-banner">Wissen ist noch ein Platzhalter. Die Wissenstexte kommen später.</p>
 
   <!-- ===================== PRODUKTE ===================== -->
   <section class="view" id="v-produkte">
@@ -204,11 +210,11 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 
   <!-- ===================== QUIZ ===================== -->
   <section class="view" id="v-quiz" hidden>
-    <div class="intro"><h1>Quiz</h1><p>Finde heraus, was deine Haare brauchen. Dein Ergebnis bekommst du direkt am Ende.</p></div>
+    <div class="intro"><h1>Quiz</h1><p>Drei kurze Checks für deine Haare, deine Pflege und deine Kopfhaut. Dein Ergebnis bekommst du direkt am Ende.</p></div>
     <div class="cards">
-      <a class="card" href="quiz.html"><h3>Finde deinen Haartyp</h3><p>Feine, normale oder dicke Haare? In ein paar Fragen weißt du es.</p><span class="go">Quiz starten</span></a>
-      <a class="card" href="quiz-kopfhaut.html"><h3>Welche Kopfhaut hast du gerade?</h3><p>Der Kopfhaut-Check: In neun kurzen Fragen findest du heraus, welches Shampoo zu deiner Kopfhaut passt.</p><span class="go">Quiz starten</span></a>
-      <div class="card soon"><h3>Quiz 3</h3><p>Kommt bald.</p><span class="go">Bald verfügbar</span></div>
+      <a class="card" href="quiz-haar.html"><h3>Haar-Check</h3><p>Glatt, wellig oder lockig, und welcher Typ genau? Deine Struktur zeigt dir, wie du pflegst und was beim Styling realistisch ist.</p><span class="go">Quiz starten</span></a>
+      <a class="card" href="quiz-pflege.html"><h3>Pflege-Check</h3><p>Wie viel Pflege brauchen deine Haare? Findet deine Haardicke und deinen Haarzustand heraus.</p><span class="go">Quiz starten</span></a>
+      <a class="card" href="quiz-kopfhaut.html"><h3>Kopfhaut-Check</h3><p>Welche Kopfhaut hast du gerade? In neun kurzen Fragen zum passenden Shampoo.</p><span class="go">Quiz starten</span></a>
     </div>
   </section>
 
@@ -525,4 +531,5 @@ function toast(t){ const el=document.getElementById("toast"); el.textContent=t; 
 window.addEventListener("resize", setHH);
 readHash(); q.value = state.q; render();
 </script>
-
+</body>
+</html>

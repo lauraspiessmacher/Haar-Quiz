@@ -95,3 +95,10 @@
 - Laura: Produktarten sind die HAUPTREITER → als zweite Reiterzeile in der Kopfzeile (Shampoo · Maske · Conditioner · Leave-in · Haaröl · Kopfhautpflege, mit Symbol und Anzahl), Kacheln entfernt, Überschrift „Alle Produkte“ entfernt. Auf dem Handy ist die Reiterzeile seitlich wischbar.
 - Problem 07.10.: In Lauras Vorschaufenster lief das Programm der 3,2-MB-Datei nicht (nur Suchleiste sichtbar). Lösung: privater Link https://claude.ai/artifact/7GncL1B7ZJVHi8Dtsj6cbS (Datei notizen/ux-vorschau-2-link.html + Quiz als quiz.html). Updates: build-vorschau.py ausführen und dieselbe Datei neu veröffentlichen (gleiche Adresse). Bereichs-Links: …#shampoo.kraeftig, …#oel.fein, …#quiz.
 - Quiz 2 von Laura: quiz-kopfhaut.html (Kopfhaut-Check, 9 Fragen). Unter „Quiz“ verlinkt. Quiz 3 fehlt noch.
+
+## 07.10.2026 – OFFIZIELLE GESAMTSEITE (Laura: „Go“)
+- Datei: haarpflege.html (Hauptordner, zum lokalen Öffnen) + privater Link https://claude.ai/artifact/7GncL1B7ZJVHi8Dtsj6cbS (Datei notizen/gesamtguide-bau/haarpflege-link.html + die drei Quiz als Zusatzdateien).
+- Neu bauen nach jeder Guide-Änderung: `cd notizen/gesamtguide-bau && node dump.js data.json && python3 build-vorschau.py data.json`, dann haarpflege-link.html neu veröffentlichen (Artifact mit url oben, gleiche Adresse).
+- Quiz: quiz-haar.html (Haar-Check, Struktur), quiz-pflege.html (Pflege-Check, Dicke + Zustand), quiz-kopfhaut.html (Kopfhaut-Check). Das alte Quiz index.html („Finde deinen Haartyp“) ist nicht mehr verlinkt, Datei bleibt (Laura fragen, ob es weg kann).
+- Alte Vorschauen liegen in notizen/archiv/.
+- Nächste Schritte: Laura nutzt die Seite und sammelt Feedback (Design, Anordnung, Texte) → in kleinen Runden umsetzen. Später: Wissenstexte, Website (Ladezeit: Bilder als einzelne Dateien), vorher „Fast die gleiche Basis wie …“ klären.
