@@ -1,5 +1,7 @@
 # Übergabe: Haar-Guides
 
+- WICHTIG: Mit Laura IMMER auf Deutsch schreiben, auch kurze Zwischenmeldungen während der Arbeit.
+
 ## Dateien
 - `index.html` – Haar-Quiz (war ursprünglich eine umbenannte ZIP, jetzt entpackt)
 - `leave-in-guide.html` – Leave-in-Guide, 103 Produkte (56 Drogerie, 47 High-End), alle mit freigestelltem Bild
