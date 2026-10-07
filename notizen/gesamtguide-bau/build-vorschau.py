@@ -9,6 +9,10 @@ data = open(sys.argv[1]).read().replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
 t = t.replace('__KAUF__', open(f'{S}/kauflinks.json').read().strip() or '{}')
+# Wissenstexte: Übersicht aus wissen.json, Inhalt aus wissen/<id>.html
+_w = json.load(open(f'{S}/wissen.json'))
+for w in _w: w['html'] = open(f'{S}/wissen/' + w.pop('datei')).read()
+t = t.replace('__WISSEN__', json.dumps(_w, ensure_ascii=False).replace('</', '<\\/'))
 # Serie „Haarpflege 1x1“: Titelbilder als eingebettete Bilder
 _serie = json.load(open(f'{S}/serie.json'))
 for r in _serie:

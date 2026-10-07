@@ -158,3 +158,10 @@
   Links laut Laura in Reihenfolge = Folge 1–6 (alle sechs per Instagram-Vorschaubild bestätigt). Folge 7 (Kopfhautpflege: richtige Technik) hat noch KEINEN Link → zeigt aufs Profil.
   Neue Folge: Bild in serie/ legen, Eintrag in serie.json ergänzen, neu bauen. Es laufen max. 10 (neueste zuerst).
 - Folge 7 ist noch nicht online → in serie.json "bald": true (Hinweis „Bald online“, Klick → Profil). Wenn online: Link eintragen und "bald" entfernen.
+
+## Wissen – erste Texte (von Laura, noch nicht Korrektur gelesen)
+- Original: notizen/wissen/haarwissen-original.html. Aufgeteilt in gesamtguide-bau/wissen/<id>.html, Übersicht in gesamtguide-bau/wissen.json (id, Titel, Kurztext, Datei, arzt=Hinweis „keine Ärztin“).
+- Fünf Seiten: leavein (Haarbruch & Spliss vorbeugen), reparatur (Kann man Haar reparieren?), prewash (Pre-Wash-Routinen), haarzyklus (Der Haarzyklus), haarausfall (Haarausfall). Link z. B. #wissen.prewash.
+- Fertige Texte stehen oben als dunkle „Lesen“-Kacheln, die übrigen Themen bleiben graue „Kommt bald“-Kacheln.
+- Einzige inhaltliche Änderung: prewash, Punkt Kopfhaut → „und dort nie über Nacht“ ergänzt (Lauras Regel: Öl nie über Nacht auf der Kopfhaut; Tabelle nennt bei ÖWC „bis über Nacht“).
+- Neuer Text: Datei in wissen/ ablegen, Eintrag in wissen.json, ggf. graue Kachel im Template entfernen, neu bauen.

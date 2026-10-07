@@ -1,0 +1,37 @@
+[
+ {
+  "id": "leavein",
+  "titel": "Haarbruch & Spliss vorbeugen",
+  "teaser": "Was ein Leave-in gegen Haarbruch und Spliss tun kann und wo es aufhört.",
+  "datei": "leavein.html",
+  "arzt": false
+ },
+ {
+  "id": "reparatur",
+  "titel": "Kann man Haar reparieren?",
+  "teaser": "Protein, Keratin und Bond Repair im Vergleich: was wirklich wirkt.",
+  "datei": "reparatur.html",
+  "arzt": false
+ },
+ {
+  "id": "prewash",
+  "titel": "Pre-Wash-Routinen",
+  "teaser": "ÖWC, CWC, MWC und LWC: Pflege, bevor das Shampoo kommt.",
+  "datei": "prewash.html",
+  "arzt": false
+ },
+ {
+  "id": "haarzyklus",
+  "titel": "Der Haarzyklus",
+  "teaser": "Wie dein Haar wächst, ruht und ausfällt und was du selbst beeinflussen kannst.",
+  "datei": "haarzyklus.html",
+  "arzt": true
+ },
+ {
+  "id": "haarausfall",
+  "titel": "Haarausfall",
+  "teaser": "Welche Arten es gibt und was dabei in deiner Kopfhaut passiert.",
+  "datei": "haarausfall.html",
+  "arzt": true
+ }
+]

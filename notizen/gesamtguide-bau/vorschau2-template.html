@@ -318,6 +318,39 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .buyrow.sm{margin-top:auto;padding:10px 4px 0;flex-direction:column;align-items:stretch;gap:3px}
 .buyrow.sm .adnote{text-align:right}
 .buyrow.sm .buy{justify-content:center;padding:6px 10px;font-size:12px}
+
+/* ---------- Wissensartikel ---------- */
+.wcard{font:inherit;text-align:left;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+.wcard:hover{transform:translateY(-2px);box-shadow:0 10px 26px -16px rgba(56,47,46,.45)}
+.wart{max-width:740px;padding:26px 0 10px}
+.wback{background:none;border:0;padding:0;font:inherit;font-size:14px;color:var(--muted);cursor:pointer;border-bottom:1px solid var(--line);margin:0 0 22px}
+.wart > .wback:last-child{margin:30px 0 0}
+.wart h2{font-size:clamp(30px,5vw,46px);line-height:1.08;margin:0 0 18px}
+.wart h3{font-size:24px;margin:34px 0 10px}
+.wart > p:first-of-type{font-size:18.5px}
+.wart p{margin:0 0 14px}
+.wart ul{list-style:none;padding:0;margin:4px 0 18px}
+.wart li{position:relative;padding-left:22px;margin:0 0 10px}
+.wart li::before{content:"";position:absolute;left:4px;top:.68em;width:6px;height:6px;border-radius:50%;background:#7A6A65}
+.wart strong{font-weight:600}
+.wart .table{margin:8px 0 22px}
+.wart table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5}
+.wart th{text-align:left;font-weight:500;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 12px 10px 0;border-bottom:1px solid rgba(56,47,46,.35)}
+.wart td{padding:14px 12px 14px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.wart td:first-child{font-family:var(--serif);font-size:19px;white-space:nowrap}
+.wart td:first-child small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);white-space:normal}
+@media (max-width:640px){
+  .wart table,.wart tbody,.wart tr,.wart td{display:block;width:100%}
+  .wart thead{display:none}
+  .wart tr{border:1px solid rgba(56,47,46,.30);border-radius:12px;padding:14px 16px;margin:0 0 12px;background:var(--paper)}
+  .wart td{border:0;padding:4px 0}
+  .wart td:first-child{white-space:normal;font-size:21px;margin-bottom:4px}
+  .wart td:not(:first-child)::before{content:attr(data-label);display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+}
+.wart .note{background:#F1EBE6;border-left:2px solid #382F2E;border-radius:0 12px 12px 0;padding:18px 20px;margin:26px 0 8px}
+.wart .note h3{margin-top:0}
+.wart .note p:last-child,.wart .note ul:last-child{margin-bottom:0}
+.wfine{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:16px;margin-top:30px}
 </style>
 <!--DESIGN-->
 </head>
@@ -439,18 +472,16 @@ __ROUTINE__
 
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
-    <div class="intro"><h1>Wissen</h1><p>Haarpflege einfach erklärt. Hier kommen später meine Wissenstexte hin.</p></div>
-    <div class="cards">
+    <div id="wissenListe"><div class="intro"><h1>Wissen</h1><p>Haarpflege einfach erklärt: ehrlich, ohne Marketing-Versprechen.</p></div>
+    <div class="cards" id="wissenCards">
       <div class="card soon"><h3>Spliss & Haarbruch: der Unterschied</h3><p>Was Spliss von Haarbruch unterscheidet, warum Spliss nicht repariert werden kann und was wirklich hilft.</p><span class="go">Kommt bald</span></div>
       <div class="card soon"><h3>Die LL-Methode</h3><p>Tägliche Leave-in-Pflege zwischen den Wäschen.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Pre-Wash-Routinen</h3><p>Pflege vor der Haarwäsche: wann, wie lange und womit.</p><span class="go">Kommt bald</span></div>
       <div class="card soon"><h3>Haaröle erklärt</h3><p>Welches Öl zu deinen Haaren passt und was ein trockenes Öl ausmacht.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Der Haarzyklus</h3><p>Wie Haare wachsen, ruhen und ausfallen.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Haarausfall</h3><p>Welche Arten von Haarausfall es gibt.</p><span class="go">Kommt bald</span></div>
       <div class="card soon"><h3>Kopfhautgesundheit</h3><p>Was deiner Kopfhaut guttut und worauf du achten kannst.</p><span class="go">Kommt bald</span></div>
       <div class="card soon"><h3>Haarmythen</h3><p>Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?</p><span class="go">Kommt bald</span></div>
       <div class="card soon"><h3>Haarporosität</h3><p>Was Porosität bedeutet und was sie für deine Pflege heißt.</p><span class="go">Kommt bald</span></div>
-    </div>
+    </div></div>
+    <article class="wart" id="wissenArt" hidden></article>
   </section>
 </main>
 
@@ -476,6 +507,8 @@ __ROUTINE__
 <!--DESIGN-SWITCH-->
 <script>
 const DATA = __DATA__;
+/* Wissenstexte (aus wissen.json + wissen/*.html) */
+const WISSEN = __WISSEN__;
 /* Kaufen-Links (Affiliate), Schlüssel = Produktart|Marke|Name. Leer = kein Knopf. */
 const KAUF = __KAUF__;
 
@@ -508,15 +541,15 @@ const meSet = () => !!(me.dicke||me.kopf||me.kaputt);
 let onlyMine = true;
 
 /* ---------- Zustand und Teilen-Link ---------- */
-let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:""};
+let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:"", wissen:null};
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="wissen"||a==="start"||a==="merkliste"){ state.view = a; return; }
+  if(a==="quiz"||a==="wissen"||a==="start"||a==="merkliste"){ state.view = a; if(a==="wissen" && b && WISSEN.some(w=>w.id===b)) state.wissen = b; return; }
   if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
-  const h = state.view==="produkte" ? `#${state.type}.${state.cat}` : `#${state.view}`;
+  const h = state.view==="produkte" ? `#${state.type}.${state.cat}` : (state.view==="wissen" && state.wissen) ? `#wissen.${state.wissen}` : `#${state.view}`;
   try { history.replaceState(null,"",h); } catch(e){}
 }
 
@@ -605,6 +638,22 @@ function sorter(type, cat){
 }
 
 /* ---------- Produktkarte ---------- */
+/* ---------- Wissen ---------- */
+(function(){
+  const box = document.getElementById("wissenCards");
+  box.insertAdjacentHTML("afterbegin", WISSEN.map(w => `<button type="button" class="card wcard" data-w="${w.id}"><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
+  box.querySelectorAll(".wcard").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
+})();
+function renderWissen(){
+  const w = WISSEN.find(x => x.id === state.wissen);
+  document.getElementById("wissenListe").hidden = !!w;
+  const art = document.getElementById("wissenArt"); art.hidden = !w;
+  if(!w){ art.innerHTML = ""; return; }
+  const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
+  art.innerHTML = back + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lass das bitte ärztlich abklären.</p>` : "") + back;
+  art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
+}
+
 /* ---------- Merkliste ---------- */
 let MERK = [];
 try { MERK = JSON.parse(localStorage.getItem("merkliste")||"[]") || []; } catch(e){}
@@ -778,14 +827,15 @@ function render(){
   document.getElementById("subnav").hidden = state.view!=="produkte"; setHH();
   if(state.view==="produkte"){ state.q.trim() ? renderSearch() : renderGuide(); }
   if(state.view==="merkliste") renderMerk();
+  if(state.view==="wissen") renderWissen();
   merkCount();
   writeHash();
 }
-navBtns.forEach(b => b.onclick = () => { state.view = b.dataset.view; render(); window.scrollTo({top:0}); });
+navBtns.forEach(b => b.onclick = () => { state.view = b.dataset.view; state.wissen = null; render(); window.scrollTo({top:0}); });
 document.getElementById("home").onclick = () => { state = {view:"start",type:"shampoo",cat:"alle",seg:"alle",q:""}; q.value=""; render(); window.scrollTo({top:0}); };
 document.querySelectorAll("#v-start [data-go]").forEach(b => b.onclick = () => {
   if(b.dataset.go==="me"){ document.getElementById("meBtn").click(); return; }
-  state.view = b.dataset.go; render(); window.scrollTo({top:0}); });
+  state.view = b.dataset.go; state.wissen = null; render(); window.scrollTo({top:0}); });
 let qt; q.addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(()=>{ state.q = q.value; render(); }, 120); });
 
 /* ---------- Meine Haare ---------- */
