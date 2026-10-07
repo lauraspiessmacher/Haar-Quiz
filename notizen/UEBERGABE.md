@@ -188,3 +188,6 @@
   Startseite komplett umgestellt (inkl. „Ihr glaubt mir nicht?“, „Eure Routine“, Kacheltexte). Hair-Journey-Text neu (früher falsch behandelt/geschädigt, Erklärtes selbst angewandt, wieder gesund).
   OFFEN: Wissenstexte (5 Kapitel) stehen noch in „du“ → auf „ihr“ umstellen.
 - Startseiten-Kacheln überarbeitet: Quiz = drei Fragen mit Fragezeichen („Welchen Kopfhauttyp habt ihr? …“), Wissen = „Aufklärung zu Haarpflegethemen, zu Mythen und zum richtigen Umgang mit euren Haaren, einfach erklärt.“ Produkte und Meine Haare unverändert.
+- Wissen Kapitel 1 (leavein) nach Lauras Diktat neu geschrieben (Fassung 1 gesichert in notizen/wissen/leavein-fassung-1.html, Diktat in notizen/wissen/leavein-diktat.md).
+  Neu: Definition Leave-in, persönliche Geschichte (Holy Grail), Abschnitt „Warum es sich lohnt …“, Mikrofaser-Empfehlung, „Mehr Flexibilität“, Splissschnitt ~1 cm oberhalb, Abschnitt „Welche Leave-in-Pflege zu euch passt“, Haaröl = Add-on. Sonne gestrichen. Ansprache „ihr“.
+  Kleine Ergänzung von mir: „kurzfristig“ bei „verhindern, dass sich der Spliss weiter aufspaltet“.
