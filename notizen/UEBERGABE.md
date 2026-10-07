@@ -200,3 +200,4 @@
 - Kapitel 6 FREIGEGEBEN (Laura): weißer Punkt = „schon offen und geschädigt, daraus können die anderen Splissarten entstehen“ (NICHT „bricht dort“), „Baumspliss“, „Federspliss“ (Zeichnung mit seitlichen Fasern), Merksatz-Absatz entfernt. Entwurf-Kennzeichen entfernt.
 - Kapitel 7 (LL-Methode) nach Lauras Feedback: LL = Leave-in nach jeder Wäsche ins FEUCHTE Haar (Wirkstoffe dringen ein) + an den Tagen dazwischen ins trockene; Heizungsluft raus („nachts auf dem Kissen und so weiter“);
   Waschtag: nach Shampoo, Maske & Conditioner, danach optional Haaröl nach dem Föhnen zum Versiegeln; „schwer und strähnig“; Öl ersetzt keine andere Leave-in-Konsistenz, ist Add-on. Noch Entwurf (Bedeutung von „LL“ offen).
+- Kapitel 7 (LL-Methode) FREIGEGEBEN: „rau“ am Ende von „Wenn jeden Tag nicht klappt“ entfernt („… nicht ungepflegt.“).
