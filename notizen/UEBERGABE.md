@@ -175,3 +175,4 @@
   Schärfe: Das Übergangs-Element wird in Endgröße gezeichnet (1em = Zoomfaktor, alle Maße in em) und anfangs verkleinert – so bleibt die Überschrift beim Hineinzoomen scharf. Laura: „dann können wir es so lassen“.
 - Quiz als Papierstapel: jede Karte = oberstes Blatt (cremeweiß, feine Linien, Büroklammer) auf zwei schief liegenden Blättern; jede Karte liegt anders. Beim Drüberfahren hebt sich das Blatt und richtet sich gerade.
   Klick: Blatt wächst auf den ganzen Bildschirm, färbt sich dunkelbraun und geht ins Quiz über (window.openQuiz aus quiz-einbettung.html; lokal normaler Link). Die alten Haarsträhnen-Grafiken (.qart) sind entfernt.
+  Überarbeitet (Laura: „zu unecht, Linien raus“): keine Linien mehr, feine Papierstruktur (SVG-Rauschen), weiche mehrstufige Schatten statt Umrandung, leicht gewölbte Ecke unten rechts, silberne Büroklammer, untere Blätter schauen weiter hervor.

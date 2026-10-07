@@ -419,29 +419,35 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 
 /* ---------- Quiz als Papierstapel ---------- */
 #v-quiz{overflow-x:clip}
+#v-quiz .qclosing{margin-top:56px}
 @media (max-width:520px){ .quizgrid{padding:0 6px} }
 .quizgrid{gap:34px 30px;margin-top:30px}
 .qcard{overflow:visible;background:none;color:var(--ink);padding:0;border-radius:0;min-height:0;display:block;transition:transform .35s cubic-bezier(.3,.1,.3,1)}
 .qcard:hover{transform:none;box-shadow:none}
-.qcard .sheet{position:absolute;inset:0;border-radius:3px;background:#F6F0E7;border:1px solid rgba(56,47,46,.12);box-shadow:0 6px 16px -10px rgba(56,47,46,.45);transition:transform .45s cubic-bezier(.3,.1,.3,1)}
-.qcard .sheet.s2{background:#EEE6DB}
-.qcard .paper{position:relative;display:flex;flex-direction:column;gap:10px;min-height:340px;padding:30px 26px 24px;border-radius:3px;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);
-  box-shadow:0 14px 30px -18px rgba(56,47,46,.55);
-  background-image:repeating-linear-gradient(180deg,transparent 0 31px,rgba(56,47,46,.06) 31px 32px);background-position:0 96px;
+.qcard .sheet{position:absolute;inset:0;border-radius:2px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .22 0 0 0 0 .18 0 0 0 0 .17 0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),#F8F3EB;
+  box-shadow:0 1px 1px rgba(56,47,46,.08),0 6px 14px -8px rgba(56,47,46,.35);transition:transform .45s cubic-bezier(.3,.1,.3,1)}
+.qcard .sheet.s2{background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .22 0 0 0 0 .18 0 0 0 0 .17 0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),#F1EADF}
+.qcard .paper{position:relative;display:flex;flex-direction:column;gap:10px;min-height:340px;padding:32px 26px 24px;border-radius:2px;
+  background:linear-gradient(160deg,rgba(255,255,255,.55),rgba(255,255,255,0) 40%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .22 0 0 0 0 .18 0 0 0 0 .17 0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),#FDFAF5;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 1px 1px rgba(56,47,46,.1),0 3px 6px -2px rgba(56,47,46,.12),0 14px 24px -12px rgba(56,47,46,.32),0 30px 50px -30px rgba(56,47,46,.4);
   transition:transform .45s cubic-bezier(.3,.1,.3,1), box-shadow .45s}
-.qcard .qclip{position:absolute;top:-16px;right:30px;width:16px;height:42px}
+/* leicht gewölbte Ecke unten rechts */
+.qcard .paper::after{content:"";position:absolute;right:0;bottom:0;width:70px;height:70px;pointer-events:none;border-radius:0 0 2px 0;
+  background:linear-gradient(135deg,rgba(255,255,255,0) 55%,rgba(56,47,46,.05) 72%,rgba(255,255,255,.65) 88%,rgba(56,47,46,.07) 100%)}
+.qcard .qclip{position:absolute;top:-18px;right:30px;width:16px;height:44px;filter:drop-shadow(1px 2px 1px rgba(56,47,46,.25))}
+.qcard .qclip path{stroke:#9A948E}
 .qcard .qfor{color:#7A6A65}
 .qcard h3{color:#382F2E;padding-top:46px}
 .qcard p{color:var(--muted)}
 .qcard .qmeta{color:var(--muted)}
 .qcard .qgo{background:#382F2E;color:#F3ECE2}
-/* jedes Blatt liegt etwas anders */
-.qcard:nth-child(1) .paper{transform:rotate(-1.4deg)} .qcard:nth-child(1) .s1{transform:rotate(2.2deg) translate(6px,4px)} .qcard:nth-child(1) .s2{transform:rotate(-3.4deg) translate(-7px,7px)}
-.qcard:nth-child(2) .paper{transform:rotate(1deg)}    .qcard:nth-child(2) .s1{transform:rotate(-2.6deg) translate(-6px,5px)} .qcard:nth-child(2) .s2{transform:rotate(3.6deg) translate(8px,8px)}
-.qcard:nth-child(3) .paper{transform:rotate(-.6deg)}  .qcard:nth-child(3) .s1{transform:rotate(3deg) translate(7px,3px)}  .qcard:nth-child(3) .s2{transform:rotate(-2deg) translate(-5px,9px)}
+/* jedes Blatt liegt etwas anders, die unteren schauen hervor */
+.qcard:nth-child(1) .paper{transform:rotate(-1.6deg)} .qcard:nth-child(1) .s1{transform:rotate(2.8deg) translate(9px,5px)} .qcard:nth-child(1) .s2{transform:rotate(-4.2deg) translate(-11px,11px)}
+.qcard:nth-child(2) .paper{transform:rotate(1.2deg)}  .qcard:nth-child(2) .s1{transform:rotate(-3.2deg) translate(-9px,6px)} .qcard:nth-child(2) .s2{transform:rotate(4.4deg) translate(12px,12px)}
+.qcard:nth-child(3) .paper{transform:rotate(-.8deg)}  .qcard:nth-child(3) .s1{transform:rotate(3.6deg) translate(10px,4px)} .qcard:nth-child(3) .s2{transform:rotate(-2.6deg) translate(-8px,13px)}
 /* beim Drüberfahren: oberstes Blatt hebt sich und richtet sich gerade, der Stapel fächert auf */
 .qcard:hover .paper,.qcard:focus-visible .paper{transform:rotate(0) translateY(-6px);box-shadow:0 24px 40px -20px rgba(56,47,46,.6)}
-.qcard:hover .s1{transform:rotate(4deg) translate(10px,6px)} .qcard:hover .s2{transform:rotate(-5deg) translate(-10px,10px)}
+.qcard:hover .s1{transform:rotate(4.5deg) translate(13px,7px)} .qcard:hover .s2{transform:rotate(-5.5deg) translate(-14px,13px)}
 @media (prefers-reduced-motion:reduce){ .qcard .paper,.qcard .sheet{transition:none} }
 /* Übergang: Blatt wächst auf den ganzen Bildschirm und wird zum Quiz */
 .paperfly{position:fixed;z-index:3000;pointer-events:none;background:#FFFDFA;border-radius:3px;box-shadow:0 30px 60px -20px rgba(56,47,46,.5);
@@ -531,21 +537,21 @@ __ROUTINE__
   <section class="view" id="v-quiz" hidden>
     <div class="intro"><h1>Quiz</h1><p>Drei kurze Checks, die dir zeigen, was deine Haare wirklich brauchen. Dein Ergebnis bekommst du direkt am Ende.</p></div>
     <div class="quizgrid">
-      <a class="qcard" href="__QUIZ_KOPF__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#382F2E" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <a class="qcard" href="__QUIZ_KOPF__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
         <h3>Kopfhaut-Check</h3>
         <p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast und worauf du vor dem Shampoo-Regal achtest.</p>
         <span class="qmeta">9 Fragen · ca. 2 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
-      <a class="qcard" href="__QUIZ_PFLEGE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#382F2E" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <a class="qcard" href="__QUIZ_PFLEGE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für deine Pflege</span>
         <h3>Pflege-Check</h3>
         <p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf und wie viel Repair sie braucht.</p>
         <span class="qmeta">10 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
-      <a class="qcard" href="__QUIZ_HAAR__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#382F2E" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <a class="qcard" href="__QUIZ_HAAR__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Styling</span>
         <h3>Haar-Check</h3>
         <p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p>
