@@ -204,3 +204,5 @@
 - Kapitel 8 (Haaröle) nach Lauras Feedback neu: „ersetzen keine andere Leave-in-Konsistenz“; kann nicht: Spliss reparieren (nur versiegeln), aktiv Feuchtigkeit spenden (recherchiert: Öl enthält kein Wasser, schließt nur ein);
   Tabelle = Konsistenzen (trockenes Öl / reichhaltigeres cremigeres Öl / sehr reichhaltiges Öl z. B. Pflanzenöl) mit „Was es ausmacht“ + „Passt zu“; Abschnitt „ab normaler Haardicke einfacher, aber Öle für sehr dickes Haar können für normales zu cremig/ölig sein, Dosierung, mit wenig starten“. Noch Entwurf.
 - Kapitel 8 (Haaröle) FREIGEGEBEN.
+- Kapitel 9 (Kopfhaut) nach Lauras Feedback: Seren/Tonika bleiben, Peelings werden ausgespült; „statt wild über Kopfhaut und durch die Haare“; Öl nur auf trockene Kopfhaut, nie über Nacht (Poren verstopfen);
+  Gewohnheiten neu: tägliche Kopfhautmassage 5–10 Min., Fingerkuppen statt Nägel, Probleme (Juckreiz, Schuppen, Rötungen) aktiv angehen. Alte 3 Gewohnheiten (ausspülen, lauwarm, Ansatz föhnen) noch drin – Laura fragen. Noch Entwurf.
