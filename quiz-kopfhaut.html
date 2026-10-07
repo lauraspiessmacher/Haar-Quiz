@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kopfhaut-Check</title>
+<style>
+:root{
+  --bg:#382F2E;
+  --surface:#433836;
+  --cream:#F3ECE2;
+  --muted:#C9BCAE;
+  --line:rgba(243,236,226,.5);
+  --line-soft:rgba(243,236,226,.18);
+  --taupe:#9E8C80;
+  --sand:#D6B98F;
+  --warn-bg:#4A3D35;
+  --serif:"Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Noto Serif", Georgia, serif;
+  --sans:"Avenir Next", Avenir, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#382F2E; --cream:#F3ECE2; } }
+:root[data-theme="dark"]{ --bg:#382F2E; --cream:#F3ECE2; }
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:28px 22px 48px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.1}
+p{margin:0 0 14px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+
+/* Start */
+.start{min-height:calc(100vh - 80px);display:flex;flex-direction:column;justify-content:center;position:relative}
+.strand{position:absolute;top:0;right:-22px;width:62%;max-width:300px;opacity:.55;pointer-events:none}
+.by{font-size:14px;color:var(--muted);margin-bottom:28px;letter-spacing:.02em}
+.start h1{font-size:clamp(46px,13vw,68px);letter-spacing:-.01em;margin-bottom:22px;max-width:9ch}
+.start .lead{font-size:18px;color:var(--cream);max-width:34ch}
+.start .how{color:var(--muted);font-size:15px;max-width:38ch;margin-bottom:30px}
+.primary{display:block;width:100%;padding:17px 20px;border:1px solid var(--cream);border-radius:999px;background:var(--cream);color:var(--bg);font-weight:500;font-size:17px;cursor:pointer}
+.primary:active{transform:scale(.99)}
+.ghost{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:8px 0;text-decoration:underline;text-underline-offset:4px}
+.fine{font-size:13px;color:var(--muted);line-height:1.5;margin-top:26px;border-top:1px solid var(--line-soft);padding-top:16px}
+
+/* Question */
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;min-height:40px}
+.count{font-size:14px;color:var(--muted)}
+.bar{height:2px;background:var(--line-soft);border-radius:2px;overflow:hidden;margin-bottom:38px}
+.bar span{display:block;height:100%;background:var(--cream);transition:width .35s ease}
+.q h2{font-size:clamp(30px,8vw,38px);margin-bottom:12px}
+.hint{color:var(--muted);font-size:15px;margin-bottom:22px}
+.answers{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.ans{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:transparent;cursor:pointer;font-size:16.5px;line-height:1.4;transition:background .15s,border-color .15s,color .15s}
+.ans .dot{flex:0 0 18px;height:18px;margin-top:2px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.ans.multi .dot{border-radius:5px}
+.ans[aria-pressed="true"]{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.ans[aria-pressed="true"] .dot{border-color:var(--bg);background:var(--bg)}
+.ans[aria-pressed="true"] .dot::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--cream)}
+.ans.multi[aria-pressed="true"] .dot::after{border-radius:1px}
+@media (hover:hover){.ans:hover{border-color:var(--cream)}}
+.next{margin-top:26px}
+.next[disabled]{opacity:.35;cursor:default}
+
+/* Result */
+.res-kicker{font-size:15px;color:var(--muted);margin-bottom:8px}
+.res h1{font-size:clamp(44px,12vw,62px);margin-bottom:20px}
+.res .intro{font-size:18px;margin-bottom:28px}
+.block{border-top:1px solid var(--line-soft);padding:22px 0 8px}
+.block h3{font-size:25px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.mark{display:inline-grid;place-items:center;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;font-family:var(--sans);font-size:14px;font-weight:400}
+.box{border:1px solid var(--line);border-radius:16px;padding:18px 18px 6px;margin:0 0 18px}
+.box h3{font-size:22px;margin-bottom:8px}
+.warn{background:var(--warn-bg);border-color:var(--sand);margin-bottom:30px}
+.warn h3{color:var(--sand)}
+details{border-top:1px solid var(--line-soft);padding:18px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:24px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:24px;color:var(--muted)}
+details[open] summary::after{content:"–"}
+details .inner{padding-top:14px}
+.tbl{overflow-x:auto;margin:6px 0 18px;border:1px solid var(--line-soft);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;vertical-align:top;border-bottom:1px solid var(--line-soft)}
+th{font-weight:500;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+ul{padding-left:20px;margin:0 0 14px}
+li{margin-bottom:8px}
+.closing{font-family:var(--serif);font-size:23px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:24px;margin:10px 0 26px}
+.actions{display:flex;flex-direction:column;gap:6px;align-items:center}
+
+.fade{animation:in .3s ease both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.bar span{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap" id="app" aria-live="polite"></main>
+
+<script>
+const Q = [
+ {t:"24 Stunden nach der Haarwäsche: Wie sieht dein Ansatz aus?", a:[
+  ["Noch frisch, die Haare fallen locker",{N:2}],
+  ["Etwas platter, aber noch okay",{N:1,F:1}],
+  ["Sichtbar fettig, Strähnen kleben zusammen",{F:3}],
+  ["Frisch, aber die Kopfhaut fühlt sich gespannt oder rau an",{T:2}]]},
+ {t:"Nach wie vielen Tagen wirkt dein Ansatz fettig?", h:"Gemeint ist ohne Trockenshampoo und unabhängig davon, wann du aus Gewohnheit wäschst.", a:[
+  ["Nach 4 Tagen oder später, eher gar nicht",{T:2,N:1}],
+  ["Nach 2 bis 3 Tagen",{N:2}],
+  ["Schon nach einem Tag",{F:3}],
+  ["Weiß ich nicht genau",{}]]},
+ {t:"Wie fühlt sich deine Kopfhaut direkt nach dem Waschen an?", a:[
+  ["Angenehm und unauffällig",{N:2}],
+  ["Sie spannt oder fühlt sich trocken an",{T:3}],
+  ["Sie kribbelt, brennt oder wird rot",{S:3}],
+  ["Sauber, aber sie fettet schnell wieder nach",{F:2}]]},
+ {t:"Juckt deine Kopfhaut?", a:[
+  ["Nie oder sehr selten",{N:2}],
+  ["Manchmal, vor allem wenn die letzte Wäsche länger her ist",{F:2}],
+  ["Oft, besonders bei Heizungsluft, im Winter oder nach dem Waschen",{T:2,S:1}],
+  ["Oft, vor allem nach neuen Produkten, nach dem Färben oder bei Stress",{S:3}]]},
+ {t:"Hattest du in den letzten vier Wochen Schuppen?", a:[
+  ["Nein",{}],
+  ["Ja, feine weiße Flocken, die trocken sind und leicht rieseln",{T:2,d:"t"}],
+  ["Ja, größere, gelbliche oder fettige Schuppen, die an der Kopfhaut haften",{F:2,d:"f"}],
+  ["Nur wenn ich Trockenshampoo oder Styling benutzt habe, nach der Wäsche sind sie weg",{r:1}]]},
+ {t:"Wie reagiert deine Kopfhaut auf neue Shampoos, Färbungen oder Duftstoffe?", a:[
+  ["Gar nicht, ich vertrage fast alles",{N:2}],
+  ["Manchmal mit Jucken oder Rötung, vor allem bei stark parfümierten Produkten",{S:2}],
+  ["Häufig mit Brennen, Rötung oder kleinen Pickelchen",{S:3}],
+  ["Weiß ich nicht, ich wechsle selten",{N:1}]]},
+ {t:"Schau dir deinen Scheitel mit der Handykamera an. Was siehst du?", a:[
+  ["Die Haut wirkt gleichmäßig, ähnlich wie die Haut an der Stirn",{N:2}],
+  ["Sie glänzt und wirkt ölig",{F:2}],
+  ["Sie ist leicht gerötet",{S:2}],
+  ["Sie wirkt matt und etwas rau",{T:2}]]},
+ {t:"Wie ist deine Gesichtshaut, vor allem an Stirn und Nase?", h:"Kopfhaut und Gesicht sind nicht immer gleich, deshalb zählt diese Frage weniger.", a:[
+  ["Unkompliziert",{N:1}],
+  ["Glänzt schnell, eher ölig",{F:1}],
+  ["Trocken, spannt",{T:1}],
+  ["Empfindlich, reagiert schnell",{S:1}]]},
+ {t:"Trifft eins davon auf dich zu?", h:"Du kannst mehreres auswählen.", multi:true, a:[
+  ["Nässende, verkrustete oder blutige Stellen auf der Kopfhaut",{w:1}],
+  ["Rötung oder Schuppung, die über den Haaransatz hinausgeht, zum Beispiel auf Stirn, Augenbrauen, hinter die Ohren oder an die Nasenfalten",{w:1}],
+  ["Kreisrunde kahle Stellen oder plötzlich deutlich mehr Haarausfall",{w:1}],
+  ["Schmerzen, Schwellungen oder eitrige Pickel",{w:1}],
+  ["Juckreiz, der dich nachts wach hält oder seit mehreren Wochen trotz passender Pflege bleibt",{w:1}],
+  ["Schuppen, die nach etwa vier Wochen Anti-Schuppen-Shampoo nicht besser geworden sind",{w:1}],
+  ["Nichts davon",{none:1}]]}
+];
+
+const R = {
+ N:{name:"Normale Kopfhaut",
+  intro:"Deine Kopfhaut bildet ausgeglichen Talg und macht keine Probleme. Das heißt für dich, dass du beim Shampoo die größte Auswahl hast.",
+  yes:"Shampoos mit normaler Reinigung, also zum Beispiel Feuchtigkeits-, Glanz- oder Repair-Shampoos. Hier darfst du ganz nach deinem Haarwunsch gehen. Willst du mehr Glanz, nimmst du ein Glanzshampoo. Sind deine Haare fein und fallen platt, passt ein Volumenshampoo, das etwas kräftiger reinigt. Fühlen sie sich trocken an, darf es etwas reichhaltiger sein. Ein Sensitiv-Shampoo passt natürlich auch.",
+  deep:"Ein- bis zweimal im Monat, je nachdem, wie viel Styling du nutzt.",
+  no:"Ein Tiefenreinigungs- oder Anti-Schuppen-Shampoo als tägliches Shampoo, obwohl du keine Beschwerden hast."},
+ F:{name:"Fettige Kopfhaut",
+  intro:"Deine Talgdrüsen arbeiten fleißig, der Ansatz wirkt schon nach einem Tag fettig. Ein Shampoo kann die Talgproduktion nicht abstellen, es entfernt den Talg nur gründlich.",
+  yes:"Shampoos mit kräftigerer Reinigung. Auf der Flasche steht dann oft „für fettiges Haar“, „Frische“, „Detox“ oder „Volumen“. Shampoos, auf denen nur „Balance“ steht, reinigen meist sanfter und sind eher für normale Kopfhaut gedacht. Massiere das Shampoo nur auf der Kopfhaut ein und wasch bei Bedarf zweimal. Hast du dicke oder trockene Längen, bleibst du trotzdem bei diesem Shampoo und gleichst über Conditioner oder Maske in den Längen aus.",
+  deep:"Ein- bis zweimal im Monat, bei viel Styling oder Trockenshampoo auch einmal pro Woche.",
+  no:"Sehr reichhaltige Shampoos, Conditioner oder Maske direkt am Ansatz und Öl auf der Kopfhaut."},
+ T:{name:"Trockene Kopfhaut",
+  intro:"Deine Kopfhaut bildet wenig Talg oder ihre Schutzbarriere ist gerade geschwächt. Sie spannt, juckt manchmal und kann fein schuppen.",
+  yes:"Shampoos mit sanfter bis normaler Reinigung, auf der Flasche oft „Sensitiv“, „mild“, „Balance“ oder „Feuchtigkeit“. Gut sind feuchtigkeitsbindende Stoffe wie Glycerin, Panthenol oder Urea, die Wasser in der obersten Hautschicht halten und das Spannungsgefühl mildern. Bei dicken Haaren darf das Shampoo ruhig reichhaltiger sein. Bei feinen Haaren lieber ein leichtes Feuchtigkeits- oder Sensitiv-Shampoo, damit der Ansatz nicht platt wird. Lauwarm waschen statt heiß.",
+  deep:"Einmal im Monat reicht meistens.",
+  no:"Ein Tiefenreinigungs-Shampoo als Alltagsshampoo, sehr heißes Wasser und Trockenshampoo an vielen Tagen hintereinander."},
+ S:{name:"Sensible Kopfhaut",
+  intro:"Deine Kopfhaut reagiert schnell mit Brennen, Rötung oder Jucken. Das kann dauerhaft so sein oder nur gerade, zum Beispiel nach dem Färben, bei Stress oder im Winter.",
+  yes:"Sensitiv-Shampoos, am besten parfumfrei oder parfumarm. Nicht jedes Produkt mit „Sensitiv“ im Namen ist wirklich sanft, deshalb testest du Neues erst an einer kleinen Stelle. Hast du ein Shampoo gefunden, das du gut verträgst, bleib ruhig dabei.",
+  deep:"Probier es aus. Einmal im Monat kann auch für eine empfindliche Kopfhaut sinnvoll sein, um alles einmal abzureinigen. Brennt oder rötet sich die Kopfhaut danach, lässt du es weg.",
+  no:"Stark parfümierte Shampoos und kühlende Zusätze wie Menthol, Pfefferminz- oder Teebaumöl."},
+ ST:{name:"Schuppige Kopfhaut, trocken",
+  intro:"Du hast feine, weiße, rieselnde Flocken. Das kann einfach eine trockene Kopfhaut sein oder eine leichte Form echter Schuppen, die beiden sehen sich sehr ähnlich.",
+  yes:"Zuerst zwei bis drei Wochen ein Sensitiv- oder Feuchtigkeitsshampoo, gern mit Glycerin, Panthenol oder Urea. Wird es nicht besser, wechselst du zu einem milden Anti-Schuppen-Shampoo mit Piroctone Olamine oder Climbazol.",
+  deep:"Einmal im Monat. Manchmal sind es auch Ablagerungen, die man leicht mit Schuppen verwechselt.",
+  no:"Kratzen, sehr heiß waschen und ein Tiefenreinigungs-Shampoo als Alltagsshampoo."},
+ SF:{name:"Schuppige Kopfhaut, fettig",
+  intro:"Du hast größere, gelbliche Schuppen, die an der Kopfhaut haften, oft zusammen mit Juckreiz. Dabei spielt meist ein Hefepilz eine Rolle, der auf jeder Kopfhaut lebt und sich von Talg ernährt.",
+  yes:"Ein Anti-Schuppen-Shampoo mit Wirkstoffen wie Piroctone Olamine, Climbazol oder Selendisulfid, eventuell mit Salicylsäure, die Schuppen löst. Lass es so lange einwirken, wie es auf der Packung steht, und nutze es regelmäßig, nicht nur einmal. Zwischendurch darfst du mit einem Shampoo für fettige Kopfhaut abwechseln.",
+  deep:"Ein- bis zweimal im Monat als Ergänzung. Dein Hauptshampoo bleibt das Anti-Schuppen-Shampoo.",
+  no:"Öl auf die Kopfhaut geben, denn der Pilz mag Fett. In den Längen ist Öl kein Problem. Wird es nach etwa vier Wochen nicht besser, lass es ärztlich anschauen."}
+};
+
+const FINE = "Ich bin keine Ärztin und stelle keine Diagnosen. Dieses Quiz gibt dir eine Empfehlung für deinen aktuellen Kopfhautzustand, und der kann sich mit Jahreszeit, Stress, Hormonen oder neuen Produkten verändern. Nimm das Ergebnis als Hilfe, nicht als feste Regel. Wenn du Probleme mit deiner Kopfhaut hast, lass das bitte zusätzlich von einem Hautarzt oder einer Hautärztin abklären.";
+
+const app = document.getElementById("app");
+let idx = -1, picks = [];
+
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+const strand = `<svg class="strand" viewBox="0 0 300 420" fill="none" aria-hidden="true"><path d="M250 0 C 140 70, 300 150, 190 230 S 120 360, 40 420" stroke="#F3ECE2" stroke-width="1"/><path d="M272 0 C 170 80, 320 160, 210 245 S 150 370, 72 420" stroke="#9E8C80" stroke-width="1"/></svg>`;
+
+function start(){
+  idx = -1; picks = [];
+  app.innerHTML = `<section class="start fade">${strand}
+    <div class="by">Ein Quiz von Laura, deiner Haarpflege-Bestie</div>
+    <h1>Welche Kopfhaut hast du gerade?</h1>
+    <p class="lead">Dein Shampoo wählst du nach deiner Kopfhaut, nicht nach deinen Haaren. In neun kurzen Fragen findest du heraus, worauf du vor dem Regal achten kannst.</p>
+    <p class="how">Beantworte alles so, wie es in den letzten vier Wochen bei deinem normalen Waschrhythmus war. Dauert etwa zwei Minuten.</p>
+    <button class="primary" id="go">Quiz starten</button>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("go").onclick = () => { idx = 0; render(); };
+}
+
+function render(){
+  const q = Q[idx];
+  const sel = picks[idx] || (q.multi ? [] : null);
+  app.innerHTML = `<section class="q fade">
+    <div class="top">
+      <button class="ghost" id="back">Zurück</button>
+      <span class="count">Frage ${idx+1} von ${Q.length}</span>
+    </div>
+    <div class="bar"><span style="width:${(idx/Q.length)*100}%"></span></div>
+    <h2>${esc(q.t)}</h2>
+    ${q.h ? `<p class="hint">${esc(q.h)}</p>` : ""}
+    <div class="answers">${q.a.map((a,i)=>{
+      const on = q.multi ? sel.includes(i) : sel === i;
+      return `<button class="ans${q.multi?" multi":""}" data-i="${i}" aria-pressed="${on}"><span class="dot"></span><span>${esc(a[0])}</span></button>`;
+    }).join("")}</div>
+    ${q.multi ? `<button class="primary next" id="next" ${sel.length?"":"disabled"}>Ergebnis anzeigen</button>` : ""}
+  </section>`;
+  document.getElementById("back").onclick = () => { if(idx===0) start(); else { idx--; render(); } };
+  app.querySelectorAll(".ans").forEach(b => b.onclick = () => choose(+b.dataset.i));
+  if(q.multi) document.getElementById("next").onclick = result;
+  window.scrollTo(0,0);
+}
+
+function choose(i){
+  const q = Q[idx];
+  if(q.multi){
+    let s = picks[idx] ? [...picks[idx]] : [];
+    const noneIdx = q.a.findIndex(a=>a[1].none);
+    if(i === noneIdx) s = s.includes(i) ? [] : [i];
+    else { s = s.filter(x=>x!==noneIdx); s = s.includes(i) ? s.filter(x=>x!==i) : [...s,i]; }
+    picks[idx] = s; render();
+  } else {
+    picks[idx] = i;
+    app.querySelectorAll(".ans").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i===i));
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setTimeout(()=>{ idx++; render(); }, reduce ? 0 : 260);
+  }
+}
+
+function result(){
+  const sc = {N:0,F:0,T:0,S:0}; let dand=null, residue=false, warn=false;
+  Q.forEach((q,qi)=>{
+    const p = picks[qi]; if(p==null) return;
+    (Array.isArray(p)?p:[p]).forEach(i=>{
+      const v = q.a[i][1];
+      for(const k of ["N","F","T","S"]) if(v[k]) sc[k]+=v[k];
+      if(v.d) dand=v.d; if(v.r) residue=true; if(v.w) warn=true;
+    });
+  });
+  let key, ftTie=false;
+  if(dand) key = dand==="t" ? "ST" : "SF";
+  else {
+    const max = Math.max(sc.N,sc.F,sc.T,sc.S);
+    if(sc.S===max) key="S";
+    else if(sc.F===max && sc.T===max){ key="F"; ftTie=true; }
+    else if(sc.F===max) key="F";
+    else if(sc.T===max) key="T";
+    else key="N";
+  }
+  const r = R[key];
+  const extraSens = sc.S>=5 && key!=="S";
+
+  app.innerHTML = `<section class="res fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Dein Ergebnis</span></div>
+    ${warn ? `<div class="box warn"><h3>Bitte lass das ärztlich anschauen</h3>
+      <p>Was du angekreuzt hast, sollte sich ein Hautarzt oder eine Hautärztin anschauen. Dahinter können zum Beispiel ein seborrhoisches Ekzem, Neurodermitis, Schuppenflechte oder eine Pilzinfektion stecken. Die fühlen sich ähnlich an, werden aber ganz unterschiedlich behandelt, und das kann nur eine Ärztin unterscheiden. Ein Shampoo aus der Drogerie ersetzt das nicht.</p>
+      <p>Bis zum Termin nutzt du am besten ein mildes, parfumfreies Shampoo und probierst nichts Neues aus. Dein Ergebnis unten ist nur eine grobe Orientierung.</p></div>` : ""}
+    <p class="res-kicker">Deine Kopfhaut ist gerade am ehesten</p>
+    <h1>${r.name}</h1>
+    <p class="intro">${r.intro}</p>
+    ${ftTie ? `<div class="box"><h3>Fettig und trotzdem gespannt?</h3><p>Deine Kopfhaut fettet und spannt gleichzeitig. Das passiert oft, wenn sie zu kräftig gereinigt wird. Probier deshalb zuerst ein Shampoo mit sanfter bis normaler Reinigung, bevor du zu einem kräftigeren greifst.</p></div>` : ""}
+    <div class="block"><h3><span class="mark">✓</span>Darauf achtest du</h3><p>${r.yes}</p></div>
+    <div class="block"><h3><span class="mark">↻</span>Tiefenreinigung</h3><p>${r.deep} Danach immer Conditioner oder Maske, weil sich die Längen rauer anfühlen können.</p></div>
+    <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${r.no}</p></div>
+    ${extraSens ? `<div class="box"><h3>Zusätzlich empfindlich</h3><p>Deine Kopfhaut zeigt auch Zeichen von Empfindlichkeit. Achte zusätzlich auf parfumarme Produkte, teste Neues erst an einer kleinen Stelle und taste dich bei der Tiefenreinigung vorsichtig ran.</p></div>` : ""}
+    ${residue ? `<div class="box"><h3>Vielleicht gar keine Schuppen</h3><p>Was du siehst, sind wahrscheinlich Rückstände von Trockenshampoo oder Styling. Eine Tiefenreinigung ist hier dein Neustart, danach siehst du, wie deine Kopfhaut wirklich ist.</p></div>` : ""}
+
+    <details><summary>So liest du das Shampoo-Regal</summary><div class="inner">
+      <p>Die eigentliche Aufgabe eines Shampoos ist es, deine Kopfhaut zu reinigen. Deshalb wählst du es zuerst nach deiner Kopfhaut und erst danach nach deinen Haaren. Die Namen auf der Flasche geben dir eine grobe Richtung. Ganz verlässlich sind sie nicht, aber als Orientierung reichen sie.</p>
+      <div class="tbl"><table>
+        <tr><th>Steht auf der Flasche</th><th>Reinigung</th><th>Gut als Alltagsshampoo für</th></tr>
+        <tr><td>Sensitiv, mild, für empfindliche Kopfhaut</td><td>sanft</td><td>sensible, trockene und normale Kopfhaut</td></tr>
+        <tr><td>Balance, Kopfhaut-Balance, Scalp Balance</td><td>sanft bis normal</td><td>normale, trockene und sensible Kopfhaut</td></tr>
+        <tr><td>Feuchtigkeit, Glanz, Repair, Farbschutz</td><td>normal</td><td>normale Kopfhaut, auch trockene</td></tr>
+        <tr><td>für fettiges Haar, Frische, Detox, Volumen</td><td>kräftiger</td><td>fettige Kopfhaut, normale Kopfhaut mit feinen Haaren</td></tr>
+        <tr><td>Anti-Schuppen</td><td>mit Wirkstoff gegen Schuppen</td><td>schuppige Kopfhaut</td></tr>
+        <tr><td>Tiefenreinigung, Clarifying</td><td>sehr kräftig</td><td>keine als Alltagsshampoo, aber jede als Neustart zwischendurch</td></tr>
+      </table></div>
+      <p>Innerhalb der passenden Reinigung darfst du nach deinem Haarwunsch gehen, also mehr Glanz, mehr Volumen oder mehr Geschmeidigkeit. Reichhaltigere Shampoos pflegen den Ansatz etwas mehr, können feine Haare aber beschweren. Volumenshampoos haben kaum Pflege und reinigen kräftiger, dadurch fallen feine Haare luftiger.</p>
+      <ul>
+        <li>Schnell fettende Kopfhaut und dicke oder trockene Haare: Du bleibst beim kräftigeren Shampoo, massierst es aber nur auf der Kopfhaut ein. Die Längen werden beim Ausspülen vom Schaum mitgereinigt, danach gleichst du mit Conditioner oder Maske aus.</li>
+        <li>Trockene Kopfhaut und feine Haare: Ein reichhaltiges Shampoo kann deine Haare platt machen. Nimm lieber ein Sensitiv-Shampoo oder ein leichtes Feuchtigkeitsshampoo und hol dir die Pflege über einen leichten Conditioner.</li>
+      </ul>
+    </div></details>
+
+    <details><summary>Warum Tiefenreinigung?</summary><div class="inner">
+      <p>Ein Tiefenreinigungsshampoo entfernt Rückstände von Styling, Trockenshampoo, Öl und Pflegeprodukten, die ein normales Shampoo nicht ganz schafft. Als Alltagsshampoo ist es für die meisten zu kräftig, als Neustart für Kopfhaut und Haare ist es für jeden Kopfhauttyp eine gute Idee. Je mehr Styling du nutzt, desto öfter darf es sein.</p>
+    </div></details>
+
+    <p class="closing">Dein Shampoo wählst du nach der Kopfhaut, alles danach nach deinen Haaren. Jede Wäsche endet mit Conditioner, Maske oder Leave-in.</p>
+    <div class="actions"><button class="primary" id="again">Quiz neu starten</button></div>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("back").onclick = () => { idx = Q.length-1; render(); };
+  document.getElementById("again").onclick = start;
+  window.scrollTo(0,0);
+}
+
+start();
+</script>
+</body>
+</html>
