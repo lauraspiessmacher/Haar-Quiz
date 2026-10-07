@@ -7,6 +7,7 @@ S = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(f'{S}/../..')
 data = open(sys.argv[1]).read().replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
+t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html')
 t = t.replace('<p class="note-banner">Vorschau mit allen echten Produkten aus deinen 6 Guides. Quiz und Wissen sind noch Platzhalter.</p>',
               '<p class="note-banner">Wissen ist noch ein Platzhalter. Die Wissenstexte kommen später.</p>')

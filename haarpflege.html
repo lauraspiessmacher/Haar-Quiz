@@ -185,6 +185,45 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
 .toast.on{opacity:1}
 .fine{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
+
+/* ---------- Startseite ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center;padding:36px 0 12px}
+@media (max-width:759px){ .hero{grid-template-columns:1fr;gap:22px;padding-top:22px} }
+.photo{aspect-ratio:4/5;border-radius:999px 999px 6px 6px;background:var(--card);border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:14px;padding:24px;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:759px){ .photo{max-width:250px;width:100%;margin:0 auto} }
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.hero h1{font-size:clamp(38px,6vw,64px);line-height:1}
+.hero p.lead{font-size:17px;margin:18px 0 0;max-width:52ch}
+.hero .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);border-radius:999px;padding:10px 18px;background:transparent;cursor:pointer;font-size:14px;color:var(--ink);text-decoration:none}
+.btn.dark{background:var(--ink);color:#F3ECE2}
+.promise{background:#382F2E;color:#F3ECE2;border-radius:20px;padding:30px 28px;margin:36px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:start}
+@media (max-width:759px){ .promise{grid-template-columns:1fr;gap:12px;padding:24px 20px} }
+.promise h2{color:#F3ECE2;font-size:clamp(28px,4vw,40px);line-height:1.05}
+.promise p{margin:0 0 10px;color:#E9DFD2}
+.offer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:40px 0 0;padding:0;list-style:none}
+@media (max-width:959px){ .offer{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:520px){ .offer{grid-template-columns:1fr} }
+.offer button{width:100%;height:100%;text-align:left;display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1px solid rgba(56,47,46,.30);border-radius:14px;padding:18px 18px 16px;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+.offer button:hover{transform:translateY(-2px);box-shadow:0 10px 26px -16px rgba(56,47,46,.45)}
+.offer h3{font-size:24px}
+.offer p{margin:0;color:var(--muted);font-size:14.5px}
+.offer .go{margin-top:auto;padding-top:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.routine{margin:56px 0 0;text-align:center}
+.routine h2{font-size:clamp(34px,5vw,54px)}
+.routine .sub{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:18px;margin:6px 0 26px}
+.rrow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+@media (max-width:759px){ .rrow{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px} }
+.rrow figure{margin:0;text-align:center}
+.rrow svg{width:100%;max-width:150px;height:auto}
+.rrow svg *{fill:none;stroke:#382F2E;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.rrow svg path:not(.t):not(.fr),.rrow svg rect,.rrow svg ellipse,.rrow svg circle:not(.d){fill:#FFFDFA}
+.rrow svg .fr{stroke-width:1.6}.rrow svg .g{stroke-width:1.1}.rrow svg .h{stroke-width:.8}.rrow svg .t{stroke-width:1}.rrow svg .d{fill:#382F2E}
+.rrow svg .nr{fill:#382F2E;stroke:none;font-family:var(--serif);font-style:italic;font-size:20px}
+.rrow figcaption{font-size:14.5px;margin-top:10px;line-height:1.35}
+.rrow figcaption span{display:block;font-family:var(--serif);font-size:22px;margin-bottom:2px}
+.routine .fine2{color:var(--muted);font-size:13.5px;margin:22px auto 0;max-width:60ch}
 </style>
 <!--DESIGN-->
 </head>
@@ -205,8 +244,78 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 <main class="in">
   <p class="note-banner">Wissen ist noch ein Platzhalter. Die Wissenstexte kommen später.</p>
 
+  <!-- ===================== STARTSEITE ===================== -->
+  <section class="view" id="v-start">
+    <div class="hero">
+      <div class="photo" aria-label="Platz für ein Foto von Laura">Hier kommt später ein Foto von dir hin</div>
+      <div>
+        <p class="kicker">Willkommen in der Healthy Hair Community</p>
+        <h1>Von kaputten zu gesunden Haaren</h1>
+        <p class="lead">Hi, ich bin Laura. Auf Instagram erkläre ich dir, wie du deine Haare gesund und geschmeidig hältst. Hier findest du alles davon an einem Ort: meine Produkteinschätzungen, Quizze zu deinen Haaren und Wissen rund um die richtige Haarpflege.</p>
+        <div class="btns"><button type="button" class="btn dark" data-go="produkte">Zu den Produkten <span aria-hidden="true">→</span></button><button type="button" class="btn" data-go="quiz">Quiz machen</button></div>
+      </div>
+    </div>
+    <div class="promise">
+      <h2>Meine Einschätzung, nicht die der Marken</h2>
+      <div>
+        <p>Jedes Produkt auf dieser Seite habe ich selbst eingeordnet, und zwar nach seinen Inhaltsstoffen, nicht nach dem, was auf der Verpackung versprochen wird. Nichts davon ist von den Marken übernommen.</p>
+        <p>Ich sage dir auch, wo ein Produkt an seine Grenzen kommt und für wen es nicht passt. So findest du, was zu deiner Haardicke und deinem Kopfhauttyp passt.</p>
+      </div>
+    </div>
+    <ul class="offer">
+      <li><button type="button" data-go="produkte"><h3>Produkte</h3><p>Über 500 Produkte von Shampoo bis Haaröl, sortiert nach Haardicke und Kopfhauttyp.</p><span class="go">Ansehen →</span></button></li>
+      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Drei kurze Checks: Welche Kopfhaut hast du, wie viel Pflege brauchen deine Haare, welche Struktur haben sie?</p><span class="go">Quiz starten →</span></button></li>
+      <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Mythen und zum richtigen Umgang mit deinen Haaren, einfach erklärt.</p><span class="go">Lesen →</span></button></li>
+      <li><button type="button" data-go="me"><h3>Meine Haare</h3><p>Stell einmal deine Haardicke und deinen Kopfhauttyp ein und sieh nur, was zu dir passt.</p><span class="go">Einstellen →</span></button></li>
+    </ul>
+    <div class="routine">
+      <h2>Deine Routine</h2>
+      <p class="sub">in sechs Schritten zu geschmeidigen Haaren</p>
+<!-- Gezeichnete Routine (Probe, Strichzeichnungen). Später durch Lauras KI-Bilder ersetzen: einfach diese Datei austauschen. -->
+<div class="rrow"><figure><svg viewBox="0 0 160 212" aria-hidden="true"><defs><clipPath id="rc0"><path d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></clipPath></defs><g clip-path="url(#rc0)"><line class="g" x1="10" y1="166" x2="150" y2="166"/><line class="h" x1="96" y1="166" x2="102" y2="160"/><line class="h" x1="101" y1="166" x2="107" y2="160"/><line class="h" x1="106" y1="166" x2="112" y2="160"/><line class="h" x1="111" y1="166" x2="117" y2="160"/><line class="h" x1="116" y1="166" x2="122" y2="160"/><line class="h" x1="121" y1="166" x2="127" y2="160"/><line class="h" x1="126" y1="166" x2="132" y2="160"/>
+<rect x="64" y="64" width="24" height="16" rx="3"/><line x1="64" y1="71" x2="88" y2="71"/>
+<path d="M56 166 V92 Q56 80 68 80 H84 Q96 80 96 92 V166 Z"/>
+<ellipse cx="76" cy="122" rx="11" ry="15"/><path class="t" d="M71 118 h10 M71 123 h10 M73 128 h6"/>
+<line class="h" x1="88" y1="96" x2="88" y2="162"/><line class="h" x1="92" y1="96" x2="92" y2="162"/>
+<circle cx="40" cy="70" r="6"/><circle cx="31" cy="57" r="4"/><circle cx="45" cy="50" r="2.5"/><circle cx="112" cy="58" r="5"/><circle cx="121" cy="47" r="2.5"/>
+<text x="112" y="96" class="nr">2×</text></g><path class="fr" d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></svg><figcaption><span>1</span>Zweimal shampoonieren</figcaption></figure><figure><svg viewBox="0 0 160 212" aria-hidden="true"><defs><clipPath id="rc1"><path d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></clipPath></defs><g clip-path="url(#rc1)"><line class="g" x1="10" y1="166" x2="150" y2="166"/><line class="h" x1="102" y1="166" x2="108" y2="160"/><line class="h" x1="107" y1="166" x2="113" y2="160"/><line class="h" x1="112" y1="166" x2="118" y2="160"/><line class="h" x1="117" y1="166" x2="123" y2="160"/><line class="h" x1="122" y1="166" x2="128" y2="160"/><line class="h" x1="127" y1="166" x2="133" y2="160"/>
+<rect x="110" y="108" width="13" height="58" rx="6"/><line class="h" x1="118" y1="114" x2="118" y2="162"/><line class="h" x1="121" y1="114" x2="121" y2="162"/>
+<path d="M42 128 V157 Q42 166 51 166 H93 Q102 166 102 157 V128"/><ellipse cx="72" cy="128" rx="30" ry="7"/>
+<path d="M54 127 q6 -12 15 -3 q6 -10 14 -1 q5 -7 10 1"/><path class="t" d="M64 118 q5 -6 9 0"/>
+<ellipse cx="72" cy="147" rx="10" ry="8"/>
+<line class="h" x1="92" y1="134" x2="92" y2="162"/><line class="h" x1="96" y1="134" x2="96" y2="162"/></g><path class="fr" d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></svg><figcaption><span>2</span>Maske</figcaption></figure><figure><svg viewBox="0 0 160 212" aria-hidden="true"><defs><clipPath id="rc2"><path d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></clipPath></defs><g clip-path="url(#rc2)"><line class="g" x1="10" y1="166" x2="150" y2="166"/><line class="h" x1="90" y1="166" x2="96" y2="160"/><line class="h" x1="95" y1="166" x2="101" y2="160"/><line class="h" x1="100" y1="166" x2="106" y2="160"/><line class="h" x1="105" y1="166" x2="111" y2="160"/><line class="h" x1="110" y1="166" x2="116" y2="160"/><line class="h" x1="115" y1="166" x2="121" y2="160"/><line class="h" x1="120" y1="166" x2="126" y2="160"/>
+<rect x="63" y="150" width="26" height="16" rx="3"/>
+<path d="M66 150 L58 76 Q58 70 64 70 H88 Q94 70 94 76 L86 150 Z"/>
+<path class="t" d="M60 78 H92 M64 70 v8 M70 70 v8 M76 70 v8 M82 70 v8 M88 70 v8"/>
+<ellipse cx="76" cy="112" rx="9" ry="13"/><path class="t" d="M72 109 h8 M72 114 h8"/>
+<line class="h" x1="84" y1="86" x2="84" y2="146"/><line class="h" x1="88" y1="86" x2="88" y2="146"/></g><path class="fr" d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></svg><figcaption><span>3</span>Conditioner</figcaption></figure><figure><svg viewBox="0 0 160 212" aria-hidden="true"><defs><clipPath id="rc3"><path d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></clipPath></defs><g clip-path="url(#rc3)"><line class="g" x1="10" y1="166" x2="150" y2="166"/><line class="h" x1="92" y1="166" x2="98" y2="160"/><line class="h" x1="97" y1="166" x2="103" y2="160"/><line class="h" x1="102" y1="166" x2="108" y2="160"/><line class="h" x1="107" y1="166" x2="113" y2="160"/><line class="h" x1="112" y1="166" x2="118" y2="160"/><line class="h" x1="117" y1="166" x2="123" y2="160"/><line class="h" x1="122" y1="166" x2="128" y2="160"/>
+<path d="M60 166 V104 Q60 96 68 96 H84 Q92 96 92 104 V166 Z"/>
+<rect x="70" y="88" width="12" height="8"/>
+<path d="M66 88 V76 Q66 72 70 72 H88 L94 80 V88 Z"/><rect x="58" y="76" width="8" height="6" rx="1"/>
+<ellipse cx="76" cy="130" rx="9" ry="13"/>
+<line class="h" x1="85" y1="108" x2="85" y2="162"/><line class="h" x1="89" y1="108" x2="89" y2="162"/>
+<path class="t" d="M54 79 L34 68 M54 79 L30 79 M54 79 L34 90 M52 74 L40 60 M52 84 L40 98"/>
+<circle class="d" cx="26" cy="70" r="1"/><circle class="d" cx="22" cy="80" r="1"/><circle class="d" cx="27" cy="92" r="1"/></g><path class="fr" d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></svg><figcaption><span>4</span>Leave-in</figcaption></figure><figure><svg viewBox="0 0 160 212" aria-hidden="true"><defs><clipPath id="rc4"><path d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></clipPath></defs><g clip-path="url(#rc4)"><line class="g" x1="10" y1="166" x2="150" y2="166"/><line class="h" x1="132" y1="166" x2="138" y2="160"/><line class="h" x1="137" y1="166" x2="143" y2="160"/><line class="h" x1="142" y1="166" x2="148" y2="160"/><line class="h" x1="147" y1="166" x2="153" y2="160"/>
+<path d="M40 72 H98 Q114 72 114 87 Q114 102 98 102 H40 Z"/><rect x="26" y="77" width="14" height="20" rx="2"/>
+<circle cx="98" cy="87" r="7"/><circle cx="98" cy="87" r="2.5"/>
+<path d="M78 102 L84 146 Q85 152 91 152 H94 Q100 152 99 146 L94 102"/>
+<path d="M92 152 Q92 166 74 166"/>
+<line class="h" x1="44" y1="96" x2="44" y2="100"/><line class="h" x1="48" y1="96" x2="48" y2="100"/><line class="h" x1="52" y1="96" x2="52" y2="100"/><line class="h" x1="56" y1="96" x2="56" y2="100"/><line class="h" x1="60" y1="96" x2="60" y2="100"/><line class="h" x1="64" y1="96" x2="64" y2="100"/><line class="h" x1="68" y1="96" x2="68" y2="100"/><line class="h" x1="72" y1="96" x2="72" y2="100"/><line class="h" x1="76" y1="96" x2="76" y2="100"/><line class="h" x1="80" y1="96" x2="80" y2="100"/><line class="h" x1="84" y1="96" x2="84" y2="100"/><line class="h" x1="88" y1="96" x2="88" y2="100"/><line class="h" x1="92" y1="96" x2="92" y2="100"/>
+<path class="t" d="M20 78 q-5 5 0 10 q5 5 0 10 M12 78 q-5 5 0 10 q5 5 0 10"/>
+<path d="M114 166 V130 Q114 124 120 124 H126 Q132 124 132 130 V166 Z"/><rect x="118" y="114" width="10" height="10"/><rect x="116" y="108" width="14" height="6" rx="2"/>
+<line class="h" x1="127" y1="130" x2="127" y2="162"/><line class="h" x1="130" y1="130" x2="130" y2="162"/></g><path class="fr" d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></svg><figcaption><span>5</span>Hitzeschutz</figcaption></figure><figure><svg viewBox="0 0 160 212" aria-hidden="true"><defs><clipPath id="rc5"><path d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></clipPath></defs><g clip-path="url(#rc5)"><line class="g" x1="10" y1="166" x2="150" y2="166"/><line class="h" x1="94" y1="166" x2="100" y2="160"/><line class="h" x1="99" y1="166" x2="105" y2="160"/><line class="h" x1="104" y1="166" x2="110" y2="160"/><line class="h" x1="109" y1="166" x2="115" y2="160"/><line class="h" x1="114" y1="166" x2="120" y2="160"/><line class="h" x1="119" y1="166" x2="125" y2="160"/><line class="h" x1="124" y1="166" x2="130" y2="160"/>
+<path d="M58 166 V114 Q58 100 72 98 H80 Q94 100 94 114 V166 Z"/>
+<rect x="70" y="88" width="12" height="10"/><path d="M70 88 V72 Q70 60 76 60 Q82 60 82 72 V88"/>
+<ellipse cx="76" cy="134" rx="10" ry="14"/>
+<line class="h" x1="86" y1="112" x2="86" y2="162"/><line class="h" x1="90" y1="112" x2="90" y2="162"/>
+<path d="M118 104 Q125 116 125 122 A7 7 0 0 1 111 122 Q111 116 118 104 Z"/><path class="t" d="M115 121 q0 3 3 4"/>
+<path class="t" d="M106 100 l-4 -4 M130 100 l4 -4 M118 94 v-5"/></g><path class="fr" d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></svg><figcaption><span>6</span>Haaröl</figcaption></figure></div>
+
+    </div>
+  </section>
+
   <!-- ===================== PRODUKTE ===================== -->
-  <section class="view" id="v-produkte">
+  <section class="view" id="v-produkte" hidden>
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="q" type="search" placeholder="Suchen: Marke, Produkt oder „feine Haare fettig“" aria-label="Produkte durchsuchen">
@@ -314,11 +423,11 @@ const meSet = () => !!(me.dicke||me.kopf||me.kaputt);
 let onlyMine = true;
 
 /* ---------- Zustand und Teilen-Link ---------- */
-let state = {view:"produkte", type:"shampoo", cat:"alle", seg:"alle", q:""};
+let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:""};
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="wissen"){ state.view = a; return; }
+  if(a==="quiz"||a==="wissen"||a==="start"){ state.view = a; return; }
   if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -533,7 +642,7 @@ function setHH(){ document.documentElement.style.setProperty("--hh", document.qu
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
-  for(const v of ["produkte","quiz","wissen"]) document.getElementById("v-"+v).hidden = state.view!==v;
+  for(const v of ["start","produkte","quiz","wissen"]) document.getElementById("v-"+v).hidden = state.view!==v;
   navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.view===state.view ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
@@ -542,7 +651,10 @@ function render(){
   writeHash();
 }
 navBtns.forEach(b => b.onclick = () => { state.view = b.dataset.view; render(); window.scrollTo({top:0}); });
-document.getElementById("home").onclick = () => { state = {view:"produkte",type:"shampoo",cat:"alle",seg:"alle",q:""}; q.value=""; render(); window.scrollTo({top:0}); };
+document.getElementById("home").onclick = () => { state = {view:"start",type:"shampoo",cat:"alle",seg:"alle",q:""}; q.value=""; render(); window.scrollTo({top:0}); };
+document.querySelectorAll("#v-start [data-go]").forEach(b => b.onclick = () => {
+  if(b.dataset.go==="me"){ document.getElementById("meBtn").click(); return; }
+  state.view = b.dataset.go; render(); window.scrollTo({top:0}); });
 let qt; q.addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(()=>{ state.q = q.value; render(); }, 120); });
 
 /* ---------- Meine Haare ---------- */

@@ -185,6 +185,45 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
 .toast.on{opacity:1}
 .fine{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
+
+/* ---------- Startseite ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center;padding:36px 0 12px}
+@media (max-width:759px){ .hero{grid-template-columns:1fr;gap:22px;padding-top:22px} }
+.photo{aspect-ratio:4/5;border-radius:999px 999px 6px 6px;background:var(--card);border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:14px;padding:24px;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:759px){ .photo{max-width:250px;width:100%;margin:0 auto} }
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.hero h1{font-size:clamp(38px,6vw,64px);line-height:1}
+.hero p.lead{font-size:17px;margin:18px 0 0;max-width:52ch}
+.hero .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);border-radius:999px;padding:10px 18px;background:transparent;cursor:pointer;font-size:14px;color:var(--ink);text-decoration:none}
+.btn.dark{background:var(--ink);color:#F3ECE2}
+.promise{background:#382F2E;color:#F3ECE2;border-radius:20px;padding:30px 28px;margin:36px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:start}
+@media (max-width:759px){ .promise{grid-template-columns:1fr;gap:12px;padding:24px 20px} }
+.promise h2{color:#F3ECE2;font-size:clamp(28px,4vw,40px);line-height:1.05}
+.promise p{margin:0 0 10px;color:#E9DFD2}
+.offer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:40px 0 0;padding:0;list-style:none}
+@media (max-width:959px){ .offer{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:520px){ .offer{grid-template-columns:1fr} }
+.offer button{width:100%;height:100%;text-align:left;display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1px solid rgba(56,47,46,.30);border-radius:14px;padding:18px 18px 16px;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+.offer button:hover{transform:translateY(-2px);box-shadow:0 10px 26px -16px rgba(56,47,46,.45)}
+.offer h3{font-size:24px}
+.offer p{margin:0;color:var(--muted);font-size:14.5px}
+.offer .go{margin-top:auto;padding-top:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.routine{margin:56px 0 0;text-align:center}
+.routine h2{font-size:clamp(34px,5vw,54px)}
+.routine .sub{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:18px;margin:6px 0 26px}
+.rrow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+@media (max-width:759px){ .rrow{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px} }
+.rrow figure{margin:0;text-align:center}
+.rrow svg{width:100%;max-width:150px;height:auto}
+.rrow svg *{fill:none;stroke:#382F2E;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.rrow svg path:not(.t):not(.fr),.rrow svg rect,.rrow svg ellipse,.rrow svg circle:not(.d){fill:#FFFDFA}
+.rrow svg .fr{stroke-width:1.6}.rrow svg .g{stroke-width:1.1}.rrow svg .h{stroke-width:.8}.rrow svg .t{stroke-width:1}.rrow svg .d{fill:#382F2E}
+.rrow svg .nr{fill:#382F2E;stroke:none;font-family:var(--serif);font-style:italic;font-size:20px}
+.rrow figcaption{font-size:14.5px;margin-top:10px;line-height:1.35}
+.rrow figcaption span{display:block;font-family:var(--serif);font-size:22px;margin-bottom:2px}
+.routine .fine2{color:var(--muted);font-size:13.5px;margin:22px auto 0;max-width:60ch}
 </style>
 <!--DESIGN-->
 </head>
@@ -205,8 +244,39 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 <main class="in">
   <p class="note-banner">Vorschau mit allen echten Produkten aus deinen 6 Guides. Quiz und Wissen sind noch Platzhalter.</p>
 
+  <!-- ===================== STARTSEITE ===================== -->
+  <section class="view" id="v-start">
+    <div class="hero">
+      <div class="photo" aria-label="Platz für ein Foto von Laura">Hier kommt später ein Foto von dir hin</div>
+      <div>
+        <p class="kicker">Willkommen in der Healthy Hair Community</p>
+        <h1>Von kaputten zu gesunden Haaren</h1>
+        <p class="lead">Hi, ich bin Laura. Auf Instagram erkläre ich dir, wie du deine Haare gesund und geschmeidig hältst. Hier findest du alles davon an einem Ort: meine Produkteinschätzungen, Quizze zu deinen Haaren und Wissen rund um die richtige Haarpflege.</p>
+        <div class="btns"><button type="button" class="btn dark" data-go="produkte">Zu den Produkten <span aria-hidden="true">→</span></button><button type="button" class="btn" data-go="quiz">Quiz machen</button></div>
+      </div>
+    </div>
+    <div class="promise">
+      <h2>Meine Einschätzung, nicht die der Marken</h2>
+      <div>
+        <p>Jedes Produkt auf dieser Seite habe ich selbst eingeordnet, und zwar nach seinen Inhaltsstoffen, nicht nach dem, was auf der Verpackung versprochen wird. Nichts davon ist von den Marken übernommen.</p>
+        <p>Ich sage dir auch, wo ein Produkt an seine Grenzen kommt und für wen es nicht passt. So findest du, was zu deiner Haardicke und deinem Kopfhauttyp passt.</p>
+      </div>
+    </div>
+    <ul class="offer">
+      <li><button type="button" data-go="produkte"><h3>Produkte</h3><p>Über 500 Produkte von Shampoo bis Haaröl, sortiert nach Haardicke und Kopfhauttyp.</p><span class="go">Ansehen →</span></button></li>
+      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Drei kurze Checks: Welche Kopfhaut hast du, wie viel Pflege brauchen deine Haare, welche Struktur haben sie?</p><span class="go">Quiz starten →</span></button></li>
+      <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Mythen und zum richtigen Umgang mit deinen Haaren, einfach erklärt.</p><span class="go">Lesen →</span></button></li>
+      <li><button type="button" data-go="me"><h3>Meine Haare</h3><p>Stell einmal deine Haardicke und deinen Kopfhauttyp ein und sieh nur, was zu dir passt.</p><span class="go">Einstellen →</span></button></li>
+    </ul>
+    <div class="routine">
+      <h2>Deine Routine</h2>
+      <p class="sub">in sechs Schritten zu geschmeidigen Haaren</p>
+__ROUTINE__
+    </div>
+  </section>
+
   <!-- ===================== PRODUKTE ===================== -->
-  <section class="view" id="v-produkte">
+  <section class="view" id="v-produkte" hidden>
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="q" type="search" placeholder="Suchen: Marke, Produkt oder „feine Haare fettig“" aria-label="Produkte durchsuchen">
@@ -314,11 +384,11 @@ const meSet = () => !!(me.dicke||me.kopf||me.kaputt);
 let onlyMine = true;
 
 /* ---------- Zustand und Teilen-Link ---------- */
-let state = {view:"produkte", type:"shampoo", cat:"alle", seg:"alle", q:""};
+let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:""};
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="wissen"){ state.view = a; return; }
+  if(a==="quiz"||a==="wissen"||a==="start"){ state.view = a; return; }
   if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -533,7 +603,7 @@ function setHH(){ document.documentElement.style.setProperty("--hh", document.qu
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
-  for(const v of ["produkte","quiz","wissen"]) document.getElementById("v-"+v).hidden = state.view!==v;
+  for(const v of ["start","produkte","quiz","wissen"]) document.getElementById("v-"+v).hidden = state.view!==v;
   navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.view===state.view ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
@@ -542,7 +612,10 @@ function render(){
   writeHash();
 }
 navBtns.forEach(b => b.onclick = () => { state.view = b.dataset.view; render(); window.scrollTo({top:0}); });
-document.getElementById("home").onclick = () => { state = {view:"produkte",type:"shampoo",cat:"alle",seg:"alle",q:""}; q.value=""; render(); window.scrollTo({top:0}); };
+document.getElementById("home").onclick = () => { state = {view:"start",type:"shampoo",cat:"alle",seg:"alle",q:""}; q.value=""; render(); window.scrollTo({top:0}); };
+document.querySelectorAll("#v-start [data-go]").forEach(b => b.onclick = () => {
+  if(b.dataset.go==="me"){ document.getElementById("meBtn").click(); return; }
+  state.view = b.dataset.go; render(); window.scrollTo({top:0}); });
 let qt; q.addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(()=>{ state.q = q.value; render(); }, 120); });
 
 /* ---------- Meine Haare ---------- */

@@ -125,3 +125,11 @@
 - Quizze in den privaten Links: Als eigene Unterseiten blieben sie leer (alle Quiztexte entstehen per Skript, das dort nicht lief).
   Jetzt stecken sie direkt in der Seite (quiz-einbettung.html, eingefügt von build-vorschau.py) und öffnen sich als Vollbild-Fenster mit „Zurück zum Guide“.
   Die lokale haarpflege.html verlinkt weiter auf die Dateien quiz-*.html daneben. Für die spätere echte Webseite gehen normale Unterseiten.
+
+## Startseite (Landingpage) – in der Design-Vorschau
+- Neue Ansicht „start“ (Standard ohne #, Logo-Klick führt hin, Link #start). Inhalt: Foto-Platzhalter (Torbogen), „Von kaputten zu gesunden Haaren“, Vorstellung,
+  dunkler Block „Meine Einschätzung, nicht die der Marken“, 4 Kacheln (Produkte, Quiz, Wissen, Meine Haare), „Deine Routine“ mit 6 Zeichnungen.
+- Texte sind ENTWURF – Laura soll sie prüfen. Behauptung „nicht gesponsert“ bewusst vorsichtig formuliert („Nichts davon ist von den Marken übernommen“).
+- Zeichnungen: routine-zeichnungen.html (wird von build-vorschau.py für __ROUTINE__ eingesetzt). Laura will sie später mit einem KI-Bildprogramm (Higgsfield) neu machen → nur diese Datei ersetzen.
+- Offizieller Link (7GncL…) noch NICHT neu veröffentlicht: er würde sonst auch mit der Startseite öffnen (Laura nutzt ihn für Beratungen).
+- Zukunftsidee: „Produkt kaufen“-Knopf in der Produktkarte mit Affiliate-Link (Amazon o. ä.) – Werbekennzeichnung nötig. Noch nicht bauen.
