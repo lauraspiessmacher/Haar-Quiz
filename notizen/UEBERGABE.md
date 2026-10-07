@@ -208,3 +208,4 @@
   Gewohnheiten neu: tägliche Kopfhautmassage 5–10 Min., Fingerkuppen statt Nägel, Probleme (Juckreiz, Schuppen, Rötungen) aktiv angehen. Alte 3 Gewohnheiten (ausspülen, lauwarm, Ansatz föhnen) noch drin – Laura fragen. Noch Entwurf.
 - Kapitel 9: Gewohnheiten ergänzt (Kissenbezug wechseln, Haarbürsten reinigen, Tiefenreinigung 1–3x/Monat je nach Kopfhauttyp/Styling).
 - Kapitel 9: Reihenfolge geändert – Kopfhautpflege + Gewohnheiten VOR der Shampoo-Tabelle (Lauras Wunsch).
+- Kapitel 9 (Kopfhaut) FREIGEGEBEN, inkl. der drei Gewohnheiten aus meinem Entwurf (ausspülen, lauwarm, Ansatz föhnen).

@@ -60,8 +60,7 @@
   "titel": "Kopfhautgesundheit",
   "teaser": "Warum gesunde Haare auf der Kopfhaut beginnen und worauf ihr achten könnt.",
   "datei": "kopfhaut.html",
-  "arzt": true,
-  "entwurf": true
+  "arzt": true
  },
  {
   "id": "mythen",
