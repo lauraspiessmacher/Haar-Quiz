@@ -336,7 +336,7 @@ function plan(a){
   const moistMask = thick ? "eine nährende Feuchtigkeitsmaske" : fine ? "eine leichte Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske";
   const repMaskIdx = repair && m > 1 ? spread([...Array(m).keys()], m >= 3 ? 2 : 1) : [];
   const maskKind = k => {
-    if(repair && m === 1) return `eine ${repName}-Maske, im Wechsel mit einer Feuchtigkeitsmaske von Woche zu Woche`;
+    if(repair && m === 1) return `eine ${repName}-Maske`;
     return repMaskIdx.includes(k) ? `eine ${repName}-Maske` : moistMask;
   };
   const repLeaveN = repair ? (n >= 4 ? 2 : n >= 2 ? 1 : 0) : 0;
@@ -345,7 +345,7 @@ function plan(a){
   const repLeaveDays = wash.filter(d => !repMaskDays.includes(d)).concat(wash.filter(d => repMaskDays.includes(d))).slice(0, repLeaveN);
   const prewashDay = effort === "viel" ? (wash.find(d => !maskDays.includes(d)) ?? wash[0]) : null;
 
-  /* Trockenshampoo: höchstens einmal pro Woche, nur bei unkomplizierter Kopfhaut */
+  /* Trockenshampoo: höchstens einmal pro Woche, nicht bei schuppiger Kopfhaut */
   let tsDay = null, tsWhy = "";
   if(kopfOk && n <= 4){
     const free = [0,1,2,3,4,5,6].filter(d => !wash.includes(d));
@@ -380,7 +380,7 @@ function plan(a){
       if(d === prewashDay) items.push(`Vorher Pre-Wash-Pflege mit der ${PREWASH[dk]}, 10 bis 60 Minuten einwirken lassen`);
       items.push("Shampoo auf Ansatz und Kopfhaut");
       const mk = maskDays.indexOf(d);
-      if(mk >= 0) items.push(`${maskKind(mk).replace(/^e/,"E")}${fine ? " nur in Längen und Spitzen" : " in die Längen"}, etwa 5 Minuten einwirken lassen`);
+      if(mk >= 0) items.push(`${maskKind(mk).replace(/^e/,"E")}${fine ? " nur in Längen und Spitzen" : " in die Längen"}, etwa 5 Minuten einwirken lassen${repair && m === 1 ? ". In der Woche danach stattdessen eine Feuchtigkeitsmaske" : ""}`);
       items.push(`Zum Abschluss ${COND[dk]}`);
       if(repLeaveDays.includes(d)) items.push(`Ein ${repName}-Leave-in ins noch feuchte Haar`);
       else if(repLeaveN) items.push(`Ein feuchtigkeitsspendendes oder nährendes Leave-in ins noch feuchte Haar, zum Beispiel ${LEAVE_FEUCHT[dk]}`);
@@ -401,7 +401,7 @@ function plan(a){
   const regel = [
     ["Jeden Tag", "LL-Methode: Leave-in in die trockenen Längen und Spitzen. Vor jeder Hitze Hitzeschutz."],
     ["Jede Nacht", nacht.charAt(0).toUpperCase() + nacht.slice(1) + ". Nie mit nassen Haaren ins Bett."],
-    ["Jede Woche", [repair && m > 1 ? `${m}× Maske, davon ${repMaskIdx.length}× ${repName}.` : `${m}× Maske.`, repLeaveN ? `Nach der Wäsche ${repLeaveN}× ein ${repName}-Leave-in, sonst Feuchtigkeit.` : "", prewashDay != null ? "1× Pre-Wash-Pflege." : "", tsDay != null ? "Höchstens 1× Trockenshampoo." : "", effort === "viel" ? "Ein paar Mal eine Kopfhautmassage, 5 bis 10 Minuten mit den Fingerkuppen." : "", "Kissenbezug wechseln und Haarbürste reinigen."].filter(Boolean).join(" ")],
+    ["Jede Woche", [repair && m > 1 ? `${m}× Maske, davon ${repMaskIdx.length}× ${repName}.` : repair ? `1× Maske, von Woche zu Woche im Wechsel ${repName} und Feuchtigkeit.` : `${m}× Maske.`, repLeaveN ? `Nach der Wäsche ${repLeaveN}× ein ${repName}-Leave-in, sonst Feuchtigkeit.` : "", prewashDay != null ? "1× Pre-Wash-Pflege." : "", tsDay != null ? "Höchstens 1× Trockenshampoo." : "", effort === "viel" ? "Ein paar Mal eine Kopfhautmassage, 5 bis 10 Minuten mit den Fingerkuppen." : "", "Kissenbezug wechseln und Haarbürste reinigen."].filter(Boolean).join(" ")],
   ];
   if(tsDay != null) regel.push(["Nach einer Woche mit Trockenshampoo", "Vor einer Wäsche ein Kopfhautpeeling."]);
   regel.push(tief === 0 ? ["Bei Bedarf", "Tiefenreinigung mit einem Tiefenreinigungsshampoo, wenn sich deine Haare schwer oder strähnig anfühlen."] : ["Jeden Monat", `Tiefenreinigung mit einem Tiefenreinigungsshampoo, ${tiefText}.`]);

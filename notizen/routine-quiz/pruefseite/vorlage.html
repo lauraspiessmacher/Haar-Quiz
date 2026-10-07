@@ -1,0 +1,239 @@
+<title>Routine-Check prüfen</title>
+<style>
+/* Layout: eine ruhige Lesespalte, jeder Textbaustein ist ein Prüfzettel mit Passt / Ändern und Notizfeld */
+:root{
+  --bg:#FAF7F3; --paper:#FFFFFF; --ink:#382F2E; --muted:#7A6C66; --line:#E6DED6;
+  --accent:#382F2E; --onaccent:#F7F1EA; --ok:#4E7A55; --okbg:#E8F0E6; --todo:#A4542F; --todobg:#F6E7DE; --chip:#F1EBE4;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#2B2423; --paper:#352D2C; --ink:#F3ECE2; --muted:#BFB1A6; --line:#4A403E;
+  --accent:#F3ECE2; --onaccent:#2B2423; --ok:#9CC59F; --okbg:#2F3A2F; --todo:#E7A07C; --todobg:#46322A; --chip:#403634; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#2B2423; --paper:#352D2C; --ink:#F3ECE2; --muted:#BFB1A6; --line:#4A403E;
+  --accent:#F3ECE2; --onaccent:#2B2423; --ok:#9CC59F; --okbg:#2F3A2F; --todo:#E7A07C; --todobg:#46322A; --chip:#403634; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);margin:0}
+.wrap{max-width:820px;margin:0 auto;padding-inline:16px;padding-block:28px 80px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,48px)}
+h2{font-size:28px;margin:46px 0 6px}
+h3.grp{font-size:21px;margin:34px 0 12px;padding-top:14px;border-top:1px solid var(--line)}
+p{margin:0 0 10px}
+.lead{font-size:17.5px;max-width:62ch;margin-top:12px}
+.how{display:grid;gap:6px;margin:14px 0 0;padding:0;list-style:none;color:var(--muted);font-size:15px}
+.how b{color:var(--ink);font-weight:600}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin:22px -16px 0;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.prog{flex:1 1 220px;min-width:0}
+.prog .t{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.prog .track{height:5px;background:var(--line);border-radius:5px;overflow:hidden;margin-top:5px}
+.prog .fill{height:100%;background:var(--ok);width:0;transition:width .3s}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;background:var(--paper)}
+.seg button{border:0;background:none;color:var(--ink);font:500 13.5px var(--sans);padding:6px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--onaccent)}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--onaccent);font:500 14px var(--sans);padding:8px 14px;border-radius:999px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.save{font-size:13px;color:var(--muted);width:100%}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.jump a{color:var(--ink);font-size:14px;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--paper)}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px 14px;margin:0 0 14px;display:grid;gap:10px;min-width:0}
+.card[data-st="ok"]{border-color:var(--ok)}
+.card[data-st="aendern"]{border-color:var(--todo)}
+.wann{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.txt{font-size:16px;min-width:0}
+.var{display:grid;gap:10px}
+.var div{display:grid;gap:2px;padding-left:12px;border-left:2px solid var(--line)}
+.var small{font-size:13px;color:var(--muted);font-weight:600}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}
+.ctl .pick{display:inline-flex;gap:6px}
+.ctl .pick button{border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--sans);padding:7px 14px;border-radius:999px;cursor:pointer}
+.ctl .pick button.ok[aria-pressed="true"]{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.ctl .pick button.ch[aria-pressed="true"]{background:var(--todobg);border-color:var(--todo);color:var(--todo)}
+textarea{flex:1 1 260px;min-width:0;min-height:42px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font:15px/1.45 var(--sans);color:var(--ink);background:var(--bg)}
+textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--todo);outline-offset:2px}
+.fq ol{margin:4px 0 0;padding-left:20px}
+.fq li{margin:2px 0}
+.ex .who{font-size:14.5px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{background:var(--chip);border-radius:999px;padding:2px 10px;font-size:13px}
+details.full{border-top:1px solid var(--line);padding-top:8px}
+details.full summary{cursor:pointer;font-weight:600;font-size:15px}
+.res h4{font-family:var(--serif);font-weight:500;font-size:18px;margin:16px 0 6px}
+.res ul{margin:0 0 8px;padding-left:20px}
+.tbl{overflow-x:auto;margin:6px 0 10px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+td{border-top:1px solid var(--line);padding:7px 8px;vertical-align:top}
+td:first-child{font-weight:600;white-space:nowrap;width:8.5em}
+td ul{margin:0;padding-left:18px}
+.hide{display:none!important}
+@media (max-width:600px){ .bar{position:static} }
+.empty{color:var(--muted);font-style:italic}
+@media (prefers-reduced-motion:reduce){.prog .fill{transition:none}}
+</style>
+
+<div class="wrap">
+  <h1>Routine-Check prüfen</h1>
+  <p class="lead">Hier stehen alle Texte, die im Ergebnis vom Routine-Check vorkommen können. Jeder Satz steht nur einmal hier, egal wie viele Antwort-Kombinationen es gibt. Dazu siehst du immer, wann er erscheint.</p>
+  <ul class="how">
+    <li><b>Passt:</b> Der Baustein ist so freigegeben.</li>
+    <li><b>Ändern:</b> Schreib einfach ins Feld daneben, was anders sein soll.</li>
+    <li><b>Fertig?</b> Schreib mir im Chat „Prüfseite fertig“, dann lese ich alles aus und baue es ein. Deine Anmerkungen werden automatisch gespeichert.</li>
+  </ul>
+  <nav class="jump" aria-label="Springen zu">
+    <a href="#bausteine">Textbausteine</a><a href="#fragen">Fragen</a><a href="#beispiele">Beispiel-Ergebnisse</a>
+  </nav>
+
+  <div class="bar">
+    <div class="prog"><div class="t" id="progT">0 von 0 geprüft</div><div class="track"><div class="fill" id="progF"></div></div></div>
+    <div class="seg" role="group" aria-label="Anzeigen">
+      <button type="button" data-f="alle" aria-pressed="true">Alle</button>
+      <button type="button" data-f="offen" aria-pressed="false">Noch offen</button>
+      <button type="button" data-f="aendern" aria-pressed="false">Zu ändern</button>
+    </div>
+    <button type="button" class="btn ghost" id="copyAll">Anmerkungen kopieren</button>
+    <div class="save" id="saveState" role="status">Lade gespeicherte Anmerkungen …</div>
+  </div>
+
+  <h2 id="bausteine">Textbausteine im Ergebnis</h2>
+  <p class="empty" id="standT"></p>
+  <div id="bBox"></div>
+
+  <h2 id="fragen">Die Fragen</h2>
+  <p>So stehen die Fragen und Antworten im Quiz. Bereits beantwortete Fragen aus den anderen Quizzen sind vorausgewählt, man kann sie aber ändern.</p>
+  <div id="fBox"></div>
+
+  <h2 id="beispiele">Beispiel-Ergebnisse</h2>
+  <p>So sieht der komplette Wochenplan für fünf typische Follower aus. Hier kannst du prüfen, ob das Ganze zusammen stimmig wirkt.</p>
+  <div id="eBox"></div>
+</div>
+
+<script>
+const DATA = __DATA__;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+const plain = s => String(s).replace(/\*\*/g, "");
+
+/* ---------- Notizen: im gemeinsamen Speicher, sonst nur auf diesem Gerät ---------- */
+let NOTES = {}, db = null, filter = "alle";
+const LS = "pruef-routine";
+function lsLoad(){ try { return JSON.parse(localStorage.getItem(LS) || "{}") || {}; } catch(e){ return {}; } }
+function lsSave(){ try { localStorage.setItem(LS, JSON.stringify(NOTES)); } catch(e){} }
+const setSave = t => { document.getElementById("saveState").textContent = t; };
+const timers = {};
+function persist(id){
+  const n = NOTES[id] || {};
+  lsSave();
+  if(!db) return;
+  clearTimeout(timers[id]);
+  timers[id] = setTimeout(async () => {
+    try { await db.collection("anmerkungen").doc(id).set({status: n.status || "", text: n.text || "", t: Date.now()}); setSave("Gespeichert"); }
+    catch(e){ setSave("Speichern hat nicht geklappt. Deine Anmerkung bleibt auf diesem Gerät, kopier sie zur Sicherheit über „Anmerkungen kopieren“."); }
+  }, 500);
+}
+
+/* ---------- Aufbau ---------- */
+const ITEMS = [];
+function card(id, wannHtml, bodyHtml, extraCls){
+  ITEMS.push(id);
+  return `<article class="card ${extraCls||""}" data-id="${id}" data-st="">
+    ${wannHtml}${bodyHtml}
+    <div class="ctl"><div class="pick" role="group" aria-label="Bewertung">
+      <button type="button" class="ok" data-s="ok" aria-pressed="false">Passt</button>
+      <button type="button" class="ch" data-s="aendern" aria-pressed="false">Ändern</button></div>
+      <textarea id="n_${id}" aria-label="Anmerkung" placeholder="Anmerkung (optional)"></textarea></div>
+  </article>`;
+}
+function textHtml(t){
+  if(typeof t === "string") return `<div class="txt">${md(t)}</div>`;
+  return `<div class="txt var">${t.map(([l, x]) => `<div><small>${esc(l)}</small><span>${md(x)}</span></div>`).join("")}</div>`;
+}
+(function build(){
+  document.getElementById("standT").textContent = "Stand der Texte: " + DATA.stand.split("-").reverse().join(".");
+  let html = "", g = "";
+  for(const b of DATA.bausteine){
+    if(b.gruppe !== g){ g = b.gruppe; html += `<h3 class="grp">${esc(g)}</h3>`; }
+    html += card(b.id, `<div class="wann">Erscheint: ${esc(b.wann)}</div>`, textHtml(b.text));
+  }
+  document.getElementById("bBox").innerHTML = html;
+  document.getElementById("fBox").innerHTML = DATA.fragen.map((f, k) => card(f.id,
+    `<div class="wann">Frage ${k+1}${f.wann ? " · " + esc(f.wann) : ""}${f.multi ? " · Mehrfachauswahl" : ""}</div>`,
+    `<div class="txt fq"><strong>${esc(f.t)}</strong>${f.h ? `<br><span class="who">${esc(f.h)}</span>` : ""}<ol>${f.a.map(x => `<li>${esc(x)}</li>`).join("")}</ol></div>`)).join("");
+  document.getElementById("eBox").innerHTML = DATA.beispiele.map(e => card(e.id,
+    `<div class="wann">Beispiel</div>`,
+    `<div class="txt ex"><h3 style="font-size:22px;margin-bottom:4px">${esc(e.name)}</h3><p class="who">${esc(e.wer)}</p>
+      <div class="chips">${e.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>
+      <details class="full"><summary>Ganzes Ergebnis anzeigen</summary><div class="res">
+        ${e.T.map(s => `<h4>${esc(s.h)}</h4>${(s.p||[]).map(p => `<p>${md(p)}</p>`).join("")}${s.li ? `<ul>${s.li.map(l => `<li>${md(l)}</li>`).join("")}</ul>` : ""}`).join("")}
+        <h4>Deine Woche</h4><div class="tbl"><table>${e.week.map(r => `<tr><td>${esc(r.tag)}<br><span class="who" style="font-weight:400">${esc(r.label)}</span></td><td><ul>${r.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></td></tr>`).join("")}</table></div>
+        <h4>Regelmäßig</h4><div class="tbl"><table>${e.regel.map(r => `<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</table></div>
+      </div></details></div>`, "ex")).join("");
+})();
+
+/* ---------- Anzeigen und Bedienen ---------- */
+function paint(id){
+  const el = document.querySelector(`.card[data-id="${CSS.escape(id)}"]`); if(!el) return;
+  const n = NOTES[id] || {};
+  el.dataset.st = n.status || "";
+  el.querySelectorAll(".pick button").forEach(b => b.setAttribute("aria-pressed", b.dataset.s === n.status));
+  const ta = el.querySelector("textarea");
+  if(document.activeElement !== ta) ta.value = n.text || "";
+}
+function applyFilter(){
+  document.querySelectorAll(".card").forEach(el => {
+    const n = NOTES[el.dataset.id] || {};
+    const show = filter === "alle" || (filter === "offen" && !n.status) || (filter === "aendern" && (n.status === "aendern" || (n.text && n.status !== "ok")));
+    el.classList.toggle("hide", !show);
+  });
+  document.querySelectorAll("h3.grp").forEach(h => {
+    let s = h.nextElementSibling, any = false;
+    while(s && !s.matches("h3.grp")){ if(s.classList.contains("card") && !s.classList.contains("hide")) any = true; s = s.nextElementSibling; }
+    h.classList.toggle("hide", !any);
+  });
+}
+function progress(){
+  const done = ITEMS.filter(id => (NOTES[id]||{}).status).length;
+  document.getElementById("progT").textContent = `${done} von ${ITEMS.length} geprüft · ${ITEMS.filter(id => (NOTES[id]||{}).status === "aendern").length} zu ändern`;
+  document.getElementById("progF").style.width = (ITEMS.length ? done / ITEMS.length * 100 : 0) + "%";
+}
+function paintAll(){ ITEMS.forEach(paint); applyFilter(); progress(); }
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".pick button"); if(!b) return;
+  const id = b.closest(".card").dataset.id, n = NOTES[id] = Object.assign({}, NOTES[id]);
+  n.status = n.status === b.dataset.s ? "" : b.dataset.s;
+  paint(id); progress(); persist(id);
+  if(n.status === "aendern") b.closest(".card").querySelector("textarea").focus();
+});
+document.addEventListener("input", e => {
+  if(!e.target.matches("textarea")) return;
+  const id = e.target.closest(".card").dataset.id, n = NOTES[id] = Object.assign({}, NOTES[id]);
+  n.text = e.target.value;
+  if(n.text.trim() && !n.status){ n.status = "aendern"; paint(id); progress(); }
+  persist(id);
+});
+document.querySelectorAll(".seg button").forEach(b => b.onclick = () => {
+  filter = b.dataset.f; document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b)); applyFilter();
+});
+document.getElementById("copyAll").onclick = async () => {
+  const label = id => { const b = DATA.bausteine.find(x => x.id === id); if(b) return b.gruppe + " · " + b.wann;
+    const f = DATA.fragen.find(x => x.id === id); if(f) return "Frage: " + f.t; const e = DATA.beispiele.find(x => x.id === id); return e ? "Beispiel: " + e.name : id; };
+  const rows = ITEMS.filter(id => (NOTES[id]||{}).status === "aendern" || ((NOTES[id]||{}).text||"").trim()).map(id => `• ${label(id)}\n  ${(NOTES[id].text||"(ohne Anmerkung)").trim()}`);
+  const t = "Anmerkungen Routine-Check\n\n" + (rows.join("\n\n") || "Keine Änderungen, alles passt.");
+  let ok = false; try { await navigator.clipboard.writeText(t); ok = true; } catch(e){}
+  if(!ok){ const ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch(e){} ta.remove(); }
+  setSave(ok ? "Kopiert. Du kannst die Anmerkungen jetzt im Chat einfügen." : "Kopieren hat nicht geklappt.");
+};
+
+NOTES = lsLoad(); paintAll();
+(async () => {
+  try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch(e){ db = null; }
+  if(!db){ setSave("Deine Anmerkungen werden nur auf diesem Gerät gespeichert. Wenn du fertig bist, nutze „Anmerkungen kopieren“ und schick sie mir im Chat."); return; }
+  db.collection("anmerkungen").onSnapshot(snap => {
+    snap.docs.forEach(d => { const v = d.data() || {}; const cur = NOTES[d.id] || {}; if(!cur.t || (v.t || 0) >= (cur.t || 0)) NOTES[d.id] = {status: v.status || "", text: v.text || "", t: v.t || 0}; });
+    lsSave(); paintAll(); setSave("Gespeichert. Claude kann deine Anmerkungen direkt lesen.");
+  }, () => setSave("Der gemeinsame Speicher ist gerade nicht erreichbar. Deine Anmerkungen bleiben auf diesem Gerät."));
+})();
+</script>
