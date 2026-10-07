@@ -176,3 +176,5 @@
 - Quiz als Papierstapel: jede Karte = oberstes Blatt (cremeweiß, feine Linien, Büroklammer) auf zwei schief liegenden Blättern; jede Karte liegt anders. Beim Drüberfahren hebt sich das Blatt und richtet sich gerade.
   Klick: Blatt wächst auf den ganzen Bildschirm, färbt sich dunkelbraun und geht ins Quiz über (window.openQuiz aus quiz-einbettung.html; lokal normaler Link). Die alten Haarsträhnen-Grafiken (.qart) sind entfernt.
   Überarbeitet (Laura: „zu unecht, Linien raus“): keine Linien mehr, feine Papierstruktur (SVG-Rauschen), weiche mehrstufige Schatten statt Umrandung, leicht gewölbte Ecke unten rechts, silberne Büroklammer, untere Blätter schauen weiter hervor.
+  3. Fassung (Laura: „mehr wie Pergament, Struktur, nicht so gerade, klare Ecken“): helles Elfenbein-Pergament (#FCF8F0→#F4ECDF) mit Faser-/Körnungsstruktur (SVG-Rauschen),
+  leicht unregelmäßige Kanten (clip-path-Polygone), spitze Ecken, Schatten per drop-shadow. Bewusst NICHT beige (Laura mag kein Beige).
