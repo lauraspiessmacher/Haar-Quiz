@@ -8,17 +8,27 @@
     logo.innerHTML = `<svg class="strands" viewBox="0 0 30 60" fill="none" aria-hidden="true"><path d="M11 2 C 6 18, 16 33, 10 58" stroke="#382F2E" stroke-width="1.2"/><path d="M21 2 C 16 18, 26 33, 20 58" stroke="#9E8C80" stroke-width="1.2"/></svg><span class="txt2">${logo.innerHTML}</span>`;
   }
   /* Schrift-Auswahl oben, an Stelle des Hinweises */
-  const FONTS = [["cormorant","Cormorant"],["bodoni","Bodoni"],["playfair","Playfair"],["italiana","Italiana"],["gilda","Gilda"]];
+  const FONTS = [["playfair","Playfair"],["instrument","Instrument"],["caslon","Caslon schmal"],["cormorant","Cormorant"],["bodoni","Bodoni"],["italiana","Italiana"],["gilda","Gilda"]];
+  const STILE = [["bisher","Bisher"],["rouje","Rouje-Stil"]];
   const banner = document.querySelector(".note-banner");
-  if(banner){ banner.outerHTML = `<div class="looktop" role="group" aria-label="Schrift für Überschriften wählen"><b>Schrift für Überschriften:</b>${FONTS.map(([v,l])=>`<button type="button" data-font="${v}">${l}</button>`).join("")}</div>`; }
-  const btns = document.querySelectorAll(".looktop button");
+  if(banner){ banner.outerHTML = `<div class="looktop" role="group" aria-label="Schrift für Überschriften wählen"><b>Stil:</b>${STILE.map(([v,l])=>`<button type="button" data-stil="${v}">${l}</button>`).join("")}<span class="sep"></span><b>Schrift für Überschriften:</b>${FONTS.map(([v,l])=>`<button type="button" data-font="${v}">${l}</button>`).join("")}</div>`; }
+  const btns = document.querySelectorAll(".looktop button[data-font]");
+  const sbtns = document.querySelectorAll(".looktop button[data-stil]");
   function set(v){
     root.setAttribute("data-font", v);
     btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.font === v));
-    try { localStorage.setItem("font2", v); } catch(e){}
+    try { localStorage.setItem("font3", v); } catch(e){}
   }
-  let start = "playfair"; try { const s = localStorage.getItem("font2"); if(s) start = s; } catch(e){}
+  function setStil(v, mitSchrift){
+    root.setAttribute("data-stil", v);
+    sbtns.forEach(b => b.setAttribute("data-on", b.dataset.stil === v ? "1" : "0"));
+    if(mitSchrift) set(v === "rouje" ? "instrument" : "playfair");
+    try { localStorage.setItem("stil", v); } catch(e){}
+  }
+  let start = "instrument", stil = "rouje";
+  try { const s = localStorage.getItem("font3"); if(s) start = s; const t = localStorage.getItem("stil"); if(t) stil = t; } catch(e){}
   btns.forEach(b => b.onclick = () => set(b.dataset.font));
-  set(start);
+  sbtns.forEach(b => b.onclick = () => setStil(b.dataset.stil, true));
+  setStil(stil, false); set(start);
 })();
 </script>

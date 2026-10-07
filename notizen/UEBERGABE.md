@@ -113,3 +113,8 @@
 - Produkte wieder mit dünnem dunkelbraunem Rahmen (rgba(56,47,46,.30), Radius 14px).
 - Logo „HAARPFLEGE EINFACH ERKLÄRT“ testweise in Großbuchstaben (Playfair).
 - Referenz-Webseite von Laura: rouje.com (Seite „homepage-leichter“, Beauty). Schriften dort: „Panama“ (schmale Serifenschrift, Großbuchstaben) und „Diatype“ (Grotesk) – beide kostenpflichtig, kostenlose Ersatzschriften nötig.
+- Rouje-Stil als Umschalter in der Design-Vorschau (Stil: Bisher / Rouje-Stil; Standard = Rouje-Stil + Schrift „Instrument“):
+  Ersatz für „Panama“ = Instrument Serif (OFL), alternativ Libre Caslon Condensed (OFL); Ersatz für „Diatype“ = Instrument Sans (OFL). Alle eingebettet (schriften/ + schriften-eingebettet.css).
+  Riesige Überschriften in Großbuchstaben (SHAMPOO, QUIZ), Untertitel kursiv, hellerer Cremegrund #FBF7F3, eckigere Knöpfe,
+  Produktbild groß auf hellem Feld oben in der Karte (Handy: Bild rechts), dünner dunkelbrauner Rahmen bleibt.
+  Hinweis: Produktbilder sind nur ~150 px hoch – für die echte Webseite später größere Bilder nehmen.
