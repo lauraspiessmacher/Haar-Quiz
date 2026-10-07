@@ -25,11 +25,10 @@ cov = f'{S}/hair-journey-cover.jpg'
 t = t.replace('__JOURNEY_IG__', JOURNEY_IG).replace('__JOURNEY_TT__', JOURNEY_TT)
 import base64, glob
 def _b64(fn): return 'data:image/jpeg;base64,' + base64.b64encode(open(fn,'rb').read()).decode()
-# Hair Journey als Buch: Cover + Seiten (Ausschnitte aus der Collage), blättert von selbst um
-_seiten = [cov] + sorted(glob.glob(f'{S}/hair-journey-seiten/seite-*.jpg'))
-_book = ''.join(f'<span class="bpage" style="z-index:{len(_seiten)-i}"><img src="{_b64(f)}" alt="" loading="lazy"></span>' for i, f in enumerate(_seiten))
+# Hair Journey als Buch: Cover = Collage, darunter Papierseiten, die beim Hinscrollen/Drüberfahren kurz aufblättern
+_book = '<span class="bstack" aria-hidden="true"></span>' + ''.join(f'<span class="bleaf" style="--i:{i}" aria-hidden="true"></span>' for i in range(1, 7)) + f'<span class="bcover"><img src="{_b64(cov)}" alt=""></span>'
 t = t.replace('<div class="jcover" aria-label="Platz für das Cover deiner Hair Journey">__JOURNEY_COVER__</div>',
-  ('<a class="jcover book" id="jbook" href="' + JOURNEY_IG + '" target="_blank" rel="noopener" aria-label="My Hair Journey: Collage meiner Haare von früher bis heute, auf Instagram ansehen"><span class="bstack" aria-hidden="true"></span>' + _book + '</a>') if os.path.exists(cov)
+  ('<a class="jcover book" id="jbook" href="' + JOURNEY_IG + '" target="_blank" rel="noopener" aria-label="My Hair Journey: Collage meiner Haare von früher bis heute, auf Instagram ansehen">' + _book + '</a>') if os.path.exists(cov)
   else '<div class="jcover">Hier kommt das Cover deiner Hair Journey hin</div>')
 import base64
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())

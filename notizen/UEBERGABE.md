@@ -165,5 +165,5 @@
 - Fertige Texte stehen oben als dunkle „Lesen“-Kacheln, die übrigen Themen bleiben graue „Kommt bald“-Kacheln.
 - Einzige inhaltliche Änderung: prewash, Punkt Kopfhaut → „und dort nie über Nacht“ ergänzt (Lauras Regel: Öl nie über Nacht auf der Kopfhaut; Tabelle nennt bei ÖWC „bis über Nacht“).
 - Neuer Text: Datei in wissen/ ablegen, Eintrag in wissen.json, ggf. graue Kachel im Template entfernen, neu bauen.
-- Hair Journey als Buch: Cover + 6 Seiten (Ausschnitte aus der Collage, gesamtguide-bau/hair-journey-seiten/seite-1..6.jpg). Blättert von selbst um (3D, ca. alle 1,7 s), am Ende klappt es wieder zu und beginnt von vorn.
-  Läuft nur, wenn das Buch sichtbar ist; bei „Bewegung reduzieren“ bleibt das Cover stehen. Andere Seiten: Bilder in den Ordner legen (Name seite-N.jpg, Hochformat 3:4), neu bauen.
+- Hair Journey als Buch (Lauras Wunsch, 2. Fassung): Cover = Collage. Beim Hinscrollen (einmal pro Sichtbarwerden) und beim Drüberfahren/Antippen geht das Buch nur einen Spalt auf
+  (Cover ca. 34° gedreht), darunter blättern 6 helle Papierseiten leicht und klappen wieder zu. KEINE Fotos innen (erste Fassung mit Collage-Ausschnitten verworfen).
