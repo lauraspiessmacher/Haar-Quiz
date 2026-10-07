@@ -9,6 +9,11 @@ data = open(sys.argv[1]).read().replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
 t = t.replace('__KAUF__', open(f'{S}/kauflinks.json').read().strip() or '{}')
+# Serie „Haarpflege 1x1“: Titelbilder als eingebettete Bilder
+_serie = json.load(open(f'{S}/serie.json'))
+for r in _serie:
+    if r.get('bild'): r['bild'] = 'data:image/jpeg;base64,' + __import__('base64').b64encode(open(f'{S}/serie/' + r['bild'], 'rb').read()).decode()
+t = t.replace('__SERIE__', json.dumps(_serie, ensure_ascii=False))
 # Hair Journey: angepinnte Beiträge auf Instagram und TikTok, Cover = hair-journey-cover.jpg
 JOURNEY_IG = 'https://www.instagram.com/p/DVS6Ig9jeKW/'
 JOURNEY_TT = 'https://www.tiktok.com/@lauraspiessmacher/photo/7612557590056422659'
