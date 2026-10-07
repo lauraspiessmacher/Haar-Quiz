@@ -8,6 +8,7 @@ ROOT = os.path.abspath(f'{S}/../..')
 data = open(sys.argv[1]).read().replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
+t = t.replace('__KAUF__', open(f'{S}/kauflinks.json').read().strip() or '{}')
 # Hair Journey: Links und Cover (Platzhalter, bis Laura die echten schickt)
 JOURNEY_IG = 'https://www.instagram.com/lauraspiessmacher/'
 JOURNEY_TT = 'https://www.tiktok.com/'

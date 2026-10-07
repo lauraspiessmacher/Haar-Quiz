@@ -284,6 +284,25 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
   nav.main{grid-template-columns:repeat(5,1fr)}
   .merkn{position:absolute;top:3px;right:calc(50% - 22px);min-width:17px;height:17px;line-height:17px;font-size:10px}
 }
+
+/* ---------- Merkliste kompakt ---------- */
+.mgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+@media (max-width:520px){ .mgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px} }
+.mitem{position:relative;display:flex;flex-direction:column;gap:3px;background:var(--paper);border:1px solid rgba(56,47,46,.30);border-radius:12px;padding:8px 8px 12px}
+.mitem .mpic{width:100%;height:130px;object-fit:contain;background:#F1ECE7;border-radius:6px;padding:12px 0;box-sizing:border-box;margin-bottom:6px;display:block}
+.mitem .save{top:12px;right:12px;width:30px;height:30px}
+.mitem .brand{font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:0 4px}
+.mitem .mname{font-family:var(--serif);font-size:17px;line-height:1.2;padding:0 4px}
+.mitem .tag{align-self:flex-start;margin:4px 4px 0}
+@media (max-width:520px){ .mitem .mpic{height:110px} .mitem .mname{font-size:16px} }
+/* ---------- Kaufen-Knopf ---------- */
+.buyrow{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:12px}
+.buyrow .adnote{font-size:11px;color:var(--muted);letter-spacing:.04em}
+.buy{display:inline-flex;align-items:center;gap:6px;background:#382F2E;color:#F3ECE2;border-radius:999px;padding:7px 14px;font-size:13px;text-decoration:none;white-space:nowrap}
+.buyrow.demo .buy{background:transparent;color:var(--muted);border:1px dashed rgba(56,47,46,.45);cursor:default}
+.buyrow.sm{margin-top:auto;padding:10px 4px 0;flex-direction:column;align-items:stretch;gap:4px}
+.buyrow.sm .adnote{text-align:right}
+.buyrow.sm .buy{justify-content:center;padding:6px 10px;font-size:12px}
 </style>
 <!--DESIGN-->
 </head>
@@ -442,6 +461,8 @@ __ROUTINE__
 <!--DESIGN-SWITCH-->
 <script>
 const DATA = __DATA__;
+/* Kaufen-Links (Affiliate), Schlüssel = Produktart|Marke|Name. Leer = kein Knopf. */
+const KAUF = __KAUF__;
 
 /* Reihenfolge der Routine: Shampoo → Maske → Conditioner → Leave-in → Öl, Kopfhaut extra */
 const TYPES = [
@@ -594,11 +615,23 @@ function renderMerk(){
   if(!mine.length){ box.innerHTML = `<div class="merkempty"><p>Noch nichts gemerkt. Tippe bei einem Produkt auf das <b>+</b>, dann landet es hier.</p><button type="button" class="btn dark" id="merkGo">Zu den Produkten <span aria-hidden="true">→</span></button></div>`;
     document.getElementById("merkGo").onclick = () => { state.view="produkte"; render(); window.scrollTo({top:0}); }; return; }
   box.innerHTML = TYPES.map(t => { const list = mine.filter(p => p.type===t.id); if(!list.length) return "";
-    return `<h3 class="sec">${t.label} <span class="cnt">${list.length}</span></h3><ul class="grid">${list.map(itemHtml).join("")}</ul>`; }).join("");
+    return `<h3 class="sec">${t.label} <span class="cnt">${list.length}</span></h3><ul class="mgrid">${list.map(merkItemHtml).join("")}</ul>`; }).join("");
 }
 function merkText(){
   const set = merkSet();
   return "Meine Merkliste (Haarpflege einfach erklärt)\n\n" + TYPES.map(t => { const l = ALL.filter(p => p.type===t.id && set.has(p.mk)); return l.length ? t.label+":\n"+l.map(p=>"– "+p.brand+" "+p.name).join("\n") : ""; }).filter(Boolean).join("\n\n");
+}
+
+/* Kaufen-Knopf: erscheint nur, wenn ein Link hinterlegt ist (in der Design-Vorschau als Platzhalter) */
+function buyHtml(p, small){
+  const url = KAUF[p.mk];
+  if(url) return `<div class="buyrow${small?" sm":""}"><span class="adnote">Werbelink</span><a class="buy" href="${esc(url)}" target="_blank" rel="sponsored noopener">Jetzt kaufen <span aria-hidden="true">→</span></a></div>`;
+  if(window.KAUF_DEMO) return `<div class="buyrow demo${small?" sm":""}"><span class="adnote">Werbelink</span><span class="buy" title="Hier kommt später der Kaufen-Link hin">Jetzt kaufen <span aria-hidden="true">→</span></span></div>`;
+  return "";
+}
+/* kompakte Karte für die Merkliste */
+function merkItemHtml(p){
+  return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span><span class="tag">${p.segment}</span>${buyHtml(p,true)}</li>`;
 }
 
 function itemHtml(p){
@@ -633,7 +666,7 @@ function itemHtml(p){
   }
   return `<li class="item">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     <div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
-    <div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${body}</div></li>`;
+    <div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
 }
 
 /* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */

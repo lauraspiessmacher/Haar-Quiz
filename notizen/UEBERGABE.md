@@ -146,3 +146,7 @@
 - Merkliste: „+“ oben rechts an jeder Produktkarte (gemerkt = dunkelbraun mit Haken). Neuer Reiter „Merkliste“ mit Zähler (Handy: 5 Reiter).
   Ansicht #merkliste: Produkte nach Routine-Reihenfolge gruppiert, „Als Einkaufsliste kopieren“, „Alle entfernen“. Speicherung nur im Browser (localStorage „merkliste“, Schlüssel Produktart|Marke|Name), kein Konto, keine Daten bei Laura.
   Später möglich: Merkliste per Link teilen, „Kaufen“-Links (Affiliate, gekennzeichnet) direkt in der Merkliste.
+- Merkliste kompakt: kleine Karten (Bild, Marke, Name, Drogerie/High-End), Laptop ~5 nebeneinander, Handy 2.
+- „Jetzt kaufen“-Knopf: unten rechts in der Produktkarte, mit „Werbelink“-Hinweis daneben (Kennzeichnungspflicht). Links kommen in gesamtguide-bau/kauflinks.json
+  (Schlüssel „produktart|Marke|Name“ → URL), build-vorschau.py setzt sie als KAUF ein. Ohne Link erscheint KEIN Knopf; nur die Design-Vorschau zeigt gestrichelte Platzhalter (window.KAUF_DEMO).
+  Hinweise: dm/Rossmann-Eigenmarken haben kein Partnerprogramm; Arzneimittel (Ketozolin) ohne Kaufen-Link. Links mit rel="sponsored".
