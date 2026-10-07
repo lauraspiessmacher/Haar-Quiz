@@ -1,0 +1,299 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Haarwissen</title>
+<style>
+:root{
+  --bg:#382F2E;
+  --surface:#433836;
+  --cream:#F3ECE2;
+  --muted:#C9BCAE;
+  --line:rgba(243,236,226,.5);
+  --line-soft:rgba(243,236,226,.18);
+  --taupe:#9E8C80;
+  --accent:#D3CCC4;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#382F2E; --cream:#F3ECE2; } }
+:root[data-theme="dark"]{ --bg:#382F2E; --cream:#F3ECE2; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 16px);background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:44px 22px 72px}
+a{color:inherit}
+strong{font-weight:600;color:var(--cream)}
+
+/* Kopf */
+.eyebrow{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,9vw,52px);line-height:1.05;margin:0 0 18px}
+.lead{color:var(--muted);font-size:18px;margin:0 0 30px;max-width:560px}
+
+/* Themenübersicht */
+.toc{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.toc a{display:flex;gap:14px;align-items:baseline;text-decoration:none;border:1px solid var(--line-soft);border-radius:14px;padding:14px 16px;transition:border-color .2s,background .2s}
+.toc a:hover,.toc a:focus-visible{border-color:var(--line);background:var(--surface);outline:none}
+.toc .n{font-family:var(--serif);color:var(--accent);font-size:18px;min-width:26px}
+.toc .t{font-size:16px}
+
+/* Artikel */
+article{border-top:1px solid var(--line-soft);margin-top:56px;padding-top:44px}
+.num{font-family:var(--serif);color:var(--accent);font-size:15px;letter-spacing:.12em;margin:0 0 10px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,6.4vw,36px);line-height:1.15;margin:0 0 16px}
+h3{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.3;margin:34px 0 10px}
+article>p:first-of-type{font-size:18.5px}
+p{margin:0 0 14px}
+ul{list-style:none;padding:0;margin:4px 0 18px}
+li{position:relative;padding-left:22px;margin:0 0 10px}
+li::before{content:"";position:absolute;left:4px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* Tabellen */
+.table{margin:8px 0 20px}
+table{width:100%;border-collapse:collapse;font-size:15.5px;line-height:1.5}
+th{text-align:left;font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 12px 10px 0;border-bottom:1px solid var(--line)}
+td{padding:14px 12px 14px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+td:first-child{font-family:var(--serif);font-size:18px;white-space:nowrap}
+td:first-child small{display:block;font-family:var(--sans);font-size:13px;color:var(--muted);white-space:normal}
+@media (max-width:640px){
+  table,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tr{border:1px solid var(--line-soft);border-radius:14px;padding:14px 16px;margin:0 0 12px;background:var(--surface)}
+  td{border:0;padding:4px 0}
+  td:first-child{white-space:normal;font-size:20px;margin-bottom:4px}
+  td:not(:first-child)::before{content:attr(data-label);display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+}
+
+/* Hinweisbox */
+.note{background:var(--surface);border-left:2px solid var(--accent);border-radius:0 12px 12px 0;padding:18px 20px;margin:26px 0 8px}
+.note h3{margin-top:0}
+.note p:last-child,.note ul:last-child{margin-bottom:0}
+
+.top{display:inline-block;margin-top:18px;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-soft)}
+.top:hover{color:var(--cream)}
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line-soft);font-size:13.5px;color:var(--taupe)}
+</style>
+</head>
+<body>
+<div class="wrap" id="start">
+
+<header>
+  <p class="eyebrow">Haarpflege-Bestie · Wissen</p>
+  <h1>Haarwissen</h1>
+  <p class="lead">Ehrlich erklärt, ohne Marketing-Versprechen: Was deine Pflege wirklich kann, wie dein Haar wächst und was hinter Haarausfall steckt.</p>
+  <ol class="toc">
+    <li><a href="#leave-in"><span class="n">01</span><span class="t">Haarbruch und Spliss vorbeugen mit Leave-in</span></a></li>
+    <li><a href="#reparatur"><span class="n">02</span><span class="t">Protein, Keratin und Bond Repair im Vergleich</span></a></li>
+    <li><a href="#pre-wash"><span class="n">03</span><span class="t">Pre-Wash-Routinen</span></a></li>
+    <li><a href="#haarzyklus"><span class="n">04</span><span class="t">Der Haarzyklus</span></a></li>
+    <li><a href="#haarausfall"><span class="n">05</span><span class="t">Arten von Haarausfall</span></a></li>
+  </ol>
+</header>
+
+<article id="leave-in">
+  <p class="num">01</p>
+  <h2>Haarbruch und Spliss vorbeugen: Was ein Leave-in wirklich kann</h2>
+  <p>Ein Leave-in ist eines der besten Mittel, um Haarbruch und Spliss vorzubeugen. Bestehenden Spliss kann es aber nicht reparieren. Den wirst du nur mit der Schere wieder los.</p>
+
+  <h3>Wie Haarbruch und Spliss entstehen</h3>
+  <p>Dein Haar ist von einer Schuppenschicht umgeben, die den Kern schützt wie Dachziegel ein Haus. Reibung, Bürsten, Hitze, Färben und Sonne rauen diese Schicht mit der Zeit auf. Liegt der Kern frei, spaltet sich das Haar an der Spitze auf (Spliss) oder bricht irgendwo in den Längen ab (Haarbruch).</p>
+  <p>Besonders empfindlich ist dein Haar, wenn es nass ist. Dann dehnt es sich stärker und reißt beim Kämmen schneller. Deshalb entstehen viele Schäden nicht beim Föhnen, sondern schon beim Entwirren nach der Wäsche, beim nassen Schlafen oder durch grobes Rubbeln mit dem Handtuch.</p>
+
+  <h3>Was ein Leave-in dagegen tut</h3>
+  <ul>
+    <li><strong>Weniger Reibung:</strong> Pflegestoffe und Silikone legen sich wie ein feiner Film um das Haar. Die Bürste gleitet leichter durch, und es reißen weniger Haare ab.</li>
+    <li><strong>Glattere Oberfläche:</strong> Pflegende Stoffe haften genau an den beschädigten Stellen und legen die Schuppenschicht an. Das Haar fühlt sich glatter an und verhakt sich weniger.</li>
+    <li><strong>Mehr Elastizität:</strong> Feuchtigkeitsspender wie Glycerin oder Panthenol halten das Haar geschmeidig. Elastisches Haar gibt bei Zug nach, statt zu brechen.</li>
+    <li><strong>Schutz vor Hitze:</strong> Viele Leave-ins enthalten einen Hitzeschutz. Den brauchst du immer, bevor du föhnst, glättest oder lockst.</li>
+  </ul>
+
+  <h3>Was ein Leave-in nicht kann</h3>
+  <p>Gespaltene Spitzen wachsen nicht wieder zusammen. Produkte, die Spliss „versiegeln“, kleben die Enden nur vorübergehend zusammen, und nach der nächsten Wäsche sind sie wieder offen. Unbehandelt wandert Spliss weiter nach oben, deshalb hilft nur ein Schnitt oberhalb der kaputten Stelle.</p>
+
+  <h3>So wendest du es richtig an</h3>
+  <p>Gib dein Leave-in direkt nach der Wäsche ins handtuchtrockene Haar, vor allem in die Längen und Spitzen. Entwirre danach mit einer Entwirrbürste von den Spitzen nach oben und arbeite dich langsam zum Ansatz vor.</p>
+  <p>Die Textur wählst du nach deiner Haardicke. Feines Haar verträgt meist ein leichtes Spray, normales bis dickes Haar eine Creme. Ein Öl oder Serum ist ein schönes Extra für Glanz, ersetzt aber kein Leave-in und kommt immer obendrauf.</p>
+
+  <div class="note">
+    <h3>Kleine Gewohnheiten, große Wirkung</h3>
+    <ul>
+      <li>Nicht mit nassen oder offenen Haaren schlafen, besser ein lockerer Zopf und ein Kissenbezug aus Satin oder Seide.</li>
+      <li>Haargummis ohne Metall verwenden, zum Beispiel Scrunchies aus Satin.</li>
+      <li>Bei vielen Knoten lieber im trockenen Zustand mit Leave-in entwirren.</li>
+      <li>Spliss schneiden lassen, sobald er da ist: in den Spitzen mit einem Spitzenschnitt, in den Längen mit einem Splissschnitt. Gesunde Spitzen musst du nicht nach Kalender schneiden.</li>
+    </ul>
+  </div>
+  <a class="top" href="#start">Zurück nach oben</a>
+</article>
+
+<article id="reparatur">
+  <p class="num">02</p>
+  <h2>Kann man Haar reparieren? Protein, Keratin und Bond Repair im Vergleich</h2>
+  <p>Geschädigtes Haar kann sich nicht selbst heilen, weil die Haarlängen aus abgestorbenen Zellen bestehen. Pflegeprodukte können Schäden deshalb nicht dauerhaft rückgängig machen, aber sie können sie ausgleichen, stabilisieren und vor neuen schützen. Dabei wirken sie auf zwei Ebenen: außen auf der Oberfläche und innen in der Haarfaser.</p>
+
+  <h3>Reparatur von außen</h3>
+  <p>Conditioner, Masken, Silikone und Öle legen sich auf die Oberfläche des Haares. Sie glätten die aufgeraute Schuppenschicht, machen das Haar weicher und senken die Reibung. Das wirkt sofort und sichtbar, hält aber nur bis zur nächsten Wäsche.</p>
+
+  <h3>Reparatur von innen</h3>
+  <p>Sehr kleine Moleküle können in die Haarfaser eindringen. Dazu gehören zerkleinerte Proteine, Aminosäuren und die Wirkstoffe in Bond-Repair-Produkten. Sie füllen poröse Stellen auf oder stabilisieren die innere Struktur, und ihre Wirkung hält meist etwas länger an als reine Oberflächenpflege.</p>
+  <p>Wenn von „Reparatur von innen“ im Sinne von Ernährung oder Nahrungsergänzung die Rede ist, betrifft das nur das Haar, das neu nachwächst. Deine vorhandenen Längen erreicht keine Kapsel mehr.</p>
+
+  <h3>Protein, Bond Repair und Feuchtigkeit im Überblick</h3>
+  <div class="table">
+    <table>
+      <thead><tr><th>Pflege</th><th>Was es ist</th><th>Was es macht</th><th>Passt besonders zu</th></tr></thead>
+      <tbody>
+        <tr><td>Protein</td><td data-label="Was es ist">Zerkleinerte Eiweiße, z. B. Keratin, Weizen-, Soja-, Reis- oder Seidenprotein</td><td data-label="Was es macht">Füllt poröse Stellen, das Haar fühlt sich fester und griffiger an</td><td data-label="Passt besonders zu">Feinem, porösem, strapaziertem und brüchigem Haar</td></tr>
+        <tr><td>Bond Repair</td><td data-label="Was es ist">Wirkstoffe, die an den inneren Bindungen des Haares ansetzen</td><td data-label="Was es macht">Soll gebrochene Bindungen stabilisieren, die durch Blondieren, Färben und Hitze entstehen</td><td data-label="Passt besonders zu">Blondiertem, gefärbtem und stark hitzegestyltem Haar</td></tr>
+        <tr><td>Feuchtigkeit</td><td data-label="Was es ist">Glycerin, Panthenol, Aloe, Hyaluron und pflegende Fette</td><td data-label="Was es macht">Hält das Haar elastisch und geschmeidig</td><td data-label="Passt besonders zu">Jedem Haar, besonders trockenem und dickem</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Und Keratin?</strong> Keratin ist kein eigenes Wirkprinzip, sondern eine Proteinart, nämlich die, aus der dein Haar zum größten Teil selbst besteht. Steht Keratin auf der Verpackung, ist das also eine Proteinpflege. Dass es besser wirkt als andere Proteine, behaupten vor allem die Marken, belastbare Belege dafür gibt es kaum. Nicht verwechseln solltest du das mit einer Keratin-Glättung beim Friseur, die ist eine chemische Behandlung und hat mit Pflegeprodukten nichts zu tun.</p>
+  <p><strong>Bond Repair</strong> setzt tiefer an. Dein Haar wird innen von festen Bindungen zusammengehalten, den sogenannten Disulfidbrücken, und genau die werden beim Blondieren und Färben aufgebrochen. Bond-Repair-Wirkstoffe sollen diese Stellen wieder stabilisieren. Ehrlicherweise stammen die meisten Studien dazu von den Herstellern selbst, und nicht jedes Produkt mit „Bond“ im Namen enthält einen echten Bond-Wirkstoff. Ein Blick auf die Inhaltsstoffe lohnt sich.</p>
+
+  <h3>Macht es Sinn, alles zu kombinieren?</h3>
+  <p>Ja, denn die drei wirken auf unterschiedlichen Ebenen und ergänzen sich. Bond Repair stabilisiert die innere Struktur, Proteine füllen Lücken auf, und Feuchtigkeitspflege hält das Haar elastisch. Wichtig ist die Balance, nicht möglichst viel von allem.</p>
+  <ul>
+    <li><strong>Zu viel Protein</strong> macht das Haar steif, strohig und sogar brüchiger.</li>
+    <li><strong>Zu viel Feuchtigkeit ohne Halt</strong> lässt das Haar schlapp, weich und kraftlos wirken.</li>
+    <li><strong>Bond Repair</strong> wirkt am besten in Maske und Leave-in auf feuchtem Haar. Wechsle es mit Feuchtigkeitspflege ab, statt wochenlang nur Repair zu verwenden.</li>
+  </ul>
+  <p>Auch ohne Blondieren entstehen Schäden, nämlich durch Reibung, nasses Schlafen, grobes Bürsten und Hitze. Die beste Reparatur bleibt deshalb, neue Schäden gar nicht erst entstehen zu lassen.</p>
+  <a class="top" href="#start">Zurück nach oben</a>
+</article>
+
+<article id="pre-wash">
+  <p class="num">03</p>
+  <h2>Pre-Wash-Routinen: Pflege, bevor das Shampoo kommt</h2>
+  <p>Bei einer Pre-Wash-Routine pflegst du deine Längen, bevor du sie wäschst. So schützt du sie davor, beim Shampoonieren auszutrocknen, und gibst strapaziertem Haar einen Extra-Pflegeschub. Du musst das nicht vor jeder Wäsche machen, aber trockenes, poröses und gefärbtes Haar profitiert davon besonders.</p>
+
+  <h3>Warum Pflege vor der Wäsche hilft</h3>
+  <p>Shampoo löst Fett und Schmutz, und zwar nicht nur von der Kopfhaut, sondern auch von den Längen. Gerade poröses Haar verliert dabei schnell Feuchtigkeit und Geschmeidigkeit. Außerdem quillt Haar beim Waschen auf und zieht sich beim Trocknen wieder zusammen, was die Schuppenschicht auf Dauer strapaziert.</p>
+  <p>Eine Schicht Pflege vor der Wäsche federt beides ab. Für Kokosöl gibt es sogar Studien, die zeigen, dass es vor der Wäsche aufgetragen den Proteinverlust des Haares verringern kann.</p>
+
+  <h3>Die vier Pre-Wash-Routinen im Überblick</h3>
+  <div class="table">
+    <table>
+      <thead><tr><th>Routine</th><th>So geht's</th><th>Passt besonders zu</th><th>Einwirkzeit</th></tr></thead>
+      <tbody>
+        <tr><td>ÖWC<small>Öl, Waschen, Conditioner</small></td><td data-label="So geht's">Öl in die trockenen Längen und Spitzen geben. Dann waschen und mit Conditioner abschließen (optional vorher eine Maske).</td><td data-label="Passt besonders zu">Trockenem, dickem, lockigem und porösem Haar</td><td data-label="Einwirkzeit">30 Minuten bis über Nacht</td></tr>
+        <tr><td>CWC<small>Conditioner, Waschen, Conditioner</small></td><td data-label="So geht's">Conditioner in die trockenen Längen geben. Noch effektiver: Haare nass machen, Conditioner in die Längen, dann die Kopfhaut shampoonieren und beides ausspülen. Danach Maske und Conditioner.</td><td data-label="Passt besonders zu">Feinem Haar und Locken, die von Öl schnell schwer werden</td><td data-label="Einwirkzeit">10 bis 20 Minuten, bei der nassen Variante während der Kopfhautwäsche</td></tr>
+        <tr><td>MWC<small>Maske, Waschen, Conditioner</small></td><td data-label="So geht's">Maske in die trockenen oder feuchten Längen geben. Dann waschen und mit Conditioner abschließen.</td><td data-label="Passt besonders zu">Stark strapaziertem, blondiertem und gefärbtem Haar</td><td data-label="Einwirkzeit">15 bis 30 Minuten</td></tr>
+        <tr><td>LWC<small>Leave-in, Waschen, Conditioner</small></td><td data-label="So geht's">Ein Leave-in, z. B. mit Bond Repair oder Protein, in die trockenen oder feuchten Längen geben und einwirken lassen. Dann waschen und mit Conditioner abschließen (optional vorher eine Maske).</td><td data-label="Passt besonders zu">Chemisch behandeltem und brüchigem Haar</td><td data-label="Einwirkzeit">Laut Produkt, meist 10 bis 30 Minuten</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Darauf solltest du achten</h3>
+  <ul>
+    <li><strong>Feines Haar:</strong> Nimm ein leichtes Öl oder lieber gleich Conditioner, und trag es nur in die Spitzen und Längen auf.</li>
+    <li><strong>Kopfhaut:</strong> Öl kommt nur auf die Kopfhaut, wenn sie trocken ist. Bei fettiger Kopfhaut oder Schuppen lässt du sie lieber aus.</li>
+    <li><strong>Waschen:</strong> Shampoo gehört vor allem auf die Kopfhaut. Der Schaum, der beim Ausspülen durch die Längen läuft, reicht dort völlig.</li>
+    <li><strong>Danach:</strong> Auch nach einer Pre-Wash-Routine endet jede Wäsche mit Conditioner. Eine Maske davor ist optional, je nachdem, wie viel Pflege dein Haar braucht.</li>
+  </ul>
+  <p>Sieh Pre-Wash als Extra, nicht als Pflicht. Schon einmal pro Woche oder vor besonders anstrengenden Tagen für dein Haar, zum Beispiel vor dem Föhnen und Glätten, macht einen spürbaren Unterschied.</p>
+  <a class="top" href="#start">Zurück nach oben</a>
+</article>
+
+<article id="haarzyklus">
+  <p class="num">04</p>
+  <h2>Der Haarzyklus: Wie dein Haar wächst und was du selbst beeinflussen kannst</h2>
+  <p>Jedes deiner rund 100.000 Haare durchläuft immer wieder denselben Kreislauf aus Wachsen, Ruhen und Ausfallen. Jedes Haar tickt dabei nach seiner eigenen Uhr. Deshalb verlierst du nie alle Haare auf einmal, sondern jeden Tag ein paar, und 50 bis 100 Haare am Tag sind völlig normal.</p>
+
+  <h3>Die vier Phasen</h3>
+  <div class="table">
+    <table>
+      <thead><tr><th>Phase</th><th>Was passiert</th><th>Dauer</th><th>Anteil der Haare</th></tr></thead>
+      <tbody>
+        <tr><td>Anagen<small>Wachstum</small></td><td data-label="Was passiert">Die Haarwurzel ist aktiv, das Haar wächst etwa 1 cm pro Monat</td><td data-label="Dauer">2 bis 7 Jahre</td><td data-label="Anteil der Haare">ca. 85 bis 90 %</td></tr>
+        <tr><td>Katagen<small>Übergang</small></td><td data-label="Was passiert">Die Wurzel stellt das Wachstum ein und löst sich langsam</td><td data-label="Dauer">2 bis 3 Wochen</td><td data-label="Anteil der Haare">ca. 1 %</td></tr>
+        <tr><td>Telogen<small>Ruhe</small></td><td data-label="Was passiert">Das Haar sitzt noch locker in der Kopfhaut und wächst nicht mehr</td><td data-label="Dauer">2 bis 3 Monate</td><td data-label="Anteil der Haare">ca. 10 bis 15 %</td></tr>
+        <tr><td>Exogen<small>Ausfall</small></td><td data-label="Was passiert">Das alte Haar fällt aus, oft beim Waschen oder Bürsten</td><td data-label="Dauer">wenige Tage</td><td data-label="Anteil der Haare">wechselnd</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Danach beginnt der Kreislauf von vorn: In derselben Wurzel bildet sich ein neues Haar, das wieder in die Wachstumsphase startet.</p>
+  <p>Manche Fachleute ergänzen noch eine fünfte Phase, das Kenogen. Gemeint ist die kurze Pause, in der die Wurzel nach dem Ausfall leer bleibt. Bei erblich bedingtem Haarausfall wird diese Pause länger.</p>
+
+  <h3>Was genetisch bedingt ist</h3>
+  <p>Einige Dinge legen deine Gene fest, und daran kann keine Pflege etwas ändern:</p>
+  <ul>
+    <li><strong>Wie lang dein Haar maximal werden kann:</strong> Das hängt davon ab, wie lange deine Wachstumsphase dauert. Bei zwei Jahren ist bei etwa 24 cm Schluss, bei sieben Jahren sind es über 80 cm.</li>
+    <li><strong>Wie viele Haare du hast</strong>, also wie viele Haarwurzeln auf deiner Kopfhaut sitzen.</li>
+    <li><strong>Wie dick ein einzelnes Haar ist</strong> und ob es glatt, wellig oder lockig wächst.</li>
+    <li><strong>Die Veranlagung</strong> für erblich bedingten Haarausfall und dafür, wann du graue Haare bekommst.</li>
+  </ul>
+
+  <h3>Was du selbst in der Hand hast</h3>
+  <p>Du kannst zwar nicht ändern, wie viele Haare du hast, aber du kannst dafür sorgen, dass sie gesund wachsen und lange halten:</p>
+  <ul>
+    <li><strong>Ernährung:</strong> Deine Haarwurzeln brauchen ausreichend Eiweiß, Eisen, Zink und Vitamin D. Ein Mangel kann zu mehr Haarausfall führen, Nahrungsergänzung hilft aber nur, wenn wirklich ein Mangel besteht. Lass das am besten beim Arzt prüfen.</li>
+    <li><strong>Stress, Crash-Diäten und Krankheiten:</strong> Sie können viele Haare gleichzeitig in die Ruhephase schicken. Der Ausfall zeigt sich dann erst zwei bis drei Monate später.</li>
+    <li><strong>Gesunde Kopfhaut:</strong> Entzündungen, Schuppen und starker Juckreiz stören das Umfeld, in dem dein Haar wächst. Wähle dein Shampoo nach deinem Kopfhauttyp oder, wenn du eins hast, nach deinem Kopfhautproblem wie Schuppen, Juckreiz oder Rötungen. Ergänze dazu die passende Kopfhautpflege, zum Beispiel ein beruhigendes Serum, ein Tonikum oder ein Peeling.</li>
+    <li><strong>Kein Dauerzug:</strong> Sehr straffe Zöpfe, Dutts und bestimmte Extensions, die dauerhaft am Ansatz ziehen, können die Haarwurzeln auf Dauer schädigen.</li>
+    <li><strong>Schutz der Längen:</strong> Viele glauben, ihr Haar wachse nicht, dabei bricht es nur schneller ab, als es nachwächst. Gute Pflege und Hitzeschutz helfen dir, die Länge zu behalten. Ist doch Spliss entstanden, schneide ihn ab: in den Spitzen mit einem Spitzenschnitt, in den Längen mit einem Splissschnitt. Danach hast du wieder gesunde Enden, die du gezielt schützen kannst.</li>
+  </ul>
+  <div class="note">
+    <p>Wenn du plötzlich deutlich mehr Haare verlierst als sonst, über mehrere Wochen, dann lass das bitte ärztlich abklären.</p>
+  </div>
+  <a class="top" href="#start">Zurück nach oben</a>
+</article>
+
+<article id="haarausfall">
+  <p class="num">05</p>
+  <h2>Haarausfall: Welche Arten es gibt und was in deiner Kopfhaut passiert</h2>
+  <p>Haarausfall ist nicht gleich Haarausfall. Hinter dünner werdendem Haar können ganz unterschiedliche Ursachen stecken, und jede läuft in der Kopfhaut anders ab. Dieser Text hilft dir bei der Einordnung, ersetzt aber keine Diagnose beim Hautarzt.</p>
+
+  <div class="note">
+    <h3>Erst prüfen: Haarausfall oder Haarbruch?</h3>
+    <p>Schau dir ein ausgefallenes Haar genau an. Hat es am Ende ein kleines helles Knötchen, ist es mit der Wurzel ausgefallen, also echter Haarausfall. Fehlt dieses Knötchen, ist das Haar abgebrochen, und das ist ein Pflegethema, kein Problem der Kopfhaut.</p>
+  </div>
+
+  <h3>Erblich bedingter Haarausfall</h3>
+  <p>Das ist die häufigste Form, und sie betrifft Männer wie Frauen. Männer bekommen typischerweise Geheimratsecken und eine lichte Stelle am Hinterkopf, bei Frauen wird vor allem der Scheitel breiter.</p>
+  <p><strong>In der Kopfhaut:</strong> Die Haarwurzeln reagieren empfindlich auf das Hormon Dihydrotestosteron (DHT). Dadurch wird die Wachstumsphase immer kürzer, und die Wurzeln schrumpfen langsam. Die Haare wachsen dünner, kürzer und heller nach, bis manche Wurzeln kaum noch ein sichtbares Haar bilden. Je früher du ärztlich behandelt wirst, desto mehr lässt sich erhalten.</p>
+
+  <h3>Diffuser Haarausfall (Telogen-Effluvium)</h3>
+  <p>Hier fallen plötzlich überall auf dem Kopf mehr Haare aus, oft büschelweise beim Waschen. Typische Auslöser sind starker Stress, hohes Fieber, Operationen, Crash-Diäten, Eisenmangel, Schilddrüsenprobleme, die Zeit nach einer Schwangerschaft oder das Absetzen der Pille.</p>
+  <p><strong>In der Kopfhaut:</strong> Der Auslöser schickt viele Haare gleichzeitig in die Ruhephase. Weil diese Phase etwa zwei bis drei Monate dauert, fallen die Haare erst mit Verzögerung aus, wenn du den Auslöser oft schon vergessen hast. Die gute Nachricht: Die Wurzeln bleiben intakt, und wenn die Ursache behoben ist, wächst das Haar in der Regel nach.</p>
+
+  <h3>Kreisrunder Haarausfall (Alopecia areata)</h3>
+  <p>Er zeigt sich durch plötzlich auftretende, meist runde kahle Stellen, manchmal auch im Bart oder an den Augenbrauen.</p>
+  <p><strong>In der Kopfhaut:</strong> Das eigene Immunsystem greift die Haarwurzeln an und stoppt das Wachstum. Die Wurzeln werden dabei aber nicht zerstört, deshalb können die Haare wieder nachwachsen. Weil der Verlauf sehr unterschiedlich ist, gehört er in hautärztliche Behandlung.</p>
+
+  <h3>Haarausfall durch Zug (Traktionsalopezie)</h3>
+  <p>Er entsteht durch Frisuren, die dauerhaft an den Haaren ziehen, zum Beispiel straffe Zöpfe, Dutts, eng geflochtene Braids oder bestimmte Extensions. Typisch sind lichte Stellen am Haaransatz und an den Schläfen.</p>
+  <p><strong>In der Kopfhaut:</strong> Der ständige Zug reizt die Haarwurzeln und kann sie entzünden. Früh erkannt ist das umkehrbar, wenn du lockerere Frisuren trägst. Hält der Zug über Jahre an, können die Wurzeln dauerhaft absterben.</p>
+
+  <h3>Vernarbender Haarausfall</h3>
+  <p>Diese Formen sind selten, aber wichtig zu kennen. Warnzeichen sind Rötungen, Juckreiz, Brennen oder Schuppen direkt rund um die Haare und glänzende Stellen, an denen keine Poren mehr zu sehen sind.</p>
+  <p><strong>In der Kopfhaut:</strong> Eine Entzündung zerstört die Haarwurzel, und an ihrer Stelle bildet sich Narbengewebe. Dort wächst kein Haar mehr nach, deshalb ist eine frühe Diagnose so wichtig.</p>
+
+  <div class="note">
+    <h3>Wann du zum Hautarzt gehen solltest</h3>
+    <ul>
+      <li>Du verlierst über mehrere Wochen deutlich mehr als 100 Haare am Tag.</li>
+      <li>Dein Scheitel wird sichtbar breiter, oder es entstehen kahle Stellen.</li>
+      <li>Deine Kopfhaut juckt, brennt, ist gerötet oder schmerzt.</li>
+    </ul>
+    <p>Beim Hautarzt kann auch dein Blut untersucht werden, zum Beispiel auf Eisen, Schilddrüsenwerte und Vitamin D. So findest du die Ursache, statt auf Verdacht Nahrungsergänzung oder Wachstumsseren auszuprobieren.</p>
+  </div>
+  <a class="top" href="#start">Zurück nach oben</a>
+</article>
+
+<footer>
+  Ich bin keine Ärztin und stelle keine Diagnosen. Diese Texte sollen dir helfen, dein Haar besser zu verstehen. Bei Kopfhautproblemen oder Haarausfall lass das bitte ärztlich abklären.
+</footer>
+
+</div>
+</body>
+</html>
+
+</body></html>
