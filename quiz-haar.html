@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haar-Check</title>
+<style>
+:root{
+  --bg:#382F2E;
+  --surface:#433836;
+  --cream:#F3ECE2;
+  --muted:#C9BCAE;
+  --line:rgba(243,236,226,.5);
+  --line-soft:rgba(243,236,226,.18);
+  --taupe:#9E8C80;
+  --sand:#D6B98F;
+  --warn-bg:#4A3D35;
+  --serif:"Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Noto Serif", Georgia, serif;
+  --sans:"Avenir Next", Avenir, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#382F2E; --cream:#F3ECE2; } }
+:root[data-theme="dark"]{ --bg:#382F2E; --cream:#F3ECE2; }
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:28px 22px 48px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.1}
+p{margin:0 0 14px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+
+/* Start */
+.start{min-height:calc(100vh - 80px);display:flex;flex-direction:column;justify-content:center;position:relative}
+.strand{position:absolute;top:0;right:-22px;width:62%;max-width:300px;opacity:.55;pointer-events:none}
+.by{font-size:14px;color:var(--muted);margin-bottom:28px;letter-spacing:.02em}
+.start h1{font-size:clamp(46px,13vw,68px);letter-spacing:-.01em;margin-bottom:22px;max-width:9ch}
+.start .lead{font-size:18px;color:var(--cream);max-width:34ch}
+.start .how{color:var(--muted);font-size:15px;max-width:38ch;margin-bottom:30px}
+.primary{display:block;width:100%;padding:17px 20px;border:1px solid var(--cream);border-radius:999px;background:var(--cream);color:var(--bg);font-weight:500;font-size:17px;cursor:pointer}
+.primary:active{transform:scale(.99)}
+.ghost{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:8px 0;text-decoration:underline;text-underline-offset:4px}
+.fine{font-size:13px;color:var(--muted);line-height:1.5;margin-top:26px;border-top:1px solid var(--line-soft);padding-top:16px}
+
+/* Question */
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;min-height:40px}
+.count{font-size:14px;color:var(--muted)}
+.bar{height:2px;background:var(--line-soft);border-radius:2px;overflow:hidden;margin-bottom:38px}
+.bar span{display:block;height:100%;background:var(--cream);transition:width .35s ease}
+.q h2{font-size:clamp(30px,8vw,38px);margin-bottom:12px}
+.hint{color:var(--muted);font-size:15px;margin-bottom:22px}
+.answers{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.ans{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:transparent;cursor:pointer;font-size:16.5px;line-height:1.4;transition:background .15s,border-color .15s,color .15s}
+.ans .dot{flex:0 0 18px;height:18px;margin-top:2px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.ans.multi .dot{border-radius:5px}
+.ans[aria-pressed="true"]{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.ans[aria-pressed="true"] .dot{border-color:var(--bg);background:var(--bg)}
+.ans[aria-pressed="true"] .dot::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--cream)}
+.ans.multi[aria-pressed="true"] .dot::after{border-radius:1px}
+@media (hover:hover){.ans:hover{border-color:var(--cream)}}
+.next{margin-top:26px}
+.next[disabled]{opacity:.35;cursor:default}
+
+/* Result */
+.res-kicker{font-size:15px;color:var(--muted);margin-bottom:8px}
+.res h1{font-size:clamp(44px,12vw,62px);margin-bottom:20px}
+.res .intro{font-size:18px;margin-bottom:28px}
+.block{border-top:1px solid var(--line-soft);padding:22px 0 8px}
+.block h3{font-size:25px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.mark{display:inline-grid;place-items:center;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;font-family:var(--sans);font-size:14px;font-weight:400}
+.box{border:1px solid var(--line);border-radius:16px;padding:18px 18px 6px;margin:0 0 18px}
+.box h3{font-size:22px;margin-bottom:8px}
+.warn{background:var(--warn-bg);border-color:var(--sand);margin-bottom:30px}
+.warn h3{color:var(--sand)}
+details{border-top:1px solid var(--line-soft);padding:18px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:24px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:24px;color:var(--muted)}
+details[open] summary::after{content:"–"}
+details .inner{padding-top:14px}
+.tbl{overflow-x:auto;margin:6px 0 18px;border:1px solid var(--line-soft);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;vertical-align:top;border-bottom:1px solid var(--line-soft)}
+th{font-weight:500;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+ul{padding-left:20px;margin:0 0 14px}
+li{margin-bottom:8px}
+.closing{font-family:var(--serif);font-size:23px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:24px;margin:10px 0 26px}
+.actions{display:flex;flex-direction:column;gap:6px;align-items:center}
+
+.fade{animation:in .3s ease both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.bar span{transition:none}}
+
+.ans.has-ico{align-items:center}
+.ans .ico{flex:0 0 28px;width:28px;height:46px}
+.ans[aria-pressed="true"] .ico path{stroke:#382F2E}
+.res-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.res-art{flex:0 0 60px;width:60px;height:100px;margin-top:4px}
+.subtype{color:var(--muted);font-size:16px;margin:-8px 0 24px}
+.code{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 10px;margin-right:8px;color:var(--cream);font-size:14px}
+.steps{padding-left:22px;margin:0 0 22px}
+.steps li{margin-bottom:10px}
+strong{font-weight:500}
+</style>
+</head>
+<body>
+<main class="wrap" id="app" aria-live="polite"></main>
+
+<script>
+/* ---------- Strähnen-Zeichnungen ---------- */
+function strandPath(code, x0){
+  const pts = [];
+  const push = (x,y)=>pts.push([x,y]);
+  const wave = (A, lam, y0) => { for(let y=5;y<=95;y+=1){ const k=y<y0?0:Math.min(1,(y-y0)/12); push(x0 + k*A*Math.sin(2*Math.PI*(y-y0)/lam), y);} };
+  const loop = (r, k) => { const T=(90)/k; for(let t=0;t<=T;t+=0.12){ push(x0 + r*Math.sin(t), 5 + k*t + r*(1-Math.cos(t))*0.6);} };
+  const zig = (a, step) => { let s=1; for(let y=5;y<=95;y+=step){ push(x0 + s*a, y); s=-s; } };
+  switch(code){
+    case "1A": push(x0,5); push(x0,95); break;
+    case "1B": for(let y=5;y<=95;y+=1){ push(x0 + (y>68 ? Math.pow((y-68)/27,2)*6 : 0), y);} break;
+    case "1C": for(let y=5;y<=95;y+=1){ push(x0 + (y>40&&y<62 ? 3*Math.sin(Math.PI*(y-40)/22) : 0) + (y>78?Math.pow((y-78)/17,2)*4:0), y);} break;
+    case "2A": wave(3.5,52,42); break;
+    case "2B": wave(6,40,24); break;
+    case "2C": wave(8,30,10); break;
+    case "3A": loop(7.5,2.9); break;
+    case "3B": loop(6,2.0); break;
+    case "3C": loop(4.5,1.35); break;
+    case "4A": loop(3.2,0.85); break;
+    case "4B": zig(3.5,4); break;
+    case "4C": zig(2.4,2.6); break;
+  }
+  return "M" + pts.map(p=>p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" L");
+}
+function strandSVG(code, cls){
+  let extra = "";
+  if(code==="1C"){ extra = `<path d="M20 30 l-6 -6 M40 52 l6 -5 M20 70 l-5 -3" stroke="#9E8C80" stroke-width="1" vector-effect="non-scaling-stroke"/>`; }
+  return `<svg class="${cls}" viewBox="0 0 60 100" fill="none" aria-hidden="true">
+    <path d="${strandPath(code,20)}" stroke="#F3ECE2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+    <path d="${strandPath(code,40)}" stroke="#9E8C80" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>${extra}</svg>`;
+}
+
+/* ---------- Fragen ---------- */
+const Q0 = {t:"Kennst du die natürliche Struktur deiner Haare?", a:[
+  ["Ja, ich habe meine Haare schon mal ohne Produkte trocknen lassen","known"],
+  ["Ich vermute Wellen oder Locken, habe es aber nie getestet","diff"],
+  ["Keine Ahnung","air"]]};
+
+const QS = {
+ q1:{t:"Wie sehen deine Haare aus, wenn sie ohne Produkt getrocknet sind?", h:"Denk an deinen Strukturtest oder an einen Tag, an dem du nichts reingegeben hast.", a:[
+  ["Komplett glatt",{g:"G"},"1A"],
+  ["Glatt, aber mit leichtem Schwung oder Frizz",{g:"G",tex:2},"1C"],
+  ["Sanfte Wellen, vor allem in den Längen",{g:"W"},"2A"],
+  ["Deutliche S-Wellen",{g:"W"},"2B"],
+  ["Locken, die sich zu Spiralen drehen",{g:"L"},"3B"],
+  ["Sehr enge Spiralen",{g:"E"},"4A"]]},
+
+ g1:{t:"Wie fühlen sich deine Haare an, wenn du sie durch die Finger gleiten lässt?", a:[
+  ["Seidig und rutschig",{silk:2}],["Glatt, aber mit etwas Griff",{tex:1}],["Griffig, eher rau und etwas bauschig",{tex:2}]]},
+ g2:{t:"Was passiert, wenn du deine trockenen Haare bürstest?", a:[
+  ["Sie liegen glatt und eng am Kopf",{silk:2}],["Sie werden etwas fluffiger",{tex:1}],["Sie werden bauschig und stehen ab",{tex:2}]]},
+ g3:{t:"Wie reagieren deine Haare auf Regen oder Luftfeuchtigkeit?", a:[
+  ["Gar nicht",{silk:2}],["Sie werden leicht fluffig",{tex:1}],["Es kommt leichter Schwung oder eine leichte Welle durch",{tex:2}]]},
+ g4:{t:"Wie lange halten Locken vom Lockenstab bei dir?", a:[
+  ["Sie fallen nach kurzer Zeit wieder raus",{silk:2}],["Sie halten ein paar Stunden",{tex:1}],["Sie halten gut, oft bis zum nächsten Tag",{tex:2}],["Weiß ich nicht, ich style nie mit Hitze",{}]]},
+ g5:{t:"Wie liegen deine Spitzen, wenn du nichts machst?", a:[
+  ["Gerade nach unten",{silk:1}],["Leicht nach innen oder außen gedreht",{tex:1}],["Unterschiedlich, oft mit leichtem Schwung oder einer Welle",{tex:2}]]},
+
+ w1:{t:"Wo beginnen deine Wellen?", a:[
+  ["Erst ab Kinnhöhe oder in den Spitzen",{s:0}],["Ungefähr ab Ohrhöhe",{s:1}],["Fast direkt am Ansatz",{s:2}]]},
+ w2:{t:"Wie stark schwingen deine Wellen?", a:[
+  ["Weit und flach, eher ein sanfter Schwung",{s:0},"2A"],["Deutliches S",{s:1},"2B"],["Enges S, einzelne Strähnen drehen sich fast zur Locke",{s:2},"2C"]]},
+ w3:{t:"Was passiert, wenn du deine trockenen Haare bürstest?", a:[
+  ["Die Welle ist fast weg, die Haare wirken beinahe glatt",{s:0}],["Sie werden fluffig und breiter",{s:1}],["Sie bekommen viel Volumen und Frizz",{s:2}]]},
+ w4:{t:"Wie halten deine Wellen bis zur nächsten Wäsche?", a:[
+  ["Sie hängen schnell aus, am zweiten Tag sind sie fast glatt",{s:0}],["Sie werden lockerer, bleiben aber sichtbar",{s:1}],["Sie bleiben gut erhalten",{s:2}]]},
+ w5:{t:"Wie reagieren deine Wellen auf Regen oder Luftfeuchtigkeit?", a:[
+  ["Kaum",{s:0}],["Sie bekommen etwas mehr Schwung und Frizz",{s:1}],["Deutlich mehr Volumen, Frizz und einzelne Locken",{s:2}]]},
+
+ l1:{t:"Wie groß sind deine Locken?", h:"Vergleiche den Durchmesser einer Locke mit diesen Dingen.", a:[
+  ["Ungefähr so breit wie Straßenkreide",{s:0},"3A"],["Ungefähr so breit wie ein Textmarker",{s:1},"3B"],["Ungefähr so breit wie ein Bleistift oder Strohhalm",{s:2},"3C"]]},
+ l2:{t:"Wo beginnen deine Locken?", a:[
+  ["Eher in den Längen, oben sind die Haare welliger",{s:0}],["Ungefähr ab Ohrhöhe",{s:1}],["Direkt am Ansatz",{s:2}]]},
+ l3:{t:"Wie viel Volumen haben deine Locken?", a:[
+  ["Sie fallen eher nach unten",{s:0}],["Mittleres Volumen",{s:1}],["Sehr viel Volumen",{s:2}]]},
+ l4:{t:"Wie stark ziehen sich deine Locken beim Trocknen zusammen?", a:[
+  ["Kaum, nass und trocken sind sie ähnlich lang",{s:0}],["Etwas, trocken wirken sie kürzer",{s:1}],["Stark, trocken wirken sie deutlich kürzer",{s:2}]]},
+ l5:{t:"Wie reagieren deine Locken auf Regen oder Luftfeuchtigkeit?", a:[
+  ["Sie lockern sich und werden welliger",{s:0}],["Sie bekommen mehr Frizz",{s:1}],["Sie ziehen sich zusammen und werden voller",{s:2}]]},
+
+ e1:{t:"Wie sieht deine Struktur aus der Nähe aus?", a:[
+  ["Kleine, klar erkennbare Spiralen",{s:0},"4A"],["Sehr enge Spiralen, die eher kantig als rund wirken",{s:1},"4B"],["Ein sehr enges Muster, das man kaum erkennt",{s:2},"4C"]]},
+ e2:{t:"Wie stark ziehen sich deine Haare beim Trocknen zusammen?", a:[
+  ["Deutlich",{s:0}],["Sehr stark",{s:1}],["Extrem, trocken wirken sie weniger als halb so lang",{s:2}]]},
+ e3:{t:"Wie definiert ist deine Struktur ohne Produkt?", a:[
+  ["Gut definiert, die Spiralen sind klar zu sehen",{s:0}],["Teilweise definiert",{s:1}],["Kaum definiert, eher Volumen als einzelne Locken",{s:2}]]},
+ e4:{t:"Wie fühlen sich deine Haare an?", a:[
+  ["Weich, die Locken lassen sich gut auseinanderziehen",{s:0}],["Fester, mit spürbaren Biegungen",{s:1}],["Sehr dicht und kompakt",{s:2}]]},
+
+ c1:{t:"Was davon trifft auf deine Haare zu?", h:"Du kannst mehreres auswählen.", multi:true, a:[
+  ["Gefärbt",{col:1}],["Blondiert",{bl:1}],["Dauerwelle",{chem:1}],["Chemische Glättung",{chem:1}],["Fast täglich Hitze, zum Beispiel Glätteisen oder Lockenstab",{heat:1}],["Nichts davon",{none:1}]]},
+ c2:{t:"Waren deine Haare früher welliger oder lockiger als heute?", a:[
+  ["Ja",{earlier:1}],["Nein",{}],["Weiß ich nicht",{}]]}
+};
+const FU = {G:["g1","g2","g3","g4","g5"], W:["w1","w2","w3","w4","w5"], L:["l1","l2","l3","l4","l5"], E:["e1","e2","e3","e4"]};
+
+/* ---------- Ergebnisse ---------- */
+const SUB = {
+ "1A":"Ganz glatt und glänzend, ohne Schwung.",
+ "1B":"Glatt mit etwas Griff und leichtem Schwung in den Spitzen.",
+ "1C":"Glatt, aber mit deutlicher Textur, leichtem Schwung und Neigung zu Frizz.",
+ "2A":"Sanfte, weite Wellen, meist erst in den Längen.",
+ "2B":"Deutliche S-Wellen ab ungefähr Ohrhöhe.",
+ "2C":"Ausgeprägte S-Wellen fast ab dem Ansatz, einzelne Strähnen drehen sich zu Locken.",
+ "3A":"Große, lockere Locken, ungefähr so breit wie Straßenkreide.",
+ "3B":"Federnde Locken, ungefähr so breit wie ein Textmarker.",
+ "3C":"Enge Locken, ungefähr so breit wie ein Bleistift, mit viel Volumen.",
+ "4A":"Kleine, klar erkennbare Spiralen.",
+ "4B":"Sehr enge Spiralen, die eher kantig als rund wirken.",
+ "4C":"Sehr enges Muster mit wenig Definition, das sich stark zusammenzieht."
+};
+const HEAT = " Vor jeder Hitze kommen Leave-in und Hitzeschutz in die Haare.";
+const RICH = " Wie reichhaltig deine Pflege sein darf, hängt von deiner Haardicke ab.";
+const SIL = "Silikone sind auch für Locken okay. Sie legen sich wie ein Schutzfilm um das Haar, mindern Frizz und schützen vor Luftfeuchtigkeit. Manche lagern sich bei Locken aber an und machen sie mit der Zeit schwerer. Achte deshalb darauf, wie sich deine Locken anfühlen, und plane regelmäßig eine Tiefenreinigung ein.";
+const R = {
+ G1:{name:"Glatt und seidig",
+  intro:"Deine Haare fallen glatt und eng am Kopf und glänzen von Natur aus, weil ihre Oberfläche sehr gleichmäßig ist. Der Talg von der Kopfhaut wandert bei glatten Haaren außerdem leichter in die Längen, deshalb wirken sie oft schneller strähnig.",
+  care:"Pflege gehört bei dir in die Längen und Spitzen, nicht an den Ansatz. Leichte Texturen wie Conditioner, Sprühkuren oder leichte Leave-ins passen meistens besser als schwere Öle. Dein Leave-in gibst du nach dem Waschen ins noch feuchte Haar, damit die Pflegestoffe gut einziehen können."+RICH,
+  style:"Am besten hält bei dir der Lockenstab, weil er mit höherer Hitze arbeitet. Lass die Locken vor dem Lösen auskühlen, dann halten sie länger. Blowouts mit Föhn und Rundbürste oder einem Multistyler fallen bei dir oft schnell wieder, besonders ohne Stufen im Haar. Volumenschaum oder Texturspray können helfen, aber manche Looks hält dein Haar einfach nicht lange. Das liegt an der Struktur und nicht an dir."+HEAT,
+  no:"Öl oder reichhaltige Pflege am Ansatz und zu viel Produkt auf einmal, weil dein Haar sonst schnell platt fällt."},
+ GT:{name:"Glatt mit Textur",
+  intro:"Deine Haare sind glatt, haben aber mehr Griff. Sie wirken etwas bauschiger, neigen zu Frizz und zeigen manchmal einen leichten Schwung. Weil ihre Oberfläche unruhiger ist, reflektiert sie weniger Licht und die Haare wirken schneller glanzlos.",
+  care:"Glättende Pflege ist dein bester Freund. Gib nach jeder Wäsche ein Leave-in ins noch feuchte Haar, damit die Pflegestoffe gut einziehen können und die Oberfläche geschmeidiger wird. Produkte mit Silikonen legen sich wie ein Schutzschild um das Haar. Sie bringen Glanz, mindern Frizz und schützen vor Luftfeuchtigkeit."+RICH,
+  style:"Blowouts halten bei dir besser als bei sehr glatten Haaren, weil dein Haar mehr Griff hat. Für einen glatten, glänzenden Look föhnst du mit der Rundbürste oder gehst mit dem Glätteisen nach. Locken vom Lockenstab halten bei dir meistens gut."+HEAT,
+  no:"Die Haare mit einem normalen Handtuch trocken rubbeln, nimm lieber ein Mikrofaserhandtuch oder einen Turban. Und wenn du einen glatten Look möchtest, lass sie nicht ohne Pflege an der Luft trocknen, das fördert Frizz."},
+ W:{name:"Wellig",
+  intro:"Deine Haare bilden S-förmige Wellen. Wellen sind leicht und lassen sich schnell beschweren oder durch Bürsten auflösen, deshalb kommt es bei dir besonders auf die richtige Handhabung an.",
+  care:"In der Dusche entwirrst du deine Haare, solange der Conditioner noch drin ist, mit den Fingern oder einem grobzinkigen Kamm. Nach der Dusche drückst du sie mit einem Mikrofaserhandtuch, einem Turban oder einem T-Shirt aus, statt zu rubbeln. Dann gibst du dein Leave-in ins noch feuchte Haar, damit die Pflegestoffe gut einziehen können, und entwirrst bei Bedarf noch einmal mit den Fingern, einem grobzinkigen Kamm oder einer Wellenbürste. Leichte Leave-ins, Schaum oder Wellen-Sprays geben deinen Wellen Halt, ohne sie platt zu drücken."+RICH,
+  style:"Stylings halten bei dir gut. Willst du deine Wellen betonen, föhnst du mit dem Diffusor oder lässt sie lufttrocknen. Willst du glatte Haare, kommst du um Hitze nicht herum. Glättende Pflege macht das Stylen leichter, aber kein Produkt macht Wellen ohne Föhn oder Glätteisen glatt."+HEAT,
+  no:"Trocken bürsten, schwere Produkte direkt am Ansatz und die Haare nach dem Waschen rubbeln."},
+ L:{name:"Lockig",
+  intro:"Deine Haare drehen sich zu Locken. Der Talg von der Kopfhaut kommt über die vielen Biegungen schlechter bis in die Spitzen, deshalb sind lockige Längen oft trockener. Durch die Biegungen sind Locken außerdem empfindlicher gegenüber Reibung.",
+  care:"Leave-in gehört bei dir zur Basis. In der Dusche entwirrst du deine Haare, solange der Conditioner noch drin ist, und arbeitest dich mit den Fingern oder einem grobzinkigen Kamm von den Spitzen nach oben. Nach der Dusche drückst du sie mit einem Mikrofaserhandtuch, einem Turban oder einem T-Shirt aus und gibst dein Leave-in ins noch feuchte Haar, damit die Pflegestoffe gut einziehen können. Lockencreme oder Gel geben deinen Locken zusätzlich Definition. Nachts schützen ein Satin-Kissenbezug oder ein lockerer Dutt oben auf dem Kopf vor Reibung."+RICH,
+  style:"Für definierte Locken föhnst du mit dem Diffusor auf mittlerer Stufe oder lässt sie lufttrocknen. Ein wirklich glattes Ergebnis bekommst du nur mit Hitze, meistens mit Föhn und anschließend Glätteisen. Ohne Hitze ginge das nur über eine chemische Glättung beim Friseur, die das Haar dauerhaft verändert und stark belastet. Weil jede Hitze Stress fürs Haar bedeutet, glättest du lieber gezielt statt täglich."+HEAT,
+  no:"Trocken bürsten, mit einem normalen Frotteehandtuch rubbeln und sehr heiß föhnen.", sil:SIL},
+ E:{name:"Eng gelockt",
+  intro:"Deine Haare bilden sehr enge Spiralen. An den vielen Biegungen ist das Haar anfälliger für Bruch. Außerdem zieht es sich beim Trocknen stark zusammen und wirkt dadurch deutlich kürzer, als es ist.",
+  care:"Feuchtigkeit und Schutz vor Reibung stehen bei dir an erster Stelle. In der Dusche entwirrst du deine Haare in Abschnitten, solange viel Conditioner drin ist. Nach der Dusche drückst du sie mit einem Mikrofaserhandtuch, einem Turban oder einem T-Shirt aus und gibst dein Leave-in ins noch feuchte Haar, damit die Pflegestoffe gut einziehen können. Ein Öl oder eine Creme darüber hält die Feuchtigkeit länger im Haar. Schutzfrisuren und ein Satin-Kissenbezug oder Satin-Tuch schützen nachts."+RICH,
+  style:"Für Definition arbeitest du mit Creme oder Gel und lässt die Haare lufttrocknen oder föhnst mit dem Diffusor. Ein glattes Ergebnis geht nur mit Hitze, meistens mit Föhn und anschließend Glätteisen, oder über eine chemische Glättung beim Friseur, die das Haar dauerhaft verändert und stark belastet. Hitze bedeutet für eng gelocktes Haar besonders viel Stress, deshalb lieber selten und gezielt."+HEAT,
+  no:"Trocken kämmen, häufige Hitze und sehr straffe Frisuren, die dauerhaft am Ansatz ziehen.", sil:SIL}
+};
+
+const FINE = "Ich bin keine Ärztin und keine Friseurin, dieses Quiz ersetzt keine persönliche Beratung. Deine Haare verändern sich durch Pflege, Färben, Hitze, Hormone und Alter, dein Ergebnis ist deshalb eine Momentaufnahme. Nimm es als Hilfe und Orientierung, nicht als feste Regel.";
+
+/* ---------- Ablauf ---------- */
+const app = document.getElementById("app");
+let ans = {}, seq = [], pos = 0, untested = false;
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const reduce = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function buildSeq(){
+  const g = ans.q1!=null ? QS.q1.a[ans.q1][1].g : "G";
+  seq = ["q1", ...FU[g], "c1", "c2"];
+}
+
+const startArt = `<svg class="strand" viewBox="0 0 300 420" fill="none" aria-hidden="true">
+  <path d="${(()=>{let d="M255 0";for(let y=0;y<=420;y+=4){d+=" L"+(255-y*0.45+10*Math.sin(y/22)).toFixed(1)+" "+y;}return d;})()}" stroke="#F3ECE2" stroke-width="1"/>
+  <path d="${(()=>{let d="M285 0";for(let y=0;y<=420;y+=2){d+=" L"+(285-y*0.45+14*Math.sin(y/9)).toFixed(1)+" "+y;}return d;})()}" stroke="#9E8C80" stroke-width="1"/></svg>`;
+
+function start(){
+  ans = {}; pos = 0; untested = false;
+  app.innerHTML = `<section class="start fade">${startArt}
+    <div class="by">Ein Quiz von Laura, deiner Haarpflege-Bestie</div>
+    <h1>Welche Struktur haben deine Haare?</h1>
+    <p class="lead">Glatt, wellig oder lockig, und welcher Typ genau? Wenn du deine Struktur kennst, weißt du, wie du deine Haare pflegst und was beim Styling realistisch ist.</p>
+    <p class="how">Acht kurze Fragen, ungefähr zwei Minuten.</p>
+    <button class="primary" id="go">Quiz starten</button>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("go").onclick = askKnown;
+}
+
+function askKnown(){
+  app.innerHTML = `<section class="q fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Bevor es losgeht</span></div>
+    <div class="bar"><span style="width:0%"></span></div>
+    <h2>${Q0.t}</h2>
+    <div class="answers">${Q0.a.map((a,i)=>`<button class="ans" data-i="${i}" aria-pressed="false"><span class="dot"></span><span>${a[0]}</span></button>`).join("")}</div>
+  </section>`;
+  document.getElementById("back").onclick = start;
+  app.querySelectorAll(".ans").forEach(b => b.onclick = () => {
+    const v = Q0.a[+b.dataset.i][1];
+    b.setAttribute("aria-pressed","true");
+    setTimeout(()=>{ if(v==="known"){ untested=false; buildSeq(); pos=0; render(); } else testPage(v); }, reduce()?0:220);
+  });
+  window.scrollTo(0,0);
+}
+
+function testPage(v){
+  const dry = "Lass sie an der Luft trocknen. Wenn du Wellen oder Locken vermutest, kannst du sie stattdessen einmal mit dem Diffusor auf mittlerer Stufe föhnen. Fass sie dabei nicht an.";
+  app.innerHTML = `<section class="res fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Vorbereitung</span></div>
+    <h1>Der Strukturtest</h1>
+    <p class="intro">Damit dein Ergebnis stimmt, sollten deine Haare ihr natürliches Muster zeigen. Das klappt am besten so:</p>
+    <ol class="steps">
+      <li>Wasch deine Haare mit deinem normalen Shampoo.</li>
+      <li>Danach benutzt du nichts mehr, also keinen Conditioner, keine Maske, kein Leave-in, keinen Hitzeschutz und kein Styling.</li>
+      <li>Drück die Haare vorsichtig mit einem Mikrofaserhandtuch, einem Turban oder einem T-Shirt aus, ohne zu rubbeln.</li>
+      <li>${dry}</li>
+      <li>Erst wenn sie komplett trocken sind, schaust du sie dir an, am besten mit einem Foto, und startest das Quiz.</li>
+    </ol>
+    <div class="box"><h3>Wichtig für deine Haare</h3><p>Ohne Conditioner sind deine Haare rauer und verknoten leichter. Entwirre sie nur im nassen Zustand vorsichtig mit den Fingern oder einem grobzinkigen Kamm. Der Test ist einmalig, danach bekommen deine Haare sofort wieder ihre Pflege.</p></div>
+    <div class="actions">
+      <button class="primary" id="later">Ich mache erst den Test</button>
+      <button class="ghost" id="now">Trotzdem jetzt starten</button>
+    </div>
+  </section>`;
+  document.getElementById("back").onclick = askKnown;
+  document.getElementById("later").onclick = () => {
+    app.innerHTML = `<section class="start fade">${startArt}
+      <h1>Dann bis gleich</h1>
+      <p class="lead">Speicher dir den Link und starte das Quiz, sobald deine Haare nach dem Strukturtest komplett trocken sind.</p>
+      <button class="primary" id="home">Zurück zum Start</button></section>`;
+    document.getElementById("home").onclick = start;
+    window.scrollTo(0,0);
+  };
+  document.getElementById("now").onclick = () => { untested = true; buildSeq(); pos=0; render(); };
+  window.scrollTo(0,0);
+}
+
+function render(){
+  const id = seq[pos], q = QS[id];
+  const sel = ans[id] ?? (q.multi ? [] : null);
+  const icons = q.a.some(a=>a[2]);
+  app.innerHTML = `<section class="q fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Frage ${pos+1} von ${seq.length}</span></div>
+    <div class="bar"><span style="width:${(pos/seq.length)*100}%"></span></div>
+    <h2>${esc(q.t)}</h2>
+    ${q.h ? `<p class="hint">${esc(q.h)}</p>` : ""}
+    <div class="answers">${q.a.map((a,i)=>{
+      const on = q.multi ? sel.includes(i) : sel === i;
+      return `<button class="ans${q.multi?" multi":""}${icons?" has-ico":""}" data-i="${i}" aria-pressed="${on}">${a[2]?strandSVG(a[2],"ico"):`<span class="dot"></span>`}<span>${esc(a[0])}</span></button>`;
+    }).join("")}</div>
+    ${q.multi ? `<button class="primary next" id="next" ${sel.length?"":"disabled"}>Weiter</button>` : ""}
+  </section>`;
+  document.getElementById("back").onclick = () => { if(pos===0) askKnown(); else { pos--; render(); } };
+  app.querySelectorAll(".ans").forEach(b => b.onclick = () => choose(+b.dataset.i));
+  if(q.multi) document.getElementById("next").onclick = advance;
+  window.scrollTo(0,0);
+}
+
+function choose(i){
+  const id = seq[pos], q = QS[id];
+  if(q.multi){
+    const noneIdx = q.a.findIndex(a=>a[1].none);
+    let s = ans[id] ? [...ans[id]] : [];
+    if(i===noneIdx) s = s.includes(i) ? [] : [i];
+    else { s = s.filter(x=>x!==noneIdx); s = s.includes(i) ? s.filter(x=>x!==i) : [...s,i]; }
+    ans[id] = s; render(); return;
+  }
+  ans[id] = i;
+  if(id==="q1") buildSeq();
+  app.querySelectorAll(".ans").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i===i));
+  setTimeout(advance, reduce()?0:260);
+}
+function advance(){ if(pos < seq.length-1){ pos++; render(); } else result(); }
+
+function result(){
+  const g = QS.q1.a[ans.q1][1].g;
+  let silk=0, tex=0, sSum=0, sN=0, flags={};
+  seq.forEach(id=>{
+    const q = QS[id], p = ans[id]; if(p==null) return;
+    (Array.isArray(p)?p:[p]).forEach(i=>{
+      const v = q.a[i][1];
+      if(v.silk) silk+=v.silk; if(v.tex) tex+=v.tex;
+      if(v.s!=null){ sSum+=v.s; sN++; }
+      ["bl","chem","heat","earlier"].forEach(k=>{ if(v[k]) flags[k]=1; });
+    });
+  });
+  let key, code;
+  if(g==="G"){ if(silk>=tex){ key="G1"; code="1A"; } else { key="GT"; code = tex>=7 ? "1C" : "1B"; } }
+  else { const idx = Math.round(sN ? sSum/sN : 1); key=g; code = {W:"2",L:"3",E:"4"}[g] + ["A","B","C"][idx]; }
+  const r = R[key];
+
+  app.innerHTML = `<section class="res fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Dein Ergebnis</span></div>
+    <div class="res-head">
+      <div>
+        <p class="res-kicker">Deine Haarstruktur ist am ehesten</p>
+        <h1>${r.name}</h1>
+        <p class="subtype"><span class="code">${code}</span>${SUB[code]}</p>
+      </div>
+      ${strandSVG(code,"res-art")}
+    </div>
+    <p class="intro">${r.intro}</p>
+    ${untested ? `<div class="box"><h3>Erste Einschätzung</h3><p>Du hast das Quiz ohne Strukturtest gemacht. Mach den Test bei deiner nächsten Wäsche und starte das Quiz danach noch einmal, dann wird dein Ergebnis genauer.</p></div>` : ""}
+    ${flags.chem ? `<div class="box"><h3>Chemisch verändert</h3><p>Durch Dauerwelle oder Glättung ist dein Muster gerade nicht dein natürliches. Das Quiz zeigt dir, wie deine Haare im Moment sind. Dein natürliches Muster siehst du am nachwachsenden Ansatz.</p></div>`
+      : (flags.bl||flags.heat||flags.earlier) ? `<div class="box"><h3>Dein Muster könnte verdeckt sein</h3><p>Blondieren und viel Hitze können Wellen und Locken schwächen, sodass die Haare glatter wirken, als sie sind. Schau dir deinen nachwachsenden Ansatz an, dort siehst du dein natürliches Muster. Gute Pflege hilft, dass deine Struktur besser fällt, die Schäden in den Längen repariert sie aber nicht. Ganz zurück kommt dein Muster mit nachwachsendem Haar und nachgeschnittenen Längen.</p></div>` : ""}
+    <div class="block"><h3><span class="mark">✓</span>Darauf achtest du in der Pflege</h3><p>${r.care}</p></div>
+    <div class="block"><h3><span class="mark">~</span>Styling: Was realistisch ist</h3><p>${r.style}</p></div>
+    <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${r.no}</p></div>
+    ${r.sil ? `<div class="box"><h3>Und Silikone?</h3><p>${r.sil}</p></div>` : ""}
+    <details><summary>Gut zu wissen</summary><div class="inner">
+      <p><strong>Muster ist nicht gleich Dicke.</strong> Locken können sehr fein sein und glatte Haare sehr dick. Wie reichhaltig deine Pflege sein darf, hängt von der Dicke ab, nicht vom Muster.</p>
+      <p><strong>Die meisten haben mehrere Muster.</strong> Oft sind die Haare oben glatter und unten welliger, oder vorne lockiger als hinten. Dein Ergebnis zeigt dir den Typ, der bei dir am stärksten vertreten ist.</p>
+    </div></details>
+    <p class="closing">Deine Struktur zeigt dir, wie du pflegst und stylst. Wie reichhaltig deine Pflege sein darf, zeigt dir bald der Pflege-Check.</p>
+    <div class="actions"><button class="primary" id="again">Quiz neu starten</button></div>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("back").onclick = () => { pos = seq.length-1; render(); };
+  document.getElementById("again").onclick = start;
+  window.scrollTo(0,0);
+}
+
+start();
+</script>
+</body>
+</html>

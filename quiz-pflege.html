@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pflege-Check</title>
+<style>
+:root{
+  --bg:#382F2E;
+  --surface:#433836;
+  --cream:#F3ECE2;
+  --muted:#C9BCAE;
+  --line:rgba(243,236,226,.5);
+  --line-soft:rgba(243,236,226,.18);
+  --taupe:#9E8C80;
+  --sand:#D6B98F;
+  --warn-bg:#4A3D35;
+  --serif:"Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Noto Serif", Georgia, serif;
+  --sans:"Avenir Next", Avenir, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#382F2E; --cream:#F3ECE2; } }
+:root[data-theme="dark"]{ --bg:#382F2E; --cream:#F3ECE2; }
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:28px 22px 48px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.1}
+p{margin:0 0 14px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+
+/* Start */
+.start{min-height:calc(100vh - 80px);display:flex;flex-direction:column;justify-content:center;position:relative}
+.strand{position:absolute;top:0;right:-22px;width:62%;max-width:300px;opacity:.55;pointer-events:none}
+.by{font-size:14px;color:var(--muted);margin-bottom:28px;letter-spacing:.02em}
+.start h1{font-size:clamp(46px,13vw,68px);letter-spacing:-.01em;margin-bottom:22px;max-width:9ch}
+.start .lead{font-size:18px;color:var(--cream);max-width:34ch}
+.start .how{color:var(--muted);font-size:15px;max-width:38ch;margin-bottom:30px}
+.primary{display:block;width:100%;padding:17px 20px;border:1px solid var(--cream);border-radius:999px;background:var(--cream);color:var(--bg);font-weight:500;font-size:17px;cursor:pointer}
+.primary:active{transform:scale(.99)}
+.ghost{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:8px 0;text-decoration:underline;text-underline-offset:4px}
+.fine{font-size:13px;color:var(--muted);line-height:1.5;margin-top:26px;border-top:1px solid var(--line-soft);padding-top:16px}
+
+/* Question */
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;min-height:40px}
+.count{font-size:14px;color:var(--muted)}
+.bar{height:2px;background:var(--line-soft);border-radius:2px;overflow:hidden;margin-bottom:38px}
+.bar span{display:block;height:100%;background:var(--cream);transition:width .35s ease}
+.q h2{font-size:clamp(30px,8vw,38px);margin-bottom:12px}
+.hint{color:var(--muted);font-size:15px;margin-bottom:22px}
+.answers{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.ans{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:transparent;cursor:pointer;font-size:16.5px;line-height:1.4;transition:background .15s,border-color .15s,color .15s}
+.ans .dot{flex:0 0 18px;height:18px;margin-top:2px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.ans.multi .dot{border-radius:5px}
+.ans[aria-pressed="true"]{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.ans[aria-pressed="true"] .dot{border-color:var(--bg);background:var(--bg)}
+.ans[aria-pressed="true"] .dot::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--cream)}
+.ans.multi[aria-pressed="true"] .dot::after{border-radius:1px}
+@media (hover:hover){.ans:hover{border-color:var(--cream)}}
+.next{margin-top:26px}
+.next[disabled]{opacity:.35;cursor:default}
+
+/* Result */
+.res-kicker{font-size:15px;color:var(--muted);margin-bottom:8px}
+.res h1{font-size:clamp(44px,12vw,62px);margin-bottom:20px}
+.res .intro{font-size:18px;margin-bottom:28px}
+.block{border-top:1px solid var(--line-soft);padding:22px 0 8px}
+.block h3{font-size:25px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.mark{display:inline-grid;place-items:center;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;font-family:var(--sans);font-size:14px;font-weight:400}
+.box{border:1px solid var(--line);border-radius:16px;padding:18px 18px 6px;margin:0 0 18px}
+.box h3{font-size:22px;margin-bottom:8px}
+.warn{background:var(--warn-bg);border-color:var(--sand);margin-bottom:30px}
+.warn h3{color:var(--sand)}
+details{border-top:1px solid var(--line-soft);padding:18px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:24px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:24px;color:var(--muted)}
+details[open] summary::after{content:"–"}
+details .inner{padding-top:14px}
+.tbl{overflow-x:auto;margin:6px 0 18px;border:1px solid var(--line-soft);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;vertical-align:top;border-bottom:1px solid var(--line-soft)}
+th{font-weight:500;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+ul{padding-left:20px;margin:0 0 14px}
+li{margin-bottom:8px}
+.closing{font-family:var(--serif);font-size:23px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:24px;margin:10px 0 26px}
+.actions{display:flex;flex-direction:column;gap:6px;align-items:center}
+
+.fade{animation:in .3s ease both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.bar span{transition:none}}
+
+.ans.has-ico{align-items:center}
+.ans .ico{flex:0 0 28px;width:28px;height:46px}
+.ans[aria-pressed="true"] .ico path{stroke:#382F2E}
+.res-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.res-art{flex:0 0 60px;width:60px;height:100px;margin-top:4px}
+.subtype{color:var(--muted);font-size:16px;margin:-8px 0 24px}
+.code{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 10px;margin-right:8px;color:var(--cream);font-size:14px}
+.steps{padding-left:22px;margin:0 0 22px}
+.steps li{margin-bottom:10px}
+strong{font-weight:500}
+</style>
+</head>
+<body>
+<main class="wrap" id="app" aria-live="polite"></main>
+
+<script>
+/* ---------- Fragen ---------- */
+const Q = [
+ {t:"Nimm ein einzelnes Haar zwischen Daumen und Zeigefinger. Wie fühlt es sich an?", a:[
+  ["Ich spüre es kaum, es ist sehr fein",{th:0,w:1}],
+  ["Ich spüre es, ungefähr wie einen Nähfaden",{th:1,w:1}],
+  ["Ich spüre es deutlich, es wirkt fast drahtig",{th:2,w:1}]]},
+ {t:"Was passiert, wenn du reichhaltigere Haarpflege benutzt?", h:"Egal ob Shampoo, Conditioner, Maske, Leave-in oder Öl.", a:[
+  ["Meine Haare werden schnell platt und strähnig",{th:0,w:2}],
+  ["In Maßen geht es, zu viel macht sie platt",{th:1,w:2}],
+  ["Meine Haare schlucken viel und könnten sogar mehr vertragen",{th:2,w:2}]]},
+ {t:"Und wenn du nur leichte Pflege nutzt, zum Beispiel ein Leave-in-Spray oder einen leichten Conditioner unter der Dusche?", a:[
+  ["Das reicht meinen Haaren völlig",{th:0,w:1}],
+  ["Das passt meistens, manchmal ist es etwas wenig",{th:1,w:1}],
+  ["Meine Haare bleiben trotzdem rau und widerspenstig",{th:2,w:1}]]},
+ {t:"Wie oft wickelst du ein Zopfgummi um einen Zopf mit all deinen Haaren?", a:[
+  ["Dreimal oder öfter",{amt:0}],["Zweimal",{amt:1}],["Nur einmal, mehr geht kaum",{amt:2}]]},
+ {t:"Wie lang sind deine Haare?", a:[
+  ["Bis zum Kinn oder kürzer",{len:0}],["Bis zur Schulter",{len:1}],["Bis zur Brust",{len:2}],["Länger",{len:3}]]},
+ {t:"Was davon trifft auf deine Haare zu?", h:"Du kannst mehreres auswählen.", multi:true, a:[
+  ["Gefärbt",{dmg:1}],["Blondiert, auch Strähnchen",{dmg:3,chem:1}],["Dauerwelle oder chemische Glättung",{dmg:3,chem:1}],["Nichts davon",{none:1}]]},
+ {t:"Wie oft stylst du mit Hitze, zum Beispiel mit Glätteisen, Lockenstab oder heißem Föhn?", a:[
+  ["Selten oder nie",{}],["Ein- bis zweimal pro Woche",{dmg:1}],["Fast täglich",{dmg:2,heat:1}]]},
+ {t:"Was davon gehört zu deinem Alltag?", h:"Du kannst mehreres auswählen.", multi:true, a:[
+  ["Ich schlafe mit offenen Haaren",{dmg:0.5,f:"open"}],
+  ["Ich gehe öfter mit nassen oder feuchten Haaren ins Bett",{dmg:0.5,f:"wet"}],
+  ["Ich bürste eher kräftig oder vom Ansatz nach unten",{dmg:0.5,f:"brush"}],
+  ["Ich rubble meine Haare mit einem normalen Handtuch trocken",{dmg:0.5,f:"towel"}],
+  ["Ich trage oft Zopfgummis mit Metallteil",{dmg:0.5,f:"tie"}],
+  ["Ich trage meine Haare tagsüber fast immer offen",{dmg:0.5,f:"loose"}],
+  ["Nichts davon",{none:1}]]},
+ {t:"Wie fühlen sich deine Längen an?", a:[
+  ["Weich und geschmeidig",{}],
+  ["Etwas trocken, die Spitzen sind rau",{dmg:1}],
+  ["Strohig, sie verknoten schnell",{dmg:3}],
+  ["Nass dehnen sie sich wie Gummi und reißen leicht",{dmg:5,gum:1}]]},
+ {t:"Hast du Spliss oder Haarbruch?", a:[
+  ["Kaum",{}],
+  ["Spliss, in den Spitzen oder auch in den Längen",{dmg:1,split:1}],
+  ["Viele kurze, abgebrochene Haare oder Bruch beim Kämmen",{dmg:3,split:1,brk:1}]]}
+];
+
+/* ---------- Texte ---------- */
+const TH = [
+ {name:"Feines Haar", key:"fein",
+  text:"Deine einzelnen Haare haben einen kleinen Durchmesser und werden schnell beschwert. Das hat nichts damit zu tun, wie viele Haare du hast, auch viele feine Haare fallen schnell platt. Für dich passt Pflege mit leichter Reichhaltigkeit, zum Beispiel Leave-in-Sprays, leichte Leave-in-Seren, leichte Conditioner und Wonder Water.",
+  cond:"ein Conditioner mit leichter Reichhaltigkeit oder ein Wonder Water. Das ist ein flüssiger Conditioner, der dein Haar pflegt, ohne es zu beschweren",
+  leave:"ein Leave-in-Spray oder ein leichtes Leave-in-Serum mit leichter Reichhaltigkeit", oil:"ein Trockenöl, das sich beim Verteilen in den Händen fast trocken anfühlt",
+  no:"Reichhaltige Pflege am Ansatz und zu viel Produkt auf einmal."},
+ {name:"Mittelstarkes Haar", key:"mittel",
+  text:"Deine Haare vertragen die meisten Produkte. Für dich passt Pflege mit leichter bis mittlerer Reichhaltigkeit, zum Beispiel Leave-in-Lotions, Leave-in-Seren und leichte Leave-in-Cremes. Je trockener sich deine Haare gerade anfühlen, desto reichhaltiger darf es sein.",
+  cond:"ein Conditioner mit mittlerer Reichhaltigkeit",
+  leave:"eine Leave-in-Lotion oder eine leichte Leave-in-Creme mit mittlerer Reichhaltigkeit", oil:"ein normales Haaröl",
+  no:"Immer zum reichhaltigsten Produkt greifen, auch wenn deine Haare sich mit leichteren wohlfühlen."},
+ {name:"Dickes Haar", key:"dick",
+  text:"Deine einzelnen Haare haben einen großen Durchmesser, schlucken viel Pflege und werden kaum beschwert. Für dich passt Pflege mit hoher Reichhaltigkeit, zum Beispiel Leave-in-Cremes, reichhaltige Conditioner und Masken. Wenig Haare zu haben heißt übrigens nicht, dass sie fein sind, auch wenige dicke Haare vertragen viel Pflege.",
+  cond:"ein Conditioner mit hoher Reichhaltigkeit",
+  leave:"eine Leave-in-Creme mit hoher Reichhaltigkeit", oil:"ein reichhaltigeres Haaröl, das sich ruhig cremig oder ölig anfühlen darf",
+  no:"Nur mit leichten Sprays pflegen, wenn sich deine Längen trotzdem rau anfühlen."}
+];
+const ST = [
+ {name:"gesund", text:"Deine Haare sind in gutem Zustand. Bei dir geht es um Vorbeugung: Halte sie flexibel und geschmeidig, damit Reibung im Alltag, nachts und beim Styling möglichst wenig anrichtet.",
+  mask:"Feuchtigkeitsmasken", no:"Die Pflege weglassen, weil die Haare ja gesund sind. Gerade mit Pflege bleiben sie es."},
+ {name:"beansprucht", text:"Deine Haare zeigen erste Spuren von Chemie, Hitze oder Reibung. Jetzt lohnt sich regelmäßige Pflege, damit aus beansprucht nicht strapaziert wird. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Baumwoll-Viskose und als Rundumschutz eine Seidenhaube.",
+  mask:"Feuchtigkeits- und Repair-Masken im Wechsel", no:"Hitze ohne Hitzeschutz, aggressives Bürsten und Entwirren von oben nach unten, weil die Knoten so in Längen und Spitzen rutschen und dort abbrechen."},
+ {name:"stark strapaziert", text:"Deine Haare sind deutlich geschädigt. Sie brauchen jetzt intensive Pflege, einen sanften Umgang und möglichst wenig neue Belastung durch Hitze und Chemie. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Baumwoll-Viskose und als Rundumschutz eine Seidenhaube.",
+  mask:"Repair- oder Bond-Repair-Masken im Wechsel mit Feuchtigkeitsmasken", no:"Neue Blondierungen oder Glättungen, bevor sich die Haare erholt haben, Hitze ohne Schutz, aggressives Bürsten und Entwirren von oben nach unten, weil die Knoten so in Längen und Spitzen rutschen und dort abbrechen."},
+ {name:"strukturell stark geschädigt", text:"Wenn sich nasse Haare wie Gummi dehnen, ist das Innere des Haares so angegriffen, dass es kaum noch Halt hat. Kein Produkt macht diese Längen wieder wie vorher, jetzt geht es um Schadensbegrenzung. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Baumwoll-Viskose und als Rundumschutz eine Seidenhaube.",
+  mask:"Repair- oder Bond-Repair-Masken im Wechsel mit Feuchtigkeitsmasken", no:"Jede weitere Chemie und Hitze, bis die geschädigten Längen geschnitten sind, und jedes Ziehen an den nassen Haaren."}
+];
+const MASK = [ // [Zustand][Dicke]
+ ["einmal pro Woche, nur in Längen und Spitzen","ein- bis zweimal pro Woche","gern bei jeder Wäsche"],
+ ["ein- bis zweimal pro Woche, nur in Längen und Spitzen oder vor dem Shampoo","zwei- bis dreimal pro Woche","bei jeder Wäsche"],
+ ["bei jeder Wäsche, mit einer leichten Repair-Maske nur in Längen und Spitzen","bei jeder Wäsche","bei jeder Wäsche"],
+ ["bei jeder Wäsche, mit einer leichten Repair-Maske nur in Längen und Spitzen","bei jeder Wäsche","bei jeder Wäsche"]
+];
+const AMOUNT = ["eher wenig","eine mittlere Menge","eher mehr"];
+const FTXT = {
+ open:"Schlaf mit einer lockeren Schlaffrisur auf einem Kissenbezug aus Seide oder Baumwoll-Viskose. Rundum geschützt sind deine Haare mit einer Seidenhaube.",
+ wet:"Geh nicht mit nassen Haaren ins Bett, denn nass sind sie am empfindlichsten.",
+ brush:"Bürste sanft und starte immer in den Spitzen, dann arbeitest du dich nach oben, damit du keine Knoten in die Längen ziehst. Hast du viele Knoten, entwirrst du am besten im trockenen Haar. Willst du nass oder feucht entwirren, dann nur mit einem Leave-in und einer Entwirrbürste.",
+ towel:"Drück deine Haare mit einem Mikrofaserhandtuch oder Turban aus, statt sie zu rubbeln.",
+ tie:"Nimm im Alltag Scrunchies aus Satin oder Seide. Haargummis ohne Metall sind die Ausnahme für Frisuren, bei denen du mehr Halt brauchst.",
+ loose:"Offen reiben deine Haare den ganzen Tag an Kleidung, Sitzlehnen und Taschen. Ganz vermeiden lässt sich das nicht, aber eine lockere Frisur an manchen Tagen und ein Leave-in auf trockenem Haar machen deine Längen unempfindlicher."
+};
+const FINE = "Ich bin keine Ärztin und keine Friseurin, dieses Quiz ersetzt keine persönliche Beratung. Deine Haare verändern sich durch Pflege, Färben, Hitze, Hormone und Alter, dein Ergebnis ist deshalb eine Momentaufnahme. Nimm es als Hilfe und Orientierung, nicht als feste Regel.";
+
+/* ---------- Zeichnung ---------- */
+function hairSVG(th, st, cls){
+  const w = [1.1,2,3.2][th];
+  const tip = (x) => st>=2
+    ? `<path d="M${x} 78 L${x-5} 96 M${x} 78 L${x+4} 95" stroke-width="${Math.max(1,w*0.7)}"/>`
+    : "";
+  const base = (x,c) => `<g stroke="${c}" stroke-linecap="round" fill="none"><path d="M${x} 4 L${x} ${st>=2?78:96}" stroke-width="${w}"/>${tip(x)}</g>`;
+  return `<svg class="${cls}" viewBox="0 0 60 100" aria-hidden="true">${base(22,"#F3ECE2")}${base(40,"#9E8C80")}</svg>`;
+}
+const startArt = `<svg class="strand" viewBox="0 0 300 420" fill="none" aria-hidden="true">
+  <path d="M230 0 C 200 140, 250 260, 205 420" stroke="#F3ECE2" stroke-width="0.8"/>
+  <path d="M258 0 C 228 140, 278 260, 233 420" stroke="#9E8C80" stroke-width="1.8"/>
+  <path d="M288 0 C 258 140, 308 260, 263 420" stroke="#F3ECE2" stroke-width="3"/></svg>`;
+
+/* ---------- Ablauf ---------- */
+const app = document.getElementById("app");
+let idx = -1, picks = [];
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const reduce = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function start(){
+  idx = -1; picks = [];
+  app.innerHTML = `<section class="start fade">${startArt}
+    <div class="by">Ein Quiz von Laura, deiner Haarpflege-Bestie</div>
+    <h1>Wie viel Pflege brauchen deine Haare?</h1>
+    <p class="lead">Wie reichhaltig deine Pflege sein darf, hängt von der Dicke deiner Haare ab. Wie viel Repair sie brauchen, hängt von ihrem Zustand ab. Beides findest du hier heraus.</p>
+    <p class="how">Zehn kurze Fragen, ungefähr drei Minuten. Am besten denkst du dabei an deine frisch gewaschenen Haare mit deiner normalen Pflege.</p>
+    <button class="primary" id="go">Quiz starten</button>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("go").onclick = () => { idx = 0; render(); };
+}
+
+function render(){
+  const q = Q[idx];
+  const sel = picks[idx] ?? (q.multi ? [] : null);
+  app.innerHTML = `<section class="q fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Frage ${idx+1} von ${Q.length}</span></div>
+    <div class="bar"><span style="width:${(idx/Q.length)*100}%"></span></div>
+    <h2>${esc(q.t)}</h2>
+    ${q.h ? `<p class="hint">${esc(q.h)}</p>` : ""}
+    <div class="answers">${q.a.map((a,i)=>{
+      const on = q.multi ? sel.includes(i) : sel === i;
+      return `<button class="ans${q.multi?" multi":""}" data-i="${i}" aria-pressed="${on}"><span class="dot"></span><span>${esc(a[0])}</span></button>`;
+    }).join("")}</div>
+    ${q.multi ? `<button class="primary next" id="next" ${sel.length?"":"disabled"}>${idx===Q.length-1?"Ergebnis anzeigen":"Weiter"}</button>` : ""}
+  </section>`;
+  document.getElementById("back").onclick = () => { if(idx===0) start(); else { idx--; render(); } };
+  app.querySelectorAll(".ans").forEach(b => b.onclick = () => choose(+b.dataset.i));
+  if(q.multi) document.getElementById("next").onclick = advance;
+  window.scrollTo(0,0);
+}
+function choose(i){
+  const q = Q[idx];
+  if(q.multi){
+    const noneIdx = q.a.findIndex(a=>a[1].none);
+    let s = picks[idx] ? [...picks[idx]] : [];
+    if(i===noneIdx) s = s.includes(i) ? [] : [i];
+    else { s = s.filter(x=>x!==noneIdx); s = s.includes(i) ? s.filter(x=>x!==i) : [...s,i]; }
+    picks[idx] = s; render(); return;
+  }
+  picks[idx] = i;
+  app.querySelectorAll(".ans").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i===i));
+  setTimeout(advance, reduce()?0:260);
+}
+function advance(){ if(idx < Q.length-1){ idx++; render(); } else result(); }
+
+function result(){
+  let thS=0, thW=0, amt=0, len=0, dmg=0; const fl = {}, fr = [];
+  Q.forEach((q,qi)=>{
+    const p = picks[qi]; if(p==null) return;
+    (Array.isArray(p)?p:[p]).forEach(i=>{
+      const v = q.a[i][1];
+      if(v.th!=null){ thS += v.th*v.w; thW += v.w; }
+      if(v.amt!=null) amt=v.amt; if(v.len!=null) len=v.len;
+      if(v.dmg) dmg+=v.dmg;
+      ["chem","heat","gum","split","brk"].forEach(k=>{ if(v[k]) fl[k]=1; });
+      if(v.f) fr.push(v.f);
+    });
+  });
+  const th = Math.round(thW ? thS/thW : 1);
+  let st = dmg<=2 ? 0 : dmg<6 ? 1 : 2;
+  if(fl.gum) st = 3;
+  const T = TH[th], S = ST[st];
+  const am = amt+len; const amount = AMOUNT[am<=1?0:am<=3?1:2];
+
+  const mismatch =
+    (th===0 && st>=2) ? `<div class="box"><h3>Feines Haar mit starken Schäden</h3><p>Du brauchst Repair, aber reichhaltige Produkte machen dein Haar platt. Greif zu leichten Repair-Produkten wie Leave-in-Sprays oder leichten Leave-in-Seren, gib die Maske nur in Längen und Spitzen oder als Pflege vor dem Shampoo und arbeite lieber mit mehreren kleinen Mengen.</p></div>` :
+    (th===2 && st===0) ? `<div class="box"><h3>Reichhaltig darf, muss aber nicht</h3><p>Reichhaltige Pflege ist bei dir möglich, aber kein Muss. Wenn sich deine Haare mit leichteren Produkten gut anfühlen, bleib ruhig dabei.</p></div>` : "";
+
+  const gumBox = st===3 ? `<div class="box warn"><h3>Was du jetzt tun kannst</h3><p>Pausiere Hitze und chemische Behandlungen. Pflege im Wechsel mit Bond Repair und Feuchtigkeit, entwirre nur ganz sanft und lass dich beim Friseur beraten, wie viel von den geschädigten Längen ab muss. Kein Produkt macht diese Längen wieder wie vorher, aber gute Pflege schützt den Rest und das nachwachsende Haar.</p></div>` : "";
+
+  const bondBox = st>=1 ? `<div class="box"><h3>Feuchtigkeit und Repair im Mix</h3>
+    <p><strong>Feuchtigkeitspflege</strong> macht das Haar weich und geschmeidig. <strong>Repair-Pflege</strong>, oft mit Proteinen, lagert sich an geschädigten Stellen an und stärkt das Haar. <strong>Bond Repair</strong> stabilisiert Verbindungen im Inneren des Haares. Am besten fährst du mit einem Mix aus Feuchtigkeit und Repair oder Bond Repair, statt nur auf eins davon zu setzen.</p>
+    <p>Wenn du in Bond Repair investieren möchtest, bringt es am meisten in der Maske und im Leave-in auf feuchtem Haar, weil diese Produkte am längsten im Haar bleiben. In den meisten Fällen ersetzt es aber keine Feuchtigkeitspflege. Hab deshalb immer auch eine feuchtigkeitsspendende Maske und ein Leave-in zu Hause und wechsle ab.</p>
+    <p>Fühlen sich deine Haare nach viel Repair steif oder strohig an, hilft eine Tiefenreinigung, danach Feuchtigkeit und eine kleine Repair-Pause. Übrigens heißt „Bond Repair“ nicht überall dasselbe, je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter.</p></div>` : "";
+
+  const splitBox = fl.split ? `<div class="box"><h3>Spliss lässt sich nicht reparieren</h3><p>Ist ein Haarende einmal aufgespalten, wächst es nicht wieder zusammen. Ein Leave-in kann Spliss optisch kaschieren und helfen, dass er nicht so schnell weiter nach oben wandert, eine Lösung ist das aber nicht. Entfernt wird Spliss nur, wenn du oberhalb davon abschneidest. ${fl.brk ? "Weil du Spliss und Haarbruch auch in den Längen hast, ist ein Spliss-Schnitt sinnvoll, bei dem der Spliss im ganzen Haar entfernt wird." : "Sitzt er nur in den Spitzen, reicht ein Spitzenschnitt."}</p></div>` : "";
+
+  const dailyTips = [...new Set(fr)].map(k=>`<li>${FTXT[k]}</li>`).join("");
+  const frBox = (dailyTips || fl.heat) ? `<div class="box"><h3>Weniger Reibung im Alltag</h3><p>Viele Schäden entstehen ganz ohne Chemie. Für dich besonders wichtig:</p><ul>${dailyTips}${fl.heat?"<li>Wenn du fast täglich mit Hitze stylst, ist Hitzeschutz Pflicht. Stell dein Tool nicht heißer ein als nötig und plane hitzefreie Tage ein.</li>":""}</ul></div>` : "";
+
+  app.innerHTML = `<section class="res fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Dein Ergebnis</span></div>
+    <div class="res-head">
+      <div>
+        <p class="res-kicker">Dein Pflegeprofil</p>
+        <h1>${T.name}</h1>
+        <p class="subtype"><span class="code">${S.name}</span></p>
+      </div>
+      ${hairSVG(th, st, "res-art")}
+    </div>
+    ${gumBox}
+    <div class="block"><h3>Deine Haardicke</h3><p>${T.text}</p></div>
+    <div class="block"><h3>Dein Haarzustand</h3><p>${S.text}</p></div>
+    ${mismatch}
+
+    <div class="block"><h3><span class="mark">✓</span>Deine Basis</h3>
+      <ol class="steps">
+        <li>Shampoo nach deinem Kopfhauttyp, also für normale, trockene, schnell fettende oder sensible Kopfhaut. Welcher Typ du bist, zeigt dir mein Kopfhaut-Check.</li>
+        <li>Zum Abschluss jeder Wäsche kommt ${T.cond}. Lass den Conditioner drei bis fünf Minuten einwirken, statt ihn sofort auszuspülen.</li>
+        <li>Danach kommt ${T.leave} ins noch feuchte Haar, damit die Pflegestoffe gut einziehen können. Stylst du mit Hitze, nimm ein Leave-in mit Hitzeschutz oder gib zusätzlich einen Hitzeschutz dazu.</li>
+      </ol>
+      <p>Bei deiner Haarmenge und Länge brauchst du ${amount} Produkt. Fang trotzdem immer mit wenig an und nimm bei Bedarf nach.</p>
+    </div>
+
+    <div class="block"><h3><span class="mark">+</span>Wenn du mehr möchtest</h3>
+      <p>Du musst nicht alles machen. Jeder Schritt mehr gibt dir aber mehr Spielraum, vor allem bei beanspruchtem Haar oder wenn du ein bestimmtes Ergebnis möchtest.</p>
+      <ul>
+        <li><strong>Maske:</strong> ${MASK[st][th]}. Für dich passen ${S.mask}. Lass sie nach dem Shampoo etwa fünf Minuten einwirken und schließ danach mit dem Conditioner ab. An Tagen mit reichhaltiger Pre-Wash-Pflege darf die Maske ausfallen.</li>
+        <li><strong>LL-Methode:</strong> Das ist tägliche Leave-in-Pflege auf trockenem Haar. Sie hält Längen und Spitzen weich, geschmeidig und vor allem flexibel, damit weniger Haarbruch entsteht und deine Haare insgesamt unempfindlicher werden.</li>
+        <li><strong>Haaröl:</strong> Für dich passt ${T.oil}. Öl spendet selbst keine Feuchtigkeit, es versiegelt, bringt Glanz und pflegt. Nutze es nie allein, sondern immer über deinem Leave-in, nach der Wäsche und zwischen den Wäschen.</li>
+        <li><strong>Wonder Water:</strong> ${th===0?"Kannst du statt oder zusätzlich zum Conditioner nutzen.":"Als Extra nach dem Conditioner glättet es die Oberfläche und bringt mehr Glanz, ohne zu beschweren."}</li>
+        <li><strong>Pre-Wash-Pflege (Pflege vor der Haarwäsche):</strong> Sie schützt deine Längen davor, dass das Shampoo sie austrocknet. Bei der ÖWC-Methode mit Haaröl, der MWC-Methode mit Maske und der LWC-Methode mit einem Leave-in, egal ob Spray, Serum oder Creme, gibst du das Produkt in die trockenen Längen und lässt es 10 bis 60 Minuten einwirken. Danach wäschst du ganz normal und schließt mit dem Conditioner ab. Bei der CWC-Methode machst du die Haare zuerst nass, gibst Conditioner in die Längen, wäschst im gleichen Schritt den Ansatz mit Shampoo und spülst alles zusammen aus. Danach folgen Maske und Conditioner. Für dich ist ${["die LWC- oder CWC-Methode","die CWC- oder MWC-Methode","die ÖWC- oder MWC-Methode"][th]} ein guter Start, grundsätzlich kann aber jede Haardicke jede Methode nutzen. Mein Tipp: Hier kannst du wunderbar Produkte aufbrauchen, die dir sonst nicht so gefallen haben. Du nimmst bewusst eine größere Menge, und es geht nur um den Schutz in der Dusche.</li>
+      </ul>
+    </div>
+
+    <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${T.no} ${S.no}</p></div>
+
+    ${bondBox}${splitBox}${frBox}
+
+    <details><summary>So liest du das Pflege-Regal</summary><div class="inner">
+      <p>Das ist eine grobe Einschätzung. Am Ende kommt es immer auf das einzelne Produkt und seine Inhaltsstoffe an.</p>
+      <div class="tbl"><table>
+        <tr><th>Steht auf der Flasche</th><th>Reichhaltigkeit</th><th>Passt zu</th></tr>
+        <tr><td>leicht, light, Fluid, Spray</td><td>leicht</td><td>feinem Haar</td></tr>
+        <tr><td>Volumen</td><td>leicht, oft mit stabilisierenden Stoffen für mehr Griff</td><td>feinem oder dünnem Haar und allen, die beim Styling mehr Volumen möchten</td></tr>
+        <tr><td>Feuchtigkeit, Hydration, Glanz, Smooth, Anti-Frizz</td><td>mittel</td><td>mittelstarkem Haar und allen als Feuchtigkeitspflege</td></tr>
+        <tr><td>Repair, Intensiv, Nährend, Rich, Butter</td><td>hoch</td><td>dickem oder strapaziertem Haar</td></tr>
+        <tr><td>Blond, Bond, Plex</td><td>mit Repair-Wirkstoff</td><td>blondiertem, chemisch behandeltem oder stark strapaziertem Haar</td></tr>
+      </table></div>
+      <p>Beim Leave-in gibt es Sprays, Seren, Lotions und Cremes. Als Faustregel passen Spray und leichtes Serum zu feinem Haar, Lotion und leichte Creme zu mittelstarkem Haar und Creme zu dickem Haar. Jede Form gibt es aber in unterschiedlicher Reichhaltigkeit.</p>
+    </div></details>
+
+    <details><summary>Conditioner, Maske, Leave-in?</summary><div class="inner">
+      <p><strong>Conditioner</strong> legt sich nach dem Shampoo auf die Haaroberfläche, glättet sie und macht die Haare kämmbar. Er wird nach drei bis fünf Minuten ausgespült und ist der feste Abschluss jeder Wäsche.</p>
+      <p><strong>Maske</strong> ist konzentrierter, darf etwa fünf Minuten einwirken und pflegt intensiver. Danach schließt du mit dem Conditioner ab.</p>
+      <p><strong>Leave-in</strong> bleibt im Haar und pflegt deshalb am längsten. Es kommt nach der Wäsche ins feuchte Haar und zwischendurch in die trockenen Längen.</p>
+      <p><strong>Haaröl</strong> ist ein Extra, das andere Pflege versiegelt und Glanz bringt.</p>
+    </div></details>
+
+    <p class="closing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
+    <div class="actions"><button class="primary" id="again">Quiz neu starten</button></div>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("back").onclick = () => { idx = Q.length-1; render(); };
+  document.getElementById("again").onclick = start;
+  window.scrollTo(0,0);
+}
+
+start();
+</script>
+</body>
+</html>
