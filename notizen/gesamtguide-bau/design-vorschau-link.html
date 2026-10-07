@@ -225,8 +225,8 @@ html[data-look="a"] .ghead h2::after{content:"";display:block;width:56px;height:
 @media (max-width:759px){ html[data-look="a"] nav.main button.me{background:rgba(243,236,226,.08);border-color:transparent} }
 
 /* ---------- B: Hell & leicht (viel Luft, feine Linien, Braun nur als Akzent) ---------- */
-html[data-look="b"]:not([data-theme="zz"]){--bg:#F7F2EA;--paper:#FCFAF6;--card:#EFE7DC}
-html[data-look="b"] body{background:var(--bg)}
+html[data-look="b"]:not([data-theme="zz"]){--bg:#F7F2EA !important;--paper:#FCFAF6 !important;--card:#EFE7DC !important}
+html[data-look="b"] body{background:#F7F2EA !important}
 html[data-look="b"] header.top{background:rgba(247,242,234,.97);border-bottom:1px solid rgba(56,47,46,.10)}
 html[data-look="b"] nav.main button{font-size:13px;letter-spacing:.14em;text-transform:uppercase}
 html[data-look="b"] nav.main button[aria-current="page"]{background:var(--espresso);color:var(--cream)}
@@ -247,8 +247,8 @@ html[data-look="b"] .ghead h2{font-style:italic}
 }
 
 /* ---------- C: Ganz in Braun (wie deine Quiz: dunkler Grund, helle Schrift) ---------- */
-html[data-look="c"]:not([data-theme="zz"]){--bg:#382F2E;--paper:#433836;--card:#4C403C;--ink:#F3ECE2;--muted:#C9BCAE;--line:rgba(243,236,226,.30);--line-soft:rgba(243,236,226,.14)}
-html[data-look="c"] body{background:var(--bg);color:var(--ink)}
+html[data-look="c"]:not([data-theme="zz"]){--bg:#382F2E !important;--paper:#433836 !important;--card:#4C403C !important;--ink:#F3ECE2 !important;--muted:#C9BCAE !important;--line:rgba(243,236,226,.30) !important;--line-soft:rgba(243,236,226,.14) !important}
+html[data-look="c"] body{background:#382F2E !important;color:#F3ECE2 !important}
 html[data-look="c"] header.top{background:rgba(56,47,46,.97)}
 html[data-look="c"] nav.main button[aria-current="page"],
 html[data-look="c"] .chip[aria-pressed="true"],
@@ -264,6 +264,12 @@ html[data-look="c"] dialog{background:var(--bg);color:var(--ink)}
 html[data-look="c"] .note-banner{border-color:rgba(243,236,226,.25)}
 html[data-look="c"] :focus-visible{outline-color:var(--sand)}
 
+/* Umschalter oben auf der Seite */
+.looktop{display:flex;flex-wrap:wrap;align-items:center;gap:8px;border:1px dashed var(--line);border-radius:12px;padding:10px 12px;margin:16px 0 0;font-size:14px}
+.looktop b{font-weight:500;margin-right:4px}
+.looktop button{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;font:inherit;font-size:14px}
+.looktop button[aria-pressed="true"]{background:#382F2E;color:#F3ECE2;border-color:#382F2E}
+html[data-look="c"] .looktop button[aria-pressed="true"]{background:#F3ECE2;color:#382F2E;border-color:#F3ECE2}
 /* Umschalter für die Vorschau */
 .lookswitch{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:4px;background:#382F2E;color:#F3ECE2;border-radius:999px;padding:5px 6px 5px 14px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-family:"Jost",Arial,sans-serif;font-size:13px}
 .lookswitch span{margin-right:4px;color:#C9BCAE}
@@ -352,7 +358,12 @@ html[data-look="c"] :focus-visible{outline-color:var(--sand)}
 </div>
 <script>
 (function(){
-  const root = document.documentElement, btns = document.querySelectorAll(".lookswitch button");
+  const root = document.documentElement;
+  /* zweiter Umschalter oben, an Stelle des Hinweises */
+  const banner = document.querySelector(".note-banner");
+  if(banner){ banner.outerHTML = `<div class="looktop" role="group" aria-label="Design-Variante wählen"><b>Design-Variante:</b>
+    <button type="button" data-look="a">A Espresso</button><button type="button" data-look="b">B Hell</button><button type="button" data-look="c">C Braun</button><button type="button" data-look="">Jetzt</button></div>`; }
+  const btns = document.querySelectorAll(".lookswitch button, .looktop button");
   function set(v){
     if(v) root.setAttribute("data-look", v); else root.removeAttribute("data-look");
     btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.look === v));

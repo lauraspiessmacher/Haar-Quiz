@@ -7,7 +7,12 @@
 </div>
 <script>
 (function(){
-  const root = document.documentElement, btns = document.querySelectorAll(".lookswitch button");
+  const root = document.documentElement;
+  /* zweiter Umschalter oben, an Stelle des Hinweises */
+  const banner = document.querySelector(".note-banner");
+  if(banner){ banner.outerHTML = `<div class="looktop" role="group" aria-label="Design-Variante wählen"><b>Design-Variante:</b>
+    <button type="button" data-look="a">A Espresso</button><button type="button" data-look="b">B Hell</button><button type="button" data-look="c">C Braun</button><button type="button" data-look="">Jetzt</button></div>`; }
+  const btns = document.querySelectorAll(".lookswitch button, .looktop button");
   function set(v){
     if(v) root.setAttribute("data-look", v); else root.removeAttribute("data-look");
     btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.look === v));
