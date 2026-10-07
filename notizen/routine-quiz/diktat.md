@@ -46,3 +46,12 @@ Keine konkreten Produktempfehlungen im Quiz (soll offen bleiben, auch für Neuhe
   - Kerngedanke: Balance zwischen Repair- und Feuchtigkeitsprodukten. Nicht nur eine Repair-Maske daheim, sondern auch eine, die Feuchtigkeit spendet. Gleiches beim Leave-in. Maske und Leave-in (feucht) sind die Kategorien, in denen Repair Sinn macht – im Shampoo, Conditioner und Leave-in auf trockenem Haar nicht so viel.
 - **Startseite Quiz-Kästchen:** „vier kurze Checks“, Routine-Check erwähnen.
 - **Nächster Schritt:** Produktkategorie Hitzeschutz, aufgeteilt nach Konsistenz: trockener Hitzeschutz, Hitzeschutzspray, Hitzeschutz-Seren, Cremes, Öle.
+
+## Lauras Korrekturen (07.10.2026, zweite Runde)
+- **Öl:** nicht „ein Muss ist es aber nicht“, sondern „ein schönes Add-on-Produkt“. Ich empfehle Öl, zwinge aber niemanden, der es nicht nutzen will oder damit nicht klarkommt.
+- **Balance Repair/Feuchtigkeit:** nicht bei „beanspruchten“ Haaren allgemein, sondern bei strukturgeschädigten Haaren oder Haaren, die durch Färben/Blondieren oder sehr viele Hitzeanwendungen beansprucht sind. Sonst verwechselt jemand Trockenheit mit Schädigung, nimmt zu viel Repair und bekommt durch zu viele Proteine Haarbruch.
+- **Repair wo:** als meine Empfehlung formulieren und begründen: Shampoo wäscht man schnell wieder aus. Conditioner geht auch, ich empfehle eher eine Maske, weil sie länger einwirkt. Leave-in ins nasse Haar, weil die Wirkstoffe drin bleiben und nicht ausgewaschen werden. Auf trockenem Haar wenig Sinn, weil es da um Flexibilität und Geschmeidigkeit geht und kaum Wirkstoffe eindringen.
+- **Schuppige Kopfhaut:** Trockenshampoo weglassen, als Info: sich erst um die Schuppen kümmern, danach kann man es wieder nutzen.
+- **Trockener Hitzeschutz:** Laura schickt Produkte.
+- **Hitzeschutz nachprüfen:** Gliss-Sprühkuren haben Hitzeschutz (steht auf dem Produkt), Color Wow Money Mist wahrscheinlich.
+- **Öle mit Hitzeschutz erst ab normaler Haardicke:** so umsetzen.
