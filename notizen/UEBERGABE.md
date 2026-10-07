@@ -118,3 +118,7 @@
   Riesige Überschriften in Großbuchstaben (SHAMPOO, QUIZ), Untertitel kursiv, hellerer Cremegrund #FBF7F3, eckigere Knöpfe,
   Produktbild groß auf hellem Feld oben in der Karte (Handy: Bild rechts), dünner dunkelbrauner Rahmen bleibt.
   Hinweis: Produktbilder sind nur ~150 px hoch – für die echte Webseite später größere Bilder nehmen.
+- ENTSCHEIDUNG Laura: Rouje-Stil + Schrift „Instrument“ bleiben. Große Überschriften und umrahmte Produkte gefallen ihr sehr.
+- „Passt zu“-Rahmen: bei langem Text kleinere Schrift und weniger runde Ecken (Klasse .also.long ab 35 Zeichen), damit nichts mehr auf der Linie sitzt (Beispiel: Balea Kopfhaut Tonikum).
+- Untertitel „Von Laura, deiner Haarpflege-Bestie“: gerade, ohne Serifen (Instrument Sans), hebt sich vom Logo ab.
+- Fotos macht Laura selbst, kommen später.
