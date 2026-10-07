@@ -136,3 +136,6 @@
 - Suchleiste wieder rund (Laura mag es runder, auch im Rouje-Stil).
 - Wissen-Bereich = auch Lauras Ideen-Speicher (graue „Kommt bald“-Kacheln). Themen: Spliss & Haarbruch: der Unterschied · Die LL-Methode · Pre-Wash-Routinen (statt ÖWC) ·
   Haaröle erklärt (statt Trockene Öle) · Der Haarzyklus · Haarausfall (Arten) · Kopfhautgesundheit · Haarmythen · Haarporosität. Laura schickt die Texte.
+- Startseite: laufende Leiste „Haarpflege 1×1“ (Lauras Serie, Instagram + TikTok) zwischen Kacheln und Routine. Daten im Template unter `const SERIE` (teil, titel, url, bild), `SERIE_MAX = 10` (neueste zuerst).
+  Hält bei Maus darüber / Antippen an, bei „Bewegung reduzieren“ keine Animation. Knopf „Alle Folgen ansehen“ → aktuell Instagram-Profil (Platzhalter).
+  KEINE eingebetteten Instagram-/TikTok-Player (laden fremde Skripte/Cookies → Einwilligung nötig, Abmahnrisiko). Stattdessen: Titelbild + Link zur Plattform.

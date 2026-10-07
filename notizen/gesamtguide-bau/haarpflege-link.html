@@ -219,6 +219,29 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .rrow figcaption{font-size:14.5px;margin-top:10px;line-height:1.35}
 .rrow figcaption span{display:block;font-family:var(--serif);font-size:22px;margin-bottom:2px}
 .routine .fine2{color:var(--muted);font-size:13.5px;margin:22px auto 0;max-width:60ch}
+
+/* ---------- Serie „Haarpflege 1×1“ (laufende Leiste) ---------- */
+.serie{margin:56px 0 0}
+.serie .head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.serie h2{font-size:clamp(34px,5vw,54px)}
+.serie .sub{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:18px;margin:6px 0 0}
+.serie .links{display:flex;gap:10px;flex-wrap:wrap}
+.reelwrap{overflow:hidden;margin:0 -16px;padding:4px 0 10px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+@media (min-width:760px){ .reelwrap{margin:0 -32px} }
+.reeltrack{display:flex;gap:14px;width:max-content;padding:0 16px;animation:reelrun 45s linear infinite}
+.reelwrap:hover .reeltrack,.reelwrap:focus-within .reeltrack,.reelwrap.stop .reeltrack{animation-play-state:paused}
+@keyframes reelrun{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){ .reelwrap{overflow-x:auto} .reeltrack{animation:none} }
+.reel{position:relative;flex:0 0 auto;width:178px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#382F2E;color:#F3ECE2;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:14px;background-size:cover;background-position:center;transition:transform .2s ease}
+.reel:nth-child(even){background-color:#7A6A65}
+.reel:hover{transform:translateY(-3px)}
+.reel .art{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.reel .teil{position:relative;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase}
+.reel .play{position:relative;align-self:center;width:46px;height:46px;border-radius:50%;border:1px solid rgba(243,236,226,.8);display:flex;align-items:center;justify-content:center}
+.reel .titel{position:relative;font-family:var(--serif);font-size:21px;line-height:1.1}
+.reel.img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(56,47,46,.35),transparent 35%,transparent 60%,rgba(56,47,46,.75))}
+.reel.img > *{z-index:1}
+@media (max-width:520px){ .reel{width:150px} }
 </style>
 <!--DESIGN-->
 
@@ -262,6 +285,11 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
       <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Mythen und zum richtigen Umgang mit deinen Haaren, einfach erklärt.</p><span class="go">Lesen →</span></button></li>
       <li><button type="button" data-go="me"><h3>Meine Haare</h3><p>Stell einmal deine Haardicke und deinen Kopfhauttyp ein und sieh nur, was zu dir passt.</p><span class="go">Einstellen →</span></button></li>
     </ul>
+    <div class="serie">
+      <div class="head"><div><h2>Haarpflege 1×1</h2><p class="sub">meine Serie auf Instagram und TikTok</p></div>
+        <div class="links"><a class="btn" id="serieAlle" href="https://www.instagram.com/lauraspiessmacher/" target="_blank" rel="noopener">Alle Folgen ansehen <span aria-hidden="true">→</span></a></div></div>
+      <div class="reelwrap" id="reelwrap"><div class="reeltrack" id="reeltrack"></div></div>
+    </div>
     <div class="routine">
       <h2>Deine Routine</h2>
       <p class="sub">in sechs Schritten zu geschmeidigen Haaren</p>
@@ -672,6 +700,32 @@ document.getElementById("toQuiz").onclick = () => { dlg.close(); state.view="qui
 
 function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("on"); setTimeout(()=>el.classList.remove("on"),1600); }
 
+
+/* ---------- Serie „Haarpflege 1×1“: hier Links und Titelbilder eintragen ---------- */
+const SERIE = [
+  {teil:1, titel:"Thema folgt", url:"", bild:""},
+  {teil:2, titel:"Thema folgt", url:"", bild:""},
+  {teil:3, titel:"Thema folgt", url:"", bild:""},
+  {teil:4, titel:"Thema folgt", url:"", bild:""},
+  {teil:5, titel:"Thema folgt", url:"", bild:""},
+  {teil:6, titel:"Thema folgt", url:"", bild:""},
+  {teil:7, titel:"Thema folgt", url:"", bild:""},
+  {teil:8, titel:"Thema folgt", url:"", bild:""},
+];
+const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
+(function(){
+  const track = document.getElementById("reeltrack"); if(!track) return;
+  const list = SERIE.slice().sort((a,b)=>b.teil-a.teil).slice(0, SERIE_MAX);
+  const art = '<svg class="art" viewBox="0 0 100 178" fill="none" aria-hidden="true"><path d="M70 0 C 40 40, 90 80, 60 120 S 40 160, 30 178" stroke="#F3ECE2" stroke-width=".6"/><path d="M80 0 C 50 40, 100 80, 70 120 S 50 160, 40 178" stroke="#C9BCAE" stroke-width=".6"/></svg>';
+  const tile = (r, copy) => `<a class="reel${r.bild?" img":""}" href="${r.url||"#"}" ${r.url?'target="_blank" rel="noopener"':""} ${copy?'aria-hidden="true" tabindex="-1"':""} ${r.bild?`style="background-image:url('${r.bild}')"`:""}>${r.bild?"":art}<span class="teil">Teil ${r.teil}</span><span class="play" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 3 L13 8 L5 13 Z" fill="#F3ECE2"/></svg></span><span class="titel">${esc(r.titel)}</span></a>`;
+  const one = list.map(r => tile(r,false)).join("");
+  const many = list.length < 6 ? one + one : one;
+  track.innerHTML = many + list.map(r => tile(r,true)).join("").repeat(list.length < 6 ? 2 : 1);
+  track.querySelectorAll('a[href="#"]').forEach(a => a.onclick = e => e.preventDefault());
+  const wrap = document.getElementById("reelwrap");
+  wrap.addEventListener("touchstart", () => wrap.classList.add("stop"), {passive:true});
+  wrap.addEventListener("touchend", () => setTimeout(()=>wrap.classList.remove("stop"), 2500), {passive:true});
+})();
 window.addEventListener("resize", setHH);
 readHash(); q.value = state.q; render();
 </script>
