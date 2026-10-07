@@ -106,3 +106,10 @@
 - Laura sah Variante C nicht → Umschalter zusätzlich oben auf der Seite, Farben von B/C mit Vorrang (!important), getestet in Hell/Dunkel.
 - Laura (07.10.): Favorit Variante B. Wünsche umgesetzt in der Design-Vorschau (https://claude.ai/artifact/K1wkeRzkxv3iDQ6cuP9mwU): Schrift-Auswahl für Überschriften (Cormorant, Bodoni, Playfair, Italiana, Gilda), alle OFL und EINGEBETTET (keine Google-Fonts-Verbindung wegen Abmahnungen!) – Dateien: notizen/gesamtguide-bau/schriften/*.woff2 + schriften-eingebettet.css, Fließtext Jost (ebenfalls eingebettet). Erklärtext je Produktart jetzt sichtbar und umrandet (leicht braun hinterlegt) statt Aufklappen. Quiz-Seite: drei dunkelbraune Karten mit Strähnen-Linien, „Für dein Shampoo/deine Pflege/dein Styling“, Fragenzahl und Dauer, Schlusssatz. „Meine Haare“ in Sandton. Signatur-Strähnen neben dem Namen. Offizieller Link bekommt das erst nach Lauras Entscheidung (Schrift wählen).
 - Laura: Beige bei „Meine Haare“ passt nicht → raus (jetzt feine braune Umrandung). Schrift: Playfair gefällt am besten (voreingestellt). Name „Haarpflege einfach erklärt“ oben wie die Überschrift „Shampoo“: Playfair kursiv, dunkelbraun. Laura möchte eine Website als Vibe-Vorbild schicken (Beauty-Bereich, Startseite, Produktbilder; elegant + verspielt).
+
+## Design-Runde (Variante B, Feinschliff)
+- Beige/Sand (#D6B98F) komplett raus, auch bei den Quiz-Labels „Für dein …“ (jetzt #E9DFD2).
+- Dunkelbraune Flächen bleiben (Laura mag sie). „Meine Haare“ = helleres kühles Braun #7A6A65 mit cremefarbener Schrift.
+- Produkte wieder mit dünnem dunkelbraunem Rahmen (rgba(56,47,46,.30), Radius 14px).
+- Logo „HAARPFLEGE EINFACH ERKLÄRT“ testweise in Großbuchstaben (Playfair).
+- Referenz-Webseite von Laura: rouje.com (Seite „homepage-leichter“, Beauty). Schriften dort: „Panama“ (schmale Serifenschrift, Großbuchstaben) und „Diatype“ (Grotesk) – beide kostenpflichtig, kostenlose Ersatzschriften nötig.
