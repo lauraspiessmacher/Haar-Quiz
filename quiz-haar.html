@@ -104,6 +104,9 @@ li{margin-bottom:8px}
 .steps{padding-left:22px;margin:0 0 22px}
 .steps li{margin-bottom:10px}
 strong{font-weight:500}
+.secondary{display:block;width:100%;padding:15px 20px;border:1px solid var(--cream);border-radius:999px;background:transparent;color:var(--cream);font-weight:500;font-size:16px;cursor:pointer}
+.copied{font-size:14px;color:var(--muted);min-height:20px}
+.actions .primary{margin-top:8px}
 </style>
 </head>
 <body>
@@ -381,6 +384,7 @@ function result(){
   let key, code;
   if(g==="G"){ if(silk>=tex){ key="G1"; code="1A"; } else { key="GT"; code = tex>=7 ? "1C" : "1B"; } }
   else { const idx = Math.round(sN ? sSum/sN : 1); key=g; code = {W:"2",L:"3",E:"4"}[g] + ["A","B","C"][idx]; }
+  try { const all = JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; all.haar = {key}; localStorage.setItem("quizErgebnisse", JSON.stringify(all)); } catch(e){}
   const r = R[key];
 
   app.innerHTML = `<section class="res fade">
@@ -406,12 +410,26 @@ function result(){
       <p><strong>Die meisten haben mehrere Muster.</strong> Oft sind die Haare oben glatter und unten welliger, oder vorne lockiger als hinten. Dein Ergebnis zeigt dir den Typ, der bei dir am stärksten vertreten ist.</p>
     </div></details>
     <p class="closing">Deine Struktur zeigt dir, wie du pflegst und stylst. Wie reichhaltig deine Pflege sein darf, zeigt dir bald der Pflege-Check.</p>
-    <div class="actions"><button class="primary" id="again">Quiz neu starten</button></div>
+    <div class="actions"><button class="secondary" id="copyRes">Ergebnis kopieren</button><span class="copied" id="copied" role="status"></span>
+      <button class="primary" id="toRoutine">Weiter zu deiner Routine</button>
+      <button class="ghost" id="again">Quiz neu starten</button></div>
     <p class="fine">${FINE}</p>
   </section>`;
   document.getElementById("back").onclick = () => { pos = seq.length-1; render(); };
   document.getElementById("again").onclick = start;
+  document.getElementById("copyRes").onclick = copyResult;
+  document.getElementById("toRoutine").onclick = () => { try { if(window.parent !== window && window.parent.openQuiz && window.parent.openQuiz("quiz-routine.html")) return; } catch(e){} location.href = "quiz-routine.html"; };
   window.scrollTo(0,0);
+}
+
+/* ---------- Ergebnis kopieren ---------- */
+async function copyResult(){
+  const sec = app.querySelector("section");
+  const t = [...sec.children].filter(el => !el.matches(".top,.actions,.fine,details")).map(el => el.innerText.trim()).filter(Boolean).join("\n\n");
+  let ok = false;
+  try { await navigator.clipboard.writeText(t); ok = true; } catch(e){}
+  if(!ok){ const ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch(e){} ta.remove(); }
+  document.getElementById("copied").textContent = ok ? "Kopiert. Du kannst es jetzt in deine Notizen einfügen." : "Kopieren hat leider nicht geklappt.";
 }
 
 start();

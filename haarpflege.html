@@ -452,6 +452,13 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 .qcard:hover .paper,.qcard:focus-visible .paper{transform:rotate(0) translateY(-6px);filter:drop-shadow(0 1px 1px rgba(56,47,46,.14)) drop-shadow(0 8px 10px rgba(56,47,46,.14)) drop-shadow(0 26px 26px rgba(56,47,46,.22))}
 .qcard:hover .s1{transform:rotate(4.5deg) translate(13px,7px)} .qcard:hover .s2{transform:rotate(-5.5deg) translate(-14px,13px)}
 @media (prefers-reduced-motion:reduce){ .qcard .paper,.qcard .sheet{transition:none} }
+.qcard.qwide{grid-column:1/-1;margin-top:18px}
+.qcard.qwide .paper{min-height:0}
+.qcard.qwide h3{padding-top:30px}
+.qcard.qwide p{max-width:62ch}
+.qcard:nth-child(4) .paper{transform:rotate(.35deg)} .qcard:nth-child(4) .s1{transform:rotate(-.8deg) translate(6px,8px)} .qcard:nth-child(4) .s2{transform:rotate(.9deg) translate(-8px,11px)}
+.qcard:nth-child(4):hover .paper{transform:rotate(0) translateY(-6px)}
+.qcard:nth-child(4):hover .s1{transform:rotate(-1.2deg) translate(9px,10px)} .qcard:nth-child(4):hover .s2{transform:rotate(1.3deg) translate(-11px,13px)}
 /* Übergang: Blatt wächst auf den ganzen Bildschirm und wird zum Quiz */
 .paperfly{position:fixed;z-index:3000;pointer-events:none;background:#F8F2E7;border-radius:0;box-shadow:0 30px 60px -20px rgba(56,47,46,.5);
   transition:top .6s cubic-bezier(.6,0,.25,1),left .6s cubic-bezier(.6,0,.25,1),width .6s cubic-bezier(.6,0,.25,1),height .6s cubic-bezier(.6,0,.25,1),transform .6s cubic-bezier(.6,0,.25,1),background-color .45s ease .25s,border-radius .6s,opacity .35s ease}
@@ -606,7 +613,7 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 
   <!-- ===================== QUIZ ===================== -->
   <section class="view" id="v-quiz" hidden>
-    <div class="intro"><h1>Quiz</h1><p>Drei kurze Checks, die dir zeigen, was deine Haare wirklich brauchen. Dein Ergebnis bekommst du direkt am Ende.</p></div>
+    <div class="intro"><h1>Quiz</h1><p>Drei kurze Checks, die dir zeigen, was deine Haare wirklich brauchen, und zum Schluss dein persönlicher Wochenplan. Dein Ergebnis bekommst du direkt am Ende.</p></div>
     <div class="quizgrid">
       <a class="qcard" href="quiz-kopfhaut.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
@@ -627,6 +634,13 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
         <h3>Haar-Check</h3>
         <p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p>
         <span class="qmeta">8 Fragen · ca. 2 Minuten</span>
+        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+      </span></a>
+      <a class="qcard qwide" href="quiz-routine.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+        <span class="qfor">Zum Schluss: dein Plan</span>
+        <h3>Routine-Check</h3>
+        <p>Wann wäschst du am besten, wie oft ist eine Maske dran und was tust du beim Sport und nachts für deine Haare? Du bekommst deinen persönlichen Wochenplan, den du dir in deine Notizen kopieren kannst. Am besten machst du ihn nach den drei anderen Checks.</p>
+        <span class="qmeta">Bis zu 14 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
     </div>
@@ -1047,6 +1061,10 @@ function drawOpts(){
   fill("dicke", DICKE); fill("kopf", KOPF); fill("kaputt", KAPUTT);
 }
 function saveMe(){ try { localStorage.setItem("meineHaare", JSON.stringify(me)); } catch(e){} }
+/* Das Routine-Quiz speichert Dicke und Kopfhaut unter „Meine Haare“ */
+function reloadMe(){ try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign({dicke:null,kopf:null,kaputt:null}, s); } catch(e){} }
+window.addEventListener("storage", e => { if(e.key === "meineHaare"){ reloadMe(); render(); } });
+window.zeigeProdukte = type => { reloadMe(); onlyMine = true; state.view = "produkte"; state.type = type || "leavein"; state.cat = "alle"; if(window.closeQuiz) window.closeQuiz(); render(); window.scrollTo({top:0}); };
 document.getElementById("meBtn").onclick = () => { drawOpts(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); };
 document.getElementById("meForm").addEventListener("submit", () => { saveMe(); onlyMine = true; if(state.view!=="produkte") state.view="produkte"; render(); toast(meSet()?"Meine Haare gespeichert":"Meine Haare zurückgesetzt"); });
 document.getElementById("meReset").onclick = () => { me = {dicke:null,kopf:null,kaputt:null}; drawOpts(); };

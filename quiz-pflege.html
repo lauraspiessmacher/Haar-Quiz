@@ -104,6 +104,9 @@ li{margin-bottom:8px}
 .steps{padding-left:22px;margin:0 0 22px}
 .steps li{margin-bottom:10px}
 strong{font-weight:500}
+.secondary{display:block;width:100%;padding:15px 20px;border:1px solid var(--cream);border-radius:999px;background:transparent;color:var(--cream);font-weight:500;font-size:16px;cursor:pointer}
+.copied{font-size:14px;color:var(--muted);min-height:20px}
+.actions .primary{margin-top:8px}
 </style>
 </head>
 <body>
@@ -282,6 +285,7 @@ function result(){
   const T = TH[th], S = ST[st];
   const am = amt+len; const amount = AMOUNT[am<=1?0:am<=3?1:2];
 
+  try { const all = JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; all.pflege = {th, st, laenge:["kinn","schulter","brust","lang"][picks[4]], chem:(picks[5]||[]).map(i=>["gefaerbt","blond","chemie","nichts"][i]), hitze:["selten","manchmal","taeglich"][picks[6]], zustand:["weich","trocken","strohig","gummi"][picks[8]], spliss:["kaum","spliss","bruch"][picks[9]]}; localStorage.setItem("quizErgebnisse", JSON.stringify(all)); } catch(e){}
   const mismatch =
     (th===0 && st>=2) ? `<div class="box"><h3>Feines Haar mit starken Schäden</h3><p>Du brauchst Repair, aber reichhaltige Produkte machen dein Haar platt. Greif zu leichten Repair-Produkten wie Leave-in-Sprays oder leichten Leave-in-Seren, gib die Maske nur in Längen und Spitzen oder als Pflege vor dem Shampoo und arbeite lieber mit mehreren kleinen Mengen.</p></div>` :
     (th===2 && st===0) ? `<div class="box"><h3>Reichhaltig darf, muss aber nicht</h3><p>Reichhaltige Pflege ist bei dir möglich, aber kein Muss. Wenn sich deine Haare mit leichteren Produkten gut anfühlen, bleib ruhig dabei.</p></div>` : "";
@@ -358,12 +362,26 @@ function result(){
     </div></details>
 
     <p class="closing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
-    <div class="actions"><button class="primary" id="again">Quiz neu starten</button></div>
+    <div class="actions"><button class="secondary" id="copyRes">Ergebnis kopieren</button><span class="copied" id="copied" role="status"></span>
+      <button class="primary" id="toRoutine">Weiter zu deiner Routine</button>
+      <button class="ghost" id="again">Quiz neu starten</button></div>
     <p class="fine">${FINE}</p>
   </section>`;
   document.getElementById("back").onclick = () => { idx = Q.length-1; render(); };
   document.getElementById("again").onclick = start;
+  document.getElementById("copyRes").onclick = copyResult;
+  document.getElementById("toRoutine").onclick = () => { try { if(window.parent !== window && window.parent.openQuiz && window.parent.openQuiz("quiz-routine.html")) return; } catch(e){} location.href = "quiz-routine.html"; };
   window.scrollTo(0,0);
+}
+
+/* ---------- Ergebnis kopieren ---------- */
+async function copyResult(){
+  const sec = app.querySelector("section");
+  const t = [...sec.children].filter(el => !el.matches(".top,.actions,.fine,details")).map(el => el.innerText.trim()).filter(Boolean).join("\n\n");
+  let ok = false;
+  try { await navigator.clipboard.writeText(t); ok = true; } catch(e){}
+  if(!ok){ const ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch(e){} ta.remove(); }
+  document.getElementById("copied").textContent = ok ? "Kopiert. Du kannst es jetzt in deine Notizen einfügen." : "Kopieren hat leider nicht geklappt.";
 }
 
 start();
