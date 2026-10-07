@@ -250,6 +250,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .reel.img .teil{display:none}
 .reel.img .play{position:absolute;top:10px;right:10px;width:34px;height:34px;background:rgba(56,47,46,.45);border-color:rgba(243,236,226,.7)}
 .reel.img .titel{margin-top:auto;font-size:18px}
+.reel .bald{position:absolute;top:12px;left:12px;background:#F3ECE2;color:#382F2E;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
 
 @media (max-width:520px){ .reel{width:150px} }
 
@@ -812,7 +813,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   const track = document.getElementById("reeltrack"); if(!track) return;
   const list = SERIE.slice().sort((a,b)=>b.teil-a.teil).slice(0, SERIE_MAX);
   const art = '<svg class="art" viewBox="0 0 100 178" fill="none" aria-hidden="true"><path d="M70 0 C 40 40, 90 80, 60 120 S 40 160, 30 178" stroke="#F3ECE2" stroke-width=".6"/><path d="M80 0 C 50 40, 100 80, 70 120 S 50 160, 40 178" stroke="#C9BCAE" stroke-width=".6"/></svg>';
-  const tile = (r, copy) => `<a class="reel${r.bild?" img":""}" href="${r.url||SERIE_PROFIL}" target="_blank" rel="noopener" aria-label="Folge ${r.teil}: ${esc(r.titel)} auf Instagram ansehen" ${copy?'aria-hidden="true" tabindex="-1"':""} ${r.bild?`style="background-image:url('${r.bild}')"`:""}>${r.bild?"":art}<span class="teil">Folge ${r.teil}</span><span class="play" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 3 L13 8 L5 13 Z" fill="#F3ECE2"/></svg></span><span class="titel">${esc(r.titel)}</span></a>`;
+  const tile = (r, copy) => `<a class="reel${r.bild?" img":""}" href="${r.url||SERIE_PROFIL}" target="_blank" rel="noopener" aria-label="Folge ${r.teil}: ${esc(r.titel)}${r.bald?" (bald online)":" auf Instagram ansehen"}" ${copy?'aria-hidden="true" tabindex="-1"':""} ${r.bild?`style="background-image:url('${r.bild}')"`:""}>${r.bild?"":art}<span class="teil">Folge ${r.teil}</span><span class="play" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 3 L13 8 L5 13 Z" fill="#F3ECE2"/></svg></span><span class="titel">${esc(r.titel)}</span>${r.bald?'<span class="bald">Bald online</span>':""}</a>`;
   const one = list.map(r => tile(r,false)).join("");
   const many = list.length < 6 ? one + one : one;
   track.innerHTML = many + list.map(r => tile(r,true)).join("").repeat(list.length < 6 ? 2 : 1);

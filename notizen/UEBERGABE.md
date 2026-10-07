@@ -157,3 +157,4 @@
 - Serie „Haarpflege 1x1“ (Schreibweise wie auf Lauras Covern): Daten in gesamtguide-bau/serie.json (Folge, Titel, Link, Titelbild), Bilder in gesamtguide-bau/serie/ (360×640), Originale in notizen/bilder/serie/.
   Links laut Laura in Reihenfolge = Folge 1–6 (alle sechs per Instagram-Vorschaubild bestätigt). Folge 7 (Kopfhautpflege: richtige Technik) hat noch KEINEN Link → zeigt aufs Profil.
   Neue Folge: Bild in serie/ legen, Eintrag in serie.json ergänzen, neu bauen. Es laufen max. 10 (neueste zuerst).
+- Folge 7 ist noch nicht online → in serie.json "bald": true (Hinweis „Bald online“, Klick → Profil). Wenn online: Link eintragen und "bald" entfernen.
