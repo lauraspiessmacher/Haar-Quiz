@@ -139,3 +139,4 @@
 - Startseite: laufende Leiste „Haarpflege 1×1“ (Lauras Serie, Instagram + TikTok) zwischen Kacheln und Routine. Daten im Template unter `const SERIE` (teil, titel, url, bild), `SERIE_MAX = 10` (neueste zuerst).
   Hält bei Maus darüber / Antippen an, bei „Bewegung reduzieren“ keine Animation. Knopf „Alle Folgen ansehen“ → aktuell Instagram-Profil (Platzhalter).
   KEINE eingebetteten Instagram-/TikTok-Player (laden fremde Skripte/Cookies → Einwilligung nötig, Abmahnrisiko). Stattdessen: Titelbild + Link zur Plattform.
+- Startseiten-Foto: notizen/bilder/laura-startseite.jpg (Original), Web-Version gesamtguide-bau/laura-startseite-web.jpg (900 px), wird von build-vorschau.py für __LAURA_FOTO__ eingesetzt. Laura: „noch nicht das perfekteste Bild“ → später austauschbar (Datei ersetzen).
