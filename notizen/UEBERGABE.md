@@ -152,3 +152,5 @@
   Hinweise: dm/Rossmann-Eigenmarken haben kein Partnerprogramm; Arzneimittel (Ketozolin) ohne Kaufen-Link. Links mit rel="sponsored".
 - Merkliste jetzt in Spalten: Laptop 3 nebeneinander (Shampoo · Maske · Conditioner / Leave-in · Haaröl · Kopfhautpflege), Handy 2. Leere Produktarten zeigen „Noch nichts gemerkt“. Kleine Karten mit Bild links (Handy: oben).
 - Merkliste-Karten wieder wie auf den Produktseiten (Bild oben auf hellem Feld, Text darunter) – Laura fand die flachen Karten mit Bild links „länglich“. Spalten bleiben; Laptop: 2 Karten je Spalte nebeneinander, Handy: 1.
+- Hair Journey fertig verlinkt: Instagram https://www.instagram.com/p/DVS6Ig9jeKW/ · TikTok https://www.tiktok.com/@lauraspiessmacher/photo/7612557590056422659 (TikTok-Name: @lauraspiessmacher).
+  Cover: notizen/bilder/hair-journey-cover.png (Original), Web-Version gesamtguide-bau/hair-journey-cover.jpg; Cover ist anklickbar (→ Instagram).
