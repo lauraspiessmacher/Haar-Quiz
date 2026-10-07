@@ -273,7 +273,7 @@ const KOPFNAME = {normal:"unkomplizierter",fettend:"schnell fettender",trocken:"
 const COND = ["Wonder Water oder ein leichter Conditioner","ein leichter Conditioner","ein Conditioner mit mittlerer Reichhaltigkeit","ein reichhaltiger Conditioner","ein sehr reichhaltiger Conditioner"];
 const LEAVE_FEUCHT = ["ein Leave-in-Spray","ein Leave-in-Spray oder ein leichtes Leave-in-Serum","eine Leave-in-Lotion oder ein Leave-in-Serum","eine Leave-in-Creme","eine reichhaltige Leave-in-Creme"];
 const LEAVE_TROCKEN = ["ein Leave-in-Spray","ein Leave-in-Spray oder ein leichtes Serum","ein Leave-in-Serum oder eine leichte Lotion","ein Leave-in-Serum oder eine Leave-in-Creme","eine Leave-in-Creme"];
-const OEL = ["ein Tropfen Trockenöl nur in die Spitzen","ein Tropfen Trockenöl nur in die Spitzen","ein Haaröl in Längen und Spitzen","ein reichhaltigeres Haaröl in Längen und Spitzen","ein reichhaltiges Haaröl in Längen und Spitzen"];
+const OEL = ["ein trockenes, leichtes Öl in die Spitzen","ein trockenes, leichtes Öl in die Spitzen","ein Haaröl in Längen und Spitzen","ein Haaröl in Längen und Spitzen","ein Haaröl in Längen und Spitzen"];
 const HS = [
  "ein trockenes Hitzeschutzspray. Es ist von der Textur wie Haarspray oder Trockenshampoo, beschwert nicht und ist ideal auf trockenem Haar vor dem Styling. Ins feuchte Haar passt ein leichtes klassisches Hitzeschutzspray.",
  "ein trockenes Hitzeschutzspray. Es ist von der Textur wie Haarspray oder Trockenshampoo, beschwert nicht und ist ideal auf trockenem Haar vor dem Styling. Ins feuchte Haar passt ein leichtes klassisches Hitzeschutzspray.",
@@ -315,22 +315,32 @@ function plan(a){
   const n = Math.min(7, +a.wash || 2);
   const sporty = a.sport && a.sport !== "nein";
   const sportDays = sporty ? (a.sporttage || []).map(Number).sort() : [];
-  const kopfOk = a.kopf === "normal" || a.kopf === "fettend";
+  const kopfOk = ["normal","fettend","trocken","sensibel"].includes(a.kopf);
+  const tsSensitiv = a.kopf === "trocken" || a.kopf === "sensibel";
   const effort = a.aufwand || "mittel";
   const lockig = a.struktur === "lockig";
 
   const wash = pickWashDays(n, sportDays);
-  let byDk = [1,1,1, n >= 4 ? 3 : 2, 3][dk], bySt = [1,2,3,3][st];
+  /* je öfter gewaschen wird, desto öfter darf die Maske; dicke Haare bei täglicher Wäsche 3–4× */
+  const thickM = n <= 2 ? n : n === 3 ? (dk === 4 ? 3 : 2) : n === 4 ? 3 : 4;
+  let byDk = [1,1,1, thickM, thickM][dk], bySt = [1,2,3,3][st];
   if(fine) bySt = Math.min(bySt, 2);
   let m = Math.min(n, Math.max(byDk, bySt));
   if(effort === "wenig") m = Math.min(m, 2);
   m = Math.max(1, m);
   const maskDays = spread(wash, m);
+  /* Balance: Repair bzw. Bond Repair ein- bis zweimal pro Woche, sonst Feuchtigkeit */
+  const repair = bond || st >= 1, repName = bond ? "Bond-Repair" : "Repair";
+  const moistMask = thick ? "eine nährende Feuchtigkeitsmaske" : fine ? "eine leichte Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske";
+  const repMaskIdx = repair && m > 1 ? spread([...Array(m).keys()], m >= 3 ? 2 : 1) : [];
   const maskKind = k => {
-    if(bond) return m === 1 ? "eine Bond-Maske, im Wechsel mit einer Feuchtigkeitsmaske von Woche zu Woche" : (k % 2 === 0 ? "eine Bond-Maske" : "eine Feuchtigkeitsmaske");
-    if(st >= 1) return m === 1 ? "eine Feuchtigkeitsmaske, im Wechsel mit einer Repair-Maske von Woche zu Woche" : (k % 2 === 0 ? (thick ? "eine nährende Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske") : "eine Repair-Maske");
-    return thick ? "eine nährende Maske" : fine ? "eine leichte Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske";
+    if(repair && m === 1) return `eine ${repName}-Maske, im Wechsel mit einer Feuchtigkeitsmaske von Woche zu Woche`;
+    return repMaskIdx.includes(k) ? `eine ${repName}-Maske` : moistMask;
   };
+  const repLeaveN = repair ? (n >= 4 ? 2 : n >= 2 ? 1 : 0) : 0;
+  /* Repair-Leave-in lieber an Waschtagen ohne Repair-Maske */
+  const repMaskDays = repMaskIdx.map(i => maskDays[i]);
+  const repLeaveDays = wash.filter(d => !repMaskDays.includes(d)).concat(wash.filter(d => repMaskDays.includes(d))).slice(0, repLeaveN);
   const prewashDay = effort === "viel" ? (wash.find(d => !maskDays.includes(d)) ?? wash[0]) : null;
 
   /* Trockenshampoo: höchstens einmal pro Woche, nur bei unkomplizierter Kopfhaut */
@@ -370,13 +380,15 @@ function plan(a){
       const mk = maskDays.indexOf(d);
       if(mk >= 0) items.push(`${maskKind(mk).replace(/^e/,"E")}${fine ? " nur in Längen und Spitzen" : " in die Längen"}, etwa 5 Minuten einwirken lassen`);
       items.push(`Zum Abschluss ${COND[dk]}`);
-      items.push(`${LEAVE_FEUCHT[dk].replace(/^e/,"E")} ins noch feuchte Haar`);
+      if(repLeaveDays.includes(d)) items.push(`Ein ${repName}-Leave-in ins noch feuchte Haar`);
+      else if(repLeaveN) items.push(`Ein feuchtigkeitsspendendes oder nährendes Leave-in ins noch feuchte Haar, zum Beispiel ${LEAVE_FEUCHT[dk]}`);
+      else items.push(`${LEAVE_FEUCHT[dk].replace(/^e/,"E")} ins noch feuchte Haar`);
       items.push(dry);
-      items.push(fine ? `Wenn du magst, zum Versiegeln ${OEL[dk]}` : `Zum Versiegeln ${OEL[dk]}`);
+      items.push(`Zum Versiegeln ${OEL[dk]}`);
     } else {
       label = sp ? "Pflegetag mit Sport" : "Pflegetag";
       items.push(`LL-Methode: ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen`);
-      if(d === tsDay) items.push(`Trockenshampoo am Ansatz, ${tsWhy}`);
+      if(d === tsDay) items.push(`${tsSensitiv ? "Sensitiv-Trockenshampoo" : "Trockenshampoo"} am Ansatz, ${tsWhy}`);
       else if(sp && !kopfOk) items.push("Nach dem Sport den Ansatz mit dem Föhn auf kalter Stufe trocknen");
     }
     return {tag, label, items, wash: isWash};
@@ -387,7 +399,7 @@ function plan(a){
   const regel = [
     ["Jeden Tag", "LL-Methode: Leave-in in die trockenen Längen und Spitzen. Vor jeder Hitze Hitzeschutz."],
     ["Jede Nacht", nacht.charAt(0).toUpperCase() + nacht.slice(1) + ". Nie mit nassen Haaren ins Bett."],
-    ["Jede Woche", [`${m}× Maske.`, prewashDay != null ? "1× Pre-Wash-Pflege." : "", tsDay != null ? "Höchstens 1× Trockenshampoo." : "", effort === "viel" ? "Ein paar Mal eine Kopfhautmassage, 5 bis 10 Minuten mit den Fingerkuppen." : "", "Kissenbezug wechseln und Haarbürste reinigen."].filter(Boolean).join(" ")],
+    ["Jede Woche", [repair && m > 1 ? `${m}× Maske, davon ${repMaskIdx.length}× ${repName}.` : `${m}× Maske.`, repLeaveN ? `Nach der Wäsche ${repLeaveN}× ein ${repName}-Leave-in, sonst Feuchtigkeit.` : "", prewashDay != null ? "1× Pre-Wash-Pflege." : "", tsDay != null ? "Höchstens 1× Trockenshampoo." : "", effort === "viel" ? "Ein paar Mal eine Kopfhautmassage, 5 bis 10 Minuten mit den Fingerkuppen." : "", "Kissenbezug wechseln und Haarbürste reinigen."].filter(Boolean).join(" ")],
   ];
   if(tsDay != null) regel.push(["Nach einer Woche mit Trockenshampoo", "Vor einer Wäsche ein Kopfhautpeeling."]);
   regel.push(tief === 0 ? ["Bei Bedarf", "Tiefenreinigung mit einem Tiefenreinigungsshampoo, wenn sich deine Haare schwer oder strähnig anfühlen."] : ["Jeden Monat", `Tiefenreinigung mit einem Tiefenreinigungsshampoo, ${tiefText}.`]);
@@ -402,12 +414,12 @@ function plan(a){
     `**Nach jeder Wäsche ein Leave-in:** ${LEAVE_FEUCHT[dk]} ins noch feuchte Haar.`,
     `**Jeden Tag die LL-Methode:** Auch zwischen den Wäschen kommt ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen.`,
     `**Immer Hitzeschutz:** vor dem Föhnen, Glätten und Locken.`,
-    `**Zum Abschluss versiegeln:** ${fine ? "Wenn du magst, " + OEL[dk] : OEL[dk].charAt(0).toUpperCase() + OEL[dk].slice(1)}.${fine ? " Öl ersetzt keine andere Pflege, es ist ein Add-on." : " Öl ersetzt keine andere Pflege, es ist ein Add-on und versiegelt, was vorher an Pflege drin ist."}`,
+    `**Zum Abschluss versiegeln:** ${OEL[dk].charAt(0).toUpperCase() + OEL[dk].slice(1)}. Ich empfehle es immer, ein Muss ist es aber nicht. Öl ersetzt keine andere Pflege, es ist ein Add-on und versiegelt, was vorher an Pflege drin ist.${fine ? " Bei feinen Haaren ist ein trockenes, leichtes Öl wichtig, damit nichts beschwert." : ""}`,
     `**Conditioner:** ${COND[dk].charAt(0).toUpperCase() + COND[dk].slice(1)} schließt jede Wäsche ab.`
   ]});
 
   const wp = [`Du wäschst deine Haare ${n === 1 ? "einmal" : n + "-mal"} pro Woche. In deinem Plan ${n === 1 ? "liegt der Waschtag auf " + washNames[0] : "liegen die Waschtage auf " + joinDe(washNames)}.${n > 1 ? " So sind die Abstände dazwischen möglichst gleichmäßig." : ""}${sportDays.length && wash.some(d => sportDays.includes(d)) ? " Und wo es ging, wäschst du direkt nach dem Sport." : ""}`];
-  let mp = `**Maske: ${m}× pro Woche.** Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt von deinen Haaren und von der Maske ab: Je reichhaltiger sie formuliert ist, desto seltener brauchst du sie.`;
+  let mp = `**Maske: ${m}× pro Woche.** Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt davon ab, wie oft du wäschst, und von der Maske selbst. Eine Feuchtigkeitsmaske, die nährt, geschmeidig macht und Glanz schenkt, kannst du ruhig öfter nehmen. Bei Repair- und Bond-Repair-Masken kommt es total auf das Produkt an, hier gilt: immer die Balance mit Feuchtigkeit halten.`;
   if(thick) mp += " Bei deinen dicken Haaren sorgt eine nährende Maske dafür, dass sich krause Haare legen und nichts fuzzy aussieht.";
   if(fine) mp += " Bei feinen Haaren reicht eine leichte Maske nur in Längen und Spitzen, damit nichts beschwert.";
   if(effort === "wenig" && Math.max(byDk, bySt) > m) mp += ` Eigentlich könnten deine Haare sogar ${Math.min(n, Math.max(byDk, bySt))} Masken pro Woche vertragen. Wenn du mal mehr Zeit hast, lohnt sich das.`;
@@ -416,7 +428,7 @@ function plan(a){
   T.push({h:"Deine Waschtage", p:wp});
 
   const zp = [];
-  if(kopfOk) zp.push(`**Trockenshampoo:** Einmal pro Woche ist völlig okay, um eine Wäsche zu überbrücken oder zu schieben. Mehrmals pro Woche würde ich es nicht nehmen, wenn es nicht unbedingt nötig ist. Wenn du es benutzt hast, mach in der Woche danach vor einer Wäsche ein Kopfhautpeeling${a.styling !== "kaum" ? ". Weil du auch Styling-Produkte benutzt, gehört außerdem regelmäßig eine Tiefenreinigung mit einem Tiefenreinigungsshampoo dazu" : ""}.`);
+  if(kopfOk) zp.push(`**Trockenshampoo:** Einmal pro Woche ist völlig okay, um eine Wäsche zu überbrücken oder zu schieben. Mehrmals pro Woche würde ich es nicht nehmen, wenn es nicht unbedingt nötig ist. Wenn du es benutzt hast, mach in der Woche danach vor einer Wäsche ein Kopfhautpeeling${a.styling !== "kaum" ? ". Weil du auch Styling-Produkte benutzt, gehört außerdem regelmäßig eine Tiefenreinigung mit einem Tiefenreinigungsshampoo dazu" : ""}.${tsSensitiv ? ` Weil deine Kopfhaut ${a.kopf === "trocken" ? "eher trocken" : "sensibel"} ist: Achte darauf, dass es ein Sensitiv-Trockenshampoo ist. Sobald du Beschwerden merkst, zum Beispiel Jucken, Spannen oder Brennen, nutz es nicht mehr, denn Trockenshampoo kann austrocknen und durch Duftstoffe auch reizen.` : ""}`);
   else zp.push(`**Trockenshampoo** habe ich bei dir bewusst weggelassen. Bei ${KOPFNAME[a.kopf] || "deiner"} Kopfhaut kann es zusätzlich reizen oder austrocknen. Wasch lieber, wenn es nötig ist.`);
   zp.push(`**Tiefenreinigung:** ${tiefText.charAt(0).toUpperCase() + tiefText.slice(1)}. Sie entfernt Rückstände von Styling und Pflege, damit deine Haare nicht schwer und strähnig werden.`);
   T.push({h:"Zwischen den Wäschen", p:zp});
@@ -448,15 +460,16 @@ function plan(a){
   else np = `Offen reiben deine Haare die ganze Nacht am Kissen. Das kannst du Schritt für Schritt ändern: Eine lockere Schlaffrisur, zum Beispiel locker geflochten, schützt schon viel. ${S.includes("kissen") ? "Deinen Kissenbezug aus Seide oder Bambusviskose hast du schon, super." : "Dazu ein Kissenbezug aus Seide oder alternativ aus Bambusviskose."} Die Pro-Variante ist eine Seidenhaube mit Rundumschutz.`;
   T.push({h:"Nachts", p:[np]});
 
-  if(st >= 1 || blond){
-    T.push({h:"Bond-Produkte, Proteine und Feuchtigkeit", p:[
-      bond ? "Weil deine Haare stark beansprucht sind, lohnt es sich, auf Bond-Produkte umzusteigen." : "Weil deine Haare schon etwas beansprucht sind, lohnt sich ein Blick auf stabilisierende Pflege."],
+  if(repair){
+    T.push({h:"Repair, Bond Repair und Feuchtigkeit: die Balance", p:[
+      bond ? "Weil deine Haare stark beansprucht sind, lohnt es sich, auf Bond-Produkte umzusteigen. Wichtig ist aber, dass du dabei immer die Balance mit Feuchtigkeit hältst." : "Weil deine Haare schon etwas beansprucht sind, lohnt sich stabilisierende Pflege. Wichtig ist aber, dass du dabei immer die Balance mit Feuchtigkeit hältst."],
       li:[
       "**Bond-Produkte** stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter, und manche wirken nur während dem Blondieren beim Friseur.",
-      "**Proteine wie Keratin** füllen poröse Stellen auf, das Haar fühlt sich fester und griffiger an. Sie passen gut, wenn sich deine Haare weich, aber kraftlos und schlaff anfühlen oder nass zu sehr nachgeben.",
-      "**Feuchtigkeit** macht das Haar weich und geschmeidig. Fühlen sich deine Haare nach viel Protein steif oder strohig an, brauchen sie wieder mehr Feuchtigkeit.",
-      "**Der Mix macht’s:** Behalte immer eine Mischung aus Feuchtigkeit und stabilisierenden Produkten im Blick.",
-      "**Wo sich die Wirkstoffe lohnen:** Am meisten bringen sie in der Maske und im Leave-in auf feuchtem Haar. Im Shampoo und im Conditioner sind sie nur ganz kurz auf dem Haar, und im Leave-in auf trockenem Haar können sie kaum eindringen."
+      "**Repair mit Proteinen wie Keratin** füllt poröse Stellen auf, das Haar fühlt sich fester und griffiger an. Es gibt auch schwächere Repair-Produkte, deren Proteine sich nur von außen anlagern.",
+      "**Feuchtigkeit** macht das Haar weich und geschmeidig. Fühlen sich deine Haare nach viel Repair steif oder strohig an, brauchen sie wieder mehr Feuchtigkeit.",
+      "**Halte die Balance:** Hab nicht nur eine Repair-Maske zu Hause, sondern auch eine, die Feuchtigkeit spendet, und genauso beim Leave-in. Ich wasche meine Haare zum Beispiel täglich. Mein Bond-Repair-Leave-in nutze ich ein- bis zweimal pro Woche, an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in, und genauso mache ich es mit der Maske.",
+      "**Wo sich Repair lohnt:** In der Maske und im Leave-in auf feuchtem Haar. Im Shampoo und im Conditioner ist es nur ganz kurz auf dem Haar, und im Leave-in auf trockenem Haar kann es kaum eindringen, deshalb macht es dort nicht so viel Sinn.",
+      "**Kein fester Plan:** Wie oft genau, kann ich hier nicht festlegen, weil es total auf deine Produkte ankommt. Nimm deinen Wochenplan als Vorschlag. Wichtig ist der Gedanke dahinter: Repair und Feuchtigkeit im Wechsel."
     ]});
   }
   if(a.spliss && a.spliss !== "kaum") T.push({h:"Spliss lässt sich nicht reparieren", p:["Ist ein Haarende einmal aufgespalten, wächst es nicht wieder zusammen. Ein Leave-in kann Spliss kaschieren und bremsen, dass er weiter nach oben wandert, entfernt wird er aber nur durch Schneiden. " + (a.spliss === "bruch" ? "Weil du auch Haarbruch hast, ist ein Spliss-Schnitt sinnvoll, bei dem der Spliss im ganzen Haar entfernt wird." : "Sitzt er nur in den Spitzen, reicht ein Spitzenschnitt.")]});

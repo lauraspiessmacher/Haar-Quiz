@@ -1,5 +1,7 @@
 # Routine-Check – Regeln zum Durchsehen
 
+**Stand nach Lauras Antworten (07.10.):** Trockenshampoo auch bei trockener/sensibler Kopfhaut (mit Sensitiv-Hinweis), bei schuppiger weiterhin nicht (offen). Öl für alle als Empfehlung, fein/dünn: trockenes, leichtes Öl. Masken nach Waschhäufigkeit (dick/sehr dick: 2 Wäschen → 2×, 3 → 2× bzw. 3×, 4 → 3×, ab 5 → 4×). Repair/Bond Repair 1–2× pro Woche (Maske und Leave-in auf feuchtem Haar), sonst Feuchtigkeit; Abschnitt „Balance“ mit Lauras Beispiel.
+
 Diese Regeln stecken hinter dem Wochenplan. Mit ⚑ markiert ist, was **ich ergänzt habe** und was Laura nicht diktiert hat. Bitte besonders darauf schauen.
 
 ## Woher die Antworten kommen
