@@ -187,3 +187,4 @@
 - ANSPRACHE-REGEL (Laura): Erklärende Texte (Startseite, Wissenstexte) → „ihr/euch“. Wo jemand selbst etwas tut (Meine Haare, Quiz, Merkliste, Filter, Produktkarten) → „du“.
   Startseite komplett umgestellt (inkl. „Ihr glaubt mir nicht?“, „Eure Routine“, Kacheltexte). Hair-Journey-Text neu (früher falsch behandelt/geschädigt, Erklärtes selbst angewandt, wieder gesund).
   OFFEN: Wissenstexte (5 Kapitel) stehen noch in „du“ → auf „ihr“ umstellen.
+- Startseiten-Kacheln überarbeitet: Quiz = drei Fragen mit Fragezeichen („Welchen Kopfhauttyp habt ihr? …“), Wissen = „Aufklärung zu Haarpflegethemen, zu Mythen und zum richtigen Umgang mit euren Haaren, einfach erklärt.“ Produkte und Meine Haare unverändert.
