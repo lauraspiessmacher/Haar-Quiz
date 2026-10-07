@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#F3ECE2; --ink:#382F2E; } }
 :root[data-theme="dark"]{ --bg:#F3ECE2; --ink:#382F2E; }
 *,*::before,*::after{box-sizing:border-box}
-html{background:var(--bg);scroll-padding-top:150px}
+html{background:var(--bg);scroll-padding-top:190px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
@@ -47,6 +47,20 @@ nav.main button.me[data-set="1"]::after{content:"";position:absolute;top:7px;rig
   html{scroll-padding-top:170px}
 }
 
+nav.sub{border-top:1px solid var(--line-soft)}
+nav.sub .in{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-height:0}
+nav.sub .in::-webkit-scrollbar{display:none}
+.ptab{flex:0 0 auto;display:flex;align-items:center;gap:8px;background:transparent;border:0;border-bottom:3px solid transparent;padding:12px 14px 10px;cursor:pointer;font-size:16px;color:var(--ink);white-space:nowrap}
+.ptab svg{width:22px;height:22px}
+.ptab .n{font-size:12.5px;color:var(--muted)}
+.ptab:hover{background:var(--card);border-radius:10px 10px 0 0}
+.ptab[aria-current="true"]{border-bottom-color:var(--ink);font-weight:600}
+nav.sub[hidden]{display:none}
+@media (max-width:759px){
+  nav.sub .in{flex-direction:row;align-items:stretch;padding:0 6px;gap:0;min-height:0}
+  .ptab{flex-direction:column;gap:2px;padding:8px 10px 7px;font-size:13.5px}
+  .ptab .n{display:none}
+}
 .note-banner{font-size:13px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:7px 12px;margin:16px 0 0}
 main{padding-bottom:60px}
 .view[hidden]{display:none}
@@ -55,7 +69,7 @@ main{padding-bottom:60px}
 .intro{padding:26px 0 6px}
 .intro h1{font-size:clamp(32px,6vw,46px)}
 .intro p{color:var(--muted);margin:6px 0 0;max-width:60ch}
-.searchwrap{position:relative;margin:18px 0 6px;max-width:760px}
+.searchwrap{position:relative;margin:22px 0 6px;max-width:760px}
 .searchwrap svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
 .search{width:100%;font:inherit;font-size:17px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:14px 20px 14px 50px}
 .search::placeholder{color:var(--muted)}
@@ -175,6 +189,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
       <button type="button" class="me" id="meBtn" data-set="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3c-1.5 5 1.5 10 0 18"/><path d="M12 3c-1.5 5 1.5 10 0 18"/><path d="M16 3c-1.5 5 1.5 10 0 18"/></svg>Meine Haare</button>
     </nav>
   </div>
+  <nav class="sub" id="subnav" aria-label="Produktarten"><div class="in" id="types"></div></nav>
 </header>
 
 <main class="in">
@@ -182,17 +197,12 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 
   <!-- ===================== PRODUKTE ===================== -->
   <section class="view" id="v-produkte">
-    <div class="intro">
-      <h1>Produkte</h1>
-      <p>Alle Produkte aus meinen Guides an einem Ort, eingeordnet nach Inhaltsstoffen, nicht nach Werbung.</p>
-    </div>
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="q" type="search" placeholder="Marke, Produkt oder z. B. „feine Haare fettige Kopfhaut“" aria-label="Produkte durchsuchen">
     </div>
-    <p class="search-hint">Sucht in allen Produktarten gleichzeitig.</p>
+    <p class="search-hint">Sucht in allen Produktarten gleichzeitig. Alles eingeordnet nach Inhaltsstoffen, nicht nach Werbung.</p>
 
-    <div class="types" id="types" role="group" aria-label="Produktart wählen"></div>
 
     <div id="guide"></div>
     <p class="fine">Stand: Oktober 2026. Rezepturen können sich ändern, deshalb lohnt sich vor dem Kauf ein kurzer Blick auf die Inhaltsstoffe. Die Einordnung ist eine Orientierung, jedes Haar reagiert etwas anders.</p>
@@ -249,7 +259,7 @@ const TYPES = [
  {id:"conditioner", label:"Conditioner", by:"nach Haardicke", icon:'<path d="M9 2h6v3H9z"/><path d="M8 5h8l-1 15a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M8.5 11h7"/>'},
  {id:"leavein", label:"Leave-in", by:"nach Haardicke", icon:'<path d="M10 2h3v3h-3z"/><path d="M13 3h4"/><path d="M9 5h5v3l2 2v10a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2V10l2-2z"/><path d="M19 2.5v1M20.5 4.5h-1M19 6.5v-1"/>'},
  {id:"oel", label:"Haaröl", by:"nach Haardicke", icon:'<path d="M11 2h2v4h-2z"/><path d="M10 6h4v2l2 3v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9l2-3z"/><path d="M12 13c-1.2 1.6-1.5 2.4-1.5 3a1.5 1.5 0 0 0 3 0c0-.6-.3-1.4-1.5-3z"/>'},
- {id:"kopfhaut", label:"Kopfhaut", by:"nach Kopfhauttyp", icon:'<path d="M5 13a7 7 0 0 1 14 0"/><path d="M5 13h14"/><path d="M8 13v6M12 13v7M16 13v6"/><path d="M9 7.5l1 2M15 7.5l-1 2M12 6.5v2.5"/>'},
+ {id:"kopfhaut", label:"Kopfhautpflege", by:"nach Kopfhauttyp", icon:'<path d="M5 13a7 7 0 0 1 14 0"/><path d="M5 13h14"/><path d="M8 13v6M12 13v7M16 13v6"/><path d="M9 7.5l1 2M15 7.5l-1 2M12 6.5v2.5"/>'},
 ];
 const T = Object.fromEntries(TYPES.map(t=>[t.id,t]));
 const PLURAL = {shampoo:"Shampoos",maske:"Masken",conditioner:"Conditioner",leavein:"Leave-ins",oel:"Haaröle",kopfhaut:"Kopfhautprodukte"};
@@ -408,16 +418,15 @@ function itemHtml(p){
     <div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${body}</div></li>`;
 }
 
-/* ---------- Kacheln für die Produktarten ---------- */
+/* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */
 const typesBox = document.getElementById("types");
 function drawTypes(){
-  typesBox.innerHTML = TYPES.map(t => `<button type="button" class="type" data-type="${t.id}" aria-pressed="${!state.q && state.type===t.id}">
-    <span class="arrow" aria-hidden="true">›</span>
+  typesBox.innerHTML = TYPES.map(t => `<button type="button" class="ptab" data-type="${t.id}" aria-current="${!state.q.trim() && state.view==="produkte" && state.type===t.id}">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${t.icon}</svg>
-    <span class="t">${t.label}</span><span class="s">${t.by} · ${DATA[t.id].items.length}</span></button>`).join("");
-  typesBox.querySelectorAll(".type").forEach(b => b.onclick = () => {
-    state.type = b.dataset.type; state.cat = "alle"; state.q = ""; q.value = "";
-    render(); document.getElementById("guide").scrollIntoView({behavior:"smooth", block:"start"});
+    <span>${t.label}</span><span class="n">${DATA[t.id].items.length}</span></button>`).join("");
+  typesBox.querySelectorAll(".ptab").forEach(b => b.onclick = () => {
+    state.view = "produkte"; state.type = b.dataset.type; state.cat = "alle"; state.q = ""; q.value = "";
+    render(); window.scrollTo({top:0});
   });
 }
 
@@ -491,13 +500,17 @@ function renderSearch(){
   bindControls();
 }
 
+/* Filterleiste klebt direkt unter der Kopfzeile, egal wie hoch sie ist */
+function setHH(){ document.documentElement.style.setProperty("--hh", document.querySelector("header.top").offsetHeight + "px"); }
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
   for(const v of ["produkte","quiz","wissen"]) document.getElementById("v-"+v).hidden = state.view!==v;
   navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.view===state.view ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
-  if(state.view==="produkte"){ drawTypes(); state.q.trim() ? renderSearch() : renderGuide(); }
+  drawTypes();
+  document.getElementById("subnav").hidden = state.view!=="produkte"; setHH();
+  if(state.view==="produkte"){ state.q.trim() ? renderSearch() : renderGuide(); }
   writeHash();
 }
 navBtns.forEach(b => b.onclick = () => { state.view = b.dataset.view; render(); window.scrollTo({top:0}); });
@@ -520,9 +533,7 @@ document.getElementById("toQuiz").onclick = () => { dlg.close(); state.view="qui
 
 function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("on"); setTimeout(()=>el.classList.remove("on"),1600); }
 
-/* Filterleiste klebt direkt unter der Kopfzeile, egal wie hoch sie ist */
-const setHH = () => document.documentElement.style.setProperty("--hh", document.querySelector("header.top").offsetHeight + "px");
-window.addEventListener("resize", setHH); setHH();
+window.addEventListener("resize", setHH);
 readHash(); q.value = state.q; render();
 </script>
 </body>
