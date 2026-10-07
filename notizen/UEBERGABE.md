@@ -217,3 +217,4 @@
 - Kapitel 10 (Haarmythen) FREIGEGEBEN, Entwurf-Markierung entfernt. Offen: nur noch Kapitel 11 (Haarporosität).
 - Kapitel 11 (Porosität) überarbeitet (alte Fassung: notizen/wissen/porositaet-entwurf-1.html): Wasserglas-Test = grobe Einschätzung, Alltag sagt mehr; Handtuch-Tipp ersetzt durch Maske während dem Duschen einwirken + Leave-in in feuchtes Haar + schwere Öle meiden; hohe Porosität: Proteine, Bond-Produkte, Feuchtigkeit, Silikone (Film glättet raue Oberfläche). Noch Entwurf.
 - Kapitel 11: niedrige Porosität + Leave-in auf trockenem Haar: leichte Konsistenzen (Spray/Fluid).
+- Kapitel 11: „liegt nicht nur obendrauf“ raus, „Spray oder leichte Seren“.
