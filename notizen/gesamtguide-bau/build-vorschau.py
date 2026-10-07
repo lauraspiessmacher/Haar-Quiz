@@ -18,7 +18,7 @@ a = re.sub(r'</body>\s*</html>\s*$', '\n', a)
 assert a.lstrip().startswith('<title>'), a[:80]
 open(f'{S}/haarpflege-link.html', 'w').write(a)
 # Design-Vorschau mit Umschalter (eigener Link, die offizielle Seite bleibt unverändert)
-d = t.replace('<!--DESIGN-->', open(f'{S}/design-varianten.html').read()).replace('<!--DESIGN-SWITCH-->', open(f'{S}/design-umschalter.html').read())
+d = t.replace('<!--DESIGN-->', open(f'{S}/design-varianten.html').read().replace('/*FONTS*/', open(f'{S}/schriften-eingebettet.css').read())).replace('<!--DESIGN-SWITCH-->', open(f'{S}/design-umschalter.html').read())
 d = d.replace('<title>Haarpflege einfach erklärt</title>', '<title>Haarpflege Designvarianten</title>')
 d = re.sub(r'^<!DOCTYPE html>\s*<html[^>]*>\s*<head>\s*', '', d)
 d = re.sub(r'<meta charset="utf-8">\s*<meta name="viewport"[^>]*>\s*', '', d)

@@ -29,14 +29,15 @@ nav.main button{display:flex;align-items:center;gap:8px;border:1px solid transpa
 nav.main button svg{width:20px;height:20px;flex:0 0 auto}
 nav.main button:hover{background:var(--card)}
 nav.main button[aria-current="page"]{background:var(--ink);color:var(--bg)}
-nav.main button.me{border-color:var(--line)}
+nav.main button.me{background:#E6D6BE;border-color:#E6D6BE;color:#382F2E}
+nav.main button.me:hover{background:#DCC8AA}
 nav.main button.me[data-set="1"]::after{content:"";position:absolute;top:7px;right:9px;width:8px;height:8px;border-radius:50%;background:#B5654A}
 @media (max-width:759px){
   .top .in{flex-direction:column;align-items:stretch;gap:6px;padding-top:10px;padding-bottom:8px;min-height:0}
   .logo b{font-size:21px}
   nav.main{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
   nav.main button{flex-direction:column;gap:3px;padding:7px 2px;font-size:12.5px;border-radius:12px}
-  nav.main button.me{border-color:transparent;background:var(--card)}
+  nav.main button.me{border-color:#E6D6BE;background:#E6D6BE}
   nav.main button.me[aria-current="page"]{background:var(--ink)}
   nav.main button.me[data-set="1"]::after{top:5px;right:calc(50% - 20px)}
   html{scroll-padding-top:170px}
@@ -89,14 +90,10 @@ main{padding-bottom:60px}
 .ghead{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line-soft);padding-top:22px}
 .ghead h2{font-size:clamp(28px,4vw,36px)}
 .ghead .sub{color:var(--muted);font-size:15px;margin-top:4px}
-details.more{margin:12px 0 0;max-width:820px}
-details.more summary{cursor:pointer;font-size:15px;color:var(--ink);list-style:none;display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid var(--line)}
-details.more summary::-webkit-details-marker{display:none}
-details.more summary::after{content:"＋";font-size:13px;color:var(--muted)}
-details.more[open] summary::after{content:"－"}
-details.more .body{font-size:15px;margin-top:10px}
-details.more .body p{margin:0 0 10px}
-details.more .box{background:var(--card);border-radius:14px;padding:14px 16px 4px}
+.gintro{margin:14px 0 0;max-width:860px;font-size:14.5px;line-height:1.55;background:rgba(56,47,46,.05);border:1px solid rgba(56,47,46,.16);border-radius:14px;padding:14px 18px 4px}
+.gintro p{margin:0 0 10px}
+.gintro b{font-weight:600}
+.gintro .box{background:none;padding:0;margin:0;border:0}
 
 .controls{position:sticky;top:calc(var(--hh,73px) + env(safe-area-inset-top,0px));z-index:10;background:var(--bg);padding:12px 0 10px;margin-top:14px;border-bottom:1px solid var(--line-soft)}
 .crow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -152,6 +149,18 @@ h3.sec{font-size:24px;margin:24px 0 12px}
 .card.soon{opacity:.6;border-style:dashed}
 .card.soon .go{background:transparent;color:var(--muted);border:1px solid var(--line)}
 
+.quizgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+@media (max-width:900px){ .quizgrid{grid-template-columns:1fr} }
+.qcard{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;min-height:340px;padding:26px 24px 22px;border-radius:20px;background:#382F2E;color:#F3ECE2;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease}
+.qcard:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(56,47,46,.6)}
+.qart{position:absolute;right:-4px;top:-10px;width:92px;height:122px;opacity:.55;pointer-events:none}
+.qfor{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#D6B98F}
+.qcard h3{font-size:34px;line-height:1.05;margin-top:auto;padding-top:60px;color:#F3ECE2}
+.qcard p{margin:0;color:#C9BCAE;font-size:15px;max-width:36ch}
+.qmeta{font-size:13px;color:#C9BCAE}
+.qgo{align-self:flex-start;margin-top:6px;background:#F3ECE2;color:#382F2E;border-radius:999px;padding:9px 18px;font-size:14.5px;font-weight:500}
+.qclosing{font-family:var(--serif);font-size:24px;line-height:1.3;max-width:34ch;margin:32px 0 0;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){ .qcard{transition:none} .qcard:hover{transform:none} }
 /* ---------- Meine Haare (Fenster) ---------- */
 dialog{border:0;border-radius:20px;padding:0;max-width:560px;width:calc(100% - 24px);background:var(--bg);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.25)}
 dialog::backdrop{background:rgba(56,47,46,.35)}
@@ -205,12 +214,34 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 
   <!-- ===================== QUIZ ===================== -->
   <section class="view" id="v-quiz" hidden>
-    <div class="intro"><h1>Quiz</h1><p>Drei kurze Checks für deine Haare, deine Pflege und deine Kopfhaut. Dein Ergebnis bekommst du direkt am Ende.</p></div>
-    <div class="cards">
-      <a class="card" href="quiz-haar.html"><h3>Haar-Check</h3><p>Glatt, wellig oder lockig, und welcher Typ genau? Deine Struktur zeigt dir, wie du pflegst und was beim Styling realistisch ist.</p><span class="go">Quiz starten</span></a>
-      <a class="card" href="quiz-pflege.html"><h3>Pflege-Check</h3><p>Wie viel Pflege brauchen deine Haare? Findet deine Haardicke und deinen Haarzustand heraus.</p><span class="go">Quiz starten</span></a>
-      <a class="card" href="quiz-kopfhaut.html"><h3>Kopfhaut-Check</h3><p>Welche Kopfhaut hast du gerade? In neun kurzen Fragen zum passenden Shampoo.</p><span class="go">Quiz starten</span></a>
+    <div class="intro"><h1>Quiz</h1><p>Drei kurze Checks, die dir zeigen, was deine Haare wirklich brauchen. Dein Ergebnis bekommst du direkt am Ende.</p></div>
+    <div class="quizgrid">
+      <a class="qcard" href="quiz-kopfhaut.html">
+        <svg class="qart" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M96 0 C 56 28, 120 60, 76 92 S 48 144, 16 160" stroke="#F3ECE2" stroke-width="1.2"/><path d="M108 0 C 68 32, 128 64, 84 98 S 60 148, 30 160" stroke="#9E8C80" stroke-width="1.2"/></svg>
+        <span class="qfor">Für dein Shampoo</span>
+        <h3>Kopfhaut-Check</h3>
+        <p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast und worauf du vor dem Shampoo-Regal achtest.</p>
+        <span class="qmeta">9 Fragen · ca. 2 Minuten</span>
+        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="qcard" href="quiz-pflege.html">
+        <svg class="qart" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M70 0 C 58 54, 80 104, 62 160" stroke="#F3ECE2" stroke-width="0.8"/><path d="M84 0 C 72 54, 94 104, 76 160" stroke="#9E8C80" stroke-width="1.8"/><path d="M98 0 C 86 54, 108 104, 90 160" stroke="#F3ECE2" stroke-width="3"/></svg>
+        <span class="qfor">Für deine Pflege</span>
+        <h3>Pflege-Check</h3>
+        <p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf und wie viel Repair sie braucht.</p>
+        <span class="qmeta">10 Fragen · ca. 3 Minuten</span>
+        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="qcard" href="quiz-haar.html">
+        <svg class="qart" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M80 0 C 60 20, 100 40, 80 60 S 60 100, 80 120 S 100 150, 84 160" stroke="#F3ECE2" stroke-width="1.2"/><path d="M96 0 C 76 20, 116 40, 96 60 S 76 100, 96 120 S 116 150, 100 160" stroke="#9E8C80" stroke-width="1.2"/></svg>
+        <span class="qfor">Für dein Styling</span>
+        <h3>Haar-Check</h3>
+        <p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p>
+        <span class="qmeta">8 Fragen · ca. 2 Minuten</span>
+        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+      </a>
     </div>
+    <p class="qclosing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
   </section>
 
   <!-- ===================== WISSEN ===================== -->
@@ -451,7 +482,7 @@ function renderGuide(){
     .concat([`<button type="button" class="chip" data-cat="liste" aria-pressed="${state.cat==="liste"}">Liste</button>`]).join("");
   const intro = g.intro || {};
   let html = `<div class="guide"><div class="ghead"><div><h2>${t.label}</h2><div class="sub">${t.by} · ${g.items.length} Produkte</div></div></div>
-    ${(intro.lead||intro.box)?`<details class="more"><summary>So wählst und verwendest du ${DEIN[t.id]}</summary><div class="body"><p>${intro.lead||""}</p>${intro.box?`<div class="box">${intro.box}</div>`:""}</div></details>`:""}
+    ${(intro.lead||intro.box)?`<div class="gintro"><p>${intro.lead||""}</p>${intro.box?`<div class="box">${intro.box}</div>`:""}</div>`:""}
     <div class="controls"><div class="crow">${segSwitch()}${fitHtml(state.type)}</div><div class="chips" role="group" aria-label="Kategorie wählen">${chips}</div></div>`;
   let items = g.items.filter(segOk);
   if(state.cat==="liste"){
