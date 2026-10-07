@@ -119,7 +119,8 @@ const CATS = [
  {id:"normal", label:"Normales Haar", desc:"Die solide Mitte. Hier darfst du nach deinem Haarzustand auswählen, zum Beispiel nach mehr Glanz, weniger Frizz oder mehr Pflege für trockenes oder strapaziertes Haar."},
  {id:"dick", label:"Dickes Haar", desc:"Kräftiges Haar, das viel Pflege verträgt. Conditioner mit Silikon, Ölen, Butter oder Fettalkoholen machen es weich und geschmeidig, ohne dass es platt wirkt."},
  {id:"sehrdick", label:"Sehr dickes Haar", desc:"Sehr kräftiges Haar, oft auch trocken, lockig oder kraus. Hier stehen die reichhaltigsten Conditioner mit viel Butter, Öl oder Silikon. Feineres Haar fällt damit schnell platt."},
- {id:"kaputt", label:"Kaputte Haare", desc:"Hier stehen nur Conditioner mit einem echten Repair-Effekt: Bond-Wirkstoffe, Keratin, Proteine oder Peptide stehen vor Parfum und Konservierer und weit genug vorne in der Liste. Proteine legen sich von außen an beschädigte Stellen an und machen das Haar widerstandsfähiger, Bond-Wirkstoffe stabilisieren es von innen. Ein Conditioner wirkt nur kurz ein. Für mehr Aufbau zusätzlich eine Repair-Maske."}
+ {id:"kaputt", label:"Kaputte Haare", desc:"Hier stehen nur Conditioner mit einem echten Repair-Effekt: Bond-Wirkstoffe, Keratin, Proteine oder Peptide stehen vor Parfum und Konservierer und weit genug vorne in der Liste. Proteine legen sich von außen an beschädigte Stellen an und machen das Haar widerstandsfähiger, Bond-Wirkstoffe stabilisieren es von innen. Ein Conditioner wirkt nur kurz ein. Für mehr Aufbau zusätzlich eine Repair-Maske."},
+ {id:"kinder", label:"Kinder", desc:"Conditioner für Kinderhaare: mit wenig Duftstoffen und relativ clean formuliert, ohne Menthol und ohne unnötige Repair-Wirkstoffe. Am mildesten ist der alverde Ultra Sensitiv, ganz ohne Parfum. Weil ein Conditioner nur in die Längen kommt, darf bei den anderen etwas Parfum drin sein, solange kaum Duftstoff-Allergene dazukommen. Für Locken passt der Balea Locken. Teste Neues trotzdem erst an einer kleinen Stelle."}
 ];
 
 /* [Marke, Produkt, Kategorien, Einschätzung, Haarzustand, Gut zu wissen, Segment] */
@@ -135,7 +136,7 @@ const P = [
  ["Bali Curls", "Moisturising Conditioner", "dick sehrdick", "Reichhaltige, silikonfreie Spülung mit Sheabutter, Kokosöl und Glycerin", "lockig, trocken", "", "Drogerie"],
  ["Aussie", "Bouncy Curls Conditioner", "normal dick", "Silikonfreie Spülung mit Fettalkoholen", "lockig oder wellig", "", "Drogerie"],
  ["L'Oréal Paris Elvital", "Fiber Booster Conditioner", "normal dick", "Silikonfreie Spülung mit Fettalkohol, Glycerin, leichtem Ölersatz und Sojaöl", "dünner werdend", "Das Aminexil steht hinter dem Parfum und wird ausgespült. Gegen Haarverlust kann eine Spülung kaum etwas tun.", "Drogerie"],
- ["Schwarzkopf Gliss", "Liquid Silk Conditioner", "normal dick", "Pflegende Spülung mit Silikon und leichtem Ölersatz, dazu etwas Seidenprotein", "glanzlos, spröde", "", "Drogerie"],
+ ["Schwarzkopf Gliss", "Liquid Silk Conditioner", "normal dick kinder", "Pflegende Spülung mit Silikon und leichtem Ölersatz, dazu etwas Seidenprotein", "glanzlos, spröde", "", "Drogerie"],
  ["L'Oréal Paris Elvital", "Bond Repair Conditioner", "duenn normal", "Leichte Spülung mit Fettalkohol und etwas Amodimethicone", "strapaziert", "„Bond Repair“ steht im Namen. Einen Bond-Wirkstoff in nennenswerter Menge finde ich in der Liste nicht.", "Drogerie"],
  ["Herbal Essences", "Repair Arganöl Conditioner", "normal dick", "Pflegende Spülung mit Fettalkoholen und Silikon", "strapaziert", "Das Arganöl steht erst hinter dem Parfum, nur in kleiner Menge.", "Drogerie"],
  ["syoss", "Intense Keratin Conditioner", "normal dick kaputt", "Pflegende Spülung mit Fettalkohol, leichtem Ölersatz, Keratin und etwas Silikon", "strapaziert, brüchig", "", "Drogerie"],
@@ -160,10 +161,10 @@ const P = [
  ["Balea", "Feuchtigkeit Conditioner", "duenn normal", "Leichte, silikonfreie Spülung mit Glycerin, Panthenol und Niacinamid", "braucht Feuchtigkeit", "", "Drogerie"],
  ["Bali Curls", "Bonding Repair Conditioner", "dick sehrdick", "Reichhaltige, silikonfreie Spülung mit Sojaöl, Sheabutter und Jojobaöl", "lockig, strapaziert", "„Bonding“ steht im Namen. Einen Bond-Wirkstoff finde ich nicht, das Moringa-Protein steht hinter dem Parfum.", "Drogerie"],
  ["Santé", "Intense Hydration Conditioner", "duenn normal", "Leichte, silikonfreie Spülung mit Sonnenblumenöl, Aloe und Panthenol", "braucht Feuchtigkeit", "Alkohol steht an 2. Stelle, das ist bei Naturkosmetik oft so. Er wird ausgespült.", "Drogerie"],
- ["Balea", "Locken beauty essentials Conditioner", "dick sehrdick", "Reichhaltige, silikonfreie Spülung mit Sheabutter, Macadamiaöl und Panthenol", "lockig, trocken", "", "Drogerie"],
+ ["Balea", "Locken beauty essentials Conditioner", "dick sehrdick kinder", "Reichhaltige, silikonfreie Spülung mit Sheabutter, Macadamiaöl und Panthenol", "lockig, trocken", "", "Drogerie"],
  ["NEQI", "Diamond Glass Conditioner", "normal dick", "Pflegende Spülung mit Glycerin und Silikon", "glanzlos", "", "Drogerie"],
  ["John Frieda", "Frizz Ease Unendlich Smooth Conditioner", "normal dick", "Silikonfreie Spülung mit leichtem Ölersatz, Panthenol und Aminosäuren", "frizzig", "", "Drogerie"],
- ["Balea", "Intensivpflege Conditioner", "normal dick", "Silikonfreie Spülung mit Panthenol, Niacinamid und Mandelöl", "trocken", "", "Drogerie"],
+ ["Balea", "Intensivpflege Conditioner", "normal dick kinder", "Silikonfreie Spülung mit Panthenol, Niacinamid und Mandelöl", "trocken", "", "Drogerie"],
  ["Pantene Pro-V", "Moisture Boost Conditioner", "normal dick", "Pflegende Spülung mit Fettalkoholen und Silikon", "trocken", "", "Drogerie"],
  ["Aussie", "Oh My Gloss Conditioner", "normal dick", "Pflegende Spülung mit Fettalkoholen und Silikon", "glanzlos", "", "Drogerie"],
  ["NEQI", "Repair Reveal Conditioner", "duenn normal kaputt", "Silikonfreie Spülung mit Glycerin, Aminosäuren aus Soja und Weizen und Haferpeptid", "strapaziert", "", "Drogerie"],
@@ -183,7 +184,7 @@ const P = [
  ["MONDAY", "Moisture Conditioner", "normal dick", "Pflegende Spülung mit Glycerin, Amodimethicone und Sheabutter", "trocken", "", "Drogerie"],
  ["Balea Professional", "Glow & Shine Conditioner", "normal dick", "Pflegende Spülung mit Glycerin, Rizinusöl und Glykolsäure", "glanzlos", "", "Drogerie"],
  ["Balea Professional", "Brilliant Blond Conditioner", "normal dick", "Silikonfreie Spülung mit Glycerin, Jojobaöl, Panthenol und etwas Keratin", "blondiert", "Das Keratin steht eher weit hinten. Für stark blondierte Haare zusätzlich eine Repair-Maske.", "Drogerie"],
- ["alverde", "Ultra Sensitiv Conditioner", "duenn normal", "Milde, silikonfreie Spülung mit Glycerin, Sonnenblumenöl und Aloe, ohne Parfum", "normal, empfindliche Kopfhaut", "", "Drogerie"],
+ ["alverde", "Ultra Sensitiv Conditioner", "duenn normal kinder", "Milde, silikonfreie Spülung mit Glycerin, Sonnenblumenöl und Aloe, ohne Parfum", "normal, empfindliche Kopfhaut", "", "Drogerie"],
  ["Balea Professional", "Traumlocken Conditioner", "dick sehrdick", "Reichhaltige, silikonfreie Spülung mit Sheabutter, Weizenkeim- und Kamelienöl", "lockig", "", "Drogerie"],
  ["OGX", "Brazilian Keratin Smooth Conditioner", "dick sehrdick kaputt", "Reichhaltige Spülung mit Keratin, Kokos- und Avocadoöl, Kakaobutter und Silikon", "frizzig, strapaziert", "", "Drogerie"],
  ["Schwarzkopf Gliss", "Sealing Miracle Sealing Conditioner", "duenn normal kaputt", "Leichte, silikonfreie Spülung mit Erbsenpeptid und leichtem Ölersatz", "Spliss, strapazierte Spitzen", "Spliss lässt sich nicht versiegeln oder reparieren. Die Spülung kann ihn nur kurz kaschieren, weg geht er nur mit der Schere.", "Drogerie"],
@@ -192,7 +193,7 @@ const P = [
  ["Dejan Garz", "The Foundation Conditioner Deep Hydration", "normal dick", "Pflegende Spülung mit Glycerin, zwei Silikonen, Panthenol und drei Ölen", "trocken", "", "Drogerie"],
  ["ISANA Professional", "Spülung Arganöl & Pflege", "normal dick", "Silikonfreie Spülung mit Argan- und Pflaumenkernöl und Panthenol", "strapaziert, widerspenstig", "", "Drogerie"],
  ["ISANA", "Curltastic Conditioner", "dick sehrdick", "Reichhaltige, silikonfreie Spülung mit Sheabutter und Kokosöl", "lockig", "", "Drogerie"],
- ["NIVEA", "Hairmilk Shine Spülung", "duenn normal", "Leichte, silikonfreie Spülung mit Glycerin und etwas Mandelöl", "glanzlos", "", "Drogerie"],
+ ["NIVEA", "Hairmilk Shine Spülung", "duenn normal kinder", "Leichte, silikonfreie Spülung mit Glycerin und etwas Mandelöl", "glanzlos", "", "Drogerie"],
  ["being", "Bye Bye Frizz Anti-Frizz Conditioner", "dick sehrdick", "Reichhaltige, silikonfreie Spülung mit Mandel- und Jojobaöl und Sheabutter", "frizzig, wellig oder kraus", "", "Drogerie"],
  ["ISANA Professional", "Spülung Glycol & Glanz", "normal dick", "Pflegende Spülung mit Glycerin, Rizinusöl und Glykolsäure", "glanzlos", "Fast die gleiche Rezeptur wie Balea Professional Glow & Shine.", "Drogerie"],
  ["Garnier Wahre Schätze", "Kokosmilch & Macadamia Conditioner", "normal dick", "Silikonfreie Spülung mit Fettalkohol und leichtem Ölersatz", "normal bis trocken", "Die Öle stehen hinter dem Parfum, nur in kleiner Menge. Fast die gleiche Basis wie Honig Schätze.", "Drogerie"],
