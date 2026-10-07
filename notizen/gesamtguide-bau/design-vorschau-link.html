@@ -391,22 +391,23 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 }
 @media (prefers-reduced-motion:reduce){ #wissenCards .card{transition:none} }
 
-/* ---------- Buch klappt auf und man zoomt hinein (Übergang zum Kapitel) ---------- */
-.bookfly{position:fixed;z-index:3000;perspective:1600px;pointer-events:none;transform-origin:0 0;transition:transform .7s cubic-bezier(.6,0,.25,1),opacity .45s ease}
-.bookfly .bf-page{position:absolute;inset:0;background:#FBF7F1;border-radius:2px 8px 8px 2px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:16% 12% 0;text-align:center;
-  box-shadow:inset 14px 0 18px -14px rgba(56,47,46,.45),0 14px 30px -14px rgba(56,47,46,.5)}
-.bookfly .bf-page .kap{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#7A6A65}
-.bookfly .bf-page .t{font-family:var(--serif);font-size:17px;line-height:1.1;color:#382F2E}
-.bookfly .bf-page .lines{width:100%;flex:1;margin-top:10px;background:repeating-linear-gradient(180deg,transparent 0 9px,rgba(56,47,46,.13) 9px 10px);-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
+/* ---------- Buch klappt auf und man zoomt hinein (Übergang zum Kapitel) ----------
+   Das Element hat Endgröße; 1em = Vergrößerungsfaktor, alle Maße in em, damit die Schrift beim Zoom scharf bleibt */
+.bookfly{position:fixed;z-index:3000;perspective:1600em;pointer-events:none;transform-origin:0 0;transition:transform .7s cubic-bezier(.6,0,.25,1),opacity .45s ease}
+.bookfly .bf-page{position:absolute;inset:0;background:#FBF7F1;border-radius:2em 8em 8em 2em;display:flex;flex-direction:column;align-items:center;gap:6em;padding:16% 12% 0;text-align:center;
+  box-shadow:inset 14em 0 18em -14em rgba(56,47,46,.45),0 14em 30em -14em rgba(56,47,46,.5)}
+.bookfly .bf-page .kap{font-family:var(--sans);font-size:9em;letter-spacing:.2em;text-transform:uppercase;color:#7A6A65}
+.bookfly .bf-page .t{font-family:var(--serif);font-size:17em;line-height:1.1;color:#382F2E}
+.bookfly .bf-page .lines{width:100%;flex:1;margin-top:10em;background:repeating-linear-gradient(180deg,transparent 0 9.55em,rgba(56,47,46,.16) 9.55em 10em);-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
 html[data-stil="rouje"] .bookfly .bf-page .t{text-transform:uppercase}
 .bookfly .bf-cover{position:absolute;inset:0;transform-origin:left center;transform-style:preserve-3d;transition:transform .72s cubic-bezier(.5,.05,.3,1)}
-.bookfly .bf-cover .front,.bookfly .bf-cover .back{position:absolute;inset:0;border-radius:3px 10px 10px 3px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.bookfly .bf-cover .front{background:#382F2E;color:#F3ECE2;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:28px 18px 20px 30px}
-.bookfly .bf-cover .front .kap{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#E9DFD2;margin-top:4px}
-.bookfly .bf-cover .front h3{font-family:var(--serif);font-weight:400;color:#F3ECE2;font-size:24px;line-height:1.1;margin:6px 0 0}
-.bookfly .bf-cover .front p{margin:0;color:#E9DFD2;font-size:13.5px;line-height:1.45}
+.bookfly .bf-cover .front,.bookfly .bf-cover .back{position:absolute;inset:0;border-radius:3em 10em 10em 3em;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.bookfly .bf-cover .front{background:#382F2E;color:#F3ECE2;display:flex;flex-direction:column;align-items:center;gap:8em;text-align:center;padding:28em 18em 20em 30em}
+.bookfly .bf-cover .front .kap{font-size:10.5em;letter-spacing:.2em;text-transform:uppercase;color:#E9DFD2;margin-top:.4em}
+.bookfly .bf-cover .front h3{font-family:var(--serif);font-weight:400;color:#F3ECE2;font-size:24em;line-height:1.1;margin:.25em 0 0}
+.bookfly .bf-cover .front p{margin:0;color:#E9DFD2;font-size:13.5em;line-height:1.45}
 .bookfly .bf-cover .front .go{display:none}
-.bookfly .bf-cover .back{transform:rotateY(180deg);background:linear-gradient(270deg,#EFE7DC,#F7F2EA 70%,#E6DDD1);box-shadow:inset -14px 0 18px -14px rgba(56,47,46,.4)}
+.bookfly .bf-cover .back{transform:rotateY(180deg);background:linear-gradient(270deg,#EFE7DC,#F7F2EA 70%,#E6DDD1);box-shadow:inset -14em 0 18em -14em rgba(56,47,46,.4)}
 html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 .bookfly.open .bf-cover{transform:rotateY(-172deg)}
 .bookfly.fade{opacity:0}
@@ -943,13 +944,15 @@ function openBook(card, done){
   const fly = document.createElement("div"); fly.className = "bookfly";
   fly.innerHTML = `<div class="bf-page"><span class="kap">${esc(kap)}</span><span class="t">${esc(tit)}</span><span class="lines"></span></div>
     <div class="bf-cover"><div class="front">${card.innerHTML}</div><div class="back"></div></div>`;
-  Object.assign(fly.style, {top:r.top+"px", left:r.left+"px", width:r.width+"px", height:r.height+"px"});
-  document.body.appendChild(fly); card.style.visibility = "hidden";
+  /* scharf: in Endgröße zeichnen, am Anfang auf Buchgröße verkleinert, beim Zoom auf 100 % */
   const vw = window.innerWidth, vh = window.innerHeight;
   const sc = Math.max(vw / r.width, vh / r.height) * 1.02;
-  const dx = (vw - r.width*sc)/2 - r.left, dy = -r.top; /* oben an der Seite mit dem Titel bleiben */
+  const W = r.width*sc, H = r.height*sc, L = (vw - W)/2, T = 0;
+  fly.style.fontSize = sc + "px";
+  Object.assign(fly.style, {top:T+"px", left:L+"px", width:W+"px", height:H+"px", transform:`translate(${r.left-L}px,${r.top-T}px) scale(${1/sc})`});
+  document.body.appendChild(fly); card.style.visibility = "hidden";
   requestAnimationFrame(() => requestAnimationFrame(() => fly.classList.add("open")));
-  setTimeout(() => { fly.classList.add("zoom"); fly.style.transform = `translate(${dx}px,${dy}px) scale(${sc})`; }, 760);
+  setTimeout(() => { fly.classList.add("zoom"); fly.style.transform = "none"; }, 760);
   setTimeout(() => { done(); card.style.visibility = ""; fly.classList.add("fade"); }, 1480);
   setTimeout(() => fly.remove(), 1950);
 }
