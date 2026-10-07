@@ -332,7 +332,7 @@ function plan(a){
   const maskDays = spread(wash, m);
   /* Balance: Repair bzw. Bond Repair ein- bis zweimal pro Woche, sonst Feuchtigkeit */
   /* Repair nur bei Schädigung durch Färben, Blondieren oder sehr viel Hitze, nicht bei bloßer Trockenheit */
-  const repair = bond || chem.includes("gefaerbt") || a.hitze === "taeglich", repName = bond ? "Bond-Repair" : "Repair";
+  const repair = bond || chem.includes("gefaerbt") || a.hitze === "taeglich" || a.spliss === "bruch", repName = bond ? "Bond-Repair" : "Repair";
   const moistMask = thick ? "eine nährende Feuchtigkeitsmaske" : fine ? "eine leichte Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske";
   const repMaskIdx = repair && m > 1 ? spread([...Array(m).keys()], m >= 3 ? 2 : 1) : [];
   const maskKind = k => {
@@ -463,18 +463,24 @@ function plan(a){
   T.push({h:"Nachts", p:[np]});
 
   if(repair){
-    T.push({h:"Repair, Bond Repair und Feuchtigkeit: die Balance", p:[
-      (bond ? "Weil deine Haare strukturell geschädigt sind, zum Beispiel durch Blondieren oder chemische Behandlungen, lohnt es sich, auf Bond-Produkte umzusteigen." : "Weil deine Haare durch Färben oder sehr viele Hitzeanwendungen beansprucht sind, lohnt sich Repair-Pflege.") + " Wichtig ist aber, dass du dabei immer die Balance mit Feuchtigkeit hältst.",
-      "Trockene Haare sind übrigens nicht automatisch geschädigt. Trockenheit braucht Feuchtigkeit, kein Repair. Wer zu viel Repair benutzt, hat irgendwann zu viele Proteine im Haar, die Haare werden steif und können sogar brechen."],
+    const why = [chem.includes("gefaerbt") ? "Färben" : "", a.hitze === "taeglich" ? "sehr viele Hitzeanwendungen" : ""].filter(Boolean);
+    const intro = bond
+      ? "Weil deine Haare strukturell geschädigt sind, zum Beispiel durch Blondieren oder chemische Behandlungen, lohnt es sich, auf Bond-Produkte umzusteigen."
+      : (why.length ? `Weil deine Haare durch ${why.join(" und ")} beansprucht sind${a.spliss === "bruch" ? " und du viel Haarbruch hast" : ""}` : "Weil du viel Haarbruch hast") + ", können Repair-Produkte mit Proteinen helfen. Bond Repair brauchst du dafür nicht.";
+    T.push({h:"Repair ist nicht gleich Repair", p:[
+      intro + " Wichtig ist, dass du dabei immer die Balance mit Feuchtigkeit hältst.",
+      "Unter „Repair“ verstehen viele gleich Bond-Produkte. Dabei gibt es ganz unterschiedliche Stufen, und welche zu dir passt, hängt davon ab, was deine Haare gerade brauchen:"],
       li:[
-      "**Bond-Produkte** stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter, und manche wirken nur während dem Blondieren beim Friseur.",
-      "**Repair mit Proteinen wie Keratin** füllt poröse Stellen auf, das Haar fühlt sich fester und griffiger an. Es gibt auch schwächere Repair-Produkte, deren Proteine sich nur von außen anlagern.",
-      "**Feuchtigkeit** macht das Haar weich und geschmeidig. Fühlen sich deine Haare nach viel Repair steif oder strohig an, brauchen sie wieder mehr Feuchtigkeit.",
-      "**Halte die Balance:** Hab nicht nur eine Repair-Maske zu Hause, sondern auch eine, die Feuchtigkeit spendet, und genauso beim Leave-in. Ich wasche meine Haare zum Beispiel täglich. Mein Bond-Repair-Leave-in nutze ich ein- bis zweimal pro Woche, an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in, und genauso mache ich es mit der Maske.",
+      "**Feuchtigkeit:** Wenn deine Haare trocken, rau oder frizzig sind, aber nicht brechen. Trockene Haare sind nicht automatisch geschädigt, sie brauchen Feuchtigkeit und kein Repair.",
+      "**Repair mit Proteinen:** Wenn deine Haare brechen oder durch Färben oder viel Hitze beansprucht sind. Proteine wie Keratin oder Weizenprotein lagern sich von außen an brüchige und poröse Stellen an, ein bisschen wie ein Pflaster. Das Haar fühlt sich fester an und bricht weniger. Dauerhaft ist das nicht, mit der Zeit wäscht es sich wieder heraus, deshalb gehört es regelmäßig in deine Routine.",
+      "**Bond Repair:** Erst wenn deine Haare strukturell geschädigt sind, also blondiert, chemisch behandelt oder nass wie Gummi. Bond-Produkte stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter, und manche wirken nur während dem Blondieren beim Friseur.",
+      "**Nicht zu viel:** Wer zu viel Repair benutzt, hat irgendwann zu viele Proteine im Haar. Die Haare werden steif und strohig und können sogar brechen. Dann brauchen sie wieder mehr Feuchtigkeit.",
+      `**Halte die Balance:** Hab nicht nur eine Repair-Maske zu Hause, sondern auch eine, die Feuchtigkeit spendet, und genauso beim Leave-in. Ich wasche meine Haare zum Beispiel täglich. Mein Bond-Repair-Leave-in nutze ich ein- bis zweimal pro Woche, an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in, und genauso mache ich es mit der Maske.`,
       "**Wo ich Repair empfehle:** In der Maske und im Leave-in auf feuchtem Haar. Ein Shampoo wäscht du ja ganz schnell wieder aus. Im Conditioner kannst du Repair natürlich auch nutzen, ich empfehle aber eher eine Maske, weil du sie meistens länger einwirken lässt. Im Leave-in auf feuchtem Haar bleiben die Wirkstoffe wirklich drin und werden nicht ausgewaschen. Auf trockenem Haar macht Repair wenig Sinn, weil es hier um Flexibilität und Geschmeidigkeit geht und kaum Wirkstoffe eindringen können.",
       "**Kein fester Plan:** Wie oft genau, kann ich hier nicht festlegen, weil es total auf deine Produkte ankommt. Nimm deinen Wochenplan als Vorschlag. Wichtig ist der Gedanke dahinter: Repair und Feuchtigkeit im Wechsel."
     ]});
   }
+
   if(a.spliss && a.spliss !== "kaum") T.push({h:"Spliss lässt sich nicht reparieren", p:["Ist ein Haarende einmal aufgespalten, wächst es nicht wieder zusammen. Ein Leave-in kann Spliss kaschieren und bremsen, dass er weiter nach oben wandert, entfernt wird er aber nur durch Schneiden. " + (a.spliss === "bruch" ? "Weil du auch Haarbruch hast, ist ein Spliss-Schnitt sinnvoll, bei dem der Spliss im ganzen Haar entfernt wird." : "Sitzt er nur in den Spitzen, reicht ein Spitzenschnitt.")]});
   if(a.laenge === "brust" || a.laenge === "lang") T.push({h:"Lange Haare", p:["Deine Spitzen sind schon ein paar Jahre alt und haben viel mitgemacht. Gib ihnen beim Leave-in und beim Öl immer etwas mehr als dem Rest, und fang trotzdem mit wenig Produkt an."]});
 
