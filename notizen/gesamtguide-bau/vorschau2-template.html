@@ -24,7 +24,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.15}
 @media (min-width:760px){ .in{padding:0 32px} }
 
 /* ---------- Kopfzeile wie bei einer Website ---------- */
-header.top{position:sticky;top:0;z-index:20;background:rgba(243,236,226,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line-soft)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(243,236,226,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line-soft)}
 .top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
 .logo{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:none;border:0;padding:0;cursor:pointer;text-align:left}
 .logo b{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.1}
@@ -103,7 +103,7 @@ details.more .body{font-size:15px;margin-top:10px}
 details.more .body p{margin:0 0 10px}
 details.more .box{background:var(--card);border-radius:14px;padding:14px 16px 4px}
 
-.controls{position:sticky;top:var(--hh,73px);z-index:10;background:var(--bg);padding:12px 0 10px;margin-top:14px;border-bottom:1px solid var(--line-soft)}
+.controls{position:sticky;top:calc(var(--hh,73px) + env(safe-area-inset-top,0px));z-index:10;background:var(--bg);padding:12px 0 10px;margin-top:14px;border-bottom:1px solid var(--line-soft)}
 .crow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--paper)}
 .switch button{font-size:14px;background:transparent;border:0;border-radius:999px;padding:6px 13px;cursor:pointer}
@@ -212,7 +212,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
   <section class="view" id="v-quiz" hidden>
     <div class="intro"><h1>Quiz</h1><p>Finde heraus, was deine Haare brauchen. Dein Ergebnis bekommst du direkt am Ende.</p></div>
     <div class="cards">
-      <a class="card" href="../index.html"><h3>Finde deinen Haartyp</h3><p>Feine, normale oder dicke Haare? In ein paar Fragen weißt du es.</p><span class="go">Quiz starten</span></a>
+      <a class="card" href="__QUIZ__"><h3>Finde deinen Haartyp</h3><p>Feine, normale oder dicke Haare? In ein paar Fragen weißt du es.</p><span class="go">Quiz starten</span></a>
       <div class="card soon"><h3>Quiz 2</h3><p>Kommt bald.</p><span class="go">Bald verfügbar</span></div>
       <div class="card soon"><h3>Quiz 3</h3><p>Kommt bald.</p><span class="go">Bald verfügbar</span></div>
     </div>
@@ -283,19 +283,14 @@ let onlyMine = true;
 /* ---------- Zustand und Teilen-Link ---------- */
 let state = {view:"produkte", type:"shampoo", cat:"alle", seg:"alle", q:""};
 function readHash(){
-  const h = decodeURIComponent(location.hash.replace(/^#\/?/,"")); if(!h) return;
-  const [path, qs] = h.split("?"); const parts = path.split("/").filter(Boolean);
-  if(parts[0]==="quiz"||parts[0]==="wissen"){ state.view = parts[0]; return; }
-  state.view = "produkte";
-  if(parts[0] && T[parts[0]]) state.type = parts[0];
-  if(parts[1]) state.cat = parts[1];
-  new URLSearchParams(qs||"").forEach((v,k)=>{ if(k==="seg") state.seg=v; if(k==="q") state.q=v; });
+  const h = location.hash.replace(/^#/,""); if(!h) return;
+  const [a,b] = h.split(".");
+  if(a==="quiz"||a==="wissen"){ state.view = a; return; }
+  if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
-  let h = state.view==="produkte" ? `#/${state.type}/${state.cat}` : `#/${state.view}`;
-  const p = new URLSearchParams(); if(state.view==="produkte"){ if(state.seg!=="alle") p.set("seg",state.seg); if(state.q) p.set("q",state.q); }
-  const s = p.toString(); if(s) h += "?" + s;
-  history.replaceState(null,"",h);
+  const h = state.view==="produkte" ? `#${state.type}.${state.cat}` : `#${state.view}`;
+  try { history.replaceState(null,"",h); } catch(e){}
 }
 
 /* ---------- Hilfsfunktionen ---------- */
