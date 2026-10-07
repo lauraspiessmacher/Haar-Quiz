@@ -197,3 +197,4 @@
   Alle grauen „Kommt bald“-Kacheln sind damit weg. Offene Fragen: LL-Methode (wofür steht LL? genaue Schritte/Menge/Häufigkeit), Haarmythen (weitere Mythen von Laura?).
 - Kapitel 6 (unterschied) nach Lauras Feedback überarbeitet: 5 Spliss-Arten als Strichzeichnungen (weißer Punkt, klassisch/Y, mehrfach/Baum, ausgefranst/Pinsel, Spliss in der Mitte/Öse), Merksatz „gespaltenes Haar + weißer Punkt“,
   Spliss → Haarbruch UND Haarbruch → Spliss, LL-Methode als Beispiel (täglich trocken + immer nach dem Waschen), Verweis auf Kapitel „Haarbruch und Spliss vorbeugen“. Noch als Entwurf markiert.
+- Kapitel 6 FREIGEGEBEN (Laura): weißer Punkt = „schon offen und geschädigt, daraus können die anderen Splissarten entstehen“ (NICHT „bricht dort“), „Baumspliss“, „Federspliss“ (Zeichnung mit seitlichen Fasern), Merksatz-Absatz entfernt. Entwurf-Kennzeichen entfernt.
