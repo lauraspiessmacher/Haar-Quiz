@@ -220,3 +220,4 @@
 - Kapitel 11: „liegt nicht nur obendrauf“ raus, „Spray oder leichte Seren“.
 - Kapitel 11 (Haarporosität) FREIGEGEBEN. Damit sind alle 11 Wissen-Kapitel freigegeben, keine Entwürfe mehr.
 - Kapitel 11: Zusatz „Ist Porosität genetisch bedingt?“ + „Wie und wann sich Porosität verändert“ (ersetzt „Woher hohe Porosität kommt“; vorherige Fassung: notizen/wissen/porositaet-fassung-2.html). Wartet auf Lauras OK.
+- Kapitel 11 inkl. Zusatz Genetik/Veränderung FREIGEGEBEN.
