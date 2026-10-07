@@ -243,6 +243,20 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .reel.img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(56,47,46,.35),transparent 35%,transparent 60%,rgba(56,47,46,.75))}
 .reel.img > *{z-index:1}
 @media (max-width:520px){ .reel{width:150px} }
+
+/* ---------- Hair Journey ---------- */
+.journeylink{display:inline-flex;flex-wrap:wrap;gap:0 6px;margin-top:16px;color:var(--ink);font-size:15px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.journeylink span:first-child{font-family:var(--serif);font-style:italic;font-size:17px}
+.journeylink:hover{opacity:.75}
+.journey{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:40px;align-items:center;margin:48px 0 0}
+@media (max-width:759px){ .journey{grid-template-columns:1fr;gap:18px} }
+.jcover{aspect-ratio:4/5;border-radius:6px;background:#382F2E;color:#E9DFD2;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:14px;overflow:hidden}
+.jcover img{width:100%;height:100%;object-fit:cover;display:block}
+.jcover.has-img{padding:0}
+@media (max-width:759px){ .jcover{max-width:240px} }
+.journey h2{font-size:clamp(32px,4.5vw,48px)}
+.journey p:not(.kicker){max-width:52ch;margin:12px 0 0}
+.journey .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 </style>
 <!--DESIGN-->
 
@@ -271,6 +285,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
         <h1>Von kaputten zu gesunden Haaren</h1>
         <p class="lead">Hi, ich bin Laura. Auf Instagram erkläre ich dir, wie du deine Haare gesund und geschmeidig hältst. Hier findest du alles davon an einem Ort: meine Produkteinschätzungen, Quizze zu deinen Haaren und Wissen rund um die richtige Haarpflege.</p>
         <div class="btns"><button type="button" class="btn dark" data-go="produkte">Zu den Produkten <span aria-hidden="true">→</span></button><button type="button" class="btn" data-go="quiz">Quiz machen</button></div>
+        <a class="journeylink" href="https://www.instagram.com/lauraspiessmacher/" target="_blank" rel="noopener"><span>Du glaubst mir nicht?</span> Schau dir meine Hair Journey an <span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="promise">
@@ -278,6 +293,15 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
       <div>
         <p>Jedes Produkt auf dieser Seite habe ich selbst eingeordnet, und zwar nach seinen Inhaltsstoffen, nicht nach dem, was auf der Verpackung versprochen wird. Nichts davon ist von den Marken übernommen.</p>
         <p>Ich sage dir auch, wo ein Produkt an seine Grenzen kommt und für wen es nicht passt. So findest du, was zu deiner Haardicke und deinem Kopfhauttyp passt.</p>
+      </div>
+    </div>
+    <div class="journey">
+      <div class="jcover">Hier kommt das Cover deiner Hair Journey hin</div>
+      <div>
+        <p class="kicker">Meine Hair Journey</p>
+        <h2>Du glaubst mir nicht?</h2>
+        <p>Von meiner frühen Jugend bis heute: Auf Instagram und TikTok zeige ich dir, wie sich meine Haare verändert haben. Genau das, was ich dir hier erkläre, habe ich selbst gemacht.</p>
+        <div class="btns"><a class="btn dark" href="https://www.instagram.com/lauraspiessmacher/" target="_blank" rel="noopener">Auf Instagram ansehen <span aria-hidden="true">→</span></a><a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">Auf TikTok ansehen</a></div>
       </div>
     </div>
     <ul class="offer">

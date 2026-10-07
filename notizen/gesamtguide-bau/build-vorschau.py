@@ -8,6 +8,14 @@ ROOT = os.path.abspath(f'{S}/../..')
 data = open(sys.argv[1]).read().replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
+# Hair Journey: Links und Cover (Platzhalter, bis Laura die echten schickt)
+JOURNEY_IG = 'https://www.instagram.com/lauraspiessmacher/'
+JOURNEY_TT = 'https://www.tiktok.com/'
+cov = f'{S}/hair-journey-cover.jpg'
+t = t.replace('__JOURNEY_IG__', JOURNEY_IG).replace('__JOURNEY_TT__', JOURNEY_TT)
+t = t.replace('<div class="jcover" aria-label="Platz für das Cover deiner Hair Journey">__JOURNEY_COVER__</div>',
+  ('<div class="jcover has-img"><img src="data:image/jpeg;base64,' + __import__('base64').b64encode(open(cov,'rb').read()).decode() + '" alt="Cover meiner Hair Journey"></div>') if os.path.exists(cov)
+  else '<div class="jcover">Hier kommt das Cover deiner Hair Journey hin</div>')
 import base64
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html')

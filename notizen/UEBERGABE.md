@@ -140,3 +140,6 @@
   Hält bei Maus darüber / Antippen an, bei „Bewegung reduzieren“ keine Animation. Knopf „Alle Folgen ansehen“ → aktuell Instagram-Profil (Platzhalter).
   KEINE eingebetteten Instagram-/TikTok-Player (laden fremde Skripte/Cookies → Einwilligung nötig, Abmahnrisiko). Stattdessen: Titelbild + Link zur Plattform.
 - Startseiten-Foto: notizen/bilder/laura-startseite.jpg (Original), Web-Version gesamtguide-bau/laura-startseite-web.jpg (900 px), wird von build-vorschau.py für __LAURA_FOTO__ eingesetzt. Laura: „noch nicht das perfekteste Bild“ → später austauschbar (Datei ersetzen).
+- Hair Journey (angepinnter Beitrag auf Instagram + TikTok, Haarverlauf von der Jugend bis heute):
+  Link-Zeile unter den Hero-Knöpfen („Du glaubst mir nicht? Schau dir meine Hair Journey an →“) + eigener Abschnitt nach „Meine Einschätzung“ mit Cover und Knöpfen Instagram/TikTok.
+  Links in build-vorschau.py (JOURNEY_IG, JOURNEY_TT – noch Platzhalter: Profil bzw. tiktok.com). Cover: gesamtguide-bau/hair-journey-cover.jpg ablegen → wird automatisch eingesetzt.
