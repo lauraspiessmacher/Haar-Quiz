@@ -390,6 +390,19 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
   #wissenCards .card::after{left:22px;top:7px;right:7px;bottom:7px}
 }
 @media (prefers-reduced-motion:reduce){ #wissenCards .card{transition:none} }
+
+/* ---------- Buch öffnet sich (Übergang zum Kapitel) ---------- */
+.bookfly{position:fixed;z-index:3000;perspective:2200px;pointer-events:none;transition:top .55s cubic-bezier(.5,0,.2,1),left .55s cubic-bezier(.5,0,.2,1),width .55s cubic-bezier(.5,0,.2,1),height .55s cubic-bezier(.5,0,.2,1),opacity .4s ease}
+.bookfly .bf-page{position:absolute;inset:0;background:var(--bg);border-radius:3px 10px 10px 3px;box-shadow:inset 18px 0 30px -18px rgba(56,47,46,.35);transition:border-radius .55s}
+.bookfly .bf-cover{position:absolute;inset:0;background:#382F2E;color:#F3ECE2;border-radius:3px 10px 10px 3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:30px;
+  transform-origin:left center;transition:transform .7s cubic-bezier(.55,.05,.3,1),border-radius .55s,opacity .7s;backface-visibility:hidden;box-shadow:6px 0 30px rgba(0,0,0,.25)}
+.bookfly .bf-cover .kap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#E9DFD2}
+.bookfly .bf-cover h3{font-family:var(--serif);font-weight:400;color:#F3ECE2;font-size:clamp(30px,5vw,56px);line-height:1.05;margin:0}
+.bookfly .bf-cover p,.bookfly .bf-cover .go{display:none}
+.bookfly.grow .bf-page,.bookfly.grow .bf-cover{border-radius:0}
+.bookfly.opencover .bf-cover{transform:rotateY(-105deg);opacity:.6}
+.bookfly.fade{opacity:0}
+html[data-stil="rouje"] .bookfly .bf-cover h3{text-transform:uppercase}
 </style>
 <!--DESIGN-->
 
@@ -719,8 +732,27 @@ function sorter(type, cat){
 (function(){
   const box = document.getElementById("wissenCards");
   box.insertAdjacentHTML("afterbegin", WISSEN.map((w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
-  box.querySelectorAll(".wcard").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
+  const open = id => { state.wissen = id; render(); window.scrollTo({top:0}); };
+  box.querySelectorAll(".wcard").forEach(b => b.onclick = () => openBook(b, () => open(b.dataset.w)));
+
 })();
+/* Buch öffnet sich über die ganze Seite und blendet in den Text über */
+function openBook(card, done){
+  const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce || !card.getBoundingClientRect){ done(); return; }
+  const r = card.getBoundingClientRect();
+  const fly = document.createElement("div"); fly.className = "bookfly";
+  fly.innerHTML = `<div class="bf-page"></div><div class="bf-cover">${card.innerHTML}</div>`;
+  Object.assign(fly.style, {top:r.top+"px", left:r.left+"px", width:r.width+"px", height:r.height+"px"});
+  document.body.appendChild(fly);
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    fly.classList.add("grow");
+    Object.assign(fly.style, {top:"0px", left:"0px", width:window.innerWidth+"px", height:window.innerHeight+"px"});
+  }));
+  setTimeout(() => { fly.classList.add("opencover"); }, 380);
+  setTimeout(() => { done(); fly.classList.add("fade"); }, 1050);
+  setTimeout(() => fly.remove(), 1500);
+}
 function renderWissen(){
   const w = WISSEN.find(x => x.id === state.wissen);
   document.getElementById("wissenListe").hidden = !!w;

@@ -171,3 +171,4 @@
   Noch nicht geschriebene Themen: hellere Bücher (#8C7D77) mit „Bald“ / „Kommt bald“. Laptop 4 nebeneinander, Handy 2.
 - Routine-Zeichnungen: Higgsfield-Varianten in notizen/bilder/routine-ki/ (A = variante-3-stil, B = variante-4-stil mit Diptyque-Stilvorlage; Soul 2.0 unbrauchbar: kopierte Diptyque-Logos bzw. Fantasie-Schrift).
   Laura entscheidet später; bis dahin bleiben die bisherigen Strichzeichnungen drin. (routine-bilder/ = Zuschnitt von Variante 1, ungenutzt.)
+- Klick auf ein Kapitel: Buch wächst auf Bildschirmgröße, der Deckel klappt nach links auf, die helle Seite blendet in den Text über (ca. 1 Sekunde, Funktion openBook). Bei „Bewegung reduzieren“ öffnet der Text sofort.
