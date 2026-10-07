@@ -213,3 +213,4 @@
   neu: „Glätten auf Haaröl frittiert die Haare“ (stimmt so nicht, sparsam, Hitzeschutz), „Lufttrocknen immer besser als Föhnen“ (kommt drauf an: nasses Haar empfindlicher, Locken oft besser lufttrocken, Kopfhaut: Bakterien → Ansatz föhnen). Noch Entwurf.
 
 - Kapitel 10 (Mythen): „Frittieren“-Mythos nach Lauras Wunsch erweitert (Frittieren = minutenlang im Ölbad, Glätten = dünner Film, Sekunden). Faktencheck: Glätteisen 160–230 °C ist oft heißer als Fritteuse 170–180 °C, also ist nicht die Temperatur der Unterschied. Satz „die meisten Öle halten hohe Temperaturen aus“ gestrichen (reine Pflanzenöle rauchen teils schon bei Glätteisen-Hitze).
+- Kapitel 10: Temperatur-Vergleich Glätteisen/Fritteuse auf Lauras Wunsch wieder entfernt.
