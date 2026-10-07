@@ -184,3 +184,6 @@
 - Startseite, Begrüßung: „Hey, ich bin Laura. Auf Instagram nehme ich meine Community mit …“ (Claim „Von kaputten zu gesunden Haaren“ und „Willkommen in der Healthy Hair Community“ bleiben). Website spricht mit „du“.
 - Startseite, dunkler Block: jetzt Zitat („Meine Einschätzung, nicht die der Marken.“ — Laura, großes Anführungszeichen). Text: „selbst ausgesucht und eingeordnet … nicht nach dem, was auf der Verpackung steht“; „Nichts davon ist von den Marken übernommen“ entfernt.
   Laura will „ich sage euch“ statt „ich sage dir“. OFFEN: ob die ganze Website von „du“ auf „ihr/euch“ umgestellt werden soll (betrifft auch Produkttexte, Quizze, Wissen).
+- ANSPRACHE-REGEL (Laura): Erklärende Texte (Startseite, Wissenstexte) → „ihr/euch“. Wo jemand selbst etwas tut (Meine Haare, Quiz, Merkliste, Filter, Produktkarten) → „du“.
+  Startseite komplett umgestellt (inkl. „Ihr glaubt mir nicht?“, „Eure Routine“, Kacheltexte). Hair-Journey-Text neu (früher falsch behandelt/geschädigt, Erklärtes selbst angewandt, wieder gesund).
+  OFFEN: Wissenstexte (5 Kapitel) stehen noch in „du“ → auf „ihr“ umstellen.
