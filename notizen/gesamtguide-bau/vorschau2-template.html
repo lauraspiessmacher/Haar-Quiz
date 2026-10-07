@@ -69,11 +69,11 @@ main{padding-bottom:60px}
 .intro{padding:26px 0 6px}
 .intro h1{font-size:clamp(32px,6vw,46px)}
 .intro p{color:var(--muted);margin:6px 0 0;max-width:60ch}
-.searchwrap{position:relative;margin:22px 0 6px;max-width:760px}
-.searchwrap svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
-.search{width:100%;font:inherit;font-size:17px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:14px 20px 14px 50px}
+.searchwrap{position:relative;margin:20px 0 6px;max-width:520px}
+.searchwrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted)}
+.search{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 40px}
 .search::placeholder{color:var(--muted)}
-.search-hint{font-size:13px;color:var(--muted);margin:0 0 4px 4px}
+.search-hint{font-size:12.5px;color:var(--muted);margin:0 0 4px 4px}
 
 /* ---------- Produktarten als klickbare Kacheln ---------- */
 .types{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:22px 0 8px}
@@ -177,6 +177,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .toast.on{opacity:1}
 .fine{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
 </style>
+<!--DESIGN-->
 </head>
 <body>
 <header class="top">
@@ -199,7 +200,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
   <section class="view" id="v-produkte">
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input class="search" id="q" type="search" placeholder="Marke, Produkt oder z. B. „feine Haare fettige Kopfhaut“" aria-label="Produkte durchsuchen">
+      <input class="search" id="q" type="search" placeholder="Suchen: Marke, Produkt oder „feine Haare fettig“" aria-label="Produkte durchsuchen">
     </div>
     <p class="search-hint">Sucht in allen Produktarten gleichzeitig. Alles eingeordnet nach Inhaltsstoffen, nicht nach Werbung.</p>
 
@@ -249,6 +250,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 </dialog>
 <div class="toast" id="toast" role="status"></div>
 
+<!--DESIGN-SWITCH-->
 <script>
 const DATA = __DATA__;
 

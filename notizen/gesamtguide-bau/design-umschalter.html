@@ -1,0 +1,20 @@
+<div class="lookswitch" role="group" aria-label="Design-Variante wählen">
+  <span>Design:</span>
+  <button type="button" data-look="a">A Espresso</button>
+  <button type="button" data-look="b">B Hell</button>
+  <button type="button" data-look="c">C Braun</button>
+  <button type="button" data-look="">Jetzt</button>
+</div>
+<script>
+(function(){
+  const root = document.documentElement, btns = document.querySelectorAll(".lookswitch button");
+  function set(v){
+    if(v) root.setAttribute("data-look", v); else root.removeAttribute("data-look");
+    btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.look === v));
+    try { localStorage.setItem("look", v); } catch(e){}
+  }
+  let start = "a"; try { const s = localStorage.getItem("look"); if(s !== null) start = s; } catch(e){}
+  btns.forEach(b => b.onclick = () => set(b.dataset.look));
+  set(start);
+})();
+</script>
