@@ -209,3 +209,5 @@
 - Kapitel 9: Gewohnheiten ergänzt (Kissenbezug wechseln, Haarbürsten reinigen, Tiefenreinigung 1–3x/Monat je nach Kopfhauttyp/Styling).
 - Kapitel 9: Reihenfolge geändert – Kopfhautpflege + Gewohnheiten VOR der Shampoo-Tabelle (Lauras Wunsch).
 - Kapitel 9 (Kopfhaut) FREIGEGEBEN, inkl. der drei Gewohnheiten aus meinem Entwurf (ausspülen, lauwarm, Ansatz föhnen).
+- Kapitel 10 (Mythen) nach Lauras Feedback: „100 Bürstenstriche“ ersetzt durch „Haare überpflegen“ (= zu viel/unpassendes Produkt, nicht schädlich, nur doof, Tiefenreinigung löst es);
+  neu: „Glätten auf Haaröl frittiert die Haare“ (stimmt so nicht, sparsam, Hitzeschutz), „Lufttrocknen immer besser als Föhnen“ (kommt drauf an: nasses Haar empfindlicher, Locken oft besser lufttrocken, Kopfhaut: Bakterien → Ansatz föhnen). Noch Entwurf.
