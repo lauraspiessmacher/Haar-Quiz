@@ -143,3 +143,6 @@
 - Hair Journey (angepinnter Beitrag auf Instagram + TikTok, Haarverlauf von der Jugend bis heute):
   Link-Zeile unter den Hero-Knöpfen („Du glaubst mir nicht? Schau dir meine Hair Journey an →“) + eigener Abschnitt nach „Meine Einschätzung“ mit Cover und Knöpfen Instagram/TikTok.
   Links in build-vorschau.py (JOURNEY_IG, JOURNEY_TT – noch Platzhalter: Profil bzw. tiktok.com). Cover: gesamtguide-bau/hair-journey-cover.jpg ablegen → wird automatisch eingesetzt.
+- Merkliste: „+“ oben rechts an jeder Produktkarte (gemerkt = dunkelbraun mit Haken). Neuer Reiter „Merkliste“ mit Zähler (Handy: 5 Reiter).
+  Ansicht #merkliste: Produkte nach Routine-Reihenfolge gruppiert, „Als Einkaufsliste kopieren“, „Alle entfernen“. Speicherung nur im Browser (localStorage „merkliste“, Schlüssel Produktart|Marke|Name), kein Konto, keine Daten bei Laura.
+  Später möglich: Merkliste per Link teilen, „Kaufen“-Links (Affiliate, gekennzeichnet) direkt in der Merkliste.
