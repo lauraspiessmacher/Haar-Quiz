@@ -29,15 +29,14 @@ nav.main button{display:flex;align-items:center;gap:8px;border:1px solid transpa
 nav.main button svg{width:20px;height:20px;flex:0 0 auto}
 nav.main button:hover{background:var(--card)}
 nav.main button[aria-current="page"]{background:var(--ink);color:var(--bg)}
-nav.main button.me{background:#E6D6BE;border-color:#E6D6BE;color:#382F2E}
-nav.main button.me:hover{background:#DCC8AA}
+nav.main button.me{border-color:var(--line)}
 nav.main button.me[data-set="1"]::after{content:"";position:absolute;top:7px;right:9px;width:8px;height:8px;border-radius:50%;background:#B5654A}
 @media (max-width:759px){
   .top .in{flex-direction:column;align-items:stretch;gap:6px;padding-top:10px;padding-bottom:8px;min-height:0}
   .logo b{font-size:21px}
   nav.main{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
   nav.main button{flex-direction:column;gap:3px;padding:7px 2px;font-size:12.5px;border-radius:12px}
-  nav.main button.me{border-color:#E6D6BE;background:#E6D6BE}
+  nav.main button.me{border-color:transparent;background:var(--card)}
   nav.main button.me[aria-current="page"]{background:var(--ink)}
   nav.main button.me[data-set="1"]::after{top:5px;right:calc(50% - 20px)}
   html{scroll-padding-top:170px}

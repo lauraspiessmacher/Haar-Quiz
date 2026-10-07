@@ -29,15 +29,14 @@ nav.main button{display:flex;align-items:center;gap:8px;border:1px solid transpa
 nav.main button svg{width:20px;height:20px;flex:0 0 auto}
 nav.main button:hover{background:var(--card)}
 nav.main button[aria-current="page"]{background:var(--ink);color:var(--bg)}
-nav.main button.me{background:#E6D6BE;border-color:#E6D6BE;color:#382F2E}
-nav.main button.me:hover{background:#DCC8AA}
+nav.main button.me{border-color:var(--line)}
 nav.main button.me[data-set="1"]::after{content:"";position:absolute;top:7px;right:9px;width:8px;height:8px;border-radius:50%;background:#B5654A}
 @media (max-width:759px){
   .top .in{flex-direction:column;align-items:stretch;gap:6px;padding-top:10px;padding-bottom:8px;min-height:0}
   .logo b{font-size:21px}
   nav.main{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
   nav.main button{flex-direction:column;gap:3px;padding:7px 2px;font-size:12.5px;border-radius:12px}
-  nav.main button.me{border-color:#E6D6BE;background:#E6D6BE}
+  nav.main button.me{border-color:transparent;background:var(--card)}
   nav.main button.me[aria-current="page"]{background:var(--ink)}
   nav.main button.me[data-set="1"]::after{top:5px;right:calc(50% - 20px)}
   html{scroll-padding-top:170px}
@@ -211,7 +210,7 @@ html[data-font="gilda"]{--serif:"LH Gilda Display","Didot",Georgia,serif;--hw:40
 html[data-look="b"]:not([data-theme="zz"]){--bg:#F7F2EA !important;--paper:#FCFAF6 !important;--card:#EFE7DC !important}
 html[data-look="b"] body{background:#F7F2EA !important;letter-spacing:.005em}
 html[data-look] h1,html[data-look] h2,html[data-look] h3,html[data-look] .name,html[data-look] .logo b{font-weight:var(--hw);text-wrap:balance}
-html[data-look] .logo b{font-size:28px;letter-spacing:.01em}
+html[data-look] .logo b{font-size:28px;letter-spacing:.005em;font-style:italic;color:var(--espresso)}
 html[data-look] .name{font-size:22px;line-height:1.15}
 html[data-look] .ghead h2{font-size:clamp(36px,5vw,52px);font-style:italic}
 html[data-look] h3.sec{font-size:30px}
@@ -220,8 +219,8 @@ html[data-look] h3.sec{font-size:30px}
 html[data-look="b"] header.top{background:rgba(247,242,234,.97);border-bottom:1px solid rgba(56,47,46,.10)}
 html[data-look="b"] nav.main button{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
 html[data-look="b"] nav.main button[aria-current="page"]{background:var(--espresso);color:var(--cream)}
-html[data-look="b"] nav.main button.me{background:#E8D8BF;border-color:#E8D8BF;color:var(--espresso)}
-html[data-look="b"] nav.main button.me:hover{background:#DEC9A8}
+html[data-look="b"] nav.main button.me{background:transparent;border:1px solid var(--espresso);color:var(--espresso)}
+html[data-look="b"] nav.main button.me:hover{background:rgba(56,47,46,.06)}
 html[data-look="b"] .ptab{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;border-bottom-width:1px}
 html[data-look="b"] .ptab[aria-current="true"]{font-weight:500;border-bottom:1px solid var(--espresso)}
 html[data-look="b"] .ptab .n{letter-spacing:0}
@@ -381,9 +380,9 @@ html[data-look] .grid .item:nth-child(n+7){animation-delay:.24s}
   function set(v){
     root.setAttribute("data-font", v);
     btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.font === v));
-    try { localStorage.setItem("font", v); } catch(e){}
+    try { localStorage.setItem("font2", v); } catch(e){}
   }
-  let start = "bodoni"; try { const s = localStorage.getItem("font"); if(s) start = s; } catch(e){}
+  let start = "playfair"; try { const s = localStorage.getItem("font2"); if(s) start = s; } catch(e){}
   btns.forEach(b => b.onclick = () => set(b.dataset.font));
   set(start);
 })();

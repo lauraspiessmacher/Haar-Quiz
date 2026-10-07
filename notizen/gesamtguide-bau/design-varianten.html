@@ -16,7 +16,7 @@ html[data-font="gilda"]{--serif:"LH Gilda Display","Didot",Georgia,serif;--hw:40
 html[data-look="b"]:not([data-theme="zz"]){--bg:#F7F2EA !important;--paper:#FCFAF6 !important;--card:#EFE7DC !important}
 html[data-look="b"] body{background:#F7F2EA !important;letter-spacing:.005em}
 html[data-look] h1,html[data-look] h2,html[data-look] h3,html[data-look] .name,html[data-look] .logo b{font-weight:var(--hw);text-wrap:balance}
-html[data-look] .logo b{font-size:28px;letter-spacing:.01em}
+html[data-look] .logo b{font-size:28px;letter-spacing:.005em;font-style:italic;color:var(--espresso)}
 html[data-look] .name{font-size:22px;line-height:1.15}
 html[data-look] .ghead h2{font-size:clamp(36px,5vw,52px);font-style:italic}
 html[data-look] h3.sec{font-size:30px}
@@ -25,8 +25,8 @@ html[data-look] h3.sec{font-size:30px}
 html[data-look="b"] header.top{background:rgba(247,242,234,.97);border-bottom:1px solid rgba(56,47,46,.10)}
 html[data-look="b"] nav.main button{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
 html[data-look="b"] nav.main button[aria-current="page"]{background:var(--espresso);color:var(--cream)}
-html[data-look="b"] nav.main button.me{background:#E8D8BF;border-color:#E8D8BF;color:var(--espresso)}
-html[data-look="b"] nav.main button.me:hover{background:#DEC9A8}
+html[data-look="b"] nav.main button.me{background:transparent;border:1px solid var(--espresso);color:var(--espresso)}
+html[data-look="b"] nav.main button.me:hover{background:rgba(56,47,46,.06)}
 html[data-look="b"] .ptab{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;border-bottom-width:1px}
 html[data-look="b"] .ptab[aria-current="true"]{font-weight:500;border-bottom:1px solid var(--espresso)}
 html[data-look="b"] .ptab .n{letter-spacing:0}

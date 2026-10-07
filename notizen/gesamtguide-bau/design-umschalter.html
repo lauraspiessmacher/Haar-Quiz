@@ -15,9 +15,9 @@
   function set(v){
     root.setAttribute("data-font", v);
     btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.font === v));
-    try { localStorage.setItem("font", v); } catch(e){}
+    try { localStorage.setItem("font2", v); } catch(e){}
   }
-  let start = "bodoni"; try { const s = localStorage.getItem("font"); if(s) start = s; } catch(e){}
+  let start = "playfair"; try { const s = localStorage.getItem("font2"); if(s) start = s; } catch(e){}
   btns.forEach(b => b.onclick = () => set(b.dataset.font));
   set(start);
 })();
