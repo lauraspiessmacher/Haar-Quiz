@@ -151,3 +151,4 @@
   (Schlüssel „produktart|Marke|Name“ → URL), build-vorschau.py setzt sie als KAUF ein. Ohne Link erscheint KEIN Knopf; nur die Design-Vorschau zeigt gestrichelte Platzhalter (window.KAUF_DEMO).
   Hinweise: dm/Rossmann-Eigenmarken haben kein Partnerprogramm; Arzneimittel (Ketozolin) ohne Kaufen-Link. Links mit rel="sponsored".
 - Merkliste jetzt in Spalten: Laptop 3 nebeneinander (Shampoo · Maske · Conditioner / Leave-in · Haaröl · Kopfhautpflege), Handy 2. Leere Produktarten zeigen „Noch nichts gemerkt“. Kleine Karten mit Bild links (Handy: oben).
+- Merkliste-Karten wieder wie auf den Produktseiten (Bild oben auf hellem Feld, Text darunter) – Laura fand die flachen Karten mit Bild links „länglich“. Spalten bleiben; Laptop: 2 Karten je Spalte nebeneinander, Handy: 1.
