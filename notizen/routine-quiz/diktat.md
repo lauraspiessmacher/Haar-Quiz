@@ -35,3 +35,14 @@ Keine konkreten Produktempfehlungen im Quiz (soll offen bleiben, auch für Neuhe
   - Leave-in-Seren und Leave-in-Cremes mit Hitzeschutz; Cremes ideal für dicke bis sehr dicke Haare.
   - Öle mit Hitzeschutz: auf Reichhaltigkeit achten, nur für normale bis sehr dicke Haare, nicht für feine bis dünne.
   - (Hitzeschutzprodukte sind noch nicht in der Produktsektion – Idee für später.)
+
+## Lauras Antworten auf meine Rückfragen (07.10.2026)
+- **Trockenshampoo:** für normale und schnell fettende Kopfhaut. Bei trockener und sensibler Kopfhaut Hinweis: auf ein Sensitiv-Trockenshampoo achten und sobald man Beschwerden merkt, nicht mehr nutzen, weil es austrocknen oder reizen kann (Duftstoffe etc.). „So ist man auf der sicheren Seite, oder auch ich.“
+- **Öl:** empfehle ich immer zur Versiegelung, man muss es aber nicht nehmen. Bei feinen/dünnen Haaren: trockenes, leichtes Öl. Bei normaler und dickeren Haaren allgemein halten: „plus Öl als Versiegelung“.
+- **Seide „gilt als antibakteriell“:** korrekt so.
+- **Masken-Häufigkeit:** hängt total davon ab, wie oft man wäscht. Täglich waschen + dicke Haare → 3–4× pro Woche möglich, kommt aber auf die Maske an. Feuchtigkeitsmaske (nährend, feuchtigkeitsspendend, geschmeidig, Glanz) → ja. Bond-Repair → generelle Empfehlung: kommt total aufs Produkt an, immer die Balance halten.
+  - Lauras Beispiel: Ich wasche täglich und habe eine Bond-Repair-Maske bzw. ein Bond-Repair-Leave-in fürs feuchte Haar. Das Leave-in nutze ich 1–2× pro Woche, an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in, genauso mit der Maske. Man muss abwägen.
+  - Wir können uns nicht festnageln, weil wir die Produkte nicht kennen. Es gibt auch schwächere Repair-Produkte, die sich mit Proteinen nur von außen anlagern.
+  - Kerngedanke: Balance zwischen Repair- und Feuchtigkeitsprodukten. Nicht nur eine Repair-Maske daheim, sondern auch eine, die Feuchtigkeit spendet. Gleiches beim Leave-in. Maske und Leave-in (feucht) sind die Kategorien, in denen Repair Sinn macht – im Shampoo, Conditioner und Leave-in auf trockenem Haar nicht so viel.
+- **Startseite Quiz-Kästchen:** „vier kurze Checks“, Routine-Check erwähnen.
+- **Nächster Schritt:** Produktkategorie Hitzeschutz, aufgeteilt nach Konsistenz: trockener Hitzeschutz, Hitzeschutzspray, Hitzeschutz-Seren, Cremes, Öle.
