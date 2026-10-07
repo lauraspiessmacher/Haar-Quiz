@@ -55,3 +55,8 @@ Keine konkreten Produktempfehlungen im Quiz (soll offen bleiben, auch für Neuhe
 - **Trockener Hitzeschutz:** Laura schickt Produkte.
 - **Hitzeschutz nachprüfen:** Gliss-Sprühkuren haben Hitzeschutz (steht auf dem Produkt), Color Wow Money Mist wahrscheinlich.
 - **Öle mit Hitzeschutz erst ab normaler Haardicke:** so umsetzen.
+
+## Laura zu Repair (07.10.2026, dritte Runde)
+- Drei Stufen aus dem Kapitel „Was bedeutet Repair eigentlich?“ sind gut, so auch im Quiz abgesegnet.
+- **Außer Stufe Feuchtigkeit:** Auch trockene Haare können brechen, z. B. durch Reibung (vielleicht nicht so schnell, oder wenn Hitze/Färben dazukommt). Nicht so formulieren, als könnten trockene Haare nicht brechen. Es ist individuell, in welchem Trockenheitsstadium Feuchtigkeit reicht und wann (mit Hitze, Färben, Blondieren) Protein dazukommen sollte.
+- Viele schreiben: „Ich beachte alle Tipps, färbe nicht, blondiere nicht, benutze keine Hitze, und meine Haare brechen trotzdem ab.“ Das passiert dann meistens durch Reibung etc.
