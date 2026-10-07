@@ -214,3 +214,4 @@
 
 - Kapitel 10 (Mythen): „Frittieren“-Mythos nach Lauras Wunsch erweitert (Frittieren = minutenlang im Ölbad, Glätten = dünner Film, Sekunden). Faktencheck: Glätteisen 160–230 °C ist oft heißer als Fritteuse 170–180 °C, also ist nicht die Temperatur der Unterschied. Satz „die meisten Öle halten hohe Temperaturen aus“ gestrichen (reine Pflanzenöle rauchen teils schon bei Glätteisen-Hitze).
 - Kapitel 10: Temperatur-Vergleich Glätteisen/Fritteuse auf Lauras Wunsch wieder entfernt.
+- Kapitel 10 (Haarmythen) FREIGEGEBEN, Entwurf-Markierung entfernt. Offen: nur noch Kapitel 11 (Haarporosität).

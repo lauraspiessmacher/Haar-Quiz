@@ -67,8 +67,7 @@
   "titel": "Haarmythen",
   "teaser": "Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?",
   "datei": "mythen.html",
-  "arzt": false,
-  "entwurf": true
+  "arzt": false
  },
  {
   "id": "porositaet",
