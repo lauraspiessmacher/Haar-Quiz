@@ -195,3 +195,5 @@
   Kleine inhaltliche Ergänzungen: reparatur „Deshalb ist es so wichtig, dass jede Wäsche mit Pflege endet“; prewash ÖWC-Einwirkzeit „(nur in den Längen)“; Feuchtigkeit „geschmeidig und flexibel“ statt „elastisch“. Ärztin-Hinweis auf „lasst“ umgestellt.
 - Wissen Kapitel 6–11 als ENTWÜRFE geschrieben (von mir, Laura liest noch): unterschied, llmethode, haaroele, kopfhaut, mythen, porositaet. In wissen.json "entwurf": true → Karte „Kapitel N · Entwurf“, im Text Hinweis „Entwurf: noch nicht von Laura geprüft“. Nach Freigabe "entwurf" entfernen.
   Alle grauen „Kommt bald“-Kacheln sind damit weg. Offene Fragen: LL-Methode (wofür steht LL? genaue Schritte/Menge/Häufigkeit), Haarmythen (weitere Mythen von Laura?).
+- Kapitel 6 (unterschied) nach Lauras Feedback überarbeitet: 5 Spliss-Arten als Strichzeichnungen (weißer Punkt, klassisch/Y, mehrfach/Baum, ausgefranst/Pinsel, Spliss in der Mitte/Öse), Merksatz „gespaltenes Haar + weißer Punkt“,
+  Spliss → Haarbruch UND Haarbruch → Spliss, LL-Methode als Beispiel (täglich trocken + immer nach dem Waschen), Verweis auf Kapitel „Haarbruch und Spliss vorbeugen“. Noch als Entwurf markiert.

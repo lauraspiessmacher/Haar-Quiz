@@ -477,6 +477,14 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 .pquote figcaption{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E9DFD2;text-transform:none}
 .pquote figcaption::before{content:"— "}
 @media (max-width:759px){ .pquote .bigq{font-size:84px;height:36px} }
+
+/* ---------- Spliss-Arten als Zeichnungen ---------- */
+.wart .splissarten{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:10px 0 22px}
+@media (max-width:759px){ .wart .splissarten{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.wart .splissarten figure{margin:0;background:#FFFDFA;border:1px solid rgba(56,47,46,.18);border-radius:8px;padding:14px 12px 14px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.wart .splissarten svg{width:56px;height:140px}
+.wart .splissarten figcaption{font-size:13px;line-height:1.4;color:var(--muted);margin-top:8px}
+.wart .splissarten figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:17px;color:#382F2E;margin-bottom:4px}
 </style>
 <!--DESIGN-->
 </head>
