@@ -178,3 +178,4 @@
   Überarbeitet (Laura: „zu unecht, Linien raus“): keine Linien mehr, feine Papierstruktur (SVG-Rauschen), weiche mehrstufige Schatten statt Umrandung, leicht gewölbte Ecke unten rechts, silberne Büroklammer, untere Blätter schauen weiter hervor.
   3. Fassung (Laura: „mehr wie Pergament, Struktur, nicht so gerade, klare Ecken“): helles Elfenbein-Pergament (#FCF8F0→#F4ECDF) mit Faser-/Körnungsstruktur (SVG-Rauschen),
   leicht unregelmäßige Kanten (clip-path-Polygone), spitze Ecken, Schatten per drop-shadow. Bewusst NICHT beige (Laura mag kein Beige).
+- Wissensbücher blättern beim Drüberfahren (nur Geräte mit Maus): jedes Buch steckt in .shelfbook mit 5 Papierseiten dahinter; Deckel öffnet sich ca. 42°, Seiten fächern leicht auf (Keyframes leaf2). Beim Klick wird das geschlossene Buch für den Aufklapp-Übergang verwendet (.noflip).
