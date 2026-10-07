@@ -2,7 +2,7 @@
 # 1) node dump.js data.json   2) python3 build-vorschau.py data.json
 # Ergebnis: haarpflege.html (Hauptordner, zum lokalen Öffnen, Quiz liegen daneben)
 #           notizen/gesamtguide-bau/haarpflege-link.html (für den privaten Link, ohne eigenes Seitengerüst)
-import sys, os, re
+import sys, os, re, json
 S = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(f'{S}/../..')
 data = open(sys.argv[1]).read().replace('</', '<\\/')
@@ -25,4 +25,10 @@ d = re.sub(r'<meta charset="utf-8">\s*<meta name="viewport"[^>]*>\s*', '', d)
 d = d.replace('</head>\n<body>\n', '\n', 1)
 d = re.sub(r'</body>\s*</html>\s*$', '\n', d)
 open(f'{S}/design-vorschau-link.html', 'w').write(d)
+# Quizze direkt einbetten (in den privaten Links laufen eigene Unterseiten nicht zuverlässig)
+q = {f: open(f'{ROOT}/{f}').read() for f in ('quiz-kopfhaut.html', 'quiz-pflege.html', 'quiz-haar.html')}
+emb = open(f'{S}/quiz-einbettung.html').read().replace('__QUIZ_JSON__', json.dumps(q, ensure_ascii=False).replace('</', '<\\/'))
+for fn in ('haarpflege-link.html', 'design-vorschau-link.html'):
+    x = open(f'{S}/{fn}').read().rstrip('\n') + '\n' + emb
+    open(f'{S}/{fn}', 'w').write(x)
 print('ok', len(t)//1024, 'KB')

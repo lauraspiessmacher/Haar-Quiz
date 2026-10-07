@@ -1,0 +1,27 @@
+<!-- Nur für die privaten Links: die Quizze stecken direkt in der Seite und öffnen sich als Vollbild-Fenster -->
+<style>
+.qover{position:fixed;inset:0;z-index:1000;background:#382F2E;display:none;flex-direction:column}
+.qover[data-open="1"]{display:flex}
+.qover .qbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;border-bottom:1px solid rgba(243,236,226,.18)}
+.qover .qbar button{background:#F3ECE2;color:#382F2E;border:0;border-radius:4px;padding:9px 16px;font:500 13px/1.2 var(--sans,system-ui,sans-serif);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.qover .qbar span{color:#E9DFD2;font:13px/1.2 var(--sans,system-ui,sans-serif);letter-spacing:.06em}
+.qover iframe{flex:1;width:100%;border:0;background:#382F2E}
+</style>
+<div class="qover" id="qover" role="dialog" aria-modal="true" aria-label="Quiz"><div class="qbar"><button type="button" id="qclose">← Zurück zum Guide</button><span id="qname"></span></div><iframe id="qframe" title="Quiz"></iframe></div>
+<script>
+(function(){
+  const QUIZ = __QUIZ_JSON__;
+  const NAMES = {"quiz-kopfhaut.html":"Kopfhaut-Check","quiz-pflege.html":"Pflege-Check","quiz-haar.html":"Haar-Check"};
+  const box = document.getElementById("qover"), fr = document.getElementById("qframe");
+  let back = null;
+  function open(f){ back = document.activeElement; fr.srcdoc = QUIZ[f]; document.getElementById("qname").textContent = NAMES[f] || "";
+    box.dataset.open = "1"; document.documentElement.style.overflow = "hidden"; document.getElementById("qclose").focus(); }
+  function close(){ box.dataset.open = "0"; fr.srcdoc = ""; document.documentElement.style.overflow = ""; if(back) back.focus(); }
+  document.getElementById("qclose").onclick = close;
+  document.addEventListener("keydown", e => { if(e.key === "Escape" && box.dataset.open === "1") close(); });
+  document.addEventListener("click", e => {
+    const a = e.target.closest && e.target.closest('a[href^="quiz-"]');
+    if(a && QUIZ[a.getAttribute("href")]){ e.preventDefault(); open(a.getAttribute("href")); }
+  });
+})();
+</script>

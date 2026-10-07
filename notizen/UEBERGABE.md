@@ -122,3 +122,6 @@
 - „Passt zu“-Rahmen: bei langem Text kleinere Schrift und weniger runde Ecken (Klasse .also.long ab 35 Zeichen), damit nichts mehr auf der Linie sitzt (Beispiel: Balea Kopfhaut Tonikum).
 - Untertitel „Von Laura, deiner Haarpflege-Bestie“: gerade, ohne Serifen (Instrument Sans), hebt sich vom Logo ab.
 - Fotos macht Laura selbst, kommen später.
+- Quizze in den privaten Links: Als eigene Unterseiten blieben sie leer (alle Quiztexte entstehen per Skript, das dort nicht lief).
+  Jetzt stecken sie direkt in der Seite (quiz-einbettung.html, eingefügt von build-vorschau.py) und öffnen sich als Vollbild-Fenster mit „Zurück zum Guide“.
+  Die lokale haarpflege.html verlinkt weiter auf die Dateien quiz-*.html daneben. Für die spätere echte Webseite gehen normale Unterseiten.
