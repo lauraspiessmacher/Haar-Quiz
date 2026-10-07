@@ -416,6 +416,37 @@ html[data-stil="rouje"] .bookfly .bf-page .t{text-transform:uppercase}
 html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 .bookfly.open .bf-cover{transform:rotateY(-172deg)}
 .bookfly.fade{opacity:0}
+
+/* ---------- Quiz als Papierstapel ---------- */
+#v-quiz{overflow-x:clip}
+@media (max-width:520px){ .quizgrid{padding:0 6px} }
+.quizgrid{gap:34px 30px;margin-top:30px}
+.qcard{overflow:visible;background:none;color:var(--ink);padding:0;border-radius:0;min-height:0;display:block;transition:transform .35s cubic-bezier(.3,.1,.3,1)}
+.qcard:hover{transform:none;box-shadow:none}
+.qcard .sheet{position:absolute;inset:0;border-radius:3px;background:#F6F0E7;border:1px solid rgba(56,47,46,.12);box-shadow:0 6px 16px -10px rgba(56,47,46,.45);transition:transform .45s cubic-bezier(.3,.1,.3,1)}
+.qcard .sheet.s2{background:#EEE6DB}
+.qcard .paper{position:relative;display:flex;flex-direction:column;gap:10px;min-height:340px;padding:30px 26px 24px;border-radius:3px;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);
+  box-shadow:0 14px 30px -18px rgba(56,47,46,.55);
+  background-image:repeating-linear-gradient(180deg,transparent 0 31px,rgba(56,47,46,.06) 31px 32px);background-position:0 96px;
+  transition:transform .45s cubic-bezier(.3,.1,.3,1), box-shadow .45s}
+.qcard .qclip{position:absolute;top:-16px;right:30px;width:16px;height:42px}
+.qcard .qfor{color:#7A6A65}
+.qcard h3{color:#382F2E;padding-top:46px}
+.qcard p{color:var(--muted)}
+.qcard .qmeta{color:var(--muted)}
+.qcard .qgo{background:#382F2E;color:#F3ECE2}
+/* jedes Blatt liegt etwas anders */
+.qcard:nth-child(1) .paper{transform:rotate(-1.4deg)} .qcard:nth-child(1) .s1{transform:rotate(2.2deg) translate(6px,4px)} .qcard:nth-child(1) .s2{transform:rotate(-3.4deg) translate(-7px,7px)}
+.qcard:nth-child(2) .paper{transform:rotate(1deg)}    .qcard:nth-child(2) .s1{transform:rotate(-2.6deg) translate(-6px,5px)} .qcard:nth-child(2) .s2{transform:rotate(3.6deg) translate(8px,8px)}
+.qcard:nth-child(3) .paper{transform:rotate(-.6deg)}  .qcard:nth-child(3) .s1{transform:rotate(3deg) translate(7px,3px)}  .qcard:nth-child(3) .s2{transform:rotate(-2deg) translate(-5px,9px)}
+/* beim Drüberfahren: oberstes Blatt hebt sich und richtet sich gerade, der Stapel fächert auf */
+.qcard:hover .paper,.qcard:focus-visible .paper{transform:rotate(0) translateY(-6px);box-shadow:0 24px 40px -20px rgba(56,47,46,.6)}
+.qcard:hover .s1{transform:rotate(4deg) translate(10px,6px)} .qcard:hover .s2{transform:rotate(-5deg) translate(-10px,10px)}
+@media (prefers-reduced-motion:reduce){ .qcard .paper,.qcard .sheet{transition:none} }
+/* Übergang: Blatt wächst auf den ganzen Bildschirm und wird zum Quiz */
+.paperfly{position:fixed;z-index:3000;pointer-events:none;background:#FFFDFA;border-radius:3px;box-shadow:0 30px 60px -20px rgba(56,47,46,.5);
+  transition:top .6s cubic-bezier(.6,0,.25,1),left .6s cubic-bezier(.6,0,.25,1),width .6s cubic-bezier(.6,0,.25,1),height .6s cubic-bezier(.6,0,.25,1),transform .6s cubic-bezier(.6,0,.25,1),background-color .45s ease .25s,border-radius .6s,opacity .35s ease}
+.paperfly.fade{opacity:0}
 </style>
 <!--DESIGN-->
 </head>
@@ -539,30 +570,27 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
   <section class="view" id="v-quiz" hidden>
     <div class="intro"><h1>Quiz</h1><p>Drei kurze Checks, die dir zeigen, was deine Haare wirklich brauchen. Dein Ergebnis bekommst du direkt am Ende.</p></div>
     <div class="quizgrid">
-      <a class="qcard" href="quiz-kopfhaut.html">
-        <svg class="qart" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M96 0 C 56 28, 120 60, 76 92 S 48 144, 16 160" stroke="#F3ECE2" stroke-width="1.2"/><path d="M108 0 C 68 32, 128 64, 84 98 S 60 148, 30 160" stroke="#9E8C80" stroke-width="1.2"/></svg>
+      <a class="qcard" href="quiz-kopfhaut.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#382F2E" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span class="qfor">Für dein Shampoo</span>
         <h3>Kopfhaut-Check</h3>
         <p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast und worauf du vor dem Shampoo-Regal achtest.</p>
         <span class="qmeta">9 Fragen · ca. 2 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </a>
-      <a class="qcard" href="quiz-pflege.html">
-        <svg class="qart" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M70 0 C 58 54, 80 104, 62 160" stroke="#F3ECE2" stroke-width="0.8"/><path d="M84 0 C 72 54, 94 104, 76 160" stroke="#9E8C80" stroke-width="1.8"/><path d="M98 0 C 86 54, 108 104, 90 160" stroke="#F3ECE2" stroke-width="3"/></svg>
+      </span></a>
+      <a class="qcard" href="quiz-pflege.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#382F2E" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span class="qfor">Für deine Pflege</span>
         <h3>Pflege-Check</h3>
         <p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf und wie viel Repair sie braucht.</p>
         <span class="qmeta">10 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </a>
-      <a class="qcard" href="quiz-haar.html">
-        <svg class="qart" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M80 0 C 60 20, 100 40, 80 60 S 60 100, 80 120 S 100 150, 84 160" stroke="#F3ECE2" stroke-width="1.2"/><path d="M96 0 C 76 20, 116 40, 96 60 S 76 100, 96 120 S 116 150, 100 160" stroke="#9E8C80" stroke-width="1.2"/></svg>
+      </span></a>
+      <a class="qcard" href="quiz-haar.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#382F2E" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span class="qfor">Für dein Styling</span>
         <h3>Haar-Check</h3>
         <p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p>
         <span class="qmeta">8 Fragen · ca. 2 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </a>
+      </span></a>
     </div>
     <p class="qclosing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
   </section>
@@ -1020,6 +1048,22 @@ document.getElementById("merkClear").onclick = () => { if(confirm("Alle Produkte
     new IntersectionObserver(es => { const v = es[0].isIntersecting; if(v && !seen){ seen = true; setTimeout(peek, 350); } else if(!v){ seen = false; } }, {threshold:.6}).observe(book);
   }
 })();
+/* ---------- Quiz-Blatt wächst zum Quiz ---------- */
+document.querySelectorAll(".qcard").forEach(a => a.addEventListener("click", e => {
+  const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const href = a.getAttribute("href");
+  const go = () => { if(window.openQuiz && window.openQuiz(href)) return; window.location.href = href; };
+  e.preventDefault(); e.stopPropagation();
+  if(reduce){ go(); return; }
+  const paper = a.querySelector(".paper"), r = paper.getBoundingClientRect();
+  const rot = (getComputedStyle(paper).transform || "none");
+  const fly = document.createElement("div"); fly.className = "paperfly";
+  Object.assign(fly.style, {top:r.top+"px", left:r.left+"px", width:r.width+"px", height:r.height+"px", transform:rot});
+  document.body.appendChild(fly); paper.style.visibility = "hidden";
+  requestAnimationFrame(() => requestAnimationFrame(() => Object.assign(fly.style, {top:"0px", left:"0px", width:window.innerWidth+"px", height:window.innerHeight+"px", transform:"none", borderRadius:"0", backgroundColor:"#382F2E"})));
+  setTimeout(() => { go(); paper.style.visibility = ""; fly.classList.add("fade"); }, 640);
+  setTimeout(() => fly.remove(), 1050);
+}, true));
 window.addEventListener("resize", setHH);
 readHash(); q.value = state.q; render();
 </script>

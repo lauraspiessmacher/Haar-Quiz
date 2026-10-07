@@ -173,3 +173,5 @@
   Laura entscheidet später; bis dahin bleiben die bisherigen Strichzeichnungen drin. (routine-bilder/ = Zuschnitt von Variante 1, ungenutzt.)
 - Klick auf ein Kapitel (Lauras Wunsch, 2. Fassung): Buch klappt an seinem Platz im Regal zur Doppelseite auf (rechts Seite mit „Kapitel N“, Titel, Linien), dann zoomt man in die rechte Seite hinein (Titel bleibt oben), daraus blendet der Text auf. Ca. 1,5 s, Funktion openBook. Bei „Bewegung reduzieren“ sofort.
   Schärfe: Das Übergangs-Element wird in Endgröße gezeichnet (1em = Zoomfaktor, alle Maße in em) und anfangs verkleinert – so bleibt die Überschrift beim Hineinzoomen scharf. Laura: „dann können wir es so lassen“.
+- Quiz als Papierstapel: jede Karte = oberstes Blatt (cremeweiß, feine Linien, Büroklammer) auf zwei schief liegenden Blättern; jede Karte liegt anders. Beim Drüberfahren hebt sich das Blatt und richtet sich gerade.
+  Klick: Blatt wächst auf den ganzen Bildschirm, färbt sich dunkelbraun und geht ins Quiz über (window.openQuiz aus quiz-einbettung.html; lokal normaler Link). Die alten Haarsträhnen-Grafiken (.qart) sind entfernt.
