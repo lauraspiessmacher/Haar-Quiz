@@ -285,22 +285,33 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
   .merkn{position:absolute;top:3px;right:calc(50% - 22px);min-width:17px;height:17px;line-height:17px;font-size:10px}
 }
 
-/* ---------- Merkliste kompakt ---------- */
-.mgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
-@media (max-width:520px){ .mgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px} }
-.mitem{position:relative;display:flex;flex-direction:column;gap:3px;background:var(--paper);border:1px solid rgba(56,47,46,.30);border-radius:12px;padding:8px 8px 12px}
-.mitem .mpic{width:100%;height:130px;object-fit:contain;background:#F1ECE7;border-radius:6px;padding:12px 0;box-sizing:border-box;margin-bottom:6px;display:block}
-.mitem .save{top:12px;right:12px;width:30px;height:30px}
-.mitem .brand{font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:0 4px}
-.mitem .mname{font-family:var(--serif);font-size:17px;line-height:1.2;padding:0 4px}
-.mitem .tag{align-self:flex-start;margin:4px 4px 0}
-@media (max-width:520px){ .mitem .mpic{height:110px} .mitem .mname{font-size:16px} }
+/* ---------- Merkliste: Produktarten als Spalten ---------- */
+.mcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px;margin-top:22px;align-items:start}
+@media (max-width:959px){ .mcols{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px} }
+.mcol h3{font-size:26px;padding-bottom:8px;border-bottom:1px solid rgba(56,47,46,.30);margin-bottom:12px}
+.mnone{margin:0;color:var(--muted);font-size:13.5px;border:1px dashed var(--line);border-radius:10px;padding:12px}
+.mlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.mitem{position:relative;display:grid;grid-template-columns:62px minmax(0,1fr);gap:12px;align-items:start;background:var(--paper);border:1px solid rgba(56,47,46,.30);border-radius:12px;padding:10px}
+.mitem .mpic{width:62px;height:86px;object-fit:contain;background:#F1ECE7;border-radius:6px;padding:6px 0;box-sizing:border-box;display:block}
+.mitem .mtxt{display:flex;flex-direction:column;gap:2px;min-width:0;padding-right:30px}
+.mitem .save{top:8px;right:8px;width:28px;height:28px}
+.mitem .save svg{width:15px;height:15px}
+.mitem .brand{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.mitem .mname{font-family:var(--serif);font-size:16.5px;line-height:1.2}
+.mitem .tag{align-self:flex-start;margin-top:4px}
+@media (max-width:520px){
+  .mcol h3{font-size:21px}
+  .mitem{grid-template-columns:1fr;gap:8px;padding:8px}
+  .mitem .mpic{width:100%;height:96px}
+  .mitem .mtxt{padding-right:0}
+  .mitem .mname{font-size:15px}
+}
 /* ---------- Kaufen-Knopf ---------- */
 .buyrow{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:12px}
 .buyrow .adnote{font-size:11px;color:var(--muted);letter-spacing:.04em}
 .buy{display:inline-flex;align-items:center;gap:6px;background:#382F2E;color:#F3ECE2;border-radius:999px;padding:7px 14px;font-size:13px;text-decoration:none;white-space:nowrap}
 .buyrow.demo .buy{background:transparent;color:var(--muted);border:1px dashed rgba(56,47,46,.45);cursor:default}
-.buyrow.sm{margin-top:auto;padding:10px 4px 0;flex-direction:column;align-items:stretch;gap:4px}
+.buyrow.sm{margin-top:8px;padding:0;flex-direction:column;align-items:stretch;gap:3px}
 .buyrow.sm .adnote{text-align:right}
 .buyrow.sm .buy{justify-content:center;padding:6px 10px;font-size:12px}
 </style>
@@ -614,8 +625,8 @@ function renderMerk(){
   document.getElementById("merkTools").hidden = !mine.length;
   if(!mine.length){ box.innerHTML = `<div class="merkempty"><p>Noch nichts gemerkt. Tippe bei einem Produkt auf das <b>+</b>, dann landet es hier.</p><button type="button" class="btn dark" id="merkGo">Zu den Produkten <span aria-hidden="true">→</span></button></div>`;
     document.getElementById("merkGo").onclick = () => { state.view="produkte"; render(); window.scrollTo({top:0}); }; return; }
-  box.innerHTML = TYPES.map(t => { const list = mine.filter(p => p.type===t.id); if(!list.length) return "";
-    return `<h3 class="sec">${t.label} <span class="cnt">${list.length}</span></h3><ul class="mgrid">${list.map(merkItemHtml).join("")}</ul>`; }).join("");
+  box.innerHTML = `<div class="mcols">${TYPES.map(t => { const list = mine.filter(p => p.type===t.id);
+    return `<section class="mcol"><h3>${t.label} <span class="cnt">${list.length||""}</span></h3>${list.length ? `<ul class="mlist">${list.map(merkItemHtml).join("")}</ul>` : `<p class="mnone">Noch nichts gemerkt</p>`}</section>`; }).join("")}</div>`;
 }
 function merkText(){
   const set = merkSet();
@@ -631,7 +642,7 @@ function buyHtml(p, small){
 }
 /* kompakte Karte für die Merkliste */
 function merkItemHtml(p){
-  return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span><span class="tag">${p.segment}</span>${buyHtml(p,true)}</li>`;
+  return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<div class="mtxt"><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span><span class="tag">${p.segment}</span>${buyHtml(p,true)}</div></li>`;
 }
 
 function itemHtml(p){
