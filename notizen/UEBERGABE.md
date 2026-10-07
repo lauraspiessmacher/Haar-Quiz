@@ -203,3 +203,4 @@
 - Kapitel 7 (LL-Methode) FREIGEGEBEN: „rau“ am Ende von „Wenn jeden Tag nicht klappt“ entfernt („… nicht ungepflegt.“).
 - Kapitel 8 (Haaröle) nach Lauras Feedback neu: „ersetzen keine andere Leave-in-Konsistenz“; kann nicht: Spliss reparieren (nur versiegeln), aktiv Feuchtigkeit spenden (recherchiert: Öl enthält kein Wasser, schließt nur ein);
   Tabelle = Konsistenzen (trockenes Öl / reichhaltigeres cremigeres Öl / sehr reichhaltiges Öl z. B. Pflanzenöl) mit „Was es ausmacht“ + „Passt zu“; Abschnitt „ab normaler Haardicke einfacher, aber Öle für sehr dickes Haar können für normales zu cremig/ölig sein, Dosierung, mit wenig starten“. Noch Entwurf.
+- Kapitel 8 (Haaröle) FREIGEGEBEN.

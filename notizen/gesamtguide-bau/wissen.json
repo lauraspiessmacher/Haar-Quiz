@@ -53,8 +53,7 @@
   "titel": "Haaröle erklärt",
   "teaser": "Welches Öl zu euren Haaren passt und was ein trockenes Öl ausmacht.",
   "datei": "haaroele.html",
-  "arzt": false,
-  "entwurf": true
+  "arzt": false
  },
  {
   "id": "kopfhaut",
