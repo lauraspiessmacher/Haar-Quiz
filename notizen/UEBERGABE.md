@@ -167,3 +167,7 @@
 - Neuer Text: Datei in wissen/ ablegen, Eintrag in wissen.json, ggf. graue Kachel im Template entfernen, neu bauen.
 - Hair Journey als Buch (Lauras Wunsch, 2. Fassung): Cover = Collage. Beim Hinscrollen (einmal pro Sichtbarwerden) und beim Drüberfahren/Antippen geht das Buch nur einen Spalt auf
   (Cover ca. 34° gedreht), darunter blättern 6 helle Papierseiten leicht und klappen wieder zu. KEINE Fotos innen (erste Fassung mit Collage-Ausschnitten verworfen).
+- Wissen als Bücherregal: jede Kachel = Buchcover (Hochformat 3:4, Buchrücken links, feiner Zierrahmen, Seitenkanten rechts/unten). Fertige Texte: dunkelbraun, „Kapitel 1–5“, Knopf „Lesen“; beim Drüberfahren kippt das Buch leicht auf.
+  Noch nicht geschriebene Themen: hellere Bücher (#8C7D77) mit „Bald“ / „Kommt bald“. Laptop 4 nebeneinander, Handy 2.
+- Routine-Zeichnungen: Higgsfield-Varianten in notizen/bilder/routine-ki/ (A = variante-3-stil, B = variante-4-stil mit Diptyque-Stilvorlage; Soul 2.0 unbrauchbar: kopierte Diptyque-Logos bzw. Fantasie-Schrift).
+  Laura entscheidet später; bis dahin bleiben die bisherigen Strichzeichnungen drin. (routine-bilder/ = Zuschnitt von Variante 1, ungenutzt.)

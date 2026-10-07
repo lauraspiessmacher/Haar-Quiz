@@ -367,6 +367,34 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 @keyframes leaf{0%{transform:rotateY(0)} 55%{transform:rotateY(calc(-34deg + var(--i) * 3deg))} 100%{transform:rotateY(calc(var(--i) * -3.2deg))}}
 .book.open .bleaf{transform:rotateY(calc(var(--i) * -3.2deg))}
 @media (prefers-reduced-motion:reduce){ .book .bcover,.book .bleaf{transition:none} .book.open .bleaf{animation:none} }
+
+/* ---------- Wissen als Bücherregal: jede Kachel wie ein Buchcover ---------- */
+#wissenCards{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:30px 24px;margin-top:26px;perspective:1400px}
+@media (max-width:520px){ #wissenCards{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px} }
+#wissenCards .card{position:relative;min-height:0;aspect-ratio:3/4;border:0;border-radius:3px 10px 10px 3px;padding:28px 18px 20px 30px;background:#382F2E;color:#F3ECE2;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;text-align:center;opacity:1;
+  transform-origin:left center;transition:transform .45s cubic-bezier(.3,.1,.3,1), box-shadow .45s;
+  box-shadow:2px 2px 0 -1px #FBF7F1,4px 4px 0 -1px #E9E1D6,4px 4px 0 0 rgba(56,47,46,.18),7px 7px 0 -1px #F5EFE6,7px 7px 0 0 rgba(56,47,46,.16),14px 16px 26px -14px rgba(56,47,46,.6)}
+/* Buchrücken links */
+#wissenCards .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;border-radius:3px 0 0 3px;pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.38),rgba(255,255,255,.07) 55%,rgba(0,0,0,.28) 80%,rgba(255,255,255,.06))}
+/* feiner Zierrahmen auf dem Cover */
+#wissenCards .card::after{content:"";position:absolute;top:10px;right:10px;bottom:10px;left:26px;border:1px solid rgba(243,236,226,.32);border-radius:2px 6px 6px 2px;pointer-events:none}
+#wissenCards .card .kap{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#E9DFD2;margin-top:4px}
+#wissenCards .card h3{color:#F3ECE2;font-size:24px;line-height:1.1;margin-top:6px}
+#wissenCards .card p{color:#E9DFD2;font-size:13.5px;line-height:1.45}
+#wissenCards .card .go{align-self:center;margin-top:auto;background:#F3ECE2;color:#382F2E;border:0;font-size:12.5px;padding:7px 16px;position:relative;z-index:1}
+#wissenCards .wcard:hover,#wissenCards .wcard:focus-visible{transform:rotateY(-12deg) translateX(2px);box-shadow:2px 2px 0 -1px #FBF7F1,4px 4px 0 -1px #E9E1D6,4px 4px 0 0 rgba(56,47,46,.18),7px 7px 0 -1px #F5EFE6,7px 7px 0 0 rgba(56,47,46,.16),22px 20px 30px -14px rgba(56,47,46,.65)}
+/* noch nicht geschriebene Kapitel: hellere Bücher */
+#wissenCards .card.soon{background:#8C7D77;border:0;opacity:.85}
+#wissenCards .card.soon .go{background:transparent;color:#F3ECE2;border:1px solid rgba(243,236,226,.6)}
+@media (max-width:520px){
+  #wissenCards .card{padding:20px 12px 14px 24px}
+  #wissenCards .card h3{font-size:19px}
+  #wissenCards .card p{font-size:12px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  #wissenCards .card::after{left:22px;top:7px;right:7px;bottom:7px}
+}
+@media (prefers-reduced-motion:reduce){ #wissenCards .card{transition:none} }
 </style>
 <!--DESIGN-->
 </head>
@@ -529,12 +557,12 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
   <section class="view" id="v-wissen" hidden>
     <div id="wissenListe"><div class="intro"><h1>Wissen</h1><p>Haarpflege einfach erklärt: ehrlich, ohne Marketing-Versprechen.</p></div>
     <div class="cards" id="wissenCards">
-      <div class="card soon"><h3>Spliss & Haarbruch: der Unterschied</h3><p>Was Spliss von Haarbruch unterscheidet, warum Spliss nicht repariert werden kann und was wirklich hilft.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Die LL-Methode</h3><p>Tägliche Leave-in-Pflege zwischen den Wäschen.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Haaröle erklärt</h3><p>Welches Öl zu deinen Haaren passt und was ein trockenes Öl ausmacht.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Kopfhautgesundheit</h3><p>Was deiner Kopfhaut guttut und worauf du achten kannst.</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Haarmythen</h3><p>Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?</p><span class="go">Kommt bald</span></div>
-      <div class="card soon"><h3>Haarporosität</h3><p>Was Porosität bedeutet und was sie für deine Pflege heißt.</p><span class="go">Kommt bald</span></div>
+      <div class="card soon"><span class="kap">Bald</span><h3>Spliss & Haarbruch: der Unterschied</h3><p>Was Spliss von Haarbruch unterscheidet, warum Spliss nicht repariert werden kann und was wirklich hilft.</p><span class="go">Kommt bald</span></div>
+      <div class="card soon"><span class="kap">Bald</span><h3>Die LL-Methode</h3><p>Tägliche Leave-in-Pflege zwischen den Wäschen.</p><span class="go">Kommt bald</span></div>
+      <div class="card soon"><span class="kap">Bald</span><h3>Haaröle erklärt</h3><p>Welches Öl zu deinen Haaren passt und was ein trockenes Öl ausmacht.</p><span class="go">Kommt bald</span></div>
+      <div class="card soon"><span class="kap">Bald</span><h3>Kopfhautgesundheit</h3><p>Was deiner Kopfhaut guttut und worauf du achten kannst.</p><span class="go">Kommt bald</span></div>
+      <div class="card soon"><span class="kap">Bald</span><h3>Haarmythen</h3><p>Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?</p><span class="go">Kommt bald</span></div>
+      <div class="card soon"><span class="kap">Bald</span><h3>Haarporosität</h3><p>Was Porosität bedeutet und was sie für deine Pflege heißt.</p><span class="go">Kommt bald</span></div>
     </div></div>
     <article class="wart" id="wissenArt" hidden></article>
   </section>
@@ -696,7 +724,7 @@ function sorter(type, cat){
 /* ---------- Wissen ---------- */
 (function(){
   const box = document.getElementById("wissenCards");
-  box.insertAdjacentHTML("afterbegin", WISSEN.map(w => `<button type="button" class="card wcard" data-w="${w.id}"><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
+  box.insertAdjacentHTML("afterbegin", WISSEN.map((w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
   box.querySelectorAll(".wcard").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
 })();
 function renderWissen(){
