@@ -155,5 +155,5 @@
 - Hair Journey fertig verlinkt: Instagram https://www.instagram.com/p/DVS6Ig9jeKW/ · TikTok https://www.tiktok.com/@lauraspiessmacher/photo/7612557590056422659 (TikTok-Name: @lauraspiessmacher).
   Cover: notizen/bilder/hair-journey-cover.png (Original), Web-Version gesamtguide-bau/hair-journey-cover.jpg; Cover ist anklickbar (→ Instagram).
 - Serie „Haarpflege 1x1“ (Schreibweise wie auf Lauras Covern): Daten in gesamtguide-bau/serie.json (Folge, Titel, Link, Titelbild), Bilder in gesamtguide-bau/serie/ (360×640), Originale in notizen/bilder/serie/.
-  Links laut Laura in Reihenfolge = Folge 1–6 (Folge 1–4 per Instagram-Vorschaubild bestätigt). Folge 7 (Kopfhautpflege: richtige Technik) hat noch KEINEN Link → zeigt aufs Profil.
+  Links laut Laura in Reihenfolge = Folge 1–6 (alle sechs per Instagram-Vorschaubild bestätigt). Folge 7 (Kopfhautpflege: richtige Technik) hat noch KEINEN Link → zeigt aufs Profil.
   Neue Folge: Bild in serie/ legen, Eintrag in serie.json ergänzen, neu bauen. Es laufen max. 10 (neueste zuerst).
