@@ -133,3 +133,6 @@
 - Zeichnungen: routine-zeichnungen.html (wird von build-vorschau.py für __ROUTINE__ eingesetzt). Laura will sie später mit einem KI-Bildprogramm (Higgsfield) neu machen → nur diese Datei ersetzen.
 - Offizieller Link (7GncL…) noch NICHT neu veröffentlicht: er würde sonst auch mit der Startseite öffnen (Laura nutzt ihn für Beratungen).
 - Zukunftsidee: „Produkt kaufen“-Knopf in der Produktkarte mit Affiliate-Link (Amazon o. ä.) – Werbekennzeichnung nötig. Noch nicht bauen.
+- Suchleiste wieder rund (Laura mag es runder, auch im Rouje-Stil).
+- Wissen-Bereich = auch Lauras Ideen-Speicher (graue „Kommt bald“-Kacheln). Themen: Spliss & Haarbruch: der Unterschied · Die LL-Methode · Pre-Wash-Routinen (statt ÖWC) ·
+  Haaröle erklärt (statt Trockene Öle) · Der Haarzyklus · Haarausfall (Arten) · Kopfhautgesundheit · Haarmythen · Haarporosität. Laura schickt die Texte.
