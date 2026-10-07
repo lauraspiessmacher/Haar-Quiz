@@ -378,10 +378,10 @@ function plan(a){
     if(isWash){
       label = sp ? "Waschtag nach dem Sport" : "Waschtag";
       if(d === prewashDay) items.push(`Vorher Pre-Wash-Pflege mit der ${PREWASH[dk]}, 10 bis 60 Minuten einwirken lassen`);
-      items.push("Shampoo auf Ansatz und Kopfhaut");
+      items.push(tsSensitiv ? "Zweimal shampoonieren, auf Ansatz und Kopfhaut. Verträgt deine Kopfhaut das nicht, einmal und das Shampoo kurz einwirken lassen" : "Zweimal shampoonieren, auf Ansatz und Kopfhaut");
       const mk = maskDays.indexOf(d);
-      if(mk >= 0) items.push(`${maskKind(mk).replace(/^e/,"E")}${fine ? " nur in Längen und Spitzen" : " in die Längen"}, etwa 5 Minuten einwirken lassen${repair && m === 1 ? ". In der Woche danach stattdessen eine Feuchtigkeitsmaske" : ""}`);
-      items.push(`Zum Abschluss ${COND[dk]}`);
+      if(mk >= 0) items.push(`${maskKind(mk).replace(/^e/,"E")}${fine ? " nur in Längen und Spitzen" : " in die Längen"}, mindestens 10 bis 15 Minuten einwirken lassen${repair && m === 1 ? ". In der Woche danach stattdessen eine Feuchtigkeitsmaske" : ""}`);
+      items.push(`Zum Abschluss ${COND[dk]}, 3 bis 5 Minuten einwirken lassen`);
       if(repLeaveDays.includes(d)) items.push(`Ein ${repName}-Leave-in ins noch feuchte Haar`);
       else if(repLeaveN) items.push(`Ein feuchtigkeitsspendendes oder nährendes Leave-in ins noch feuchte Haar, zum Beispiel ${LEAVE_FEUCHT[dk]}`);
       else items.push(`${LEAVE_FEUCHT[dk].replace(/^e/,"E")} ins noch feuchte Haar`);
@@ -417,11 +417,12 @@ function plan(a){
     `**Jeden Tag die LL-Methode:** Auch zwischen den Wäschen kommt ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen.`,
     `**Immer Hitzeschutz:** vor dem Föhnen, Glätten und Locken.`,
     `**Zum Abschluss versiegeln:** ${OEL[dk].charAt(0).toUpperCase() + OEL[dk].slice(1)}. Ich empfehle es immer, es ist ein schönes Add-on-Produkt. Öl ersetzt keine andere Pflege, sondern versiegelt, was vorher an Pflege drin ist.${fine ? " Bei feinen Haaren ist ein trockenes, leichtes Öl wichtig, damit nichts beschwert." : ""}`,
-    `**Conditioner:** ${COND[dk].charAt(0).toUpperCase() + COND[dk].slice(1)} schließt jede Wäsche ab.`
+    `**Conditioner:** ${COND[dk].charAt(0).toUpperCase() + COND[dk].slice(1)} schließt jede Wäsche ab. Lass ihn drei bis fünf Minuten einwirken.`
   ]});
 
   const wp = [`Du wäschst deine Haare ${n === 1 ? "einmal" : n + "-mal"} pro Woche. In deinem Plan ${n === 1 ? "liegt der Waschtag auf " + washNames[0] : "liegen die Waschtage auf " + joinDe(washNames)}.${n > 1 ? " So sind die Abstände dazwischen möglichst gleichmäßig." : ""}${sportDays.length && wash.some(d => sportDays.includes(d)) ? " Und wo es ging, wäschst du direkt nach dem Sport." : ""}`];
-  let mp = `**Maske: ${m}× pro Woche.** Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt davon ab, wie oft du wäschst, und von der Maske selbst. Eine Feuchtigkeitsmaske, die nährt, geschmeidig macht und Glanz schenkt, kannst du ruhig öfter nehmen. Bei Repair- und Bond-Repair-Masken kommt es total auf das Produkt an, hier gilt: immer die Balance mit Feuchtigkeit halten.`;
+  wp.push("**Shampoo:** Ich empfehle für jeden Kopfhauttyp, zweimal zu shampoonieren. Beim ersten Mal lösen sich Talg und Produktreste, beim zweiten Mal wird die Kopfhaut richtig sauber." + (tsSensitiv ? " Ich bin keine Ärztin und kann keine Diagnosen stellen. Wenn deine Kopfhaut aber sehr sensibel oder sehr trocken ist, zum Beispiel bei Neurodermitis, und du mit zweimal Shampoonieren nicht klarkommst, wasch nur einmal und lass das Shampoo dafür ein bisschen einwirken." : ""));
+  let mp = `**Maske: ${m}× pro Woche.** Lass sie mindestens 10 bis 15 Minuten einwirken, gerade bei Bond-Repair-Masken. Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt davon ab, wie oft du wäschst, und von der Maske selbst. Eine Feuchtigkeitsmaske, die nährt, geschmeidig macht und Glanz schenkt, kannst du ruhig öfter nehmen. Bei Repair- und Bond-Repair-Masken kommt es total auf das Produkt an, hier gilt: immer die Balance mit Feuchtigkeit halten.`;
   if(thick) mp += " Bei deinen dicken Haaren sorgt eine nährende Maske dafür, dass sich krause Haare legen und nichts fuzzy aussieht.";
   if(fine) mp += " Bei feinen Haaren reicht eine leichte Maske nur in Längen und Spitzen, damit nichts beschwert.";
   if(effort === "wenig" && Math.max(byDk, bySt) > m) mp += ` Eigentlich könnten deine Haare sogar ${Math.min(n, Math.max(byDk, bySt))} Masken pro Woche vertragen. Wenn du mal mehr Zeit hast, lohnt sich das.`;

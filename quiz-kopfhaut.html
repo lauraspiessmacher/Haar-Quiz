@@ -161,7 +161,7 @@ const R = {
   no:"Ein Tiefenreinigungs- oder Anti-Schuppen-Shampoo als tägliches Shampoo, obwohl du keine Beschwerden hast."},
  F:{name:"Fettige Kopfhaut",
   intro:"Deine Talgdrüsen arbeiten fleißig, der Ansatz wirkt schon nach einem Tag fettig. Ein Shampoo kann die Talgproduktion nicht abstellen, es entfernt den Talg nur gründlich.",
-  yes:"Shampoos mit kräftigerer Reinigung. Auf der Flasche steht dann oft „für fettiges Haar“, „Frische“, „Detox“ oder „Volumen“. Shampoos, auf denen nur „Balance“ steht, reinigen meist sanfter und sind eher für normale Kopfhaut gedacht. Massiere das Shampoo nur auf der Kopfhaut ein und wasch bei Bedarf zweimal. Hast du dicke oder trockene Längen, bleibst du trotzdem bei diesem Shampoo und gleichst über Conditioner oder Maske in den Längen aus.",
+  yes:"Shampoos mit kräftigerer Reinigung. Auf der Flasche steht dann oft „für fettiges Haar“, „Frische“, „Detox“ oder „Volumen“. Shampoos, auf denen nur „Balance“ steht, reinigen meist sanfter und sind eher für normale Kopfhaut gedacht. Massiere das Shampoo nur auf der Kopfhaut ein. Hast du dicke oder trockene Längen, bleibst du trotzdem bei diesem Shampoo und gleichst über Conditioner oder Maske in den Längen aus.",
   deep:"Ein- bis zweimal im Monat, bei viel Styling oder Trockenshampoo auch einmal pro Woche.",
   no:"Sehr reichhaltige Shampoos, Conditioner oder Maske direkt am Ansatz und Öl auf der Kopfhaut."},
  T:{name:"Trockene Kopfhaut",
@@ -281,6 +281,7 @@ function result(){
     <p class="intro">${r.intro}</p>
     ${ftTie ? `<div class="box"><h3>Fettig und trotzdem gespannt?</h3><p>Deine Kopfhaut fettet und spannt gleichzeitig. Das passiert oft, wenn sie zu kräftig gereinigt wird. Probier deshalb zuerst ein Shampoo mit sanfter bis normaler Reinigung, bevor du zu einem kräftigeren greifst.</p></div>` : ""}
     <div class="block"><h3><span class="mark">✓</span>Darauf achtest du</h3><p>${r.yes}</p></div>
+    <div class="block"><h3><span class="mark">2×</span>So wäschst du</h3><p>Ich empfehle für jeden Kopfhauttyp, zweimal zu shampoonieren. Beim ersten Mal lösen sich Talg und Produktreste, beim zweiten Mal wird die Kopfhaut richtig sauber.</p>${["S","T","ST"].includes(key) ? `<p>Ich bin keine Ärztin und kann keine Diagnosen stellen. Wenn deine Kopfhaut aber sehr sensibel oder sehr trocken ist, zum Beispiel bei Neurodermitis, und du mit zweimal Shampoonieren nicht klarkommst, wasch nur einmal und lass das Shampoo dafür ein bisschen einwirken.</p>` : ""}</div>
     <div class="block"><h3><span class="mark">↻</span>Tiefenreinigung</h3><p>${r.deep} Danach immer Conditioner oder Maske, weil sich die Längen rauer anfühlen können.</p></div>
     <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${r.no}</p></div>
     ${extraSens ? `<div class="box"><h3>Zusätzlich empfindlich</h3><p>Deine Kopfhaut zeigt auch Zeichen von Empfindlichkeit. Achte zusätzlich auf parfumarme Produkte, teste Neues erst an einer kleinen Stelle und taste dich bei der Tiefenreinigung vorsichtig ran.</p></div>` : ""}
