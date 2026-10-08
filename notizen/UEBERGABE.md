@@ -276,3 +276,4 @@
 - Easy Dry & Go steht jetzt in BEIDEN Kategorien (Entwirrbürsten + Weitere Bürsten), Lauras Ansage 08.10.; Wofür: Entwirren und schneller föhnen.
 - Buly-Hinweise (08.10.): Preis steht jetzt als „Diese Bürste kostet um die 70/80 €.“; Picots-Hinweis empfiehlt nur „Entwirrbürste“ (Laura: keine Entwirrbürste kostet 70 €, einfach Entwirrbürste empfehlen).
 - Preise aus den Buly-Hinweisen entfernt; Regel: keine Preise in Produkttexten (in lauras-pflegeregeln.md).
+- Startseite (08.10.): Foto etwas kleiner (Desktop 88 % der Spalte ≈ 427 px statt 485; Handy max 225 statt 250 px), Überschrift 80 statt 92 px max (rouje), Einleitungstext 16 statt 17 px.
