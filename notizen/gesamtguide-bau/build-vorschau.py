@@ -21,9 +21,9 @@ for e in _h['produkte']:
     _hitems.append(x)
 _hitems += _h.get('eigene', [])
 _data['hitze'] = {'cats': _h['cats'], 'rank': None, 'items': _hitems, 'intro': {
-  'lead': 'Vor jeder Hitze kommt ein Hitzeschutz, egal ob Föhn, Glätteisen oder Lockenstab, und danach eine Leave-in-Pflege oder ein Öl. Welcher Hitzeschutz zu dir passt, hängt vor allem von deiner Haardicke ab und davon, ob du ihn ins feuchte oder ins trockene Haar gibst.',
+  'lead': 'Deinen Hitzeschutz suchst du nach deiner Haardicke aus und danach, ob du ihn ins feuchte oder ins trockene Haar gibst. Er legt sich wie ein Schutzfilm um deine Haare, damit Föhn, Glätteisen und Lockenstab weniger Schaden anrichten.',
   'how': '',
-  'box': '<p><b>Trockene Hitzeschutzsprays</b> sind von der Textur wie Haarspray oder Trockenshampoo. Sie beschweren nicht und sind ideal auf trockenem Haar vor dem Styling, auch für feine und dünne Haare.</p><p><b>Klassische Hitzeschutzsprays</b> kommen ins feuchte Haar, gehen aber auch auf trockenem Haar. Lass sie dann vor Lockenstab und Glätteisen antrocknen.</p><p><b>Leave-in-Seren und -Cremes mit Hitzeschutz</b> pflegen und schützen in einem Schritt. Cremes sind ideal für dicke bis sehr dicke Haare.</p><p><b>Öle mit Hitzeschutz</b> empfehle ich nur für normale bis sehr dicke Haare. Achte hier auf die Reichhaltigkeit.</p><p>Hier findest du erst einmal die Leave-ins und Öle aus meinen Guides, die einen Hitzeschutz haben. Weitere Produkte kommen nach und nach dazu.</p>'}}
+  'box': '<p><b>So wendest du ihn an:</b> Vor jeder Hitze, egal ob Föhn, Glätteisen oder Lockenstab. Meine Empfehlung: das Tool nicht heißer einstellen als nötig und danach eine Leave-in-Pflege oder ein Öl.</p>'}}
 data = json.dumps(_data, ensure_ascii=False).replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
