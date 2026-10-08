@@ -897,7 +897,7 @@ function alignShelf(){
   const cr = c.getBoundingClientRect(), r0 = b[0].getBoundingClientRect();
   const next = b.find(x => x.getBoundingClientRect().top > r0.top + 10);
   const pitch = next ? next.getBoundingClientRect().top - r0.top : r0.height + 30;
-  const off = (r0.bottom - cr.top) - pitch * 0.884;
+  const off = (r0.bottom - cr.top) + 8 - pitch * 0.927; /* Seitenkanten der Bücher ca. 4px über der Lichtkante des Bretts */
   const rows = new Set(b.map(x => Math.round(x.getBoundingClientRect().top))).size;
   c.style.setProperty("--pitch", pitch + "px"); c.style.setProperty("--off", off + "px"); c.style.setProperty("--h", rows * pitch + "px");
 }
