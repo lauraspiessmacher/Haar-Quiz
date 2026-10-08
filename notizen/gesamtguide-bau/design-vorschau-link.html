@@ -74,6 +74,8 @@ main{padding-bottom:60px}
 @media (max-width:759px){ .shophead{grid-template-columns:1fr} }
 .shophead h2{font-size:clamp(22px,3vw,28px);line-height:1.1;margin:0;color:#F3ECE2}
 .shophead p{color:#E3D8CC;margin:8px 0 0;font-size:15px}
+.shophead p{text-wrap:pretty}
+.shophead p.tipp{font-size:13.5px;color:#C9BCAE;margin-top:8px;text-wrap:balance}
 .wsearch{margin:16px 0 4px}
 .wres{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px;max-width:760px}
 .wres li{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:14px 16px}
@@ -772,7 +774,7 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
 
   <!-- ===================== PRODUKTE ===================== -->
   <section class="view" id="v-produkte" hidden>
-    <div class="shophead"><div class="shoptxt"><h2>Schluss mit Fehlkäufen</h2><p>Du hast schon viele Fehlkäufe hinter dir oder möchtest sie vermeiden? Hier shoppst du individuell nach deinen Haaren und deiner Kopfhaut. Stell oben unter „Meine Haare“ deine Haardicke und deine Kopfhaut ein, dann siehst du direkt, was zu dir passt.</p></div>
+    <div class="shophead"><div class="shoptxt"><h2>Schluss mit Fehlkäufen</h2><p>Jeder hat schon mal einen Fehlkauf gemacht, weil man nicht wusste, welchen Haartyp und welche Haardicke man hat und was die eigenen Haare brauchen. Hier shoppst du individuell nach deinen Haaren und deinem Kopfhauttyp.</p><p class="tipp">Stell oben unter „Meine Haare“ deine Haarbedürfnisse ein, dann siehst du direkt,&nbsp;was&nbsp;zu&nbsp;dir&nbsp;passt.</p></div>
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="q" type="search" placeholder="Suchen: Marke, Produkt oder „feine Haare fettig“" aria-label="Produkte durchsuchen">
