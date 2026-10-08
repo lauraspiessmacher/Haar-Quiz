@@ -718,7 +718,7 @@ const KOPF_ADJ = {normal:"normale",trocken:"trockene",fettend:"schnell fettende"
 const DICKE_ADJ = {fein:"feines",duenn:"dünnes",normal:"normales",dick:"dickes",sehrdick:"sehr dickes"};
 const HAIRGUIDE = id => ["maske","conditioner","leavein","hitze","oel"].includes(id);
 /* Hitzeschutz ist nach Konsistenz sortiert: welche Konsistenz passt zu welcher Haardicke? */
-const HITZE_FOR = {fein:["trocken","spray"],duenn:["trocken","spray","serum"],normal:["spray","serum","oel"],dick:["serum","creme","oel"],sehrdick:["creme","oel"]};
+const HITZE_FOR = {fein:["trocken","spray"],duenn:["trocken","spray","serum"],normal:["trocken","spray","serum","oel"],dick:["trocken","serum","creme","oel"],sehrdick:["trocken","creme","oel"]}; /* trockener Hitzeschutz passt beim Styling auf trockenem Haar zu allen Haardicken */
 
 /* ---------- Meine Haare ---------- */
 const DICKE = [["fein","Fein"],["duenn","Dünn"],["normal","Normal"],["dick","Dick"],["sehrdick","Sehr dick"]];
@@ -984,12 +984,13 @@ function renderMerk(){
   document.getElementById("merkTools").hidden = !mine.length;
   if(!mine.length){ box.innerHTML = `<div class="merkempty"><p>Noch nichts gemerkt. Tippe bei einem Produkt auf das <b>+</b>, dann landet es hier.</p><button type="button" class="btn dark" id="merkGo">Zu den Produkten <span aria-hidden="true">→</span></button></div>`;
     document.getElementById("merkGo").onclick = () => { state.view="produkte"; render(); window.scrollTo({top:0}); }; return; }
-  box.innerHTML = `<div class="mcols">${TYPES.filter(t => t.id!=="hitze").map(t => { const list = mine.filter(p => p.type===t.id);
+  const ownHitze = p => p.type==="hitze" && !p.von;
+  box.innerHTML = `<div class="mcols">${TYPES.filter(t => t.id!=="hitze" || mine.some(ownHitze)).map(t => { const list = mine.filter(p => p.type===t.id && (t.id!=="hitze" || ownHitze(p)));
     return `<section class="mcol"><h3>${t.label} <span class="cnt">${list.length||""}</span></h3>${list.length ? `<ul class="mlist">${list.map(merkItemHtml).join("")}</ul>` : `<p class="mnone">Noch nichts gemerkt</p>`}</section>`; }).join("")}</div>`;
 }
 function merkText(){
   const set = merkSet();
-  return "Meine Merkliste (Haarpflege einfach erklärt)\n\n" + TYPES.filter(t => t.id!=="hitze").map(t => { const l = ALL.filter(p => p.type===t.id && set.has(p.mk)); return l.length ? t.label+":\n"+l.map(p=>"– "+p.brand+" "+p.name).join("\n") : ""; }).filter(Boolean).join("\n\n");
+  return "Meine Merkliste (Haarpflege einfach erklärt)\n\n" + TYPES.map(t => { const l = ALL.filter(p => p.type===t.id && set.has(p.mk) && (t.id!=="hitze" || !p.von)); return l.length ? t.label+":\n"+l.map(p=>"– "+p.brand+" "+p.name).join("\n") : ""; }).filter(Boolean).join("\n\n");
 }
 
 /* Kaufen-Knopf: erscheint nur, wenn ein Link hinterlegt ist (in der Design-Vorschau als Platzhalter) */

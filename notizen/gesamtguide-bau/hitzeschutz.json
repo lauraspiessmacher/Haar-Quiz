@@ -4,7 +4,7 @@
   {
    "id": "trocken",
    "label": "Trockener Hitzeschutz",
-   "desc": "Von der Textur wie Haarspray oder Trockenshampoo. Beschwert nicht und ist ideal auf trockenem Haar vor dem Styling, auch für feine und dünne Haare. Diese Produkte kommen nach und nach dazu."
+   "desc": "Von der Textur wie Haarspray oder Trockenshampoo, aber keins von beiden: kein Halt, kein Puder. Verfliegt sofort, beschwert nicht und ist ideal auf trockenem Haar vor dem Styling. Passt zu allen Haardicken, auch zu feinen und dünnen Haaren."
   },
   {
    "id": "spray",
@@ -25,6 +25,11 @@
    "id": "oel",
    "label": "Öl",
    "desc": "Haaröle mit Hitzeschutz. Achte auf die Reichhaltigkeit: Öle empfehle ich nur für normale bis sehr dicke Haare, nicht für feine oder dünne."
+  },
+  {
+   "id": "haarspray",
+   "label": "Haarspray mit Hitzeschutz",
+   "desc": "Haarsprays mit Hitzeschutz geben zusätzlich Halt. Ideal vor Föhn, Rundbürste oder Multistyler. Vor Glätteisen oder Lockenstab greif lieber zum trockenen Hitzeschutz ohne Halt."
   }
  ],
  "produkte": [
@@ -239,5 +244,134 @@
    "form": "oel"
   }
  ],
- "eigene": []
+ "eigene": [
+  {
+   "segment": "Drogerie",
+   "brand": "Balea",
+   "name": "Hitzeschutzspray Ultralight",
+   "cats": [
+    "trocken"
+   ],
+   "dk": [
+    "fein",
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "200",
+   "sil": [],
+   "img": "data:image/webp;base64,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",
+   "note": "Trockenes Spray mit Alkohol und Panthenol, ohne Silikone, Öl und Halt. Verfliegt sofort und beschwert nicht.",
+   "hair": [
+    "alle Haardicken",
+    "alle Haarzustände"
+   ],
+   "tip": "Anwendung: Mit etwas Abstand auf das trockene Haar sprühen, kurz verfliegen lassen und dann stylen."
+  },
+  {
+   "segment": "High-End",
+   "brand": "Oribe",
+   "name": "Gold Lust Dry Heat Protection Spray",
+   "cats": [
+    "trocken"
+   ],
+   "dk": [
+    "fein",
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "232",
+   "sil": [
+    "Silicone Quaternium-3"
+   ],
+   "img": "data:image/webp;base64,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",
+   "note": "Trockenes Spray mit Alkohol und leichtem Ölersatz. Pflegestoffe und Öle stehen erst hinter dem Parfum, sie bilden nur einen hauchdünnen Film.",
+   "hair": [
+    "alle Haardicken",
+    "alle Haarzustände"
+   ],
+   "tip": "Anwendung: Schütteln und auf das trockene Haar sprühen, dann mit Föhn, Glätteisen oder Lockenstab stylen."
+  },
+  {
+   "segment": "High-End",
+   "brand": "Moroccanoil",
+   "name": "Perfect Defense",
+   "cats": [
+    "trocken"
+   ],
+   "dk": [
+    "fein",
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "230",
+   "sil": [
+    "PPG-12 Dimethicone"
+   ],
+   "img": "data:image/webp;base64,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",
+   "note": "Trockenes Spray mit Alkohol und einem Filmbildner, der vor Hitze schützt, dazu etwas Arganöl und Panthenol.",
+   "hair": [
+    "alle Haardicken",
+    "alle Haarzustände"
+   ],
+   "tip": "Gut zu wissen: Der Filmbildner wird auch in Haarsprays verwendet. Halt verspricht Moroccanoil nicht, die Haare können sich aber etwas griffiger anfühlen als mit Balea oder Oribe."
+  },
+  {
+   "segment": "High-End",
+   "brand": "Wella Professionals",
+   "name": "EIMI Thermal Image",
+   "cats": [
+    "haarspray"
+   ],
+   "dk": [
+    "fein",
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "220",
+   "sil": [
+    "Disiloxane",
+    "Dimethicone",
+    "Dimethiconol"
+   ],
+   "img": "data:image/webp;base64,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",
+   "note": "Pumpspray mit Alkohol, Silikonen und einem Haltepolymer wie im Haarspray. Schützt und gibt leichten Halt.",
+   "hair": [
+    "alle Haardicken",
+    "alle Haarzustände"
+   ],
+   "tip": "Gut zu wissen: Alkohol steht an erster Stelle. Bei sehr trockenen Längen lieber sparsam sprühen."
+  },
+  {
+   "segment": "High-End",
+   "brand": "Maria Nila",
+   "name": "Shaping Heat Spray",
+   "cats": [
+    "haarspray"
+   ],
+   "dk": [
+    "fein",
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "ja",
+   "sil": [],
+   "img": "data:image/webp;base64,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",
+   "note": "Haarspray mit Hitzeschutz: Alkohol, Treibgas und Haltepolymere, dazu Squalan und Glycerin. Leichter bis mittlerer Halt.",
+   "hair": [
+    "alle Haardicken",
+    "alle Haarzustände"
+   ],
+   "tip": "Gut zu wissen: Ein Haarspray, das zusätzlich vor Hitze schützt, kein reiner Hitzeschutz."
+  }
+ ]
 }

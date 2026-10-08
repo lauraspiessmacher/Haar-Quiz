@@ -37,3 +37,7 @@ Prüfregel: Treibgas/Alkohol vorne, keine Haarspray-Harze (VP/VA Copolymer, PVP,
 - Wella EIMI Thermal Image: ✗ (VP/VA Copolymer, „medium hold“)
 - Maria Nila Shaping Heat: ✗ (Haarspray, Halt 2/5)
 - VO5 Dry Heat Protect Spray (UK, in DE kaum erhältlich): Treibgas + Dimethicone + Isododecane + Argan → trockenes Silikonspray, kein Harz laut Listing.
+
+## Umgesetzt 08.10.2026 (Lauras Go)
+- Trocken: Balea Ultralight, Oribe Gold Lust Dry, Moroccanoil Perfect Defense.
+- Neue Kategorie „Haarspray mit Hitzeschutz“: Wella EIMI Thermal Image, Maria Nila Shaping Heat Spray. Laura unsicher, ob vor Glätteisen/Lockenstab → Text: lieber trockener Hitzeschutz ohne Halt.
