@@ -489,13 +489,11 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 /* ---------- Wissensbücher: beim Drüberfahren einen Spalt öffnen, Seiten blättern ---------- */
 #wissenCards .shelfbook{position:relative;perspective:1300px}
 /* Altes Holzregal nur angedeutet: dunkle Rückwand + Brett (Higgsfield, notizen/bilder/regal/fach-b.png), ein Fach pro Bücherreihe, über die ganze Seitenbreite; Bretter liegen per JS unter jeder Reihe */
-#wissenCards{--pitch:420px;--off:0px;position:relative;z-index:0;row-gap:96px;padding:64px 0 48px}
+#wissenCards{--pitch:420px;--off:0px;position:relative;z-index:0;row-gap:96px;padding:72px 0 64px}
 @media (max-width:520px){ #wissenCards{row-gap:64px;padding-top:48px} }
 body{overflow-x:clip}
-#wissenCards::before{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:none;opacity:.22;
-  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 56px,#000 calc(100% - 56px),transparent),linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);
-  -webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent,#000 56px,#000 calc(100% - 56px),transparent),linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);mask-composite:intersect;
-  background:url(__REGAL_FACH__) center var(--off) / 100% var(--pitch) repeat-y}
+#wissenCards::before{content:"";position:absolute;top:var(--off);height:var(--h,100%);left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:none;opacity:.34;
+  background:url(__REGAL_FACH__) center top / 100% var(--pitch) repeat-y}
 #wissenCards[hidden]{display:none}
 #wissenCards .card h3{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 #wissenCards .shelfbook.away > *{visibility:hidden}
@@ -900,7 +898,8 @@ function alignShelf(){
   const next = b.find(x => x.getBoundingClientRect().top > r0.top + 10);
   const pitch = next ? next.getBoundingClientRect().top - r0.top : r0.height + 30;
   const off = (r0.bottom - cr.top) - pitch * 0.91;
-  c.style.setProperty("--pitch", pitch + "px"); c.style.setProperty("--off", off + "px");
+  const rows = new Set(b.map(x => Math.round(x.getBoundingClientRect().top))).size;
+  c.style.setProperty("--pitch", pitch + "px"); c.style.setProperty("--off", off + "px"); c.style.setProperty("--h", rows * pitch + "px");
 }
 window.addEventListener("resize", () => requestAnimationFrame(alignShelf));
 function renderWissen(){
