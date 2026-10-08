@@ -61,7 +61,7 @@ Kopfhaut: The Scalp Exfoliator & Massager
 ## NEU: Rubrik „Hitze-Tools“ (Laura 08.10.)
 - Föhne, Multistyler, Glätteisen, Lockenstäbe, Hitzebürsten – Laura sucht Empfehlungen noch raus. Kategorie schon anlegen (leer, „kommt bald“).
 
-### Buly – Entwirrbürste mit Picots (Laura hat Link geschickt, 08.10., WARTET auf Go)
+### Buly – Entwirrbürste mit Picots (Laura hat Link geschickt, 08.10., eingebaut unter „Weitere Bürsten“)
 - https://buly1803.com/en/products/brosse-demelante-avec-picots
 - „Detangling Brush with Spikes“ / „Brosse démêlante avec picots“, 70 € (mit Gravur 75 €)
 - Gebeiztes Buchenholz, langer Griff, breite Bürste mit Stahlstiften mit Kugelenden; entwirrt und massiert die Kopfhaut; kommt im Samtbeutel
