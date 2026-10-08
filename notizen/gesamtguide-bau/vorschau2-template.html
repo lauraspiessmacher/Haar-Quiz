@@ -494,12 +494,19 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 
 /* ---------- Wissensbücher: beim Drüberfahren einen Spalt öffnen, Seiten blättern ---------- */
 #wissenCards .shelfbook{position:relative;perspective:1300px}
-/* Altes Holzregal nur angedeutet: dunkle Rückwand + Brett (Higgsfield, notizen/bilder/regal/fach-b.png), ein Fach pro Bücherreihe, über die ganze Seitenbreite; Bretter liegen per JS unter jeder Reihe */
-#wissenCards{--pitch:420px;--off:0px;position:relative;z-index:0;row-gap:96px;padding:72px 0 64px}
-@media (max-width:520px){ #wissenCards{row-gap:64px;padding-top:48px} }
+/* Regal im Hintergrund auf Lauras Wunsch entfernt (08.10.); Bücher stehen frei */
+#wissenCards{position:relative;z-index:0;row-gap:44px;padding:12px 0 40px}
+@media (max-width:520px){ #wissenCards{row-gap:30px} }
 body{overflow-x:clip}
-#wissenCards::before{content:"";position:absolute;top:var(--off);height:var(--h,100%);left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:none;
-  background:url(__REGAL_FACH__) center top / 100% var(--pitch) repeat-y}
+/* Blindprägung: farbloses Motiv zum Kapitelthema, ins Cover gedrückt (dunkle Rille, helle Unterkante) */
+#wissenCards .card .emb{display:block;margin-top:auto;width:64px;height:64px;flex:0 1 auto;min-height:0;color:rgba(0,0,0,.30);
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.16)) drop-shadow(0 -1px 0 rgba(0,0,0,.30))}
+#wissenCards .card .kap,#wissenCards .card h3,#wissenCards .card p{flex-shrink:0}
+#wissenCards .card .emb svg{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+#wissenCards .card.soon .emb{color:rgba(0,0,0,.28)}
+/* Handy: Cover zu klein für Kurztext + Prägung → nur Titel und Prägung, der Kurztext steht im Kapitel */
+@media (max-width:520px){ #wissenCards .card .emb{width:46px;height:46px} #wissenCards .card .emb svg{stroke-width:1.5} #wissenCards .card p{display:none} }
+@media (max-width:380px){ #wissenCards .card h3{font-size:17px} #wissenCards .card .kap{font-size:9.5px;letter-spacing:.16em} }
 #wissenCards[hidden]{display:none}
 #wissenCards .card h3{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 #wissenCards .shelfbook.away > *{visibility:hidden}
@@ -877,9 +884,33 @@ function sorter(type, cat){
 
 /* ---------- Produktkarte ---------- */
 /* ---------- Wissen ---------- */
+/* Blindprägung auf den Buchcovern: ein Motiv pro Kapitel (Strichzeichnung, 24er-Raster) */
+const PRAEGUNG = {
+  genetik: '<path d="M8 2c0 5 8 5 8 10s-8 5-8 10M16 2c0 5-8 5-8 10s8 5 8 10M9 4.5h6M10.3 8h3.4M10.3 16h3.4M9 19.5h6"/>',
+  haarzyklus: '<path d="M20 12a8 8 0 1 1-2.4-5.7M18 2.6v4h-4"/><path d="M12 8.5c-1 2 1 3.5 0 5.5"/><circle cx="12" cy="15.6" r="1.4"/>',
+  porositaet: '<path d="M9 2v20M15 2v20M9 5.5l3 2 3-2M9 10.5l3 2 3-2M9 15.5l3 2 3-2"/>',
+  kopfhaut: '<path d="M2 12.5c4-1.6 16-1.6 20 0"/><path d="M8 12c0-3.5 1-6.5 2.5-9.5M16 12c0-3.5-.8-6.3-2-9"/><path d="M8 12v4.5M16 12v4.5"/><path d="M6.4 18.2a1.6 1.8 0 1 0 3.2 0 1.6 1.8 0 1 0-3.2 0M14.4 18.2a1.6 1.8 0 1 0 3.2 0 1.6 1.8 0 1 0-3.2 0"/>',
+  haarausfall: '<circle cx="6.5" cy="4" r="1.7"/><path d="M7.8 5.2c4 2.8 5.6 6.4 3.2 9.8s.4 6 5.2 6.5"/><path d="M17 7.5l2.5-1M17.5 11.5l2.5.2"/>',
+  unterschied: '<path d="M8 2v11M8 13l-2.6 8M8 13l2.6 8M16 2v8.5M16 13.5V21M14.6 10.6l1.4.9 1.4-.9M14.6 13.4l1.4-.9 1.4.9"/>',
+  reparatur: '<rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-45 12 12)"/><rect x="9" y="9" width="6" height="6" rx="1" transform="rotate(-45 12 12)"/><path d="M11 12h.01M13 12h.01M12 11h.01M12 13h.01"/>',
+  repair: '<path d="M10 2h4v3h-4zM9.5 5h5l1.5 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 12h8M8 17h8"/><path d="M19.5 3v3M18 4.5h3"/>',
+  leavein: '<path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M12 6.5c-1.6 3 1.6 6 0 10.5"/>',
+  llmethode: '<path d="M9 3c3 4 5 6.5 5 9.2a5 5 0 0 1-10 0C4 9.5 6 7 9 3z"/><path d="M17.5 10c1.8 2.4 3 4 3 5.6a3 3 0 0 1-6 0c0-1.6 1.2-3.2 3-5.6z"/>',
+  prewash: '<path d="M15.5 3.5l5 5M14 6l4 4M15 7L6.5 15.5l-1 3 3-1L17 9"/><path d="M4 21.2c0-.9.7-1.9 1.1-2.4.4.5 1.1 1.5 1.1 2.4a1.1 1.1 0 0 1-2.2 0z"/>',
+  haaroele: '<path d="M12 2.5c4 5.3 7 8.8 7 12.2a7 7 0 0 1-14 0C5 11.3 8 7.8 12 2.5z"/><path d="M8.8 14.5a3.4 3.4 0 0 0 3.2 3.3"/>',
+  silikone: '<path d="M4 21C8 15 9 9 6 3M10 21c4-6 5-12 2-18"/><path d="M18 3.5v4.5M15.8 5.8h4.4M18.5 13v3M17 14.5h3"/>',
+  seide: '<path d="M4 6.5c3.5-1.5 12.5-1.5 16 0 1.2 3.5 1.2 7.5 0 11-3.5 1.5-12.5 1.5-16 0-1.2-3.5-1.2-7.5 0-11z"/><path d="M7.5 10c2.5 1.2 6.5 1.2 9 0M8.5 13.5c2 .8 5 .8 7 0"/>',
+  buersten: '<ellipse cx="12" cy="8.5" rx="6" ry="6.5"/><path d="M10.6 15l-.6 7h4l-.6-7"/><path d="M10 6h.01M14 6h.01M12 8.5h.01M10 11h.01M14 11h.01M12 4h.01M12 13h.01"/>',
+  splissschnitt: '<path d="M12 2v12M12 14l-2.6 7.5M12 14l2.6 7.5M12 14v7.5"/><path d="M4 17h2M8 17h2M14 17h2M18 17h2"/>',
+  scheren: '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/>',
+  haarfarbe: '<path d="M3 12h13l-1.4 5.6a3 3 0 0 1-2.9 2.4H7.3a3 3 0 0 1-2.9-2.4z"/><path d="M12.5 10.5L20.5 2.5M10 9.5l2.5-2.5 2 2-2.5 2.5z"/>',
+  farbstiche: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V3M15 10.3l4.8-2.8M15 13.8l4.8 2.7M12 15.5V21M9 13.8l-4.8 2.7M9 10.3L4.2 7.5"/>',
+  mythen: '<circle cx="10" cy="10" r="7"/><path d="M15 15l6 6"/><path d="M8.3 8.3a1.8 1.8 0 1 1 2.5 1.7c-.5.3-.8.7-.8 1.3M10 13.6h.01"/>',
+  buch: '<path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/>'
+};
 (function(){
   const box = document.getElementById("wissenCards");
-  box.insertAdjacentHTML("afterbegin", WISSEN.map((w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}${w.entwurf?" · Entwurf":""}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
+  box.insertAdjacentHTML("afterbegin", WISSEN.map((w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}${w.entwurf?" · Entwurf":""}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="emb" aria-hidden="true"><svg viewBox="0 0 24 24">${PRAEGUNG[w.id]||PRAEGUNG.buch}</svg></span><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
   /* jedes Buch bekommt Seiten dahinter, die beim Drüberfahren leicht blättern */
   box.querySelectorAll(".card").forEach(c => {
     const w = document.createElement("div"); w.className = "shelfbook";
@@ -928,7 +959,7 @@ function wissenSnippet(raw, words){
 function renderWissenSuche(){
   const q = (document.getElementById("wq").value||"").trim();
   const box = document.getElementById("wissenSuche"), cards = document.getElementById("wissenCards");
-  if(!q){ box.innerHTML = ""; cards.hidden = false; requestAnimationFrame(alignShelf); return; }
+  if(!q){ box.innerHTML = ""; cards.hidden = false; return; }
   const terms = q.split(/\s+/).map(plain).filter(Boolean);
   const words = q.toLowerCase().split(/\s+/).filter(Boolean);
   const hits = WTEXT.filter(x => terms.every(t => x.all.includes(t)))
@@ -941,23 +972,10 @@ function renderWissenSuche(){
   box.querySelectorAll("button[data-w]").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
 }
 document.getElementById("wq").addEventListener("input", renderWissenSuche);
-/* Regalbretter genau unter die Bücherreihen legen */
-function alignShelf(){
-  const c = document.getElementById("wissenCards"); if(!c || c.hidden || !c.offsetParent) return;
-  const b = [...c.querySelectorAll(".shelfbook")]; if(!b.length) return;
-  const cr = c.getBoundingClientRect(), r0 = b[0].getBoundingClientRect();
-  const next = b.find(x => x.getBoundingClientRect().top > r0.top + 10);
-  const pitch = next ? next.getBoundingClientRect().top - r0.top : r0.height + 30;
-  const off = (r0.bottom - cr.top) + 8 - pitch * 0.927; /* Seitenkanten der Bücher ca. 4px über der Lichtkante des Bretts */
-  const rows = new Set(b.map(x => Math.round(x.getBoundingClientRect().top))).size;
-  c.style.setProperty("--pitch", pitch + "px"); c.style.setProperty("--off", off + "px"); c.style.setProperty("--h", rows * pitch + "px");
-}
-window.addEventListener("resize", () => requestAnimationFrame(alignShelf));
 function renderWissen(){
   const w = WISSEN.find(x => x.id === state.wissen);
   document.getElementById("wissenListe").hidden = !!w;
   const art = document.getElementById("wissenArt"); art.hidden = !w;
-  requestAnimationFrame(alignShelf);
   if(!w){ art.innerHTML = ""; return; }
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
   art.innerHTML = back + (w.entwurf ? `<p class="wdraft">Entwurf: Dieser Text ist noch nicht von Laura geprüft.</p>` : "") + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;

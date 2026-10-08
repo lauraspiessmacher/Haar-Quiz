@@ -41,9 +41,7 @@ _data['tools'] = {'cats': [], 'rank': None, 'items': [], 'intro': {
   'box': '<p><b>Bis dahin:</b> Vor jeder Hitze kommt ein Hitzeschutz, und stell dein Tool nicht heißer ein als nötig.</p>'}}
 data = json.dumps(_data, ensure_ascii=False).replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
-# Vintage-Regal im Wissen-Bereich (Teile aus notizen/bilder/regal/variante-1.png, zugeschnitten in regal/)
-for _k, _f in (('FACH','fach'),):
-    t = t.replace(f'__REGAL_{_k}__', 'data:image/webp;base64,' + __import__('base64').b64encode(open(f'{S}/regal/{_f}.webp','rb').read()).decode())
+# Regal im Wissen-Bereich entfernt (08.10.); Dateien liegen weiter in regal/
 t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
 t = t.replace('__KAUF__', open(f'{S}/kauflinks.json').read().strip() or '{}')
 # Wissenstexte: Übersicht aus wissen.json, Inhalt aus wissen/<id>.html
