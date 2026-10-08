@@ -28,3 +28,12 @@ Alkohol + Treibgase (Isobutane, Propane) + filmbildende Polymere (Halt 2/5) + Sq
 ### Neu gefunden
 - Wella Professionals EIMI Thermal Image (Pumpspray, bis 220 °C, für trockenes Haar vor dem Styling): Alcohol Denat., Aqua, Isododecane, Disiloxane, Glycerin, VP/VA Copolymer, Panthenol, Polyquaternium-16, Dimethicone, Parfum, Lactic Acid … → trocken, mit Silikon und leichtem Halt; Alkohol an 1. Stelle.
 - NICHT trocken: got2b Schutzengel (Wasserbasis, ins handtuchtrockene Haar), Alterra 4in1, Dejan Garz Hitzeschutzspray (Wasser-/Leave-in-Sprays).
+
+## Laura (08.10.): Kriterium = wirklich trockener Hitzeschutz wie Balea/Oribe, KEIN Haarspray, KEIN Trockenshampoo, beschwert 0,00
+Prüfregel: Treibgas/Alkohol vorne, keine Haarspray-Harze (VP/VA Copolymer, PVP, Octylacrylamide/Acrylates/… Copolymer, Acrylates Copolymer) weit vorne, keine Puder/Stärken (Oryza Sativa Starch, Aluminum Starch Octenylsuccinate, Silica, Tapioca).
+- Balea Ultralight: ✓ (kein Harz, kein Puder)
+- Oribe Gold Lust Dry: ✓ volle INCI (Bluemercury): Isobutane, Alcohol, Butane, Diisopropyl Adipate, Parfum, Ethyl Macadamiate, Silicone Quaternium-3, … alles Pflegende erst hinter Parfum = Mini-Film. Kein Haarspray-Harz. Bis 232 °C.
+- Moroccanoil Perfect Defense: ⚠ Octylacrylamide/Acrylates/Butylaminoethyl Methacrylate Copolymer an 5. Stelle = klassisches Haarspray-Harz → Grenzfall.
+- Wella EIMI Thermal Image: ✗ (VP/VA Copolymer, „medium hold“)
+- Maria Nila Shaping Heat: ✗ (Haarspray, Halt 2/5)
+- VO5 Dry Heat Protect Spray (UK, in DE kaum erhältlich): Treibgas + Dimethicone + Isododecane + Argan → trockenes Silikonspray, kein Harz laut Listing.
