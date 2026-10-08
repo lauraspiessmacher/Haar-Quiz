@@ -57,3 +57,5 @@ Diese Regeln gelten überall auf der Seite: Quizze, Routine-Check, Wissen, Produ
 - Pre-Wash: 1–2× pro Woche nach Bedarf (theoretisch vor jeder Wäsche möglich). CWC ohne lange Einwirkzeit (nass machen, Conditioner in Längen, direkt shampoonieren). LWC/MWC/ÖWC 10–60 Min., nie über Nacht.
 - Feines Haar: LL-Methode, wenn nicht täglich möglich, z. B. jeden zweiten Tag.
 - Haftungshinweis: ersetzt keine persönliche Beratung, auch nicht beim Arzt; bei Kopfhautproblemen/Beschwerden führt am Arztbesuch kein Weg vorbei.
+
+- Keine Preise in Produkttexten nennen (Laura, 08.10.).

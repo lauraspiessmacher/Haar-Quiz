@@ -275,3 +275,4 @@
 - Buly „Entwirrbürste mit Picots“ (Link von Laura, 70 €): Infos + Bilder gesichert (notizen/haarbuersten-liste.md, notizen/bilder/buly/), EINGEBAUT unter „Weitere Bürsten“ (Lauras Go 08.10.), Bild notizen/bilder/buersten/buly-picots.webp. Jetzt 20 Bürsten.
 - Easy Dry & Go steht jetzt in BEIDEN Kategorien (Entwirrbürsten + Weitere Bürsten), Lauras Ansage 08.10.; Wofür: Entwirren und schneller föhnen.
 - Buly-Hinweise (08.10.): Preis steht jetzt als „Diese Bürste kostet um die 70/80 €.“; Picots-Hinweis empfiehlt nur „Entwirrbürste“ (Laura: keine Entwirrbürste kostet 70 €, einfach Entwirrbürste empfehlen).
+- Preise aus den Buly-Hinweisen entfernt; Regel: keine Preise in Produkttexten (in lauras-pflegeregeln.md).
