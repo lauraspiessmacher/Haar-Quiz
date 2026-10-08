@@ -488,11 +488,12 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 
 /* ---------- Wissensbücher: beim Drüberfahren einen Spalt öffnen, Seiten blättern ---------- */
 #wissenCards .shelfbook{position:relative;perspective:1300px}
-/* Altes Holzregal (Higgsfield, Variante 1) nur angedeutet hinter den Büchern; Bretter liegen per JS unter jeder Bücherreihe */
-#wissenCards{--pw:5.8%;--pitch:360px;--off:0px;position:relative;z-index:0;padding:calc(7.4% + 22px) calc(5.8% + 16px) calc(5.2% + 14px)}
-#wissenCards::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.16;filter:sepia(.45);
-  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 82%,transparent),linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);
-  -webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 82%,transparent),linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-composite:intersect;
+/* Altes Holzregal (Higgsfield, Variante 1) nur angedeutet hinter den Büchern, über die ganze Seitenbreite; Bretter liegen per JS unter jeder Bücherreihe */
+#wissenCards{--pw:5.8%;--pitch:360px;--off:0px;position:relative;z-index:0;padding:calc(7.4vw + 22px) 0 calc(5.2vw + 14px)}
+body{overflow-x:clip}
+#wissenCards::before{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:none;opacity:.22;filter:sepia(.45);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 50px,#000 calc(100% - 70px),transparent),linear-gradient(to right,transparent,#000 2%,#000 98%,transparent);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent,#000 50px,#000 calc(100% - 70px),transparent),linear-gradient(to right,transparent,#000 2%,#000 98%,transparent);mask-composite:intersect;
   background:
     url(__REGAL_KRONE__) center top / 100% auto no-repeat,
     url(__REGAL_SOCKEL__) center bottom / 100% auto no-repeat,
