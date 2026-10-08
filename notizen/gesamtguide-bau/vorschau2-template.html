@@ -73,7 +73,20 @@ main{padding-bottom:60px}
 .searchwrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted)}
 .search{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 40px}
 .search::placeholder{color:var(--muted)}
-.search-hint{font-size:12.5px;color:var(--muted);margin:0 0 4px 4px}
+.shophead{margin:26px 0 0;max-width:62ch}
+.shophead h2{font-size:clamp(24px,3.4vw,32px);line-height:1.1;margin:0}
+.shophead p{color:var(--muted);margin:8px 0 0;font-size:15.5px}
+.wsearch{margin:16px 0 4px}
+.wres{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px;max-width:760px}
+.wres li{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:14px 16px}
+.wres button{all:unset;cursor:pointer;display:block;width:100%}
+.wres button:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:6px}
+.wres .kap{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.wres h3{font-size:22px;margin:4px 0 6px}
+.wres p{margin:0;font-size:15px;color:var(--muted)}
+.wres mark{background:none;color:var(--ink);font-weight:600}
+.wres .go{display:inline-block;margin-top:8px;font-size:14px;color:var(--ink)}
+.wnone{color:var(--muted);margin:18px 0 0}
 
 /* ---------- Produktarten als klickbare Kacheln ---------- */
 .types{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:22px 0 8px}
@@ -561,11 +574,11 @@ __ROUTINE__
 
   <!-- ===================== PRODUKTE ===================== -->
   <section class="view" id="v-produkte" hidden>
+    <div class="shophead"><h2>Schluss mit Fehlkäufen</h2><p>Du hast schon viele Fehlkäufe hinter dir oder möchtest sie vermeiden? Hier shoppst du individuell nach deinen Haaren und deiner Kopfhaut. Stell oben unter „Meine Haare“ deine Haardicke und deine Kopfhaut ein, dann siehst du direkt, was zu dir passt.</p></div>
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="q" type="search" placeholder="Suchen: Marke, Produkt oder „feine Haare fettig“" aria-label="Produkte durchsuchen">
     </div>
-    <p class="search-hint">Sucht in allen Produktarten gleichzeitig. Alles eingeordnet nach Inhaltsstoffen, nicht nach Werbung.</p>
 
 
     <div id="guide"></div>
@@ -617,7 +630,12 @@ __ROUTINE__
 
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
-    <div id="wissenListe"><div class="intro"><h1>Wissen</h1><p>Haarpflege einfach erklärt: ehrlich, ohne Marketing-Versprechen.</p></div>
+    <div id="wissenListe"><div class="intro"><h1>Wissen</h1></div>
+    <div class="searchwrap wsearch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
+    </div>
+    <div id="wissenSuche" aria-live="polite"></div>
     <div class="cards" id="wissenCards">
 
 
@@ -824,6 +842,34 @@ function openBook(card, done){
   setTimeout(() => { done(); shelf.style.visibility = ""; shelf.classList.remove("noflip"); fly.classList.add("fade"); }, 1480);
   setTimeout(() => fly.remove(), 1950);
 }
+/* Suche in den Wissenskapiteln: findet Schlagwörter im Titel, im Teaser und im ganzen Text */
+const WTEXT = WISSEN.map((w,i) => ({w, i, titel: plain(w.titel), all: plain(w.titel+" "+w.teaser+" "+w.html.replace(/<[^>]+>/g," ")),
+  raw: (w.teaser+" · "+w.html.replace(/<h2[\s\S]*?<\/h2>/,"").replace(/<\/(h3|h4|li|td|th)>/g," · ").replace(/<[^>]+>/g," ")).replace(/\s+/g," ").replace(/( ·)+/g," ·").trim()}));
+function wissenSnippet(raw, words){
+  const low = raw.toLowerCase(); let pos = -1;
+  for(const w of words){ const k = low.indexOf(w); if(k >= 0){ pos = k; break; } }
+  if(pos < 0) return esc(raw.slice(0,160)) + "…";
+  const a = Math.max(0, raw.lastIndexOf(" ", Math.max(0,pos-70))), e = raw.indexOf(" ", pos+130), b = e < 0 ? raw.length : e;
+  let t = esc(raw.slice(a,b));
+  for(const w of words) if(w.length > 2) t = t.replace(new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"), "<mark>$1</mark>");
+  return (a>0?"… ":"") + t + (b<raw.length?" …":"");
+}
+function renderWissenSuche(){
+  const q = (document.getElementById("wq").value||"").trim();
+  const box = document.getElementById("wissenSuche"), cards = document.getElementById("wissenCards");
+  if(!q){ box.innerHTML = ""; cards.hidden = false; return; }
+  const terms = q.split(/\s+/).map(plain).filter(Boolean);
+  const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const hits = WTEXT.filter(x => terms.every(t => x.all.includes(t)))
+    .map(x => ({...x, score: terms.reduce((n,t) => n + (x.titel.includes(t)?100:0) + x.all.split(t).length - 1, 0)}))
+    .sort((a,b) => b.score - a.score);
+  cards.hidden = true;
+  box.innerHTML = hits.length
+    ? `<ul class="wres">${hits.map(x => `<li><button type="button" data-w="${x.w.id}"><span class="kap">Kapitel ${x.i+1}${x.w.entwurf?" · Entwurf":""}</span><h3>${esc(x.w.titel)}</h3><p>${wissenSnippet(x.raw, words)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button></li>`).join("")}</ul>`
+    : `<p class="wnone">Dazu habe ich noch kein Kapitel. Probier ein anderes Wort, zum Beispiel „Spliss“, „Kopfhaut“ oder „Öl“.</p>`;
+  box.querySelectorAll("button[data-w]").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
+}
+document.getElementById("wq").addEventListener("input", renderWissenSuche);
 function renderWissen(){
   const w = WISSEN.find(x => x.id === state.wissen);
   document.getElementById("wissenListe").hidden = !!w;
