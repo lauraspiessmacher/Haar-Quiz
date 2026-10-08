@@ -136,6 +136,10 @@ main{padding-bottom:60px}
 .fit b{color:var(--ink);font-weight:500}
 
 .catdesc{color:var(--muted);font-size:15px;max-width:75ch;margin:16px 0 4px}
+.recbox{margin:6px 0 30px;padding:4px 18px 20px;border-radius:20px;background:#EFE7DD;border:1px solid var(--line-soft)}
+.recbox .grid{margin-top:14px}
+.recl{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:#382F2E;color:#F3ECE2;border-radius:999px;padding:3px 10px;margin-bottom:6px}
+@media (max-width:520px){ .recbox{padding:2px 12px 14px;margin-left:-4px;margin-right:-4px} }
 .count{font-family:var(--sans);font-size:14px;color:var(--muted);margin-left:8px;font-weight:400}
 h3.sec{font-size:24px;margin:24px 0 12px}
 
@@ -675,9 +679,9 @@ __ROUTINE__
     <div class="opts" data-key="dicke"></div>
     <h4>Kopfhaut</h4>
     <div class="opts" data-key="kopf"></div>
-    <h4>Zusatz</h4>
+    <h4>Brauchen deine Haare Repair?</h4>
     <div class="opts" data-key="kaputt"></div>
-    <p class="small">Produkte, die du mit <b>+</b> merkst, findest du oben unter <b>Merkliste</b>. „Kaputt“ wirkt nur bei Maske, Conditioner und Leave-in. Weißt du deine Haardicke nicht? <button type="button" class="linkbtn" id="toQuiz">Quiz machen</button></p>
+    <p class="small">Produkte, die du mit <b>+</b> merkst, findest du oben unter <b>Merkliste</b>. Repair wirkt nur bei Maske, Conditioner und Leave-in. Lässt du es leer, bekommst du keine Repair-Empfehlung. Weißt du deine Haardicke nicht? <button type="button" class="linkbtn" id="toQuiz">Quiz machen</button></p>
     <div class="actions">
       <button type="button" class="btn ghost" id="meReset">Zurücksetzen</button>
       <button type="submit" class="btn" id="meSave">Fertig</button>
@@ -716,12 +720,13 @@ const HITZE_FOR = {fein:["trocken","spray"],duenn:["trocken","spray","serum"],no
 /* ---------- Meine Haare ---------- */
 const DICKE = [["fein","Fein"],["duenn","Dünn"],["normal","Normal"],["dick","Dick"],["sehrdick","Sehr dick"]];
 const KOPF  = [["normal","Normal"],["trocken","Trocken"],["fettend","Schnell fettend"],["sensibel","Sensibel"],["juckend","Juckend"],["schuppen","Schuppig"]];
-const KAPUTT = [["ja","Meine Haare sind kaputt (z. B. blondiert)"]];
+const KAPUTT = [["protein","Beansprucht: gefärbt, viel Hitze oder viel Haarbruch"],["bond","Strukturgeschädigt: blondiert, chemisch behandelt oder nass wie Gummi"]];
 /* welche Kategorie passt zu welchem Kopfhauttyp */
 const KOPF2SHAMPOO = {normal:"normal",trocken:"trocken",fettend:"kraeftig",sensibel:"sensibel",juckend:"juckreiz",schuppen:"schuppen"};
 const KOPF2PFLEGE  = {normal:"normal",trocken:"trocken",fettend:"fettend",sensibel:"sensibel",juckend:"trocken",schuppen:"schuppen"};
 let me = {dicke:null,kopf:null,kaputt:null};
 try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign(me,s); } catch(e){}
+if(me.kaputt === "ja") me.kaputt = "bond"; /* alter Wert aus der Zeit mit nur einer Stufe */
 const meSet = () => !!(me.dicke||me.kopf||me.kaputt);
 let onlyMine = true;
 
@@ -787,11 +792,8 @@ function fitsMe(p){
 }
 function applyMine(items, type){
   if(!meSet() || !onlyMine) return {items, note:""};
+  /* Auch bei kaputten Haaren nicht nur Repair zeigen: Die Balance mit Feuchtigkeit und Nährendem ist wichtig */
   let out = items.filter(fitsMe);
-  if(me.kaputt && ["maske","conditioner","leavein"].includes(type)){
-    const k = out.filter(p=>p.cats.includes("kaputt"));
-    if(k.length) out = k;
-  }
   if(!out.length) return {items, note:"Dazu passt hier nichts genau, deshalb siehst du alle."};
   return {items:out, note:""};
 }
@@ -803,7 +805,7 @@ function meText(type){
   const parts=[];
   if((type==="shampoo"||type==="kopfhaut") && me.kopf) parts.push(KOPF_ADJ[me.kopf]+" Kopfhaut");
   if(HAIRGUIDE(type) && me.dicke) parts.push(DICKE_ADJ[me.dicke]+" Haar");
-  if(me.kaputt && ["maske","conditioner","leavein"].includes(type)) parts.push("kaputt");
+  if(me.kaputt && ["maske","conditioner","leavein"].includes(type)) parts.push(me.kaputt==="bond" ? "Bond Repair" : "Repair");
   return parts.join(" · ");
 }
 /* welche Kategorie-Chips gehören zu „Meine Haare“? */
@@ -812,6 +814,33 @@ function myCats(type){
   if(type==="kopfhaut") return me.kopf ? [KOPF2PFLEGE[me.kopf]] : [];
   if(type==="hitze") return me.dicke ? HITZE_FOR[me.dicke] : [];
   const c=[]; if(me.dicke) c.push(me.dicke); if(me.kaputt && DATA[type].cats.some(x=>x.id==="kaputt")) c.push("kaputt"); return c;
+}
+
+/* ---------- Meine Empfehlung: Feuchtigkeit, Nährend und, wenn nötig, Repair (Einordnung nach INCI, wirkung.json) ---------- */
+const REC_TYPES = ["maske","conditioner","leavein"];
+function pickRec(items, type){
+  if(!REC_TYPES.includes(type) || !meSet() || !onlyMine || !me.dicke) return [];
+  const best = list => list.slice().sort((a,b)=>(b.ws||0)-(a.ws||0) || byName(a,b))[0];
+  const out = [], used = new Set();
+  const add = (p, lab) => { if(p){ out.push([p, lab]); used.add(p); } };
+  const free = p => !used.has(p);
+  add(best(items.filter(p=>p.wk==="feucht" && !p.rk)) || best(items.filter(p=>p.wk==="feucht")), "Feuchtigkeit");
+  add(best(items.filter(p=>p.wk==="naehrend" && !p.rk && free(p))) || best(items.filter(p=>p.wk==="naehrend" && free(p))), "Nährend");
+  if(me.kaputt){
+    const rep = items.filter(p=>p.cats.includes("kaputt") && free(p));
+    const bond = rep.filter(p=>p.rk==="bond"), prot = rep.filter(p=>p.rk==="protein");
+    if(me.kaputt==="bond") add(best(bond) || best(prot), (best(bond) ? "Bond Repair" : "Repair mit Proteinen"));
+    else add(best(prot), "Repair mit Proteinen");
+  }
+  return out;
+}
+function recHtml(rec, type){
+  if(!rec.length) return "";
+  const hasRep = rec.some(([,l])=>/Repair/.test(l)), fine = !rec.some(([,l])=>l==="Nährend");
+  const ph = rec.map(([,l], i) => (l==="Feuchtigkeit" ? "Feuchtigkeit" : l==="Nährend" ? "etwas Nährendes" : l));
+  const liste = ph.length < 2 ? ph[0] : ph.slice(0,-1).join(", ") + " und " + ph[ph.length-1];
+  const txt = `Für die Balance: ${liste}. ${hasRep ? "Benutz sie im Wechsel, nicht nur Repair." : "Wechsel sie ab, je nachdem, was deine Haare gerade brauchen."}${fine ? " Nährende Produkte sind für deine Haardicke meist zu schwer, deshalb fehlt hier eins." : ""}`;
+  return `<div class="recbox"><h3 class="sec">Meine Empfehlung für dich</h3><p class="catdesc">${txt}</p><ul class="grid">${rec.map(([p,l]) => itemHtml(p, l)).join("")}</ul></div>`;
 }
 
 /* ---------- Sortierung wie in den Einzel-Guides ---------- */
@@ -957,7 +986,7 @@ function merkItemHtml(p){
   return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<div class="mtxt"><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span><span class="tag">${p.segment}</span>${buyHtml(p,true)}</div></li>`;
 }
 
-function itemHtml(p){
+function itemHtml(p, badge){
   const tags = [`<span class="tag">${p.segment}</span>`];
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
   if(p.dry) tags.push(`<span class="pill">Trockenes Öl</span>`);
@@ -988,7 +1017,7 @@ function itemHtml(p){
     if(p.tip){ body += p.tip.startsWith("Anwendung: ") ? `<div class="tip"><b>Anwendung:</b> ${esc(p.tip.slice(11))}</div>` : `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`; }
   }
   return `<li class="item">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
-    <div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
+    ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
     <div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
 }
 
@@ -1048,7 +1077,8 @@ function renderGuide(){
     let desc = "";
     if(state.cat!=="alle"){ items = items.filter(p=>p.cats.includes(state.cat)); const c=g.cats.find(c=>c.id===state.cat); desc = c?c.desc:""; }
     const r = applyMine(items, state.type); items = r.items.slice().sort(sorter(state.type, state.cat));
-    const title = state.cat==="alle" ? `Alle ${PLURAL[state.type]}` : label(state.type,state.cat);
+    if(state.cat==="alle" && !r.note){ const rec = pickRec(items, state.type); html += recHtml(rec, state.type); }
+    const title = state.cat==="alle" ? (meSet() && onlyMine && !r.note && relevantMe(state.type) ? `Alle passenden ${PLURAL[state.type]}` : `Alle ${PLURAL[state.type]}`) : label(state.type,state.cat);
     html += `<h3 class="sec">${esc(title)}<span class="count">${items.length}</span></h3>${desc?`<p class="catdesc">${desc}</p>`:""}${r.note?`<p class="catdesc">${r.note}</p>`:""}`;
     html += items.length ? `<ul class="grid">${items.map(p => itemHtml(p)).join("")}</ul>` : `<p class="empty">Dazu habe ich gerade kein Produkt in der Liste.</p>`;
   }
@@ -1107,7 +1137,7 @@ function drawOpts(){
 }
 function saveMe(){ try { localStorage.setItem("meineHaare", JSON.stringify(me)); } catch(e){} }
 /* Das Routine-Quiz speichert Dicke und Kopfhaut unter „Meine Haare“ */
-function reloadMe(){ try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign({dicke:null,kopf:null,kaputt:null}, s); } catch(e){} }
+function reloadMe(){ try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign({dicke:null,kopf:null,kaputt:null}, s); if(me.kaputt === "ja") me.kaputt = "bond"; } catch(e){} }
 window.addEventListener("storage", e => { if(e.key === "meineHaare"){ reloadMe(); render(); } });
 window.zeigeProdukte = type => { reloadMe(); onlyMine = true; state.view = "produkte"; state.type = type || "leavein"; state.cat = "alle"; if(window.closeQuiz) window.closeQuiz(); render(); window.scrollTo({top:0}); };
 document.getElementById("meBtn").onclick = () => { drawOpts(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); };

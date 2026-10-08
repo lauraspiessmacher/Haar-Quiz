@@ -1,0 +1,1292 @@
+{
+"maske|Garnier Wahre Schätze|1-Minute Haarkur Kokosmilch & Macadamia": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.05
+},
+"maske|Garnier Wahre Schätze|1-Minute Haarkur Reiswasser Ritual & Stärke": {
+"w": "naehrend",
+"r": "",
+"s": 0.98
+},
+"maske|Garnier Wahre Schätze|1-Minute Haarkur Honig Schätze": {
+"w": "naehrend",
+"r": "",
+"s": 1.59
+},
+"maske|Pantene Pro-V|Miracles Hydra Glow Deep Hydration Haarmaske": {
+"w": "feucht",
+"r": "",
+"s": 0.4
+},
+"maske|Pantene Pro-V|Hair Glowtox Haarkur": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"maske|Garnier Fructis|Hair Food Aloe Vera 3in1 Maske": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.66
+},
+"maske|Garnier Fructis|Hair Food Ananas 3in1 Maske": {
+"w": "naehrend",
+"r": "protein",
+"s": 2.05
+},
+"maske|Garnier Fructis|Hair Food Kiwi Menthol 3in1 Maske": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.21
+},
+"maske|Garnier Fructis|Keratin Sleek Maske": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.88
+},
+"maske|L'Oréal Elvital|Hydra Hyaluronic Feuchtigkeitsmaske": {
+"w": "feucht",
+"r": "",
+"s": 0.78
+},
+"maske|L'Oréal Elvital|Dream Length Super Spitzen Retter Maske": {
+"w": "naehrend",
+"r": "",
+"s": 1.02
+},
+"maske|L'Oréal Elvital|Glycolic Gloss Spiegelglanz Maske": {
+"w": "feucht",
+"r": "",
+"s": 0.74
+},
+"maske|NEQI|Repair Reveal Haarkur": {
+"w": "feucht",
+"r": "protein",
+"s": 0.27
+},
+"maske|OGX|Coconut Miracle Oil Haarkur": {
+"w": "feucht",
+"r": "",
+"s": 0.57
+},
+"maske|Balea|Intensivpflege 3in1 Haarmaske": {
+"w": "naehrend",
+"r": "",
+"s": 1.46
+},
+"maske|Schwarzkopf Gliss|Total Repair 4in1 Bonding Haarmaske": {
+"w": "feucht",
+"r": "bond",
+"s": 0.59
+},
+"maske|Bali Curls|Deep Repair Mask": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.59
+},
+"maske|Dejan Garz|The Foundation Haarmaske": {
+"w": "feucht",
+"r": "",
+"s": 1.32
+},
+"maske|Ida Warg|Repair Hair Mask": {
+"w": "naehrend",
+"r": "",
+"s": 1.07
+},
+"maske|Ida Warg|Intense Moisture Hair Mask": {
+"w": "naehrend",
+"r": "",
+"s": 0.78
+},
+"maske|ISANA Professional|Haarmaske Arganöl & Pflege": {
+"w": "feucht",
+"r": "",
+"s": 1.29
+},
+"maske|Herbal Essences|Repair Arganöl Haarmaske": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"maske|ISANA Professional|Haarmaske Intensiv & Pflege": {
+"w": "naehrend",
+"r": "",
+"s": 1.62
+},
+"maske|ISANA Professional|Haarmaske Locken Traum": {
+"w": "naehrend",
+"r": "",
+"s": 1.89
+},
+"maske|Schwarzkopf Gliss|Oil Nutritive 4in1 Bonding Haarmaske": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.76
+},
+"maske|Pantene Pro-V|Grow Abundant Anti-Haarverlust Maske": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"maske|syoss|Intense Keratin Haarmaske": {
+"w": "feucht",
+"r": "protein",
+"s": 0.59
+},
+"maske|Garnier Fructis|Locken Methode Feuchtigkeitsauffüllende Maske": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.59
+},
+"maske|OGX|Argan Oil of Morocco Extra Strength Hair Mask": {
+"w": "feucht",
+"r": "protein",
+"s": 0.67
+},
+"maske|MONDAY|Smooth Anti-Frizz Haarmaske": {
+"w": "naehrend",
+"r": "",
+"s": 1.14
+},
+"maske|MONDAY|Deep Moisture Haarmaske": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.14
+},
+"maske|OUAI|Fine/Medium Hair Treatment Masque": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.19
+},
+"maske|Living Proof|Moisture Rescue Mask": {
+"w": "naehrend",
+"r": "",
+"s": 0.71
+},
+"maske|Color Wow|Dreaming Advanced Repair Treatment": {
+"w": "naehrend",
+"r": "",
+"s": 1.56
+},
+"maske|Oribe|Signature Moisture Masque": {
+"w": "naehrend",
+"r": "",
+"s": 0.45
+},
+"maske|Elizavecca|CER-100 Collagen Ceramide Coating Protein Treatment": {
+"w": "feucht",
+"r": "",
+"s": 0.57
+},
+"maske|Shiseido fino|Premium Touch Haarmaske": {
+"w": "feucht",
+"r": "protein",
+"s": 1.55
+},
+"maske|Gisou|Honey Gloss Ceramide Therapy Hair Mask": {
+"w": "naehrend",
+"r": "",
+"s": 1.14
+},
+"maske|Kérastase|Première Masque Filler Réparateur": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"maske|Wella Professionals|Ultimate Repair Mask": {
+"w": "feucht",
+"r": "",
+"s": 0.42
+},
+"maske|L'Oréal Professionnel|Absolut Repair Molecular Mask": {
+"w": "feucht",
+"r": "",
+"s": 1.03
+},
+"maske|Redken|Acidic Bonding Concentrate 5-Min Liquid Mask": {
+"w": "feucht",
+"r": "bond",
+"s": 0.29
+},
+"maske|Kérastase|Résistance Masque Thérapiste": {
+"w": "naehrend",
+"r": "",
+"s": 1.12
+},
+"maske|Maria Nila|Structure Repair Masque": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.97
+},
+"maske|L'Oréal Professionnel|Metal DX Mask": {
+"w": "naehrend",
+"r": "",
+"s": 0.42
+},
+"maske|Redken|Extreme Mask": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.81
+},
+"maske|Kérastase|Gloss Absolu Masque Crème Hydra-Glaze": {
+"w": "naehrend",
+"r": "",
+"s": 0.82
+},
+"maske|Kérastase|Genesis Masque Reconstituant": {
+"w": "naehrend",
+"r": "",
+"s": 0.42
+},
+"maske|Kérastase|Nutritive Masquintense": {
+"w": "feucht",
+"r": "",
+"s": 0.53
+},
+"maske|Redken|All Soft Heavy Cream": {
+"w": "feucht",
+"r": "",
+"s": 0.46
+},
+"maske|Redken|Acidic Color Gloss Mask": {
+"w": "feucht",
+"r": "",
+"s": 0.74
+},
+"maske|Amika|Hydro Rush Intense Moisture Mask": {
+"w": "naehrend",
+"r": "",
+"s": 1.58
+},
+"maske|Color Wow|Money Masque": {
+"w": "feucht",
+"r": "protein",
+"s": 0.67
+},
+"maske|Maria Nila|True Soft Masque": {
+"w": "naehrend",
+"r": "",
+"s": 1.26
+},
+"maske|K18|Leave-In Molecular Repair Hair Mask": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.78
+},
+"maske|Kérastase|Première Concentré Décalcifiant": {
+"w": "feucht",
+"r": "protein",
+"s": 1.33
+},
+"maske|Olaplex|Rich Hydration Mask": {
+"w": "naehrend",
+"r": "",
+"s": 0
+},
+"maske|Olaplex|Weightless Nourishing Mask": {
+"w": "feucht",
+"r": "",
+"s": 0
+},
+"maske|Wella Professionals|Ultimate Smooth Mask": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"maske|Wella Professionals|Oil Reflections Luminous Reboost Mask": {
+"w": "feucht",
+"r": "",
+"s": 0.4
+},
+"maske|Coco & Eve|Bond Building Pre-Shampoo Treatment": {
+"w": "naehrend",
+"r": "",
+"s": 0.65
+},
+"conditioner|L'Oréal Paris Elvital|Glycolic Gloss Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|L'Oréal Paris Elvital|Glycolic Gloss Spiegelglanz Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.49
+},
+"conditioner|L'Oréal Paris Elvital|Collagen Lifter Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.12
+},
+"conditioner|Pantene Pro-V|Repair & Care Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|L'Oréal Paris Elvital|Hydra Hyaluronic Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.71
+},
+"conditioner|Herbal Essences|Fiji mit Kokosnussextrakt Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|Herbal Essences|Blütensanft Rosenduft Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|L'Oréal Paris Elvital|Dream Length Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.98
+},
+"conditioner|Bali Curls|Moisturising Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.88
+},
+"conditioner|Aussie|Bouncy Curls Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|L'Oréal Paris Elvital|Fiber Booster Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.97
+},
+"conditioner|Schwarzkopf Gliss|Liquid Silk Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.4
+},
+"conditioner|L'Oréal Paris Elvital|Bond Repair Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|Herbal Essences|Repair Arganöl Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|syoss|Intense Keratin Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.59
+},
+"conditioner|Garnier Wahre Schätze|Sanfte Hafermilch Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.72
+},
+"conditioner|Garnier Wahre Schätze|Honig Schätze Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.94
+},
+"conditioner|Langhaarmädchen|Hydrate & Shine Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.43
+},
+"conditioner|L'Oréal Paris Elvital|Hydra Hyaluronic Pure Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.02
+},
+"conditioner|Balea Professional|Oil Repair Intensiv Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.71
+},
+"conditioner|John Frieda|Frizz Ease Wunder-Reparatur Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 1.21
+},
+"conditioner|Herbal Essences|Feuchtigkeit Aloe Vera Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|Herbal Essences|Limettenduft Tiefenreinigung & Glanz Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|Jean&Len|Hydration Pfirsich Chia Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.67
+},
+"conditioner|Garnier Fructis|Keratin Sleek Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.42
+},
+"conditioner|OGX|Argan Oil of Morocco Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.97
+},
+"conditioner|Balea Professional|Aqua Hyaluron Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.57
+},
+"conditioner|John Frieda|Frizz Ease Traumlocken Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.98
+},
+"conditioner|Langhaarmädchen|Lovely Long Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 0.5
+},
+"conditioner|Balea Professional|Plex Care Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 1.26
+},
+"conditioner|OGX|Biotin & Collagen Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.5
+},
+"conditioner|OGX|Bond Protein Repair Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.63
+},
+"conditioner|Balea Professional|Keratin Repair Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 0.63
+},
+"conditioner|Balea|Feuchtigkeit Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.08
+},
+"conditioner|Bali Curls|Bonding Repair Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.33
+},
+"conditioner|Santé|Intense Hydration Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.9
+},
+"conditioner|Balea|Locken beauty essentials Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.55
+},
+"conditioner|NEQI|Diamond Glass Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.59
+},
+"conditioner|John Frieda|Frizz Ease Unendlich Smooth Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 0.98
+},
+"conditioner|Balea|Intensivpflege Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.59
+},
+"conditioner|Pantene Pro-V|Moisture Boost Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|Aussie|Oh My Gloss Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|NEQI|Repair Reveal Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 1.33
+},
+"conditioner|Balea Professional|Hydra Volume Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.03
+},
+"conditioner|Santé|Glossy Shine Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.66
+},
+"conditioner|OGX|Coconut Miracle Oil Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.42
+},
+"conditioner|Pomélo+Co|Shine Therapy Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 1.26
+},
+"conditioner|Balea Professional|Glossy Color Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.1
+},
+"conditioner|Pantene Pro-V|Miracles Lift & Volume Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|Balea|Molecular Care Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.49
+},
+"conditioner|Pantene Pro-V|Glowtox Conditioner": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"conditioner|NEQI|Moisture Mystery Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 0.33
+},
+"conditioner|Pomélo+Co|Molecular Repair Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 1.1
+},
+"conditioner|Garnier Wahre Schätze|Reiswasser Ritual & Stärke Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.48
+},
+"conditioner|syoss|Intense Glaze Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.59
+},
+"conditioner|Schwarzkopf Gliss|Aqua Revive Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.51
+},
+"conditioner|MONDAY|Moisture Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.71
+},
+"conditioner|Balea Professional|Glow & Shine Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.82
+},
+"conditioner|Balea Professional|Brilliant Blond Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 1.4
+},
+"conditioner|alverde|Ultra Sensitiv Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.1
+},
+"conditioner|Balea Professional|Traumlocken Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.82
+},
+"conditioner|OGX|Brazilian Keratin Smooth Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.88
+},
+"conditioner|Schwarzkopf Gliss|Sealing Miracle Sealing Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 0.49
+},
+"conditioner|ISANA Professional|Plex Spülung": {
+"w": "feucht",
+"r": "protein",
+"s": 1.1
+},
+"conditioner|OGX|Keratin Oil Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.36
+},
+"conditioner|Dejan Garz|The Foundation Conditioner Deep Hydration": {
+"w": "feucht",
+"r": "",
+"s": 1.37
+},
+"conditioner|ISANA Professional|Spülung Arganöl & Pflege": {
+"w": "feucht",
+"r": "",
+"s": 0.83
+},
+"conditioner|ISANA|Curltastic Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.9
+},
+"conditioner|NIVEA|Hairmilk Shine Spülung": {
+"w": "feucht",
+"r": "",
+"s": 0.78
+},
+"conditioner|being|Bye Bye Frizz Anti-Frizz Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 1.6
+},
+"conditioner|ISANA Professional|Spülung Glycol & Glanz": {
+"w": "feucht",
+"r": "",
+"s": 0.82
+},
+"conditioner|Garnier Wahre Schätze|Kokosmilch & Macadamia Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 1.02
+},
+"conditioner|MONDAY|Repair Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 1.02
+},
+"conditioner|ISANA Professional|Glycolic Shine Spülung": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.85
+},
+"conditioner|neboa|Repair & Shine Regenerierende Spülung": {
+"w": "naehrend",
+"r": "protein",
+"s": 2.19
+},
+"conditioner|MONDAY|Smooth Antifrizz Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.67
+},
+"conditioner|OGX|ProGrowth + Peptide Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.53
+},
+"conditioner|Coco & Eve|Bond Therapy Pro Bond Conditioner": {
+"w": "feucht",
+"r": "protein",
+"s": 0.75
+},
+"conditioner|Redken|Extreme Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.82
+},
+"conditioner|Olaplex|No.5 FINE Bond Maintenance Conditioner": {
+"w": "feucht",
+"r": "bond",
+"s": 1.02
+},
+"conditioner|Olaplex|No.5 CURL Bond Shaper Hydrating Curl Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.87
+},
+"conditioner|Living Proof|Full Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.85
+},
+"conditioner|Living Proof|Restore Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.61
+},
+"conditioner|Living Proof|Perfect hair Day Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 0.5
+},
+"conditioner|Living Proof|No Frizz Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.54
+},
+"conditioner|OUAI|Thick Hair Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 0.12
+},
+"conditioner|being|Curl Power Locken Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 1.6
+},
+"conditioner|NEQI|Diamond Glass Mirror Rinse": {
+"w": "feucht",
+"r": "",
+"s": 0.59
+},
+"conditioner|Schwarzkopf Gliss|Ultimate Repair Express-Repair-Kur 7 sec": {
+"w": "feucht",
+"r": "",
+"s": 1.36
+},
+"conditioner|ISANA Professional|Haarfluid Wunder Express": {
+"w": "feucht",
+"r": "protein",
+"s": 1.0
+},
+"conditioner|Kérastase|Chroma Absolu Soin Acide Chroma Gloss": {
+"w": "feucht",
+"r": "",
+"s": 0.74
+},
+"conditioner|L'Oréal Professionnel|Serie Expert Absolut Repair Molecular Rinse-Off Serum": {
+"w": "feucht",
+"r": "protein",
+"s": 1.33
+},
+"conditioner|L'Oréal Paris Elvital|Dream Length Wonder Water": {
+"w": "feucht",
+"r": "",
+"s": 1.0
+},
+"conditioner|amika|flash instant shine mask": {
+"w": "feucht",
+"r": "protein",
+"s": 1.33
+},
+"leavein|Pantene Pro-V|Miracles Molecular Bond Repair Wunder Haarcreme": {
+"w": "naehrend",
+"r": "",
+"s": 1.39
+},
+"leavein|Pantene Pro-V|Leave-In Spray Sunkiss Glow": {
+"w": "feucht",
+"r": "",
+"s": 1.2
+},
+"leavein|Schwarzkopf Gliss|Haarkur Glanz Booster Liquid Silk": {
+"w": "naehrend",
+"r": "",
+"s": 0.36
+},
+"leavein|Balea|Leave-In Pflege feuchtigkeitsspendend": {
+"w": "feucht",
+"r": "",
+"s": 1.49
+},
+"leavein|Aussie|Leave-In Haarserum 100 Hours Hydration": {
+"w": "naehrend",
+"r": "",
+"s": 0.63
+},
+"leavein|Balea Professional|Leave-In Haarmaske Molecular Care": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"leavein|Schwarzkopf Gliss|Sprühkur Bonding Micro Repair": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.49
+},
+"leavein|Herbal Essences|Leave-In Spray Blütensanft Rosenduft": {
+"w": "feucht",
+"r": "",
+"s": 1.16
+},
+"leavein|Pantene Pro-V|Leave-In Moisture Boost Heat & Glow": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"leavein|Schwarzkopf Gliss|Haarkur Night Elixier Ultimate Repair": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.36
+},
+"leavein|Garnier Fructis|Leave-In Creme Aloe Air Dry": {
+"w": "feucht",
+"r": "",
+"s": 2.37
+},
+"leavein|L'Oréal Elvital|Leave-In Haarserum Bond Repair": {
+"w": "feucht",
+"r": "",
+"s": 1.41
+},
+"leavein|Schwarzkopf Gliss|Sprüh-Conditioner Express-Repair Liquid Silk": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.49
+},
+"leavein|Garnier Fructis|Haarserum Keratin Sleek & Stay": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"leavein|L'Oréal Elvital|Leave-In Serum Glycolic Gloss Spiegelglanz": {
+"w": "naehrend",
+"r": "",
+"s": 0.63
+},
+"leavein|Dejan Garz|Leave-In Cream The Foundation": {
+"w": "feucht",
+"r": "",
+"s": 1.25
+},
+"leavein|L'Oréal Elvital|Leave-In Serum Ultimate Glycolic Gloss": {
+"w": "feucht",
+"r": "",
+"s": 1.21
+},
+"leavein|L'Oréal Elvital|Öl Magique Midnight Serum": {
+"w": "naehrend",
+"r": "",
+"s": 1.12
+},
+"leavein|Jean&Len|Pflegespray Keratin Repair": {
+"w": "feucht",
+"r": "protein",
+"s": 0.75
+},
+"leavein|Aussie|Leave-In Haarserum Oh My Gloss": {
+"w": "naehrend",
+"r": "",
+"s": 0.82
+},
+"leavein|Pomélo+Co|Haarmaske Shine Therapy": {
+"w": "feucht",
+"r": "",
+"s": 1.63
+},
+"leavein|Balea Professional|Keratin Repair Over Night Fluid": {
+"w": "feucht",
+"r": "protein",
+"s": 1.38
+},
+"leavein|Langhaarmädchen|Spitzenserum Lovely Long": {
+"w": "feucht",
+"r": "protein",
+"s": 1.94
+},
+"leavein|NEQI|Leave-In Creme Moisture Mystery": {
+"w": "feucht",
+"r": "protein",
+"s": 0.78
+},
+"leavein|Pomélo+Co|Haarmaske Molecular Repair": {
+"w": "feucht",
+"r": "protein",
+"s": 1.27
+},
+"leavein|Dejan Garz|Leave-In Serum The Foundation": {
+"w": "feucht",
+"r": "",
+"s": 1.4
+},
+"leavein|Balea Professional|Leave-In Serum Plex Care": {
+"w": "feucht",
+"r": "protein",
+"s": 1.26
+},
+"leavein|Jean&Len|Leave-In Haarmaske Peptide Intense Repair": {
+"w": "feucht",
+"r": "",
+"s": 0.94
+},
+"leavein|Bali Curls|Bonding Repair Overnight Elixir No.4": {
+"w": "feucht",
+"r": "",
+"s": 0.78
+},
+"leavein|syoss|Haarserum Intense Glaze": {
+"w": "naehrend",
+"r": "",
+"s": 0.32
+},
+"leavein|Balea Professional|Leave-In Serum Brilliant Blond Hair Sealer": {
+"w": "feucht",
+"r": "protein",
+"s": 1.37
+},
+"leavein|Garnier Wahre Schätze|Leave-In Haarkur Honig": {
+"w": "feucht",
+"r": "",
+"s": 1.52
+},
+"leavein|Bali Curls|Leave-In Cream Bonding Repair No.3": {
+"w": "naehrend",
+"r": "",
+"s": 2.43
+},
+"leavein|Pantene Pro-V|Leave-In Haarserum Miracles Milk To Water": {
+"w": "naehrend",
+"r": "",
+"s": 0.63
+},
+"leavein|OGX|Overnight Serum Rescue Fusions": {
+"w": "feucht",
+"r": "protein",
+"s": 1.14
+},
+"leavein|Herbal Essences|Haarserum Fiji mit Kokosnussöl": {
+"w": "naehrend",
+"r": "",
+"s": 0.63
+},
+"leavein|Balea Professional|Feuchtigkeitsfiller Aqua Hyaluron": {
+"w": "naehrend",
+"r": "",
+"s": 0.74
+},
+"leavein|Schwarzkopf Gliss|Sprühnebel Night Glanz": {
+"w": "feucht",
+"r": "",
+"s": 0.59
+},
+"leavein|Balea Professional|Haarserum Glow & Shine": {
+"w": "feucht",
+"r": "",
+"s": 1.14
+},
+"leavein|Balea|Sprühpflege Seidenglanz 5in1": {
+"w": "feucht",
+"r": "",
+"s": 1.23
+},
+"leavein|NEQI|Haarserum Opulent Oil": {
+"w": "feucht",
+"r": "protein",
+"s": 0.53
+},
+"leavein|John Frieda|Haarserum Frizz Ease Der Bändiger": {
+"w": "naehrend",
+"r": "",
+"s": 0.59
+},
+"leavein|Bali Curls|High Shine Gloss Leave-In Cream No.3": {
+"w": "feucht",
+"r": "",
+"s": 0.63
+},
+"leavein|OGX|ProGrowth + Peptide Serum Styling Spray": {
+"w": "feucht",
+"r": "protein",
+"s": 1.54
+},
+"leavein|Aussie|Miracle Moist Leave-In Spray": {
+"w": "feucht",
+"r": "",
+"s": 0.74
+},
+"leavein|L'Oréal Elvital|Dream Length Dreamy Sleek Serum": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.82
+},
+"leavein|ISANA Professional|Argan Leave-in Conditioner": {
+"w": "feucht",
+"r": "",
+"s": 1.23
+},
+"leavein|ISANA Professional|Haarkur 13in1 Intensiv & Pflege": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.03
+},
+"leavein|Schwarzkopf Gliss|Sealing Miracle Sealing Fluid": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.36
+},
+"leavein|Schwarzkopf Gliss|Sealing Miracle Instant Sealing Spray": {
+"w": "naehrend",
+"r": "protein",
+"s": 0.49
+},
+"leavein|Garnier Wahre Schätze|Haarserum Honig reparierend": {
+"w": "feucht",
+"r": "",
+"s": 1.46
+},
+"leavein|John Frieda|Frizz Ease Der Retter Weightless Repair Serum": {
+"w": "feucht",
+"r": "",
+"s": 0.78
+},
+"leavein|John Frieda|Frizz Ease Der Beschützer Moisture Protect Serum": {
+"w": "naehrend",
+"r": "",
+"s": 0.59
+},
+"leavein|Schwarzkopf Gliss|Sprüh-Conditioner Express-Repair Aqua Revive": {
+"w": "naehrend",
+"r": "",
+"s": 0.49
+},
+"leavein|Pantene Pro-V|Leave-In Spray Glowtox": {
+"w": "feucht",
+"r": "",
+"s": 1.16
+},
+"leavein|Kérastase|Nutritive 8H Magic Night Serum": {
+"w": "feucht",
+"r": "",
+"s": 0.5
+},
+"leavein|Kérastase|Genesis Défense Thermique": {
+"w": "naehrend",
+"r": "",
+"s": 0.74
+},
+"leavein|Kérastase|Gloss Absolu Anti-Frizz Glaze Milk": {
+"w": "naehrend",
+"r": "",
+"s": 0.78
+},
+"leavein|Kérastase|Résistance Ciment Thermique": {
+"w": "feucht",
+"r": "",
+"s": 0.67
+},
+"leavein|Kérastase|Nutritive Nutri-Supplement Split Ends Serum": {
+"w": "naehrend",
+"r": "",
+"s": 0.69
+},
+"leavein|Kérastase|Nutritive Nectar Thermique": {
+"w": "feucht",
+"r": "",
+"s": 0.67
+},
+"leavein|Kérastase|Résistance Sérum Thérapiste": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"leavein|Kérastase|Curl Manifesto Gelée Curl Contour": {
+"w": "naehrend",
+"r": "",
+"s": 0.57
+},
+"leavein|Kérastase|Première Sérum Filler Fondamental": {
+"w": "naehrend",
+"r": "",
+"s": 0.74
+},
+"leavein|Redken|Acidic Bonding Concentrate Leave-in Treatment": {
+"w": "glaettend",
+"r": "bond",
+"s": 0
+},
+"leavein|Redken|Acidic Color Gloss Heat Protection Treatment": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"leavein|Amika|Hydro Rush Intense Moisture Leave-in Conditioner": {
+"w": "naehrend",
+"r": "",
+"s": 1.6
+},
+"leavein|Coco & Eve|Like a Virgin Leave-in Conditioner": {
+"w": "naehrend",
+"r": "protein",
+"s": 1.15
+},
+"leavein|OUAI|Leave In Conditioner North Bondi": {
+"w": "feucht",
+"r": "",
+"s": 0.28
+},
+"leavein|OGX|Bond Protein Repair Leave-in Conditioning Mist": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"leavein|Coco & Eve|Intensive Hair Repairing Leave-In Treatment": {
+"w": "feucht",
+"r": "bond",
+"s": 1.29
+},
+"leavein|Living Proof|Leave-in Conditioning Spray": {
+"w": "feucht",
+"r": "",
+"s": 1.98
+},
+"leavein|Redken|Acidic Bonding Curls Leave-in Treatment": {
+"w": "feucht",
+"r": "bond",
+"s": 1.39
+},
+"leavein|L'Oréal Professionnel|Absolut Repair Molecular Leave-In Mask": {
+"w": "naehrend",
+"r": "",
+"s": 0.74
+},
+"leavein|Kérastase|Blond Absolu Blonde Guard": {
+"w": "naehrend",
+"r": "",
+"s": 0.74
+},
+"leavein|Olaplex|No.5 Leave-In Moisturize & Mend": {
+"w": "naehrend",
+"r": "bond",
+"s": 1.5
+},
+"leavein|L'Oréal Professionnel|Metal DX High Protection Cream": {
+"w": "feucht",
+"r": "protein",
+"s": 0.74
+},
+"leavein|Redken|Naked Gloss Lightweight Shine Oil": {
+"w": "naehrend",
+"r": "",
+"s": 0.53
+},
+"leavein|Ida Warg|Moisture Hair Serum": {
+"w": "naehrend",
+"r": "",
+"s": 0.92
+},
+"leavein|Redken|All Soft Moisture Restore Leave-In": {
+"w": "naehrend",
+"r": "",
+"s": 0.85
+},
+"leavein|Olaplex|No.6 Bond Smoother": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.77
+},
+"leavein|Color Wow|Money Mist": {
+"w": "feucht",
+"r": "protein",
+"s": 1.04
+},
+"leavein|Goldwell|Dualsenses Just Smooth 6 Effects Serum": {
+"w": "feucht",
+"r": "",
+"s": 0.77
+},
+"leavein|Shu Uemura|Essence Absolue Universal Balm": {
+"w": "naehrend",
+"r": "",
+"s": 1.43
+},
+"leavein|Goldwell|Dualsenses Rich Repair 6 Effects Serum": {
+"w": "feucht",
+"r": "",
+"s": 0.77
+},
+"leavein|Olaplex|No.9 Bond Protector Nourishing Hair Serum": {
+"w": "feucht",
+"r": "bond",
+"s": 2.01
+},
+"leavein|Redken|Acidic Bonding Concentrate 24/7 Serum": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.78
+},
+"leavein|Redken|All Soft Mega Curls Hydramelt": {
+"w": "naehrend",
+"r": "",
+"s": 0.53
+},
+"leavein|OUAI|Curl Crème": {
+"w": "naehrend",
+"r": "",
+"s": 1.8
+},
+"leavein|Wella Professionals|Ultimate Repair Miracle Hair Rescue": {
+"w": "feucht",
+"r": "",
+"s": 1.03
+},
+"leavein|Wella Professionals|Ultimate Repair Protective Leave-In": {
+"w": "naehrend",
+"r": "",
+"s": 0.67
+},
+"leavein|Wella Professionals|Ultimate Repair Night Serum": {
+"w": "naehrend",
+"r": "",
+"s": 0.12
+},
+"leavein|epres|Bond Repair Treatment": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.74
+},
+"leavein|Living Proof|Triple Bond Complex Hair Strengthener": {
+"w": "naehrend",
+"r": "bond",
+"s": 1.37
+},
+"leavein|K18|Leave-In Molecular Repair Hair Mask": {
+"w": "naehrend",
+"r": "bond",
+"s": 0.78
+},
+"leavein|Oribe|Hair Alchemy Fortifying Treatment Serum": {
+"w": "feucht",
+"r": "",
+"s": 0.82
+},
+"leavein|Oribe|Priming Lotion Leave-In Conditioning Detangler": {
+"w": "feucht",
+"r": "",
+"s": 1.23
+},
+"leavein|Oribe|Supershine Moisturizing Cream": {
+"w": "feucht",
+"r": "",
+"s": 0.5
+},
+"leavein|Oribe|Gold Lust Restorative Night Crème for Hair": {
+"w": "naehrend",
+"r": "",
+"s": 0.79
+},
+"leavein|Kérastase|Gloss Absolu Frizz-Glaze Cream": {
+"w": "feucht",
+"r": "",
+"s": 0.78
+},
+"leavein|Gisou|Honey Milk Active Repair Leave-In Conditioner Mist": {
+"w": "feucht",
+"r": "protein",
+"s": 1.84
+},
+"leavein|Wella Professionals|Ultimate Smooth Miracle Oil Serum": {
+"w": "glaettend",
+"r": "",
+"s": 0
+},
+"leavein|Wella Professionals|Ultimate Smooth 24/7 Silky Milk": {
+"w": "feucht",
+"r": "",
+"s": 1.43
+}
+}

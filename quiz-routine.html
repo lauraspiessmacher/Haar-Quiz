@@ -504,7 +504,7 @@ function plan(a){
   const chips = [`${n}× waschen`, `${m}× Maske`];
   if(sportDays.length) chips.push(`${sportDays.length}× Sport`);
   chips.push({wenig:"wenig Aufwand", mittel:"mittlerer Aufwand", viel:"viel Aufwand"}[effort]);
-  return {T, week, regel, chips, dk, st, kaputt: st >= 2};
+  return {T, week, regel, chips, dk, st, kaputt: st >= 2, repStufe: bond ? "bond" : repair ? "protein" : null};
 }
 
 /* ---------- Ergebnis ---------- */
@@ -526,7 +526,7 @@ function result(){
     const me = load("meineHaare") || {};
     me.dicke = a.dicke || me.dicke || null;
     me.kopf = (a.kopf === "sensibel" && me.kopf === "juckend") ? "juckend" : (a.kopf || me.kopf || null);
-    if(R.kaputt) me.kaputt = "ja";
+    me.kaputt = R.repStufe; /* Repair-Stufe für die Produktempfehlung: bond, protein oder keine */
     localStorage.setItem("meineHaare", JSON.stringify(me));
   } catch(e){}
 
@@ -546,7 +546,7 @@ function result(){
     <div class="tbl tblw"><table class="week">${weekRows}</table></div>
     <h2 class="sec">Regelmäßig</h2>
     <div class="tbl tblw"><table class="week">${regelRows}</table></div>
-    <div class="box"><h3>Welche Produkte?</h3><p>Hier im Quiz nenne ich bewusst keine einzelnen Produkte. In der Produktsektion findest du meine Einschätzungen, von Drogerie bis High-End. Deine Haardicke und deinen Kopfhauttyp aus diesem Quiz habe ich unter „Meine Haare“ gespeichert, so siehst du dort direkt, was zu dir passt.</p>
+    <div class="box"><h3>Welche Produkte?</h3><p>Hier im Quiz nenne ich bewusst keine einzelnen Produkte. In der Produktsektion findest du meine Einschätzungen, von Drogerie bis High-End. Deine Haardicke, deinen Kopfhauttyp und ob deine Haare Repair brauchen, habe ich unter „Meine Haare“ gespeichert. So siehst du dort direkt, was zu dir passt, und oben meine Empfehlung mit Feuchtigkeit, Nährendem und, wenn nötig, Repair.</p>
       ${inEmbed ? `<button class="secondary" id="toProducts" style="margin-bottom:14px">Passende Produkte ansehen</button>` : ""}</div>
     <div class="copyrow"><button class="primary" id="copy">Wochenplan kopieren</button><span class="copied" id="copied" role="status"></span></div>
     <div class="actions"><button class="ghost" id="again">Quiz neu starten</button></div>
