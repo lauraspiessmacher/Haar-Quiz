@@ -1,77 +1,70 @@
 <!-- BRIEF START: Brief-Animation vor dem Quiz-Ergebnis (Quelle: notizen/brief/brief.html, eingebaut mit notizen/brief/einbauen.py) -->
 <style>
-.brf{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:var(--bg,#382F2E);cursor:pointer;
-  --w:min(84vw,440px);--h:calc(var(--w) * .66);--paper:#F7F4EE;--paper2:#ECE7DF;--seal:#151212;
-  animation:brfIn .35s ease both}
+.brf{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;
+  background:radial-gradient(70% 60% at 50% 48%,#433938 0%,#382F2E 60%,#2c2524 100%);
+  --w:min(84vw,440px);--h:calc(var(--w) * .66);animation:brfIn .35s ease both}
 .brf.weg{animation:brfOut .7s ease both}
-.brf .env{position:relative;width:var(--w);height:var(--h);perspective:1400px;transform:translateY(calc(var(--h) * .22));filter:drop-shadow(0 26px 30px rgba(0,0,0,.35))}
-.brf .papier{background-color:var(--paper);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45 0 0 0 0 .42 0 0 0 0 .38 0 0 0 .16 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-.brf .back{position:absolute;inset:0;border-radius:3px;background-color:var(--paper2);z-index:1}
-.brf .brief{position:absolute;left:5%;right:5%;top:5%;height:90%;box-sizing:border-box;z-index:2;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:9%;text-align:center;color:#382F2E;
-  box-shadow:0 -2px 10px rgba(0,0,0,.08);animation:brfZiehen .9s cubic-bezier(.3,.1,.2,1) 2.05s both}
-.brf .brief .klein{font-family:var(--sans,sans-serif);font-size:calc(var(--w) * .026);letter-spacing:.24em;text-transform:uppercase;color:#8C7D77}
-.brf .brief .gross{font-family:var(--serif,Georgia,serif);font-size:calc(var(--w) * .085);line-height:1.05;margin-top:.35em}
-.brf .brief .linie{width:34%;height:1px;background:rgba(56,47,46,.25);margin-top:1.1em}
-.brf .tasche{position:absolute;inset:0;z-index:3;pointer-events:none}
-.brf .tasche svg{display:block;width:100%;height:100%}
-.brf .klappe{position:absolute;left:0;right:0;top:0;height:60%;z-index:4;transform-origin:50% 0;clip-path:polygon(0 0,100% 0,50% 100%);
-  animation:brfKlappe .75s cubic-bezier(.5,0,.3,1) 1.35s both}
-.brf .klappe::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.07))}
-.brf .licht{position:absolute;inset:0;z-index:5;pointer-events:none;border-radius:3px;
-  background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 45%,rgba(0,0,0,.05) 100%);animation:brfLicht 1s ease 2s both}
-.brf .siegel{position:absolute;left:50%;top:60%;width:calc(var(--w) * .2);aspect-ratio:1;z-index:6;transform:translate(-50%,-50%)}
-.brf .siegel svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.brf .siegel .ganz{position:absolute;inset:0;animation:brfDruck .5s ease .45s both}
-.brf .siegel .l{animation:brfL .7s cubic-bezier(.4,0,.6,1) .95s both}
-.brf .siegel .r{animation:brfR .7s cubic-bezier(.4,0,.6,1) .95s both}
-.brf .siegel .w{animation:brfWeg .05s linear .95s both}
-.brf .tipp{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font:13px/1.4 var(--sans,sans-serif);color:rgba(243,236,226,.55);letter-spacing:.04em}
+.brf .env{position:relative;width:var(--w);height:var(--h);perspective:1600px;transform:translateY(calc(var(--h) * .22))}
+.brf .pap{background:#F4F1EB url(__BRIEF_PAPIER__) center / calc(var(--w) * 1.3) auto}
+.brf .schatten{position:absolute;inset:0;border-radius:2px;box-shadow:0 1px 1px rgba(0,0,0,.25),0 14px 22px -6px rgba(0,0,0,.45),0 34px 50px -18px rgba(0,0,0,.4)}
+.brf .back{position:absolute;inset:0;border-radius:2px;z-index:1;filter:brightness(.86)}
+.brf .brief{position:absolute;left:4%;right:4%;top:4%;height:92%;box-sizing:border-box;z-index:2;border-radius:1px;display:flex;flex-direction:column;align-items:center;padding-top:8%;text-align:center;color:#382F2E;
+  box-shadow:0 0 0 .5px rgba(0,0,0,.08),0 -3px 8px rgba(0,0,0,.10);animation:brfZiehen .95s cubic-bezier(.3,.1,.2,1) 2s both}
+.brf .brief .klein{font-family:var(--sans,sans-serif);font-size:calc(var(--w) * .025);letter-spacing:.26em;text-transform:uppercase;color:#8C7D77}
+.brf .brief .gross{font-family:var(--serif,Georgia,serif);font-size:calc(var(--w) * .082);line-height:1.05;margin-top:.4em;color:#2f2827}
+.brf .brief .linie{width:30%;height:1px;background:rgba(56,47,46,.22);margin-top:1.1em}
+.brf .teil{position:absolute;inset:0;z-index:3;pointer-events:none}
+.brf .teil > div{position:absolute;inset:0}
+.brf .s-l{clip-path:polygon(0 0,53% 55%,0 100%)}
+.brf .s-r{clip-path:polygon(100% 0,47% 55%,100% 100%);filter:brightness(.95)}
+.brf .unten{filter:drop-shadow(0 -1px 1.5px rgba(0,0,0,.16)) drop-shadow(0 -4px 6px rgba(0,0,0,.06))}
+.brf .unten > div{position:absolute;inset:0;clip-path:polygon(0 100%,1% 98%,50% 43%,99% 98%,100% 100%);filter:brightness(.985)}
+.brf .kl{position:absolute;left:0;right:0;top:0;height:62%;z-index:4;transform-origin:50% 0;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.2)) drop-shadow(0 7px 9px rgba(0,0,0,.10));animation:brfKlappe .8s cubic-bezier(.5,0,.3,1) 1.25s both}
+.brf .kl .klappe{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,52% 98.5%,50% 100%,48% 98.5%);animation:brfInnen .8s linear 1.25s both}
+.brf .licht{position:absolute;inset:0;z-index:5;pointer-events:none;mix-blend-mode:soft-light;
+  background:linear-gradient(122deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 38%,rgba(0,0,0,0) 62%,rgba(0,0,0,.28) 100%)}
+.brf .sg{position:absolute;width:21%;aspect-ratio:1;left:50%;transform:translate(-50%,-50%);pointer-events:none;filter:drop-shadow(0 2px 2px rgba(0,0,0,.45)) drop-shadow(0 5px 6px rgba(0,0,0,.18))}
+.brf .sg img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.brf .sg-ganz,.brf .sg-u{top:62%;z-index:6}
+.brf .sg-o{top:100%;animation:brfSgWeg .8s linear 1.25s both}
+.brf .sg-o img{clip-path:polygon(0 0,100% 0,100% 48%,91% 51%,83% 47%,76% 52%,67% 56%,60% 50%,53% 53%,46% 48%,39% 51%,31% 55%,22% 50%,15% 53%,7% 49%,0 52%);animation:brfOben .3s ease-out .95s both}
+.brf .sg-u img{clip-path:polygon(0 52%,7% 49%,15% 53%,22% 50%,31% 55%,39% 51%,46% 48%,53% 53%,60% 50%,67% 56%,76% 52%,83% 47%,91% 51%,100% 48%,100% 100%,0 100%);animation:brfUnten .3s ease-out .95s both}
+.brf .sg-ganz{animation:brfDruck .5s ease .45s both}
+.brf .sg-ganz img{animation:brfWeg .01s linear .95s both}
+.brf .tipp{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font:13px/1.4 var(--sans,sans-serif);color:rgba(243,236,226,.5);letter-spacing:.04em}
 .brf.zoom .brief{animation:brfZoom .7s cubic-bezier(.4,0,.2,1) both}
-@keyframes brfWeg{to{opacity:0}}
 @keyframes brfIn{from{opacity:0}to{opacity:1}}
 @keyframes brfOut{from{opacity:1}to{opacity:0}}
-@keyframes brfDruck{0%{transform:scale(1)}40%{transform:scale(.94)}100%{transform:scale(1)}}
-@keyframes brfL{0%{transform:none;opacity:1}25%{transform:translate(-3%,0) rotate(-4deg);opacity:1}100%{transform:translate(-45%,120%) rotate(-38deg);opacity:0}}
-@keyframes brfR{0%{transform:none;opacity:1}25%{transform:translate(3%,0) rotate(5deg);opacity:1}100%{transform:translate(50%,130%) rotate(42deg);opacity:0}}
-@keyframes brfKlappe{0%{transform:rotateX(0);z-index:4;filter:brightness(1)}49%{z-index:4}50%{z-index:1;filter:brightness(.9)}100%{transform:rotateX(180deg);z-index:1;filter:brightness(.93)}}
-@keyframes brfZiehen{from{transform:translateY(0)}to{transform:translateY(-62%)}}
-@keyframes brfLicht{to{opacity:.55}}
-@keyframes brfZoom{from{transform:translateY(-62%)}to{transform:translateY(-80%) scale(1.12);opacity:0}}
+@keyframes brfWeg{to{opacity:0}}
+@keyframes brfDruck{0%{transform:translate(-50%,-50%) scale(1)}45%{transform:translate(-50%,-50%) scale(.965)}100%{transform:translate(-50%,-50%) scale(1)}}
+@keyframes brfOben{to{transform:translate(-1.5%,-4%) rotate(-2.5deg)}}
+@keyframes brfUnten{to{transform:translate(1%,3%) rotate(2deg)}}
+@keyframes brfKlappe{0%{transform:rotateX(0);z-index:4}49%{z-index:4}50%{z-index:1}100%{transform:rotateX(180deg);z-index:1}}
+@keyframes brfSgWeg{0%,45%{opacity:1}50%,100%{opacity:0}}
+@keyframes brfInnen{0%,49%{filter:brightness(1)}50%{filter:brightness(.8)}100%{filter:brightness(.86)}}
+@keyframes brfZiehen{from{transform:translateY(0)}to{transform:translateY(-60%)}}
+@keyframes brfZoom{from{transform:translateY(-60%)}to{transform:translateY(-78%) scale(1.1);opacity:0}}
 @media (prefers-reduced-motion:reduce){ .brf{display:none} }
 </style>
 <script>
-/* Brief öffnen: Siegel bricht, Klappe geht auf, Brief kommt heraus, dann Überblendung zum Ergebnis.
-   fertig() baut das Ergebnis; es läuft unter dem Brief, bevor dieser ausgeblendet wird. Tippen überspringt. */
+/* Brief öffnen: Siegel bricht, die obere Hälfte geht mit der Klappe auf, der Brief kommt ein Stück heraus,
+   dann Überblendung zum Ergebnis. fertig() baut das Ergebnis darunter. Tippen überspringt. */
 window.briefOeffnen = function(fertig){
   if(document.querySelector(".brf")) return;
   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){ fertig(); return; }
-  const halb = d => `<svg viewBox="0 0 100 100" class="${d}" aria-hidden="true"><defs>
-      <radialGradient id="brfG${d}" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#3a3434"/><stop offset=".55" stop-color="#161313"/><stop offset="1" stop-color="#0b0909"/></radialGradient>
-      <clipPath id="brfC${d}"><path d="${d==="l" ? "M-10-10H52L46 22 55 40 44 58 53 76 47 110H-10Z" : d==="r" ? "M110-10H52L46 22 55 40 44 58 53 76 47 110H110Z" : "M-10-10H110V110H-10Z"}"/></clipPath></defs>
-      <g clip-path="url(#brfC${d})">
-        <path d="M50 4C66 3 80 10 89 22c8 11 9 25 6 37-3 14-12 27-26 33-12 6-27 6-39 1C16 87 6 75 4 61 2 47 6 32 16 21 25 11 37 5 50 4Z" fill="url(#brfG${d})"/>
-        <circle cx="50" cy="50" r="31" fill="none" stroke="#2c2626" stroke-width="2.4"/>
-        <circle cx="50" cy="50" r="31" fill="none" stroke="#000" stroke-opacity=".5" stroke-width="1" transform="translate(.8 .8)"/>
-        <path d="M44 30c-5 7 4 13-1 20s4 13-1 20M56 30c-5 7 4 13-1 20s4 13-1 20" fill="none" stroke="#3a3333" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M44 30c-5 7 4 13-1 20s4 13-1 20M56 30c-5 7 4 13-1 20s4 13-1 20" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="1.2" stroke-linecap="round" transform="translate(.9 .9)"/>
-        <path d="M30 22c6-5 14-8 22-8" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2.2" stroke-linecap="round"/>
-      </g></svg>`;
+  const img = '<img src="__BRIEF_SIEGEL__" alt="">';
   const o = document.createElement("div");
   o.className = "brf"; o.setAttribute("role","status"); o.setAttribute("aria-label","Dein Ergebnis wird geöffnet");
   o.innerHTML = `<div class="env">
-      <div class="back papier"></div>
-      <div class="brief papier"><span class="klein">Für dich</span><span class="gross">Dein Ergebnis</span><span class="linie"></span></div>
-      <div class="tasche"><svg viewBox="0 0 300 198" preserveAspectRatio="none" aria-hidden="true">
-        <defs><filter id="brfN"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3"/><feColorMatrix values="0 0 0 0 .45 0 0 0 0 .42 0 0 0 0 .38 0 0 0 .14 0"/><feComposite in2="SourceGraphic" operator="in"/></filter></defs>
-        <path d="M0 0 L150 112 L300 0 V198 H0Z" fill="#F7F4EE"/>
-        <path d="M0 0 L150 112 L300 0 V198 H0Z" fill="#F7F4EE" filter="url(#brfN)"/>
-        <path d="M0 198 L150 100 L300 198" fill="none" stroke="rgba(0,0,0,.07)" stroke-width="1.2"/>
-        <path d="M0 0 L150 112 L300 0" fill="none" stroke="rgba(0,0,0,.10)" stroke-width="1"/>
-        <path d="M0 198 L150 100 L300 198 Z" fill="rgba(0,0,0,.025)"/>
-      </svg></div>
-      <div class="klappe papier"></div>
+      <div class="schatten"></div>
+      <div class="back pap"></div>
+      <div class="brief pap"><span class="klein">Für dich</span><span class="gross">Dein Ergebnis</span><span class="linie"></span></div>
+      <div class="teil"><div class="s-l pap"></div><div class="s-r pap"></div><div class="unten"><div class="pap"></div></div></div>
+      <div class="kl"><div class="klappe pap"></div><div class="sg sg-o">${img}</div></div>
       <div class="licht"></div>
-      <div class="siegel"><div class="ganz">${halb("l")}${halb("r")}${halb("w")}</div></div>
+      <div class="sg sg-u">${img}</div>
+      <div class="sg sg-ganz">${img}</div>
     </div>
     <div class="tipp">Tippen zum Überspringen</div>`;
   document.body.appendChild(o);
@@ -83,7 +76,7 @@ window.briefOeffnen = function(fertig){
     setTimeout(() => o.classList.add("weg"), 120);
     setTimeout(() => o.remove(), 850);
   };
-  const t = setTimeout(ende, 3150);
+  const t = setTimeout(ende, 3200);
   o.addEventListener("click", () => { clearTimeout(t); ende(); });
 };
 </script>
