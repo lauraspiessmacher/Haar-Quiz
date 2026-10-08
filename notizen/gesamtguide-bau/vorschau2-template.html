@@ -681,6 +681,8 @@ __ROUTINE__
     <div class="opts" data-key="kopf"></div>
     <h4>Brauchen deine Haare Repair?</h4>
     <div class="opts" data-key="kaputt"></div>
+    <h4>Dein Wunschergebnis</h4>
+    <div class="opts" data-key="wunsch"></div>
     <p class="small">Produkte, die du mit <b>+</b> merkst, findest du oben unter <b>Merkliste</b>. Repair wirkt nur bei Maske, Conditioner und Leave-in. Lässt du es leer, bekommst du keine Repair-Empfehlung. Weißt du deine Haardicke nicht? <button type="button" class="linkbtn" id="toQuiz">Quiz machen</button></p>
     <div class="actions">
       <button type="button" class="btn ghost" id="meReset">Zurücksetzen</button>
@@ -720,11 +722,12 @@ const HITZE_FOR = {fein:["trocken","spray"],duenn:["trocken","spray","serum"],no
 /* ---------- Meine Haare ---------- */
 const DICKE = [["fein","Fein"],["duenn","Dünn"],["normal","Normal"],["dick","Dick"],["sehrdick","Sehr dick"]];
 const KOPF  = [["normal","Normal"],["trocken","Trocken"],["fettend","Schnell fettend"],["sensibel","Sensibel"],["juckend","Juckend"],["schuppen","Schuppig"]];
+const WUNSCH = [["glatt","Glatt und glänzend"],["volumen","Mehr Volumen"],["locken","Definierte Wellen oder Locken"]];
 const KAPUTT = [["protein","Beansprucht: gefärbt, viel Hitze oder viel Haarbruch"],["bond","Strukturgeschädigt: blondiert, chemisch behandelt oder nass wie Gummi"]];
 /* welche Kategorie passt zu welchem Kopfhauttyp */
 const KOPF2SHAMPOO = {normal:"normal",trocken:"trocken",fettend:"kraeftig",sensibel:"sensibel",juckend:"juckreiz",schuppen:"schuppen"};
 const KOPF2PFLEGE  = {normal:"normal",trocken:"trocken",fettend:"fettend",sensibel:"sensibel",juckend:"trocken",schuppen:"schuppen"};
-let me = {dicke:null,kopf:null,kaputt:null};
+let me = {dicke:null,kopf:null,kaputt:null,wunsch:null};
 try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign(me,s); } catch(e){}
 if(me.kaputt === "ja") me.kaputt = "bond"; /* alter Wert aus der Zeit mit nur einer Stufe */
 const meSet = () => !!(me.dicke||me.kopf||me.kaputt);
@@ -806,6 +809,7 @@ function meText(type){
   if((type==="shampoo"||type==="kopfhaut") && me.kopf) parts.push(KOPF_ADJ[me.kopf]+" Kopfhaut");
   if(HAIRGUIDE(type) && me.dicke) parts.push(DICKE_ADJ[me.dicke]+" Haar");
   if(me.kaputt && ["maske","conditioner","leavein"].includes(type)) parts.push(me.kaputt==="bond" ? "Bond Repair" : "Repair");
+  if(me.wunsch && REC_TYPES.includes(type)) parts.push((WUNSCH.find(w=>w[0]===me.wunsch)||[,""])[1]);
   return parts.join(" · ");
 }
 /* welche Kategorie-Chips gehören zu „Meine Haare“? */
@@ -820,17 +824,29 @@ function myCats(type){
 const REC_TYPES = ["maske","conditioner","leavein"];
 function pickRec(items, type){
   if(!REC_TYPES.includes(type) || !meSet() || !onlyMine || !me.dicke) return [];
-  const best = list => list.slice().sort((a,b)=>(b.ws||0)-(a.ws||0) || byName(a,b))[0];
+  const W = me.wunsch, has = (p, k) => (p.wt||[]).includes(k);
+  const curl = p => /lock|curl|welle/.test(p.hay);
+  /* Bonus je Wunschergebnis: glatt bevorzugt Glättendes, Volumen Leichtes, Locken Lockenpflege */
+  const bonus = p => (W==="glatt" ? (has(p,"glaettend") ? 1 : 0) + (p.wg||0)*0.3
+    : W==="volumen" ? -(p.we||0)*0.5 - (has(p,"naehrend") ? 0.2 : 0)
+    : W==="locken" ? (curl(p) ? 0.8 : 0) + (type==="leavein" && /creme/i.test(p.note||"") ? 0.4 : 0) : 0);
+  const best = (list, val) => list.slice().sort((a,b)=>(val(b)+bonus(b))-(val(a)+bonus(a)) || byName(a,b))[0];
   const out = [], used = new Set();
   const add = (p, lab) => { if(p){ out.push([p, lab]); used.add(p); } };
   const free = p => !used.has(p);
-  add(best(items.filter(p=>p.wk==="feucht" && !p.rk)) || best(items.filter(p=>p.wk==="feucht")), "Feuchtigkeit");
-  add(best(items.filter(p=>p.wk==="naehrend" && !p.rk && free(p))) || best(items.filter(p=>p.wk==="naehrend" && free(p))), "Nährend");
+  const fe = items.filter(p=>has(p,"feucht"));
+  add(best(fe.filter(p=>!p.rk), p=>p.wh||0) || best(fe, p=>p.wh||0), "Feuchtigkeit");
+  const na = items.filter(p=>has(p,"naehrend") && free(p));
+  if(W==="volumen") add(best(na.filter(p=>!p.rk), p=>-(p.we||0)) || best(na, p=>-(p.we||0)), "Nährend");
+  else add(best(na.filter(p=>!p.rk), p=>p.we||0) || best(na, p=>p.we||0), "Nährend");
   if(me.kaputt){
     const rep = items.filter(p=>p.cats.includes("kaputt") && free(p));
-    const bond = rep.filter(p=>p.rk==="bond"), prot = rep.filter(p=>p.rk==="protein");
-    if(me.kaputt==="bond") add(best(bond) || best(prot), (best(bond) ? "Bond Repair" : "Repair mit Proteinen"));
-    else add(best(prot), "Repair mit Proteinen");
+    const val = p => (p.wh||0)+(p.we||0);
+    if(me.kaputt==="bond"){
+      /* Bond und Proteine ergänzen sich: am liebsten ein Bond-Produkt, das auch Proteine hat */
+      const b = best(rep.filter(p=>p.rk==="bond" && p.rp), val) || best(rep.filter(p=>p.rk==="bond"), val);
+      add(b || best(rep.filter(p=>p.rk==="protein"), val), b ? (b.rp ? "Bond Repair mit Proteinen" : "Bond Repair") : "Repair mit Proteinen");
+    } else add(best(rep.filter(p=>p.rk==="protein"), val), "Repair mit Proteinen");
   }
   return out;
 }
@@ -839,7 +855,8 @@ function recHtml(rec, type){
   const hasRep = rec.some(([,l])=>/Repair/.test(l)), fine = !rec.some(([,l])=>l==="Nährend");
   const ph = rec.map(([,l], i) => (l==="Feuchtigkeit" ? "Feuchtigkeit" : l==="Nährend" ? "etwas Nährendes" : l));
   const liste = ph.length < 2 ? ph[0] : ph.slice(0,-1).join(", ") + " und " + ph[ph.length-1];
-  const txt = `Für die Balance: ${liste}. ${hasRep ? "Benutz sie im Wechsel, nicht nur Repair." : "Wechsel sie ab, je nachdem, was deine Haare gerade brauchen."}${fine ? " Nährende Produkte sind für deine Haardicke meist zu schwer, deshalb fehlt hier eins." : ""}`;
+  const W = me.wunsch;
+  const txt = `Für die Balance: ${liste}. ${hasRep ? "Benutz sie im Wechsel, nicht nur Repair." : "Wechsel sie ab, je nachdem, was deine Haare gerade brauchen."} Feuchtigkeit zieht Wasser ins Haar, nährende Pflege mit Ölen oder Butter hält es drin und macht geschmeidig. Alle Empfehlungen passen zu deiner Haardicke, auch die nährende ist für dich nicht zu schwer.${fine ? " Für deine Haardicke habe ich gerade kein passendes nährendes Produkt, deshalb fehlt hier eins." : ""}${W==="glatt" ? " Weil du dir glatte Haare wünschst, habe ich Pflege bevorzugt, die zusätzlich glättet. Wellen und Locken macht Pflege allein aber nicht glatt, dafür brauchst du Hitze." : W==="volumen" ? " Weil du dir mehr Volumen wünschst, habe ich leichtere Pflege bevorzugt. Das meiste Volumen kommt aber vom Föhnen und Styling." : W==="locken" ? " Weil du dir definierte Wellen oder Locken wünschst, habe ich Pflege für Locken bevorzugt." : ""}`;
   return `<div class="recbox"><h3 class="sec">Meine Empfehlung für dich</h3><p class="catdesc">${txt}</p><ul class="grid">${rec.map(([p,l]) => itemHtml(p, l)).join("")}</ul></div>`;
 }
 
@@ -1133,16 +1150,16 @@ function drawOpts(){
   const fill = (key, list) => { const box = dlg.querySelector(`.opts[data-key="${key}"]`);
     box.innerHTML = list.map(([v,l])=>`<button type="button" class="opt" data-v="${v}" aria-pressed="${me[key]===v}">${l}</button>`).join("");
     box.querySelectorAll(".opt").forEach(b => b.onclick = () => { me[key] = me[key]===b.dataset.v ? null : b.dataset.v; drawOpts(); }); };
-  fill("dicke", DICKE); fill("kopf", KOPF); fill("kaputt", KAPUTT);
+  fill("dicke", DICKE); fill("kopf", KOPF); fill("kaputt", KAPUTT); fill("wunsch", WUNSCH);
 }
 function saveMe(){ try { localStorage.setItem("meineHaare", JSON.stringify(me)); } catch(e){} }
 /* Das Routine-Quiz speichert Dicke und Kopfhaut unter „Meine Haare“ */
-function reloadMe(){ try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign({dicke:null,kopf:null,kaputt:null}, s); if(me.kaputt === "ja") me.kaputt = "bond"; } catch(e){} }
+function reloadMe(){ try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign({dicke:null,kopf:null,kaputt:null,wunsch:null}, s); if(me.kaputt === "ja") me.kaputt = "bond"; } catch(e){} }
 window.addEventListener("storage", e => { if(e.key === "meineHaare"){ reloadMe(); render(); } });
 window.zeigeProdukte = type => { reloadMe(); onlyMine = true; state.view = "produkte"; state.type = type || "leavein"; state.cat = "alle"; if(window.closeQuiz) window.closeQuiz(); render(); window.scrollTo({top:0}); };
 document.getElementById("meBtn").onclick = () => { drawOpts(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); };
 document.getElementById("meForm").addEventListener("submit", () => { saveMe(); onlyMine = true; if(state.view!=="produkte") state.view="produkte"; render(); toast(meSet()?"Meine Haare gespeichert":"Meine Haare zurückgesetzt"); });
-document.getElementById("meReset").onclick = () => { me = {dicke:null,kopf:null,kaputt:null}; drawOpts(); };
+document.getElementById("meReset").onclick = () => { me = {dicke:null,kopf:null,kaputt:null,wunsch:null}; drawOpts(); };
 document.getElementById("toQuiz").onclick = () => { dlg.close(); state.view="quiz"; render(); window.scrollTo({top:0}); };
 
 function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("on"); setTimeout(()=>el.classList.remove("on"),1600); }

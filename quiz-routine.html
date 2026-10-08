@@ -151,6 +151,7 @@ const PRE = {};
 if(PREV.kopfhaut) PRE.kopf = [{N:"normal",F:"fettend",T:"trocken",S:"sensibel",ST:"schuppen",SF:"schuppen"}[PREV.kopfhaut.key], "deinem Kopfhaut-Check"];
 else if(ME.kopf) PRE.kopf = [ME.kopf === "juckend" ? "sensibel" : ME.kopf, "„Meine Haare“"];
 if(ME.dicke) PRE.dicke = [ME.dicke, "„Meine Haare“"];
+if(ME.wunsch) PRE.wunsch = [ME.wunsch, "„Meine Haare“"];
 else if(PREV.pflege) PRE.dicke = [["fein","normal","dick"][PREV.pflege.th], "deinem Pflege-Check"];
 if(PREV.haar) PRE.struktur = [{G1:"glatt",GT:"glatt",W:"wellig",L:"lockig",E:"lockig"}[PREV.haar.key], "deinem Haar-Check"];
 if(PREV.pflege){
@@ -171,6 +172,8 @@ const Q = [
   ["Sehr fein, ich spüre es kaum","fein"],["Dünn","duenn"],["Normal, ungefähr wie ein Nähfaden","normal"],["Dick","dick"],["Sehr dick, fast drahtig","sehrdick"]]},
  {id:"struktur", t:"Wie fallen deine Haare von Natur aus?", a:[
   ["Glatt","glatt"],["Wellig","wellig"],["Lockig","lockig"]]},
+ {id:"wunsch", t:"Welches Ergebnis wünschst du dir für deine Haare?", h:"Nimm das, was dir am wichtigsten ist.", a:[
+  ["Glatt und glänzend","glatt"],["Mehr Volumen","volumen"],["Definierte Wellen oder Locken","locken"],["Einfach gesunde, gepflegte Haare","gesund"]]},
  {id:"laenge", t:"Wie lang sind deine Haare?", a:[
   ["Bis zum Kinn oder kürzer","kinn"],["Bis zur Schulter","schulter"],["Bis zur Brust","brust"],["Länger","lang"]]},
  {id:"chem", t:"Was davon trifft auf deine Haare zu?", h:"Du kannst mehreres auswählen.", multi:true, a:[
@@ -379,7 +382,12 @@ function plan(a){
   const tiefText = tief === 0 ? "nur bei Bedarf, wenn sich deine Haare schwer oder strähnig anfühlen" : tief === 1 ? "einmal im Monat" : tief === 2 ? "zwei- bis dreimal im Monat" : "dreimal im Monat";
 
   const S = a.schlaf || [];
-  const dry = lockig ? "Hitzeschutz, dann föhnen auf mittlerer und zum Schluss auf kalter Stufe, oder lufttrocknen" : "Hitzeschutz, dann föhnen auf mittlerer und zum Schluss auf kalter Stufe";
+  const wunsch = a.wunsch || "gesund", natGlatt = a.struktur === "glatt" || !a.struktur;
+  const lockenWunsch = wunsch === "locken" && !natGlatt;
+  const dry = wunsch === "glatt" ? `Hitzeschutz, dann mit der Rundbürste glatt föhnen, erst auf mittlerer, zum Schluss auf kalter Stufe${natGlatt ? "" : ". Für ganz glatt danach Glätteisen oder Multistyler"}`
+    : wunsch === "volumen" ? "Hitzeschutz, dann kopfüber fast trocken föhnen, den Ansatz mit der Rundbürste anheben, zum Schluss kurz kalt föhnen"
+    : lockenWunsch ? "Wasser mit einem Mikrofaserhandtuch oder Baumwoll-T-Shirt sanft ausdrücken, nicht rubbeln. Dann an der Luft trocknen lassen, ohne die Locken anzufassen, oder mit Hitzeschutz und Diffusor auf niedriger Stufe"
+    : lockig ? "Hitzeschutz, dann föhnen auf mittlerer und zum Schluss auf kalter Stufe, oder lufttrocknen" : "Hitzeschutz, dann föhnen auf mittlerer und zum Schluss auf kalter Stufe";
 
   /* ---- Wochentabelle ---- */
   const week = TAGE.map((tag, d) => {
@@ -394,9 +402,10 @@ function plan(a){
       const mk = maskDays.indexOf(d);
       if(mk >= 0) items.push(`${maskKind(mk).replace(/^e/,"E")}${fine ? " nur in Längen und Spitzen" : " in die Längen"}, mindestens 10 bis 15 Minuten einwirken lassen${repair && m === 1 ? ". In der Woche danach stattdessen eine Feuchtigkeitsmaske" : ""}`);
       items.push(`Zum Abschluss ${COND[dk]}, 3 bis 5 Minuten einwirken lassen`);
-      if(repLeaveDays.includes(d)) items.push(`Ein ${repName}-Leave-in ins noch feuchte Haar`);
-      else if(repLeaveN) items.push(`Ein feuchtigkeitsspendendes oder nährendes Leave-in ins noch feuchte Haar, zum Beispiel ${LEAVE_FEUCHT[dk]}`);
-      else items.push(`${LEAVE_FEUCHT[dk].replace(/^e/,"E")} ins noch feuchte Haar`);
+      const knet = lockenWunsch ? " und von unten nach oben einkneten" : "";
+      if(repLeaveDays.includes(d)) items.push(`Ein ${repName}-Leave-in ins noch feuchte Haar${knet}`);
+      else if(repLeaveN) items.push(`Ein feuchtigkeitsspendendes oder nährendes Leave-in ins noch feuchte Haar${knet}, zum Beispiel ${LEAVE_FEUCHT[dk]}`);
+      else items.push(`${LEAVE_FEUCHT[dk].replace(/^e/,"E")} ins noch feuchte Haar${knet}`);
       items.push(dry);
       items.push(`Zum Versiegeln ${OEL[dk]}`);
     } else {
@@ -469,6 +478,32 @@ function plan(a){
   }
   T.push({h:"Trocknen", p:[tp.join(" ")]});
 
+  /* ---- Wunschergebnis: ehrlich, was Pflege kann und was Styling dazu braucht ---- */
+  if(wunsch === "glatt"){
+    const wp2 = natGlatt
+      ? ["Deine Haare fallen von Natur aus glatt, da kann Pflege schon viel bewirken. Glättende Pflege, zum Beispiel mit Silikonen oder einer sauren Rezeptur, legt die Oberfläche der Haare an. Das mindert Frizz, macht die Haare ebenmäßiger und bringt Glanz.",
+         "Für ein richtig glattes, glänzendes Finish föhnst du mit einer Rundbürste von oben nach unten, immer mit Hitzeschutz."]
+      : [`Ehrlich gesagt: Pflege macht ${a.struktur === "lockig" ? "Locken" : "Wellen"} nicht glatt. Wie deine Haare fallen, steckt in ihrer Struktur. Die Pflege macht aber trotzdem nicht nichts: Glättende Pflege, zum Beispiel mit Silikonen oder einer sauren Rezeptur, legt die Oberfläche an. Das mindert Frizz, sorgt für ein ebenmäßigeres Ergebnis und mehr Glanz, und das Glätten danach fällt leichter.`,
+         `Glatt werden deine Haare mit Hitze: ${a.struktur === "lockig" ? "erst mit der Rundbürste glatt föhnen, dann mit Glätteisen oder Multistyler nacharbeiten" : "mit Föhn und Rundbürste, einem Multistyler oder einem Glätteisen"}, immer mit Hitzeschutz. Das hält bis zur nächsten Wäsche oder bis deine Haare wieder feucht werden. Stell dein Tool nicht heißer ein als nötig.`];
+    wp2.push("Achte nicht nur auf den Namen: Bei vielen Glanz-Reihen stehen die Säuren aus der Werbung ganz hinten in der Liste, den Glanz machen vor allem Silikone und Glanzpigmente. Das ist nichts Schlechtes, nur ehrlicher. Unter „Meine Haare“ zeige ich dir bevorzugt Pflege, die auch glättet.");
+    T.push({h:"Dein Wunsch: glatt und glänzend", p:wp2});
+  } else if(wunsch === "volumen"){
+    const vp = ["Ehrlich gesagt: Pflege allein bringt dir nicht das doppelte Volumen. Sie kann aber dafür sorgen, dass deine Haare nicht platt werden. Nimm leichte Produkte, gib Conditioner und Maske nur in Längen und Spitzen, nichts Schweres an den Ansatz, und mach regelmäßig eine Tiefenreinigung, damit sich nichts ablagert." + (fine ? " Bei deinen feinen Haaren empfehle ich dir sowieso schon leichte Produkte." : thick ? " Bei dicken Haaren drückt oft das Gewicht die Haare runter, deshalb lieber Pflege, die nicht zu reichhaltig ist." : ""),
+      "Das meiste Volumen kommt vom Styling: Föhn deine Haare kopfüber fast trocken, dann hebst du den Ansatz Strähne für Strähne mit einer Rundbürste an. Zum Schluss kurz kalt föhnen, das hält die Form. Auch ein Multistyler hilft, und ein leichtes Volumenspray oder ein Schaum am Ansatz, ins handtuchtrockene Haar.",
+      "Was noch hilft: ab und zu den Scheitel wechseln und ein Schnitt mit leichten Stufen."];
+    T.push({h:"Dein Wunsch: mehr Volumen", p:vp});
+  } else if(wunsch === "locken"){
+    if(natGlatt) T.push({h:"Dein Wunsch: Wellen oder Locken", p:["Deine Haare fallen von Natur aus glatt. Wellen oder Locken bekommst du nur mit Styling, zum Beispiel mit Lockenstab, Multistyler oder hitzefrei über Nacht mit einem Lockenband. Pflege kann das nicht. Mit Hitze immer Hitzeschutz, und die Locken erst auskühlen lassen, bevor du sie anfasst, dann halten sie länger."]});
+    else {
+      const LC = ["eine leichte Leave-in-Lotion oder ein Spray","eine leichte Leave-in-Creme","eine Leave-in-Creme","eine reichhaltige Leave-in-Creme","eine reichhaltige Leave-in-Creme"][dk];
+      const lp = [`${a.struktur === "lockig" ? "Locken" : "Wellen"} brauchen eine etwas andere Routine. Das Wichtigste: Entwirre sie nur unter der Dusche, wenn der Conditioner drin ist, mit den Fingern oder einem grobzinkigen Kamm. Trocken bürsten macht aus Locken Frizz.`,
+        `Knete danach ${LC} ins nasse Haar, von unten nach oben. Das definiert und bändigt Frizz. Lass deine Haare dann trocknen, ohne sie anzufassen.`];
+      if(effort !== "wenig") lp.push("Wenn du mehr machen möchtest: Drück das Wasser mit einem Mikrofaserhandtuch, einem Haarturban oder einem Baumwoll-T-Shirt aus, statt zu rubbeln. Beim Plopping wickelst du die Haare 10 bis 30 Minuten locker darin ein. Für mehr Halt kommt ein Lockengel über das Leave-in. Es wird beim Trocknen etwas hart, das knetest du danach einfach wieder raus. Föhnen geht mit Diffusor auf niedriger Stufe, mit Hitzeschutz.");
+      lp.push("Am zweiten oder dritten Tag frischst du deine Locken mit etwas Wasser und ein wenig Leave-in auf und knetest sie neu. " + (effort === "wenig" ? "Das ist das Minimum, das schon viel bringt. Mehr geht immer, wenn du Lust hast." : "Wie viel du machst, entscheidest du: Schon die Basis bringt viel."));
+      T.push({h:`Dein Wunsch: definierte ${a.struktur === "lockig" ? "Locken" : "Wellen"}`, p:lp});
+    }
+  }
+
   let np;
   if(S.includes("haube")) np = "Mit deiner Seidenhaube sind deine Haare rundum geschützt, das ist die Pro-Variante. Ein Kissenbezug aus Seide ist dann nur noch ein Plus für deine Haut, weil Seide zum Beispiel als antibakteriell gilt.";
   else if(S.includes("flecht") || S.includes("zopf")) np = `Gut, dass du deine Haare nachts schon schützt. ${S.includes("kissen") ? "Mit deinem Kissenbezug aus Seide oder Bambusviskose bist du auf der sicheren Seite." : "Um auf der sicheren Seite zu sein, nimm trotzdem einen Kissenbezug aus Seide oder alternativ aus Bambusviskose."}${S.includes("flecht") ? "" : " Locker geflochten ist noch etwas schonender als Dutt oder Pferdeschwanz, und ein Satin-Scrunchie drückt weniger als ein normales Haargummi."} Wenn du noch mehr willst: Eine Seidenhaube schützt rundum.`;
@@ -478,7 +513,7 @@ function plan(a){
   if(repair){
     const why = [chem.includes("gefaerbt") ? "Färben" : "", a.hitze === "taeglich" ? "sehr viele Hitzeanwendungen" : ""].filter(Boolean);
     const intro = bond
-      ? "Weil deine Haare strukturell geschädigt sind, zum Beispiel durch Blondieren oder chemische Behandlungen, lohnt es sich, auf Bond-Produkte umzusteigen."
+      ? "Weil deine Haare strukturell geschädigt sind, zum Beispiel durch Blondieren, eine Dauerwelle oder andere chemische Behandlungen, brauchen sie Feuchtigkeit, Bond Repair und Proteine. Bond stabilisiert die Struktur im Inneren, Proteine legen sich von außen an. Die beiden ergänzen sich, du darfst sie also kombinieren."
       : (why.length ? `Weil deine Haare durch ${why.join(" und ")} beansprucht sind${a.spliss === "bruch" ? " und du viel Haarbruch hast" : ""}` : "Weil du viel Haarbruch hast") + (why.length ? ", können Repair-Produkte mit Proteinen helfen." : ": Oft steckt Reibung dahinter, und dann ist Feuchtigkeit der erste Schritt. Brechen deine Haare trotz guter Feuchtigkeitspflege weiter, können Repair-Produkte mit Proteinen helfen.") + " Bond Repair brauchst du dafür nicht.";
     T.push({h:"Repair ist nicht gleich Repair", p:[
       intro + " Wichtig ist, dass du dabei immer die Balance mit Feuchtigkeit hältst.",
@@ -487,6 +522,8 @@ function plan(a){
       "**Feuchtigkeit:** Die Basis für alle Haare und das Wichtigste, wenn deine Haare trocken, rau oder frizzig sind. Auch trockene Haare können brechen, ganz ohne Färben, Blondieren oder Hitze, meistens durch Reibung, zum Beispiel beim Bürsten, nachts auf dem Kissen oder durch Zopfgummis. Dann ist Feuchtigkeit oft der erste Schritt, denn geschmeidige, flexible Haare halten Reibung viel besser aus. Wann Feuchtigkeit reicht und wann Proteine dazukommen sollten, ist aber sehr individuell.",
       "**Repair mit Proteinen:** Wenn deine Haare trotz guter Feuchtigkeitspflege weiter brechen oder durch Färben oder viel Hitze beansprucht sind. Proteine wie Keratin oder Weizenprotein lagern sich von außen an brüchige und poröse Stellen an, ein bisschen wie ein Pflaster. Das Haar fühlt sich fester an und bricht weniger. Dauerhaft ist das nicht, mit der Zeit wäscht es sich wieder heraus, deshalb gehört es regelmäßig in deine Routine.",
       "**Bond Repair:** Erst wenn deine Haare strukturell geschädigt sind, also blondiert, chemisch behandelt oder nass wie Gummi. Bond-Produkte stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter, und manche wirken nur während dem Blondieren beim Friseur.",
+      "**Kurz gesagt:** Gesund oder nur trocken: Feuchtigkeit, bei dicken Haaren auch Nährendes. Beansprucht durch Färben, viel Hitze oder Haarbruch: Feuchtigkeit und Proteine. Strukturgeschädigt durch Blondieren, Dauerwelle oder andere Chemie oder nass wie Gummi: Feuchtigkeit, Bond Repair und Proteine.",
+      "**Ganz genau kann ich es nicht festlegen:** Ich kann deine Haare nicht sehen und nicht anfassen. Nimm die Einordnung als Richtung und schau, wie sich deine Haare anfühlen.",
       "**Leave-in oder Maske?** Ein Repair- oder Bond-Repair-Leave-in auf feuchtem Haar wirkt sogar intensiver als eine Maske, weil es im Haar bleibt. Die Maske spülst du nach 15 Minuten wieder aus. Deshalb würde ich lieber einmal pro Woche eine Repair-Maske nehmen und ein- bis zweimal ein Repair-Leave-in, statt beides ständig.",
       ...(intens ? ["**Solange deine Haare nass wie Gummi sind:** Dann darfst du Bond Repair eine Zeit lang intensiver nutzen, so wie in deinem Plan. Fühlen sich deine Haare nass wieder fester an, fahr runter auf etwa eine Bond-Repair-Maske und ein- bis zweimal ein Bond-Repair-Leave-in pro Woche."] : []),
       "**Nicht zu viel:** Wer zu viel Repair benutzt, hat irgendwann zu viele Proteine im Haar. Die Haare werden steif und strohig und können sogar brechen. Dann brauchen sie wieder mehr Feuchtigkeit.",
@@ -504,6 +541,7 @@ function plan(a){
   const chips = [`${n}× waschen`, `${m}× Maske`];
   if(sportDays.length) chips.push(`${sportDays.length}× Sport`);
   chips.push({wenig:"wenig Aufwand", mittel:"mittlerer Aufwand", viel:"viel Aufwand"}[effort]);
+  if(wunsch !== "gesund") chips.push({glatt:"Wunsch: glatt", volumen:"Wunsch: Volumen", locken:"Wunsch: Locken"}[wunsch]);
   return {T, week, regel, chips, dk, st, kaputt: st >= 2, repStufe: bond ? "bond" : repair ? "protein" : null};
 }
 
@@ -527,6 +565,7 @@ function result(){
     me.dicke = a.dicke || me.dicke || null;
     me.kopf = (a.kopf === "sensibel" && me.kopf === "juckend") ? "juckend" : (a.kopf || me.kopf || null);
     me.kaputt = R.repStufe; /* Repair-Stufe für die Produktempfehlung: bond, protein oder keine */
+    me.wunsch = a.wunsch && a.wunsch !== "gesund" ? a.wunsch : null;
     localStorage.setItem("meineHaare", JSON.stringify(me));
   } catch(e){}
 

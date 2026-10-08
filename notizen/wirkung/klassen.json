@@ -9,9 +9,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.59,
   "E": 1.05,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -37,9 +44,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.98,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl myristate",
@@ -60,9 +73,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.79,
   "E": 1.59,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "mel",
    "mel extract",
@@ -88,9 +107,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.4,
   "E": 0,
+  "G": 0.63,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -110,9 +138,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.46,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -130,9 +166,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.91,
   "E": 1.66,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "aloe barbadensis leaf juice powder"
@@ -159,9 +202,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.24,
   "E": 2.05,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -187,9 +236,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.59,
   "E": 1.21,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -216,9 +271,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0,
   "E": 1.88,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl myristate",
@@ -245,9 +306,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.78,
   "E": 0.04,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -267,9 +334,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 1.02,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl myristate",
@@ -291,9 +364,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.74,
   "E": 0.04,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -314,9 +393,17 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.27,
   "E": 0,
+  "G": 0.22,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "glycerin"
@@ -342,9 +429,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.57,
   "E": 0.26,
+  "G": 0.52,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin",
    "propylene glycol dicaprylate"
@@ -368,9 +464,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.36,
   "E": 1.46,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "panthenol"
   ],
@@ -395,9 +497,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": true,
   "H": 0.59,
   "E": 0.44,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -424,9 +533,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.49,
   "E": 1.59,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "betaine",
    "panthenol"
@@ -453,9 +568,20 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.32,
   "E": 1.09,
+  "G": 0.81,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin",
    "panthenol",
@@ -481,9 +607,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.32,
   "E": 1.07,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -507,9 +639,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.59,
   "E": 0.78,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "sodium pca",
    "glycerin"
@@ -534,9 +673,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.29,
   "E": 1.11,
+  "G": 0.12,
+  "sil": [],
   "hum": [
    "glycerin",
    "propylene glycol",
@@ -562,9 +708,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.04,
+  "G": 0.42,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -582,9 +736,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.16,
   "E": 1.62,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "aloe barbadensis leaf juice",
    "panthenol",
@@ -610,9 +771,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.5,
   "E": 1.89,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -638,9 +805,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 0.49,
   "E": 0.76,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -666,9 +840,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.42,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -687,9 +869,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.59,
   "E": 0.36,
+  "G": 0.24,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -713,9 +904,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.29,
   "E": 1.59,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "sodium hyaluronate"
   ],
@@ -741,9 +938,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.67,
   "E": 0.29,
+  "G": 0.6,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin",
    "propylene glycol dicaprylate"
@@ -768,9 +974,20 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.1,
   "E": 1.14,
+  "G": 0.78,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [
    "glycerin",
    "dipropylene glycol"
@@ -795,9 +1012,20 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.06,
   "E": 1.14,
+  "G": 0.78,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [
    "glycerin",
    "dipropylene glycol"
@@ -824,9 +1052,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.61,
   "E": 1.19,
+  "G": 0.29,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin",
    "panthenol"
@@ -855,9 +1092,15 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.31,
   "E": 0.71,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "isopentyldiol",
    "glycerin"
@@ -882,9 +1125,15 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.63,
   "E": 1.56,
+  "G": 0.19,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -909,9 +1158,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.12,
   "E": 0.45,
+  "G": 0.67,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "cetyl esters"
@@ -931,9 +1189,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.57,
   "E": 0.04,
+  "G": 0.82,
+  "sil": [
+   "amodimethicone",
+   "cyclopentasiloxane"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -953,9 +1221,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.55,
   "E": 0.27,
+  "G": 0.98,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [
    "sorbitol",
    "isopentyldiol",
@@ -982,9 +1260,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.1,
   "E": 1.14,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "mel",
    "sodium hyaluronate",
@@ -1010,9 +1295,17 @@
   ],
   "segment": "High-End",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.08,
+  "G": 0.53,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1030,9 +1323,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.42,
   "E": 0.08,
+  "G": 0.18,
+  "sil": [],
   "hum": [
    "propylene glycol"
   ],
@@ -1052,9 +1351,18 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.03,
   "E": 0,
+  "G": 0.61,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin",
    "propylene glycol"
@@ -1076,9 +1384,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 0.29,
   "E": 0.04,
+  "G": 0.9,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -1100,9 +1418,15 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 1.12,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "paraffinum liquidum",
@@ -1123,9 +1447,19 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.5,
   "E": 0.97,
+  "G": 0.4,
+  "sil": [
+   "amodimethicone",
+   "dimethicone"
+  ],
   "hum": [
    "glycerin",
    "propanediol"
@@ -1152,9 +1486,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.42,
+  "G": 0.59,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cetyl esters"
@@ -1175,9 +1518,15 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.81,
+  "G": 0.16,
+  "sil": [],
   "hum": [],
   "emo": [
    "paraffinum liquidum",
@@ -1200,9 +1549,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.53,
   "E": 0.82,
+  "G": 0.32,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -1225,9 +1583,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.42,
+  "G": 0.59,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cetyl esters"
@@ -1247,9 +1614,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.53,
   "E": 0,
+  "G": 0.95,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -1269,9 +1646,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.46,
   "E": 0.4,
+  "G": 0.49,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -1293,9 +1680,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.74,
   "E": 0.08,
+  "G": 0.62,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -1315,9 +1709,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.03,
   "E": 1.58,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "hyaluronic acid",
@@ -1343,9 +1744,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.67,
   "E": 0.04,
+  "G": 0.64,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [
    "butylene glycol",
    "propanediol"
@@ -1369,9 +1780,20 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.71,
   "E": 1.26,
+  "G": 0.52,
+  "sil": [
+   "amodimethicone",
+   "dimethicone"
+  ],
   "hum": [
    "glycerin",
    "sodium pca",
@@ -1398,9 +1820,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": true,
   "H": 0.59,
   "E": 0.78,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol"
   ],
@@ -1432,9 +1861,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.33,
   "E": 0.36,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "propylene glycol"
@@ -1459,9 +1894,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
-  "H": 0,
-  "E": 0,
+  "prot_too": false,
+  "H": 0.3,
+  "E": 0.9,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "avocado oil",
@@ -1484,9 +1926,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
-  "H": 0,
+  "prot_too": false,
+  "H": 0.6,
   "E": 0,
+  "G": 0.4,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol",
@@ -1509,9 +1958,15 @@
   ],
   "segment": "High-End",
   "kind": "glaettend",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.12,
   "E": 0.08,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1529,9 +1984,17 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.4,
   "E": 0.08,
+  "G": 0.42,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [
    "panthenol"
   ],
@@ -1551,9 +2014,20 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.63,
   "E": 0.65,
+  "G": 0.68,
+  "sil": [
+   "bis-4 pca dimethicone",
+   "disodium peg-12 dimethicone sulfosuccinate"
+  ],
   "hum": [
    "butylene glycol"
   ],
@@ -1576,9 +2050,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0,
+  "G": 0.49,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1596,9 +2078,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.49,
   "E": 0,
+  "G": 0.63,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -1618,9 +2109,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.12,
   "E": 0.58,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "butylene glycol"
@@ -1643,9 +2141,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.49,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1663,9 +2169,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.71,
   "E": 0,
+  "G": 0.63,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin",
    "sodium hyaluronate"
@@ -1686,9 +2201,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.42,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1706,9 +2229,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0,
+  "G": 0.42,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1726,9 +2257,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.98,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl myristate",
@@ -1749,9 +2286,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.88,
   "E": 0.69,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "betaine"
@@ -1775,9 +2319,15 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.08,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1795,9 +2345,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.59,
   "E": 0.97,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -1823,9 +2380,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.29,
   "E": 0.4,
+  "G": 0.75,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "propylene glycol"
   ],
@@ -1849,9 +2416,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.49,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1869,9 +2444,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.04,
+  "G": 0.49,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -1890,9 +2473,17 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0,
   "E": 0.59,
+  "G": 0.26,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "isopropyl myristate"
@@ -1914,9 +2505,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.59,
   "E": 1.72,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -1942,9 +2539,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.12,
   "E": 0.94,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl myristate",
@@ -1965,9 +2568,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.43,
   "E": 0.49,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol",
@@ -1991,9 +2600,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.02,
   "E": 0,
+  "G": 0.61,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin",
    "sodium hyaluronate"
@@ -2015,9 +2633,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.1,
   "E": 1.71,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -2044,9 +2669,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.98,
   "E": 1.21,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "dipropylene glycol",
    "propylene glycol",
@@ -2072,9 +2704,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.49,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -2092,9 +2732,15 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -2112,9 +2758,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.67,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl palmitate"
@@ -2135,9 +2787,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0,
   "E": 0.42,
+  "G": 0.49,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "argania spinosa kernel oil"
@@ -2161,9 +2822,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.49,
   "E": 0.97,
+  "G": 0.36,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -2187,9 +2857,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.57,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -2209,9 +2885,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.98,
   "E": 0.81,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "dipropylene glycol",
    "propylene glycol",
@@ -2236,9 +2919,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.5,
   "E": 0.42,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "dipropylene glycol"
@@ -2264,9 +2954,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.26,
   "E": 0.42,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -2294,9 +2990,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.49,
   "E": 0.5,
+  "G": 0.32,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -2321,9 +3026,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.63,
   "E": 0.08,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -2344,9 +3055,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.63,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -2371,9 +3088,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.08,
   "E": 0.08,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -2394,9 +3117,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.53,
   "E": 1.33,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -2422,9 +3151,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.9,
   "E": 0.36,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "aloe barbadensis leaf juice powder*",
    "panthenol",
@@ -2449,9 +3184,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.55,
   "E": 0.83,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "betaine",
    "panthenol",
@@ -2477,9 +3219,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.59,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -2499,9 +3247,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.98,
   "E": 0.59,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "dipropylene glycol",
    "propylene glycol",
@@ -2530,9 +3285,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.59,
   "E": 0.5,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "panthenol"
   ],
@@ -2554,9 +3316,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0,
+  "G": 0.49,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -2574,9 +3344,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.04,
+  "G": 0.42,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -2595,9 +3373,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.33,
   "E": 0.04,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol",
    "glycerin"
@@ -2621,9 +3405,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.03,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "sodium hyaluronate",
    "panthenol",
@@ -2645,9 +3435,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.66,
   "E": 0.36,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "panthenol",
    "glycerin",
@@ -2671,9 +3468,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.42,
   "E": 0.36,
+  "G": 0.35,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -2695,9 +3501,17 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.26,
   "E": 0.8,
+  "G": 0.48,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -2724,9 +3538,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.1,
   "E": 0.78,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -2750,9 +3571,15 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -2770,9 +3597,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.42,
   "E": 0.49,
+  "G": 0.32,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -2794,9 +3630,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.59,
+  "sil": [
+   "bis-aminopropyl dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -2814,9 +3658,17 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.33,
   "E": 0,
+  "G": 0.36,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "glycerin"
@@ -2840,9 +3692,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.1,
   "E": 0.66,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -2869,9 +3728,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.63,
   "E": 1.48,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -2898,9 +3763,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0,
   "E": 0.59,
+  "G": 0.04,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl myristate"
@@ -2922,9 +3793,19 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.51,
   "E": 0.36,
+  "G": 0.75,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin",
    "propylene glycol"
@@ -2947,9 +3828,17 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.71,
   "E": 0.08,
+  "G": 0.42,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -2969,9 +3858,17 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.82,
   "E": 0.42,
+  "G": 0.52,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -2993,9 +3890,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.4,
   "E": 0.36,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol stearamidopropyl dimethylamine",
    "glycerin",
@@ -3022,9 +3925,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.1,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "betaine"
@@ -3045,9 +3954,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.63,
   "E": 0.82,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -3075,9 +3991,17 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.42,
   "E": 0.88,
+  "G": 0.33,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -3104,9 +4028,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.49,
   "E": 0.36,
+  "G": 0.29,
+  "sil": [],
   "hum": [
    "propylene glycol"
   ],
@@ -3131,9 +4062,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.1,
   "E": 0.64,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -3160,9 +4098,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.32,
   "E": 0.36,
+  "G": 0.38,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -3186,9 +4133,20 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.37,
   "E": 0.73,
+  "G": 0.81,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin",
    "panthenol",
@@ -3214,9 +4172,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.83,
   "E": 0.55,
+  "G": 0.24,
+  "sil": [],
   "hum": [
    "propylene glycol",
    "panthenol"
@@ -3240,9 +4205,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.4,
   "E": 0.9,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "betaine"
   ],
@@ -3266,9 +4237,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.78,
   "E": 0.63,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "dipropylene glycol"
@@ -3292,9 +4270,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.46,
   "E": 1.6,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3318,9 +4302,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.82,
   "E": 0.42,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3342,9 +4333,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 1.02,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "isopropyl myristate",
@@ -3365,9 +4362,20 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.59,
   "E": 1.02,
+  "G": 0.78,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -3391,9 +4399,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.59,
   "E": 0.85,
+  "G": 0.85,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -3419,9 +4437,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.18,
   "E": 2.19,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propanediol"
   ],
@@ -3448,9 +4472,17 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.67,
   "E": 0.08,
+  "G": 0.42,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -3470,9 +4502,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.53,
   "E": 0.08,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3493,9 +4531,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.75,
   "E": 0.61,
+  "G": 0.11,
+  "sil": [],
   "hum": [
    "glycerin",
    "propylene glycol",
@@ -3522,9 +4567,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.53,
   "E": 0.82,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3547,9 +4599,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 1.02,
   "E": 0.16,
+  "G": 0.18,
+  "sil": [],
   "hum": [
    "propanediol",
    "glycerin"
@@ -3572,9 +4630,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.87,
   "E": 0.65,
+  "G": 0.14,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3596,9 +4661,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.85,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "isopentyldiol",
    "glycerin",
@@ -3620,9 +4691,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.52,
   "E": 0.61,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "isopentyldiol",
    "glycerin",
@@ -3647,9 +4725,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.5,
   "E": 0.32,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "isopentyldiol",
    "glycerin",
@@ -3673,9 +4758,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.48,
   "E": 0.54,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "isopentyldiol",
@@ -3700,9 +4792,15 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.12,
+  "G": 0.2,
+  "sil": [],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -3720,9 +4818,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.46,
   "E": 1.6,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3745,9 +4849,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.59,
   "E": 0.24,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3768,9 +4878,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.36,
   "E": 0.81,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol",
    "glycerin"
@@ -3793,9 +4910,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.0,
   "E": 0.26,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -3818,9 +4941,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.74,
   "E": 0.49,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "propylene glycol"
   ],
@@ -3842,9 +4972,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.33,
   "E": 0.04,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "propylene glycol"
@@ -3866,9 +5002,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.0,
   "E": 0.04,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol"
   ],
@@ -3887,9 +5029,17 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.33,
   "E": 0,
+  "G": 0.21,
+  "sil": [
+   "silicone quaternium-8"
+  ],
   "hum": [
    "glycerin",
    "sodium pca",
@@ -3915,9 +5065,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 1.39,
+  "G": 0.53,
+  "sil": [
+   "silicone quaternium-26"
+  ],
   "hum": [],
   "emo": [
    "hexyldecanol",
@@ -3940,9 +5099,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.2,
   "E": 0.08,
+  "G": 0.83,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "panthenol"
@@ -3963,9 +5131,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.34,
   "E": 0.36,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "betaine"
   ],
@@ -3988,9 +5166,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.49,
   "E": 1.0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "hydrolyzed corn starch",
@@ -4015,9 +5200,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.63,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "paraffinum liquidum"
@@ -4037,9 +5231,15 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.08,
+  "G": 0.04,
+  "sil": [],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -4058,9 +5258,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "bond",
+  "prot_too": true,
   "H": 0.04,
   "E": 0.49,
+  "G": 2.1,
+  "sil": [
+   "trisiloxane",
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "prunus armeniaca kernel oil"
@@ -4086,9 +5296,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.16,
   "E": 0.04,
+  "G": 0.83,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "panthenol"
@@ -4109,9 +5328,17 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0,
+  "G": 0.42,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -4129,9 +5356,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.38,
   "E": 0.36,
+  "G": 0.85,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "betaine"
   ],
@@ -4155,9 +5392,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 2.37,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol",
    "glycerin",
@@ -4179,9 +5422,19 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.41,
   "E": 0.04,
+  "G": 1.1,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [
    "dipropylene glycol",
    "glycerin",
@@ -4203,9 +5456,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.49,
+  "G": 2.13,
+  "sil": [
+   "trisiloxane",
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "prunus armeniaca kernel oil"
@@ -4228,9 +5491,18 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0,
+  "G": 1.82,
+  "sil": [
+   "bis- dimethicone",
+   "bis-cetearyl amodimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -4248,9 +5520,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.63,
+  "G": 0.37,
+  "sil": [],
   "hum": [],
   "emo": [
    "cocos nucifera oil"
@@ -4270,9 +5548,20 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.25,
   "E": 1.02,
+  "G": 0.78,
+  "sil": [
+   "amodimethicone",
+   "phenyl trimethicone"
+  ],
   "hum": [
    "glycerin",
    "panthenol",
@@ -4298,9 +5587,19 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.21,
   "E": 0.04,
+  "G": 1.14,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [
    "dipropylene glycol",
    "glycerin",
@@ -4322,9 +5621,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 1.12,
+  "G": 0.04,
+  "sil": [],
   "hum": [],
   "emo": [
    "cocos nucifera oil",
@@ -4345,9 +5650,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.75,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "panthenol"
   ],
@@ -4370,9 +5681,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.74,
   "E": 0.82,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -4395,9 +5713,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.63,
   "E": 0.4,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol",
@@ -4422,9 +5746,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.38,
   "E": 0.36,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol",
    "glycerin",
@@ -4452,9 +5782,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.94,
   "E": 0.69,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol",
    "glycerin",
@@ -4483,9 +5819,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.78,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -4507,9 +5849,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.27,
   "E": 0.3,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -4535,9 +5883,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.4,
   "E": 0.74,
+  "G": 0.42,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin",
    "betaine",
@@ -4561,9 +5918,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.26,
   "E": 0.36,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -4589,9 +5952,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.94,
   "E": 0.61,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propanediol",
    "glycerin"
@@ -4615,9 +5985,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.78,
   "E": 0.67,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -4639,9 +6016,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.32,
   "E": 0.32,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "panthenol"
   ],
@@ -4664,9 +6051,19 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.37,
   "E": 0.61,
+  "G": 0.69,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [
    "propylene glycol",
    "glycerin",
@@ -4694,9 +6091,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.52,
   "E": 0.69,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "mel",
@@ -4721,9 +6124,15 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 2.43,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "ethylhexyl stearate",
@@ -4745,9 +6154,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.12,
   "E": 0.63,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "paraffinum liquidum"
@@ -4768,9 +6186,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.14,
   "E": 0.51,
+  "G": 0.09,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -4798,9 +6222,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.63,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "paraffinum liquidum"
@@ -4820,9 +6253,18 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.71,
   "E": 0.74,
+  "G": 0.42,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -4844,9 +6286,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.59,
   "E": 0.08,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -4865,9 +6313,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.14,
   "E": 0.36,
+  "G": 0.51,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -4891,9 +6346,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.23,
   "E": 0.59,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -4916,9 +6377,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.53,
   "E": 0.42,
+  "G": 0.29,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -4943,9 +6411,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.59,
+  "G": 1.74,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [],
   "emo": [
    "oryza sativa bran oil"
@@ -4965,9 +6443,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.63,
   "E": 0.04,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -4990,9 +6474,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.54,
   "E": 0,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "pentylene glycol",
    "panthenol",
@@ -5018,9 +6508,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.74,
   "E": 0.08,
+  "G": 0.04,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -5040,9 +6536,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.74,
   "E": 0.82,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -5069,9 +6572,16 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.23,
   "E": 0.95,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol"
@@ -5095,9 +6605,16 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.1,
   "E": 1.03,
+  "G": 0.24,
+  "sil": [],
   "hum": [
    "propylene glycol",
    "panthenol",
@@ -5125,9 +6642,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "bond",
+  "prot_too": true,
   "H": 0.3,
   "E": 0.36,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "betaine"
   ],
@@ -5154,9 +6681,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0,
   "E": 0.49,
+  "G": 2.04,
+  "sil": [
+   "trisiloxane",
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "prunus armeniaca kernel oil"
@@ -5178,9 +6715,19 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.46,
   "E": 0,
+  "G": 1.69,
+  "sil": [
+   "dimethicone",
+   "phenyl trimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "glycerin"
@@ -5202,9 +6749,15 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.78,
   "E": 0.04,
+  "G": 0.08,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -5225,9 +6778,19 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.59,
+  "G": 1.74,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [],
   "emo": [
    "aleurites moluccanus seed oil"
@@ -5247,9 +6810,20 @@
   ],
   "segment": "Drogerie",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.36,
   "E": 0.49,
+  "G": 2.13,
+  "sil": [
+   "trisiloxane",
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -5272,9 +6846,18 @@
   ],
   "segment": "Drogerie",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.16,
   "E": 0.08,
+  "G": 0.83,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "panthenol"
@@ -5295,9 +6878,18 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.5,
   "E": 0,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "glycerin"
   ],
@@ -5317,9 +6909,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.12,
   "E": 0.74,
+  "G": 0.87,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cocos nucifera oil"
@@ -5339,9 +6940,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.78,
+  "G": 0.87,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cocos nucifera oil"
@@ -5361,9 +6971,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.67,
   "E": 0,
+  "G": 1.27,
+  "sil": [
+   "cyclopentasiloxane",
+   "dimethiconol"
+  ],
   "hum": [
    "propylene glycol"
   ],
@@ -5383,9 +7003,19 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.69,
+  "G": 1.33,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [],
   "emo": [
    "zea mays germ oil",
@@ -5406,9 +7036,18 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.67,
   "E": 0,
+  "G": 0.53,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [
    "propylene glycol"
   ],
@@ -5428,9 +7067,18 @@
   ],
   "segment": "High-End",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.12,
   "E": 0,
+  "G": 2.76,
+  "sil": [
+   "cyclopentasiloxane",
+   "dimethiconol"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -5448,9 +7096,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.63,
   "E": 0.57,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -5472,9 +7127,19 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.74,
+  "G": 1.0,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "isopropyl myristate"
@@ -5495,9 +7160,18 @@
   ],
   "segment": "High-End",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 0.08,
   "E": 0,
+  "G": 1.27,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -5517,9 +7191,18 @@
   ],
   "segment": "High-End",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.04,
+  "G": 1.16,
+  "sil": [
+   "dimethicone",
+   "trideceth-9 pg-amodimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -5537,9 +7220,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.4,
   "E": 1.6,
+  "G": 0.07,
+  "sil": [],
   "hum": [
    "glycerin",
    "sodium hyaluronate",
@@ -5567,9 +7257,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.0,
   "E": 1.15,
+  "G": 0.09,
+  "sil": [],
   "hum": [
    "panthenol",
    "propylene glycol",
@@ -5597,9 +7294,18 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.28,
   "E": 0.16,
+  "G": 0.82,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -5618,9 +7324,15 @@
   ],
   "segment": "Drogerie",
   "kind": "glaettend",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.16,
   "E": 0.04,
+  "G": 0.04,
+  "sil": [],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -5639,9 +7351,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "bond",
+  "prot_too": true,
   "H": 1.29,
   "E": 0.14,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol",
@@ -5672,9 +7390,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.98,
   "E": 0.13,
+  "G": 0.24,
+  "sil": [],
   "hum": [
    "isopentyldiol",
    "propylene glycol dicaprylate",
@@ -5699,9 +7423,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 1.39,
   "E": 0.71,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "sorbitol",
    "glycerin"
@@ -5727,9 +7458,19 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.74,
+  "G": 1.08,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "isopropyl myristate"
@@ -5749,9 +7490,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.74,
+  "G": 0.87,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cocos nucifera oil"
@@ -5772,9 +7522,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 1.47,
   "E": 1.5,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propanediol",
    "glycerin",
@@ -5802,9 +7559,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 0.74,
   "E": 0.46,
+  "G": 0.59,
+  "sil": [
+   "aminopropyl dimethicone"
+  ],
   "hum": [
    "butylene glycol"
   ],
@@ -5828,9 +7595,19 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.53,
+  "G": 1.52,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [],
   "emo": [
    "caprylic"
@@ -5850,9 +7627,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.49,
   "E": 0.92,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol"
   ],
@@ -5876,9 +7660,17 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.85,
+  "G": 0.42,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cetyl esters",
@@ -5900,9 +7692,20 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "bond",
+  "prot_too": true,
   "H": 0.52,
   "E": 0.77,
+  "G": 0.83,
+  "sil": [
+   "dimethicone",
+   "phenyl trimethicone"
+  ],
   "hum": [
    "propanediol",
    "aloe barbadensis leaf juice",
@@ -5933,9 +7736,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.04,
   "E": 0,
+  "G": 0.25,
+  "sil": [],
   "hum": [
    "butylene glycol",
    "propanediol"
@@ -5959,9 +7768,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.77,
   "E": 0.04,
+  "G": 0.24,
+  "sil": [],
   "hum": [
    "panthenol",
    "propylene glycol"
@@ -5982,9 +7797,17 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 1.43,
+  "G": 0.36,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cocos nucifera oil",
@@ -6005,9 +7828,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.77,
   "E": 0,
+  "G": 0.24,
+  "sil": [],
   "hum": [
    "panthenol",
    "propylene glycol"
@@ -6030,9 +7859,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 2.01,
   "E": 0,
+  "G": 0.16,
+  "sil": [],
   "hum": [
    "propanediol",
    "betaine",
@@ -6057,9 +7892,19 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.78,
+  "G": 1.0,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "isopropyl myristate"
@@ -6081,9 +7926,17 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.12,
   "E": 0.53,
+  "G": 0.42,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [],
   "emo": [
    "cetyl esters"
@@ -6103,9 +7956,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.96,
   "E": 1.8,
+  "G": 0.08,
+  "sil": [],
   "hum": [
    "glycerin",
    "panthenol",
@@ -6132,9 +7992,18 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.03,
   "E": 0.08,
+  "G": 0.7,
+  "sil": [
+   "amodimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "panthenol"
@@ -6155,9 +8024,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.04,
   "E": 0.67,
+  "G": 0.49,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [
    "isopropyl palmitate"
@@ -6177,9 +8055,18 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.12,
+  "G": 0.74,
+  "sil": [
+   "dimethicone"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -6199,9 +8086,15 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 0,
   "E": 0.74,
+  "G": 0.0,
+  "sil": [],
   "hum": [],
   "emo": [
    "oleyl alcohol"
@@ -6224,9 +8117,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": false,
   "H": 0.85,
   "E": 1.37,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "isopentyldiol",
    "propanediol",
@@ -6255,9 +8155,16 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "bond",
+  "prot_too": true,
   "H": 0.59,
   "E": 0.78,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "propylene glycol"
   ],
@@ -6285,9 +8192,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.82,
   "E": 0.04,
+  "G": 0.95,
+  "sil": [
+   "dimethicone",
+   "dimethiconol meadowfoamate"
+  ],
   "hum": [
    "pentylene glycol"
   ],
@@ -6307,9 +8224,15 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.23,
   "E": 0.28,
+  "G": 0.18,
+  "sil": [],
   "hum": [
    "glycerin",
    "butylene glycol"
@@ -6330,9 +8253,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.5,
   "E": 0,
+  "G": 2.22,
+  "sil": [
+   "dimethicone",
+   "cyclopentasiloxane"
+  ],
   "hum": [
    "butylene glycol"
   ],
@@ -6352,9 +8285,15 @@
   ],
   "segment": "High-End",
   "kind": "naehrend",
+  "tags": [
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.08,
   "E": 0.79,
+  "G": 0.29,
+  "sil": [],
   "hum": [],
   "emo": [
    "hydrogenated castor oil",
@@ -6375,9 +8314,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0.78,
   "E": 0.5,
+  "G": 0.0,
+  "sil": [],
   "hum": [
    "glycerin"
   ],
@@ -6400,9 +8346,16 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "naehrend"
+  ],
   "rep": "protein",
+  "prot_too": false,
   "H": 1.84,
   "E": 1.04,
+  "G": 0.08,
+  "sil": [],
   "hum": [
    "propanediol",
    "mel",
@@ -6432,9 +8385,18 @@
   ],
   "segment": "High-End",
   "kind": "glaettend",
+  "tags": [
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 0,
   "E": 0.08,
+  "G": 1.74,
+  "sil": [
+   "dimethicone",
+   "dimethiconol"
+  ],
   "hum": [],
   "emo": [],
   "prot": [],
@@ -6452,9 +8414,19 @@
   ],
   "segment": "High-End",
   "kind": "feucht",
+  "tags": [
+   "feucht",
+   "glaettend"
+  ],
   "rep": "",
+  "prot_too": false,
   "H": 1.43,
   "E": 0.69,
+  "G": 1.04,
+  "sil": [
+   "dimethicone",
+   "amodimethicone"
+  ],
   "hum": [
    "propylene glycol",
    "betaine",

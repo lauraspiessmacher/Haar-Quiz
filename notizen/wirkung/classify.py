@@ -15,6 +15,9 @@ HUM=re.compile(r'^(glycerin|glycerol|propylene glycol|butylene glycol|propanedio
 ESS=re.compile(r'(peel oil|flower oil|leaf oil|bark oil|herb oil|lavandula|pogostemon|juniperus|citrus|mentha|rosmarinus|eucalyptus|cananga|santalum|cedrus|pelargonium|lemongrass|cymbopogon|origanum|salvia)')
 EMO=re.compile(r'(oil\b|butter|squalane|squalene|isopropyl myristate|isopropyl palmitate|caprylic/capric triglyceride|caprylic|coco-caprylate|ethylhexyl stearate|ethylhexyl palmitate|dicaprylyl|triethylhexanoin|octyldodecanol|hexyldecanol|cetyl esters|jojoba esters|lanolin|paraffinum|mineral oil|petrolatum|isodecyl oleate|c10-18 triglycerides|oleyl alcohol|isocetyl|myristyl myristate|decyl oleate|glyceryl oleate|ceramide|phytosteryl|shea|cera alba|beeswax|isostearyl|ethylhexyl isononanoate|isononyl isononanoate|c12-15 alkyl benzoate|tridecyl|olive|argan|murumuru|macadamia|avocado|persea)')
 PROT=re.compile(r'(hydrolyzed .*protein|hydrolyzed keratin|^keratin|hydrolyzed collagen|hydrolyzed silk|silk amino|amino acids|peptide|^arginine|^serine|^glycine$|^glycine |silanetriol|hydrolyzed .*amino|protein\b|aminopropyl triethoxysilane|hydrolyzed pearl)')
+SIL=re.compile(r'(methicone|siloxane|dimethiconol|silicone quaternium|silsesquioxane|amodimethicone|bis-cetearyl)')
+ACID=re.compile(r'(acetum|acetic acid|vinegar|gluconolactone|glycolic acid)')
+POLY=re.compile(r'^(polyquaternium|quaternium-80|quaternium-91|quaternium-87)')
 BOND=re.compile(r'(bis-aminopropyl diglycol dimaleate|maleic acid|diethylhexyl maleate|hydroxypropylgluconamide|hydroxypropylammonium gluconate|oligopeptide-78|sh-oligopeptide)')
 res={}
 for t in ['maske','conditioner','leavein']:
@@ -27,6 +30,8 @@ for t in ['maske','conditioner','leavein']:
         E=sum(w(i) for i,x in enumerate(L) if EMO.search(x) and not ESS.search(x))
         prot=[x for i,x in enumerate(L) if i<cut and PROT.search(x)]
         bond=[x for i,x in enumerate(L) if i<cut and BOND.search(x)]
+        G=sum(w(i) for i,x in enumerate(L) if SIL.search(x)) + 1.5*sum(w(i) for i,x in enumerate(L) if i<min(cut,10) and ACID.search(x)) + 0.5*sum(w(i) for i,x in enumerate(L) if i<cut and POLY.match(x))
+        sil_top=[x for i,x in enumerate(L) if i<cut and SIL.search(x)][:2]
         rep_curated=json.dumps(p.get('rep'),ensure_ascii=False) if p.get('rep') else ''
         if 'bond' in rep_curated.lower() and not bond and 'Zitronens' in rep_curated: bond=['citric acid (Bond laut Marke)']
         hum_top=[x for i,x in enumerate(L) if i<cut and HUM.match(x)][:3]
@@ -37,13 +42,20 @@ for t in ['maske','conditioner','leavein']:
         elif E>=0.12: kind='naehrend'
         else: kind='glaettend'
         rep='bond' if bond else ('protein' if prot else '')
-        res[key]={'type':t,'brand':p['brand'],'name':p['name'],'cats':p['cats'],'segment':p['segment'],'kind':kind,'rep':rep,'H':round(H,2),'E':round(E,2),'hum':hum_top,'emo':emo_top,'prot':prot[:3],'bond':bond[:2],'note':p['note'],'inci_ok':bool(L)}
+        tags=[]
+        if L:
+            # Schwerpunkt: beides nur, wenn es ungefähr gleich stark ist
+            if H>=0.18 and H>=0.5*E: tags.append('feucht')
+            if (E>=0.18 and E>=0.5*H) or (E>=0.12 and H<0.18): tags.append('naehrend')
+            if G>=0.45: tags.append('glaettend')  # Silikon o. Ä. unter den ersten vier oder mehrere Glätter
+            if not tags: tags.append('glaettend' if G>=0.1 else 'feucht' if H>=E else 'naehrend')
+        res[key]={'type':t,'brand':p['brand'],'name':p['name'],'cats':p['cats'],'segment':p['segment'],'kind':kind,'tags':tags,'rep':rep,'prot_too':bool(bond and prot),'H':round(H,2),'E':round(E,2),'G':round(G,2),'sil':sil_top,'hum':hum_top,'emo':emo_top,'prot':prot[:3],'bond':bond[:2],'note':p['note'],'inci_ok':bool(L)}
 # Handkorrekturen ohne INCI in den Notizen
-res['maske|Olaplex|Rich Hydration Mask'].update(kind='naehrend',rep='',emo=['avocado oil','shea butter','coconut oil'],note2='INCI online (Cosmeterie/John Beerens); Bond-Wirkstoff erst hinter Parfum')
-res['maske|Olaplex|Weightless Nourishing Mask'].update(kind='feucht',rep='',hum=['glycerin','panthenol','sodium hyaluronate'],note2='INCI online (Liberty/Galaxus); Bond-Wirkstoff erst hinter Parfum')
+res['maske|Olaplex|Rich Hydration Mask'].update(kind='naehrend',tags=['feucht','naehrend'],H=0.3,E=0.9,rep='',emo=['avocado oil','shea butter','coconut oil'],note2='INCI online (Cosmeterie/John Beerens); Bond-Wirkstoff erst hinter Parfum')
+res['maske|Olaplex|Weightless Nourishing Mask'].update(kind='feucht',tags=['feucht','glaettend'],H=0.6,G=0.4,rep='',hum=['glycerin','panthenol','sodium hyaluronate'],note2='INCI online (Liberty/Galaxus); Bond-Wirkstoff erst hinter Parfum')
 for k,v in res.items():
     if 'kaputt' in v['cats'] and not v['rep'] and re.search(r'bond',v['name'],re.I): v.update(rep='bond',bond=['Bond-Komplex laut Marke'])
 json.dump(res,open('klassen.json','w'),ensure_ascii=False,indent=1)
 import collections
 for t in ['maske','conditioner','leavein']:
-    print(t,collections.Counter(v['kind'] for v in res.values() if v['type']==t),collections.Counter(v['rep'] for v in res.values() if v['type']==t))
+    print(t,collections.Counter(x for v in res.values() if v['type']==t for x in v['tags']),collections.Counter(v['rep'] for v in res.values() if v['type']==t))

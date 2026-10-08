@@ -6,14 +6,16 @@ import sys, os, re, json
 S = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(f'{S}/../..')
 _data = json.load(open(sys.argv[1]))
-# Wirkung je Produkt nach INCI (notizen/wirkung/): w = feucht/naehrend/glaettend, r = protein/bond, s = Stärke
+# Wirkung je Produkt nach INCI (notizen/wirkung/classify.py): wt = Schwerpunkte (feucht/naehrend/glaettend),
+# wh/we/wg = Stärke Feuchtigkeit/Nährend/Glätte, rk = protein/bond, rp = Bond mit Proteinen
 _wk = json.load(open(f'{S}/wirkung.json'))
 for _t in ('maske', 'conditioner', 'leavein'):
     for x in _data[_t]['items']:
         e = _wk.get(_t + '|' + x['brand'] + '|' + x['name'])
         assert e, ('Wirkung fehlt', _t, x['brand'], x['name'])
-        x['wk'] = e['w']; x['ws'] = e['s']
+        x['wt'] = e['t']; x['wh'] = e['h']; x['we'] = e['e']; x['wg'] = e['g']
         if e['r']: x['rk'] = e['r']
+        if e['p']: x['rp'] = 1
 # Produktkategorie Hitzeschutz: Leave-ins und Öle mit Hitzeschutz, sortiert nach Konsistenz (hitzeschutz.json)
 _h = json.load(open(f'{S}/hitzeschutz.json'))
 _hitems = []

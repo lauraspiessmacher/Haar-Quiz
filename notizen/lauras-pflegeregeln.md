@@ -27,3 +27,16 @@ Diese Regeln gelten überall auf der Seite: Quizze, Routine-Check, Wissen, Produ
 
 ## Produktempfehlungen (08.10.2026, Wunsch, noch nicht umgesetzt)
 - Unter den Empfehlungen immer mindestens ein nährendes, ein feuchtigkeitsspendendes und ein Repair-Produkt (Bond oder Proteine).
+
+## Wirkung und Repair-Stufen (08.10.2026, Lauras Go)
+- Gesund oder nur trocken: Feuchtigkeit, bei dicken Haaren zusätzlich nährend.
+- Beansprucht (gefärbt, viel Hitze, Haarbruch): Feuchtigkeit und Proteine.
+- Strukturgeschädigt (blondiert, chemisch behandelt inkl. Dauerwelle, nass wie Gummi): Feuchtigkeit, Bond Repair und Proteine (Bond innen, Proteine außen, ergänzen sich).
+- Immer dazusagen: Wir können die Haare nicht sehen oder anfassen, Einordnung ist eine Richtung.
+- Begriffe ehrlich: Feuchtigkeit = Feuchthaltestoffe (Glycerin, Aloe, Panthenol, Hyaluron) ziehen Wasser ins Haar. Nährend = Öle, Butter, Fettstoffe; geben kein Wasser ab, halten es drin und machen geschmeidig. Glättend = Silikone, saure Rezepturen, pflegende Polymere glätten die Oberfläche. Ein Produkt kann mehrere Schwerpunkte haben. „Nährend“ ist nicht automatisch reichhaltig, Reichhaltigkeit regelt die Haardicke.
+- Empfehlungen: höchstens 3 pro Produktart (Feuchtigkeit, nährend wenn passend, Repair nur wenn nötig).
+
+## Wunschergebnisse (08.10.2026)
+- Glatt: Pflege glättet die Oberfläche (weniger Frizz, ebenmäßiger, Glanz), macht Wellen/Locken aber nicht glatt. Dafür Hitze (Föhn + Rundbürste, Multistyler, Glätteisen), immer Hitzeschutz. „Strukturglättend“ nicht verwenden. Bei Glanz-Reihen ehrlich sagen, dass die Säure oft hinten steht und Silikone den Glanz machen.
+- Volumen: Pflege bringt nicht das doppelte Volumen, verhindert aber Plattwerden (leichte Produkte, nichts Schweres am Ansatz, Tiefenreinigung). Volumen vor allem durch Föhnen (kopfüber, Rundbürste, kalt fixieren), Multistyler, Volumenspray/Schaum am Ansatz.
+- Locken: Curly-Girl-Methode nicht nennen. Basis: nur mit Conditioner unter der Dusche entwirren, Leave-in-Creme (je nach Dicke) ins nasse Haar kneten, nicht anfassen beim Trocknen. Mehr Aufwand: Mikrofaser/Turban/T-Shirt, Plopping, Lockengel, Diffusor. Refresh an Tag 2–3. Glatte Haare: Locken nur mit Styling.

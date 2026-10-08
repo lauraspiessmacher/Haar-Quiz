@@ -14,7 +14,7 @@ const strip = s => s.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 const grab = (re) => { const m = html.match(re); if (!m) throw new Error("Text fehlt: " + re); return strip(m[1]); };
 
 /* ---------- Bausteine ---------- */
-const BASE = { kopf: "normal", dicke: "normal", struktur: "glatt", laenge: "schulter", chem: ["nichts"], zustand: "weich", spliss: "kaum", wash: "2", sport: "nein", styling: "kaum", hitze: "selten", schlaf: ["offen"], aufwand: "mittel" };
+const BASE = { kopf: "normal", dicke: "normal", struktur: "glatt", wunsch: "gesund", laenge: "schulter", chem: ["nichts"], zustand: "weich", spliss: "kaum", wash: "2", sport: "nein", styling: "kaum", hitze: "selten", schlaf: ["offen"], aufwand: "mittel" };
 const P = o => plan(Object.assign({}, BASE, o));
 const sec = (R, h) => { const s = R.T.find(x => x.h === h); if (!s) throw new Error("Abschnitt fehlt: " + h); return s; };
 const DL = ["Fein", "Dünn", "Normal", "Dick", "Sehr dick"];
@@ -111,6 +111,22 @@ add("repair_intro", "Nur bei Färben, Blondieren, Chemie, fast täglicher Hitze 
   ["Nur viel Haarbruch", RP({ spliss: "bruch" }).p[0]]]);
 add("repair_stufen", "Gleich danach", RP({ chem: ["gefaerbt"] }).p[1]);
 RP({ chem: ["gefaerbt"] }).li.forEach((t, k) => add("repair_li" + k, "Liste im Repair-Abschnitt", t));
+
+G("Dein Wunschergebnis");
+const WS = (o, h) => sec(P(o), h).p.join(" ");
+add("wunsch_glatt", "Nur bei Wunsch „glatt und glänzend“", [
+  ["Glatte Haare", WS({ wunsch: "glatt", struktur: "glatt" }, "Dein Wunsch: glatt und glänzend")],
+  ["Wellige Haare", WS({ wunsch: "glatt", struktur: "wellig" }, "Dein Wunsch: glatt und glänzend")],
+  ["Lockige Haare", WS({ wunsch: "glatt", struktur: "lockig" }, "Dein Wunsch: glatt und glänzend")]]);
+add("wunsch_volumen", "Nur bei Wunsch „mehr Volumen“", [
+  ["Feine oder dünne Haare", WS({ wunsch: "volumen", dicke: "fein" }, "Dein Wunsch: mehr Volumen")],
+  ["Normale Haare", WS({ wunsch: "volumen", dicke: "normal" }, "Dein Wunsch: mehr Volumen")],
+  ["Dicke Haare", WS({ wunsch: "volumen", dicke: "dick" }, "Dein Wunsch: mehr Volumen")]]);
+add("wunsch_locken", "Nur bei Wunsch „definierte Wellen oder Locken“", [
+  ["Glatte Haare", WS({ wunsch: "locken", struktur: "glatt" }, "Dein Wunsch: Wellen oder Locken")],
+  ["Wellig, wenig Aufwand", WS({ wunsch: "locken", struktur: "wellig", aufwand: "wenig" }, "Dein Wunsch: definierte Wellen")],
+  ["Lockig, normale Haardicke, mittlerer oder viel Aufwand", WS({ wunsch: "locken", struktur: "lockig", aufwand: "viel" }, "Dein Wunsch: definierte Locken")],
+  ["Lockig, dicke Haare, mittlerer oder viel Aufwand", WS({ wunsch: "locken", struktur: "lockig", dicke: "dick", aufwand: "viel" }, "Dein Wunsch: definierte Locken")]]);
 
 G("Weitere Abschnitte");
 add("gummi", "Nur bei „nass wie Gummi“, ganz oben als Warnung", P({ zustand: "gummi" }).T[0].p[0]);
