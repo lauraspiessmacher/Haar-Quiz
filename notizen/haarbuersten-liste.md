@@ -49,3 +49,14 @@ Kopfhaut: The Scalp Exfoliator & Massager
 - Travel Hairbrush – 60 €
 - Y.S. Park Blow-Dry Hairbrush 140 € / Ergonomic 110 € (Nylon, Föhnbürsten)
 - Mischborsten-Bürste aktuell NICHT im Shop gefunden („Detangling Brush with Spikes“ = Stahlstifte, ausverkauft) → Laura fragen.
+
+## Lauras Go (08.10.2026)
+- Tangle Teezer: alle aus der Übersicht übernehmen.
+- Dejan Garz: alle drei.
+- ebelin: alle Holzbürsten, Spiralentwirrbürste (normal, 5,45 €), Kopfmassagebürste Bambus.
+- Buly: erstmal nur Classic Grand Hairbrush; Rest prüft Laura.
+- Aufbau: Rubrik „Entwirrbürsten“ (wichtig! Text: für nasses/feuchtes und trockenes Haar, auch zum Einarbeiten von Produkten, meist aus Plastik) + eine Rubrik für alle anderen Bürsten mit Empfehlung unter jedem Produkt (z. B. Bambus = Kopfhautmassage, Wildschwein = Talg in die Längen verteilen, nicht zum Entwirren).
+- Im Wissen-Kapitel Haarbürsten auf die Produkte verlinken.
+
+## NEU: Rubrik „Hitze-Tools“ (Laura 08.10.)
+- Föhne, Multistyler, Glätteisen, Lockenstäbe, Hitzebürsten – Laura sucht Empfehlungen noch raus. Kategorie schon anlegen (leer, „kommt bald“).
