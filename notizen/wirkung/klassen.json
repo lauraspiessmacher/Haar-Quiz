@@ -1,0 +1,6471 @@
+{
+ "maske|Garnier Wahre Schätze|1-Minute Haarkur Kokosmilch & Macadamia": {
+  "type": "maske",
+  "brand": "Garnier Wahre Schätze",
+  "name": "1-Minute Haarkur Kokosmilch & Macadamia",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.59,
+  "E": 1.05,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "glycine soja oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Kur mit Glycerin, Sojaöl und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "maske|Garnier Wahre Schätze|1-Minute Haarkur Reiswasser Ritual & Stärke": {
+  "type": "maske",
+  "brand": "Garnier Wahre Schätze",
+  "name": "1-Minute Haarkur Reiswasser Ritual & Stärke",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.98,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Kur, pflegt mit Fettalkohol und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "maske|Garnier Wahre Schätze|1-Minute Haarkur Honig Schätze": {
+  "type": "maske",
+  "brand": "Garnier Wahre Schätze",
+  "name": "1-Minute Haarkur Honig Schätze",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.79,
+  "E": 1.59,
+  "hum": [
+   "mel",
+   "mel extract",
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Kur mit Sonnenblumenöl, Sheabutter und Honig",
+  "inci_ok": true
+ },
+ "maske|Pantene Pro-V|Miracles Hydra Glow Deep Hydration Haarmaske": {
+  "type": "maske",
+  "brand": "Pantene Pro-V",
+  "name": "Miracles Hydra Glow Deep Hydration Haarmaske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.4,
+  "E": 0,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Fettalkoholen, Silikon und Glycerin",
+  "inci_ok": true
+ },
+ "maske|Pantene Pro-V|Hair Glowtox Haarkur": {
+  "type": "maske",
+  "brand": "Pantene Pro-V",
+  "name": "Hair Glowtox Haarkur",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Kur mit Fettalkoholen und Silikon, sorgt für Glanz",
+  "inci_ok": true
+ },
+ "maske|Garnier Fructis|Hair Food Aloe Vera 3in1 Maske": {
+  "type": "maske",
+  "brand": "Garnier Fructis",
+  "name": "Hair Food Aloe Vera 3in1 Maske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.91,
+  "E": 1.66,
+  "hum": [
+   "glycerin",
+   "aloe barbadensis leaf juice powder"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "glycine soja oil",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Glycerin, Sojaöl und Aloe",
+  "inci_ok": true
+ },
+ "maske|Garnier Fructis|Hair Food Ananas 3in1 Maske": {
+  "type": "maske",
+  "brand": "Garnier Fructis",
+  "name": "Hair Food Ananas 3in1 Maske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.24,
+  "E": 2.05,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Sonnenblumenöl, Sojaöl und Sheabutter",
+  "inci_ok": true
+ },
+ "maske|Garnier Fructis|Hair Food Kiwi Menthol 3in1 Maske": {
+  "type": "maske",
+  "brand": "Garnier Fructis",
+  "name": "Hair Food Kiwi Menthol 3in1 Maske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.59,
+  "E": 1.21,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "glycine soja oil",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Glycerin, Soja- und Sonnenblumenöl, Menthol kühlt",
+  "inci_ok": true
+ },
+ "maske|Garnier Fructis|Keratin Sleek Maske": {
+  "type": "maske",
+  "brand": "Garnier Fructis",
+  "name": "Keratin Sleek Maske",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0,
+  "E": 1.88,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [
+   "hydrolyzed corn protein",
+   "hydrolyzed soy protein",
+   "hydrolyzed wheat protein"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Sonnenblumen- und Arganöl, Sheabutter und Pflanzenproteinen",
+  "inci_ok": true
+ },
+ "maske|L'Oréal Elvital|Hydra Hyaluronic Feuchtigkeitsmaske": {
+  "type": "maske",
+  "brand": "L'Oréal Elvital",
+  "name": "Hydra Hyaluronic Feuchtigkeitsmaske",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.78,
+  "E": 0.04,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte Maske mit viel Glycerin, ohne Öle",
+  "inci_ok": true
+ },
+ "maske|L'Oréal Elvital|Dream Length Super Spitzen Retter Maske": {
+  "type": "maske",
+  "brand": "L'Oréal Elvital",
+  "name": "Dream Length Super Spitzen Retter Maske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 1.02,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Fettalkohol, leichtem Ölersatz, Sonnenblumen- und Rizinusöl",
+  "inci_ok": true
+ },
+ "maske|L'Oréal Elvital|Glycolic Gloss Spiegelglanz Maske": {
+  "type": "maske",
+  "brand": "L'Oréal Elvital",
+  "name": "Glycolic Gloss Spiegelglanz Maske",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.74,
+  "E": 0.04,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte Maske mit viel Glycerin, ohne Öle",
+  "inci_ok": true
+ },
+ "maske|NEQI|Repair Reveal Haarkur": {
+  "type": "maske",
+  "brand": "NEQI",
+  "name": "Repair Reveal Haarkur",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.27,
+  "E": 0,
+  "hum": [
+   "propylene glycol",
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [
+   "soy amino acids",
+   "wheat amino acids",
+   "avena sativa  peptide"
+  ],
+  "bond": [],
+  "note": "Kur mit Fettalkoholen, Aminosäuren, Haferpeptid und etwas Silikon",
+  "inci_ok": true
+ },
+ "maske|OGX|Coconut Miracle Oil Haarkur": {
+  "type": "maske",
+  "brand": "OGX",
+  "name": "Coconut Miracle Oil Haarkur",
+  "cats": [
+   "normal",
+   "dick",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.57,
+  "E": 0.26,
+  "hum": [
+   "glycerin",
+   "propylene glycol dicaprylate"
+  ],
+  "emo": [
+   "cocos nucifera  oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Kur mit Glycerin, leichtem Ölersatz, Silikon und Kokosöl",
+  "inci_ok": true
+ },
+ "maske|Balea|Intensivpflege 3in1 Haarmaske": {
+  "type": "maske",
+  "brand": "Balea",
+  "name": "Intensivpflege 3in1 Haarmaske",
+  "cats": [
+   "normal",
+   "dick",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.36,
+  "E": 1.46,
+  "hum": [
+   "panthenol"
+  ],
+  "emo": [
+   "dicaprylyl ether",
+   "ricinus communis seed oil",
+   "helianthus annuus hybrid oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Maske mit leichtem Ölersatz, Rizinusöl, Panthenol und Mandelöl",
+  "inci_ok": true
+ },
+ "maske|Schwarzkopf Gliss|Total Repair 4in1 Bonding Haarmaske": {
+  "type": "maske",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Total Repair 4in1 Bonding Haarmaske",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "bond",
+  "H": 0.59,
+  "E": 0.44,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [
+   "hydroxypropylgluconamide",
+   "hydroxypropylammonium gluconate"
+  ],
+  "note": "Pflegende Maske mit Bond-Wirkstoffen, Keratin und etwas Silikon",
+  "inci_ok": true
+ },
+ "maske|Bali Curls|Deep Repair Mask": {
+  "type": "maske",
+  "brand": "Bali Curls",
+  "name": "Deep Repair Mask",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.49,
+  "E": 1.59,
+  "hum": [
+   "betaine",
+   "panthenol"
+  ],
+  "emo": [
+   "butyrospermum parkii butter",
+   "cocos nucifera oil",
+   "glycine soja oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Maske mit Sheabutter, Kokos-, Soja- und Avocadoöl",
+  "inci_ok": true
+ },
+ "maske|Dejan Garz|The Foundation Haarmaske": {
+  "type": "maske",
+  "brand": "Dejan Garz",
+  "name": "The Foundation Haarmaske",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.32,
+  "E": 1.09,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "inulin"
+  ],
+  "emo": [
+   "cocos nucifera oil",
+   "argania spinosa kernel oil",
+   "ricinus communis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Glycerin, zwei Silikonen, Kokos-, Argan-, Rizinus- und Jojobaöl",
+  "inci_ok": true
+ },
+ "maske|Ida Warg|Repair Hair Mask": {
+  "type": "maske",
+  "brand": "Ida Warg",
+  "name": "Repair Hair Mask",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.32,
+  "E": 1.07,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "butyrospermum parkii  butter",
+   "cocos nucifera oil",
+   "vitis vinifera  seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Maske mit Sheabutter, Kokos- und Traubenkernöl",
+  "inci_ok": true
+ },
+ "maske|Ida Warg|Intense Moisture Hair Mask": {
+  "type": "maske",
+  "brand": "Ida Warg",
+  "name": "Intense Moisture Hair Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.59,
+  "E": 0.78,
+  "hum": [
+   "sodium pca",
+   "glycerin"
+  ],
+  "emo": [
+   "butyrospermum parkii butter",
+   "passiflora edulis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Sheabutter, Maracujaöl und Feuchtigkeitsspendern",
+  "inci_ok": true
+ },
+ "maske|ISANA Professional|Haarmaske Arganöl & Pflege": {
+  "type": "maske",
+  "brand": "ISANA Professional",
+  "name": "Haarmaske Arganöl & Pflege",
+  "cats": [
+   "normal",
+   "dick",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.29,
+  "E": 1.11,
+  "hum": [
+   "glycerin",
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "prunus amygdalus dulcis oil",
+   "argania spinosa kernel oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Glycerin, leichtem Ölersatz, Mandel- und Arganöl",
+  "inci_ok": true
+ },
+ "maske|Herbal Essences|Repair Arganöl Haarmaske": {
+  "type": "maske",
+  "brand": "Herbal Essences",
+  "name": "Repair Arganöl Haarmaske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0.04,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "maske|ISANA Professional|Haarmaske Intensiv & Pflege": {
+  "type": "maske",
+  "brand": "ISANA Professional",
+  "name": "Haarmaske Intensiv & Pflege",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 1.16,
+  "E": 1.62,
+  "hum": [
+   "aloe barbadensis leaf juice",
+   "panthenol",
+   "glycerin"
+  ],
+  "emo": [
+   "dicaprylyl ether",
+   "coco-caprylate",
+   "prunus amygdalus dulcis oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Maske mit leichtem Ölersatz, Aloe, Mandelöl und Panthenol",
+  "inci_ok": true
+ },
+ "maske|ISANA Professional|Haarmaske Locken Traum": {
+  "type": "maske",
+  "brand": "ISANA Professional",
+  "name": "Haarmaske Locken Traum",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.5,
+  "E": 1.89,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "coco-caprylate",
+   "triticum vulgare germ oil",
+   "camellia oleifera seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Maske mit Weizenkeim-, Kamelien- und Kokosöl und Sheabutter",
+  "inci_ok": true
+ },
+ "maske|Schwarzkopf Gliss|Oil Nutritive 4in1 Bonding Haarmaske": {
+  "type": "maske",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Oil Nutritive 4in1 Bonding Haarmaske",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.49,
+  "E": 0.76,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "sclerocarya birrea seed oil"
+  ],
+  "prot": [],
+  "bond": [
+   "hydroxypropylgluconamide",
+   "hydroxypropylammonium gluconate"
+  ],
+  "note": "Pflegende Maske mit Bond-Wirkstoffen, Marulaöl und etwas Silikon",
+  "inci_ok": true
+ },
+ "maske|Pantene Pro-V|Grow Abundant Anti-Haarverlust Maske": {
+  "type": "maske",
+  "brand": "Pantene Pro-V",
+  "name": "Grow Abundant Anti-Haarverlust Maske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "maske|syoss|Intense Keratin Haarmaske": {
+  "type": "maske",
+  "brand": "syoss",
+  "name": "Intense Keratin Haarmaske",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.59,
+  "E": 0.36,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Pflegende Maske mit Keratin, leichtem Ölersatz und etwas Silikon",
+  "inci_ok": true
+ },
+ "maske|Garnier Fructis|Locken Methode Feuchtigkeitsauffüllende Maske": {
+  "type": "maske",
+  "brand": "Garnier Fructis",
+  "name": "Locken Methode Feuchtigkeitsauffüllende Maske",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.29,
+  "E": 1.59,
+  "hum": [
+   "sodium hyaluronate"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [
+   "arginine"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Sonnenblumenöl, Sheabutter und Hyaluron",
+  "inci_ok": true
+ },
+ "maske|OGX|Argan Oil of Morocco Extra Strength Hair Mask": {
+  "type": "maske",
+  "brand": "OGX",
+  "name": "Argan Oil of Morocco Extra Strength Hair Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.67,
+  "E": 0.29,
+  "hum": [
+   "glycerin",
+   "propylene glycol dicaprylate"
+  ],
+  "emo": [
+   "argania spinosa kernel oil"
+  ],
+  "prot": [
+   "cocodimonium hydroxypropyl silk amino acids"
+  ],
+  "bond": [],
+  "note": "Kur mit Glycerin, leichtem Ölersatz, Silikon und Arganöl",
+  "inci_ok": true
+ },
+ "maske|MONDAY|Smooth Anti-Frizz Haarmaske": {
+  "type": "maske",
+  "brand": "MONDAY",
+  "name": "Smooth Anti-Frizz Haarmaske",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 1.1,
+  "E": 1.14,
+  "hum": [
+   "glycerin",
+   "dipropylene glycol"
+  ],
+  "emo": [
+   "cocos nucifera  oil",
+   "butyrospermum parkii  butter",
+   "prunus amygdalus dulcis  oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Glycerin, zwei Silikonen, Kokos-, Mandel- und Jojobaöl und Sheabutter",
+  "inci_ok": true
+ },
+ "maske|MONDAY|Deep Moisture Haarmaske": {
+  "type": "maske",
+  "brand": "MONDAY",
+  "name": "Deep Moisture Haarmaske",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 1.06,
+  "E": 1.14,
+  "hum": [
+   "glycerin",
+   "dipropylene glycol"
+  ],
+  "emo": [
+   "cocos nucifera  oil",
+   "butyrospermum parkii  butter",
+   "theobroma cacao  seed butter"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Glycerin, zwei Silikonen, Kokos- und Arganöl, Shea- und Kakaobutter",
+  "inci_ok": true
+ },
+ "maske|OUAI|Fine/Medium Hair Treatment Masque": {
+  "type": "maske",
+  "brand": "OUAI",
+  "name": "Fine/Medium Hair Treatment Masque",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.61,
+  "E": 1.19,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "cetyl esters",
+   "jojoba esters",
+   "butyrospermum parkii  butter"
+  ],
+  "prot": [
+   "arginine",
+   "glycine",
+   "serine"
+  ],
+  "bond": [],
+  "note": "Maske mit Fettalkoholen, leichtem Ölersatz, Silikon und Sheabutter",
+  "inci_ok": true
+ },
+ "maske|Living Proof|Moisture Rescue Mask": {
+  "type": "maske",
+  "brand": "Living Proof",
+  "name": "Moisture Rescue Mask",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.31,
+  "E": 0.71,
+  "hum": [
+   "isopentyldiol",
+   "glycerin"
+  ],
+  "emo": [
+   "butyrospermum parkii  butter",
+   "jojoba esters",
+   "hydrogenated castor oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Maske mit leichtem Ölersatz, Sheabutter und Rizinus-Wirkstoffen",
+  "inci_ok": true
+ },
+ "maske|Color Wow|Dreaming Advanced Repair Treatment": {
+  "type": "maske",
+  "brand": "Color Wow",
+  "name": "Dreaming Advanced Repair Treatment",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.63,
+  "E": 1.56,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "caprylic",
+   "oleyl alcohol",
+   "cocos nucifera  oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Maske mit leichtem Ölersatz, Kokosöl, Squalan und Reiskleieöl",
+  "inci_ok": true
+ },
+ "maske|Oribe|Signature Moisture Masque": {
+  "type": "maske",
+  "brand": "Oribe",
+  "name": "Signature Moisture Masque",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.12,
+  "E": 0.45,
+  "hum": [],
+  "emo": [
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Maske mit Fettalkoholen, Silikon und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "maske|Elizavecca|CER-100 Collagen Ceramide Coating Protein Treatment": {
+  "type": "maske",
+  "brand": "Elizavecca",
+  "name": "CER-100 Collagen Ceramide Coating Protein Treatment",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.57,
+  "E": 0.04,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Kur mit Glycerin und drei Silikonen",
+  "inci_ok": true
+ },
+ "maske|Shiseido fino|Premium Touch Haarmaske": {
+  "type": "maske",
+  "brand": "Shiseido fino",
+  "name": "Premium Touch Haarmaske",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.55,
+  "E": 0.27,
+  "hum": [
+   "sorbitol",
+   "isopentyldiol",
+   "trehalose"
+  ],
+  "emo": [
+   "phytosteryl",
+   "octyldodecanol"
+  ],
+  "prot": [
+   "hydrolysiertes weizenprotein"
+  ],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Silikonen, Rapsöl, Squalan und Gelée Royale",
+  "inci_ok": true
+ },
+ "maske|Gisou|Honey Gloss Ceramide Therapy Hair Mask": {
+  "type": "maske",
+  "brand": "Gisou",
+  "name": "Honey Gloss Ceramide Therapy Hair Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 1.1,
+  "E": 1.14,
+  "hum": [
+   "mel",
+   "sodium hyaluronate",
+   "hydroxypropyltrimonium hyaluronate"
+  ],
+  "emo": [
+   "butyrospermum parkii  butter",
+   "ceramide np",
+   "squalane"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Maske mit Sheabutter, Honig, Ceramid, Hyaluron und Squalan",
+  "inci_ok": true
+ },
+ "maske|Kérastase|Première Masque Filler Réparateur": {
+  "type": "maske",
+  "brand": "Kérastase",
+  "name": "Première Masque Filler Réparateur",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0.08,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Silikonen und leichtem Ölersatz, glättet",
+  "inci_ok": true
+ },
+ "maske|Wella Professionals|Ultimate Repair Mask": {
+  "type": "maske",
+  "brand": "Wella Professionals",
+  "name": "Ultimate Repair Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.42,
+  "E": 0.08,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Fettalkoholen und einem pflegenden Silikon",
+  "inci_ok": true
+ },
+ "maske|L'Oréal Professionnel|Absolut Repair Molecular Mask": {
+  "type": "maske",
+  "brand": "L'Oréal Professionnel",
+  "name": "Absolut Repair Molecular Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.03,
+  "E": 0,
+  "hum": [
+   "glycerin",
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Glycerin, Fettalkohol und Silikonen",
+  "inci_ok": true
+ },
+ "maske|Redken|Acidic Bonding Concentrate 5-Min Liquid Mask": {
+  "type": "maske",
+  "brand": "Redken",
+  "name": "Acidic Bonding Concentrate 5-Min Liquid Mask",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "bond",
+  "H": 0.29,
+  "E": 0.04,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [
+   "Bond-Komplex laut Marke"
+  ],
+  "note": "Flüssige Maske mit Fettalkohol, Silikonen und Zitronensäure, wirkt in fünf Minuten",
+  "inci_ok": true
+ },
+ "maske|Kérastase|Résistance Masque Thérapiste": {
+  "type": "maske",
+  "brand": "Kérastase",
+  "name": "Résistance Masque Thérapiste",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 1.12,
+  "hum": [],
+  "emo": [
+   "paraffinum liquidum",
+   "orbignya oleifera seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Mineralöl, Babassuöl und einem Ceramid",
+  "inci_ok": true
+ },
+ "maske|Maria Nila|Structure Repair Masque": {
+  "type": "maske",
+  "brand": "Maria Nila",
+  "name": "Structure Repair Masque",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.5,
+  "E": 0.97,
+  "hum": [
+   "glycerin",
+   "propanediol"
+  ],
+  "emo": [
+   "butyrospermum parkii  butter",
+   "helianthus annuus seed oil",
+   "moringa oleifera seed oil"
+  ],
+  "prot": [
+   "hydrolyzed vegetable protein pg-propyl silanetriol"
+  ],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Sheabutter, Algenextrakt, Sonnenblumen- und Moringaöl",
+  "inci_ok": true
+ },
+ "maske|L'Oréal Professionnel|Metal DX Mask": {
+  "type": "maske",
+  "brand": "L'Oréal Professionnel",
+  "name": "Metal DX Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.42,
+  "hum": [],
+  "emo": [
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Fettalkohol und Silikon",
+  "inci_ok": true
+ },
+ "maske|Redken|Extreme Mask": {
+  "type": "maske",
+  "brand": "Redken",
+  "name": "Extreme Mask",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.04,
+  "E": 0.81,
+  "hum": [],
+  "emo": [
+   "paraffinum liquidum",
+   "cetyl esters"
+  ],
+  "prot": [
+   "aminopropyl triethoxysilane"
+  ],
+  "bond": [],
+  "note": "Maske aus zwei Kammern mit Fettalkohol, Mineralöl und Silikon, dazu ein stärkender Wirkstoff",
+  "inci_ok": true
+ },
+ "maske|Kérastase|Gloss Absolu Masque Crème Hydra-Glaze": {
+  "type": "maske",
+  "brand": "Kérastase",
+  "name": "Gloss Absolu Masque Crème Hydra-Glaze",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.53,
+  "E": 0.82,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Glycerin, leichtem Ölersatz und Silikon",
+  "inci_ok": true
+ },
+ "maske|Kérastase|Genesis Masque Reconstituant": {
+  "type": "maske",
+  "brand": "Kérastase",
+  "name": "Genesis Masque Reconstituant",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.42,
+  "hum": [],
+  "emo": [
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtere Maske mit Fettalkohol und Silikon",
+  "inci_ok": true
+ },
+ "maske|Kérastase|Nutritive Masquintense": {
+  "type": "maske",
+  "brand": "Kérastase",
+  "name": "Nutritive Masquintense",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.53,
+  "E": 0,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Glycerin und zwei Silikonen, dazu Niacinamid",
+  "inci_ok": true
+ },
+ "maske|Redken|All Soft Heavy Cream": {
+  "type": "maske",
+  "brand": "Redken",
+  "name": "All Soft Heavy Cream",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.46,
+  "E": 0.4,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "octyldodecanol"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Fettalkohol, Silikon, Glycerin und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "maske|Redken|Acidic Color Gloss Mask": {
+  "type": "maske",
+  "brand": "Redken",
+  "name": "Acidic Color Gloss Mask",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.74,
+  "E": 0.08,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtere, silikonfreie Maske mit viel Glycerin und Essig, sorgt für Glanz",
+  "inci_ok": true
+ },
+ "maske|Amika|Hydro Rush Intense Moisture Mask": {
+  "type": "maske",
+  "brand": "Amika",
+  "name": "Hydro Rush Intense Moisture Mask",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 1.03,
+  "E": 1.58,
+  "hum": [
+   "glycerin",
+   "hyaluronic acid",
+   "polyglutamic acid"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "ethyl macadamiate",
+   "squalane"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Maske mit Glycerin, leichtem Ölersatz, Squalan, Sheabutter und mehreren Ölen",
+  "inci_ok": true
+ },
+ "maske|Color Wow|Money Masque": {
+  "type": "maske",
+  "brand": "Color Wow",
+  "name": "Money Masque",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.67,
+  "E": 0.04,
+  "hum": [
+   "butylene glycol",
+   "propanediol"
+  ],
+  "emo": [],
+  "prot": [
+   "hydrolyzed vegetable protein pg-propyl silanetriol"
+  ],
+  "bond": [],
+  "note": "Pflegende Maske mit Fettalkoholen, Silikon und Algenextrakten",
+  "inci_ok": true
+ },
+ "maske|Maria Nila|True Soft Masque": {
+  "type": "maske",
+  "brand": "Maria Nila",
+  "name": "True Soft Masque",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kinder"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.71,
+  "E": 1.26,
+  "hum": [
+   "glycerin",
+   "sodium pca",
+   "propanediol"
+  ],
+  "emo": [
+   "butyrospermum parkii  butter",
+   "argania spinosa kernel oil",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Maske mit Sheabutter, Argan-, Sonnenblumen- und Moringaöl",
+  "inci_ok": true
+ },
+ "maske|K18|Leave-In Molecular Repair Hair Mask": {
+  "type": "maske",
+  "brand": "K18",
+  "name": "Leave-In Molecular Repair Hair Mask",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.59,
+  "E": 0.78,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [
+   "dicaprylyl ether",
+   "cetyl esters"
+  ],
+  "prot": [
+   "sh-oligopeptide-78",
+   "hydrolyzed wheat protein"
+  ],
+  "bond": [
+   "sh-oligopeptide-78"
+  ],
+  "note": "Leave-in-Maske mit Fettalkohol und leichtem Ölersatz, dazu das K18-Peptid",
+  "inci_ok": true
+ },
+ "maske|Kérastase|Première Concentré Décalcifiant": {
+  "type": "maske",
+  "brand": "Kérastase",
+  "name": "Première Concentré Décalcifiant",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal",
+   "dick",
+   "sehrdick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.33,
+  "E": 0.36,
+  "hum": [
+   "glycerin",
+   "propylene glycol"
+  ],
+  "emo": [
+   "peg-40 hydrogenated castor oil"
+  ],
+  "prot": [
+   "glycine"
+  ],
+  "bond": [],
+  "note": "Wässrige Pre-Shampoo-Kur mit Glycin und Zitronensäure, löst Kalk",
+  "inci_ok": true
+ },
+ "maske|Olaplex|Rich Hydration Mask": {
+  "type": "maske",
+  "brand": "Olaplex",
+  "name": "Rich Hydration Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0,
+  "hum": [],
+  "emo": [
+   "avocado oil",
+   "shea butter",
+   "coconut oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Maske mit Fettalkohol, leichtem Ölersatz, Sonnenblumen- und Avocadoöl, Sheabutter",
+  "inci_ok": false,
+  "note2": "INCI online (Cosmeterie/John Beerens); Bond-Wirkstoff erst hinter Parfum"
+ },
+ "maske|Olaplex|Weightless Nourishing Mask": {
+  "type": "maske",
+  "brand": "Olaplex",
+  "name": "Weightless Nourishing Mask",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0,
+  "E": 0,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "sodium hyaluronate"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtere Maske mit Fettalkohol, Pflegepolymer und etwas Silikon, ohne schwere Öle",
+  "inci_ok": false,
+  "note2": "INCI online (Liberty/Galaxus); Bond-Wirkstoff erst hinter Parfum"
+ },
+ "maske|Wella Professionals|Ultimate Smooth Mask": {
+  "type": "maske",
+  "brand": "Wella Professionals",
+  "name": "Ultimate Smooth Mask",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.12,
+  "E": 0.08,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Fettalkoholen, Panthenol und einem pflegenden Silikon",
+  "inci_ok": true
+ },
+ "maske|Wella Professionals|Oil Reflections Luminous Reboost Mask": {
+  "type": "maske",
+  "brand": "Wella Professionals",
+  "name": "Oil Reflections Luminous Reboost Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.4,
+  "E": 0.08,
+  "hum": [
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Maske mit Fettalkoholen, Silikon und Panthenol",
+  "inci_ok": true
+ },
+ "maske|Coco & Eve|Bond Building Pre-Shampoo Treatment": {
+  "type": "maske",
+  "brand": "Coco & Eve",
+  "name": "Bond Building Pre-Shampoo Treatment",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.63,
+  "E": 0.65,
+  "hum": [
+   "butylene glycol"
+  ],
+  "emo": [
+   "cocos nucifera oil",
+   "ethylhexyl palmitate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Kur für vor der Haarwäsche, mit Silikon, Kokosöl und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Glycolic Gloss Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Glycolic Gloss Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte Spülung mit Fettalkohol und etwas Amodimethicone, dazu Perlglanz",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Glycolic Gloss Spiegelglanz Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Glycolic Gloss Spiegelglanz Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.49,
+  "E": 0,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Silikon und Glycerin",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Collagen Lifter Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Collagen Lifter Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.12,
+  "E": 0.58,
+  "hum": [
+   "glycerin",
+   "butylene glycol"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Fettalkohol, Glycerin und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|Pantene Pro-V|Repair & Care Conditioner": {
+  "type": "conditioner",
+  "brand": "Pantene Pro-V",
+  "name": "Repair & Care Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Hydra Hyaluronic Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Hydra Hyaluronic Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.71,
+  "E": 0,
+  "hum": [
+   "glycerin",
+   "sodium hyaluronate"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Silikon und Glycerin",
+  "inci_ok": true
+ },
+ "conditioner|Herbal Essences|Fiji mit Kokosnussextrakt Conditioner": {
+  "type": "conditioner",
+  "brand": "Herbal Essences",
+  "name": "Fiji mit Kokosnussextrakt Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Herbal Essences|Blütensanft Rosenduft Conditioner": {
+  "type": "conditioner",
+  "brand": "Herbal Essences",
+  "name": "Blütensanft Rosenduft Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Dream Length Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Dream Length Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.98,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Fettalkohol, leichtem Ölersatz, Sonnenblumen- und Rizinusöl",
+  "inci_ok": true
+ },
+ "conditioner|Bali Curls|Moisturising Conditioner": {
+  "type": "conditioner",
+  "brand": "Bali Curls",
+  "name": "Moisturising Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.88,
+  "E": 0.69,
+  "hum": [
+   "glycerin",
+   "betaine"
+  ],
+  "emo": [
+   "butyrospermum parkibutter",
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Sheabutter, Kokosöl und Glycerin",
+  "inci_ok": true
+ },
+ "conditioner|Aussie|Bouncy Curls Conditioner": {
+  "type": "conditioner",
+  "brand": "Aussie",
+  "name": "Bouncy Curls Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0.08,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Fettalkoholen",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Fiber Booster Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Fiber Booster Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.59,
+  "E": 0.97,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "glycine soja oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Fettalkohol, Glycerin, leichtem Ölersatz und Sojaöl",
+  "inci_ok": true
+ },
+ "conditioner|Schwarzkopf Gliss|Liquid Silk Conditioner": {
+  "type": "conditioner",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Liquid Silk Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.29,
+  "E": 0.4,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "hydrolyzed silk"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Silikon und leichtem Ölersatz, dazu etwas Seidenprotein",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Bond Repair Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Bond Repair Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte Spülung mit Fettalkohol und etwas Amodimethicone",
+  "inci_ok": true
+ },
+ "conditioner|Herbal Essences|Repair Arganöl Conditioner": {
+  "type": "conditioner",
+  "brand": "Herbal Essences",
+  "name": "Repair Arganöl Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0.04,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|syoss|Intense Keratin Conditioner": {
+  "type": "conditioner",
+  "brand": "syoss",
+  "name": "Intense Keratin Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0,
+  "E": 0.59,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkohol, leichtem Ölersatz, Keratin und etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Garnier Wahre Schätze|Sanfte Hafermilch Conditioner": {
+  "type": "conditioner",
+  "brand": "Garnier Wahre Schätze",
+  "name": "Sanfte Hafermilch Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.59,
+  "E": 1.72,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "glycine soja oil",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Glycerin, leichtem Ölersatz, Soja- und Sonnenblumenöl",
+  "inci_ok": true
+ },
+ "conditioner|Garnier Wahre Schätze|Honig Schätze Conditioner": {
+  "type": "conditioner",
+  "brand": "Garnier Wahre Schätze",
+  "name": "Honig Schätze Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.12,
+  "E": 0.94,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Fettalkohol und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|Langhaarmädchen|Hydrate & Shine Conditioner": {
+  "type": "conditioner",
+  "brand": "Langhaarmädchen",
+  "name": "Hydrate & Shine Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.43,
+  "E": 0.49,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "hydrolyzed hyaluronic acid"
+  ],
+  "emo": [
+   "isopropyl palmitate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit viel Glycerin und Panthenol",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Hydra Hyaluronic Pure Conditioner": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Hydra Hyaluronic Pure Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.02,
+  "E": 0,
+  "hum": [
+   "glycerin",
+   "sodium hyaluronate"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte Spülung mit viel Glycerin und etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Oil Repair Intensiv Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Oil Repair Intensiv Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 1.1,
+  "E": 1.71,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "helianthus annuus hybrid oil",
+   "ricinus communis seed oil"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Glycerin, Keratin und fünf Ölen",
+  "inci_ok": true
+ },
+ "conditioner|John Frieda|Frizz Ease Wunder-Reparatur Conditioner": {
+  "type": "conditioner",
+  "brand": "John Frieda",
+  "name": "Frizz Ease Wunder-Reparatur Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.98,
+  "E": 1.21,
+  "hum": [
+   "dipropylene glycol",
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "olea europaea  fruit oil",
+   "ricinus communis  seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit leichtem Ölersatz, Panthenol, Oliven- und Rizinusöl",
+  "inci_ok": true
+ },
+ "conditioner|Herbal Essences|Feuchtigkeit Aloe Vera Conditioner": {
+  "type": "conditioner",
+  "brand": "Herbal Essences",
+  "name": "Feuchtigkeit Aloe Vera Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Herbal Essences|Limettenduft Tiefenreinigung & Glanz Conditioner": {
+  "type": "conditioner",
+  "brand": "Herbal Essences",
+  "name": "Limettenduft Tiefenreinigung & Glanz Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Fettalkoholen",
+  "inci_ok": true
+ },
+ "conditioner|Jean&Len|Hydration Pfirsich Chia Conditioner": {
+  "type": "conditioner",
+  "brand": "Jean&Len",
+  "name": "Hydration Pfirsich Chia Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.67,
+  "hum": [],
+  "emo": [
+   "isopropyl palmitate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Fettalkohol und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|Garnier Fructis|Keratin Sleek Conditioner": {
+  "type": "conditioner",
+  "brand": "Garnier Fructis",
+  "name": "Keratin Sleek Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0,
+  "E": 0.42,
+  "hum": [],
+  "emo": [
+   "argania spinosa kernel oil"
+  ],
+  "prot": [
+   "hydrolyzed corn protein",
+   "hydrolyzed soy protein",
+   "hydrolyzed wheat protein"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Amodimethicone, Arganöl und Pflanzenproteinen",
+  "inci_ok": true
+ },
+ "conditioner|OGX|Argan Oil of Morocco Conditioner": {
+  "type": "conditioner",
+  "brand": "OGX",
+  "name": "Argan Oil of Morocco Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.49,
+  "E": 0.97,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "argania spinosa kernel oil",
+   "isopropyl myristate",
+   "coco-caprylate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Arganöl und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Aqua Hyaluron Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Aqua Hyaluron Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.57,
+  "E": 0,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichte, silikonfreie Spülung mit Fettalkohol und Glycerin",
+  "inci_ok": true
+ },
+ "conditioner|John Frieda|Frizz Ease Traumlocken Conditioner": {
+  "type": "conditioner",
+  "brand": "John Frieda",
+  "name": "Frizz Ease Traumlocken Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.98,
+  "E": 0.81,
+  "hum": [
+   "dipropylene glycol",
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "rosa canina fruit oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit leichtem Ölersatz, Panthenol und Hagebuttenöl",
+  "inci_ok": true
+ },
+ "conditioner|Langhaarmädchen|Lovely Long Conditioner": {
+  "type": "conditioner",
+  "brand": "Langhaarmädchen",
+  "name": "Lovely Long Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.5,
+  "E": 0.42,
+  "hum": [
+   "glycerin",
+   "dipropylene glycol"
+  ],
+  "emo": [
+   "argania spinosa kernel oil"
+  ],
+  "prot": [
+   "hydrolyzed wheat protein"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Fettalkoholen, Arganöl und etwas Weizenprotein",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Plex Care Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Plex Care Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.26,
+  "E": 0.42,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "ricinus communis seed oil"
+  ],
+  "prot": [
+   "hydrolyzed pea protein",
+   "arginine",
+   "serine"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Rizinusöl, Erbsenprotein und Aminosäuren",
+  "inci_ok": true
+ },
+ "conditioner|OGX|Biotin & Collagen Conditioner": {
+  "type": "conditioner",
+  "brand": "OGX",
+  "name": "Biotin & Collagen Conditioner",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.49,
+  "E": 0.5,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "coco-caprylate"
+  ],
+  "prot": [
+   "hydrolyzed collagen"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Kollagen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|OGX|Bond Protein Repair Conditioner": {
+  "type": "conditioner",
+  "brand": "OGX",
+  "name": "Bond Protein Repair Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.63,
+  "E": 0.08,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Keratin Repair Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Keratin Repair Conditioner",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.63,
+  "E": 0,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [
+   "hydrolyzed keratin",
+   "hydro lyzed wheat protein",
+   "hydrolyzed corn protein"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Keratin und drei Pflanzenproteinen, ohne Öle",
+  "inci_ok": true
+ },
+ "conditioner|Balea|Feuchtigkeit Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea",
+  "name": "Feuchtigkeit Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.08,
+  "E": 0.08,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Glycerin, Panthenol und Niacinamid",
+  "inci_ok": true
+ },
+ "conditioner|Bali Curls|Bonding Repair Conditioner": {
+  "type": "conditioner",
+  "brand": "Bali Curls",
+  "name": "Bonding Repair Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.53,
+  "E": 1.33,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "glycine soja oil",
+   "butyrospermum parkii butter",
+   "simmondsia chinensis seed oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Sojaöl, Sheabutter und Jojobaöl",
+  "inci_ok": true
+ },
+ "conditioner|Santé|Intense Hydration Conditioner": {
+  "type": "conditioner",
+  "brand": "Santé",
+  "name": "Intense Hydration Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.9,
+  "E": 0.36,
+  "hum": [
+   "aloe barbadensis leaf juice powder*",
+   "panthenol",
+   "glycerin"
+  ],
+  "emo": [
+   "helianthus annuus hybrid oil*"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Sonnenblumenöl, Aloe und Panthenol",
+  "inci_ok": true
+ },
+ "conditioner|Balea|Locken beauty essentials Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea",
+  "name": "Locken beauty essentials Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.55,
+  "E": 0.83,
+  "hum": [
+   "betaine",
+   "panthenol",
+   "glycerin"
+  ],
+  "emo": [
+   "butyrospermum parkii butter",
+   "macadamia integrifolia",
+   "dicaprylyl ether"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Sheabutter, Macadamiaöl und Panthenol",
+  "inci_ok": true
+ },
+ "conditioner|NEQI|Diamond Glass Conditioner": {
+  "type": "conditioner",
+  "brand": "NEQI",
+  "name": "Diamond Glass Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.59,
+  "E": 0,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|John Frieda|Frizz Ease Unendlich Smooth Conditioner": {
+  "type": "conditioner",
+  "brand": "John Frieda",
+  "name": "Frizz Ease Unendlich Smooth Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.98,
+  "E": 0.59,
+  "hum": [
+   "dipropylene glycol",
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "soy amino acids",
+   "wheat amino acids",
+   "arginine hcl"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit leichtem Ölersatz, Panthenol und Aminosäuren",
+  "inci_ok": true
+ },
+ "conditioner|Balea|Intensivpflege Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea",
+  "name": "Intensivpflege Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.59,
+  "E": 0.5,
+  "hum": [
+   "panthenol"
+  ],
+  "emo": [
+   "prunus amygdalus dulcis oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Panthenol, Niacinamid und Mandelöl",
+  "inci_ok": true
+ },
+ "conditioner|Pantene Pro-V|Moisture Boost Conditioner": {
+  "type": "conditioner",
+  "brand": "Pantene Pro-V",
+  "name": "Moisture Boost Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Aussie|Oh My Gloss Conditioner": {
+  "type": "conditioner",
+  "brand": "Aussie",
+  "name": "Oh My Gloss Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0.04,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|NEQI|Repair Reveal Conditioner": {
+  "type": "conditioner",
+  "brand": "NEQI",
+  "name": "Repair Reveal Conditioner",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.33,
+  "E": 0.04,
+  "hum": [
+   "propylene glycol",
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [
+   "soy amino acids",
+   "wheat amino acids",
+   "avena sativa  peptide"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Glycerin, Aminosäuren aus Soja und Weizen und Haferpeptid",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Hydra Volume Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Hydra Volume Conditioner",
+  "cats": [
+   "duenn"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.03,
+  "E": 0,
+  "hum": [
+   "sodium hyaluronate",
+   "panthenol",
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichte, silikonfreie Spülung mit Hyaluron, Niacinamid und Panthenol",
+  "inci_ok": true
+ },
+ "conditioner|Santé|Glossy Shine Conditioner": {
+  "type": "conditioner",
+  "brand": "Santé",
+  "name": "Glossy Shine Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.66,
+  "E": 0.36,
+  "hum": [
+   "panthenol",
+   "glycerin",
+   "sodium lactate"
+  ],
+  "emo": [
+   "helianthus annuus hybrid oil*"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Sonnenblumenöl und Panthenol",
+  "inci_ok": true
+ },
+ "conditioner|OGX|Coconut Miracle Oil Conditioner": {
+  "type": "conditioner",
+  "brand": "OGX",
+  "name": "Coconut Miracle Oil Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.42,
+  "E": 0.36,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "cocos nucifera  oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Spülung mit Kokosöl, leichtem Ölersatz und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Pomélo+Co|Shine Therapy Conditioner": {
+  "type": "conditioner",
+  "brand": "Pomélo+Co",
+  "name": "Shine Therapy Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.26,
+  "E": 0.8,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "caprylic"
+  ],
+  "prot": [
+   "arginine",
+   "serine"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Glycerin, Panthenol und Essig",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Glossy Color Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Glossy Color Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.1,
+  "E": 0.78,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "ricinus communis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Glycerin, leichtem Ölersatz und Rizinusöl",
+  "inci_ok": true
+ },
+ "conditioner|Pantene Pro-V|Miracles Lift & Volume Conditioner": {
+  "type": "conditioner",
+  "brand": "Pantene Pro-V",
+  "name": "Miracles Lift & Volume Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Fettalkoholen",
+  "inci_ok": true
+ },
+ "conditioner|Balea|Molecular Care Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea",
+  "name": "Molecular Care Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.42,
+  "E": 0.49,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Kokosöl, Glycerin und etwas Amodimethicone",
+  "inci_ok": true
+ },
+ "conditioner|Pantene Pro-V|Glowtox Conditioner": {
+  "type": "conditioner",
+  "brand": "Pantene Pro-V",
+  "name": "Glowtox Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|NEQI|Moisture Mystery Conditioner": {
+  "type": "conditioner",
+  "brand": "NEQI",
+  "name": "Moisture Mystery Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.33,
+  "E": 0,
+  "hum": [
+   "propylene glycol",
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [
+   "avena sativa  peptide"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkoholen und etwas Amodimethicone",
+  "inci_ok": true
+ },
+ "conditioner|Pomélo+Co|Molecular Repair Conditioner": {
+  "type": "conditioner",
+  "brand": "Pomélo+Co",
+  "name": "Molecular Repair Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.1,
+  "E": 0.66,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "prunus amygdalus dulcis oil"
+  ],
+  "prot": [
+   "hydrolyzed wheat protein",
+   "arginine"
+  ],
+  "bond": [],
+  "note": "Pflegende, silikonfreie Spülung mit Glycerin, Weizenprotein, Arginin und Mandelöl",
+  "inci_ok": true
+ },
+ "conditioner|Garnier Wahre Schätze|Reiswasser Ritual & Stärke Conditioner": {
+  "type": "conditioner",
+  "brand": "Garnier Wahre Schätze",
+  "name": "Reiswasser Ritual & Stärke Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.63,
+  "E": 1.48,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "glycine soja oil",
+   "helianthus annuus seed oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Glycerin, leichtem Ölersatz, Soja- und Sonnenblumenöl",
+  "inci_ok": true
+ },
+ "conditioner|syoss|Intense Glaze Conditioner": {
+  "type": "conditioner",
+  "brand": "syoss",
+  "name": "Intense Glaze Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0,
+  "E": 0.59,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Saure Spülung mit Keratin und leichtem Ölersatz, etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Schwarzkopf Gliss|Aqua Revive Conditioner": {
+  "type": "conditioner",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Aqua Revive Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.51,
+  "E": 0.36,
+  "hum": [
+   "glycerin",
+   "propylene glycol"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Silikon, leichtem Ölersatz und Glycerin",
+  "inci_ok": true
+ },
+ "conditioner|MONDAY|Moisture Conditioner": {
+  "type": "conditioner",
+  "brand": "MONDAY",
+  "name": "Moisture Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.71,
+  "E": 0.08,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Amodimethicone und Sheabutter",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Glow & Shine Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Glow & Shine Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.82,
+  "E": 0.42,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "ricinus communis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Rizinusöl und Glykolsäure",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Brilliant Blond Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Brilliant Blond Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.4,
+  "E": 0.36,
+  "hum": [
+   "propylene glycol stearamidopropyl dimethylamine",
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "simmondsia chinensis seed oil"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Glycerin, Jojobaöl, Panthenol und etwas Keratin",
+  "inci_ok": true
+ },
+ "conditioner|alverde|Ultra Sensitiv Conditioner": {
+  "type": "conditioner",
+  "brand": "alverde",
+  "name": "Ultra Sensitiv Conditioner",
+  "cats": [
+   "duenn",
+   "normal",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.1,
+  "E": 0,
+  "hum": [
+   "glycerin",
+   "betaine"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Milde, silikonfreie Spülung mit Glycerin, Sonnenblumenöl und Aloe, ohne Parfum",
+  "inci_ok": true
+ },
+ "conditioner|Balea Professional|Traumlocken Conditioner": {
+  "type": "conditioner",
+  "brand": "Balea Professional",
+  "name": "Traumlocken Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.63,
+  "E": 0.82,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "butyrospermum parkii butter",
+   "triticum vulgare germ oil",
+   "camellia oleifera seed oil"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Sheabutter, Weizenkeim- und Kamelienöl",
+  "inci_ok": true
+ },
+ "conditioner|OGX|Brazilian Keratin Smooth Conditioner": {
+  "type": "conditioner",
+  "brand": "OGX",
+  "name": "Brazilian Keratin Smooth Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.42,
+  "E": 0.88,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "cocos nucifera oil",
+   "persea gratissima  oil",
+   "theobroma cacao seed butter"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Reichhaltige Spülung mit Keratin, Kokos- und Avocadoöl, Kakaobutter und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Schwarzkopf Gliss|Sealing Miracle Sealing Conditioner": {
+  "type": "conditioner",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Sealing Miracle Sealing Conditioner",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.49,
+  "E": 0.36,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "pisum sativum  peptide"
+  ],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Erbsenpeptid und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|ISANA Professional|Plex Spülung": {
+  "type": "conditioner",
+  "brand": "ISANA Professional",
+  "name": "Plex Spülung",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.1,
+  "E": 0.64,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "cocos nucifera oil"
+  ],
+  "prot": [
+   "oryza sativa seed protein"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Glycerin, Panthenol und Reisprotein",
+  "inci_ok": true
+ },
+ "conditioner|OGX|Keratin Oil Conditioner": {
+  "type": "conditioner",
+  "brand": "OGX",
+  "name": "Keratin Oil Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.32,
+  "E": 0.36,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "argania spinosa kernel oil"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Keratin, Arganöl, Glycerin und Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Dejan Garz|The Foundation Conditioner Deep Hydration": {
+  "type": "conditioner",
+  "brand": "Dejan Garz",
+  "name": "The Foundation Conditioner Deep Hydration",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.37,
+  "E": 0.73,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "inulin"
+  ],
+  "emo": [
+   "argania spinosa kernel oil",
+   "ricinus communis seed oil",
+   "simmondsia chinensis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, zwei Silikonen, Panthenol und drei Ölen",
+  "inci_ok": true
+ },
+ "conditioner|ISANA Professional|Spülung Arganöl & Pflege": {
+  "type": "conditioner",
+  "brand": "ISANA Professional",
+  "name": "Spülung Arganöl & Pflege",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.83,
+  "E": 0.55,
+  "hum": [
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [
+   "argania spinosa kernel oil",
+   "prunus domestica seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Argan- und Pflaumenkernöl und Panthenol",
+  "inci_ok": true
+ },
+ "conditioner|ISANA|Curltastic Conditioner": {
+  "type": "conditioner",
+  "brand": "ISANA",
+  "name": "Curltastic Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.4,
+  "E": 0.9,
+  "hum": [
+   "betaine"
+  ],
+  "emo": [
+   "butyrospermum parkii butter",
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Sheabutter und Kokosöl",
+  "inci_ok": true
+ },
+ "conditioner|NIVEA|Hairmilk Shine Spülung": {
+  "type": "conditioner",
+  "brand": "NIVEA",
+  "name": "Hairmilk Shine Spülung",
+  "cats": [
+   "duenn",
+   "normal",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.78,
+  "E": 0.63,
+  "hum": [
+   "glycerin",
+   "dipropylene glycol"
+  ],
+  "emo": [
+   "prunus amygdalus dulcis oil",
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte, silikonfreie Spülung mit Glycerin und etwas Mandelöl",
+  "inci_ok": true
+ },
+ "conditioner|being|Bye Bye Frizz Anti-Frizz Conditioner": {
+  "type": "conditioner",
+  "brand": "being",
+  "name": "Bye Bye Frizz Anti-Frizz Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.46,
+  "E": 1.6,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "prunus amygdalus dulcis oil",
+   "simmondsia chinensis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Mandel- und Jojobaöl und Sheabutter",
+  "inci_ok": true
+ },
+ "conditioner|ISANA Professional|Spülung Glycol & Glanz": {
+  "type": "conditioner",
+  "brand": "ISANA Professional",
+  "name": "Spülung Glycol & Glanz",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.82,
+  "E": 0.42,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "ricinus communis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Rizinusöl und Glykolsäure",
+  "inci_ok": true
+ },
+ "conditioner|Garnier Wahre Schätze|Kokosmilch & Macadamia Conditioner": {
+  "type": "conditioner",
+  "brand": "Garnier Wahre Schätze",
+  "name": "Kokosmilch & Macadamia Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 1.02,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Fettalkohol und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|MONDAY|Repair Conditioner": {
+  "type": "conditioner",
+  "brand": "MONDAY",
+  "name": "Repair Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.59,
+  "E": 1.02,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "butyrospermum parkii butter",
+   "cocos nucifera oil",
+   "argania spinosa kernel oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Spülung mit Silikon, Sheabutter, Kokos-, Arganöl und Kakaobutter",
+  "inci_ok": true
+ },
+ "conditioner|ISANA Professional|Glycolic Shine Spülung": {
+  "type": "conditioner",
+  "brand": "ISANA Professional",
+  "name": "Glycolic Shine Spülung",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.59,
+  "E": 0.85,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "hydrogenated castor oil",
+   "glycine soja oil"
+  ],
+  "prot": [
+   "glycine soja oil"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Silikon, Sojaöl und Glykolsäure",
+  "inci_ok": true
+ },
+ "conditioner|neboa|Repair & Shine Regenerierende Spülung": {
+  "type": "conditioner",
+  "brand": "neboa",
+  "name": "Repair & Shine Regenerierende Spülung",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.18,
+  "E": 2.19,
+  "hum": [
+   "propanediol"
+  ],
+  "emo": [
+   "prunus amygdalus dulcis oil",
+   "brassica alba seed oil",
+   "linum usitatissimum seed oil"
+  ],
+  "prot": [
+   "hydrolyzed pea protein",
+   "hydrolyzed vegetable protein"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Mandelöl, mehreren Pflanzenölen und Erbsenprotein",
+  "inci_ok": true
+ },
+ "conditioner|MONDAY|Smooth Antifrizz Conditioner": {
+  "type": "conditioner",
+  "brand": "MONDAY",
+  "name": "Smooth Antifrizz Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.67,
+  "E": 0.08,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Glycerin, Amodimethicone und Sheabutter",
+  "inci_ok": true
+ },
+ "conditioner|OGX|ProGrowth + Peptide Conditioner": {
+  "type": "conditioner",
+  "brand": "OGX",
+  "name": "ProGrowth + Peptide Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.53,
+  "E": 0.08,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkohol, Glycerin und etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Coco & Eve|Bond Therapy Pro Bond Conditioner": {
+  "type": "conditioner",
+  "brand": "Coco & Eve",
+  "name": "Bond Therapy Pro Bond Conditioner",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.75,
+  "E": 0.61,
+  "hum": [
+   "glycerin",
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [
+   "ethylhexyl palmitate",
+   "argania spinosa kernel oil"
+  ],
+  "prot": [
+   "hydrolyzed vegetable protein pg-propyl silanetriol"
+  ],
+  "bond": [],
+  "note": "Pflegende Spülung mit Kokos, Arganöl, leichtem Ölersatz und Pflanzenprotein",
+  "inci_ok": true
+ },
+ "conditioner|Redken|Extreme Conditioner": {
+  "type": "conditioner",
+  "brand": "Redken",
+  "name": "Extreme Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.53,
+  "E": 0.82,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "cetyl esters",
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Spülung mit Fettalkohol, Glycerin, leichtem Ölersatz und etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Olaplex|No.5 FINE Bond Maintenance Conditioner": {
+  "type": "conditioner",
+  "brand": "Olaplex",
+  "name": "No.5 FINE Bond Maintenance Conditioner",
+  "cats": [
+   "duenn",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "bond",
+  "H": 1.02,
+  "E": 0.16,
+  "hum": [
+   "propanediol",
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [
+   "bis-aminopropyl diglycol dimaleate"
+  ],
+  "note": "Leichte, silikonfreie Spülung mit Bond-Wirkstoff, Glycerin und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|Olaplex|No.5 CURL Bond Shaper Hydrating Curl Conditioner": {
+  "type": "conditioner",
+  "brand": "Olaplex",
+  "name": "No.5 CURL Bond Shaper Hydrating Curl Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.87,
+  "E": 0.65,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "hydrogenated rapeseed oil",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Olivenöl-Ersatz, Rapsöl, Avocadoöl und Glycerin",
+  "inci_ok": true
+ },
+ "conditioner|Living Proof|Full Conditioner": {
+  "type": "conditioner",
+  "brand": "Living Proof",
+  "name": "Full Conditioner",
+  "cats": [
+   "duenn"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.85,
+  "E": 0,
+  "hum": [
+   "isopentyldiol",
+   "glycerin",
+   "sodium pca"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichte, silikonfreie Spülung mit Fettalkohol und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|Living Proof|Restore Conditioner": {
+  "type": "conditioner",
+  "brand": "Living Proof",
+  "name": "Restore Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.52,
+  "E": 0.61,
+  "hum": [
+   "isopentyldiol",
+   "glycerin",
+   "sodium pca"
+  ],
+  "emo": [
+   "jojoba esters",
+   "hydrogenated castor oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Jojoba-Estern, Sonnenblumenwachs und Rizinusöl-Ersatz",
+  "inci_ok": true
+ },
+ "conditioner|Living Proof|Perfect hair Day Conditioner": {
+  "type": "conditioner",
+  "brand": "Living Proof",
+  "name": "Perfect hair Day Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.5,
+  "E": 0.32,
+  "hum": [
+   "isopentyldiol",
+   "glycerin",
+   "sodium pca"
+  ],
+  "emo": [
+   "jojoba esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Fettalkoholen, Jojoba-Estern und Sonnenblumenwachs",
+  "inci_ok": true
+ },
+ "conditioner|Living Proof|No Frizz Conditioner": {
+  "type": "conditioner",
+  "brand": "Living Proof",
+  "name": "No Frizz Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.48,
+  "E": 0.54,
+  "hum": [
+   "glycerin",
+   "isopentyldiol",
+   "sodium pca"
+  ],
+  "emo": [
+   "jojoba esters",
+   "hydrolyzed jojoba esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Spülung mit Jojoba-Estern, Sonnenblumenwachs und einem Anti-Feuchtigkeits-Wirkstoff",
+  "inci_ok": true
+ },
+ "conditioner|OUAI|Thick Hair Conditioner": {
+  "type": "conditioner",
+  "brand": "OUAI",
+  "name": "Thick Hair Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.12,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Spülung mit mehreren Silikonen, Avocadoöl und Sheabutter",
+  "inci_ok": true
+ },
+ "conditioner|being|Curl Power Locken Conditioner": {
+  "type": "conditioner",
+  "brand": "being",
+  "name": "Curl Power Locken Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.46,
+  "E": 1.6,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate",
+   "cocos nucifera oil",
+   "vitis vinifera seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Spülung mit Kokos-, Traubenkernöl und Sheabutter",
+  "inci_ok": true
+ },
+ "conditioner|NEQI|Diamond Glass Mirror Rinse": {
+  "type": "conditioner",
+  "brand": "NEQI",
+  "name": "Diamond Glass Mirror Rinse",
+  "cats": [
+   "fein"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.59,
+  "E": 0.24,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "dicaprylylcarbonat"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Flüssige Spülung mit Glycerin, Glykolsäure und etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|Schwarzkopf Gliss|Ultimate Repair Express-Repair-Kur 7 sec": {
+  "type": "conditioner",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Ultimate Repair Express-Repair-Kur 7 sec",
+  "cats": [
+   "fein"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.36,
+  "E": 0.81,
+  "hum": [
+   "propylene glycol",
+   "glycerin"
+  ],
+  "emo": [
+   "dicaprylyl carbonate",
+   "caprylic"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Flüssige, silikonfreie Spülung mit Glycerin und leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|ISANA Professional|Haarfluid Wunder Express": {
+  "type": "conditioner",
+  "brand": "ISANA Professional",
+  "name": "Haarfluid Wunder Express",
+  "cats": [
+   "fein"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.0,
+  "E": 0.26,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "dicaprylyl carbonate"
+  ],
+  "prot": [
+   "hydroxypropyltrimonium hydrolyzed wheat protein"
+  ],
+  "bond": [],
+  "note": "Flüssige, silikonfreie Spülung mit Glycerin und Weizenprotein",
+  "inci_ok": true
+ },
+ "conditioner|Kérastase|Chroma Absolu Soin Acide Chroma Gloss": {
+  "type": "conditioner",
+  "brand": "Kérastase",
+  "name": "Chroma Absolu Soin Acide Chroma Gloss",
+  "cats": [
+   "fein"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.74,
+  "E": 0.49,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [
+   "caprylic"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Flüssige Spülung mit leichtem Ölersatz, Milchsäure und etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Professionnel|Serie Expert Absolut Repair Molecular Rinse-Off Serum": {
+  "type": "conditioner",
+  "brand": "L'Oréal Professionnel",
+  "name": "Serie Expert Absolut Repair Molecular Rinse-Off Serum",
+  "cats": [
+   "fein",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.33,
+  "E": 0.04,
+  "hum": [
+   "glycerin",
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [
+   "glycine"
+  ],
+  "bond": [],
+  "note": "Flüssige Spülung mit Glycerin, Aminosäuren und etwas Silikon",
+  "inci_ok": true
+ },
+ "conditioner|L'Oréal Paris Elvital|Dream Length Wonder Water": {
+  "type": "conditioner",
+  "brand": "L'Oréal Paris Elvital",
+  "name": "Dream Length Wonder Water",
+  "cats": [
+   "fein"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.0,
+  "E": 0.04,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Flüssige, silikonfreie Spülung mit leichtem Ölersatz",
+  "inci_ok": true
+ },
+ "conditioner|amika|flash instant shine mask": {
+  "type": "conditioner",
+  "brand": "amika",
+  "name": "flash instant shine mask",
+  "cats": [
+   "fein"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.33,
+  "E": 0,
+  "hum": [
+   "glycerin",
+   "sodium pca",
+   "sodium lactate"
+  ],
+  "emo": [],
+  "prot": [
+   "glycine soja germ extract",
+   "glycine",
+   "arginine"
+  ],
+  "bond": [],
+  "note": "Flüssige Spülung mit Glycerin, Leinsamen, Aminosäuren und etwas Silikon",
+  "inci_ok": true
+ },
+ "leavein|Pantene Pro-V|Miracles Molecular Bond Repair Wunder Haarcreme": {
+  "type": "leavein",
+  "brand": "Pantene Pro-V",
+  "name": "Miracles Molecular Bond Repair Wunder Haarcreme",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.04,
+  "E": 1.39,
+  "hum": [],
+  "emo": [
+   "hexyldecanol",
+   "triethylhexanoin",
+   "caprylic"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Creme mit Silikon und Fettalkoholen, macht spürbar geschmeidig",
+  "inci_ok": true
+ },
+ "leavein|Pantene Pro-V|Leave-In Spray Sunkiss Glow": {
+  "type": "leavein",
+  "brand": "Pantene Pro-V",
+  "name": "Leave-In Spray Sunkiss Glow",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.2,
+  "E": 0.08,
+  "hum": [
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Spray mit Amodimethicone, entwirrt ohne zu beschweren",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Haarkur Glanz Booster Liquid Silk": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Haarkur Glanz Booster Liquid Silk",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.34,
+  "E": 0.36,
+  "hum": [
+   "betaine"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Viel Silikon für Glanz und Geschmeidigkeit, cremige Textur",
+  "inci_ok": true
+ },
+ "leavein|Balea|Leave-In Pflege feuchtigkeitsspendend": {
+  "type": "leavein",
+  "brand": "Balea",
+  "name": "Leave-In Pflege feuchtigkeitsspendend",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.49,
+  "E": 1.0,
+  "hum": [
+   "glycerin",
+   "hydrolyzed corn starch",
+   "aloe barbadensis leaf juice powder"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Creme mit Glycerin, Kokosöl und Panthenol",
+  "inci_ok": true
+ },
+ "leavein|Aussie|Leave-In Haarserum 100 Hours Hydration": {
+  "type": "leavein",
+  "brand": "Aussie",
+  "name": "Leave-In Haarserum 100 Hours Hydration",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.63,
+  "hum": [],
+  "emo": [
+   "paraffinum liquidum"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikon und Paraffin versiegeln das Haar mit einem Schutzfilm. So bleibt die Feuchtigkeit im Haar und es fühlt sich lange geschmeidig an",
+  "inci_ok": true
+ },
+ "leavein|Balea Professional|Leave-In Haarmaske Molecular Care": {
+  "type": "leavein",
+  "brand": "Balea Professional",
+  "name": "Leave-In Haarmaske Molecular Care",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0.08,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Leave-in-Maske mit Fettalkoholen, Amodimethicone und Kokosöl",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Sprühkur Bonding Micro Repair": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Sprühkur Bonding Micro Repair",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.04,
+  "E": 0.49,
+  "hum": [],
+  "emo": [
+   "prunus armeniaca kernel oil"
+  ],
+  "prot": [
+   "pisum sativum peptide"
+  ],
+  "bond": [
+   "hydroxypropylgluconamide",
+   "hydroxypropylammonium gluconate"
+  ],
+  "note": "Leichtes Silikonspray. Ein Teil des Silikons verdunstet, der Rest glättet die Oberfläche",
+  "inci_ok": true
+ },
+ "leavein|Herbal Essences|Leave-In Spray Blütensanft Rosenduft": {
+  "type": "leavein",
+  "brand": "Herbal Essences",
+  "name": "Leave-In Spray Blütensanft Rosenduft",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.16,
+  "E": 0.04,
+  "hum": [
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Spray mit Amodimethicone, entwirrt ohne zu beschweren",
+  "inci_ok": true
+ },
+ "leavein|Pantene Pro-V|Leave-In Moisture Boost Heat & Glow": {
+  "type": "leavein",
+  "brand": "Pantene Pro-V",
+  "name": "Leave-In Moisture Boost Heat & Glow",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Creme mit Silikon, Glanzpigmente sorgen für Schimmer",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Haarkur Night Elixier Ultimate Repair": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Haarkur Night Elixier Ultimate Repair",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.38,
+  "E": 0.36,
+  "hum": [
+   "betaine"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "hydrolyzed pearl"
+  ],
+  "bond": [],
+  "note": "Viel Silikon und Fettalkohole, schützt die Haare nachts vor Reibung",
+  "inci_ok": true
+ },
+ "leavein|Garnier Fructis|Leave-In Creme Aloe Air Dry": {
+  "type": "leavein",
+  "brand": "Garnier Fructis",
+  "name": "Leave-In Creme Aloe Air Dry",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 2.37,
+  "E": 0,
+  "hum": [
+   "propylene glycol",
+   "glycerin",
+   "aloe barbadensis leaf juice"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leicht, mit viel Glycerin und Aloe, die Feuchtigkeit ins Haar ziehen. Definiert Wellen und Locken beim Lufttrocknen. Auf sehr feinem Haar kann sich das Glycerin klebrig anfühlen",
+  "inci_ok": true
+ },
+ "leavein|L'Oréal Elvital|Leave-In Haarserum Bond Repair": {
+  "type": "leavein",
+  "brand": "L'Oréal Elvital",
+  "name": "Leave-In Haarserum Bond Repair",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.41,
+  "E": 0.04,
+  "hum": [
+   "dipropylene glycol",
+   "glycerin",
+   "hydroxyethyl urea"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonserum. Ein Teil verdunstet, zurück bleibt ein Silikonfilm, der glättet und vor Reibung schützt",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Sprüh-Conditioner Express-Repair Liquid Silk": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Sprüh-Conditioner Express-Repair Liquid Silk",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.04,
+  "E": 0.49,
+  "hum": [],
+  "emo": [
+   "prunus armeniaca kernel oil"
+  ],
+  "prot": [
+   "hydrolyzed silk"
+  ],
+  "bond": [],
+  "note": "Leichtes Silikonspray mit Seidenprotein, entwirrt sofort",
+  "inci_ok": true
+ },
+ "leavein|Garnier Fructis|Haarserum Keratin Sleek & Stay": {
+  "type": "leavein",
+  "brand": "Garnier Fructis",
+  "name": "Haarserum Keratin Sleek & Stay",
+  "cats": [
+   "normal",
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Wasserfreies Silikonserum. Ein Teil der Silikone haftet besonders fest und hält über mehrere Wäschen",
+  "inci_ok": true
+ },
+ "leavein|L'Oréal Elvital|Leave-In Serum Glycolic Gloss Spiegelglanz": {
+  "type": "leavein",
+  "brand": "L'Oréal Elvital",
+  "name": "Leave-In Serum Glycolic Gloss Spiegelglanz",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.63,
+  "hum": [],
+  "emo": [
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Milch mit viel Kokosöl und pflegenden Polymeren",
+  "inci_ok": true
+ },
+ "leavein|Dejan Garz|Leave-In Cream The Foundation": {
+  "type": "leavein",
+  "brand": "Dejan Garz",
+  "name": "Leave-In Cream The Foundation",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.25,
+  "E": 1.02,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "propylene glycol"
+  ],
+  "emo": [
+   "argania spinosa kernel oil",
+   "simmondsia chinensis seed oil",
+   "ricinus communis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegende Creme mit Amodimethicone, Argan-, Jojoba- und Rizinusöl",
+  "inci_ok": true
+ },
+ "leavein|L'Oréal Elvital|Leave-In Serum Ultimate Glycolic Gloss": {
+  "type": "leavein",
+  "brand": "L'Oréal Elvital",
+  "name": "Leave-In Serum Ultimate Glycolic Gloss",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.21,
+  "E": 0.04,
+  "hum": [
+   "dipropylene glycol",
+   "glycerin",
+   "hydroxyethyl urea"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonserum mit Glanzpigmenten. Ein Teil verdunstet, zurück bleibt ein Silikonfilm, der glättet und schimmert",
+  "inci_ok": true
+ },
+ "leavein|L'Oréal Elvital|Öl Magique Midnight Serum": {
+  "type": "leavein",
+  "brand": "L'Oréal Elvital",
+  "name": "Öl Magique Midnight Serum",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 1.12,
+  "hum": [],
+  "emo": [
+   "cocos nucifera oil",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Cremiges Nachtserum mit Kokosöl und Fettalkoholen, zieht gut ein",
+  "inci_ok": true
+ },
+ "leavein|Jean&Len|Pflegespray Keratin Repair": {
+  "type": "leavein",
+  "brand": "Jean&Len",
+  "name": "Pflegespray Keratin Repair",
+  "cats": [
+   "fein",
+   "duenn"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.75,
+  "E": 0,
+  "hum": [
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [
+   "arginine",
+   "serine"
+  ],
+  "bond": [],
+  "note": "Sehr leichtes, silikonfreies Spray mit Proteinen, Aminosäuren und Panthenol",
+  "inci_ok": true
+ },
+ "leavein|Aussie|Leave-In Haarserum Oh My Gloss": {
+  "type": "leavein",
+  "brand": "Aussie",
+  "name": "Leave-In Haarserum Oh My Gloss",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.74,
+  "E": 0.82,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "carthamus tinctorius seed oil",
+   "simmondsia chinensis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegendes Serum mit Glycerin, Distel- und Jojobaöl",
+  "inci_ok": true
+ },
+ "leavein|Pomélo+Co|Haarmaske Shine Therapy": {
+  "type": "leavein",
+  "brand": "Pomélo+Co",
+  "name": "Haarmaske Shine Therapy",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.63,
+  "E": 0.4,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "hydrolyzed hyaluronic acid"
+  ],
+  "emo": [
+   "caprylic"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Leave-in-Maske mit Glycerin, Panthenol, Sheabutter und Squalan",
+  "inci_ok": true
+ },
+ "leavein|Balea Professional|Keratin Repair Over Night Fluid": {
+  "type": "leavein",
+  "brand": "Balea Professional",
+  "name": "Keratin Repair Over Night Fluid",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.38,
+  "E": 0.36,
+  "hum": [
+   "propylene glycol",
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "ethylhexyl stearate"
+  ],
+  "prot": [
+   "hydrolyzed keratin",
+   "hydrolyzed wheat protein",
+   "hydrolyzed corn protein"
+  ],
+  "bond": [],
+  "note": "Fluid mit echtem Keratin und weiteren Proteinen, dazu Fettalkohol und ein leichter Ölersatz, der das Haar geschmeidig macht",
+  "inci_ok": true
+ },
+ "leavein|Langhaarmädchen|Spitzenserum Lovely Long": {
+  "type": "leavein",
+  "brand": "Langhaarmädchen",
+  "name": "Spitzenserum Lovely Long",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.94,
+  "E": 0.69,
+  "hum": [
+   "propylene glycol",
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "argania spinosa kernel oil",
+   "ethylhexyl stearate"
+  ],
+  "prot": [
+   "hydrolyzed wheat protein",
+   "arginine",
+   "glycine"
+  ],
+  "bond": [],
+  "note": "Leichtes Fluid mit Arganöl, Weizenprotein und Aminosäuren",
+  "inci_ok": true
+ },
+ "leavein|NEQI|Leave-In Creme Moisture Mystery": {
+  "type": "leavein",
+  "brand": "NEQI",
+  "name": "Leave-In Creme Moisture Mystery",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.78,
+  "E": 0,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [
+   "avena sativa peptide"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Creme mit Glycerin, macht weich ohne zu beschweren",
+  "inci_ok": true
+ },
+ "leavein|Pomélo+Co|Haarmaske Molecular Repair": {
+  "type": "leavein",
+  "brand": "Pomélo+Co",
+  "name": "Haarmaske Molecular Repair",
+  "cats": [
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.27,
+  "E": 0.3,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "prunus amygdalus dulcis oil"
+  ],
+  "prot": [
+   "hydrolyzed wheat protein",
+   "arginine"
+  ],
+  "bond": [],
+  "note": "Silikonfreie Leave-in-Maske mit Weizenprotein, Panthenol und Mandelöl",
+  "inci_ok": true
+ },
+ "leavein|Dejan Garz|Leave-In Serum The Foundation": {
+  "type": "leavein",
+  "brand": "Dejan Garz",
+  "name": "Leave-In Serum The Foundation",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.4,
+  "E": 0.74,
+  "hum": [
+   "glycerin",
+   "betaine",
+   "panthenol"
+  ],
+  "emo": [
+   "peg-40 hydrogenated castor oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Gel-Serum mit Amodimethicone, Glycerin und Panthenol",
+  "inci_ok": true
+ },
+ "leavein|Balea Professional|Leave-In Serum Plex Care": {
+  "type": "leavein",
+  "brand": "Balea Professional",
+  "name": "Leave-In Serum Plex Care",
+  "cats": [
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.26,
+  "E": 0.36,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "ricinus communis seed oil"
+  ],
+  "prot": [
+   "hydrolyzed keratin",
+   "hydrolyzed pea protein",
+   "arginine"
+  ],
+  "bond": [],
+  "note": "Pflegendes Serum mit Keratin, Erbsenprotein und Rizinusöl",
+  "inci_ok": true
+ },
+ "leavein|Jean&Len|Leave-In Haarmaske Peptide Intense Repair": {
+  "type": "leavein",
+  "brand": "Jean&Len",
+  "name": "Leave-In Haarmaske Peptide Intense Repair",
+  "cats": [
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.94,
+  "E": 0.61,
+  "hum": [
+   "propanediol",
+   "glycerin"
+  ],
+  "emo": [
+   "cetyl esters",
+   "dicaprylyl ether"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Leave-in-Maske mit Proteinen und Peptiden",
+  "inci_ok": true
+ },
+ "leavein|Bali Curls|Bonding Repair Overnight Elixir No.4": {
+  "type": "leavein",
+  "brand": "Bali Curls",
+  "name": "Bonding Repair Overnight Elixir No.4",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.78,
+  "E": 0.67,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "dicaprylyl carbonate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Nachtpflege mit Sheabutter und Pflanzenproteinen",
+  "inci_ok": true
+ },
+ "leavein|syoss|Haarserum Intense Glaze": {
+  "type": "leavein",
+  "brand": "syoss",
+  "name": "Haarserum Intense Glaze",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.32,
+  "E": 0.32,
+  "hum": [
+   "panthenol"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Viel Silikon für Glanz und gegen Frizz",
+  "inci_ok": true
+ },
+ "leavein|Balea Professional|Leave-In Serum Brilliant Blond Hair Sealer": {
+  "type": "leavein",
+  "brand": "Balea Professional",
+  "name": "Leave-In Serum Brilliant Blond Hair Sealer",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.37,
+  "E": 0.61,
+  "hum": [
+   "propylene glycol",
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "ethylhexyl stearate",
+   "simmondsia chinensis seed oil"
+  ],
+  "prot": [
+   "hydrolyzed wheat protein",
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Fluid mit viel Silikon, Fettalkohol und Jojobaöl",
+  "inci_ok": true
+ },
+ "leavein|Garnier Wahre Schätze|Leave-In Haarkur Honig": {
+  "type": "leavein",
+  "brand": "Garnier Wahre Schätze",
+  "name": "Leave-In Haarkur Honig",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.52,
+  "E": 0.69,
+  "hum": [
+   "glycerin",
+   "mel",
+   "mel extract"
+  ],
+  "emo": [
+   "helianthus annuus seed oil",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Creme mit Sonnenblumenöl und Honig, gegen Frizz",
+  "inci_ok": true
+ },
+ "leavein|Bali Curls|Leave-In Cream Bonding Repair No.3": {
+  "type": "leavein",
+  "brand": "Bali Curls",
+  "name": "Leave-In Cream Bonding Repair No.3",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 2.43,
+  "hum": [],
+  "emo": [
+   "ethylhexyl stearate",
+   "coco-caprylate",
+   "hydrogenated castor oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Wasserfreie Creme aus Ölen und leichten Ölersatzstoffen, legt einen Pflegefilm aufs Haar",
+  "inci_ok": true
+ },
+ "leavein|Pantene Pro-V|Leave-In Haarserum Miracles Milk To Water": {
+  "type": "leavein",
+  "brand": "Pantene Pro-V",
+  "name": "Leave-In Haarserum Miracles Milk To Water",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.12,
+  "E": 0.63,
+  "hum": [],
+  "emo": [
+   "paraffinum liquidum"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikon und Paraffin versiegeln die Spitzen und halten die Feuchtigkeit im Haar",
+  "inci_ok": true
+ },
+ "leavein|OGX|Overnight Serum Rescue Fusions": {
+  "type": "leavein",
+  "brand": "OGX",
+  "name": "Overnight Serum Rescue Fusions",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.14,
+  "E": 0.51,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "triticum vulgare germ oil",
+   "camelia oleifera seed oil"
+  ],
+  "prot": [
+   "hydrolyzed keratin",
+   "arginine",
+   "triticum vulgare protein"
+  ],
+  "bond": [],
+  "note": "Silikonfreies Serum mit echtem Keratin, Weizenprotein und Panthenol, dazu etwas Weizenkeim- und Kamelienöl",
+  "inci_ok": true
+ },
+ "leavein|Herbal Essences|Haarserum Fiji mit Kokosnussöl": {
+  "type": "leavein",
+  "brand": "Herbal Essences",
+  "name": "Haarserum Fiji mit Kokosnussöl",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.63,
+  "hum": [],
+  "emo": [
+   "paraffinum liquidum"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikon und Paraffin versiegeln das Haar und halten die Feuchtigkeit drin, dazu etwas Kokosöl",
+  "inci_ok": true
+ },
+ "leavein|Balea Professional|Feuchtigkeitsfiller Aqua Hyaluron": {
+  "type": "leavein",
+  "brand": "Balea Professional",
+  "name": "Feuchtigkeitsfiller Aqua Hyaluron",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.71,
+  "E": 0.74,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "peg-40 hydrogenated castor oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Gel-Serum mit Amodimethicone, Glycerin und Aloe",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Sprühnebel Night Glanz": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Sprühnebel Night Glanz",
+  "cats": [
+   "fein",
+   "duenn"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.59,
+  "E": 0.08,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichter Sprühnebel, beschwert gar nicht",
+  "inci_ok": true
+ },
+ "leavein|Balea Professional|Haarserum Glow & Shine": {
+  "type": "leavein",
+  "brand": "Balea Professional",
+  "name": "Haarserum Glow & Shine",
+  "cats": [
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.14,
+  "E": 0.36,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "ricinus communis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Pflegendes Serum mit Rizinusöl, Silikon und Glanzpigmenten",
+  "inci_ok": true
+ },
+ "leavein|Balea|Sprühpflege Seidenglanz 5in1": {
+  "type": "leavein",
+  "brand": "Balea",
+  "name": "Sprühpflege Seidenglanz 5in1",
+  "cats": [
+   "duenn",
+   "normal",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.23,
+  "E": 0.59,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "ricinus communis seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Spray mit Rizinusöl, Panthenol und Niacinamid",
+  "inci_ok": true
+ },
+ "leavein|NEQI|Haarserum Opulent Oil": {
+  "type": "leavein",
+  "brand": "NEQI",
+  "name": "Haarserum Opulent Oil",
+  "cats": [
+   "fein",
+   "duenn"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.53,
+  "E": 0.42,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "peg-40 hydrogenated castor oil"
+  ],
+  "prot": [
+   "avena sativa peptide"
+  ],
+  "bond": [],
+  "note": "Leichtes Serum auf Wasserbasis mit pflegendem Polymer",
+  "inci_ok": true
+ },
+ "leavein|John Frieda|Haarserum Frizz Ease Der Bändiger": {
+  "type": "leavein",
+  "brand": "John Frieda",
+  "name": "Haarserum Frizz Ease Der Bändiger",
+  "cats": [
+   "normal",
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.59,
+  "hum": [],
+  "emo": [
+   "oryza sativa bran oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Fast reines Silikon, bändigt Frizz sofort. Sehr sparsam dosieren",
+  "inci_ok": true
+ },
+ "leavein|Bali Curls|High Shine Gloss Leave-In Cream No.3": {
+  "type": "leavein",
+  "brand": "Bali Curls",
+  "name": "High Shine Gloss Leave-In Cream No.3",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.63,
+  "E": 0.04,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Creme mit Fettalkohol, Glycerin und leichtem Ölersatz, Styling-Basis für Wellen und Locken",
+  "inci_ok": true
+ },
+ "leavein|OGX|ProGrowth + Peptide Serum Styling Spray": {
+  "type": "leavein",
+  "brand": "OGX",
+  "name": "ProGrowth + Peptide Serum Styling Spray",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal",
+   "kaputt",
+   "kinder"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.54,
+  "E": 0,
+  "hum": [
+   "pentylene glycol",
+   "panthenol",
+   "propanediol"
+  ],
+  "emo": [],
+  "prot": [
+   "pisum sativum peptide",
+   "hydrolyzed rice protein"
+  ],
+  "bond": [],
+  "note": "Sehr leichter Sprühnebel ohne Öl, Silikon und Parfum, mit Panthenol, Peptid und Reisprotein, schützt vor Hitze",
+  "inci_ok": true
+ },
+ "leavein|Aussie|Miracle Moist Leave-In Spray": {
+  "type": "leavein",
+  "brand": "Aussie",
+  "name": "Miracle Moist Leave-In Spray",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.74,
+  "E": 0.08,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichtes Spray mit Glycerin und etwas Amodimethicone, entwirrt ohne zu beschweren",
+  "inci_ok": true
+ },
+ "leavein|L'Oréal Elvital|Dream Length Dreamy Sleek Serum": {
+  "type": "leavein",
+  "brand": "L'Oréal Elvital",
+  "name": "Dream Length Dreamy Sleek Serum",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0.74,
+  "E": 0.82,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "peg-40 hydrogenated castor oil",
+   "ricinus communis seed oil"
+  ],
+  "prot": [
+   "hydrolyzed wheat protein",
+   "hydrolyzed corn protein",
+   "hydrolyzed soy protein"
+  ],
+  "bond": [],
+  "note": "Leichtes, silikonfreies Gel-Serum mit Glycerin und einem Styling-Polymer, das Frizz bändigt",
+  "inci_ok": true
+ },
+ "leavein|ISANA Professional|Argan Leave-in Conditioner": {
+  "type": "leavein",
+  "brand": "ISANA Professional",
+  "name": "Argan Leave-in Conditioner",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.23,
+  "E": 0.95,
+  "hum": [
+   "glycerin",
+   "panthenol"
+  ],
+  "emo": [
+   "ricinus communis seed oil",
+   "argania spinosa kernel oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes, silikonfreies Spray mit Glycerin, Rizinusöl, Panthenol und Arganöl",
+  "inci_ok": true
+ },
+ "leavein|ISANA Professional|Haarkur 13in1 Intensiv & Pflege": {
+  "type": "leavein",
+  "brand": "ISANA Professional",
+  "name": "Haarkur 13in1 Intensiv & Pflege",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 1.1,
+  "E": 1.03,
+  "hum": [
+   "propylene glycol",
+   "panthenol",
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl palmitate",
+   "prunus armeniaca kernel oil"
+  ],
+  "prot": [
+   "hydrolyzed keratin"
+  ],
+  "bond": [],
+  "note": "Reichhaltige, silikonfreie Creme mit Ölersatz, Fettalkohol und Aprikosenkernöl",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Sealing Miracle Sealing Fluid": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Sealing Miracle Sealing Fluid",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.3,
+  "E": 0.36,
+  "hum": [
+   "betaine"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [
+   "pisum sativum peptide"
+  ],
+  "bond": [
+   "hydroxypropylgluconamide",
+   "hydroxypropylammonium gluconate"
+  ],
+  "note": "Creme-Fluid mit viel Silikon und Fettalkohol, dazu Erbsenpeptid",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Sealing Miracle Instant Sealing Spray": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Sealing Miracle Instant Sealing Spray",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 0,
+  "E": 0.49,
+  "hum": [],
+  "emo": [
+   "prunus armeniaca kernel oil"
+  ],
+  "prot": [
+   "pisum sativum peptide"
+  ],
+  "bond": [],
+  "note": "Leichtes Silikonspray mit Aprikosenkernöl, entwirrt sofort",
+  "inci_ok": true
+ },
+ "leavein|Garnier Wahre Schätze|Haarserum Honig reparierend": {
+  "type": "leavein",
+  "brand": "Garnier Wahre Schätze",
+  "name": "Haarserum Honig reparierend",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.46,
+  "E": 0,
+  "hum": [
+   "propylene glycol",
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonserum mit Glycerin, sorgt für Glanz und glättet die Spitzen",
+  "inci_ok": true
+ },
+ "leavein|John Frieda|Frizz Ease Der Retter Weightless Repair Serum": {
+  "type": "leavein",
+  "brand": "John Frieda",
+  "name": "Frizz Ease Der Retter Weightless Repair Serum",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.78,
+  "E": 0.04,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichtes Gel-Serum mit Glycerin, pflegt leicht",
+  "inci_ok": true
+ },
+ "leavein|John Frieda|Frizz Ease Der Beschützer Moisture Protect Serum": {
+  "type": "leavein",
+  "brand": "John Frieda",
+  "name": "Frizz Ease Der Beschützer Moisture Protect Serum",
+  "cats": [
+   "normal",
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.59,
+  "hum": [],
+  "emo": [
+   "aleurites moluccanus seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Wasserfreies Silikonserum mit Kukuinussöl, bändigt Frizz und versiegelt",
+  "inci_ok": true
+ },
+ "leavein|Schwarzkopf Gliss|Sprüh-Conditioner Express-Repair Aqua Revive": {
+  "type": "leavein",
+  "brand": "Schwarzkopf Gliss",
+  "name": "Sprüh-Conditioner Express-Repair Aqua Revive",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.36,
+  "E": 0.49,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "prunus armeniaca kernel oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Silikonspray mit Aprikosenkernöl und Glycerin, entwirrt sofort",
+  "inci_ok": true
+ },
+ "leavein|Pantene Pro-V|Leave-In Spray Glowtox": {
+  "type": "leavein",
+  "brand": "Pantene Pro-V",
+  "name": "Leave-In Spray Glowtox",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.16,
+  "E": 0.08,
+  "hum": [
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Spray mit Amodimethicone und Panthenol, entwirrt ohne zu beschweren",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Nutritive 8H Magic Night Serum": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Nutritive 8H Magic Night Serum",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.5,
+  "E": 0,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Nachtserum mit Silikon, Niacinamid und Glycerin, macht über Nacht geschmeidig",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Genesis Défense Thermique": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Genesis Défense Thermique",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.12,
+  "E": 0.74,
+  "hum": [],
+  "emo": [
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Föhnfluid mit Kokosöl und Amodimethicone, schützt beim Föhnen vor Hitze",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Gloss Absolu Anti-Frizz Glaze Milk": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Gloss Absolu Anti-Frizz Glaze Milk",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.78,
+  "hum": [],
+  "emo": [
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Glättende Sprühmilch mit Kokosöl und Amodimethicone, mit Hitzeschutz",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Résistance Ciment Thermique": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Résistance Ciment Thermique",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.67,
+  "E": 0,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Föhnmilch mit viel Silikon, glättet und schützt bis 230 °C",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Nutritive Nutri-Supplement Split Ends Serum": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Nutritive Nutri-Supplement Split Ends Serum",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.69,
+  "hum": [],
+  "emo": [
+   "zea mays germ oil",
+   "glyceryl oleate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Wasserfreies Silikonserum mit Vitamin E und Maiskeimöl, versiegelt die Spitzen",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Nutritive Nectar Thermique": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Nutritive Nectar Thermique",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.67,
+  "E": 0,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Föhnmilch mit Silikon, Niacinamid und Panthenol, mit Hitzeschutz",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Résistance Sérum Thérapiste": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Résistance Sérum Thérapiste",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.12,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr reichhaltiges Serum mit vielen Silikonen und Fettalkohol, glättet stark",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Curl Manifesto Gelée Curl Contour": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Curl Manifesto Gelée Curl Contour",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.63,
+  "E": 0.57,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Gel-Creme mit Glycerin, Kokosöl und Sheabutter, definiert Locken",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Première Sérum Filler Fondamental": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Première Sérum Filler Fondamental",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.74,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonserum mit leichtem Ölersatz, glättet und schützt vor Hitze",
+  "inci_ok": true
+ },
+ "leavein|Redken|Acidic Bonding Concentrate Leave-in Treatment": {
+  "type": "leavein",
+  "brand": "Redken",
+  "name": "Acidic Bonding Concentrate Leave-in Treatment",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "glaettend",
+  "rep": "bond",
+  "H": 0.08,
+  "E": 0,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [
+   "citric acid (Bond laut Marke)"
+  ],
+  "note": "Creme mit Silikonen und Fettalkohol, macht spürbar geschmeidig",
+  "inci_ok": true
+ },
+ "leavein|Redken|Acidic Color Gloss Heat Protection Treatment": {
+  "type": "leavein",
+  "brand": "Redken",
+  "name": "Acidic Color Gloss Heat Protection Treatment",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0.04,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sprühpflege mit Silikon und Fettalkohol, glättet und schützt vor Hitze",
+  "inci_ok": true
+ },
+ "leavein|Amika|Hydro Rush Intense Moisture Leave-in Conditioner": {
+  "type": "leavein",
+  "brand": "Amika",
+  "name": "Hydro Rush Intense Moisture Leave-in Conditioner",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 1.4,
+  "E": 1.6,
+  "hum": [
+   "glycerin",
+   "sodium hyaluronate",
+   "polyglutamic acid"
+  ],
+  "emo": [
+   "squalane",
+   "brassica campestris seed oil",
+   "sesamum indicum seed oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreies Spray mit Glycerin, Squalan und mehreren Ölen",
+  "inci_ok": true
+ },
+ "leavein|Coco & Eve|Like a Virgin Leave-in Conditioner": {
+  "type": "leavein",
+  "brand": "Coco & Eve",
+  "name": "Like a Virgin Leave-in Conditioner",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kaputt",
+   "kinder"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "protein",
+  "H": 1.0,
+  "E": 1.15,
+  "hum": [
+   "panthenol",
+   "propylene glycol",
+   "glycerin"
+  ],
+  "emo": [
+   "cocos nucifera oil",
+   "butyrospermum parkii butter",
+   "persea gratissima oil"
+  ],
+  "prot": [
+   "hydrolyzed rice protein"
+  ],
+  "bond": [],
+  "note": "Reichhaltige Creme mit Kokosöl, Sheabutter, Avocadoöl und Panthenol",
+  "inci_ok": true
+ },
+ "leavein|OUAI|Leave In Conditioner North Bondi": {
+  "type": "leavein",
+  "brand": "OUAI",
+  "name": "Leave In Conditioner North Bondi",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.28,
+  "E": 0.16,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Creme mit Silikon, Fettalkohol und Baobab-, Argan- und Nachtkerzenöl",
+  "inci_ok": true
+ },
+ "leavein|OGX|Bond Protein Repair Leave-in Conditioning Mist": {
+  "type": "leavein",
+  "brand": "OGX",
+  "name": "Bond Protein Repair Leave-in Conditioning Mist",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "Drogerie",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0.16,
+  "E": 0.04,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichter Sprühnebel mit etwas Amodimethicone, mit Hitzeschutz",
+  "inci_ok": true
+ },
+ "leavein|Coco & Eve|Intensive Hair Repairing Leave-In Treatment": {
+  "type": "leavein",
+  "brand": "Coco & Eve",
+  "name": "Intensive Hair Repairing Leave-In Treatment",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "bond",
+  "H": 1.29,
+  "E": 0.14,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "hydrolyzed hyaluronic acid"
+  ],
+  "emo": [
+   "caprylic acid"
+  ],
+  "prot": [
+   "sh-oligopeptide-78",
+   "arginine",
+   "hydrolyzed wheat protein"
+  ],
+  "bond": [
+   "sh-oligopeptide-78"
+  ],
+  "note": "Silikonfreie Creme mit Peptid, Aminosäure und einem hautähnlichen Ceramid",
+  "inci_ok": true
+ },
+ "leavein|Living Proof|Leave-in Conditioning Spray": {
+  "type": "leavein",
+  "brand": "Living Proof",
+  "name": "Leave-in Conditioning Spray",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.98,
+  "E": 0.13,
+  "hum": [
+   "isopentyldiol",
+   "propylene glycol dicaprylate",
+   "glycerin"
+  ],
+  "emo": [
+   "peg-40 hydrogenated castor oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Sehr leichtes Spray ohne Öl und Silikon, entwirrt mit pflegenden Polymeren",
+  "inci_ok": true
+ },
+ "leavein|Redken|Acidic Bonding Curls Leave-in Treatment": {
+  "type": "leavein",
+  "brand": "Redken",
+  "name": "Acidic Bonding Curls Leave-in Treatment",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "bond",
+  "H": 1.39,
+  "E": 0.71,
+  "hum": [
+   "sorbitol",
+   "glycerin"
+  ],
+  "emo": [
+   "persea gratissima oil",
+   "camelina sativa seed oil"
+  ],
+  "prot": [],
+  "bond": [
+   "citric acid (Bond laut Marke)"
+  ],
+  "note": "Silikonfreie Creme mit Avocadoöl, Glycerin und Fettalkohol",
+  "inci_ok": true
+ },
+ "leavein|L'Oréal Professionnel|Absolut Repair Molecular Leave-In Mask": {
+  "type": "leavein",
+  "brand": "L'Oréal Professionnel",
+  "name": "Absolut Repair Molecular Leave-In Mask",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.74,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonserum mit leichtem Ölersatz, glättet und macht geschmeidig",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Blond Absolu Blonde Guard": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Blond Absolu Blonde Guard",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.74,
+  "hum": [],
+  "emo": [
+   "cocos nucifera oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Sprühpflege mit Kokosöl, Amodimethicone und Hyaluron",
+  "inci_ok": true
+ },
+ "leavein|Olaplex|No.5 Leave-In Moisturize & Mend": {
+  "type": "leavein",
+  "brand": "Olaplex",
+  "name": "No.5 Leave-In Moisturize & Mend",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 1.47,
+  "E": 1.5,
+  "hum": [
+   "propanediol",
+   "glycerin",
+   "pentylene glycol"
+  ],
+  "emo": [
+   "astrocaryum murumuru seed butter",
+   "squalane",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [
+   "bis-aminopropyl diglycol dimaleate"
+  ],
+  "note": "Reichhaltige, silikonfreie Creme mit Murumurubutter, Squalan und Fettalkohol",
+  "inci_ok": true
+ },
+ "leavein|L'Oréal Professionnel|Metal DX High Protection Cream": {
+  "type": "leavein",
+  "brand": "L'Oréal Professionnel",
+  "name": "Metal DX High Protection Cream",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 0.74,
+  "E": 0.46,
+  "hum": [
+   "butylene glycol"
+  ],
+  "emo": [
+   "isononyl isononanoate"
+  ],
+  "prot": [
+   "glycine"
+  ],
+  "bond": [],
+  "note": "Leichte Creme mit Silikon und Glycin, schützt beim Föhnen",
+  "inci_ok": true
+ },
+ "leavein|Redken|Naked Gloss Lightweight Shine Oil": {
+  "type": "leavein",
+  "brand": "Redken",
+  "name": "Naked Gloss Lightweight Shine Oil",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.53,
+  "hum": [],
+  "emo": [
+   "caprylic"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Wasserfreies Silikonöl mit Aprikosenkernöl, sorgt für Glanz",
+  "inci_ok": true
+ },
+ "leavein|Ida Warg|Moisture Hair Serum": {
+  "type": "leavein",
+  "brand": "Ida Warg",
+  "name": "Moisture Hair Serum",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.49,
+  "E": 0.92,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [
+   "peg-40 hydrogenated castor oil",
+   "argania spinosa kernel oil",
+   "persea gratissima oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreies Serum mit Fettalkohol, Argan- und Avocadoöl",
+  "inci_ok": true
+ },
+ "leavein|Redken|All Soft Moisture Restore Leave-In": {
+  "type": "leavein",
+  "brand": "Redken",
+  "name": "All Soft Moisture Restore Leave-In",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0.85,
+  "hum": [],
+  "emo": [
+   "cetyl esters",
+   "argania spinosa kernel oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Creme mit Fettalkohol, Amodimethicone und Arganöl",
+  "inci_ok": true
+ },
+ "leavein|Olaplex|No.6 Bond Smoother": {
+  "type": "leavein",
+  "brand": "Olaplex",
+  "name": "No.6 Bond Smoother",
+  "cats": [
+   "dick",
+   "sehrdick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.52,
+  "E": 0.77,
+  "hum": [
+   "propanediol",
+   "aloe barbadensis leaf juice",
+   "panthenol"
+  ],
+  "emo": [
+   "coco-caprylate",
+   "vitis vinifera seed oil",
+   "cocos nucifera oil"
+  ],
+  "prot": [
+   "hydrolyzed vegetable protein pg-propyl silanetriol"
+  ],
+  "bond": [
+   "bis-aminopropyl diglycol dimaleate"
+  ],
+  "note": "Reichhaltige Styling-Creme mit Silikon und Fettalkohol, gegen Frizz",
+  "inci_ok": true
+ },
+ "leavein|Color Wow|Money Mist": {
+  "type": "leavein",
+  "brand": "Color Wow",
+  "name": "Money Mist",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.04,
+  "E": 0,
+  "hum": [
+   "butylene glycol",
+   "propanediol"
+  ],
+  "emo": [],
+  "prot": [
+   "hydrolyzed rice protein",
+   "hydrolyzed vegetable protein pg-propyl silanetriol"
+  ],
+  "bond": [],
+  "note": "Leichter Sprühnebel mit Reisprotein und pflegenden Polymeren",
+  "inci_ok": true
+ },
+ "leavein|Goldwell|Dualsenses Just Smooth 6 Effects Serum": {
+  "type": "leavein",
+  "brand": "Goldwell",
+  "name": "Dualsenses Just Smooth 6 Effects Serum",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.77,
+  "E": 0.04,
+  "hum": [
+   "panthenol",
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreies Serum mit leichten Ölersatzstoffen und Kukuinussöl",
+  "inci_ok": true
+ },
+ "leavein|Shu Uemura|Essence Absolue Universal Balm": {
+  "type": "leavein",
+  "brand": "Shu Uemura",
+  "name": "Essence Absolue Universal Balm",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 1.43,
+  "hum": [],
+  "emo": [
+   "cocos nucifera oil",
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltiger Balsam mit Kokosöl, Kamelienöl und Fettalkoholen",
+  "inci_ok": true
+ },
+ "leavein|Goldwell|Dualsenses Rich Repair 6 Effects Serum": {
+  "type": "leavein",
+  "brand": "Goldwell",
+  "name": "Dualsenses Rich Repair 6 Effects Serum",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.77,
+  "E": 0,
+  "hum": [
+   "panthenol",
+   "propylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreies Serum mit leichten Ölersatzstoffen, Panthenol und Reisprotein",
+  "inci_ok": true
+ },
+ "leavein|Olaplex|No.9 Bond Protector Nourishing Hair Serum": {
+  "type": "leavein",
+  "brand": "Olaplex",
+  "name": "No.9 Bond Protector Nourishing Hair Serum",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "bond",
+  "H": 2.01,
+  "E": 0,
+  "hum": [
+   "propanediol",
+   "betaine",
+   "sodium hyaluronate"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [
+   "bis-aminopropyl diglycol dimaleate"
+  ],
+  "note": "Sehr leichtes, silikon- und ölfreies Serum mit Hyaluron, schützt vor Hitze",
+  "inci_ok": true
+ },
+ "leavein|Redken|Acidic Bonding Concentrate 24/7 Serum": {
+  "type": "leavein",
+  "brand": "Redken",
+  "name": "Acidic Bonding Concentrate 24/7 Serum",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.04,
+  "E": 0.78,
+  "hum": [],
+  "emo": [
+   "isopropyl myristate"
+  ],
+  "prot": [],
+  "bond": [
+   "citric acid (Bond laut Marke)"
+  ],
+  "note": "Silikonserum mit Squalan, glättet und macht geschmeidig",
+  "inci_ok": true
+ },
+ "leavein|Redken|All Soft Mega Curls Hydramelt": {
+  "type": "leavein",
+  "brand": "Redken",
+  "name": "All Soft Mega Curls Hydramelt",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.12,
+  "E": 0.53,
+  "hum": [],
+  "emo": [
+   "cetyl esters"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Reichhaltige Creme mit Fettalkohol, Amodimethicone und Inka-Inchi-Öl",
+  "inci_ok": true
+ },
+ "leavein|OUAI|Curl Crème": {
+  "type": "leavein",
+  "brand": "OUAI",
+  "name": "Curl Crème",
+  "cats": [
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.96,
+  "E": 1.8,
+  "hum": [
+   "glycerin",
+   "panthenol",
+   "xylitol"
+  ],
+  "emo": [
+   "cocos nucifera oil",
+   "orbignya speciosa kernel oil",
+   "hydrogenated soybean oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Creme mit Kokos-, Babassu- und Leinöl, definiert Locken",
+  "inci_ok": true
+ },
+ "leavein|Wella Professionals|Ultimate Repair Miracle Hair Rescue": {
+  "type": "leavein",
+  "brand": "Wella Professionals",
+  "name": "Ultimate Repair Miracle Hair Rescue",
+  "cats": [
+   "fein",
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.03,
+  "E": 0.08,
+  "hum": [
+   "propylene glycol",
+   "panthenol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Spray mit Amodimethicone, entwirrt ohne zu beschweren",
+  "inci_ok": true
+ },
+ "leavein|Wella Professionals|Ultimate Repair Protective Leave-In": {
+  "type": "leavein",
+  "brand": "Wella Professionals",
+  "name": "Ultimate Repair Protective Leave-In",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.04,
+  "E": 0.67,
+  "hum": [],
+  "emo": [
+   "isopropyl palmitate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Creme mit Silikon und leichten Ölersatzstoffen, schützt vor Hitze bis 230 °C",
+  "inci_ok": true
+ },
+ "leavein|Wella Professionals|Ultimate Repair Night Serum": {
+  "type": "leavein",
+  "brand": "Wella Professionals",
+  "name": "Ultimate Repair Night Serum",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0,
+  "E": 0.12,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Cremiges Nachtserum mit Silikon und Fettalkohol, schützt nachts vor Reibung",
+  "inci_ok": true
+ },
+ "leavein|epres|Bond Repair Treatment": {
+  "type": "leavein",
+  "brand": "epres",
+  "name": "Bond Repair Treatment",
+  "cats": [
+   "duenn",
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0,
+  "E": 0.74,
+  "hum": [],
+  "emo": [
+   "oleyl alcohol"
+  ],
+  "prot": [],
+  "bond": [
+   "diethylhexyl maleate"
+  ],
+  "note": "Wasserfreies Konzentrat aus nur vier Inhaltsstoffen, wird aufs Haar gesprüht",
+  "inci_ok": true
+ },
+ "leavein|Living Proof|Triple Bond Complex Hair Strengthener": {
+  "type": "leavein",
+  "brand": "Living Proof",
+  "name": "Triple Bond Complex Hair Strengthener",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.85,
+  "E": 1.37,
+  "hum": [
+   "isopentyldiol",
+   "propanediol",
+   "glycerin"
+  ],
+  "emo": [
+   "isodecyl oleate",
+   "phytosteryl",
+   "jojoba esters"
+  ],
+  "prot": [],
+  "bond": [
+   "Bond-Komplex laut Marke"
+  ],
+  "note": "Silikonfreie Creme mit Fettalkohol, leichten Ölersatzstoffen und Rizinusöl",
+  "inci_ok": true
+ },
+ "leavein|K18|Leave-In Molecular Repair Hair Mask": {
+  "type": "leavein",
+  "brand": "K18",
+  "name": "Leave-In Molecular Repair Hair Mask",
+  "cats": [
+   "normal",
+   "dick",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "bond",
+  "H": 0.59,
+  "E": 0.78,
+  "hum": [
+   "propylene glycol"
+  ],
+  "emo": [
+   "dicaprylyl ether",
+   "cetyl esters"
+  ],
+  "prot": [
+   "sh-oligopeptide-78",
+   "hydrolyzed wheat protein"
+  ],
+  "bond": [
+   "sh-oligopeptide-78"
+  ],
+  "note": "Leave-in-Maske mit Fettalkohol und leichtem Ölersatz, dazu das K18-Peptid",
+  "inci_ok": true
+ },
+ "leavein|Oribe|Hair Alchemy Fortifying Treatment Serum": {
+  "type": "leavein",
+  "brand": "Oribe",
+  "name": "Hair Alchemy Fortifying Treatment Serum",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.82,
+  "E": 0.04,
+  "hum": [
+   "pentylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Leichtes Serum mit Silikon, Chiasamen-Extrakt und etwas Fettalkohol",
+  "inci_ok": true
+ },
+ "leavein|Oribe|Priming Lotion Leave-In Conditioning Detangler": {
+  "type": "leavein",
+  "brand": "Oribe",
+  "name": "Priming Lotion Leave-In Conditioning Detangler",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.23,
+  "E": 0.28,
+  "hum": [
+   "glycerin",
+   "butylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Lotion mit Glycerin und Fettalkohol, entwirrt und macht geschmeidig",
+  "inci_ok": true
+ },
+ "leavein|Oribe|Supershine Moisturizing Cream": {
+  "type": "leavein",
+  "brand": "Oribe",
+  "name": "Supershine Moisturizing Cream",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.5,
+  "E": 0,
+  "hum": [
+   "butylene glycol"
+  ],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Creme mit sehr viel Silikon, glättet stark und sorgt für Glanz",
+  "inci_ok": true
+ },
+ "leavein|Oribe|Gold Lust Restorative Night Crème for Hair": {
+  "type": "leavein",
+  "brand": "Oribe",
+  "name": "Gold Lust Restorative Night Crème for Hair",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "naehrend",
+  "rep": "",
+  "H": 0.08,
+  "E": 0.79,
+  "hum": [],
+  "emo": [
+   "hydrogenated castor oil",
+   "olea europaea fruit oil"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Nachtcreme mit Fettalkohol, leichtem Ölersatz, Niacinamid und Olivenöl",
+  "inci_ok": true
+ },
+ "leavein|Kérastase|Gloss Absolu Frizz-Glaze Cream": {
+  "type": "leavein",
+  "brand": "Kérastase",
+  "name": "Gloss Absolu Frizz-Glaze Cream",
+  "cats": [
+   "normal",
+   "dick"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 0.78,
+  "E": 0.5,
+  "hum": [
+   "glycerin"
+  ],
+  "emo": [
+   "coco-caprylate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Silikonfreie Styling-Creme mit Glycerin, Fettalkohol und leichtem Ölersatz, gegen Frizz",
+  "inci_ok": true
+ },
+ "leavein|Gisou|Honey Milk Active Repair Leave-In Conditioner Mist": {
+  "type": "leavein",
+  "brand": "Gisou",
+  "name": "Honey Milk Active Repair Leave-In Conditioner Mist",
+  "cats": [
+   "duenn",
+   "normal",
+   "kaputt"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "protein",
+  "H": 1.84,
+  "E": 1.04,
+  "hum": [
+   "propanediol",
+   "mel",
+   "panthenol"
+  ],
+  "emo": [
+   "ceramide np",
+   "ceramide ap",
+   "cocos nucifera oil"
+  ],
+  "prot": [
+   "hydrolyzed milk protein",
+   "laurdimonium hydroxypropyl hydrolyzed barley protein"
+  ],
+  "bond": [],
+  "note": "Leichter Sprühnebel mit Honig, Milch- und Gerstenprotein, Ceramiden und Panthenol, schützt vor Hitze",
+  "inci_ok": true
+ },
+ "leavein|Wella Professionals|Ultimate Smooth Miracle Oil Serum": {
+  "type": "leavein",
+  "brand": "Wella Professionals",
+  "name": "Ultimate Smooth Miracle Oil Serum",
+  "cats": [
+   "normal",
+   "dick",
+   "sehrdick"
+  ],
+  "segment": "High-End",
+  "kind": "glaettend",
+  "rep": "",
+  "H": 0,
+  "E": 0.08,
+  "hum": [],
+  "emo": [],
+  "prot": [],
+  "bond": [],
+  "note": "Fast reines Silikon, bändigt Frizz und gibt Glanz. Sparsam dosieren",
+  "inci_ok": true
+ },
+ "leavein|Wella Professionals|Ultimate Smooth 24/7 Silky Milk": {
+  "type": "leavein",
+  "brand": "Wella Professionals",
+  "name": "Ultimate Smooth 24/7 Silky Milk",
+  "cats": [
+   "duenn",
+   "normal"
+  ],
+  "segment": "High-End",
+  "kind": "feucht",
+  "rep": "",
+  "H": 1.43,
+  "E": 0.69,
+  "hum": [
+   "propylene glycol",
+   "betaine",
+   "panthenol"
+  ],
+  "emo": [
+   "coco-caprylate"
+  ],
+  "prot": [],
+  "bond": [],
+  "note": "Leichte Sprühmilch mit Silikon, leichtem Ölersatz und Panthenol, schützt vor Hitze bis 230 °C",
+  "inci_ok": true
+ }
+}

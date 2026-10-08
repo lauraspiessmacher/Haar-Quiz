@@ -1,0 +1,172 @@
+<title>Wirkung prüfen</title>
+<style>
+/* Prüfliste: jedes Produkt eine Zeile mit Claudes Einordnung nach INCI, Laura tippt um, wenn es nicht stimmt */
+:root{
+  --bg:#FAF7F3; --paper:#FFFFFF; --ink:#382F2E; --muted:#7A6C66; --line:#E6DED6;
+  --accent:#382F2E; --onaccent:#F7F1EA; --todo:#A4542F; --todobg:#F6E7DE; --chip:#F1EBE4; --star:#8A5A2B;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#2B2423; --paper:#352D2C; --ink:#F3ECE2; --muted:#BFB1A6; --line:#4A403E;
+  --accent:#F3ECE2; --onaccent:#2B2423; --todo:#E7A07C; --todobg:#46322A; --chip:#403634; --star:#E2B98A; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#2B2423; --paper:#352D2C; --ink:#F3ECE2; --muted:#BFB1A6; --line:#4A403E;
+  --accent:#F3ECE2; --onaccent:#2B2423; --todo:#E7A07C; --todobg:#46322A; --chip:#403634; --star:#E2B98A; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans);margin:0}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:28px 80px}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(32px,6vw,46px)}
+p{margin:0 0 10px}
+.lead{font-size:17px;max-width:64ch;margin-top:12px}
+.how{display:grid;gap:6px;margin:12px 0 0;padding:0;list-style:none;color:var(--muted);font-size:15px}
+.how b{color:var(--ink);font-weight:600}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin:20px -16px 0;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;background:var(--paper)}
+.seg button{border:0;background:none;color:var(--ink);font:500 13.5px var(--sans);padding:6px 11px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--onaccent)}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--onaccent);font:500 14px var(--sans);padding:7px 14px;border-radius:999px;cursor:pointer}
+.save{font-size:13px;color:var(--muted);width:100%;font-variant-numeric:tabular-nums}
+h2.typ{font-size:26px;margin:34px 0 10px}
+.row{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin:0 0 10px;display:grid;gap:8px;min-width:0}
+.row.changed{border-color:var(--todo)}
+.row .top{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.row .br{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.row .nm{font-weight:600;min-width:0;overflow-wrap:anywhere}
+.row .meta{font-size:13px;color:var(--muted)}
+.row .emp{font-size:13px;color:var(--star);font-weight:600}
+.row .why{font-size:13.5px;color:var(--muted);overflow-wrap:anywhere}
+.ctl{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.grp{display:inline-flex;flex-wrap:wrap;gap:5px;align-items:center}
+.grp small{font-size:12px;color:var(--muted);margin-right:2px}
+.grp button{border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 13.5px var(--sans);padding:5px 11px;border-radius:999px;cursor:pointer}
+.grp button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
+.grp button.mine{box-shadow:inset 0 0 0 1px var(--accent)}
+.row.changed .grp button[aria-pressed="true"]{background:var(--todo);border-color:var(--todo);color:#fff}
+details.n summary{font-size:13px;color:var(--muted);cursor:pointer}
+textarea{width:100%;min-height:40px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:15px/1.45 var(--sans);color:var(--ink);background:var(--bg);margin-top:6px}
+button:focus-visible,textarea:focus{outline:2px solid var(--todo);outline-offset:2px}
+.hide{display:none}
+</style>
+
+<div class="wrap">
+  <h1>Wirkung prüfen</h1>
+  <p class="lead">Ich habe jede Maske, jeden Conditioner und jedes Leave-in nach INCI eingeordnet. Daraus wählt die Seite bei „Meine Haare“ oben drei Empfehlungen: eins mit Feuchtigkeit, eins, das nährt, und, wenn nötig, eins mit Repair.</p>
+  <ul class="how">
+    <li><b>Feuchtigkeit:</b> Feuchthaltestoffe wie Glycerin, Aloe oder Panthenol stehen weit vorne.</li>
+    <li><b>Nährend:</b> Öle, Butter oder Ölersatzstoffe stehen weit vorne.</li>
+    <li><b>Glättend:</b> vor allem Silikon, kaum Feuchtigkeit oder Öl. Diese Produkte werden nicht empfohlen.</li>
+    <li><b>Repair:</b> Proteine oder Bond-Wirkstoffe vor Parfum und Konservierer. Für die Empfehlung zählen nur Produkte aus deiner Kategorie „Kaputte Haare“.</li>
+    <li><b>So prüfst du:</b> Stimmt etwas nicht, tipp die richtige Einordnung an. Das wird gespeichert und ich lese es direkt. Zeilen mit ★ landen gerade in einer Empfehlung, die sind am wichtigsten.</li>
+  </ul>
+  <div class="bar">
+    <div class="seg" role="group" aria-label="Produktart"><button type="button" data-t="alle" aria-pressed="true">Alle</button><button type="button" data-t="maske" aria-pressed="false">Maske</button><button type="button" data-t="conditioner" aria-pressed="false">Conditioner</button><button type="button" data-t="leavein" aria-pressed="false">Leave-in</button></div>
+    <div class="seg" role="group" aria-label="Auswahl"><button type="button" data-f="alle" aria-pressed="true">Alle</button><button type="button" data-f="empf" aria-pressed="false">★ Empfehlungen</button><button type="button" data-f="geaendert" aria-pressed="false">Geändert</button></div>
+    <button type="button" class="btn" id="copyAll">Änderungen kopieren</button>
+    <div class="save" id="saveState"></div>
+  </div>
+  <div id="list"></div>
+</div>
+
+<script>
+const DATA = __DATA__;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TYP = {maske:"Masken", conditioner:"Conditioner", leavein:"Leave-ins"};
+const W = [["feucht","Feuchtigkeit"],["naehrend","Nährend"],["glaettend","Glättend"]];
+const R = [["","kein Repair"],["protein","Proteine"],["bond","Bond"]];
+const DKL = {fein:"fein",duenn:"dünn",normal:"normal",dick:"dick",sehrdick:"sehr dick"};
+let NOTES = {}, db = null, ft = "alle", ff = "alle";
+const LS = "pruef-wirkung";
+function lsLoad(){ try { return JSON.parse(localStorage.getItem(LS) || "{}") || {}; } catch(e){ return {}; } }
+function lsSave(){ try { localStorage.setItem(LS, JSON.stringify(NOTES)); } catch(e){} }
+const setSave = t => { document.getElementById("saveState").textContent = t; };
+const byId = Object.fromEntries(DATA.rows.map(r => [r.id, r]));
+const cur = r => { const n = NOTES[r.id] || {}; return {w: n.w ?? r.w, r: n.r ?? r.r, text: n.text || ""}; };
+const changed = r => { const c = cur(r); return c.w !== r.w || c.r !== r.r || !!c.text.trim(); };
+
+(function build(){
+  let html = "", t = "";
+  for(const r of DATA.rows){
+    if(r.typ !== t){ t = r.typ; html += `<h2 class="typ" data-typ="${t}">${TYP[t]}</h2>`; }
+    html += `<article class="row" data-id="${r.id}" data-typ="${r.typ}">
+      <div class="top"><span class="br">${esc(r.brand)}</span><span class="nm">${esc(r.name)}</span></div>
+      <div class="meta">${esc(r.seg)} · ${r.dk.map(d => DKL[d]).join(", ")}${r.kaputt ? " · Kaputte Haare" : ""}</div>
+      ${r.empf.length ? `<div class="emp">★ Empfohlen bei: ${esc(r.empf.join("; "))}</div>` : ""}
+      <div class="why">${esc(r.why || "Keine passenden Inhaltsstoffe weit vorne gefunden.")}</div>
+      <div class="ctl">
+        <div class="grp" role="group" aria-label="Wirkung"><small>Wirkung</small>${W.map(([v,l]) => `<button type="button" data-k="w" data-v="${v}" class="${v===r.w?"mine":""}">${l}</button>`).join("")}</div>
+        <div class="grp" role="group" aria-label="Repair"><small>Repair</small>${R.map(([v,l]) => `<button type="button" data-k="r" data-v="${v}" class="${v===r.r?"mine":""}">${l}</button>`).join("")}</div>
+      </div>
+      <details class="n"><summary>Anmerkung</summary><textarea aria-label="Anmerkung" placeholder="Zum Beispiel: eher nährend, weil …"></textarea></details>
+    </article>`;
+  }
+  document.getElementById("list").innerHTML = html;
+})();
+
+function paint(id){
+  const el = document.querySelector(`.row[data-id="${CSS.escape(id)}"]`); if(!el) return;
+  const r = byId[id], c = cur(r);
+  el.classList.toggle("changed", changed(r));
+  el.querySelectorAll(".grp button").forEach(b => b.setAttribute("aria-pressed", String(c[b.dataset.k] === b.dataset.v)));
+  const ta = el.querySelector("textarea");
+  if(document.activeElement !== ta){ ta.value = c.text; if(c.text) el.querySelector("details").open = true; }
+}
+function applyFilter(){
+  document.querySelectorAll(".row").forEach(el => {
+    const r = byId[el.dataset.id];
+    const show = (ft === "alle" || r.typ === ft) && (ff === "alle" || (ff === "empf" && r.empf.length) || (ff === "geaendert" && changed(r)));
+    el.classList.toggle("hide", !show);
+  });
+  document.querySelectorAll("h2.typ").forEach(h => h.classList.toggle("hide", !document.querySelector(`.row[data-typ="${h.dataset.typ}"]:not(.hide)`)));
+}
+function count(){ const n = DATA.rows.filter(changed).length; return `${DATA.rows.length} Produkte · ${n} geändert`; }
+function paintAll(){ DATA.rows.forEach(r => paint(r.id)); applyFilter(); }
+
+const timers = {};
+function persist(id){
+  lsSave();
+  const n = NOTES[id] || {};
+  if(!db){ setSave(count() + ". Wird nur auf diesem Gerät gespeichert, schick mir am Ende „Änderungen kopieren“."); return; }
+  clearTimeout(timers[id]);
+  timers[id] = setTimeout(async () => {
+    try { const c = cur(byId[id]); await db.collection("korrektur").doc(id).set({w: c.w, r: c.r, text: c.text, t: Date.now()}); setSave(count() + ". Gespeichert, ich kann es direkt lesen."); }
+    catch(e){ setSave("Speichern hat nicht geklappt. Deine Änderung bleibt auf diesem Gerät, kopier sie zur Sicherheit über „Änderungen kopieren“."); }
+  }, 400);
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".grp button"); if(!b) return;
+  const id = b.closest(".row").dataset.id, r = byId[id];
+  const n = NOTES[id] = Object.assign({}, NOTES[id]);
+  n[b.dataset.k] = b.dataset.v;
+  if(n.w === r.w) delete n.w; if(n.r === r.r) delete n.r;
+  paint(id); persist(id);
+});
+document.addEventListener("input", e => {
+  if(!e.target.matches("textarea")) return;
+  const id = e.target.closest(".row").dataset.id;
+  const n = NOTES[id] = Object.assign({}, NOTES[id]); n.text = e.target.value;
+  e.target.closest(".row").classList.toggle("changed", changed(byId[id]));
+  persist(id);
+});
+document.querySelectorAll("[data-t]").forEach(b => b.onclick = () => { ft = b.dataset.t; document.querySelectorAll("[data-t]").forEach(x => x.setAttribute("aria-pressed", String(x === b))); applyFilter(); });
+document.querySelectorAll("[data-f]").forEach(b => b.onclick = () => { ff = b.dataset.f; document.querySelectorAll("[data-f]").forEach(x => x.setAttribute("aria-pressed", String(x === b))); applyFilter(); });
+document.getElementById("copyAll").onclick = async () => {
+  const lab = (list, v) => (list.find(x => x[0] === v) || [, v])[1];
+  const rows = DATA.rows.filter(changed).map(r => { const c = cur(r); return `• ${TYP[r.typ]}: ${r.brand} – ${r.name}\n  ${lab(W, c.w)}, ${lab(R, c.r)}${c.text.trim() ? "\n  " + c.text.trim() : ""}`; });
+  const t = "Korrekturen Wirkung\n\n" + (rows.join("\n\n") || "Keine Änderungen, alles passt.");
+  let ok = false; try { await navigator.clipboard.writeText(t); ok = true; } catch(e){}
+  if(!ok){ const ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch(e){} ta.remove(); }
+  setSave(ok ? "Kopiert. Du kannst die Änderungen jetzt im Chat einfügen." : "Kopieren hat nicht geklappt.");
+};
+
+NOTES = lsLoad(); paintAll(); setSave(count() + ". Stand der Einordnung: " + DATA.stand.split("-").reverse().join("."));
+(async () => {
+  try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch(e){ db = null; }
+  if(!db){ setSave(count() + ". Wird nur auf diesem Gerät gespeichert, schick mir am Ende „Änderungen kopieren“."); return; }
+  db.collection("korrektur").onSnapshot(snap => {
+    snap.docs.forEach(d => { const v = d.data() || {}; const c = NOTES[d.id] || {}; if(!c.t || (v.t || 0) >= (c.t || 0)){ const n = {t: v.t || 0, text: v.text || ""}; const r = byId[d.id]; if(r && typeof v.w === "string" && v.w !== r.w) n.w = v.w; if(r && typeof v.r === "string" && v.r !== r.r) n.r = v.r; NOTES[d.id] = n; } });
+    lsSave(); paintAll(); setSave(count() + ". Gespeichert, ich kann es direkt lesen.");
+  }, () => setSave("Der gemeinsame Speicher ist gerade nicht erreichbar. Deine Änderungen bleiben auf diesem Gerät."));
+})();
+</script>
