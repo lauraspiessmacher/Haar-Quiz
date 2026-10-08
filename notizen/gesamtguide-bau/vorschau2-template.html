@@ -492,7 +492,7 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 #wissenCards{--pitch:420px;--off:0px;position:relative;z-index:0;row-gap:96px;padding:72px 0 64px}
 @media (max-width:520px){ #wissenCards{row-gap:64px;padding-top:48px} }
 body{overflow-x:clip}
-#wissenCards::before{content:"";position:absolute;top:var(--off);height:var(--h,100%);left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:none;opacity:.34;
+#wissenCards::before{content:"";position:absolute;top:var(--off);height:var(--h,100%);left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:none;
   background:url(__REGAL_FACH__) center top / 100% var(--pitch) repeat-y}
 #wissenCards[hidden]{display:none}
 #wissenCards .card h3{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
@@ -897,7 +897,7 @@ function alignShelf(){
   const cr = c.getBoundingClientRect(), r0 = b[0].getBoundingClientRect();
   const next = b.find(x => x.getBoundingClientRect().top > r0.top + 10);
   const pitch = next ? next.getBoundingClientRect().top - r0.top : r0.height + 30;
-  const off = (r0.bottom - cr.top) - pitch * 0.91;
+  const off = (r0.bottom - cr.top) - pitch * 0.884;
   const rows = new Set(b.map(x => Math.round(x.getBoundingClientRect().top))).size;
   c.style.setProperty("--pitch", pitch + "px"); c.style.setProperty("--off", off + "px"); c.style.setProperty("--h", rows * pitch + "px");
 }
