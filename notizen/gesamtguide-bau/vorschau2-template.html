@@ -710,10 +710,12 @@ const TYPES = [
  {id:"hitze", label:"Hitzeschutz", by:"nach Konsistenz", icon:'<path d="M12 3c.6 2.8 4.5 4.6 4.5 9.2a4.5 4.5 0 0 1-9 0c0-2.2 1-3.6 2.2-4.6 0 1.6.6 2.6 1.6 3C10.9 8.6 11 5.8 12 3z"/><path d="M5 21h14"/>'},
  {id:"oel", label:"Haaröl", by:"nach Haardicke", icon:'<path d="M11 2h2v4h-2z"/><path d="M10 6h4v2l2 3v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9l2-3z"/><path d="M12 13c-1.2 1.6-1.5 2.4-1.5 3a1.5 1.5 0 0 0 3 0c0-.6-.3-1.4-1.5-3z"/>'},
  {id:"kopfhaut", label:"Kopfhautpflege", by:"nach Kopfhauttyp", icon:'<path d="M5 13a7 7 0 0 1 14 0"/><path d="M5 13h14"/><path d="M8 13v6M12 13v7M16 13v6"/><path d="M9 7.5l1 2M15 7.5l-1 2M12 6.5v2.5"/>'},
+ {id:"buerste", label:"Haarbürsten", by:"nach Zweck", icon:'<rect x="6" y="2.5" width="12" height="9" rx="4.5"/><path d="M9 5.5v3M12 5v4M15 5.5v3"/><path d="M11 11.5h2v9a1 1 0 0 1-2 0z"/>'},
+ {id:"tools", label:"Hitze-Tools", by:"kommt bald", icon:'<path d="M4 9a5 5 0 0 1 9.5-2.2H19a1.5 1.5 0 0 1 0 3h-5.5A5 5 0 0 1 4 9z"/><path d="M8 13l-1 8h3l1-7"/><path d="M21 6.5l1.5-1M21 9.5l1.5 1"/>'},
 ];
 const T = Object.fromEntries(TYPES.map(t=>[t.id,t]));
-const PLURAL = {shampoo:"Shampoos",maske:"Masken",conditioner:"Conditioner",leavein:"Leave-ins",hitze:"Hitzeschutz-Produkte",oel:"Haaröle",kopfhaut:"Kopfhautprodukte"};
-const DEIN = {shampoo:"dein Shampoo",maske:"deine Maske",conditioner:"deinen Conditioner",leavein:"dein Leave-in",hitze:"deinen Hitzeschutz",oel:"dein Haaröl",kopfhaut:"deine Kopfhautpflege"};
+const PLURAL = {buerste:"Haarbürsten",tools:"Hitze-Tools",shampoo:"Shampoos",maske:"Masken",conditioner:"Conditioner",leavein:"Leave-ins",hitze:"Hitzeschutz-Produkte",oel:"Haaröle",kopfhaut:"Kopfhautprodukte"};
+const DEIN = {buerste:"deine Haarbürste",tools:"dein Hitze-Tool",shampoo:"dein Shampoo",maske:"deine Maske",conditioner:"deinen Conditioner",leavein:"dein Leave-in",hitze:"deinen Hitzeschutz",oel:"dein Haaröl",kopfhaut:"deine Kopfhautpflege"};
 const KOPF_ADJ = {normal:"normale",trocken:"trockene",fettend:"schnell fettende",sensibel:"sensible",juckend:"juckende",schuppen:"schuppige"};
 const DICKE_ADJ = {fein:"feines",duenn:"dünnes",normal:"normales",dick:"dickes",sehrdick:"sehr dickes"};
 const HAIRGUIDE = id => ["maske","conditioner","leavein","hitze","oel"].includes(id);
@@ -764,14 +766,14 @@ for(const t of TYPES){
     p.type = t.id; p.mk = (p.von||t.id)+"|"+p.brand+"|"+p.name; /* Hitzeschutz-Produkte teilen sich Merk- und Kaufschlüssel mit Leave-in bzw. Öl */
     const rep = p.rep ? (Array.isArray(p.rep) ? p.rep.join(" ") : (p.rep.art+" "+p.rep.list.join(" "))) : "";
     const hair = Array.isArray(p.hair) ? p.hair.join(" ") : (p.hair||"");
-    p.hay = plain([t.label, p.brand, p.name, p.note||"", p.tip||"", hair, rep, p.wirk||"", p.duft||"", p.art||"", p.hint||"",
+    p.hay = plain([t.label, p.brand, p.name, p.note||"", p.tip||"", hair, rep, p.wirk||"", p.duft||"", p.art||"", p.hint||"", p.wofuer||"",
       (p.sil&&p.sil.length)?"silikone "+p.sil.join(" "):(p.sil?"silikonfrei":""), p.dry?"trockenes öl":"", p.kalk?"kalk":"",
       p.cats.map(c=>label(t.id,c)).join(" "), HAIRGUIDE(t.id)?dickeText(p):""].join(" "));
     ALL.push(p);
   }
 }
 /* Suchwörter: Produktart-Wörter grenzen ein, Alltagswörter werden übersetzt */
-const TYPEWORDS = {shampoo:"shampoo",shampoos:"shampoo",maske:"maske",masken:"maske",haarmaske:"maske",kur:"maske",conditioner:"conditioner",spulung:"conditioner",leavein:"leavein",leaveins:"leavein",hitzeschutz:"hitze",hitze:"hitze",ol:"oel",ole:"oel",haarol:"oel",haarole:"oel",kopfhautpflege:"kopfhaut",serum:"kopfhaut",peeling:"kopfhaut"};
+const TYPEWORDS = {burste:"buerste",bursten:"buerste",haarburste:"buerste",haarbursten:"buerste",kamm:"buerste",entwirrburste:"buerste",fohn:"tools",glatteisen:"tools",lockenstab:"tools",multistyler:"tools",shampoo:"shampoo",shampoos:"shampoo",maske:"maske",masken:"maske",haarmaske:"maske",kur:"maske",conditioner:"conditioner",spulung:"conditioner",leavein:"leavein",leaveins:"leavein",hitzeschutz:"hitze",hitze:"hitze",ol:"oel",ole:"oel",haarol:"oel",haarole:"oel",kopfhautpflege:"kopfhaut",serum:"kopfhaut",peeling:"kopfhaut"};
 const SYN = {fettig:"fettend",fettige:"fettend",fettiger:"fettend",fettende:"fettend",feine:"fein",feines:"fein",dunne:"dunn",dunnes:"dunn",dicke:"dick",dickes:"dick",kaputte:"kaputt",trockene:"trocken",schuppige:"schupp",schuppen:"schupp",sensible:"sensib",juckende:"juck",blondierte:"blondiert"};
 const STOP = new Set(["haar","haare","haaren","fur","mit","und","die","der","das","ich","habe","meine","eine","ein","sehr"]);
 function parseQuery(q){
@@ -788,20 +790,21 @@ const hayMatch = (p, terms) => terms.every(w => w==="sehrdick" ? (p.dk||p.cats).
 
 /* passt das Produkt zu „Meine Haare“? */
 function fitsMe(p){
-  if(!meSet()) return true;
+  if(!meSet() || p.type==="buerste" || p.type==="tools") return true;
   if(p.type==="shampoo"){ return me.kopf ? p.cats.includes(KOPF2SHAMPOO[me.kopf]) : true; }
   if(p.type==="kopfhaut"){ return me.kopf ? (p.cats.includes(KOPF2PFLEGE[me.kopf]) || p.cats.includes("peeling")) : true; }
   if(!me.dicke) return true;
   return (p.dk||p.cats).includes(me.dicke);
 }
 function applyMine(items, type){
-  if(!meSet() || !onlyMine) return {items, note:""};
+  if(!meSet() || !onlyMine || !items.length) return {items, note:""};
   /* Auch bei kaputten Haaren nicht nur Repair zeigen: Die Balance mit Feuchtigkeit und Nährendem ist wichtig */
   let out = items.filter(fitsMe);
   if(!out.length) return {items, note:"Dazu passt hier nichts genau, deshalb siehst du alle."};
   return {items:out, note:""};
 }
 function relevantMe(type){
+  if(type==="buerste" || type==="tools") return false;
   if(type==="shampoo"||type==="kopfhaut") return !!me.kopf;
   return !!(me.dicke || (me.kaputt && ["maske","conditioner","leavein"].includes(type)));
 }
@@ -958,6 +961,8 @@ function renderWissen(){
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
   art.innerHTML = back + (w.entwurf ? `<p class="wdraft">Entwurf: Dieser Text ist noch nicht von Laura geprüft.</p>` : "") + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;
   art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
+  /* Links aus einem Kapitel zu einer Produktart, z. B. Haarbürsten */
+  art.querySelectorAll("a[data-typ]").forEach(a => a.onclick = e => { e.preventDefault(); state.view = "produkte"; state.type = a.dataset.typ; state.cat = a.dataset.cat || "alle"; state.q = ""; q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); });
 }
 
 /* ---------- Merkliste ---------- */
@@ -985,7 +990,7 @@ function renderMerk(){
   if(!mine.length){ box.innerHTML = `<div class="merkempty"><p>Noch nichts gemerkt. Tippe bei einem Produkt auf das <b>+</b>, dann landet es hier.</p><button type="button" class="btn dark" id="merkGo">Zu den Produkten <span aria-hidden="true">→</span></button></div>`;
     document.getElementById("merkGo").onclick = () => { state.view="produkte"; render(); window.scrollTo({top:0}); }; return; }
   const ownHitze = p => p.type==="hitze" && !p.von;
-  box.innerHTML = `<div class="mcols">${TYPES.filter(t => t.id!=="hitze" || mine.some(ownHitze)).map(t => { const list = mine.filter(p => p.type===t.id && (t.id!=="hitze" || ownHitze(p)));
+  box.innerHTML = `<div class="mcols">${TYPES.filter(t => (t.id!=="hitze" || mine.some(ownHitze)) && (t.id!=="tools" || mine.some(p => p.type==="tools"))).map(t => { const list = mine.filter(p => p.type===t.id && (t.id!=="hitze" || ownHitze(p)));
     return `<section class="mcol"><h3>${t.label} <span class="cnt">${list.length||""}</span></h3>${list.length ? `<ul class="mlist">${list.map(merkItemHtml).join("")}</ul>` : `<p class="mnone">Noch nichts gemerkt</p>`}</section>`; }).join("")}</div>`;
 }
 function merkText(){
@@ -1018,6 +1023,11 @@ function itemHtml(p, badge){
       else if(h[0]==="alle"&&h[1]==="alle") body += `<div class="line"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div>`;
       else body += `<div class="line"><b>Haardicke:</b> ${esc(h[0])}</div><div class="line"><b>Haarzustand:</b> ${esc(h[1])}</div>`; }
     { const t = p.cats.map(c=>label("shampoo",c)).join(", "); body += `<span class="also${t.length>34?" long":""}">Passt zu: ${t}</span>`; }
+  } else if(p.type==="buerste"){
+    if(p.hair) body += `<div class="line"><b>Für dein Haar:</b> ${esc(p.hair)}</div>`;
+    if(p.wofuer) body += `<div class="line"><b>Wofür:</b> ${esc(p.wofuer)}</div>`;
+    if(p.nass) body += `<div class="line"><b>Nass oder trocken:</b> ${esc(p.nass)}</div>`;
+    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
   } else if(p.type==="kopfhaut"){
     if(p.wirk) body += `<div class="line"><b>Wichtige Inhaltsstoffe:</b> ${esc(p.wirk)}</div>`;
     if(p.duft) body += `<div class="line"><b>Duft und Alkohol:</b> ${esc(p.duft)}</div>`;
@@ -1083,7 +1093,8 @@ function renderGuide(){
   const intro = g.intro || {};
   let html = `<div class="guide"><div class="ghero"><div class="ghead"><div><h2>${t.label}</h2><div class="sub">${t.by} · ${g.items.length} Produkte</div></div></div>
     ${(intro.lead||intro.box)?`<div class="gintro"><p>${intro.lead||""}</p>${intro.box?`<div class="box">${intro.box}</div>`:""}</div>`:""}</div>
-    <div class="controls"><div class="crow">${segSwitch()}${fitHtml(state.type)}</div><div class="chips" role="group" aria-label="Kategorie wählen">${chips}</div></div>`;
+    ${g.items.length ? `<div class="controls"><div class="crow">${segSwitch()}${fitHtml(state.type)}</div><div class="chips" role="group" aria-label="Kategorie wählen">${chips}</div></div>` : ""}`;
+  if(!g.items.length){ guide.innerHTML = html + `</div>`; bindControls(); return; }
   let items = g.items.filter(segOk);
   if(state.cat==="liste"){
     let {items:its} = applyMine(items, state.type);
@@ -1099,7 +1110,7 @@ function renderGuide(){
     if(state.cat==="alle" && !r.note){ const rec = pickRec(items, state.type); html += recHtml(rec, state.type); }
     const title = state.cat==="alle" ? (meSet() && onlyMine && !r.note && relevantMe(state.type) ? `Alle passenden ${PLURAL[state.type]}` : `Alle ${PLURAL[state.type]}`) : label(state.type,state.cat);
     html += `<h3 class="sec">${esc(title)}<span class="count">${items.length}</span></h3>${desc?`<p class="catdesc">${desc}</p>`:""}${r.note?`<p class="catdesc">${r.note}</p>`:""}`;
-    html += items.length ? `<ul class="grid">${items.map(p => itemHtml(p)).join("")}</ul>` : `<p class="empty">Dazu habe ich gerade kein Produkt in der Liste.</p>`;
+    html += items.length ? `<ul class="grid">${items.map(p => itemHtml(p)).join("")}</ul>` : (g.items.length ? `<p class="empty">Dazu habe ich gerade kein Produkt in der Liste.</p>` : `<p class="empty">Hier kommen bald meine Empfehlungen.</p>`);
   }
   guide.innerHTML = html + `</div>`;
   bindControls();

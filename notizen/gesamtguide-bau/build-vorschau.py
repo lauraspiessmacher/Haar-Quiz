@@ -34,6 +34,11 @@ _data['hitze'] = {'cats': _h['cats'], 'rank': None, 'items': _hitems, 'intro': {
   'lead': 'Deinen Hitzeschutz suchst du nach deiner Haardicke aus und danach, ob du ihn ins feuchte oder ins trockene Haar gibst. Er legt sich wie ein Schutzfilm um deine Haare, damit Föhn, Glätteisen und Lockenstab weniger Schaden anrichten.',
   'how': '',
   'box': '<p><b>So wendest du ihn an:</b> Vor jeder Hitze, egal ob Föhn, Glätteisen oder Lockenstab. Meine Empfehlung: das Tool nicht heißer einstellen als nötig und danach eine Leave-in-Pflege oder ein Öl.</p>'}}
+# Haarbürsten (buersten.json) und Hitze-Tools (kommt bald, Laura sucht die Empfehlungen noch raus)
+_data['buerste'] = json.load(open(f'{S}/buersten.json'))
+_data['tools'] = {'cats': [], 'rank': None, 'items': [], 'intro': {
+  'lead': 'Hier kommen bald meine Empfehlungen für Föhne, Multistyler, Glätteisen, Lockenstäbe und Hitzebürsten.',
+  'box': '<p><b>Bis dahin:</b> Vor jeder Hitze kommt ein Hitzeschutz, und stell dein Tool nicht heißer ein als nötig.</p>'}}
 data = json.dumps(_data, ensure_ascii=False).replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 # Vintage-Regal im Wissen-Bereich (Teile aus notizen/bilder/regal/variante-1.png, zugeschnitten in regal/)
