@@ -178,6 +178,8 @@ const Q = [
   ["Bis zum Kinn oder kürzer","kinn"],["Bis zur Schulter","schulter"],["Bis zur Brust","brust"],["Länger","lang"]]},
  {id:"chem", t:"Was davon trifft auf deine Haare zu?", h:"Du kannst mehreres auswählen.", multi:true, a:[
   ["Gefärbt","gefaerbt"],["Blondiert, auch Strähnchen","blond"],["Dauerwelle oder chemische Glättung","chemie"],["Nichts davon","nichts"]]},
+ {id:"faerben", t:"Wie oft färbst du deine Haare?", if: a => (a.chem || []).includes("gefaerbt"), a:[
+  ["Ein- bis zweimal im Jahr","selten"],["Alle zwei bis drei Monate oder öfter, meist nur den Ansatz","oft_ansatz"],["Alle zwei bis drei Monate oder öfter, jedes Mal die ganzen Längen oder mit Aufhellen","oft_laenge"],["Ich töne nur oder mache ein Glossing, ohne Aufhellen","toenen"]]},
  {id:"zustand", t:"Wie fühlen sich deine Längen an?", a:[
   ["Weich und geschmeidig","weich"],["Etwas trocken, die Spitzen sind rau","trocken"],["Strohig, sie verknoten schnell","strohig"],["Nass dehnen sie sich wie Gummi und reißen leicht","gummi"]]},
  {id:"spliss", t:"Hast du Spliss oder Haarbruch?", a:[
@@ -197,7 +199,7 @@ const Q = [
  {id:"aufwand", t:"Wie viel Zeit und Lust hast du für deine Haarpflege?", a:[
   ["Wenig, es soll schnell gehen","wenig"],["Ein bisschen, wenn es sich lohnt","mittel"],["Viel, ich liebe Haarpflege","viel"]]}
 ];
-const FINE = "Ich bin keine Ärztin und keine Friseurin, dieses Quiz ersetzt keine persönliche Beratung. Dein Wochenplan ist ein Beispiel und eine Orientierung, keine feste Regel. Verschieb die Tage ruhig so, wie sie in deinen Alltag passen.";
+const FINE = "Ich bin keine Ärztin und keine Friseurin. Dieses Quiz ersetzt keine persönliche Beratung, auch nicht beim Arzt: Wenn du Probleme oder Beschwerden mit deiner Kopfhaut hast, führt an einem Arztbesuch kein Weg vorbei. Dein Wochenplan ist ein Beispiel und eine Orientierung, keine feste Regel. Verschieb die Tage ruhig so, wie sie in deinen Alltag passen.";
 
 /* ---------- Ablauf ---------- */
 const app = document.getElementById("app");
@@ -309,13 +311,16 @@ function plan(a){
   const fine = dk <= 1, thick = dk >= 3;
   const chem = a.chem || [];
   const blond = chem.includes("blond") || chem.includes("chemie");
-  let dmg = (chem.includes("gefaerbt")?1:0) + (blond?3:0)
+  /* Färben: Tönen zählt nicht, häufiges Färben der ganzen Längen oder mit Aufhellen zählt fast wie Chemie */
+  const gefaerbt = chem.includes("gefaerbt") && a.faerben !== "toenen";
+  const farbeOft = gefaerbt && (a.faerben === "oft_ansatz" || a.faerben === "oft_laenge"), farbeBond = gefaerbt && a.faerben === "oft_laenge";
+  let dmg = (gefaerbt ? (farbeBond ? 2 : 1) : 0) + (blond?3:0)
           + ({weich:0,trocken:1,strohig:3,gummi:5}[a.zustand] || 0)
           + ({kaum:0,spliss:1,bruch:3}[a.spliss] || 0)
           + ({selten:0,manchmal:1,taeglich:2}[a.hitze] || 0);
   const st = a.zustand === "gummi" ? 3 : dmg <= 2 ? 0 : dmg < 6 ? 1 : 2;
   /* Bond Repair nur bei strukturgeschädigtem Haar (Blondieren, Chemie, nass wie Gummi) */
-  const bond = blond || a.zustand === "gummi";
+  const bond = blond || a.zustand === "gummi" || farbeBond;
   const n = Math.min(7, +a.wash || 2);
   const sporty = a.sport && a.sport !== "nein";
   const sportDays = sporty ? (a.sporttage || []).map(Number).sort() : [];
@@ -335,7 +340,7 @@ function plan(a){
   const maskDays = spread(wash, m);
   /* Balance: Repair bzw. Bond Repair ein- bis zweimal pro Woche, sonst Feuchtigkeit */
   /* Repair nur bei Schädigung durch Färben, Blondieren oder sehr viel Hitze, nicht bei bloßer Trockenheit */
-  const repair = bond || chem.includes("gefaerbt") || a.hitze === "taeglich" || a.spliss === "bruch", repName = bond ? "Bond-Repair" : "Repair";
+  const repair = bond || gefaerbt || a.hitze === "taeglich" || a.spliss === "bruch", repName = bond ? "Bond-Repair" : "Repair";
   const moistMask = thick ? "eine nährende Feuchtigkeitsmaske" : fine ? "eine leichte Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske";
   /* Nass wie Gummi: Bond Repair darf eine Zeit lang intensiver sein. Sonst höchstens 1 Repair-Maske pro Woche. */
   const intens = a.zustand === "gummi";
@@ -365,7 +370,7 @@ function plan(a){
   if(kopfOk && n <= 4){
     const free = [0,1,2,3,4,5,6].filter(d => !wash.includes(d));
     const sportFree = free.filter(d => sportDays.includes(d));
-    if(sportFree.length){ tsDay = sportFree[0]; tsWhy = "nach dem Sport, statt extra zu waschen"; }
+    if(sportFree.length && a.sport === "ruhig"){ tsDay = sportFree[0]; tsWhy = "nach dem Sport, statt extra zu waschen"; }
     else {
       let bestRun = 0, bestEnd = null;
       wash.forEach((w,i) => { const next = i < wash.length-1 ? wash[i+1] : wash[0] + 7; const run = next - w - 1; if(run > bestRun){ bestRun = run; bestEnd = (next - 1) % 7; } });
@@ -394,10 +399,10 @@ function plan(a){
     const items = [], sp = sportDays.includes(d), isWash = wash.includes(d);
     let label;
     if(sp && a.sport === "viel") items.push("Beim Sport: Haare zu einem Zopf flechten");
-    else if(sp) items.push("Beim Sport: lockerer Zopf oder Dutt mit einem Haargummi ohne Metall");
+    else if(sp) items.push("Beim Sport: lockerer Zopf oder Dutt mit einem Satin-Scrunchie");
     if(isWash){
       label = sp ? "Waschtag nach dem Sport" : "Waschtag";
-      if(d === prewashDay) items.push(`Vorher Pre-Wash-Pflege mit der ${PREWASH[dk]}, 10 bis 60 Minuten einwirken lassen`);
+      if(d === prewashDay) items.push(`Vorher Pre-Wash-Pflege mit der ${PREWASH[dk]}`);
       items.push(tsSensitiv ? "Zweimal shampoonieren, auf Ansatz und Kopfhaut. Verträgt deine Kopfhaut das nicht, einmal und das Shampoo kurz einwirken lassen" : "Zweimal shampoonieren, auf Ansatz und Kopfhaut");
       const mk = maskDays.indexOf(d);
       if(mk >= 0) items.push(`${maskKind(mk).replace(/^e/,"E")}${fine ? " nur in Längen und Spitzen" : " in die Längen"}, mindestens 10 bis 15 Minuten einwirken lassen${repair && m === 1 ? ". In der Woche danach stattdessen eine Feuchtigkeitsmaske" : ""}`);
@@ -422,7 +427,7 @@ function plan(a){
   const regel = [
     ["Jeden Tag", "LL-Methode: Leave-in in die trockenen Längen und Spitzen. Vor jeder Hitze Hitzeschutz."],
     ["Jede Nacht", nacht.charAt(0).toUpperCase() + nacht.slice(1) + ". Nie mit nassen Haaren ins Bett."],
-    ["Jede Woche", [repair && m > 1 ? `${m}× Maske, davon ${repMaskIdx.length}× ${repName}.` : repair ? `1× Maske, von Woche zu Woche im Wechsel ${repName} und Feuchtigkeit.` : `${m}× Maske.`, repLeaveN ? `Nach der Wäsche ${repLeaveN}× ein ${repName}-Leave-in, sonst Feuchtigkeit.` : "", prewashDay != null ? "1× Pre-Wash-Pflege." : "", tsDay != null ? "Höchstens 1× Trockenshampoo." : "", effort === "viel" ? "Ein paar Mal eine Kopfhautmassage, 5 bis 10 Minuten mit den Fingerkuppen." : "", "Kissenbezug wechseln und Haarbürste reinigen."].filter(Boolean).join(" ")],
+    ["Jede Woche", [repair && m > 1 ? `${m}× Maske, davon ${repMaskIdx.length}× ${repName}.` : repair ? `1× Maske, von Woche zu Woche im Wechsel ${repName} und Feuchtigkeit.` : `${m}× Maske.`, repLeaveN ? `Nach der Wäsche ${repLeaveN}× ein ${repName}-Leave-in, sonst Feuchtigkeit.` : "", prewashDay != null ? "1- bis 2× Pre-Wash-Pflege nach Bedarf." : "", tsDay != null ? "Höchstens 1× Trockenshampoo." : "", effort === "viel" ? "Ein paar Mal eine Kopfhautmassage, 5 bis 10 Minuten mit den Fingerkuppen." : "", "Kissenbezug wechseln und Haarbürste reinigen."].filter(Boolean).join(" ")],
   ];
   if(tsDay != null) regel.push(["Nach einer Woche mit Trockenshampoo", "Vor einer Wäsche ein Kopfhautpeeling."]);
   regel.push(tief === 0 ? ["Bei Bedarf", "Tiefenreinigung mit einem Tiefenreinigungsshampoo, wenn sich deine Haare schwer oder strähnig anfühlen."] : ["Jeden Monat", `Tiefenreinigung mit einem Tiefenreinigungsshampoo, ${tiefText}.`]);
@@ -431,24 +436,24 @@ function plan(a){
   /* ---- Erklärtexte ---- */
   const T = [];
   const washNames = wash.map(d => TAGE[d]);
-  if(st === 3) T.push({warn:true, h:"Deine Haare sind strukturell stark geschädigt", p:["Wenn sich nasse Haare wie Gummi dehnen, ist das Innere des Haares stark angegriffen. Pausiere Hitze und chemische Behandlungen, steig auf Bond-Produkte um und lass dich beim Friseur beraten, wie viel von den geschädigten Längen ab muss. Kein Produkt macht diese Längen wieder wie vorher, aber gute Pflege schützt den Rest und das nachwachsende Haar."]});
+  if(st === 3) T.push({warn:true, h:"Deine Haare sind strukturell stark geschädigt", p:["Wenn sich nasse Haare wie Gummi dehnen, ist das Innere des Haares stark angegriffen. Pausiere Hitze-Tools wie Glätteisen und Lockenstab und chemische Behandlungen (Föhnen auf mittlerer und kalter Stufe mit Hitzeschutz ist okay), steig auf Bond-Produkte um und lass dich beim Friseur beraten, wie viel von den geschädigten Längen ab muss. Kein Produkt macht diese Längen wieder wie vorher, aber gute Pflege schützt den Rest und das nachwachsende Haar."]});
 
   T.push({h:"Deine Basis", p:["Diese Schritte gehören in jede Routine, egal wie viel Zeit du hast. Sie halten deine Haare geschmeidig und flexibel, und genau das schützt sie vor Haarbruch und Spliss."], li:[
     `**Nach jeder Wäsche ein Leave-in:** ${LEAVE_FEUCHT[dk]} ins noch feuchte Haar.`,
-    `**Jeden Tag die LL-Methode:** Auch zwischen den Wäschen kommt ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen.`,
+    `**Jeden Tag die LL-Methode:** Auch zwischen den Wäschen kommt ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen.${dk === 0 ? " Wenn das nicht jeden Tag klappt, ist zum Beispiel jeder zweite Tag auch gut." : ""}`,
     `**Immer Hitzeschutz:** vor dem Föhnen, Glätten und Locken.`,
     `**Zum Abschluss versiegeln:** ${OEL[dk].charAt(0).toUpperCase() + OEL[dk].slice(1)}. Ich empfehle es immer, es ist ein schönes Add-on-Produkt. Öl ersetzt keine andere Pflege, sondern versiegelt, was vorher an Pflege drin ist.${fine ? " Bei feinen Haaren ist ein trockenes, leichtes Öl wichtig, damit nichts beschwert." : ""}`,
     `**Conditioner:** ${COND[dk].charAt(0).toUpperCase() + COND[dk].slice(1)} schließt jede Wäsche ab. Lass ihn drei bis fünf Minuten einwirken.`
   ]});
 
-  const wp = [`Du wäschst deine Haare ${n === 1 ? "einmal" : n + "-mal"} pro Woche. In deinem Plan ${n === 1 ? "liegt der Waschtag auf " + washNames[0] : "liegen die Waschtage auf " + joinDe(washNames)}.${n > 1 ? " So sind die Abstände dazwischen möglichst gleichmäßig." : ""}${sportDays.length && wash.some(d => sportDays.includes(d)) ? " Und wo es ging, wäschst du direkt nach dem Sport." : ""}`];
-  wp.push("**Shampoo:** Ich empfehle für jeden Kopfhauttyp, zweimal zu shampoonieren. Beim ersten Mal lösen sich Talg und Produktreste, beim zweiten Mal wird die Kopfhaut richtig sauber." + (tsSensitiv ? " Ich bin keine Ärztin und kann keine Diagnosen stellen. Wenn deine Kopfhaut aber sehr sensibel oder sehr trocken ist, zum Beispiel bei Neurodermitis, und du mit zweimal Shampoonieren nicht klarkommst, wasch nur einmal und lass das Shampoo dafür ein bisschen einwirken." : ""));
+  const wp = [`Du wäschst deine Haare ${n === 1 ? "einmal" : n + "-mal"} pro Woche. In deinem Plan ${n === 1 ? "liegt der Waschtag auf " + washNames[0] : "liegen die Waschtage auf " + joinDe(washNames)}.${n > 1 ? " So sind die Abstände dazwischen möglichst gleichmäßig." : ""}${sportDays.length && wash.some(d => sportDays.includes(d)) ? " Und wo es ging, wäschst du direkt nach dem Sport." : ""}${sporty ? " Wenn du beim Sport stark geschwitzt hast, wasch deine Haare danach am besten, das ist besser für deine Kopfhaut, weil sich Schweiß und Bakterien sonst lange halten. Nach ruhigem Sport ohne viel Schweiß reicht es auch mal, den Ansatz trocken zu föhnen." : ""}`];
+  wp.push("**Shampoo:** Ich empfehle so gut wie jedem Kopfhauttyp, zweimal zu shampoonieren. Beim ersten Mal lösen sich Talg und Produktreste, beim zweiten Mal wird die Kopfhaut richtig sauber." + (tsSensitiv ? " Bei sensibler oder sehr trockener Kopfhaut, zum Beispiel bei Neurodermitis, probier aus, ob du zweimal Shampoonieren verträgst. Wenn nicht, wasch nur einmal und lass das Shampoo dafür ein bisschen einwirken. Ich bin keine Ärztin und kann keine Diagnosen stellen." : ""));
   let mp = `**Maske: ${m}× pro Woche.** Lass sie mindestens 10 bis 15 Minuten einwirken, gerade bei Bond-Repair-Masken. Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt davon ab, wie oft du wäschst, und von der Maske selbst. Eine Feuchtigkeitsmaske, die nährt, geschmeidig macht und Glanz schenkt, kannst du ruhig öfter nehmen. Bei Repair- und Bond-Repair-Masken kommt es total auf das Produkt an, hier gilt: immer die Balance mit Feuchtigkeit halten.${repair && m > 1 ? ` Deshalb wechseln sich in deinem Plan ${repName}- und Feuchtigkeitsmaske ab.` : ""}`;
   if(thick) mp += " Bei deinen dicken Haaren sorgt eine nährende Maske dafür, dass sich krause Haare legen und nichts fuzzy aussieht.";
   if(fine) mp += " Bei feinen Haaren reicht eine leichte Maske nur in Längen und Spitzen, damit nichts beschwert.";
   if(effort === "wenig" && Math.max(byDk, bySt) > m) mp += ` Eigentlich könnten deine Haare sogar ${Math.min(n, Math.max(byDk, bySt))} Masken pro Woche vertragen. Wenn du mal mehr Zeit hast, lohnt sich das.`;
   wp.push(mp);
-  if(prewashDay != null) wp.push(`**Pre-Wash-Pflege:** Einmal pro Woche schützt du deine Längen vor dem Shampoo. Für dich passt die ${PREWASH[dk]}. Lass sie 10 bis 60 Minuten einwirken, aber nie über Nacht.`);
+  if(prewashDay != null) wp.push(`**Pre-Wash-Pflege:** Ein- bis zweimal pro Woche, nach Bedarf, schützt du deine Längen vor dem Shampoo. Theoretisch geht das vor jeder Wäsche, ein Muss ist es aber nicht. Für dich passt die ${PREWASH[dk]}. ${dk <= 2 ? "Bei der CWC-Methode machst du die Haare nass, gibst Conditioner in die Längen und shampoonierst direkt danach den Ansatz, da musst du nichts lange einwirken lassen. " : ""}Bei der ${dk <= 1 ? "LWC-Methode" : dk === 2 ? "MWC-Methode" : "ÖWC- und MWC-Methode"} gibst du ${dk <= 1 ? "ein Leave-in" : dk === 2 ? "eine Maske" : "Öl oder Maske"} in die trockenen Längen und lässt ${dk === 2 ? "sie" : "es"} 10 bis 60 Minuten einwirken, aber nie über Nacht.`);
   T.push({h:"Deine Waschtage", p:wp});
 
   const zp = [];
@@ -461,14 +466,14 @@ function plan(a){
     const sp = [];
     if(a.sport === "viel") sp.push("Wenn du dich beim Sport viel bewegst, zum Beispiel beim Joggen, flechte deine Haare zu einem Zopf. Ein offener Pferdeschwanz peitscht bei jedem Schritt gegen deinen Rücken, und genau dabei entstehen Haarbruch und Spliss.");
     else sp.push("Bei ruhigem Sport reicht ein lockerer Zopf oder Dutt.");
-    sp.push("Nimm dafür ein Haargummi ohne Metall.");
+    sp.push("Nimm dafür am besten ein Satin-Scrunchie.");
     if(!kopfOk && sportDays.some(d => !wash.includes(d))) sp.push("An Sporttagen ohne Wäsche trocknest du den Ansatz nach dem Training am besten mit dem Föhn auf kalter Stufe, damit der Schweiß nicht lange auf der Kopfhaut bleibt.");
     T.push({h:"Beim Sport", p:[sp.join(" ")]});
   }
 
   const hp = ["Egal wie oft du stylst: Vor jeder Hitze kommt ein Hitzeschutz, danach eine Leave-in-Pflege oder ein Öl."];
-  if(a.hitze === "taeglich") hp.push("Weil du fast täglich mit Hitze stylst: Stell dein Tool nicht heißer ein als nötig und plane hitzefreie Tage ein.");
-  hp.push(`**Für dich passt:** ${HS[dk]}`);
+  if(a.hitze === "taeglich") hp.push("Weil du fast täglich mit Glätteisen, Lockenstab oder heißem Föhn stylst: Stell dein Tool nicht heißer ein als nötig und plane Tage ohne diese Tools ein. Föhnen auf mittlerer und kalter Stufe ist damit nicht gemeint.");
+  hp.push(`**Für dich passt:** ${HS[dk]}${dk >= 2 ? " Stylst du auf trockenem Haar, zum Beispiel mit Glätteisen oder Lockenstab, passt für jede Haardicke auch ein trockenes Hitzeschutzspray." : ""}`);
   T.push({h:"Hitze und Hitzeschutz", p:hp, hs:true});
 
   const tp = ["Am besten föhnst du deine Haare, erst auf mittlerer und zum Schluss auf kalter Stufe, immer mit Hitzeschutz. Geh nie mit nassen Haaren ins Bett, nass sind sie am empfindlichsten."];
@@ -511,23 +516,25 @@ function plan(a){
   T.push({h:"Nachts", p:[np]});
 
   if(repair){
-    const why = [chem.includes("gefaerbt") ? "Färben" : "", a.hitze === "taeglich" ? "sehr viele Hitzeanwendungen" : ""].filter(Boolean);
+    const why = [gefaerbt ? (farbeOft ? "häufiges Färben" : "Färben") : "", a.hitze === "taeglich" ? "sehr viele Hitzeanwendungen" : ""].filter(Boolean);
+    const bondWarum = (blond || a.zustand === "gummi") ? "Weil deine Haare strukturell geschädigt sind, zum Beispiel durch Blondieren, eine Dauerwelle oder andere chemische Behandlungen,"
+      : "Weil du alle zwei bis drei Monate oder öfter färbst und dabei jedes Mal die ganzen Längen mitgefärbt oder aufgehellt werden, sammeln sich die Schäden in deinen Längen. Deshalb";
     const intro = bond
-      ? "Weil deine Haare strukturell geschädigt sind, zum Beispiel durch Blondieren, eine Dauerwelle oder andere chemische Behandlungen, brauchen sie Feuchtigkeit, Bond Repair und Proteine. Bond stabilisiert die Struktur im Inneren, Proteine legen sich von außen an. Die beiden ergänzen sich, du darfst sie also kombinieren."
-      : (why.length ? `Weil deine Haare durch ${why.join(" und ")} beansprucht sind${a.spliss === "bruch" ? " und du viel Haarbruch hast" : ""}` : "Weil du viel Haarbruch hast") + (why.length ? ", können Repair-Produkte mit Proteinen helfen." : ": Oft steckt Reibung dahinter, und dann ist Feuchtigkeit der erste Schritt. Brechen deine Haare trotz guter Feuchtigkeitspflege weiter, können Repair-Produkte mit Proteinen helfen.") + " Bond Repair brauchst du dafür nicht.";
+      ? bondWarum + " brauchen deine Haare Feuchtigkeit, Bond Repair und Proteine. Bond stabilisiert die Struktur im Inneren, Proteine legen sich von außen an. Die beiden ergänzen sich, du darfst sie also kombinieren."
+      : (why.length ? `Weil deine Haare durch ${why.join(" und ")} beansprucht sind${a.spliss === "bruch" ? " und du viel Haarbruch hast" : ""}` : "Weil du viel Haarbruch hast") + (why.length ? ", können Repair-Produkte mit Proteinen helfen." : ": Oft steckt Reibung dahinter, und dann ist Feuchtigkeit der erste Schritt. Brechen deine Haare trotz guter Feuchtigkeitspflege weiter, können Repair-Produkte mit Proteinen helfen.") + ((a.hitze === "taeglich" || farbeOft) ? " Nach Bedarf kannst du auch Bond Repair dazunehmen, zum Beispiel wenn deine Haare trotz Proteinen und Feuchtigkeit weiter brechen." : " Bond Repair brauchst du dafür nicht.") + (a.faerben === "oft_ansatz" ? " Gut, dass meist nur der Ansatz gefärbt wird: So bekommen deine Längen kaum etwas ab. Lass sie nur mitfärben, wenn es wirklich nötig ist." : "") + (gefaerbt && !farbeOft && a.hitze !== "taeglich" ? " Kommen viel Hitze ohne Hitzeschutz oder viel Reibung dazu, kann Bond auch bei seltenerem Färben sinnvoll sein. Ganz genau kann ich das aus der Ferne nicht sagen." : "");
     T.push({h:"Repair ist nicht gleich Repair", p:[
       intro + " Wichtig ist, dass du dabei immer die Balance mit Feuchtigkeit hältst.",
       "Unter „Repair“ verstehen viele gleich Bond-Produkte. Dabei gibt es ganz unterschiedliche Stufen, und welche zu dir passt, hängt davon ab, was deine Haare gerade brauchen:"],
       li:[
       "**Feuchtigkeit:** Die Basis für alle Haare und das Wichtigste, wenn deine Haare trocken, rau oder frizzig sind. Auch trockene Haare können brechen, ganz ohne Färben, Blondieren oder Hitze, meistens durch Reibung, zum Beispiel beim Bürsten, nachts auf dem Kissen oder durch Zopfgummis. Dann ist Feuchtigkeit oft der erste Schritt, denn geschmeidige, flexible Haare halten Reibung viel besser aus. Wann Feuchtigkeit reicht und wann Proteine dazukommen sollten, ist aber sehr individuell.",
       "**Repair mit Proteinen:** Wenn deine Haare trotz guter Feuchtigkeitspflege weiter brechen oder durch Färben oder viel Hitze beansprucht sind. Proteine wie Keratin oder Weizenprotein lagern sich von außen an brüchige und poröse Stellen an, ein bisschen wie ein Pflaster. Das Haar fühlt sich fester an und bricht weniger. Dauerhaft ist das nicht, mit der Zeit wäscht es sich wieder heraus, deshalb gehört es regelmäßig in deine Routine.",
-      "**Bond Repair:** Erst wenn deine Haare strukturell geschädigt sind, also blondiert, chemisch behandelt oder nass wie Gummi. Bond-Produkte stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter, und manche wirken nur während dem Blondieren beim Friseur.",
-      "**Kurz gesagt:** Gesund oder nur trocken: Feuchtigkeit, bei dicken Haaren auch Nährendes. Beansprucht durch Färben, viel Hitze oder Haarbruch: Feuchtigkeit und Proteine. Strukturgeschädigt durch Blondieren, Dauerwelle oder andere Chemie oder nass wie Gummi: Feuchtigkeit, Bond Repair und Proteine.",
+      "**Bond Repair:** Wenn deine Haare strukturell geschädigt sind, also blondiert, chemisch behandelt, sehr oft komplett gefärbt oder nass wie Gummi. Nach Bedarf auch bei sehr viel Hitze oder häufigem Färben. Bond-Produkte stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter. Manche Bond-Systeme sind eigentlich für den Friseur gedacht: Sie werden direkt ins Blondiermittel gemischt und schützen beim Blondieren. Die Pflege für zu Hause aus derselben Marke kann ganz andere Wirkstoffe haben.",
+      "**Kurz gesagt:** Gesund oder nur trocken: Feuchtigkeit, bei dicken Haaren auch Nährendes. Beansprucht durch Färben, viel Hitze oder Haarbruch: Feuchtigkeit und Proteine. Strukturgeschädigt durch Blondieren, Dauerwelle oder andere Chemie, häufiges Färben der ganzen Längen oder nass wie Gummi: Feuchtigkeit, Bond Repair und Proteine.",
       "**Ganz genau kann ich es nicht festlegen:** Ich kann deine Haare nicht sehen und nicht anfassen. Nimm die Einordnung als Richtung und schau, wie sich deine Haare anfühlen.",
       "**Leave-in oder Maske?** Ein Repair- oder Bond-Repair-Leave-in auf feuchtem Haar wirkt sogar intensiver als eine Maske, weil es im Haar bleibt. Die Maske spülst du nach 15 Minuten wieder aus. Deshalb würde ich lieber einmal pro Woche eine Repair-Maske nehmen und ein- bis zweimal ein Repair-Leave-in, statt beides ständig.",
       ...(intens ? ["**Solange deine Haare nass wie Gummi sind:** Dann darfst du Bond Repair eine Zeit lang intensiver nutzen, so wie in deinem Plan. Fühlen sich deine Haare nass wieder fester an, fahr runter auf etwa eine Bond-Repair-Maske und ein- bis zweimal ein Bond-Repair-Leave-in pro Woche."] : []),
       "**Nicht zu viel:** Wer zu viel Repair benutzt, hat irgendwann zu viele Proteine im Haar. Die Haare werden steif und strohig und können sogar brechen. Dann brauchen sie wieder mehr Feuchtigkeit.",
-      `**Halte die Balance:** Hab nicht nur eine Repair-Maske zu Hause, sondern auch eine, die Feuchtigkeit spendet, und genauso beim Leave-in. Ich wasche meine Haare zum Beispiel täglich. Mein Bond-Repair-Leave-in nutze ich ein- bis zweimal pro Woche, an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in, und genauso mache ich es mit der Maske.`,
+      `**Halte die Balance:** Hab nicht nur eine Repair-Maske zu Hause, sondern auch eine, die Feuchtigkeit spendet, und genauso beim Leave-in. Ein Beispiel: Wer seine Haare oft wäscht, nimmt das Bond-Repair-Leave-in ein- bis zweimal pro Woche und an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in. Genauso bei der Maske.`,
       "**Wo ich Repair empfehle:** In der Maske und im Leave-in auf feuchtem Haar. Ein Shampoo wäscht du ja ganz schnell wieder aus. Im Conditioner kannst du Repair natürlich auch nutzen, ich empfehle aber eher eine Maske, weil du sie meistens länger einwirken lässt. Im Leave-in auf feuchtem Haar bleiben die Wirkstoffe wirklich drin und werden nicht ausgewaschen. Auf trockenem Haar macht Repair wenig Sinn, weil es hier um Flexibilität und Geschmeidigkeit geht und kaum Wirkstoffe eindringen können.",
       "**Kein fester Plan:** Wie oft genau, kann ich hier nicht festlegen, weil es total auf deine Produkte ankommt. Nimm deinen Wochenplan als Vorschlag. Wichtig ist der Gedanke dahinter: Repair und Feuchtigkeit im Wechsel."
     ]});
@@ -585,8 +592,8 @@ function result(){
     <div class="tbl tblw"><table class="week">${weekRows}</table></div>
     <h2 class="sec">Regelmäßig</h2>
     <div class="tbl tblw"><table class="week">${regelRows}</table></div>
-    <div class="box"><h3>Welche Produkte?</h3><p>Hier im Quiz nenne ich bewusst keine einzelnen Produkte. In der Produktsektion findest du meine Einschätzungen, von Drogerie bis High-End. Deine Haardicke, deinen Kopfhauttyp und ob deine Haare Repair brauchen, habe ich unter „Meine Haare“ gespeichert. So siehst du dort direkt, was zu dir passt, und oben meine Empfehlung mit Feuchtigkeit, Nährendem und, wenn nötig, Repair.</p>
-      ${inEmbed ? `<button class="secondary" id="toProducts" style="margin-bottom:14px">Passende Produkte ansehen</button>` : ""}</div>
+    <div class="box"><h3>Meine Produktempfehlungen für dich</h3><p>Deine Haardicke, deinen Kopfhauttyp, ob deine Haare Repair brauchen und dein Wunschergebnis habe ich unter „Meine Haare“ gespeichert. In der Produktsektion siehst du bei Maske, Conditioner und Leave-in ganz oben meine Empfehlung für dich: ein Produkt mit Feuchtigkeit, eins, das nährt, und wenn nötig eins mit Repair. Darunter findest du alle Produkte, die zu dir passen, von Drogerie bis High-End.</p>
+      ${inEmbed ? `<button class="secondary" id="toProducts" style="margin-bottom:14px">Meine Empfehlungen ansehen</button>` : ""}</div>
     <div class="copyrow"><button class="primary" id="copy">Wochenplan kopieren</button><span class="copied" id="copied" role="status"></span></div>
     <div class="actions"><button class="ghost" id="again">Quiz neu starten</button></div>
     <p class="fine">${FINE}</p>

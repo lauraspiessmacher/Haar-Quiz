@@ -24,7 +24,10 @@ const M = [];
 let gruppe = "";
 const G = g => { gruppe = g; };
 /* text: String oder Liste von [Variante, Text]; gleiche Varianten werden zusammengefasst */
+/* Bausteine, die nach Lauras Anmerkungen (Prüfseite 08.10.) geändert wurden, bekommen eine neue ID, damit sie wieder offen sind */
+const NEU = new Set(["basis_ll","fine","gummi","hitze_fuerdich","hitze_taeglich","prewash","produkte","repair_intro","repair_li2","repair_li7","sport","wasch_tage"]);
 function add(id, wann, text) {
+  if (NEU.has(id)) id += "_v2";
   if (Array.isArray(text)) {
     const uniq = [];
     for (const [l, t] of text) { const u = uniq.find(x => x[1] === t); if (u) u[0] += ", " + l; else uniq.push([l, t]); }
@@ -38,7 +41,7 @@ G("Rahmen");
 add("start", "Startseite des Quiz", grab(/<p class="lead">([\s\S]*?)<\/p>/));
 add("start_tipp", "Startseite, wenn noch nicht alle drei anderen Quizze gemacht sind", "Tipp: Mach zuerst die anderen drei Quizze. " + grab(/missing \? `<p class="hint"[^>]*>([\s\S]*?)<\/p>`/));
 add("intro", "Ganz oben im Ergebnis", grab(/<p class="intro">([\s\S]*?)<\/p>/));
-add("produkte", "Kasten „Welche Produkte?“ unten im Ergebnis", grab(/<h3>Welche Produkte\?<\/h3><p>([\s\S]*?)<\/p>/));
+add("produkte", "Kasten „Meine Produktempfehlungen für dich“ unten im Ergebnis", grab(/<h3>Meine Produktempfehlungen für dich<\/h3><p>([\s\S]*?)<\/p>/));
 add("fine", "Kleingedrucktes auf Start- und Ergebnisseite", FINE);
 
 G("Deine Basis (immer)");
@@ -51,8 +54,10 @@ add("wasch_tage", "Immer, Tage und Anzahl ändern sich", [
   ["Beispiel: 2× waschen, kein Sport", sec(P({}), "Deine Waschtage").p[0]],
   ["Beispiel: 3× waschen, Sport Di und Do", sec(P({ wash: "3", sport: "ruhig", sporttage: ["1", "3"] }), "Deine Waschtage").p[0]],
   ["Beispiel: 1× waschen", sec(P({ wash: "1" }), "Deine Waschtage").p[0]]]);
-add("maske", "Immer, Zusatz je nach Haardicke (die Anzahl ändert sich, siehe Tabelle unten)", byDicke(d => sec(P({ dicke: d }), "Deine Waschtage").p[1]));
-add("maske_wenig", "Bei wenig Aufwand, wenn eigentlich mehr Masken gingen (Beispiel: dicke Haare, 4× waschen)", sec(P({ dicke: "dick", wash: "4", aufwand: "wenig" }), "Deine Waschtage").p[1].split("fuzzy aussieht.").pop().trim());
+const MK = R => sec(R, "Deine Waschtage").p.find(x => x.startsWith("**Maske"));
+add("shampoo", "Immer, Zusatz bei trockener oder sensibler Kopfhaut", [["Andere Kopfhaut", sec(P({}), "Deine Waschtage").p.find(x => x.startsWith("**Shampoo"))], ["Trocken oder sensibel", sec(P({ kopf: "sensibel" }), "Deine Waschtage").p.find(x => x.startsWith("**Shampoo"))]]);
+add("maske2", "Immer, Zusatz je nach Haardicke (die Anzahl ändert sich, siehe Tabelle unten)", byDicke(d => MK(P({ dicke: d }))));
+add("maske_wenig2", "Bei wenig Aufwand, wenn eigentlich mehr Masken gingen (Beispiel: dicke Haare, 4× waschen)", MK(P({ dicke: "dick", wash: "4", aufwand: "wenig" })).split("fuzzy aussieht.").pop().trim());
 {
   const row = (o) => DICKE.map((d, i) => [DL[i], ["1", "2", "3", "4", "5"].map(w => P(Object.assign({ dicke: d, wash: w }, o)).chips[1].replace(" Maske", "")).join(" · ")]);
   add("maske_tabelle", "So viele Masken pro Woche schlägt das Quiz vor. Werte für 1 · 2 · 3 · 4 · 5 Wäschen pro Woche, mittlerer Aufwand", [
@@ -104,7 +109,9 @@ G("Repair ist nicht gleich Repair");
 const RP = o => sec(P(o), "Repair ist nicht gleich Repair");
 add("repair_intro", "Nur bei Färben, Blondieren, Chemie, fast täglicher Hitze oder viel Haarbruch. Nur bei trockenen Längen erscheint der Abschnitt nicht.", [
   ["Blondiert, chemisch behandelt oder nass wie Gummi", RP({ chem: ["blond"] }).p[0]],
-  ["Gefärbt", RP({ chem: ["gefaerbt"] }).p[0]],
+  ["Gefärbt, ein- bis zweimal im Jahr", RP({ chem: ["gefaerbt"], faerben: "selten" }).p[0]],
+  ["Gefärbt, oft, meist nur der Ansatz", RP({ chem: ["gefaerbt"], faerben: "oft_ansatz" }).p[0]],
+  ["Gefärbt, oft, jedes Mal die ganzen Längen oder mit Aufhellen", RP({ chem: ["gefaerbt"], faerben: "oft_laenge" }).p[0]],
   ["Fast täglich Hitze", RP({ hitze: "taeglich" }).p[0]],
   ["Gefärbt und fast täglich Hitze", RP({ chem: ["gefaerbt"], hitze: "taeglich" }).p[0]],
   ["Gefärbt und viel Haarbruch", RP({ chem: ["gefaerbt"], spliss: "bruch" }).p[0]],

@@ -40,3 +40,20 @@ Diese Regeln gelten überall auf der Seite: Quizze, Routine-Check, Wissen, Produ
 - Glatt: Pflege glättet die Oberfläche (weniger Frizz, ebenmäßiger, Glanz), macht Wellen/Locken aber nicht glatt. Dafür Hitze (Föhn + Rundbürste, Multistyler, Glätteisen), immer Hitzeschutz. „Strukturglättend“ nicht verwenden. Bei Glanz-Reihen ehrlich sagen, dass die Säure oft hinten steht und Silikone den Glanz machen.
 - Volumen: Pflege bringt nicht das doppelte Volumen, verhindert aber Plattwerden (leichte Produkte, nichts Schweres am Ansatz, Tiefenreinigung). Volumen vor allem durch Föhnen (kopfüber, Rundbürste, kalt fixieren), Multistyler, Volumenspray/Schaum am Ansatz.
 - Locken: Curly-Girl-Methode nicht nennen. Basis: nur mit Conditioner unter der Dusche entwirren, Leave-in-Creme (je nach Dicke) ins nasse Haar kneten, nicht anfassen beim Trocknen. Mehr Aufwand: Mikrofaser/Turban/T-Shirt, Plopping, Lockengel, Diffusor. Refresh an Tag 2–3. Glatte Haare: Locken nur mit Styling.
+
+## Färben (08.10.2026, Lauras Go)
+- 1–2× im Jahr: beansprucht (Feuchtigkeit + Proteine).
+- Alle 2–3 Monate oder öfter, meist nur Ansatz: beansprucht, Bond nach Bedarf; Tipp, Längen nur mitzufärben, wenn nötig.
+- Alle 2–3 Monate oder öfter, jedes Mal ganze Längen oder mit Aufhellen: Bond-Stufe (Feuchtigkeit + Bond + Proteine).
+- Nur Tönen/Glossing ohne Aufhellen: zählt nicht als beansprucht durch Färben.
+- Bond nach Bedarf auch bei sehr viel Hitze (Glätteisen/Lockenstab/heißer Föhn; Föhnen auf mittlerer/kalter Stufe zählt nicht).
+
+## Aus der Prüfseite Routine-Check (08.10.2026)
+- Laura wäscht NICHT täglich – keine Beispiele mit „ich wasche täglich“.
+- Sport: Satin-Scrunchie statt Haargummi ohne Metall. Nach starkem Schwitzen lieber waschen (Kopfhaut, Bakterien); Trockenshampoo nur nach ruhigem Sport.
+- „Hitze pausieren“ meint Glätteisen/Lockenstab, nicht Föhnen auf mittlerer/kalter Stufe.
+- Trockener Hitzeschutz passt für alle Haardicken beim Styling auf trockenem Haar.
+- Shampoo: „so gut wie jedem Kopfhauttyp“ zweimal; sensibel/sehr trocken austesten, sonst 1× und einwirken.
+- Pre-Wash: 1–2× pro Woche nach Bedarf (theoretisch vor jeder Wäsche möglich). CWC ohne lange Einwirkzeit (nass machen, Conditioner in Längen, direkt shampoonieren). LWC/MWC/ÖWC 10–60 Min., nie über Nacht.
+- Feines Haar: LL-Methode, wenn nicht täglich möglich, z. B. jeden zweiten Tag.
+- Haftungshinweis: ersetzt keine persönliche Beratung, auch nicht beim Arzt; bei Kopfhautproblemen/Beschwerden führt am Arztbesuch kein Weg vorbei.

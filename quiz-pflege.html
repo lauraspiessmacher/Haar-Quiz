@@ -197,7 +197,7 @@ const FTXT = {
  tie:"Nimm im Alltag Scrunchies aus Satin oder Seide. Haargummis ohne Metall sind die Ausnahme für Frisuren, bei denen du mehr Halt brauchst.",
  loose:"Offen reiben deine Haare den ganzen Tag an Kleidung, Sitzlehnen und Taschen. Ganz vermeiden lässt sich das nicht, aber eine lockere Frisur an manchen Tagen und ein Leave-in auf trockenem Haar machen deine Längen unempfindlicher."
 };
-const FINE = "Ich bin keine Ärztin und keine Friseurin, dieses Quiz ersetzt keine persönliche Beratung. Deine Haare verändern sich durch Pflege, Färben, Hitze, Hormone und Alter, dein Ergebnis ist deshalb eine Momentaufnahme. Nimm es als Hilfe und Orientierung, nicht als feste Regel.";
+const FINE = "Ich bin keine Ärztin und keine Friseurin. Dieses Quiz ersetzt keine persönliche Beratung, auch nicht beim Arzt: Wenn du Probleme oder Beschwerden mit deiner Kopfhaut hast, führt an einem Arztbesuch kein Weg vorbei. Deine Haare verändern sich durch Pflege, Färben, Hitze, Hormone und Alter, dein Ergebnis ist deshalb eine Momentaufnahme. Nimm es als Hilfe und Orientierung, nicht als feste Regel.";
 
 /* ---------- Zeichnung ---------- */
 function hairSVG(th, st, cls){
@@ -290,7 +290,7 @@ function result(){
     (th===0 && st>=2) ? `<div class="box"><h3>Feines Haar mit starken Schäden</h3><p>Du brauchst Repair, aber reichhaltige Produkte machen dein Haar platt. Greif zu leichten Repair-Produkten wie Leave-in-Sprays oder leichten Leave-in-Seren, gib die Maske nur in Längen und Spitzen oder als Pflege vor dem Shampoo und arbeite lieber mit mehreren kleinen Mengen.</p></div>` :
     (th===2 && st===0) ? `<div class="box"><h3>Reichhaltig darf, muss aber nicht</h3><p>Reichhaltige Pflege ist bei dir möglich, aber kein Muss. Wenn sich deine Haare mit leichteren Produkten gut anfühlen, bleib ruhig dabei.</p></div>` : "";
 
-  const gumBox = st===3 ? `<div class="box warn"><h3>Was du jetzt tun kannst</h3><p>Pausiere Hitze und chemische Behandlungen. Pflege im Wechsel mit Bond Repair und Feuchtigkeit, entwirre nur ganz sanft und lass dich beim Friseur beraten, wie viel von den geschädigten Längen ab muss. Kein Produkt macht diese Längen wieder wie vorher, aber gute Pflege schützt den Rest und das nachwachsende Haar.</p></div>` : "";
+  const gumBox = st===3 ? `<div class="box warn"><h3>Was du jetzt tun kannst</h3><p>Pausiere Hitze-Tools wie Glätteisen und Lockenstab und chemische Behandlungen. Föhnen auf mittlerer und kalter Stufe mit Hitzeschutz ist okay. Pflege im Wechsel mit Bond Repair und Feuchtigkeit, entwirre nur ganz sanft und lass dich beim Friseur beraten, wie viel von den geschädigten Längen ab muss. Kein Produkt macht diese Längen wieder wie vorher, aber gute Pflege schützt den Rest und das nachwachsende Haar.</p></div>` : "";
 
   const bondBox = st>=1 ? `<div class="box"><h3>Feuchtigkeit und Repair im Mix</h3>
     <p><strong>Feuchtigkeitspflege</strong> macht das Haar weich und geschmeidig. <strong>Repair-Pflege</strong>, oft mit Proteinen, lagert sich an geschädigten Stellen an und stärkt das Haar. <strong>Bond Repair</strong> stabilisiert Verbindungen im Inneren des Haares. Am besten fährst du mit einem Mix aus Feuchtigkeit und Repair oder Bond Repair, statt nur auf eins davon zu setzen.</p>
