@@ -334,15 +334,27 @@ function plan(a){
   /* Repair nur bei Schädigung durch Färben, Blondieren oder sehr viel Hitze, nicht bei bloßer Trockenheit */
   const repair = bond || chem.includes("gefaerbt") || a.hitze === "taeglich" || a.spliss === "bruch", repName = bond ? "Bond-Repair" : "Repair";
   const moistMask = thick ? "eine nährende Feuchtigkeitsmaske" : fine ? "eine leichte Feuchtigkeitsmaske" : "eine Feuchtigkeitsmaske";
-  const repMaskIdx = repair && m > 1 ? spread([...Array(m).keys()], m >= 3 ? 2 : 1) : [];
+  /* Nass wie Gummi: Bond Repair darf eine Zeit lang intensiver sein. Sonst höchstens 1 Repair-Maske pro Woche. */
+  const intens = a.zustand === "gummi";
+  /* Repair- und Feuchtigkeitsmasken wechseln sich ab, nie zwei Repair-Masken hintereinander */
+  const repMaskIdx = repair && m > 1 ? [...Array(m).keys()].filter(k => k % 2 === 0).slice(0, intens ? 4 : 1) : [];
   const maskKind = k => {
     if(repair && m === 1) return `eine ${repName}-Maske`;
     return repMaskIdx.includes(k) ? `eine ${repName}-Maske` : moistMask;
   };
-  const repLeaveN = repair ? (n >= 4 ? 2 : n >= 2 ? 1 : 0) : 0;
-  /* Repair-Leave-in lieber an Waschtagen ohne Repair-Maske */
-  const repMaskDays = repMaskIdx.map(i => maskDays[i]);
-  const repLeaveDays = wash.filter(d => !repMaskDays.includes(d)).concat(wash.filter(d => repMaskDays.includes(d))).slice(0, repLeaveN);
+  /* Repair-Leave-in wirkt stärker als die Maske, weil es im Haar bleibt: normal 1–2× pro Woche, bei Gummi eine Zeit lang öfter */
+  const repLeaveN = !repair ? 0 : intens ? Math.min(n, n >= 4 ? 3 : 2) : (n >= 4 ? 2 : n >= 2 ? 1 : 0);
+  /* Repair-Leave-in an Waschtagen mit möglichst viel Abstand zu Repair-Masken und zueinander */
+  const repMaskDays = repair && m === 1 ? [maskDays[0]] : repMaskIdx.map(i => maskDays[i]);
+  const cdist = (x, y) => { const d = Math.abs(x - y) % 7; return Math.min(d, 7 - d); };
+  const repLeaveDays = [];
+  for(let k = 0; k < repLeaveN; k++){
+    const taken = [...repMaskDays, ...repLeaveDays];
+    const gap = d => taken.length ? Math.min(...taken.map(x => cdist(d, x))) : 7;
+    const cand = wash.filter(d => !repLeaveDays.includes(d)).sort((x, y) => gap(y) - gap(x) || x - y);
+    if(cand.length) repLeaveDays.push(cand[0]);
+  }
+  repLeaveDays.sort((x, y) => x - y);
   const prewashDay = effort === "viel" ? (wash.find(d => !maskDays.includes(d)) ?? wash[0]) : null;
 
   /* Trockenshampoo: höchstens einmal pro Woche, nicht bei schuppiger Kopfhaut */
@@ -422,7 +434,7 @@ function plan(a){
 
   const wp = [`Du wäschst deine Haare ${n === 1 ? "einmal" : n + "-mal"} pro Woche. In deinem Plan ${n === 1 ? "liegt der Waschtag auf " + washNames[0] : "liegen die Waschtage auf " + joinDe(washNames)}.${n > 1 ? " So sind die Abstände dazwischen möglichst gleichmäßig." : ""}${sportDays.length && wash.some(d => sportDays.includes(d)) ? " Und wo es ging, wäschst du direkt nach dem Sport." : ""}`];
   wp.push("**Shampoo:** Ich empfehle für jeden Kopfhauttyp, zweimal zu shampoonieren. Beim ersten Mal lösen sich Talg und Produktreste, beim zweiten Mal wird die Kopfhaut richtig sauber." + (tsSensitiv ? " Ich bin keine Ärztin und kann keine Diagnosen stellen. Wenn deine Kopfhaut aber sehr sensibel oder sehr trocken ist, zum Beispiel bei Neurodermitis, und du mit zweimal Shampoonieren nicht klarkommst, wasch nur einmal und lass das Shampoo dafür ein bisschen einwirken." : ""));
-  let mp = `**Maske: ${m}× pro Woche.** Lass sie mindestens 10 bis 15 Minuten einwirken, gerade bei Bond-Repair-Masken. Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt davon ab, wie oft du wäschst, und von der Maske selbst. Eine Feuchtigkeitsmaske, die nährt, geschmeidig macht und Glanz schenkt, kannst du ruhig öfter nehmen. Bei Repair- und Bond-Repair-Masken kommt es total auf das Produkt an, hier gilt: immer die Balance mit Feuchtigkeit halten.`;
+  let mp = `**Maske: ${m}× pro Woche.** Lass sie mindestens 10 bis 15 Minuten einwirken, gerade bei Bond-Repair-Masken. Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt davon ab, wie oft du wäschst, und von der Maske selbst. Eine Feuchtigkeitsmaske, die nährt, geschmeidig macht und Glanz schenkt, kannst du ruhig öfter nehmen. Bei Repair- und Bond-Repair-Masken kommt es total auf das Produkt an, hier gilt: immer die Balance mit Feuchtigkeit halten.${repair && m > 1 ? ` Deshalb wechseln sich in deinem Plan ${repName}- und Feuchtigkeitsmaske ab.` : ""}`;
   if(thick) mp += " Bei deinen dicken Haaren sorgt eine nährende Maske dafür, dass sich krause Haare legen und nichts fuzzy aussieht.";
   if(fine) mp += " Bei feinen Haaren reicht eine leichte Maske nur in Längen und Spitzen, damit nichts beschwert.";
   if(effort === "wenig" && Math.max(byDk, bySt) > m) mp += ` Eigentlich könnten deine Haare sogar ${Math.min(n, Math.max(byDk, bySt))} Masken pro Woche vertragen. Wenn du mal mehr Zeit hast, lohnt sich das.`;
@@ -475,6 +487,8 @@ function plan(a){
       "**Feuchtigkeit:** Die Basis für alle Haare und das Wichtigste, wenn deine Haare trocken, rau oder frizzig sind. Auch trockene Haare können brechen, ganz ohne Färben, Blondieren oder Hitze, meistens durch Reibung, zum Beispiel beim Bürsten, nachts auf dem Kissen oder durch Zopfgummis. Dann ist Feuchtigkeit oft der erste Schritt, denn geschmeidige, flexible Haare halten Reibung viel besser aus. Wann Feuchtigkeit reicht und wann Proteine dazukommen sollten, ist aber sehr individuell.",
       "**Repair mit Proteinen:** Wenn deine Haare trotz guter Feuchtigkeitspflege weiter brechen oder durch Färben oder viel Hitze beansprucht sind. Proteine wie Keratin oder Weizenprotein lagern sich von außen an brüchige und poröse Stellen an, ein bisschen wie ein Pflaster. Das Haar fühlt sich fester an und bricht weniger. Dauerhaft ist das nicht, mit der Zeit wäscht es sich wieder heraus, deshalb gehört es regelmäßig in deine Routine.",
       "**Bond Repair:** Erst wenn deine Haare strukturell geschädigt sind, also blondiert, chemisch behandelt oder nass wie Gummi. Bond-Produkte stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter, und manche wirken nur während dem Blondieren beim Friseur.",
+      "**Leave-in oder Maske?** Ein Repair- oder Bond-Repair-Leave-in auf feuchtem Haar wirkt sogar intensiver als eine Maske, weil es im Haar bleibt. Die Maske spülst du nach 15 Minuten wieder aus. Deshalb würde ich lieber einmal pro Woche eine Repair-Maske nehmen und ein- bis zweimal ein Repair-Leave-in, statt beides ständig.",
+      ...(intens ? ["**Solange deine Haare nass wie Gummi sind:** Dann darfst du Bond Repair eine Zeit lang intensiver nutzen, so wie in deinem Plan. Fühlen sich deine Haare nass wieder fester an, fahr runter auf etwa eine Bond-Repair-Maske und ein- bis zweimal ein Bond-Repair-Leave-in pro Woche."] : []),
       "**Nicht zu viel:** Wer zu viel Repair benutzt, hat irgendwann zu viele Proteine im Haar. Die Haare werden steif und strohig und können sogar brechen. Dann brauchen sie wieder mehr Feuchtigkeit.",
       `**Halte die Balance:** Hab nicht nur eine Repair-Maske zu Hause, sondern auch eine, die Feuchtigkeit spendet, und genauso beim Leave-in. Ich wasche meine Haare zum Beispiel täglich. Mein Bond-Repair-Leave-in nutze ich ein- bis zweimal pro Woche, an den anderen Tagen ein feuchtigkeitsspendendes oder nährendes Leave-in, und genauso mache ich es mit der Maske.`,
       "**Wo ich Repair empfehle:** In der Maske und im Leave-in auf feuchtem Haar. Ein Shampoo wäscht du ja ganz schnell wieder aus. Im Conditioner kannst du Repair natürlich auch nutzen, ich empfehle aber eher eine Maske, weil du sie meistens länger einwirken lässt. Im Leave-in auf feuchtem Haar bleiben die Wirkstoffe wirklich drin und werden nicht ausgewaschen. Auf trockenem Haar macht Repair wenig Sinn, weil es hier um Flexibilität und Geschmeidigkeit geht und kaum Wirkstoffe eindringen können.",

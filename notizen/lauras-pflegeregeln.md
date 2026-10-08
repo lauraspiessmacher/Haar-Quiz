@@ -17,3 +17,13 @@ Diese Regeln gelten überall auf der Seite: Quizze, Routine-Check, Wissen, Produ
 - Öl ist ein schönes Add-on-Produkt und ersetzt keine andere Pflege. Bei feinen und dünnen Haaren nur trockenes, leichtes Öl.
 - Repair nur bei echter Schädigung (Färben, Blondieren, Chemie, viel Hitze, anhaltender Haarbruch). Trockenheit braucht zuerst Feuchtigkeit. Immer die Balance zwischen Repair und Feuchtigkeit halten.
 - Repair am sinnvollsten in Maske und Leave-in auf feuchtem Haar.
+
+## Repair und Bond Repair im Wochenplan (08.10.2026)
+- Masken im Wechsel: nie zwei Repair- bzw. Bond-Repair-Masken hintereinander, immer abwechselnd mit einer Feuchtigkeitsmaske.
+- Repair-/Bond-Leave-in auf feuchtem Haar wirkt **intensiver als eine Maske**, weil es im Haar bleibt (die Maske wird nach 10–15 Minuten ausgespült).
+- Strapaziert/strukturgeschädigt, aber nass NICHT wie Gummi: etwa 1× Bond-/Repair-Maske und 1–2× Bond-/Repair-Leave-in pro Woche, sonst Feuchtigkeit. Nicht zusätzlich ständig Bond-Leave-in.
+- Nass wie Gummi: Bond Repair darf eine Zeit lang intensiver sein (Masken im Wechsel, Leave-in öfter), danach runterfahren auf 1× Maske + 1–2× Leave-in.
+- Bond-Tage im Plan möglichst gleichmäßig über die Woche verteilen.
+
+## Produktempfehlungen (08.10.2026, Wunsch, noch nicht umgesetzt)
+- Unter den Empfehlungen immer mindestens ein nährendes, ein feuchtigkeitsspendendes und ein Repair-Produkt (Bond oder Proteine).
