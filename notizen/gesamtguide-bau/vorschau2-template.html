@@ -488,6 +488,18 @@ html[data-stil="rouje"] .bookfly .bf-cover .front h3{text-transform:uppercase}
 
 /* ---------- Wissensbücher: beim Drüberfahren einen Spalt öffnen, Seiten blättern ---------- */
 #wissenCards .shelfbook{position:relative;perspective:1300px}
+/* Altes Holzregal (Higgsfield, Variante 1) nur angedeutet hinter den Büchern; Bretter liegen per JS unter jeder Bücherreihe */
+#wissenCards{--pw:5.8%;--pitch:360px;--off:0px;position:relative;z-index:0;padding:calc(7.4% + 22px) calc(5.8% + 16px) calc(5.2% + 14px)}
+#wissenCards::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.16;filter:sepia(.45);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 82%,transparent),linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 82%,transparent),linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-composite:intersect;
+  background:
+    url(__REGAL_KRONE__) center top / 100% auto no-repeat,
+    url(__REGAL_SOCKEL__) center bottom / 100% auto no-repeat,
+    url(__REGAL_SAEULE_L__) left top / var(--pw) auto repeat-y,
+    url(__REGAL_SAEULE_R__) right top / var(--pw) auto repeat-y,
+    url(__REGAL_FACH__) center var(--off) / calc(100% - 2 * var(--pw)) var(--pitch) repeat-y}
+#wissenCards[hidden]{display:none}
 #wissenCards .card h3{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 #wissenCards .shelfbook.away > *{visibility:hidden}
 
@@ -870,7 +882,7 @@ function wissenSnippet(raw, words){
 function renderWissenSuche(){
   const q = (document.getElementById("wq").value||"").trim();
   const box = document.getElementById("wissenSuche"), cards = document.getElementById("wissenCards");
-  if(!q){ box.innerHTML = ""; cards.hidden = false; return; }
+  if(!q){ box.innerHTML = ""; cards.hidden = false; requestAnimationFrame(alignShelf); return; }
   const terms = q.split(/\s+/).map(plain).filter(Boolean);
   const words = q.toLowerCase().split(/\s+/).filter(Boolean);
   const hits = WTEXT.filter(x => terms.every(t => x.all.includes(t)))
@@ -883,10 +895,22 @@ function renderWissenSuche(){
   box.querySelectorAll("button[data-w]").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
 }
 document.getElementById("wq").addEventListener("input", renderWissenSuche);
+/* Regalbretter genau unter die Bücherreihen legen */
+function alignShelf(){
+  const c = document.getElementById("wissenCards"); if(!c || c.hidden || !c.offsetParent) return;
+  const b = [...c.querySelectorAll(".shelfbook")]; if(!b.length) return;
+  const cr = c.getBoundingClientRect(), r0 = b[0].getBoundingClientRect();
+  const next = b.find(x => x.getBoundingClientRect().top > r0.top + 10);
+  const pitch = next ? next.getBoundingClientRect().top - r0.top : r0.height + 30;
+  const off = (r0.bottom - cr.top) - pitch * 0.88;
+  c.style.setProperty("--pitch", pitch + "px"); c.style.setProperty("--off", off + "px");
+}
+window.addEventListener("resize", () => requestAnimationFrame(alignShelf));
 function renderWissen(){
   const w = WISSEN.find(x => x.id === state.wissen);
   document.getElementById("wissenListe").hidden = !!w;
   const art = document.getElementById("wissenArt"); art.hidden = !w;
+  requestAnimationFrame(alignShelf);
   if(!w){ art.innerHTML = ""; return; }
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
   art.innerHTML = back + (w.entwurf ? `<p class="wdraft">Entwurf: Dieser Text ist noch nicht von Laura geprüft.</p>` : "") + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;
