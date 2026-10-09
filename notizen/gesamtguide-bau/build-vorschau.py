@@ -36,9 +36,11 @@ _data['hitze'] = {'cats': _h['cats'], 'rank': None, 'items': _hitems, 'intro': {
   'box': '<p><b>So wendest du ihn an:</b> Vor jeder Hitze, egal ob Föhn, Glätteisen oder Lockenstab. Meine Empfehlung: das Tool nicht heißer einstellen als nötig und danach eine Leave-in-Pflege oder ein Öl.</p>'}}
 # Haarbürsten (buersten.json) und Hitze-Tools (kommt bald, Laura sucht die Empfehlungen noch raus)
 _data['buerste'] = json.load(open(f'{S}/buersten.json'))
-_data['tools'] = {'cats': [], 'rank': None, 'items': [], 'intro': {
-  'lead': 'Hier kommen bald meine Empfehlungen für Föhne, Multistyler, Glätteisen, Lockenstäbe und Hitzebürsten.',
-  'box': '<p><b>Bis dahin:</b> Vor jeder Hitze kommt ein Hitzeschutz, und stell dein Tool nicht heißer ein als nötig.</p>'}}
+# Hitze-Tools (hitzetools.json, Bilder in notizen/bilder/hitze-tools/, freigestellt aus den Herstellerbildern)
+_ht = json.load(open(f'{S}/hitzetools.json'))
+for _p in _ht['items']:
+    _p['img'] = 'data:image/webp;base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/hitze-tools/' + _p.pop('bild'), 'rb').read()).decode()
+_data['tools'] = {'cats': _ht['cats'], 'rank': None, 'items': _ht['items'], 'intro': _ht['intro']}
 data = json.dumps(_data, ensure_ascii=False).replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 # Regal im Wissen-Bereich entfernt (08.10.); Dateien liegen weiter in regal/

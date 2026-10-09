@@ -737,7 +737,7 @@ const TYPES = [
  {id:"oel", label:"Haaröl", by:"nach Haardicke", icon:'<path d="M11 2h2v4h-2z"/><path d="M10 6h4v2l2 3v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9l2-3z"/><path d="M12 13c-1.2 1.6-1.5 2.4-1.5 3a1.5 1.5 0 0 0 3 0c0-.6-.3-1.4-1.5-3z"/>'},
  {id:"kopfhaut", label:"Kopfhautpflege", by:"nach Kopfhauttyp", icon:'<path d="M5 13a7 7 0 0 1 14 0"/><path d="M5 13h14"/><path d="M8 13v6M12 13v7M16 13v6"/><path d="M9 7.5l1 2M15 7.5l-1 2M12 6.5v2.5"/>'},
  {id:"buerste", label:"Haarbürsten", by:"nach Zweck", icon:'<rect x="6" y="2.5" width="12" height="9" rx="4.5"/><path d="M9 5.5v3M12 5v4M15 5.5v3"/><path d="M11 11.5h2v9a1 1 0 0 1-2 0z"/>'},
- {id:"tools", label:"Hitze-Tools", by:"kommt bald", icon:'<path d="M4 9a5 5 0 0 1 9.5-2.2H19a1.5 1.5 0 0 1 0 3h-5.5A5 5 0 0 1 4 9z"/><path d="M8 13l-1 8h3l1-7"/><path d="M21 6.5l1.5-1M21 9.5l1.5 1"/>'},
+ {id:"tools", label:"Hitze-Tools", by:"nach Gerät", icon:'<path d="M4 9a5 5 0 0 1 9.5-2.2H19a1.5 1.5 0 0 1 0 3h-5.5A5 5 0 0 1 4 9z"/><path d="M8 13l-1 8h3l1-7"/><path d="M21 6.5l1.5-1M21 9.5l1.5 1"/>'},
 ];
 const T = Object.fromEntries(TYPES.map(t=>[t.id,t]));
 const PLURAL = {buerste:"Haarbürsten",tools:"Hitze-Tools",shampoo:"Shampoos",maske:"Masken",conditioner:"Conditioner",leavein:"Leave-ins",hitze:"Hitzeschutz-Produkte",oel:"Haaröle",kopfhaut:"Kopfhautprodukte"};
@@ -799,7 +799,7 @@ for(const t of TYPES){
   }
 }
 /* Suchwörter: Produktart-Wörter grenzen ein, Alltagswörter werden übersetzt */
-const TYPEWORDS = {burste:"buerste",bursten:"buerste",haarburste:"buerste",haarbursten:"buerste",kamm:"buerste",entwirrburste:"buerste",fohn:"tools",glatteisen:"tools",lockenstab:"tools",multistyler:"tools",shampoo:"shampoo",shampoos:"shampoo",maske:"maske",masken:"maske",haarmaske:"maske",kur:"maske",conditioner:"conditioner",spulung:"conditioner",leavein:"leavein",leaveins:"leavein",hitzeschutz:"hitze",hitze:"hitze",ol:"oel",ole:"oel",haarol:"oel",haarole:"oel",kopfhautpflege:"kopfhaut",serum:"kopfhaut",peeling:"kopfhaut"};
+const TYPEWORDS = {burste:"buerste",bursten:"buerste",haarburste:"buerste",haarbursten:"buerste",kamm:"buerste",entwirrburste:"buerste",fohn:"tools",fohne:"tools",haartrockner:"tools",reisefohn:"tools",glatteisen:"tools",luftglatter:"tools",lockenstab:"tools",multistyler:"tools",hitzetools:"tools",shampoo:"shampoo",shampoos:"shampoo",maske:"maske",masken:"maske",haarmaske:"maske",kur:"maske",conditioner:"conditioner",spulung:"conditioner",leavein:"leavein",leaveins:"leavein",hitzeschutz:"hitze",hitze:"hitze",ol:"oel",ole:"oel",haarol:"oel",haarole:"oel",kopfhautpflege:"kopfhaut",serum:"kopfhaut",peeling:"kopfhaut"};
 const SYN = {fettig:"fettend",fettige:"fettend",fettiger:"fettend",fettende:"fettend",feine:"fein",feines:"fein",dunne:"dunn",dunnes:"dunn",dicke:"dick",dickes:"dick",kaputte:"kaputt",trockene:"trocken",schuppige:"schupp",schuppen:"schupp",sensible:"sensib",juckende:"juck",blondierte:"blondiert"};
 const STOP = new Set(["haar","haare","haaren","fur","mit","und","die","der","das","ich","habe","meine","eine","ein","sehr"]);
 function parseQuery(q){
@@ -1068,11 +1068,11 @@ function buyHtml(p, small){
 }
 /* kompakte Karte für die Merkliste */
 function merkItemHtml(p){
-  return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<div class="mtxt"><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span><span class="tag">${p.segment}</span>${buyHtml(p,true)}</div></li>`;
+  return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<div class="mtxt"><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span>${p.segment?`<span class="tag">${p.segment}</span>`:""}${buyHtml(p,true)}</div></li>`;
 }
 
 function itemHtml(p, badge){
-  const tags = [`<span class="tag">${p.segment}</span>`];
+  const tags = p.segment ? [`<span class="tag">${p.segment}</span>`] : [];
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
   if(p.dry) tags.push(`<span class="pill">Trockenes Öl</span>`);
   if(p.heat) tags.push(p.heat==="ja" ? `<span class="pill">Mit Hitzeschutz</span>` : `<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
@@ -1084,6 +1084,12 @@ function itemHtml(p, badge){
       else if(h[0]==="alle"&&h[1]==="alle") body += `<div class="line"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div>`;
       else body += `<div class="line"><b>Haardicke:</b> ${esc(h[0])}</div><div class="line"><b>Haarzustand:</b> ${esc(h[1])}</div>`; }
     { const t = p.cats.map(c=>label("shampoo",c)).join(", "); body += `<span class="also${t.length>34?" long":""}">Passt zu: ${t}</span>`; }
+  } else if(p.type==="tools"){
+    if(p.aufsaetze) body += `<div class="line"><b>Aufsätze:</b> ${esc(p.aufsaetze)}</div>`;
+    if(p.wofuer) body += `<div class="line"><b>Wofür:</b> ${esc(p.wofuer)}</div>`;
+    if(p.nass) body += `<div class="line"><b>Nass oder trocken:</b> ${esc(p.nass)}</div>`;
+    if(p.farbe) body += `<div class="line"><b>Farbe:</b> ${esc(p.farbe)}</div>`;
+    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
   } else if(p.type==="buerste"){
     if(p.hair) body += `<div class="line"><b>Für dein Haar:</b> ${esc(p.hair)}</div>`;
     if(p.wofuer) body += `<div class="line"><b>Wofür:</b> ${esc(p.wofuer)}</div>`;
@@ -1106,7 +1112,7 @@ function itemHtml(p, badge){
     }
     if(p.tip){ body += p.tip.startsWith("Anwendung: ") ? `<div class="tip"><b>Anwendung:</b> ${esc(p.tip.slice(11))}</div>` : `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`; }
   }
-  return `<li class="item">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
+  return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
     <div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
 }
@@ -1143,7 +1149,7 @@ function bindControls(){
     toast("Liste kopiert");
   });
 }
-const segOk = p => state.seg==="alle" || p.segment===state.seg;
+const segOk = p => state.seg==="alle" || !p.segment || p.segment===state.seg;
 
 function renderGuide(){
   const t = T[state.type], g = DATA[state.type];
@@ -1154,7 +1160,7 @@ function renderGuide(){
   const intro = g.intro || {};
   let html = `<div class="guide"><div class="ghero"><div class="ghead"><div><h2>${t.label}</h2><div class="sub">${t.by} · ${g.items.length} Produkte</div></div></div>
     ${(intro.lead||intro.box)?`<div class="gintro"><p>${intro.lead||""}</p>${intro.box?`<div class="box">${intro.box}</div>`:""}</div>`:""}</div>
-    ${g.items.length ? `<div class="controls"><div class="crow">${segSwitch()}${fitHtml(state.type)}</div><div class="chips" role="group" aria-label="Kategorie wählen">${chips}</div></div>` : ""}`;
+    ${g.items.length ? `<div class="controls"><div class="crow">${state.type==="tools"?"":segSwitch()}${fitHtml(state.type)}</div><div class="chips" role="group" aria-label="Kategorie wählen">${chips}</div></div>` : ""}`;
   if(!g.items.length){ guide.innerHTML = html + `</div>`; bindControls(); return; }
   let items = g.items.filter(segOk);
   if(state.cat==="liste"){

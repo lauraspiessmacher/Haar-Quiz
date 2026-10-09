@@ -12,7 +12,7 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [ ] Laura hat noch weitere Überlegungen zu verschiedenen Quizarten → nachfragen, wenn wir daran gehen.
 
 ## Produkte
-- [ ] Hitze-Tools: Lauras Empfehlungen Marke für Marke einbauen (Start: Dreame, 09.10.).
+- [ ] Hitze-Tools: Lauras Empfehlungen Marke für Marke einbauen. Dreame ist drin (6 Geräte, 09.10.). Offen: Lauras eigene Hinweise je Gerät (für welches Haar), weitere Marken.
 - [ ] Buly: Laura prüft, ob weitere Bürsten rein sollen.
 - [ ] Kinderprodukte.
 - [ ] Shampoo-Rangliste noch einmal mit Laura durchgehen.
