@@ -28,3 +28,14 @@ Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder 
 - Vichy Dercos Anti-Schuppen K – im Guide; dunkelgrüne Flasche mit Peelingkörnchen, zur Tiefenreinigung.
 - Vichy Dercos Anti-Schuppen DS für trockenes Haar – NEU im Shampoo-Guide (Schuppen, Haarzustand trocken). INCI lookfantastic 11091703: Aqua, Sodium Laureth Sulfate, Glycol Distearate, Dimethicone, Coco-Betaine, Glycerin, Carbomer, CI 19140, Citric Acid, Menthol, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Salicylic Acid, Selenium Sulfide, …
 - (NICHT in den Favorites, nur im Guide) Vichy Dercos Anti-Schuppen DS für normales bis fettiges Haar – NEU im Shampoo-Guide (Schuppen, normal bis fettig). INCI lookfantastic 11091704: Aqua, Sodium Laureth Sulfate, Coco-Betaine, Cetyl Alcohol, Hydroxystearyl Cetyl Ether, Carbomer, CI 19140, Citric Acid, Dimethicone, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Propylene Glycol, Salicylic Acid, Selenium Sulfide, …
+
+## Für mehr Volumen (09.10.)
+- Oribe Shampoo for Magnificent Volume (braune Reihe) – im Guide (Shampoo).
+- Oribe Conditioner for Magnificent Volume – NEU im Conditioner-Guide (High-End, fein–normal). INCI oribe.com. Bild aus Oribe-Flatlay (Tube mit Shampoo) freigestellt und gerade gedreht.
+- Oribe Dry Texturizing Spray (klassisch, 300 ml) – NICHT im Guide (keine Rubrik), eigener Eintrag mit Bild (Cult Beauty). INCI laut oribe.com beginnt mit Aqua, Glycerin, Acetyl Triethyl Citrate … (wirkt wie Nicht-Aerosol-Liste, bei Bedarf prüfen).
+
+## Gesund und genährt (09.10.)
+- Wella Professionals Ultimate Smooth Shampoo – im Guide.
+- Wella Professionals Ultimate Smooth Mask – im Guide.
+- Oribe Hair Alchemy Resilience Conditioner – NEU im Conditioner-Guide (High-End, normal–dick). INCI oribe.com.
+- Oribe Hair Alchemy Fortifying Treatment Serum – im Guide (Leave-in).

@@ -2794,5 +2794,25 @@
 "g": 0.28,
 "r": "",
 "p": false
+},
+"conditioner|Oribe|Conditioner for Magnificent Volume": {
+"t": [
+"naehrend"
+],
+"h": 0.16,
+"e": 0.16,
+"g": 0.12,
+"r": "",
+"p": false
+},
+"conditioner|Oribe|Hair Alchemy Resilience Conditioner": {
+"t": [
+"feucht"
+],
+"h": 0.93,
+"e": 0.12,
+"g": 0.16,
+"r": "",
+"p": false
 }
 }

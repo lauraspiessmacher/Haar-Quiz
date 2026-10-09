@@ -114,13 +114,53 @@
    "id": "volumen",
    "titel": "Für mehr Volumen",
    "text": "Damit bereite ich meine Haare auf ein Blowout oder auf Locken vor. So hält alles ein bisschen besser.",
-   "produkte": []
+   "produkte": [
+    {
+     "type": "shampoo",
+     "brand": "Oribe",
+     "name": "Shampoo for Magnificent Volume"
+    },
+    {
+     "type": "conditioner",
+     "brand": "Oribe",
+     "name": "Conditioner for Magnificent Volume"
+    },
+    {
+     "frei": true,
+     "segment": "High-End",
+     "brand": "Oribe",
+     "name": "Dry Texturizing Spray",
+     "art": "Texturspray",
+     "bild": "oribe-dry-texturizing-spray.webp"
+    }
+   ]
   },
   {
    "id": "genaehrt",
    "titel": "Gesund und genährt",
    "text": "Für ein richtig nährendes, geschmeidiges Ergebnis. Meine Haare vertragen auch schwere Produkte sehr gut.",
-   "produkte": []
+   "produkte": [
+    {
+     "type": "shampoo",
+     "brand": "Wella Professionals",
+     "name": "Ultimate Smooth Shampoo"
+    },
+    {
+     "type": "maske",
+     "brand": "Wella Professionals",
+     "name": "Ultimate Smooth Mask"
+    },
+    {
+     "type": "conditioner",
+     "brand": "Oribe",
+     "name": "Hair Alchemy Resilience Conditioner"
+    },
+    {
+     "type": "leavein",
+     "brand": "Oribe",
+     "name": "Hair Alchemy Fortifying Treatment Serum"
+    }
+   ]
   },
   {
    "id": "repair",
