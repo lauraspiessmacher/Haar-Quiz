@@ -144,7 +144,23 @@
    "id": "schuppen",
    "titel": "Wenn ich Schuppen habe",
    "text": "",
-   "produkte": []
+   "produkte": [
+    {
+     "type": "shampoo",
+     "brand": "ISANA MED",
+     "name": "Ultra Sensitiv+ Anti-Schuppen"
+    },
+    {
+     "type": "kopfhaut",
+     "brand": "Kérastase",
+     "name": "Symbiose Micro-Peeling Cellulaire"
+    },
+    {
+     "type": "shampoo",
+     "brand": "Kérastase",
+     "name": "Symbiose Bain Crème Anti-Pelliculaire"
+    }
+   ]
   },
   {
    "id": "testen",

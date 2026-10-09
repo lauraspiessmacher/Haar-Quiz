@@ -21,3 +21,8 @@ High-End:
 - Kérastase Gloss Absolu Insta Glaze Conditioner (Fondant) – seit 09.10. im Conditioner-Guide (dünn–normal). Bild + INCI lookfantastic.de 15802975.
 - Kérastase Gloss Absolu Glaze Drops – im Guide (Öl).
 - Redken Acidic Color Gloss Activated Glass Gloss Treatment (Laura: die 5-Minuten-Kur, NICHT das Heat Protection Treatment) – seit 09.10. im Masken-Guide (High-End, normal–dick). INCI lookfantastic 15062352, Wasserstoffperoxid an 3. Stelle → Hinweis auf der Karte. Bild aus Anwendungsgrafik freigestellt.
+
+## Wenn ich Schuppen habe (09.10.)
+- ISANA MED Ultra Sensitiv+ Anti-Schuppen – im Guide (Shampoo, Drogerie).
+- Kérastase Symbiose Micro-Peeling Cellulaire – im Guide (Kopfhautpflege/Peeling). Laura: „Anti-Schuppen-Shampoo Tiefenreinigung, das Grüne mit dem Peeling-Effekt“.
+- Kérastase Symbiose Bain Crème Anti-Pelliculaire – im Guide (Shampoo, für trockene Kopfhaut).
