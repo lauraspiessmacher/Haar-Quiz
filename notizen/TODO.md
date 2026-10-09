@@ -14,6 +14,7 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 ## Produkte
 - [ ] Hitze-Tools: 19 Geräte drin (Dreame, Laifen, MOVA, Shark, ghd, Remington, Dyson; 09.10.). Offen: Lauras eigene Hinweise je Gerät (für welches Haar), Farben bei ghd und Airwrap bestätigen, ggf. weitere Marken. Regel: Dyson immer am Ende.
 - [x] **Styling-Sprays gegen Frizz** im Hitzeschutz gebaut (09.10.): NEQI Diamond Glass, NEQI Diamond Glass Ultimate, Garnier Fructis Diamond Sleek, Color Wow Dream Coat, Color Wow Dream Coat for Curly Hair. Link aus dem Hitze-Tool-Check. Weitere Sprays folgen nach und nach von Laura (z. B. John Frieda).
+- [ ] **Idee „Lauras Favorites“** (09.10.): eigene Seite mit dem, was Laura selbst benutzt, sortiert nach Wunschergebnis (Waschtag, Blowout, Locken, glatt, nachts …), oben Lauras Haarprofil + Hinweis „mein Haar, muss nicht zu deinem passen“. Einstieg als 3. Knopf neben Lauras Foto auf der Startseite, dazu kleines Herz-Schildchen „Laura benutzt das“ auf den Produktkarten. Später evtl. Kooperationen (immer klar als „Anzeige“ markiert, getrennt von den Favorites). Wartet auf Lauras Entscheidung + Produktliste.
 - [ ] Buly: Laura prüft, ob weitere Bürsten rein sollen.
 - [ ] Kinderprodukte.
 - [ ] Shampoo-Rangliste noch einmal mit Laura durchgehen.
