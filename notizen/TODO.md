@@ -13,6 +13,7 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 
 ## Produkte
 - [ ] Hitze-Tools: 19 Geräte drin (Dreame, Laifen, MOVA, Shark, ghd, Remington, Dyson; 09.10.). Offen: Lauras eigene Hinweise je Gerät (für welches Haar), Farben bei ghd und Airwrap bestätigen, ggf. weitere Marken. Regel: Dyson immer am Ende.
+- [ ] **Idee Styling-Produkte** (Laura, 09.10.): eigene Produktart „Styling“, erste Kategorie Anti-Frizz/Schutz vor Luftfeuchtigkeit (Filmbildner/Silikone, in feuchtes Haar, mit Hitze aktivieren, mit Zug glatt föhnen). Beispiele von Laura: Color Wow Dream Coat (glatt + Locken), John Frieda gegen Luftfeuchtigkeit, Nikki Diamond Glass Spray, Garnier Diamond Spray. Wartet auf Lauras Produktliste + Go. Danach Link aus dem Hitze-Tool-Check (glatt bei Locken).
 - [ ] Buly: Laura prüft, ob weitere Bürsten rein sollen.
 - [ ] Kinderprodukte.
 - [ ] Shampoo-Rangliste noch einmal mit Laura durchgehen.
