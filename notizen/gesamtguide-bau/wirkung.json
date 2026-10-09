@@ -2824,5 +2824,17 @@
 "g": 0.0,
 "r": "",
 "p": false
+},
+"conditioner|OGX|Nourishing Coconut Milk Conditioner": {
+"t": [
+"feucht",
+"naehrend",
+"glaettend"
+],
+"h": 0.61,
+"e": 0.53,
+"g": 0.7,
+"r": "protein",
+"p": false
 }
 }
