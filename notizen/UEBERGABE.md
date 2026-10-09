@@ -328,3 +328,4 @@
 - Favorites „Für eine gesunde Kopfhaut“ gefüllt (6 Produkte, alle aus dem Guide). Vorschau v141.
 - Favorites: Abschnitt „Das teste ich gerade“ ersetzt durch „Leave-in und Hitzeschutz“ (Text: „Das benutze ich nach der Haarwäsche und vor jeder Hitze.“, noch leer). 8 Abschnitte. Vorschau v142.
 - Favorites „Leave-in und Hitzeschutz“ gefüllt (9 Leave-ins, alle aus dem Guide; Zuordnung der Namen in lauras-favorites.md). Vorschau v143.
+- Favorites: „Gesund und genährt“ heißt jetzt „Nährende Pflege“ (id bleibt genaehrt). Oil Reflections Luminous Instant Conditioner (NEU im Guide) statt Ultimate Smooth Conditioner, Oribe Gold Lust Night Crème statt Hair Alchemy Serum. Vorschau v144.

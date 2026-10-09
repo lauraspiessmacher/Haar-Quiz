@@ -155,13 +155,13 @@
   },
   {
    "id": "genaehrt",
-   "titel": "Gesund und genährt",
+   "titel": "Nährende Pflege",
    "text": "Für ein richtig nährendes, geschmeidiges Ergebnis. Meine Haare vertragen auch schwere Produkte sehr gut.",
    "produkte": [
     {
      "type": "conditioner",
      "brand": "Wella Professionals",
-     "name": "Ultimate Smooth Conditioner"
+     "name": "Oil Reflections Luminous Instant Conditioner"
     },
     {
      "type": "maske",
@@ -176,7 +176,7 @@
     {
      "type": "leavein",
      "brand": "Oribe",
-     "name": "Hair Alchemy Fortifying Treatment Serum"
+     "name": "Gold Lust Restorative Night Crème for Hair"
     },
     {
      "type": "conditioner",

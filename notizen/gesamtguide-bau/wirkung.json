@@ -2887,5 +2887,15 @@
 "g": 0.0,
 "r": "protein",
 "p": false
+},
+"conditioner|Wella Professionals|Oil Reflections Luminous Instant Conditioner": {
+"t": [
+"naehrend"
+],
+"h": 0.04,
+"e": 0.08,
+"g": 0.04,
+"r": "",
+"p": false
 }
 }
