@@ -2847,5 +2847,25 @@
 "g": 0.5,
 "r": "",
 "p": false
+},
+"conditioner|Pantene Pro-V|Repair & Care 3 Minute Miracle Spülung": {
+"t": [
+"glaettend"
+],
+"h": 0.08,
+"e": 0,
+"g": 0.42,
+"r": "",
+"p": false
+},
+"maske|Pantene Pro-V|Miracles Bond Repair Intensive Haarmaske": {
+"t": [
+"glaettend"
+],
+"h": 0.04,
+"e": 0,
+"g": 0.46,
+"r": "bond",
+"p": false
 }
 }

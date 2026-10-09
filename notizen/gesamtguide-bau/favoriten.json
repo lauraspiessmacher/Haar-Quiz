@@ -186,7 +186,18 @@
    "id": "repair",
    "titel": "Repair",
    "text": "Wenn meine Haare eine kleine Stärkung brauchen. Dabei greife ich eher zu Produkten mit Proteinen als zu Bond-Repair.",
-   "produkte": []
+   "produkte": [
+    {
+     "type": "conditioner",
+     "brand": "Pantene Pro-V",
+     "name": "Repair & Care 3 Minute Miracle Spülung"
+    },
+    {
+     "type": "maske",
+     "brand": "Pantene Pro-V",
+     "name": "Miracles Bond Repair Intensive Haarmaske"
+    }
+   ]
   },
   {
    "id": "prewash",
