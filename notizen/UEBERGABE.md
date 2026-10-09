@@ -323,3 +323,4 @@
 - Favorites Repair + Wella Ultimate Repair Mask + Ultimate Repair Miracle Hair Rescue (stärkste Repair-Formulierung der Leave-ins, Begründung in lauras-favorites.md). Vorschau v136.
 - Favorites Gesund und genährt: Ultimate Smooth Shampoo → Ultimate Smooth Conditioner (NEU im Guide), Ultimate Smooth Mask → Oil Reflections Luminous Reboost Mask. Vorschau v137.
 - Favorites Für mehr Volumen: John Frieda Volume Lift Shampoo + Pushed-up Dry Texture Spray (Drogerie). Volume Lift Conditioner offen (kein Abruf möglich, Laura um Link gebeten). Vorschau v138.
+- John Frieda Volume Lift Nicht beschwerender Conditioner NEU im Conditioner-Guide + Favorites Für mehr Volumen (Drogerie). Bildquelle Flaconi (per Playwright, INCI dort nachgeladen → stattdessen johnfrieda.com/de-de). Vorschau v139.

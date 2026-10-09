@@ -121,6 +121,11 @@
      "name": "Volume Lift"
     },
     {
+     "type": "conditioner",
+     "brand": "John Frieda",
+     "name": "Volume Lift Nicht beschwerender Conditioner"
+    },
+    {
      "frei": true,
      "segment": "Drogerie",
      "brand": "John Frieda",

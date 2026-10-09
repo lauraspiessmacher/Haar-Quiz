@@ -2877,5 +2877,15 @@
 "g": 0.0,
 "r": "",
 "p": false
+},
+"conditioner|John Frieda|Volume Lift Nicht beschwerender Conditioner": {
+"t": [
+"feucht"
+],
+"h": 1.27,
+"e": 0,
+"g": 0.0,
+"r": "protein",
+"p": false
 }
 }
