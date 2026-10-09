@@ -805,7 +805,7 @@ for(const t of TYPES){
     p.type = t.id; p.mk = (p.von||t.id)+"|"+p.brand+"|"+p.name; /* Hitzeschutz-Produkte teilen sich Merk- und Kaufschlüssel mit Leave-in bzw. Öl */
     const rep = p.rep ? (Array.isArray(p.rep) ? p.rep.join(" ") : (p.rep.art+" "+p.rep.list.join(" "))) : "";
     const hair = Array.isArray(p.hair) ? p.hair.join(" ") : (p.hair||"");
-    p.hay = plain([t.label, p.brand, p.name, p.note||"", p.tip||"", hair, rep, p.wirk||"", p.duft||"", p.art||"", p.hint||"", p.wofuer||"",
+    p.hay = plain([t.label, p.brand, p.name, p.note||"", p.tip||"", hair, rep, p.wirk||"", p.duft||"", p.art||"", p.hint||"", p.wofuer||"", p.wirkung||"", p.fuer||"", p.anw||"", p.zwei?"2-in-1 Styling Anti-Frizz":"",
       (p.sil&&p.sil.length)?"silikone "+p.sil.join(" "):(p.sil?"silikonfrei":""), p.dry?"trockenes öl":"", p.kalk?"kalk":"",
       p.cats.map(c=>label(t.id,c)).join(" "), HAIRGUIDE(t.id)?dickeText(p):""].join(" "));
     ALL.push(p);
@@ -907,6 +907,7 @@ function recHtml(rec, type){
 const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 function sorter(type, cat){
   if(type==="tools") return (a,b)=>(a.ord||0)-(b.ord||0); /* Hitze-Tools in Lauras Reihenfolge, Dyson immer am Ende */
+  if(type==="hitze" && cat==="styling") return (a,b)=>(a.ord||0)-(b.ord||0); /* Styling-Sprays in Lauras Reihenfolge */
   if(type==="kopfhaut" && DATA.kopfhaut.rank && DATA.kopfhaut.rank[cat]){ const r=DATA.kopfhaut.rank[cat]; return (a,b)=>r.indexOf(a.key)-r.indexOf(b.key); }
   if(type==="shampoo" && cat==="kinder") return (a,b)=>(a.rank||99)-(b.rank||99);
   if(type==="shampoo" && DATA.shampoo.rank && DATA.shampoo.rank[cat]){ const r=DATA.shampoo.rank[cat]; return (a,b)=>r.indexOf(a.brand+"|"+a.name)-r.indexOf(b.brand+"|"+b.name); }
@@ -1089,7 +1090,8 @@ function itemHtml(p, badge){
   const tags = p.segment ? [`<span class="tag">${p.segment}</span>`] : [];
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
   if(p.dry) tags.push(`<span class="pill">Trockenes Öl</span>`);
-  if(p.heat) tags.push(p.heat==="ja" ? `<span class="pill">Mit Hitzeschutz</span>` : `<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
+  if(p.zwei) tags.push(`<span class="pill">2-in-1: Styling + Hitzeschutz</span>`);
+  if(p.heat && !(p.zwei && p.heat==="ja")) tags.push(p.heat==="ja" ? `<span class="pill">Mit Hitzeschutz</span>` : `<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
   if(p.kalk) tags.push(`<span class="pill">Löst auch Kalk</span>`);
   let body = "";
   if(p.type==="shampoo"){
@@ -1116,6 +1118,13 @@ function itemHtml(p, badge){
     { const t = p.cats.map(c=>label("kopfhaut",c)).join(", "); body += `<span class="also${t.length>34?" long":""}">Passt zu: ${t}</span>`; }
     if(p.anw) body += `<div class="tip"><b>Anwendung:</b> ${esc(p.anw)}</div>`;
     if(p.hint) body += `<div class="hint">${esc(p.hint)}</div>`;
+  } else if(p.zwei){
+    /* Styling-Sprays im Hitzeschutz (Laura 09.10.): 2-in-1, Wirkung, Für dein Haar, Silikone, Anwendung, Gut zu wissen */
+    if(p.wirkung) body += `<div class="line"><b>Wirkung:</b> ${esc(p.wirkung)}</div>`;
+    if(p.fuer) body += `<div class="line"><b>Für dein Haar:</b> ${esc(p.fuer)}</div>`;
+    if(p.sil) body += `<div class="line"><b>Silikone:</b> ${p.sil.length ? "enthält "+esc(p.sil.join(", ")) : "silikonfrei"}</div>`;
+    if(p.anw) body += `<div class="tip"><b>Anwendung:</b> ${esc(p.anw)}</div>`;
+    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
   } else {
     const dt = dickeText(p); if(dt) body += `<div class="line"><b>Haardicke:</b> ${esc(dt)}</div>`;
     const z = Array.isArray(p.hair) ? p.hair[1] : ""; if(z) body += `<div class="line"><b>Haarzustand:</b> ${esc(z)}</div>`;
@@ -1129,7 +1138,7 @@ function itemHtml(p, badge){
   }
   return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
-    <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools" && p.type!=="buerste"?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
+    <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools" && p.type!=="buerste" && !p.zwei?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
 }
 
 /* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */

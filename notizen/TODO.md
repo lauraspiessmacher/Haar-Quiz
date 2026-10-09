@@ -13,7 +13,7 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 
 ## Produkte
 - [ ] Hitze-Tools: 19 Geräte drin (Dreame, Laifen, MOVA, Shark, ghd, Remington, Dyson; 09.10.). Offen: Lauras eigene Hinweise je Gerät (für welches Haar), Farben bei ghd und Airwrap bestätigen, ggf. weitere Marken. Regel: Dyson immer am Ende.
-- [ ] **Styling-Sprays unter Hitzeschutz** (Laura, 09.10.): KEIN eigener Reiter, sondern neue Unterkategorie im Hitzeschutz (Arbeitstitel „Styling-Sprays gegen Frizz“), weil alle diese Sprays Hitzeschutz haben. Karte mit Hinweis „2-in-1: Styling + Hitzeschutz“ und Zeile „Wirkung“ (z. B. Film ums Haar, gegen Frizz bei Luftfeuchtigkeit, Glanz/Glätte). Beispiele von Laura: Color Wow Dream Coat (glatt + Locken), John Frieda gegen Luftfeuchtigkeit, Nikki Diamond Glass Spray, Garnier Diamond Spray. Wartet auf Lauras Produktliste + Go. Danach INCI-Check, Bilder, Link aus dem Hitze-Tool-Check (glatt bei Locken).
+- [x] **Styling-Sprays gegen Frizz** im Hitzeschutz gebaut (09.10.): NEQI Diamond Glass, NEQI Diamond Glass Ultimate, Garnier Fructis Diamond Sleek, Color Wow Dream Coat, Color Wow Dream Coat for Curly Hair. Link aus dem Hitze-Tool-Check. Weitere Sprays folgen nach und nach von Laura (z. B. John Frieda).
 - [ ] Buly: Laura prüft, ob weitere Bürsten rein sollen.
 - [ ] Kinderprodukte.
 - [ ] Shampoo-Rangliste noch einmal mit Laura durchgehen.

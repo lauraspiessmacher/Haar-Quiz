@@ -216,8 +216,8 @@ function plan(e){
     if(lvl==="mid") return {rec:"Multistyler oder Föhn mit Rundbürste", links:["multi","foehn","locken"],
       text:`<p>Ein Blowout klappt bei dir mit Multistyler oder Föhn und Rundbürste und hält meistens ein paar Stunden. Mit den Tipps unten hält es länger.</p>
       <p>Wenn dein Schwung den ganzen Tag halten soll, sind große Wellen vom Lockenstab die sicherere Wahl.</p>`};
-    return {rec:"Multistyler oder Föhn mit Rundbürste", links:["multi","foehn"],
-      text: curly ? `<p>Ein Blowout hält bei deinem strukturierten Haar richtig gut, oft sogar mehrere Tage. Rechne bei Locken mit etwas mehr Zeit: Föhn Strähne für Strähne mit der Glätt- oder Rundbürste. Luftfeuchtigkeit macht die Haare schnell wieder krauser, ein leichter Schutz gegen Frizz hilft.</p>`
+    return {rec:"Multistyler oder Föhn mit Rundbürste", links:["multi","foehn"], spray:curly,
+      text: curly ? `<p>Ein Blowout hält bei deinem strukturierten Haar richtig gut, oft sogar mehrere Tage. Rechne bei Locken mit etwas mehr Zeit: Föhn Strähne für Strähne mit der Glätt- oder Rundbürste. Luftfeuchtigkeit macht die Haare schnell wieder krauser, ein Styling-Spray gegen Frizz hilft.</p>`
         : `<p>Ein Blowout hält bei dir gut${g!=="G"?", bei Wellen oft sogar mehrere Tage":""}. Ein Multistyler lohnt sich bei dir, genauso gut klappt es mit Föhn und Rundbürste.</p>`};
   }
   if(z==="curl"){
@@ -236,12 +236,12 @@ function plan(e){
       text:`<p>Deine Haare sind von Natur aus glatt, ein Föhn mit Glättdüse reicht für ein glattes, glänzendes Ergebnis. Ein Glätteisen brauchst du nur, wenn es extra glatt sein soll oder für Spitzen, die nach innen fallen.</p>`};
     if(g==="W") return {rec:"Luftglätter oder Föhn mit Glättbürste", links:["glaett","foehn","multi"],
       text:`<p>Wellen bekommst du mit einem Luftglätter glatt, der trocknet und glättet in einem Schritt. Alternativ föhnst du mit einer Glättbürste oder einem Multistyler-Glättaufsatz und gehst bei Bedarf mit dem Glätteisen nach.</p>`};
-    return {rec:"Rundbürste, Luftglätter oder Glätteisen", links:["foehn","glaett","multi"],
+    return {rec:"Rundbürste, Luftglätter oder Glätteisen", links:["foehn","glaett","multi"], spray:true,
       text:`<p>Welches Gerät zu dir passt, hängt davon ab, wie glatt es werden soll:</p>
       <ul><li><strong>Glatt mit Volumen:</strong> Föhn mit Rundbürste. So bekommst du glatte Haare mit Schwung und Fülle.</li>
       <li><strong>Glatt und unkompliziert:</strong> Ein Luftglätter trocknet und glättet in einem Schritt, auch im nassen Haar.</li>
       <li><strong>Richtig sleek und glatt:</strong> Das Glätteisen. Föhn die Haare vorher möglichst glatt, dann brauchst du weniger Durchgänge.${f.dick||f.viel ? " Bei dicken oder vielen Haaren sparen dir breite Platten viel Zeit." : ""}</li></ul>
-      <p>Luftfeuchtigkeit macht glatt gestylte Locken schnell wieder krauser, ein leichter Schutz gegen Frizz hilft.</p>`};
+      <p>Luftfeuchtigkeit macht glatt gestylte Locken schnell wieder krauser, ein Styling-Spray gegen Frizz hilft.</p>`};
   }
   /* von allem etwas */
   if(lvl==="low") return {rec:"Föhn und Lockenstab statt Multistyler", honest:unreal, links:["foehn","locken","multi"],
@@ -266,7 +266,9 @@ function result(){
     ${r.honest ? `<div class="box warn"><h3>Ehrlich gesagt</h3>${r.text}</div>` : `<div class="intro">${r.text}</div>`}
     ${styled && e.z!=="straight" && !(e.z==="curl" && (e.g==="L"||e.g==="K")) ? `<div class="block"><h3><span class="mark">✓</span>So hält dein Styling länger</h3>${TIPS}</div>` : ""}
     ${extra.join("")}
-    <div class="block"><h3><span class="mark">!</span>Vor jeder Hitze</h3><p>Gib immer einen Hitzeschutz in die Haare und stell dein Gerät nicht heißer ein als nötig. Auch beim Föhnen lieber mittel oder kühl statt heiß.</p></div>
+    <div class="block"><h3><span class="mark">!</span>Vor jeder Hitze</h3><p>Gib immer einen Hitzeschutz in die Haare und stell dein Gerät nicht heißer ein als nötig. Auch beim Föhnen lieber mittel oder kühl statt heiß.</p>${r.spray ? `
+      <p><strong>Tipp für glatte Haare trotz Luftfeuchtigkeit:</strong> Ein Styling-Spray gegen Frizz ist Styling und Hitzeschutz in einem. Du sprühst es ins feuchte Haar und föhnst es mit Zug glatt, die Hitze aktiviert einen Film, der Feuchtigkeit abhält.</p>
+      <div class="actions links"><button class="secondary" data-hitze="styling">Styling-Sprays gegen Frizz ansehen</button></div>` : ""}</div>
     <div class="block"><h3><span class="mark">→</span>Meine Empfehlungen</h3><p>Schau dir passende Geräte bei den Hitze-Tools an:</p>
       <div class="actions links">${r.links.map(k=>`<button class="secondary" data-cat="${k}">${CATS[k]} ansehen</button>`).join("")}</div></div>
     <details><summary>Gut zu wissen</summary><div class="inner">
@@ -281,16 +283,18 @@ function result(){
   document.getElementById("again").onclick = start;
   document.getElementById("copyRes").onclick = copyResult;
   app.querySelectorAll("[data-cat]").forEach(b => b.onclick = () => openTools(b.dataset.cat));
+  app.querySelectorAll("[data-hitze]").forEach(b => b.onclick = () => openTools(b.dataset.hitze, "hitze"));
   window.scrollTo(0,0);
 }
-function openTools(cat){
-  try { if(window.parent !== window && window.parent.showProducts){ window.parent.closeQuiz && window.parent.closeQuiz(); window.parent.showProducts("tools", cat); return; } } catch(e){}
-  location.href = "haarpflege.html#tools." + cat;
+function openTools(cat, type){
+  type = type || "tools";
+  try { if(window.parent !== window && window.parent.showProducts){ window.parent.closeQuiz && window.parent.closeQuiz(); window.parent.showProducts(type, cat); return; } } catch(e){}
+  location.href = "haarpflege.html#" + type + "." + cat;
 }
 /* ---------- Ergebnis kopieren ---------- */
 async function copyResult(){
   const sec = app.querySelector("section");
-  const t = [...sec.children].filter(el => !el.matches(".top,.actions,.fine,details") && !el.querySelector(".links")).map(el => el.innerText.trim()).filter(Boolean).join("\n\n");
+  const t = [...sec.children].filter(el => !el.matches(".top,.actions,.fine,details") && !el.querySelector("[data-cat]")).map(el => el.innerText.replace("Styling-Sprays gegen Frizz ansehen","").trim()).filter(Boolean).join("\n\n");
   let ok = false;
   try { await navigator.clipboard.writeText(t); ok = true; } catch(e){}
   if(!ok){ const ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch(e){} ta.remove(); }
