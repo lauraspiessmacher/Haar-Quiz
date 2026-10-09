@@ -22,7 +22,9 @@ High-End:
 - Kérastase Gloss Absolu Glaze Drops – im Guide (Öl).
 - Redken Acidic Color Gloss Activated Glass Gloss Treatment (Laura: die 5-Minuten-Kur, NICHT das Heat Protection Treatment) – seit 09.10. im Masken-Guide (High-End, normal–dick). INCI lookfantastic 15062352, Wasserstoffperoxid an 3. Stelle → Hinweis auf der Karte. Bild aus Anwendungsgrafik freigestellt.
 
-## Wenn ich Schuppen habe (09.10.)
+## Wenn ich Schuppen habe (09.10., korrigiert)
+Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder raus.
 - ISANA MED Ultra Sensitiv+ Anti-Schuppen – im Guide (Shampoo, Drogerie).
-- Kérastase Symbiose Micro-Peeling Cellulaire – im Guide (Kopfhautpflege/Peeling). Laura: „Anti-Schuppen-Shampoo Tiefenreinigung, das Grüne mit dem Peeling-Effekt“.
-- Kérastase Symbiose Bain Crème Anti-Pelliculaire – im Guide (Shampoo, für trockene Kopfhaut).
+- Vichy Dercos Anti-Schuppen K – im Guide; dunkelgrüne Flasche mit Peelingkörnchen, zur Tiefenreinigung.
+- Vichy Dercos Anti-Schuppen DS für trockenes Haar – NEU im Shampoo-Guide (Schuppen, Haarzustand trocken). INCI lookfantastic 11091703: Aqua, Sodium Laureth Sulfate, Glycol Distearate, Dimethicone, Coco-Betaine, Glycerin, Carbomer, CI 19140, Citric Acid, Menthol, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Salicylic Acid, Selenium Sulfide, …
+- Vichy Dercos Anti-Schuppen DS für normales bis fettiges Haar – NEU im Shampoo-Guide (Schuppen, normal bis fettig). INCI lookfantastic 11091704: Aqua, Sodium Laureth Sulfate, Coco-Betaine, Cetyl Alcohol, Hydroxystearyl Cetyl Ether, Carbomer, CI 19140, Citric Acid, Dimethicone, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Propylene Glycol, Salicylic Acid, Selenium Sulfide, …

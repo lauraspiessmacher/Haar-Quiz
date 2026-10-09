@@ -151,14 +151,22 @@
      "name": "Ultra Sensitiv+ Anti-Schuppen"
     },
     {
-     "type": "kopfhaut",
-     "brand": "Kérastase",
-     "name": "Symbiose Micro-Peeling Cellulaire"
+     "type": "shampoo",
+     "brand": "Vichy",
+     "name": "Dercos Anti-Schuppen K",
+     "wofuer": "Zur Tiefenreinigung, mit Peelingkörnchen"
     },
     {
      "type": "shampoo",
-     "brand": "Kérastase",
-     "name": "Symbiose Bain Crème Anti-Pelliculaire"
+     "brand": "Vichy",
+     "name": "Dercos Anti-Schuppen DS für trockenes Haar",
+     "wofuer": "Bei trockener Kopfhaut"
+    },
+    {
+     "type": "shampoo",
+     "brand": "Vichy",
+     "name": "Dercos Anti-Schuppen DS für normales bis fettiges Haar",
+     "wofuer": "Bei schnell fettender Kopfhaut"
     }
    ]
   },
