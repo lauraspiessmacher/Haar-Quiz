@@ -1096,7 +1096,7 @@ document.addEventListener("click", e => {
 /* ---------- Lauras Favorites (favoriten.json) ---------- */
 const FAV = __FAV__;
 const favFind = x => x.brand ? ALL.find(p => p.type===x.type && p.brand===x.brand && p.name===x.name) : null;
-const FAVSET = new Set(FAV.abschnitte.flatMap(a => a.produkte.map(favFind).filter(Boolean).map(p => p.mk)));
+const FAVSET = new Set(FAV.abschnitte.filter(a => !a.test).flatMap(a => a.produkte.map(favFind).filter(Boolean).map(p => p.mk)));
 function renderFav(){
   const box = document.getElementById("favBox"), foto = document.querySelector(".hero .photo img");
   const prof = FAV.profil.map(([k,v]) => `<div class="favrow"><dt>${esc(k)}</dt><dd>${v ? esc(v) : `<span class="favleer">kommt noch</span>`}</dd></div>`).join("");
