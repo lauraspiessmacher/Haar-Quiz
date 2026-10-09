@@ -331,3 +331,4 @@
 - Favorites: „Gesund und genährt“ heißt jetzt „Nährende Pflege“ (id bleibt genaehrt). Oil Reflections Luminous Instant Conditioner (NEU im Guide) statt Ultimate Smooth Conditioner, Oribe Gold Lust Night Crème statt Hair Alchemy Serum. Vorschau v144.
 - Favorites Nährende Pflege: Redken All Soft Conditioner (NEU im Guide) statt Oribe Hair Alchemy Conditioner. Vorschau v145.
 - Favorites Nährende Pflege: komplette Redken All Soft Reihe (Shampoo, Conditioner, Heavy Cream, Moisture Restore Leave-In). Jetzt 11 Produkte. Vorschau v146.
+- Favorites Nährende Pflege: von Redken All Soft nur noch das Shampoo (Conditioner/Maske/Leave-in nur im Guide). 8 Produkte. Vorschau v147.
