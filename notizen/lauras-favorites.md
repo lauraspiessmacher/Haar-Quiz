@@ -31,7 +31,7 @@ Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder 
 
 ## Für mehr Volumen (09.10.)
 - Oribe Shampoo for Magnificent Volume (braune Reihe) – im Guide (Shampoo).
-- Oribe Conditioner for Magnificent Volume – NEU im Conditioner-Guide (High-End, fein–normal). INCI oribe.com. Bild aus Oribe-Flatlay (Tube mit Shampoo) freigestellt und gerade gedreht.
+- Oribe Conditioner for Magnificent Volume – NEU im Conditioner-Guide (High-End, fein–normal). INCI oribe.com. Bild von hagel-shop.de (12062383).
 - Oribe Dry Texturizing Spray (klassisch, 300 ml) – NICHT im Guide (keine Rubrik), eigener Eintrag mit Bild (Cult Beauty). INCI laut oribe.com beginnt mit Aqua, Glycerin, Acetyl Triethyl Citrate … (wirkt wie Nicht-Aerosol-Liste, bei Bedarf prüfen).
 
 ## Gesund und genährt (09.10.)
