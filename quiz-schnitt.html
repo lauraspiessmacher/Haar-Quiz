@@ -120,6 +120,18 @@ strong{font-weight:500}
 .prefill{font-size:14px;color:var(--sand);margin:-8px 0 16px}
 .box .actions{margin:4px 0 14px}
 .copying .box .actions{display:none}
+.copying .opts,.copying .sketch{display:none}
+/* Skizzen im Ergebnis: Gesichtsform + Schnitt als feine Linien */
+.sketch{display:block;margin:4px auto 6px;width:min(64vw,230px);height:auto}
+.sketch-cap{text-align:center;font-size:14px;color:var(--muted);margin:0 0 26px}
+.sk-face{stroke:var(--cream);stroke-width:1.3;fill:none}
+.sk-hair{stroke:var(--sand);stroke-width:1.05;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 18px}
+.opt{border:1px solid var(--line-soft);border-radius:14px;padding:10px 6px 10px;text-align:center;opacity:.5}
+.opt.on{opacity:1;border-color:var(--cream)}
+.opt svg{display:block;width:100%;max-width:110px;height:auto;margin:0 auto 4px}
+.opt span{display:block;font-size:13px;line-height:1.3}
+.opt em{display:block;font-style:normal;font-size:12px;color:var(--sand);margin-top:3px;min-height:15px}
 </style>
 </head>
 <body>
@@ -303,8 +315,65 @@ function currentBlock(e){
   if(f.ohne && holdGood) return `<div class="box"><h3>Dein Schnitt jetzt</h3><p>Bei dir halten Blowouts und Locken gut. Mit deinem Schnitt bist du gut aufgestellt.</p></div>`;
   return "";
 }
+/* ---------- Skizzen ---------- */
+/* Gesicht aus FACE (60×76) vergrößert, Haare als einzelne Strähnen-Linien: Länge, Stufen und Struktur */
+const HALF = {oval:24, rund:30, eckig:26, herz:29, lang:19, weiss:24};
+const LEN = {kurz:132, kinn:142, schulter:172, brust:208, taille:246};
+function sketch(o){
+  const face = FACE[o.face] ? o.face : "oval", x0 = 100 - HALF[face] - 4, n = 6;
+  const depth = {blunt:0, soft:30, layers:60}[o.cut] || 0, maxD = Math.max(0, (o.end - 100) * .7);
+  const wave = {G:[0,1], W:[3.5,34], L:[5.5,18], K:[3.2,11]}[o.g] || [0,1], curly = o.g==="L" || o.g==="K";
+  const strands = [];
+  for(let i=0;i<n;i++){
+    const xs = x0 - i*4.6, k = i/(n-1);
+    const end = o.end - Math.min(depth, maxD) * (1-k);
+    const flare = ({blunt:4, soft:8, layers:12}[o.cut]||6) * (.4+k) + (curly?6:0);
+    const bulge = (o.cut==="layers"?6:0) + (curly?5:0);
+    const pts = [];
+    for(let t=0;t<=1.0001;t+=.1){ const u=1-t; const P=[[98,36],[98-(98-xs)*.55,34+i*1.5],[xs-3,50],[xs,78]];
+      pts.push([u*u*u*P[0][0]+3*u*u*t*P[1][0]+3*u*t*t*P[2][0]+t*t*t*P[3][0], u*u*u*P[0][1]+3*u*u*t*P[1][1]+3*u*t*t*P[2][1]+t*t*t*P[3][1]]); }
+    for(let y=81;y<=end;y+=(curly?1.4:2.5)){ const f=(y-78)/Math.max(1,end-78);
+      pts.push([xs - flare*f - bulge*Math.sin(f*Math.PI) + wave[0]*Math.sin((y-78)/wave[1]*2*Math.PI + i*.9)*Math.min(1,f*3), y]); }
+    const d = pts => "M" + pts.map(p=>p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" L");
+    strands.push(d(pts), d(pts.map(p=>[200-p[0],p[1]])));
+  }
+  const xo = x0 - 23;
+  const crown = `M${xo} 80 C${xo-2} 40 70 27 100 29 C130 27 ${200-xo+2} 40 ${200-xo} 80`;
+  return `<svg class="${o.cls||"sketch"}" viewBox="0 0 200 260" aria-hidden="true">
+    <path class="sk-face" d="M91 124 V150 C80 158 52 160 34 172 L26 260 M109 124 V150 C120 158 148 160 166 172 L174 260"/>
+    <g class="sk-face" transform="translate(62.5 42) scale(1.25)" style="stroke-width:1.04">${FACE[face]}</g>
+    <path class="sk-hair" d="${crown}"/>${strands.map(d=>`<path class="sk-hair" d="${d}"/>`).join("")}</svg>`;
+}
+/* Welche Schnitt-Variante passt (für Hauptskizze und Optionen) */
+function cutKey(e){
+  const {f, w, curly, feinWenig} = e;
+  if(curly) return f.fein ? ["soft"] : (f.dick||f.viele) ? ["layers"] : ["soft","layers"];
+  if(feinWenig) return f.stufen ? ["soft"] : ["blunt"];
+  if(f.fein) return ["soft"];
+  if(f.dick || f.viele) return ["layers"];
+  return {vol:["soft","layers"], glatt:["blunt","soft"], struktur:["soft"], easy:["soft"]}[w] || ["blunt","soft","layers"];
+}
+/* Längen-Empfehlung für die Skizzen (nur wenn jemand offen für eine neue Länge ist) */
+function lenKeys(e){
+  const {f, face} = e; if(!f.offen) return null;
+  if(f.kinn==="kurz") return ["kurz"];
+  if(f.kinn==="lang") return ["schulter","brust"];
+  return {herz:["kurz"], rund:["schulter","brust"], eckig:["schulter"], lang:["schulter"], oval:["kurz","schulter","brust"]}[face] || null;
+}
+function sketchHtml(e){
+  const f = e.f, face = e.face, g = e.g, cuts = cutKey(e), lens = lenKeys(e);
+  const nowLen = ["kurz","schulter","brust","taille"][ans.laenge] || "schulter";
+  const mainLen = lens ? lens[0] : nowLen;
+  const main = sketch({face, g, cut:cuts[0], end:LEN[mainLen]});
+  const CUTS = e.curly ? [["blunt","Ohne Stufen"],["soft","Wenige Stufen"],["layers","Stufen für Form"]] : [["blunt","Gerade Spitzen"],["soft","Lange, weiche Stufen"],["layers","Stufen"]];
+  const opt = (on, svg, label) => `<div class="opt${on?" on":""}">${svg}<span>${label}</span><em>${on?"passt zu dir":""}</em></div>`;
+  const cutRow = `<div class="opts">${CUTS.map(([k,l]) => opt(cuts.includes(k), sketch({face, g, cut:k, end:LEN[mainLen], cls:"mini"}), l)).join("")}</div>`;
+  const lenRow = lens ? `<div class="opts">${[["kurz","Kurz bis Kinn"],["schulter","Long Bob bis schulterlang"],["brust","Lang"]].map(([k,l]) => opt(lens.includes(k), sketch({face, g, cut:cuts[0], end:LEN[k], cls:"mini"}), l)).join("")}</div>` : "";
+  return {main:`${main}<p class="sketch-cap">So ungefähr könnte es aussehen. Nur eine Skizze, jedes Gesicht und jedes Haar ist anders.</p>`,
+    opts:`<div class="block"><h3><span class="mark">✎</span>Deine Möglichkeiten</h3><p>Hervorgehoben ist, was zu deinem Haar passt. Die anderen sind nicht falsch, nur weniger passend.</p>${cutRow}${lenRow ? `<p>Und bei der Länge:</p>${lenRow}` : ""}</div>`};
+}
 function result(){
-  const e = evaluate(), r = cut(e), f = e.f;
+  const e = evaluate(), r = cut(e), f = e.f, sk = sketchHtml(e);
   try { const all = JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; all.schnitt = {empfehlung:r.rec, gesicht:e.face||null}; localStorage.setItem("quizErgebnisse", JSON.stringify(all)); } catch(err){}
   const boxes = [];
   boxes.push(currentBlock(e));
@@ -320,7 +389,9 @@ function result(){
     <p class="res-kicker">Für deine Haare empfehle ich dir</p>
     <h1>${esc(r.rec)}</h1>
     <p class="subtype"><span class="code">Dein Haar</span>${esc(meta)}</p>
+    ${sk.main}
     <div class="intro"><p>${r.text}</p></div>
+    ${sk.opts}
     ${boxes.filter(Boolean).join("")}
     <div class="block"><h3><span class="mark">!</span>Nur ein Vorschlag</h3><p>Dein Ergebnis ist eine Empfehlung, kein Muss. Wenn sie dir nicht gefällt oder du dir das nicht vorstellen kannst, lass es einfach. Nimm dein Ergebnis gern mit zum Friseur und lass dich dort beraten.</p>
       <p>Mein Tipp: Wenn du ein KI-Tool mit Bildfunktion hast, lade ein Foto von dir hoch und lass dir den vorgeschlagenen Schnitt zeigen. So siehst du vorher, wie er an dir wirkt und ob er dir gefällt.</p></div>
@@ -345,7 +416,7 @@ function goParent(fn, fallback){
 async function copyResult(){
   const sec = app.querySelector("section");
   sec.classList.add("copying"); /* Knöpfe in den Kästen beim Kopieren ausblenden */
-  const t = [...sec.children].filter(el => !el.matches(".top,.actions,.fine")).map(el => el.innerText.trim()).filter(Boolean).join("\n\n");
+  const t = [...sec.children].filter(el => !el.matches(".top,.actions,.fine")).map(el => (el.innerText||"").trim()).filter(Boolean).join("\n\n");
   sec.classList.remove("copying");
   let ok = false;
   try { await navigator.clipboard.writeText(t); ok = true; } catch(e){}
