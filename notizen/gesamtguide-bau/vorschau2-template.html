@@ -799,7 +799,7 @@ for(const t of TYPES){
   }
 }
 /* Suchwörter: Produktart-Wörter grenzen ein, Alltagswörter werden übersetzt */
-const TYPEWORDS = {burste:"buerste",bursten:"buerste",haarburste:"buerste",haarbursten:"buerste",kamm:"buerste",entwirrburste:"buerste",fohn:"tools",fohne:"tools",haartrockner:"tools",reisefohn:"tools",glatteisen:"tools",luftglatter:"tools",lockenstab:"tools",multistyler:"tools",hitzetools:"tools",shampoo:"shampoo",shampoos:"shampoo",maske:"maske",masken:"maske",haarmaske:"maske",kur:"maske",conditioner:"conditioner",spulung:"conditioner",leavein:"leavein",leaveins:"leavein",hitzeschutz:"hitze",hitze:"hitze",ol:"oel",ole:"oel",haarol:"oel",haarole:"oel",kopfhautpflege:"kopfhaut",serum:"kopfhaut",peeling:"kopfhaut"};
+const TYPEWORDS = {burste:"buerste",bursten:"buerste",haarburste:"buerste",haarbursten:"buerste",kamm:"buerste",entwirrburste:"buerste",fohn:"tools",fohne:"tools",haartrockner:"tools",lockenstabe:"tools",airwrap:"tools",reisefohn:"tools",glatteisen:"tools",luftglatter:"tools",lockenstab:"tools",multistyler:"tools",hitzetools:"tools",shampoo:"shampoo",shampoos:"shampoo",maske:"maske",masken:"maske",haarmaske:"maske",kur:"maske",conditioner:"conditioner",spulung:"conditioner",leavein:"leavein",leaveins:"leavein",hitzeschutz:"hitze",hitze:"hitze",ol:"oel",ole:"oel",haarol:"oel",haarole:"oel",kopfhautpflege:"kopfhaut",serum:"kopfhaut",peeling:"kopfhaut"};
 const SYN = {fettig:"fettend",fettige:"fettend",fettiger:"fettend",fettende:"fettend",feine:"fein",feines:"fein",dunne:"dunn",dunnes:"dunn",dicke:"dick",dickes:"dick",kaputte:"kaputt",trockene:"trocken",schuppige:"schupp",schuppen:"schupp",sensible:"sensib",juckende:"juck",blondierte:"blondiert"};
 const STOP = new Set(["haar","haare","haaren","fur","mit","und","die","der","das","ich","habe","meine","eine","ein","sehr"]);
 function parseQuery(q){
@@ -893,6 +893,7 @@ function recHtml(rec, type){
 /* ---------- Sortierung wie in den Einzel-Guides ---------- */
 const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 function sorter(type, cat){
+  if(type==="tools") return (a,b)=>(a.ord||0)-(b.ord||0); /* Hitze-Tools in Lauras Reihenfolge, Dyson immer am Ende */
   if(type==="kopfhaut" && DATA.kopfhaut.rank && DATA.kopfhaut.rank[cat]){ const r=DATA.kopfhaut.rank[cat]; return (a,b)=>r.indexOf(a.key)-r.indexOf(b.key); }
   if(type==="shampoo" && cat==="kinder") return (a,b)=>(a.rank||99)-(b.rank||99);
   if(type==="shampoo" && DATA.shampoo.rank && DATA.shampoo.rank[cat]){ const r=DATA.shampoo.rank[cat]; return (a,b)=>r.indexOf(a.brand+"|"+a.name)-r.indexOf(b.brand+"|"+b.name); }
@@ -1166,7 +1167,7 @@ function renderGuide(){
   if(state.cat==="liste"){
     let {items:its} = applyMine(items, state.type);
     html += `<div class="liste">` + g.cats.map(c => {
-      const li = its.filter(p=>p.cats.includes(c.id)).sort(byName); if(!li.length) return "";
+      const li = its.filter(p=>p.cats.includes(c.id)).sort(state.type==="tools" ? sorter("tools") : byName); if(!li.length) return "";
       const lines = li.map(p=>`${p.brand} – ${p.name}`);
       return `<h3>${c.label}<span class="count">${li.length}</span></h3><button type="button" class="copy" data-text="${esc(c.label+"\n"+lines.join("\n"))}">Liste kopieren</button><ul>${lines.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`;
     }).join("") + `</div>`;

@@ -38,7 +38,8 @@ _data['hitze'] = {'cats': _h['cats'], 'rank': None, 'items': _hitems, 'intro': {
 _data['buerste'] = json.load(open(f'{S}/buersten.json'))
 # Hitze-Tools (hitzetools.json, Bilder in notizen/bilder/hitze-tools/, freigestellt aus den Herstellerbildern)
 _ht = json.load(open(f'{S}/hitzetools.json'))
-for _p in _ht['items']:
+for _i, _p in enumerate(_ht['items']):
+    _p['ord'] = _i
     _p['img'] = 'data:image/webp;base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/hitze-tools/' + _p.pop('bild'), 'rb').read()).decode()
 _data['tools'] = {'cats': _ht['cats'], 'rank': None, 'items': _ht['items'], 'intro': _ht['intro']}
 data = json.dumps(_data, ensure_ascii=False).replace('</', '<\\/')

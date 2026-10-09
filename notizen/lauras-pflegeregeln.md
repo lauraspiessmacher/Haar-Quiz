@@ -59,3 +59,5 @@ Diese Regeln gelten überall auf der Seite: Quizze, Routine-Check, Wissen, Produ
 - Haftungshinweis: ersetzt keine persönliche Beratung, auch nicht beim Arzt; bei Kopfhautproblemen/Beschwerden führt am Arztbesuch kein Weg vorbei.
 
 - Keine Preise in Produkttexten nennen (Laura, 08.10.).
+
+- Hitze-Tools: Dyson immer ans Ende sortieren (Laura, 09.10.).

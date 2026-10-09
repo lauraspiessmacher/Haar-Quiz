@@ -1,45 +1,275 @@
 {
  "cats": [
-  {"id": "foehn", "label": "Föhne", "desc": "Föhne für zu Hause. Unter jedem Föhn steht, welche Aufsätze dabei sind und wofür sie gut sind."},
-  {"id": "reise", "label": "Reiseföhne", "desc": "Kleine, leichte Föhne für unterwegs, für den Urlaub und für die Sporttasche."},
-  {"id": "multi", "label": "Multistyler", "desc": "Ein Griff, viele Aufsätze: Föhnen, Glätten, Locken und Volumen mit einem Gerät."},
-  {"id": "glaett", "label": "Glätteisen & Luftglätter", "desc": "Zum Glätten und für Spitzen, die nach innen fallen. Stell das Gerät nicht heißer ein als nötig."}
+  {
+   "id": "foehn",
+   "label": "Föhne",
+   "desc": "Föhne für zu Hause. Unter jedem Föhn steht, welche Aufsätze dabei sind und wofür sie gut sind."
+  },
+  {
+   "id": "reise",
+   "label": "Reiseföhne",
+   "desc": "Kleine, leichte Föhne für unterwegs, für den Urlaub und für die Sporttasche."
+  },
+  {
+   "id": "multi",
+   "label": "Multistyler",
+   "desc": "Ein Griff, viele Aufsätze: Föhnen, Glätten, Locken und Volumen mit einem Gerät."
+  },
+  {
+   "id": "glaett",
+   "label": "Glätteisen & Luftglätter",
+   "desc": "Zum Glätten und für Spitzen, die nach innen fallen. Stell das Gerät nicht heißer ein als nötig."
+  },
+  {
+   "id": "locken",
+   "label": "Lockenstäbe",
+   "desc": "Für Locken und Wellen, die länger halten. Locken vom Lockenstab halten meistens besser als Locken vom Multistyler."
+  }
  ],
  "intro": {
-  "lead": "Hier findest du meine Empfehlungen für Föhne, Multistyler, Glätteisen und mehr. Bei jedem Gerät siehst du, welche Aufsätze dabei sind und wofür du sie nutzen kannst.",
+  "lead": "Hier findest du meine Empfehlungen für Föhne, Multistyler, Glätteisen und Lockenstäbe. Bei jedem Gerät siehst du, welche Aufsätze dabei sind und wofür du sie nutzen kannst.",
   "box": "<p><b>Ganz wichtig:</b> Vor jeder Hitze kommt ein Hitzeschutz, und stell dein Gerät nicht heißer ein als nötig. Auch beim Föhnen lieber mittel oder kühl statt heiß.</p>"
  },
  "items": [
-  {"segment": "", "brand": "Dreame", "name": "AirStyle Era 2 Multi-Haarstyler", "farbe": "Rosa", "cats": ["multi"], "bild": "dreame-airstyle-era-2.webp",
+  {
+   "segment": "",
+   "brand": "Dreame",
+   "name": "Miracle Essence Hochgeschwindigkeits-Haartrockner",
+   "farbe": "Gold",
+   "cats": [
+    "foehn"
+   ],
+   "bild": "dreame-miracle-essence.webp",
+   "note": "Schneller Föhn, der auf Knopfdruck beim Föhnen eine Pflege-Essenz als feinen Nebel abgibt.",
+   "aufsaetze": "2 Aufsätze: Stylingdüse und Diffusor. Dazu eine Flasche Haarpflege-Essenz.",
+   "wofuer": "Schnell trocknen, glatt föhnen mit der Stylingdüse, Locken und Wellen mit dem Diffusor",
+   "tip": "Die Essenz ist ein schönes Extra, ersetzt aber weder deine Leave-in-Pflege noch deinen Hitzeschutz."
+  },
+  {
+   "segment": "",
+   "brand": "Dreame",
+   "name": "Pocket Pro 2 Haartrockner",
+   "farbe": "Champagner",
+   "cats": [
+    "foehn"
+   ],
+   "bild": "dreame-pocket-pro-2.webp",
+   "note": "Klappbarer Föhn mit nur 300 g, der mit allen Aufsätzen in die mitgelieferte Tasche passt.",
+   "aufsaetze": "5 Aufsätze: 2 Lockenaufsätze, Anti-Frizz-Aufsatz, Styling-Aufsatz und Diffusor. Dazu eine Reisetasche.",
+   "wofuer": "Föhnen zu Hause und auf Reisen, glatt föhnen, Locken und Wellen",
+   "tip": "Föhnt mit gleichbleibend 57 °C. Durch die drei Klappformen auch ein guter Reiseföhn."
+  },
+  {
+   "segment": "",
+   "brand": "Dreame",
+   "name": "Glory Mix Haartrockner",
+   "farbe": "Schwarz",
+   "cats": [
+    "foehn"
+   ],
+   "bild": "dreame-glory-mix-schwarz.webp",
+   "note": "Leichter Föhn mit 336 g, der beim Föhnen über einen Duftring einen zarten Duft abgibt.",
+   "aufsaetze": "3 Aufsätze: Glättungsdüse, Diffusor und Parfümdüse. Dazu ein Duftring mit Duft und 10 leere Duftringe.",
+   "wofuer": "Föhnen und glatt föhnen, Locken und Wellen mit dem Diffusor",
+   "tip": "4 Temperaturstufen und 2 Luftstärken."
+  },
+  {
+   "segment": "",
+   "brand": "Laifen",
+   "name": "Neo Special Hochgeschwindigkeits-Haartrockner",
+   "farbe": "Onyx Black",
+   "cats": [
+    "foehn"
+   ],
+   "bild": "laifen-neo-special-onyx-black.webp",
+   "note": "Schneller Föhn mit einer Pflegedüse, in die du kleine Kapseln mit deinem eigenen Haaröl einsetzt. Im Pflegemodus föhnt er mit gleichbleibend 58 °C.",
+   "aufsaetze": "2 Aufsätze: Glättungsdüse und Pflegedüse. Dazu 3 Pflegekapseln für dein eigenes Öl (Öl ist nicht dabei).",
+   "wofuer": "Schnell trocknen, glatt föhnen, Pflegemodus mit Öl",
+   "tip": "Nimm in die Kapseln nur wenig Öl, sonst werden die Haare schnell schwer."
+  },
+  {
+   "segment": "",
+   "brand": "MOVA",
+   "name": "Aero C Haartrockner",
+   "farbe": "Rosé",
+   "cats": [
+    "foehn"
+   ],
+   "bild": "mova-aero-c.webp",
+   "note": "Föhn in C-Form mit breitem, sanftem Luftstrom. Laut MOVA bleibt die Luft unter 55 °C.",
+   "aufsaetze": "3 Aufsätze: QuickSmooth-Bürste, Diffusor und Styling-Konzentrator.",
+   "wofuer": "Schnell und sanft trocknen, glatt föhnen, Locken und Wellen mit dem Diffusor",
+   "tip": "Wiegt 340 g ohne Kabel."
+  },
+  {
+   "segment": "",
+   "brand": "Dreame",
+   "name": "Mini Flow Hochgeschwindigkeits-Haartrockner",
+   "farbe": "Weiß",
+   "cats": [
+    "reise"
+   ],
+   "bild": "dreame-mini-flow-weiss.webp",
+   "note": "Kleiner, schneller Föhn mit nur 270 g, ideal für unterwegs.",
+   "aufsaetze": "1 Aufsatz: Glättungsdüse.",
+   "wofuer": "Föhnen auf Reisen und zwischendurch",
+   "tip": "5 Temperaturstufen und ein Kindermodus mit sanften 40 °C."
+  },
+  {
+   "segment": "",
+   "brand": "Dreame",
+   "name": "AirStyle Era 2 Multi-Haarstyler",
+   "farbe": "Rosa",
+   "cats": [
+    "multi"
+   ],
+   "bild": "dreame-airstyle-era-2.webp",
    "note": "Föhn und Styler in einem: Der Griff bleibt gleich, die Aufsätze wechselst du je nach Look. Die Lockenaufsätze wickeln die Strähne mit dem Luftstrom von selbst auf.",
    "aufsaetze": "8 Aufsätze: Föhnaufsatz, Glättungsdüse, 2 Lockenaufsätze (32 mm, je einer pro Drehrichtung), Diffusor, Glättbürste mit weichen Borsten, Glättbürste mit festen Borsten und Rundbürste für Volumen. Dazu eine Aufbewahrungstasche.",
    "wofuer": "Föhnen, Glätten, Locken und Wellen, Volumen",
-   "tip": "3 Temperaturstufen und Kaltluft. Mit einem kurzen Kaltluftstoß am Ende halten Locken und Volumen besser."},
-  {"segment": "", "brand": "Dreame", "name": "Aero Straight Pro 2-in-1 Luftglätter", "farbe": "Rosé", "cats": ["glaett"], "bild": "dreame-aero-straight-pro.webp",
+   "tip": "3 Temperaturstufen und Kaltluft. Mit einem kurzen Kaltluftstoß am Ende halten Locken und Volumen besser."
+  },
+  {
+   "segment": "",
+   "brand": "Shark",
+   "name": "FlexStyle 5-in-1 Styling- und Trocknungssystem",
+   "farbe": "Beige (Stone)",
+   "cats": [
+    "multi"
+   ],
+   "bild": "shark-flexstyle-beige.webp",
+   "note": "Föhn und Styler in einem: Das Gelenk klappt den Griff vom Föhn zum geraden Styler um. Die Lockenaufsätze wickeln die Strähne mit dem Luftstrom auf.",
+   "aufsaetze": "6 Aufsätze: 2 Lockenaufsätze (je einer pro Drehrichtung), Ovalbürste, Paddelbürste, Konzentrator und Diffusor. Dazu eine Aufbewahrungsbox.",
+   "wofuer": "Föhnen, Glätten, Locken und Wellen, Volumen",
+   "tip": "Mit dem Kaltluftstoß am Ende fixierst du Locken und Volumen."
+  },
+  {
+   "segment": "",
+   "brand": "Shark",
+   "name": "Glam Multistyler für glatte Haare, Wellen und Locken",
+   "farbe": "Gold",
+   "cats": [
+    "multi"
+   ],
+   "bild": "shark-glam-gold.webp",
+   "note": "Multistyler mit Glätteisen-Aufsatz: Neben Föhn- und Lockenaufsätzen gibt es einen Aufsatz mit Keramikplatten, der glättet.",
+   "aufsaetze": "5 Aufsätze: Silki-Glätteisenaufsatz, Glossi-Warmluftbürste, Lockenaufsätze, Konzentrator und Diffusor. Dazu eine Aufbewahrungstasche.",
+   "wofuer": "Föhnen, Glätten, Locken und Wellen, Volumen",
+   "tip": "Den Glätteisen-Aufsatz kannst du laut Shark auf nassem und trockenem Haar nutzen."
+  },
+  {
+   "segment": "",
+   "brand": "Dreame",
+   "name": "Aero Straight Pro 2-in-1 Luftglätter",
+   "farbe": "Rosé",
+   "cats": [
+    "glaett"
+   ],
+   "bild": "dreame-aero-straight-pro.webp",
    "note": "Glätteisen mit eingebautem Luftstrom: trocknet und glättet in einem Schritt, auch im nassen Haar.",
    "aufsaetze": "Keine Aufsätze, es ist ein 2-in-1-Gerät. Dazu eine Aufbewahrungstasche.",
    "wofuer": "Föhnen und Glätten in einem, auch Spitzen nach innen",
    "nass": "nass und trocken",
-   "tip": "Glättet mit 120, 140 oder 160 °C, dazu ein Modus mit 57 °C, der den Ansatz trocknet. Nimm die niedrigste Stufe, mit der es bei dir klappt."},
-  {"segment": "", "brand": "Dreame", "name": "Miracle Essence Hochgeschwindigkeits-Haartrockner", "farbe": "Gold", "cats": ["foehn"], "bild": "dreame-miracle-essence.webp",
-   "note": "Schneller Föhn, der auf Knopfdruck beim Föhnen eine Pflege-Essenz als feinen Nebel abgibt.",
-   "aufsaetze": "2 Aufsätze: Stylingdüse und Diffusor. Dazu eine Flasche Haarpflege-Essenz.",
-   "wofuer": "Schnell trocknen, glatt föhnen mit der Stylingdüse, Locken und Wellen mit dem Diffusor",
-   "tip": "Die Essenz ist ein schönes Extra, ersetzt aber weder deine Leave-in-Pflege noch deinen Hitzeschutz."},
-  {"segment": "", "brand": "Dreame", "name": "Pocket Pro 2 Haartrockner", "farbe": "Champagner", "cats": ["foehn"], "bild": "dreame-pocket-pro-2.webp",
-   "note": "Klappbarer Föhn mit nur 300 g, der mit allen Aufsätzen in die mitgelieferte Tasche passt.",
-   "aufsaetze": "5 Aufsätze: 2 Lockenaufsätze, Anti-Frizz-Aufsatz, Styling-Aufsatz und Diffusor. Dazu eine Reisetasche.",
-   "wofuer": "Föhnen zu Hause und auf Reisen, glatt föhnen, Locken und Wellen",
-   "tip": "Föhnt mit gleichbleibend 57 °C. Durch die drei Klappformen auch ein guter Reiseföhn."},
-  {"segment": "", "brand": "Dreame", "name": "Glory Mix Haartrockner", "farbe": "Schwarz", "cats": ["foehn"], "bild": "dreame-glory-mix-schwarz.webp",
-   "note": "Leichter Föhn mit 336 g, der beim Föhnen über einen Duftring einen zarten Duft abgibt.",
-   "aufsaetze": "3 Aufsätze: Glättungsdüse, Diffusor und Parfümdüse. Dazu ein Duftring mit Duft und 10 leere Duftringe.",
-   "wofuer": "Föhnen und glatt föhnen, Locken und Wellen mit dem Diffusor",
-   "tip": "4 Temperaturstufen und 2 Luftstärken."},
-  {"segment": "", "brand": "Dreame", "name": "Mini Flow Hochgeschwindigkeits-Haartrockner", "farbe": "Weiß", "cats": ["reise"], "bild": "dreame-mini-flow-weiss.webp",
-   "note": "Kleiner, schneller Föhn mit nur 270 g, ideal für unterwegs.",
-   "aufsaetze": "1 Aufsatz: Glättungsdüse.",
-   "wofuer": "Föhnen auf Reisen und zwischendurch",
-   "tip": "5 Temperaturstufen und ein Kindermodus mit sanften 40 °C."}
+   "tip": "Glättet mit 120, 140 oder 160 °C, dazu ein Modus mit 57 °C, der den Ansatz trocknet. Nimm die niedrigste Stufe, mit der es bei dir klappt."
+  },
+  {
+   "segment": "",
+   "brand": "Shark",
+   "name": "SilkiPro Straight Glätteisen und Haartrockner",
+   "farbe": "Mokka-Silber",
+   "cats": [
+    "glaett"
+   ],
+   "bild": "shark-silkipro-mokka-silber.webp",
+   "note": "Glätteisen mit eingebautem Luftstrom: Im Nasshaar-Modus trocknet und glättet es gleichzeitig, im Trockenhaar-Modus ist es ein klassisches Glätteisen.",
+   "aufsaetze": "3 Kämme zum Aufstecken: sanfter Kamm, Präzisionskamm und Breitzahnkamm. Dazu eine hitzebeständige Tasche.",
+   "wofuer": "Föhnen und Glätten in einem, glatt mit Volumen",
+   "tip": "Die Keramikplatten messen die Temperatur laufend und regeln sie selbst nach.",
+   "nass": "nass und trocken"
+  },
+  {
+   "segment": "",
+   "brand": "ghd",
+   "name": "Platinum+ Haarglätter",
+   "farbe": "Schwarz",
+   "cats": [
+    "glaett"
+   ],
+   "bild": "ghd-platinum-plus.webp",
+   "note": "Der Klassiker von ghd: Das Glätteisen erkennt die Strähne und hält die Platten gleichmäßig bei 185 °C.",
+   "aufsaetze": "Keine Aufsätze.",
+   "wofuer": "Glätten, Spitzen nach innen, auch Wellen",
+   "tip": "185 °C ist fest eingestellt, du musst nichts regeln."
+  },
+  {
+   "segment": "",
+   "brand": "ghd",
+   "name": "Chronos Max Haarglätter mit breiten Platten",
+   "farbe": "Schwarz",
+   "cats": [
+    "glaett"
+   ],
+   "bild": "ghd-chronos-max.webp",
+   "note": "Glätteisen mit 85 % größeren Platten als die normalen ghd-Glätteisen, damit du größere Strähnen auf einmal glätten kannst.",
+   "aufsaetze": "Keine Aufsätze.",
+   "wofuer": "Schnelles Glätten von langem, dickem und lockigem Haar",
+   "tip": "Laut ghd gemacht für langes, dickes und lockiges Haar. Arbeitet mit 185 °C."
+  },
+  {
+   "segment": "",
+   "brand": "ghd",
+   "name": "Curve Creative Curl Wand Lockenstab 28–23 mm",
+   "farbe": "Schwarz",
+   "cats": [
+    "locken"
+   ],
+   "bild": "ghd-curve-creative.webp",
+   "note": "Konischer Lockenstab, der von 28 auf 23 mm schmaler wird: natürliche Locken, tiefe Wellen und Beach Waves.",
+   "aufsaetze": "Keine Aufsätze.",
+   "wofuer": "Natürliche Locken und Beach Waves, gut auch bei kürzerem Haar",
+   "tip": "Arbeitet mit 185 °C, hat eine kühle Spitze zum Festhalten und einen eingebauten Ständer."
+  },
+  {
+   "segment": "",
+   "brand": "ghd",
+   "name": "Chronos Curve Conical Wand Lockenstab 28–23 mm",
+   "farbe": "Schwarz",
+   "cats": [
+    "locken"
+   ],
+   "bild": "ghd-chronos-curve-conical.webp",
+   "note": "Die neuere Version des konischen Lockenstabs: Er passt die Hitze an, während du lockst, damit überall 185 °C ankommen.",
+   "aufsaetze": "Keine Aufsätze.",
+   "wofuer": "Lockere Wellen bis definierte Locken",
+   "tip": "Schaltet sich nach 20 Minuten ohne Nutzung von selbst aus."
+  },
+  {
+   "segment": "",
+   "brand": "Dyson",
+   "name": "Airwrap Co-anda2x Multi-Haarstyler und -Trockner Straight+Wavy",
+   "farbe": "Ceramic Pink/Rosé",
+   "cats": [
+    "multi"
+   ],
+   "bild": "dyson-airwrap-coanda2x.webp",
+   "note": "Multistyler, der die Strähne mit dem Luftstrom um den Lockenaufsatz wickelt. Erkennt den Aufsatz und stellt Temperatur und Luftstrom selbst ein.",
+   "aufsaetze": "6 Aufsätze: 30-mm-Lockenaufsatz, 40-mm-Lockenaufsatz, Bürste für sanftes Styling, runde Volumenbürste, Aufsatz zum schnellen Trocknen und AirSmooth2x-Glättaufsatz. Dazu eine Aufbewahrungsbox.",
+   "wofuer": "Föhnen, Glätten, Locken und Wellen, Volumen",
+   "tip": "Das Set Straight+Wavy ist für glattes bis welliges Haar gedacht. Für lockiges Haar gibt es ein eigenes Set (Curly+Coily)."
+  },
+  {
+   "segment": "",
+   "brand": "Dyson",
+   "name": "Corrale CoolShine Haarglätter",
+   "farbe": "Ceramic Pink/Rosé",
+   "cats": [
+    "glaett"
+   ],
+   "bild": "dyson-corrale-coolshine.webp",
+   "note": "Neues Glätteisen mit flexiblen Kupferplatten, die sich um die Strähne legen. Mit Wasser gefüllte Kühlrohre kühlen die Strähne direkt nach dem Glätten.",
+   "aufsaetze": "Keine Aufsätze.",
+   "wofuer": "Glätten mit weniger Hitzeschäden, auch Spitzen nach innen",
+   "tip": "Laut Dyson bis zu 29 % weniger Hitzeschäden durch die Kühlung. Nimm trotzdem immer Hitzeschutz."
+  }
  ]
 }

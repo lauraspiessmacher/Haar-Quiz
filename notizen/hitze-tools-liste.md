@@ -16,3 +16,15 @@
 
 Bilder: notizen/bilder/hitze-tools/original/*.jpg (Herstellerbild mit Aufsätzen), freigestellt *.webp. Daten: notizen/gesamtguide-bau/hitzetools.json.
 OFFEN: Lauras eigene Empfehlungen je Gerät („für welches Haar“, Hinweise), Multistyler-Hinweis zu Haartypen (nach dem Multistyler-Quiz).
+
+## Weitere Marken (09.10., Lauras Auswahl)
+Reihenfolge = Lauras Reihenfolge, **Dyson immer am Ende** (Feld ord im Build, sorter für tools). Neue Kategorie „Lockenstäbe“.
+- **Laifen Neo Special (Onyx Black)** – de.laifentech.com/products/laifen-neo-special-hochgeschwindigkeits-haartrockner. Lieferumfang: Glättungsdüse, Pflegedüse, 3 Pflegekapseln (ohne Öl). 58 °C Pflegemodus. Bild: Laifen-Variantenbild, IFA-/Computer-Bild-Siegel weiß übermalt.
+- **MOVA Aero C (Rosé, einzige Farbe)** – de.mova.tech/products/aero-c-haartrockner. QuickSmooth-Bürste, Diffusor, Styling-Konzentrator; 340 g; Luft unter 55 °C. Bild ohne Aufsätze (es gibt keins mit).
+- **Shark FlexStyle 5-in-1 (Beige/Stone, HD446SLEU)** – sharkninja.de. 2 Lockenaufsätze, Ovalbürste, Paddelbürste, Konzentrator, Diffusor, Aufbewahrungsbox. (Lauras „Flex Style 5-in-1“ und „Flex Styler Champagner/Beige“ = dasselbe Gerät.)
+- **Shark Glam Gold (HD6052SEU, Komplettset)** – Silki-Glätteisenaufsatz, Glossi-Warmluftbürste, Lockenaufsätze, Konzentrator, Diffusor, Tasche. (Es gibt auch HD6041SEU Gold mit weniger Aufsätzen, ohne Diffusor.)
+- **Shark SilkiPro Straight (Mokka-Silber, HT401EUSL)** – sanfter Kamm, Präzisionskamm, Breitzahnkamm, Tasche; Nass- und Trockenmodus.
+- **ghd Platinum+ (Schwarz)**, **ghd Chronos Max (Schwarz)**, **ghd Curve Creative Curl Wand 28–23 mm**, **ghd Chronos Curve Conical Wand 28–23 mm** – ghdhair.com blockiert; Bilder von otto.de-Suchkacheln, regissalons.co.uk, lookfantastic.com. Farbe Schwarz angenommen (Laura hat keine genannt).
+- **Dyson Airwrap Co-anda2x Straight+Wavy (Ceramic Pink/Rosé)** – dyson.de blockiert; Bild von otto.de (Bluetooth-Symbol entfernt). 6 Aufsätze laut MediaMarkt: 30-mm- und 40-mm-Lockenaufsatz, Bürste für sanftes Styling, runde Volumenbürste, Aufsatz schnelles Trocknen, AirSmooth2x.
+- **Dyson Corrale CoolShine (Ceramic Pink/Rosé)** – neu (IFA 2026), Kupferplatten + wassergefüllte Kühlrohre, laut Dyson bis zu 29 % weniger Hitzeschäden. Preis laut Laura 299 € (nicht genannt auf der Seite).
+OFFEN: Lauras Hinweise „für welches Haar“ je Gerät; Farbe bei ghd und Airwrap bestätigen lassen.
