@@ -340,3 +340,4 @@
 - Favorites Glossy: NEQI Diamond Glass Mirror Rinse raus (10 Produkte). Vorschau v153.
 - Favorites Für eine gesunde Kopfhaut: K18 Peptide Prep Detox Shampoo statt OGX ProGrowth + Peptide (INCI-Analyse in lauras-favorites.md). Vorschau v154.
 - Favorites neue Reihenfolge: Kopfhaut, Pre-Wash, Schuppen, Nährende Pflege, Glossy, Hitzeschutz, Volumen, Repair. Vorschau v155.
+- Favorites Kopfbereich: Steckbrief kompakter (14px, engere Zeilen), Wichtig-Kasten volle Breite unter Foto+Steckbrief; Desktop Text | Quiz machen | Zu den Produkten in einer Reihe, Handy Buttons unter dem Text. Vorschau v156.

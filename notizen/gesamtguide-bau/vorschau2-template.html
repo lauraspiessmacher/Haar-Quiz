@@ -68,16 +68,18 @@ main{padding-bottom:60px}
 
 /* ---------- Produkte: Kopf + Suche ---------- */
 /* Lauras Favorites */
-.favtop{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:36px;align-items:start;padding:18px 0 10px}
+.favtop{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px 36px;align-items:start;padding:18px 0 10px}
 .favfoto{margin:0}.favfoto img{width:100%;height:auto;border-radius:6px;display:block}
 .favfoto figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .favtop h2,.favsec h2{font-size:clamp(24px,3.4vw,32px);margin:0 0 12px}
-.favprof{margin:0;display:grid;gap:10px}
-.favrow{display:grid;grid-template-columns:150px 1fr;gap:14px;border-bottom:1px solid var(--line);padding-bottom:10px}
-.favrow dt{font-weight:600;font-size:14px}.favrow dd{margin:0;color:var(--muted)}
+.favtop h2{margin-bottom:8px}
+.favprof{margin:0;display:grid;gap:7px}
+.favrow{display:grid;grid-template-columns:130px 1fr;gap:14px;border-bottom:1px solid var(--line);padding-bottom:7px;font-size:14px;line-height:1.45}
+.favrow dt{font-weight:600;font-size:13px}.favrow dd{margin:0;color:var(--muted)}
 .favleer{color:var(--muted);font-style:italic}
-.favnote{margin-top:18px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px}
-.favbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.favnote{grid-column:1/-1;display:flex;align-items:center;gap:22px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:14px;line-height:1.5}
+.favnote p{margin:0;flex:1}
+.favbtns{display:flex;gap:10px;flex:0 0 auto}
 .favsec{border-top:1px solid var(--line);padding:26px 0 8px}
 .favtxt{color:var(--muted);margin:-4px 0 12px}
 .favlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
@@ -88,7 +90,7 @@ main{padding-bottom:60px}
 .favseg{font-family:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:16px 0 10px;font-weight:600}
 .favart{display:block;font-size:11px;color:var(--muted);margin-bottom:2px}
 .favitem .brand{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.favitem .mname{display:block;font-family:var(--serif);font-size:18px;line-height:1.2}
-@media (max-width:700px){ .favtop{grid-template-columns:1fr;gap:22px} .favfoto{max-width:280px} .favrow{grid-template-columns:1fr;gap:2px} }
+@media (max-width:700px){ .favtop{grid-template-columns:1fr;gap:22px} .favfoto{max-width:280px} .favrow{grid-template-columns:1fr;gap:2px} .favnote{display:block} .favbtns{flex-wrap:wrap;margin-top:12px} }
 .intro{padding:26px 0 6px}
 .intro h1{font-size:clamp(32px,6vw,46px)}
 .intro p{color:var(--muted);margin:6px 0 0;max-width:60ch}
@@ -1111,9 +1113,9 @@ function renderFav(){
     return groups.map(([s,l]) => `<h3 class="favseg">${s}</h3><ul class="favlist">${l.map(item).join("")}</ul>`).join("") + (rest.length ? `<ul class="favlist">${rest.map(item).join("")}</ul>` : ""); };
   box.innerHTML = `<div class="favtop">
       ${foto ? `<figure class="favfoto"><img src="${foto.src}" alt="Laura mit langen braunen Haaren und Wellen vom Lockenstab"><figcaption>Auf dem Foto: Wellen mit dem Lockenstab</figcaption></figure>` : ""}
-      <div><h2>Mein Haar</h2><dl class="favprof">${prof}</dl>
-      <div class="favnote"><b>Wichtig:</b> Das sind meine Produkte für mein Haar. Sie müssen nicht zu euren Haaren passen. Was zu euren Haaren passt, findet ihr in den Quizzen und bei den Produkten.
-        <div class="favbtns"><button type="button" class="btn dark" data-favview="quiz">Quiz machen</button><button type="button" class="btn" data-favview="produkte">Zu den Produkten</button></div></div></div>
+      <div><h2>Mein Haar</h2><dl class="favprof">${prof}</dl></div>
+      <div class="favnote"><p><b>Wichtig:</b> Das sind meine Produkte für mein Haar. Sie müssen nicht zu euren Haaren passen. Was zu euren Haaren passt, findet ihr in den Quizzen und bei den Produkten.</p>
+        <div class="favbtns"><button type="button" class="btn dark" data-favview="quiz">Quiz machen</button><button type="button" class="btn" data-favview="produkte">Zu den Produkten</button></div></div>
     </div>
     ${FAV.abschnitte.map(a => `<section class="favsec" id="fav-${a.id}"><h2>${esc(a.titel)}</h2>${a.text?`<p class="favtxt">${esc(a.text)}</p>`:""}
       ${a.produkte.length ? list(a) : `<p class="favleer">Hier kommen bald meine Produkte rein.</p>`}</section>`).join("")}`;
