@@ -236,6 +236,17 @@
      "type": "oel",
      "brand": "OGX",
      "name": "Coconut Miracle Oil"
+    },
+    {
+     "type": "oel",
+     "brand": "Pantene Pro-V",
+     "name": "Hair Glowtox Öl"
+    },
+    {
+     "type": "leavein",
+     "brand": "OGX",
+     "name": "Overnight Serum Rescue Fusions",
+     "wofuer": "Als Overnight-Treatment vor der Haarwäsche"
     }
    ]
   },
