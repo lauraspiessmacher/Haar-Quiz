@@ -39,3 +39,9 @@ Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder 
 - Wella Professionals Ultimate Smooth Mask – im Guide.
 - Oribe Hair Alchemy Resilience Conditioner – NEU im Conditioner-Guide (High-End, normal–dick). INCI oribe.com.
 - Oribe Hair Alchemy Fortifying Treatment Serum – im Guide (Leave-in).
+- (Gesund und genährt, ergänzt) OGX Coconut Miracle Oil Conditioner + Coconut Miracle Oil Haarkur – im Guide.
+
+## Meine Pre-Wash-Routine (09.10.)
+- OGX Coconut Miracle Oil (Haaröl) – im Guide.
+- L'Oréal Elvital Öl Magique Haarmaske – dm 3122669 – NEU im Masken-Guide (normal–sehr dick, silikonfrei, nährend). INCI: Aqua, Cetearyl Alcohol, Stearamidopropyl Dimethylamine, Isopropyl Myristate, Cetyl Esters, Parfum, Sunflower Seed Oil, Shea Butter, … Coconut Oil, …, Camellia Japonica Seed Oil … Bild dm (2. Bild, freigestellt).
+- L'Oréal Paris Elvital Öl Magique (Haaröl) – im Guide.

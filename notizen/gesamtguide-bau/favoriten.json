@@ -159,6 +159,16 @@
      "type": "leavein",
      "brand": "Oribe",
      "name": "Hair Alchemy Fortifying Treatment Serum"
+    },
+    {
+     "type": "conditioner",
+     "brand": "OGX",
+     "name": "Coconut Miracle Oil Conditioner"
+    },
+    {
+     "type": "maske",
+     "brand": "OGX",
+     "name": "Coconut Miracle Oil Haarkur"
     }
    ]
   },
@@ -172,7 +182,23 @@
    "id": "prewash",
    "titel": "Meine Pre-Wash-Routine",
    "text": "Das benutze ich vor der Haarwäsche.",
-   "produkte": []
+   "produkte": [
+    {
+     "type": "oel",
+     "brand": "OGX",
+     "name": "Coconut Miracle Oil"
+    },
+    {
+     "type": "maske",
+     "brand": "L'Oréal Elvital",
+     "name": "Öl Magique Haarmaske"
+    },
+    {
+     "type": "oel",
+     "brand": "L'Oréal Paris Elvital",
+     "name": "Öl Magique"
+    }
+   ]
   },
   {
    "id": "kopfhaut",
