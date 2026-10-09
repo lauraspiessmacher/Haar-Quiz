@@ -338,3 +338,4 @@
 - Favorites: Gisou Honey Milk → Hitzeschutz (4 Produkte); Nährende Pflege: Balea Brilliant Blond statt Oribe Hair Alchemy Serum (10 Produkte). Vorschau v151.
 - Favorites Für mehr Volumen + NEQI Haarserum Opulent Oil (7 Produkte). Vorschau v152.
 - Favorites Glossy: NEQI Diamond Glass Mirror Rinse raus (10 Produkte). Vorschau v153.
+- Favorites Für eine gesunde Kopfhaut: K18 Peptide Prep Detox Shampoo statt OGX ProGrowth + Peptide (INCI-Analyse in lauras-favorites.md). Vorschau v154.

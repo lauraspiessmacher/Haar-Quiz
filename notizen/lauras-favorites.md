@@ -65,7 +65,7 @@ Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder 
 - (Pre-Wash, ergänzt 09.10.) Pantene Pro-V Hair Glowtox Öl (dm 3153515) – im Guide (Öl). OGX Overnight Serum Rescue Fusions (dm 3147305) – im Guide (Leave-in), Zusatzzeile „Als Overnight-Treatment vor der Haarwäsche“.
 
 ## Für eine gesunde Kopfhaut (09.10.)
-Alle im Guide: Dejan Garz The Sensitive (Shampoo), Dejan Garz Haarserum The Sensitive Scalp, OGX ProGrowth + Peptide (Shampoo), head&shoulders Derma x Pro Scalp Reset Pre-Shampoo (= Lauras „Kopfhautpeeling von Head & Shoulders“), The Ordinary Multi-Peptide Serum for Hair Density, The Ordinary Glycolic Acid 7% Exfoliating Toner (= „Kopfhautpeeling von The Ordinary“, Zusatzzeile „Als Kopfhautpeeling“).
+Alle im Guide: Dejan Garz The Sensitive (Shampoo), Dejan Garz Haarserum The Sensitive Scalp, K18 Peptide Prep Detox Shampoo (ersetzt am 09.10. das OGX ProGrowth + Peptide), head&shoulders Derma x Pro Scalp Reset Pre-Shampoo (= Lauras „Kopfhautpeeling von Head & Shoulders“), The Ordinary Multi-Peptide Serum for Hair Density, The Ordinary Glycolic Acid 7% Exfoliating Toner (= „Kopfhautpeeling von The Ordinary“, Zusatzzeile „Als Kopfhautpeeling“).
 
 ## Leave-in und Hitzeschutz (09.10.)
 Alle im Guide (Leave-in): Pantene Leave-In Spray Glowtox, OGX Overnight Serum Rescue Fusions, Balea Professional Leave-In Serum Brilliant Blond Hair Sealer (= Lauras „Bullion Blond Serum“), L'Oréal Elvital Leave-In Serum Glycolic Gloss Spiegelglanz (= „Glycolic Gloss Leave-in Spray“, wird gesprüht), L'Oréal Elvital Öl Magique Midnight Serum, Kérastase Nutritive 8H Magic Night Serum (= „Night Serum“), Kérastase Gloss Absolu Frizz-Glaze Cream (= „Gloss Glaze Leave-in Cream“), Gisou Honey Milk Active Repair Leave-In Conditioner Mist (= „Leave-in Spray“), Oribe Hair Alchemy Fortifying Treatment Serum.
@@ -79,3 +79,8 @@ Alle im Guide (Leave-in): Pantene Leave-In Spray Glowtox, OGX Overnight Serum Re
 - (09.10.) Gisou Honey Milk Mist von Nährende Pflege → Hitzeschutz (Hitzeschutz 230 °C laut Guide). Nährende Pflege: Oribe Hair Alchemy Serum raus, dafür Balea Professional Leave-In Serum Brilliant Blond Hair Sealer.
 - (Für mehr Volumen, 09.10.) NEQI Haarserum Opulent Oil (= Lauras „NEQI Leave-in-Serum“, einziges NEQI-Serum bei dm) – im Guide (Leave-in).
 - (Glossy, 09.10.) NEQI Diamond Glass Mirror Rinse raus (bleibt im Guide). Glossy jetzt 10 Produkte.
+
+### K18 Peptide Prep Detox Shampoo (09.10.)
+INCI (mehrere Händler gleich, k18hair.com nicht auslesbar): Aqua, Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Hydroxysultaine, Salicylic Acid, Charcoal Powder, sh-Oligopeptide-78, Panthenol, Glycerin, Sodium Phytate, Guar Hydroxypropyltrimonium Chloride, Caprylyl Glycol, Caprylhydroxamic Acid, Citric Acid, Potassium Hydroxide, Sodium Hydroxide, Parfum, Benzyl Salicylate, Limonene.
+Einordnung: starkes Tensid (≈ SLES), Salicylsäure weit vorne = wirksam für Kopfhaut/Talg, 1 Kalkbinder (Phytat), Guar-Polymer legt leichten Film. Gegen Coco & Eve: besser für Kopfhaut/Talg, schwächer bei Kalk/„komplett blank“. Achtung: Lily's Pharmacy (IE) zeigt eine andere Liste ohne Salicylsäure/Kohle (Fehler oder neue Rezeptur?) — Laura soll auf der Flasche nachschauen.
+Laura: in Favorites „Für eine gesunde Kopfhaut“ statt OGX ProGrowth + Peptide.
