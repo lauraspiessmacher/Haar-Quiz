@@ -61,3 +61,5 @@ Diese Regeln gelten überall auf der Seite: Quizze, Routine-Check, Wissen, Produ
 - Keine Preise in Produkttexten nennen (Laura, 08.10.).
 
 - Hitze-Tools: Dyson immer ans Ende sortieren (Laura, 09.10.).
+
+- Haarbürsten: „Glanz“ nur bei Wildschweinborsten versprechen, bei Plastikbürsten unrealistisch (Laura, 09.10.).

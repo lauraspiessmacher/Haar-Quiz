@@ -1116,7 +1116,7 @@ function itemHtml(p, badge){
   }
   return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
-    <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools"?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
+    <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools" && p.type!=="buerste"?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
 }
 
 /* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */
