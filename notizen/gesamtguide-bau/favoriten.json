@@ -169,9 +169,24 @@
      "name": "Oil Reflections Luminous Reboost Mask"
     },
     {
+     "type": "shampoo",
+     "brand": "Redken",
+     "name": "All Soft Shampoo"
+    },
+    {
      "type": "conditioner",
      "brand": "Redken",
      "name": "All Soft Conditioner"
+    },
+    {
+     "type": "maske",
+     "brand": "Redken",
+     "name": "All Soft Heavy Cream"
+    },
+    {
+     "type": "leavein",
+     "brand": "Redken",
+     "name": "All Soft Moisture Restore Leave-In"
     },
     {
      "type": "leavein",

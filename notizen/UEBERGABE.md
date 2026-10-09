@@ -330,3 +330,4 @@
 - Favorites „Leave-in und Hitzeschutz“ gefüllt (9 Leave-ins, alle aus dem Guide; Zuordnung der Namen in lauras-favorites.md). Vorschau v143.
 - Favorites: „Gesund und genährt“ heißt jetzt „Nährende Pflege“ (id bleibt genaehrt). Oil Reflections Luminous Instant Conditioner (NEU im Guide) statt Ultimate Smooth Conditioner, Oribe Gold Lust Night Crème statt Hair Alchemy Serum. Vorschau v144.
 - Favorites Nährende Pflege: Redken All Soft Conditioner (NEU im Guide) statt Oribe Hair Alchemy Conditioner. Vorschau v145.
+- Favorites Nährende Pflege: komplette Redken All Soft Reihe (Shampoo, Conditioner, Heavy Cream, Moisture Restore Leave-In). Jetzt 11 Produkte. Vorschau v146.
