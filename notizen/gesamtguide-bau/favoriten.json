@@ -94,11 +94,6 @@
      "name": "Gloss Absolu Insta Glaze Conditioner"
     },
     {
-     "type": "leavein",
-     "brand": "Kérastase",
-     "name": "Gloss Absolu Frizz-Glaze Cream"
-    },
-    {
      "type": "oel",
      "brand": "Kérastase",
      "name": "Gloss Absolu Glaze Drops"
@@ -336,6 +331,11 @@
      "type": "leavein",
      "brand": "L'Oréal Elvital",
      "name": "Leave-In Serum Glycolic Gloss Spiegelglanz"
+    },
+    {
+     "type": "leavein",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Anti-Frizz Glaze Milk"
     }
    ]
   }
