@@ -333,3 +333,4 @@
 - Favorites Nährende Pflege: komplette Redken All Soft Reihe (Shampoo, Conditioner, Heavy Cream, Moisture Restore Leave-In). Jetzt 11 Produkte. Vorschau v146.
 - Favorites Nährende Pflege: von Redken All Soft nur noch das Shampoo (Conditioner/Maske/Leave-in nur im Guide). 8 Produkte. Vorschau v147.
 - Favorites Leave-in und Hitzeschutz: Elvital Midnight Serum + OGX Overnight Serum raus (OGX bleibt in Pre-Wash). 7 Produkte. Vorschau v148.
+- Favorites umsortiert: Abschnitt „Hitzeschutz“ (2 Produkte), 3 Seren/Mist nach Nährende Pflege (jetzt 11), Frizz-Glaze Cream nach Glossy, Balea Blond raus, Glossy ohne Redken Glass Gloss + NEQI Gloss Glaze (jetzt 12). Vorschau v149.

@@ -61,11 +61,6 @@
      "name": "Diamond Glass Mirror Rinse"
     },
     {
-     "type": "maske",
-     "brand": "NEQI",
-     "name": "Treatment Treasures Gloss Glaze"
-    },
-    {
      "frei": true,
      "segment": "Drogerie",
      "brand": "Balea Professional",
@@ -99,14 +94,14 @@
      "name": "Gloss Absolu Insta Glaze Conditioner"
     },
     {
+     "type": "leavein",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Frizz-Glaze Cream"
+    },
+    {
      "type": "oel",
      "brand": "Kérastase",
      "name": "Gloss Absolu Glaze Drops"
-    },
-    {
-     "type": "maske",
-     "brand": "Redken",
-     "name": "Acidic Color Gloss Activated Glass Gloss Treatment"
     }
    ]
   },
@@ -197,6 +192,21 @@
      "type": "oel",
      "brand": "L'Oréal Paris Elvital",
      "name": "Öl Magique"
+    },
+    {
+     "type": "leavein",
+     "brand": "Kérastase",
+     "name": "Nutritive 8H Magic Night Serum"
+    },
+    {
+     "type": "leavein",
+     "brand": "Gisou",
+     "name": "Honey Milk Active Repair Leave-In Conditioner Mist"
+    },
+    {
+     "type": "leavein",
+     "brand": "Oribe",
+     "name": "Hair Alchemy Fortifying Treatment Serum"
     }
    ]
   },
@@ -314,8 +324,8 @@
   },
   {
    "id": "leavein",
-   "titel": "Leave-in und Hitzeschutz",
-   "text": "Das benutze ich nach der Haarwäsche und vor jeder Hitze.",
+   "titel": "Hitzeschutz",
+   "text": "Das benutze ich vor jeder Hitze.",
    "produkte": [
     {
      "type": "leavein",
@@ -324,33 +334,8 @@
     },
     {
      "type": "leavein",
-     "brand": "Balea Professional",
-     "name": "Leave-In Serum Brilliant Blond Hair Sealer"
-    },
-    {
-     "type": "leavein",
      "brand": "L'Oréal Elvital",
      "name": "Leave-In Serum Glycolic Gloss Spiegelglanz"
-    },
-    {
-     "type": "leavein",
-     "brand": "Kérastase",
-     "name": "Nutritive 8H Magic Night Serum"
-    },
-    {
-     "type": "leavein",
-     "brand": "Kérastase",
-     "name": "Gloss Absolu Frizz-Glaze Cream"
-    },
-    {
-     "type": "leavein",
-     "brand": "Gisou",
-     "name": "Honey Milk Active Repair Leave-In Conditioner Mist"
-    },
-    {
-     "type": "leavein",
-     "brand": "Oribe",
-     "name": "Hair Alchemy Fortifying Treatment Serum"
     }
    ]
   }
