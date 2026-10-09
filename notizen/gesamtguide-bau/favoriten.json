@@ -316,7 +316,53 @@
    "id": "leavein",
    "titel": "Leave-in und Hitzeschutz",
    "text": "Das benutze ich nach der Haarwäsche und vor jeder Hitze.",
-   "produkte": []
+   "produkte": [
+    {
+     "type": "leavein",
+     "brand": "Pantene Pro-V",
+     "name": "Leave-In Spray Glowtox"
+    },
+    {
+     "type": "leavein",
+     "brand": "OGX",
+     "name": "Overnight Serum Rescue Fusions"
+    },
+    {
+     "type": "leavein",
+     "brand": "Balea Professional",
+     "name": "Leave-In Serum Brilliant Blond Hair Sealer"
+    },
+    {
+     "type": "leavein",
+     "brand": "L'Oréal Elvital",
+     "name": "Leave-In Serum Glycolic Gloss Spiegelglanz"
+    },
+    {
+     "type": "leavein",
+     "brand": "L'Oréal Elvital",
+     "name": "Öl Magique Midnight Serum"
+    },
+    {
+     "type": "leavein",
+     "brand": "Kérastase",
+     "name": "Nutritive 8H Magic Night Serum"
+    },
+    {
+     "type": "leavein",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Frizz-Glaze Cream"
+    },
+    {
+     "type": "leavein",
+     "brand": "Gisou",
+     "name": "Honey Milk Active Repair Leave-In Conditioner Mist"
+    },
+    {
+     "type": "leavein",
+     "brand": "Oribe",
+     "name": "Hair Alchemy Fortifying Treatment Serum"
+    }
+   ]
   }
  ]
 }

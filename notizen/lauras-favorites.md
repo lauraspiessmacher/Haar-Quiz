@@ -66,3 +66,6 @@ Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder 
 
 ## Für eine gesunde Kopfhaut (09.10.)
 Alle im Guide: Dejan Garz The Sensitive (Shampoo), Dejan Garz Haarserum The Sensitive Scalp, OGX ProGrowth + Peptide (Shampoo), head&shoulders Derma x Pro Scalp Reset Pre-Shampoo (= Lauras „Kopfhautpeeling von Head & Shoulders“), The Ordinary Multi-Peptide Serum for Hair Density, The Ordinary Glycolic Acid 7% Exfoliating Toner (= „Kopfhautpeeling von The Ordinary“, Zusatzzeile „Als Kopfhautpeeling“).
+
+## Leave-in und Hitzeschutz (09.10.)
+Alle im Guide (Leave-in): Pantene Leave-In Spray Glowtox, OGX Overnight Serum Rescue Fusions, Balea Professional Leave-In Serum Brilliant Blond Hair Sealer (= Lauras „Bullion Blond Serum“), L'Oréal Elvital Leave-In Serum Glycolic Gloss Spiegelglanz (= „Glycolic Gloss Leave-in Spray“, wird gesprüht), L'Oréal Elvital Öl Magique Midnight Serum, Kérastase Nutritive 8H Magic Night Serum (= „Night Serum“), Kérastase Gloss Absolu Frizz-Glaze Cream (= „Gloss Glaze Leave-in Cream“), Gisou Honey Milk Active Repair Leave-In Conditioner Mist (= „Leave-in Spray“), Oribe Hair Alchemy Fortifying Treatment Serum.
