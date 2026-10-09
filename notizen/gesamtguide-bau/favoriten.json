@@ -54,6 +54,12 @@
    "produkte": []
   },
   {
+   "id": "repair",
+   "titel": "Repair",
+   "text": "Wenn meine Haare eine kleine Stärkung brauchen. Dabei greife ich eher zu Produkten mit Proteinen als zu Bond-Repair.",
+   "produkte": []
+  },
+  {
    "id": "prewash",
    "titel": "Meine Pre-Wash-Routine",
    "text": "Das benutze ich vor der Haarwäsche.",
