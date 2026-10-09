@@ -55,6 +55,7 @@
 - Schatten: rembg (isnet-general-use) mit eigener Kontur schneiden (Schnittmenge) entfernt Schatten; bei weißen Deckeln auf Weiß Vereinigung nehmen.
 
 ## Offen
+- ZENTRALE TO-DO-LISTE: notizen/TODO.md (Laura fragt „Haben wir noch To-Dos?“ → diese Datei).
 - Masken-Guide: Regel für Kaputte Haare – einzelne Aminosäuren, die vermutlich nur den pH einstellen (Glutaminsäure bei Pantene/Herbal Essences, Arginin bei Fructis Locken), zählen NICHT. Mit Laura abstimmen, falls sie das anders sieht.
 - Shampoo-Guide: fertig, 162 Shampoos (3× neboa von Rossmann ergänzt), alle mit Bild.
 - Rossmann-Bilder kamen als Screenshots von Laura (je Screenshot eine Nachricht, sonst kommen sie nur als Vorschau an).
