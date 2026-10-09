@@ -1086,10 +1086,11 @@ function itemHtml(p, badge){
       else body += `<div class="line"><b>Haardicke:</b> ${esc(h[0])}</div><div class="line"><b>Haarzustand:</b> ${esc(h[1])}</div>`; }
     { const t = p.cats.map(c=>label("shampoo",c)).join(", "); body += `<span class="also${t.length>34?" long":""}">Passt zu: ${t}</span>`; }
   } else if(p.type==="tools"){
+    /* Hitze-Tools kurz und knapp (Laura 09.10.): Aufsätze, Gewicht, Leistung/Luftstrom bzw. Temperatur, Gut zu wissen */
     if(p.aufsaetze) body += `<div class="line"><b>Aufsätze:</b> ${esc(p.aufsaetze)}</div>`;
-    if(p.wofuer) body += `<div class="line"><b>Wofür:</b> ${esc(p.wofuer)}</div>`;
-    if(p.nass) body += `<div class="line"><b>Nass oder trocken:</b> ${esc(p.nass)}</div>`;
-    if(p.farbe) body += `<div class="line"><b>Farbe:</b> ${esc(p.farbe)}</div>`;
+    if(p.gewicht) body += `<div class="line"><b>Gewicht:</b> ${esc(p.gewicht)}</div>`;
+    if(p.leistung || p.luft) body += `<div class="line"><b>Leistung:</b> ${esc([p.leistung, p.luft && "Luftstrom " + p.luft].filter(Boolean).join(" · "))}</div>`;
+    if(p.temp) body += `<div class="line"><b>Temperatur:</b> ${esc(p.temp)}</div>`;
     if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
   } else if(p.type==="buerste"){
     if(p.hair) body += `<div class="line"><b>Für dein Haar:</b> ${esc(p.hair)}</div>`;
@@ -1115,7 +1116,7 @@ function itemHtml(p, badge){
   }
   return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
-    <div class="name">${esc(p.name)}</div>${p.note?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
+    <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools"?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
 }
 
 /* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */
