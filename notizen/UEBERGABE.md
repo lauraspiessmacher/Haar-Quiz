@@ -337,3 +337,4 @@
 - Favorites: Hitzeschutz + Kérastase Gloss Absolu Anti-Frizz Glaze Milk (3 Produkte); Glossy ohne Frizz-Glaze Cream (11). Vorschau v150.
 - Favorites: Gisou Honey Milk → Hitzeschutz (4 Produkte); Nährende Pflege: Balea Brilliant Blond statt Oribe Hair Alchemy Serum (10 Produkte). Vorschau v151.
 - Favorites Für mehr Volumen + NEQI Haarserum Opulent Oil (7 Produkte). Vorschau v152.
+- Favorites Glossy: NEQI Diamond Glass Mirror Rinse raus (10 Produkte). Vorschau v153.

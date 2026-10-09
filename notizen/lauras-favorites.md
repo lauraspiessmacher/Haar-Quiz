@@ -78,3 +78,4 @@ Alle im Guide (Leave-in): Pantene Leave-In Spray Glowtox, OGX Overnight Serum Re
 - (09.10.) Hitzeschutz + Kérastase Gloss Absolu Anti-Frizz Glaze Milk (= „Gloss Absolu Leave-in Spray“, Hitzeschutz 230 °C, im Guide). Glossy: Kérastase Gloss Absolu Frizz-Glaze Cream wieder raus.
 - (09.10.) Gisou Honey Milk Mist von Nährende Pflege → Hitzeschutz (Hitzeschutz 230 °C laut Guide). Nährende Pflege: Oribe Hair Alchemy Serum raus, dafür Balea Professional Leave-In Serum Brilliant Blond Hair Sealer.
 - (Für mehr Volumen, 09.10.) NEQI Haarserum Opulent Oil (= Lauras „NEQI Leave-in-Serum“, einziges NEQI-Serum bei dm) – im Guide (Leave-in).
+- (Glossy, 09.10.) NEQI Diamond Glass Mirror Rinse raus (bleibt im Guide). Glossy jetzt 10 Produkte.
