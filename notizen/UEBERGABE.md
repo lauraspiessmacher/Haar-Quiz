@@ -320,3 +320,4 @@
 - Favorites: Elvital Öl Magique Haarmaske + Öl Magique Haaröl von Pre-Wash nach „Gesund und genährt“ verschoben (Laura). Pre-Wash = nur OGX Coconut Miracle Oil. Vorschau v133.
 - Favorites Gesund und genährt: OGX Rescue Fusions Intense Hydration Recovery Haarmaske ergänzt (NEU im Masken-Guide). Jetzt 8 Produkte (Drogerie 4, High-End 4). Vorschau v134.
 - Favorites Repair = Pantene Repair & Care 3 Minute Miracle Spülung (NEU im Conditioner-Guide, Bild Amazon) + Pantene Miracles Bond Repair Intensive Haarmaske (NEU im Masken-Guide, dm 1336162, wirkung r=bond wie classify-Regel kaputt+Bond im Namen). Vorschau v135.
+- Favorites Repair + Wella Ultimate Repair Mask + Ultimate Repair Miracle Hair Rescue (stärkste Repair-Formulierung der Leave-ins, Begründung in lauras-favorites.md). Vorschau v136.
