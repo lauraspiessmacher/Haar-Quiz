@@ -85,6 +85,8 @@ main{padding-bottom:60px}
 .favitem img,.favnoimg{width:56px;height:90px;object-fit:contain;flex:0 0 56px}
 .favitem p{margin:6px 0;font-size:14px;color:var(--muted)}
 .favpill{white-space:nowrap}
+.favseg{font-family:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:16px 0 10px;font-weight:600}
+.favart{display:block;font-size:11px;color:var(--muted);margin-bottom:2px}
 .favitem .brand{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.favitem .mname{display:block;font-family:var(--serif);font-size:18px;line-height:1.2}
 @media (max-width:700px){ .favtop{grid-template-columns:1fr;gap:22px} .favfoto{max-width:280px} .favrow{grid-template-columns:1fr;gap:2px} }
 .intro{padding:26px 0 6px}
@@ -1100,9 +1102,13 @@ const FAVSET = new Set(FAV.abschnitte.filter(a => !a.test).flatMap(a => a.produk
 function renderFav(){
   const box = document.getElementById("favBox"), foto = document.querySelector(".hero .photo img");
   const prof = FAV.profil.map(([k,v]) => `<div class="favrow"><dt>${esc(k)}</dt><dd>${v ? esc(v) : `<span class="favleer">kommt noch</span>`}</dd></div>`).join("");
-  const item = x => { const p = favFind(x);
-    if(p) return `<li class="favitem">${p.img?`<img src="${p.img}" alt="" loading="lazy">`:`<span class="favnoimg"></span>`}<div><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span>${x.wofuer?`<p>${esc(x.wofuer)}</p>`:""}<button type="button" class="linkbtn" data-favgo="${esc(p.mk)}">Zur Einordnung <span aria-hidden="true">→</span></button></div></li>`;
-    return `<li class="favitem"><span class="favnoimg"></span><div><span class="mname">${esc(x.frei||"")}</span>${x.wofuer?`<p>${esc(x.wofuer)}</p>`:""}</div></li>`; };
+  /* Produkte aus dem Guide verlinken auf ihre Karte, eigene Einträge (frei) zeigen Bild, Marke, Name und Produktart */
+  const item = x => { const p = favFind(x), y = p || x, art = p ? (T[p.type] ? T[p.type].label : "") : (x.art||"");
+    return `<li class="favitem">${y.img?`<img src="${y.img}" alt="" loading="lazy">`:`<span class="favnoimg"></span>`}<div>${art?`<span class="favart">${esc(art)}</span>`:""}<span class="brand">${esc(y.brand||"")}</span><span class="mname">${esc(y.name||"")}</span>${x.wofuer?`<p>${esc(x.wofuer)}</p>`:""}${p?`<button type="button" class="linkbtn" data-favgo="${esc(p.mk)}">Zur Einordnung <span aria-hidden="true">→</span></button>`:""}</div></li>`; };
+  const seg = x => (favFind(x) || x).segment || "";
+  const list = a => { const groups = ["Drogerie","High-End"].map(s => [s, a.produkte.filter(x => seg(x)===s)]).filter(g => g[1].length), rest = a.produkte.filter(x => !["Drogerie","High-End"].includes(seg(x)));
+    if(groups.length < 2) return `<ul class="favlist">${a.produkte.map(item).join("")}</ul>`;
+    return groups.map(([s,l]) => `<h3 class="favseg">${s}</h3><ul class="favlist">${l.map(item).join("")}</ul>`).join("") + (rest.length ? `<ul class="favlist">${rest.map(item).join("")}</ul>` : ""); };
   box.innerHTML = `<div class="favtop">
       ${foto ? `<figure class="favfoto"><img src="${foto.src}" alt="Laura mit langen braunen Haaren und Wellen vom Lockenstab"><figcaption>Auf dem Foto: Wellen mit dem Lockenstab</figcaption></figure>` : ""}
       <div><h2>Mein Haar</h2><dl class="favprof">${prof}</dl>
@@ -1110,7 +1116,7 @@ function renderFav(){
         <div class="favbtns"><button type="button" class="btn dark" data-favview="quiz">Quiz machen</button><button type="button" class="btn" data-favview="produkte">Zu den Produkten</button></div></div></div>
     </div>
     ${FAV.abschnitte.map(a => `<section class="favsec" id="fav-${a.id}"><h2>${esc(a.titel)}</h2>${a.text?`<p class="favtxt">${esc(a.text)}</p>`:""}
-      ${a.produkte.length ? `<ul class="favlist">${a.produkte.map(item).join("")}</ul>` : `<p class="favleer">Hier kommen bald meine Produkte rein.</p>`}</section>`).join("")}`;
+      ${a.produkte.length ? list(a) : `<p class="favleer">Hier kommen bald meine Produkte rein.</p>`}</section>`).join("")}`;
   box.querySelectorAll("[data-favview]").forEach(b => b.onclick = () => { state.view = b.dataset.favview; render(); window.scrollTo({top:0}); });
   box.querySelectorAll("[data-favgo]").forEach(b => b.onclick = () => { const p = ALL.find(x => x.mk===b.dataset.favgo); if(!p) return;
     state.view = "produkte"; state.type = p.type; state.cat = "alle"; state.seg = "alle"; state.q = p.brand + " " + p.name; q.value = state.q; render(); window.scrollTo({top:0}); });

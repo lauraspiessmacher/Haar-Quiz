@@ -39,7 +39,88 @@
    "id": "glossy",
    "titel": "Für glossy Haare",
    "text": "Diese Produkte nehme ich, wenn der Fokus auf Glanz liegt.",
-   "produkte": []
+   "produkte": [
+    {
+     "frei": true,
+     "segment": "Drogerie",
+     "brand": "L'Oréal Paris Elvital",
+     "name": "Glycolic Gloss Haarkur 5 Minuten Haar-Laminierung",
+     "art": "Haarkur",
+     "bild": "elvital-laminierung.webp"
+    },
+    {
+     "type": "conditioner",
+     "brand": "L'Oréal Paris Elvital",
+     "name": "Glycolic Gloss Spiegelglanz Conditioner"
+    },
+    {
+     "frei": true,
+     "segment": "Drogerie",
+     "brand": "NEQI",
+     "name": "Diamond Glass Haarmaske",
+     "art": "Haarmaske",
+     "bild": "neqi-diamond-glass-maske.webp"
+    },
+    {
+     "type": "conditioner",
+     "brand": "NEQI",
+     "name": "Diamond Glass Mirror Rinse"
+    },
+    {
+     "frei": true,
+     "segment": "Drogerie",
+     "brand": "NEQI",
+     "name": "Treatment Treasures Gloss Glaze",
+     "art": "Haarkur",
+     "bild": "neqi-gloss-glaze.webp"
+    },
+    {
+     "frei": true,
+     "segment": "Drogerie",
+     "brand": "Balea Professional",
+     "name": "Glow & Shine Finishing Spray",
+     "art": "Finishing Spray",
+     "bild": "balea-glow-shine-finishing.webp"
+    },
+    {
+     "type": "oel",
+     "brand": "NEQI",
+     "name": "Haaröl Diamond Glass"
+    },
+    {
+     "type": "oel",
+     "brand": "Dejan Garz",
+     "name": "Violet Hair Oil The Britney"
+    },
+    {
+     "type": "shampoo",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Bain Crème Hydra-Glaze"
+    },
+    {
+     "type": "maske",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Masque Crème Hydra-Glaze"
+    },
+    {
+     "frei": true,
+     "segment": "High-End",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Insta Glaze Conditioner",
+     "art": "Conditioner",
+     "bild": "kerastase-insta-glaze.webp"
+    },
+    {
+     "type": "oel",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Glaze Drops"
+    },
+    {
+     "type": "leavein",
+     "brand": "Redken",
+     "name": "Acidic Color Gloss Heat Protection Treatment"
+    }
+   ]
   },
   {
    "id": "volumen",
