@@ -195,13 +195,8 @@
     },
     {
      "type": "leavein",
-     "brand": "Gisou",
-     "name": "Honey Milk Active Repair Leave-In Conditioner Mist"
-    },
-    {
-     "type": "leavein",
-     "brand": "Oribe",
-     "name": "Hair Alchemy Fortifying Treatment Serum"
+     "brand": "Balea Professional",
+     "name": "Leave-In Serum Brilliant Blond Hair Sealer"
     }
    ]
   },
@@ -336,6 +331,11 @@
      "type": "leavein",
      "brand": "Kérastase",
      "name": "Gloss Absolu Anti-Frizz Glaze Milk"
+    },
+    {
+     "type": "leavein",
+     "brand": "Gisou",
+     "name": "Honey Milk Active Repair Leave-In Conditioner Mist"
     }
    ]
   }
