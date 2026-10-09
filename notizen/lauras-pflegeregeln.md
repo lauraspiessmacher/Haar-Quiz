@@ -63,3 +63,5 @@ Diese Regeln gelten überall auf der Seite: Quizze, Routine-Check, Wissen, Produ
 - Hitze-Tools: Dyson immer ans Ende sortieren (Laura, 09.10.).
 
 - Haarbürsten: „Glanz“ nur bei Wildschweinborsten versprechen, bei Plastikbürsten unrealistisch (Laura, 09.10.).
+
+- Quizze: nie raten, Stufen rauswachsen zu lassen; Stufen nur „nach Beratung beim Friseur“ vorschlagen, mit Hinweis, dass wir die Haarmenge online nicht sehen (Laura, 09.10.).
