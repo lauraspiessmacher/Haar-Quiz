@@ -68,9 +68,11 @@ main{padding-bottom:60px}
 .favfoto figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .favtop h2,.favsec h2{font-size:clamp(24px,3.4vw,32px);margin:0 0 12px}
 .favtop h2{margin-bottom:8px}
+.favmain{display:flex;flex-direction:column}
+@media (min-width:701px){ .favtop{align-items:stretch} .favfoto{display:flex;flex-direction:column} .favmain{padding-bottom:calc(var(--capH,26px))} .favprof{flex:1;display:flex;flex-direction:column;justify-content:space-between} }
 .favprof{margin:0;display:grid;gap:7px}
-.favrow{display:grid;grid-template-columns:130px 1fr;gap:14px;border-bottom:1px solid var(--line);padding-bottom:7px;font-size:14px;line-height:1.45}
-.favrow dt{font-weight:600;font-size:13px}.favrow dd{margin:0;color:var(--muted)}
+.favrow{display:grid;grid-template-columns:170px 1fr;gap:14px;border-bottom:1px solid var(--line);padding-bottom:7px;font-size:15px;line-height:1.5}
+.favrow dt{font-weight:600;font-size:14px}.favrow dd{margin:0;color:var(--muted)}
 .favleer{color:var(--muted);font-style:italic}
 .favnote{grid-column:1/-1;display:flex;align-items:center;gap:22px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:14px;line-height:1.5}
 .favnote p{margin:0;flex:1}
@@ -1146,12 +1148,13 @@ function renderFav(){
     return groups.map(([s,l]) => `<h3 class="favseg">${s}</h3><ul class="favlist">${l.map(item).join("")}</ul>`).join("") + (rest.length ? `<ul class="favlist">${rest.map(item).join("")}</ul>` : ""); };
   box.innerHTML = `<div class="favtop">
       ${foto ? `<figure class="favfoto"><img src="${foto.src}" alt="Laura mit langen braunen Haaren und Wellen vom Lockenstab"><figcaption>Auf dem Foto: Wellen mit dem Lockenstab</figcaption></figure>` : ""}
-      <div><h2>Mein Haar</h2><dl class="favprof">${prof}</dl></div>
+      <div class="favmain"><h2>Mein Haar</h2><dl class="favprof">${prof}</dl></div>
       <div class="favnote"><p><b>Wichtig:</b> Das sind meine Produkte für mein Haar. Sie müssen nicht zu euren Haaren passen. Was zu euren Haaren passt, findet ihr in den Quizzen und bei den Produkten.</p>
         <div class="favbtns"><button type="button" class="btn dark" data-favview="quiz">Quiz machen</button><button type="button" class="btn" data-favview="produkte">Zu den Produkten</button></div></div>
     </div>
     ${FAV.abschnitte.map(a => `<section class="favsec" id="fav-${a.id}"><h2>${esc(a.titel)}</h2>${a.text?`<p class="favtxt">${esc(a.text)}</p>`:""}
       ${a.produkte.length ? list(a) : `<p class="favleer">Hier kommen bald meine Produkte rein.</p>`}</section>`).join("")}`;
+  const cap = box.querySelector(".favfoto figcaption"); if(cap) box.querySelector(".favtop").style.setProperty("--capH", (cap.offsetHeight + 8) + "px");
   box.querySelectorAll("[data-favview]").forEach(b => b.onclick = () => { state.view = b.dataset.favview; render(); window.scrollTo({top:0}); });
   box.querySelectorAll("[data-favgo]").forEach(b => b.onclick = () => { const p = ALL.find(x => x.mk===b.dataset.favgo); if(!p) return;
     state.view = "produkte"; state.type = p.type; state.cat = "alle"; state.seg = "alle"; state.q = p.brand + " " + p.name; q.value = state.q; render(); window.scrollTo({top:0}); });

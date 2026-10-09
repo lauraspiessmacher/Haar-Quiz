@@ -341,3 +341,4 @@
 - Favorites Für eine gesunde Kopfhaut: K18 Peptide Prep Detox Shampoo statt OGX ProGrowth + Peptide (INCI-Analyse in lauras-favorites.md). Vorschau v154.
 - Favorites neue Reihenfolge: Kopfhaut, Pre-Wash, Schuppen, Nährende Pflege, Glossy, Hitzeschutz, Volumen, Repair. Vorschau v155.
 - Favorites Kopfbereich: Steckbrief kompakter (14px, engere Zeilen), Wichtig-Kasten volle Breite unter Foto+Steckbrief; Desktop Text | Quiz machen | Zu den Produkten in einer Reihe, Handy Buttons unter dem Text. Vorschau v156.
+- Favorites Steckbrief: Schrift wieder 15px, Zeilen verteilen sich (flex space-between), letzte Linie schließt am Laptop bündig mit Foto-Unterkante ab (ab ~1000px pixelgenau, Bildunterschrift-Höhe per JS als --capH). Linke Spalte 170px, damit „Mein Lieblingsergebnis“ einzeilig. Vorschau v157.
