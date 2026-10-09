@@ -12,7 +12,7 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [ ] Laura hat noch weitere Überlegungen zu verschiedenen Quizarten → nachfragen, wenn wir daran gehen.
 
 ## Produkte
-- [ ] Hitze-Tools: 17 Geräte drin (Dreame, Laifen, MOVA, Shark, ghd, Dyson; 09.10.). Offen: Lauras eigene Hinweise je Gerät (für welches Haar), Farben bei ghd und Airwrap bestätigen, ggf. weitere Marken. Regel: Dyson immer am Ende.
+- [ ] Hitze-Tools: 19 Geräte drin (Dreame, Laifen, MOVA, Shark, ghd, Remington, Dyson; 09.10.). Offen: Lauras eigene Hinweise je Gerät (für welches Haar), Farben bei ghd und Airwrap bestätigen, ggf. weitere Marken. Regel: Dyson immer am Ende.
 - [ ] Buly: Laura prüft, ob weitere Bürsten rein sollen.
 - [ ] Kinderprodukte.
 - [ ] Shampoo-Rangliste noch einmal mit Laura durchgehen.

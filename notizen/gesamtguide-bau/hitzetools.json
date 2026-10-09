@@ -245,6 +245,34 @@
   },
   {
    "segment": "",
+   "brand": "Remington",
+   "name": "Pearl Digital Lockenstab kegelförmig 13–25 mm (CI95)",
+   "farbe": "Schwarz",
+   "cats": [
+    "locken"
+   ],
+   "bild": "remington-pearl-ci95.webp",
+   "note": "Konischer Lockenstab mit Keramikbeschichtung, die mit Perlenpulver angereichert ist. Durch die Form von 25 auf 13 mm bekommst du oben größere und unten kleinere Locken.",
+   "aufsaetze": "Keine Aufsätze. Dazu eine hitzebeständige Tasche und ein Hitzeschutzhandschuh.",
+   "wofuer": "Locken in verschiedenen Größen, von locker bis eng",
+   "tip": "Digitales Display mit 9 Stufen von 130 bis 210 °C. Nimm die niedrigste Stufe, mit der deine Locken halten."
+  },
+  {
+   "segment": "",
+   "brand": "Remington",
+   "name": "Pearl Pro Curl Lockenstab 32 mm (CI9532)",
+   "farbe": "Schwarz",
+   "cats": [
+    "locken"
+   ],
+   "bild": "remington-pearl-ci9532.webp",
+   "note": "Lockenstab mit 32 mm Durchmesser und Keramikbeschichtung mit Perlenpulver, für große, weiche Locken und Wellen.",
+   "aufsaetze": "Keine Aufsätze. Dazu eine hitzebeständige Tasche und ein Hitzeschutzhandschuh.",
+   "wofuer": "Große Locken und lockere Wellen, Volumen",
+   "tip": "LCD-Display mit 9 Stufen von 130 bis 210 °C und Tastensperre, damit du die Temperatur nicht aus Versehen verstellst."
+  },
+  {
+   "segment": "",
    "brand": "Dyson",
    "name": "Airwrap Co-anda2x Multi-Haarstyler und -Trockner Straight+Wavy",
    "farbe": "Ceramic Pink/Rosé",
