@@ -906,7 +906,7 @@ function recHtml(rec, type){
 /* ---------- Sortierung wie in den Einzel-Guides ---------- */
 const byName = (a,b) => (a.brand+a.name).localeCompare(b.brand+b.name,"de");
 function sorter(type, cat){
-  if(type==="tools") return (a,b)=>(a.ord||0)-(b.ord||0); /* Hitze-Tools in Lauras Reihenfolge, Dyson immer am Ende */
+  if(type==="tools"){ const o = p => (p.ordc && p.ordc[cat]!=null) ? p.ordc[cat] : (p.ord||0); return (a,b)=>o(a)-o(b); } /* Hitze-Tools in Lauras Reihenfolge, Dyson immer am Ende; ordc = eigene Position in einer Rubrik */
   if(type==="hitze" && cat==="styling") return (a,b)=>(a.ord||0)-(b.ord||0); /* Styling-Sprays in Lauras Reihenfolge */
   if(type==="kopfhaut" && DATA.kopfhaut.rank && DATA.kopfhaut.rank[cat]){ const r=DATA.kopfhaut.rank[cat]; return (a,b)=>r.indexOf(a.key)-r.indexOf(b.key); }
   if(type==="shampoo" && cat==="kinder") return (a,b)=>(a.rank||99)-(b.rank||99);

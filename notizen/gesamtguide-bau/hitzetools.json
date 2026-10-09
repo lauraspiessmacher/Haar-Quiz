@@ -51,15 +51,19 @@
    "brand": "Dreame",
    "name": "Pocket Pro 2 Haartrockner",
    "cats": [
-    "foehn"
+    "foehn",
+    "multi"
    ],
    "bild": "dreame-pocket-pro-2.webp",
-   "note": "Klappbarer Föhn mit nur 300 g, der mit allen Aufsätzen in die mitgelieferte Tasche passt.",
+   "note": "Klappbarer Föhn mit nur 300 g, eigentlich ein Mini-Multistyler: mit zwei Lockenaufsätzen für Blowout und Wellen, Glättungsaufsatz (Anti-Frizz), Diffusor und Stylingdüse. Passt mit allen Aufsätzen in die mitgelieferte Tasche.",
    "aufsaetze": "5",
    "gewicht": "300 g",
    "leistung": "1.300 W",
    "luft": "70 m/s",
-   "tip": "Klappbar und mit Tasche, dadurch auch ein guter Reiseföhn."
+   "tip": "Eigentlich ein Mini-Multistyler: Er hat zwei Blowout-Aufsätze, die die Strähne von selbst aufwickeln, und einen Glättungsaufsatz gegen Frizz. Klappbar und mit Tasche, dadurch auch ein guter Reiseföhn.",
+   "ordc": {
+    "multi": 6.5
+   }
   },
   {
    "segment": "",
