@@ -7,7 +7,7 @@ def uri(f): return 'data:image/webp;base64,' + base64.b64encode(open(f'{D}/{f}',
 snip = open(f'{D}/brief.html').read().strip().replace('__BRIEF_PAPIER__', uri('papier.webp')).replace('__BRIEF_SIEGEL__', uri('siegel.webp'))
 if len(sys.argv) > 2 and sys.argv[1] == '--nur-snippet':
     open(sys.argv[2], 'w').write(snip); sys.exit()
-for f in ('quiz-pflege.html', 'quiz-kopfhaut.html', 'quiz-haar.html', 'quiz-routine.html', 'quiz-tools.html'):
+for f in ('quiz-pflege.html', 'quiz-kopfhaut.html', 'quiz-haar.html', 'quiz-routine.html', 'quiz-tools.html', 'quiz-schnitt.html'):
     t = open(f).read()
     if '<!-- BRIEF START' in t:
         t = re.sub(r'<!-- BRIEF START.*?<!-- BRIEF END -->', lambda m: snip, t, flags=re.S)

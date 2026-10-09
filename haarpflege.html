@@ -604,7 +604,7 @@ body{overflow-x:clip}
     </div>
     <ul class="offer">
       <li><button type="button" data-go="produkte"><h3>Produkte</h3><p>Über 500 Produkte von Shampoo bis Haaröl, sortiert nach Haardicke und Kopfhauttyp.</p><span class="go">Ansehen →</span></button></li>
-      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Vier kurze Checks: Welchen Kopfhauttyp habt ihr? Wie viel Pflege braucht euer Haar? Welche Struktur haben eure Haare? Und zum Schluss: Welche Routine passt zu euch? Dazu ein Extra-Check, welches Hitze-Tool zu euren Haaren passt.</p><span class="go">Quiz starten →</span></button></li>
+      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Vier kurze Checks: Welchen Kopfhauttyp habt ihr? Wie viel Pflege braucht euer Haar? Welche Struktur haben eure Haare? Und zum Schluss: Welche Routine passt zu euch? Dazu zwei Extra-Checks: Welches Hitze-Tool passt zu euren Haaren, und welcher Haarschnitt steht euch?</p><span class="go">Quiz starten →</span></button></li>
       <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Haarpflegethemen, zu Mythen und zum richtigen Umgang mit euren Haaren, einfach erklärt.</p><span class="go">Lesen →</span></button></li>
       <li><button type="button" data-go="me"><h3>Meine Haare</h3><p>Stellt einmal eure Haardicke und euren Kopfhauttyp ein und seht nur, was zu euch passt.</p><span class="go">Einstellen →</span></button></li>
     </ul>
@@ -675,7 +675,7 @@ body{overflow-x:clip}
 
   <!-- ===================== QUIZ ===================== -->
   <section class="view" id="v-quiz" hidden>
-    <div class="intro"><h1>Quiz</h1><p>Vier kurze Checks, die dir zeigen, was deine Haare wirklich brauchen. Der letzte stellt dir deinen persönlichen Wochenplan zusammen. Darunter findest du Extra-Checks, zum Beispiel welches Hitze-Tool zu deinen Haaren passt. Dein Ergebnis bekommst du direkt am Ende.</p></div>
+    <div class="intro"><h1>Quiz</h1><p>Vier kurze Checks, die dir zeigen, was deine Haare wirklich brauchen. Der letzte stellt dir deinen persönlichen Wochenplan zusammen. Darunter findest du Extra-Checks: welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht. Dein Ergebnis bekommst du direkt am Ende.</p></div>
     <div class="quizgrid">
       <a class="qcard" href="quiz-kopfhaut.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
@@ -714,6 +714,13 @@ body{overflow-x:clip}
         <h3>Hitze-Tool-Check</h3>
         <p>Multistyler, Lockenstab, Glätteisen oder ein guter Föhn? Du erfährst, welches Gerät für dein Wunschergebnis bei deinem Haar wirklich hält, bevor du Geld ausgibst.</p>
         <span class="qmeta">8 Fragen · ca. 2 Minuten</span>
+        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+      </span></a>
+      <a class="qcard" href="quiz-schnitt.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+        <span class="qfor">Für deinen nächsten Friseurtermin</span>
+        <h3>Haarschnitt-Check</h3>
+        <p>Stufen oder gerade Spitzen, kurz oder lang? Du bekommst eine Orientierung aus deiner Gesichtsform, deinen Haaren und deinem Wunsch, die du mit zum Friseur nehmen kannst.</p>
+        <span class="qmeta">13 bis 16 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
     </div>
@@ -815,6 +822,7 @@ let onlyMine = true;
 /* ---------- Zustand und Teilen-Link ---------- */
 let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:"", wissen:null};
 /* Aus einem Quiz heraus direkt zu einer Produktart springen (z. B. Hitze-Tool-Check → Lockenstäbe) */
+window.showWissen = id => { state.view = "wissen"; state.wissen = WISSEN.some(w=>w.id===id) ? id : null; render(); window.scrollTo({top:0}); };
 window.showProducts = (type, cat) => { if(!T[type]) return; state.view = "produkte"; state.type = type; state.cat = cat || "alle"; state.seg = "alle"; state.q = ""; if(typeof q !== "undefined") q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); };
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;

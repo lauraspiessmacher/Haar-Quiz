@@ -11,7 +11,7 @@
 <script>
 (function(){
   const QUIZ = __QUIZ_JSON__;
-  const NAMES = {"quiz-kopfhaut.html":"Kopfhaut-Check","quiz-pflege.html":"Pflege-Check","quiz-haar.html":"Haar-Check","quiz-routine.html":"Routine-Check","quiz-tools.html":"Hitze-Tool-Check"};
+  const NAMES = {"quiz-kopfhaut.html":"Kopfhaut-Check","quiz-pflege.html":"Pflege-Check","quiz-haar.html":"Haar-Check","quiz-routine.html":"Routine-Check","quiz-tools.html":"Hitze-Tool-Check","quiz-schnitt.html":"Haarschnitt-Check"};
   const box = document.getElementById("qover"), fr = document.getElementById("qframe");
   let back = null;
   function open(f){ back = document.activeElement; fr.srcdoc = QUIZ[f]; document.getElementById("qname").textContent = NAMES[f] || "";
