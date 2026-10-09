@@ -254,7 +254,39 @@
    "id": "kopfhaut",
    "titel": "Für eine gesunde Kopfhaut",
    "text": "",
-   "produkte": []
+   "produkte": [
+    {
+     "type": "shampoo",
+     "brand": "Dejan Garz",
+     "name": "The Sensitive"
+    },
+    {
+     "type": "kopfhaut",
+     "brand": "Dejan Garz",
+     "name": "Haarserum The Sensitive Scalp"
+    },
+    {
+     "type": "shampoo",
+     "brand": "OGX",
+     "name": "ProGrowth + Peptide"
+    },
+    {
+     "type": "kopfhaut",
+     "brand": "head&shoulders",
+     "name": "Derma x Pro Scalp Reset Pre-Shampoo"
+    },
+    {
+     "type": "kopfhaut",
+     "brand": "The Ordinary",
+     "name": "Multi-Peptide Serum for Hair Density"
+    },
+    {
+     "type": "kopfhaut",
+     "brand": "The Ordinary",
+     "name": "Glycolic Acid 7% Exfoliating Toner",
+     "wofuer": "Als Kopfhautpeeling"
+    }
+   ]
   },
   {
    "id": "schuppen",
