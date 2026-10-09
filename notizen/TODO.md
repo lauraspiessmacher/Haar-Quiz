@@ -9,7 +9,7 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 
 ## Quizze
 - [ ] **Multistyler-Quiz** (Lauras Idee, 09.10.): Viele denken, ein Multistyler funktioniert für alle Haartypen. Stimmt nicht: Bei manchen Haartypen hält das Ergebnis eines Multistylers nicht. Bei denen hält selbst eine Locke vom Lockenstab nicht so gut, aber immer noch besser als vom Multistyler. Quiz soll helfen, das vorher einzuschätzen. Danach evtl. die Texte bei den Multistylern überarbeiten.
-- [ ] Laura hat noch weitere Überlegungen zu verschiedenen Quizarten → nachfragen, wenn wir daran gehen.
+- [ ] Entwurf für zwei neue Quizze liegt bei Laura (Doc „Quiz-Entwürfe: Hitze-Tool & Haarschnitt“, https://claude.ai/code/artifact/2563ec77-f532-453b-b7c4-8388b87b285d): **Hitze-Tool-Check** (ersetzt die Multistyler-Quiz-Idee oben) und **Haarschnitt-Check**. Wartet auf ihre Kommentare und die 6 offenen Fragen, dann bauen.
 
 ## Produkte
 - [ ] Hitze-Tools: 19 Geräte drin (Dreame, Laifen, MOVA, Shark, ghd, Remington, Dyson; 09.10.). Offen: Lauras eigene Hinweise je Gerät (für welches Haar), Farben bei ghd und Airwrap bestätigen, ggf. weitere Marken. Regel: Dyson immer am Ende.
