@@ -67,6 +67,26 @@ main{padding-bottom:60px}
 .view[hidden]{display:none}
 
 /* ---------- Produkte: Kopf + Suche ---------- */
+/* Lauras Favorites */
+.favtop{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:36px;align-items:start;padding:18px 0 10px}
+.favfoto{margin:0}.favfoto img{width:100%;height:auto;border-radius:6px;display:block}
+.favfoto figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.favtop h2,.favsec h2{font-size:clamp(24px,3.4vw,32px);margin:0 0 12px}
+.favprof{margin:0;display:grid;gap:10px}
+.favrow{display:grid;grid-template-columns:150px 1fr;gap:14px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.favrow dt{font-weight:600;font-size:14px}.favrow dd{margin:0;color:var(--muted)}
+.favleer{color:var(--muted);font-style:italic}
+.favnote{margin-top:18px;padding:16px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px}
+.favbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.favsec{border-top:1px solid var(--line);padding:26px 0 8px}
+.favtxt{color:var(--muted);margin:-4px 0 12px}
+.favlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.favitem{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:12px}
+.favitem img,.favnoimg{width:56px;height:90px;object-fit:contain;flex:0 0 56px}
+.favitem p{margin:6px 0;font-size:14px;color:var(--muted)}
+.favpill{white-space:nowrap}
+.favitem .brand{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.favitem .mname{display:block;font-family:var(--serif);font-size:18px;line-height:1.2}
+@media (max-width:700px){ .favtop{grid-template-columns:1fr;gap:22px} .favfoto{max-width:280px} .favrow{grid-template-columns:1fr;gap:2px} }
 .intro{padding:26px 0 6px}
 .intro h1{font-size:clamp(32px,6vw,46px)}
 .intro p{color:var(--muted);margin:6px 0 0;max-width:60ch}
@@ -582,7 +602,7 @@ body{overflow-x:clip}
         <p class="kicker">Willkommen in der Healthy Hair Community</p>
         <h1>Von kaputten zu gesunden Haaren</h1>
         <p class="lead">Hey, ich bin Laura. Auf Instagram nehme ich meine Community mit und zeige ihr, wie sie das Beste aus ihren Haaren herausholt und wie der Weg von geschädigten Haaren zurück zu gesunden Haaren aussehen kann. Hier findet ihr alles an einem Ort: meine Produkteinschätzungen und Empfehlungen, Quizze, mit denen ihr eure Haare besser kennenlernt, und Wissen rund um Haare und die richtige Pflege.</p>
-        <div class="btns"><button type="button" class="btn dark" data-go="produkte">Zu den Produkten <span aria-hidden="true">→</span></button><button type="button" class="btn" data-go="quiz">Quiz machen</button></div>
+        <div class="btns"><button type="button" class="btn dark" data-go="produkte">Zu den Produkten <span aria-hidden="true">→</span></button><button type="button" class="btn" data-go="quiz">Quiz machen</button><button type="button" class="btn" data-go="favoriten"><span aria-hidden="true">♥</span> Lauras Favorites</button></div>
         <a class="journeylink" href="https://www.instagram.com/p/DVS6Ig9jeKW/" target="_blank" rel="noopener"><span>Ihr glaubt mir nicht?</span> Schaut euch meine Hair Journey an <span aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -733,6 +753,12 @@ body{overflow-x:clip}
     <div id="merkBox"></div>
   </section>
 
+  <!-- ===================== LAURAS FAVORITES ===================== -->
+  <section class="view" id="v-favoriten" hidden>
+    <div class="intro"><h1>Lauras Favorites</h1><p>Ihr fragt mich oft, was ich selbst benutze. Hier seht ihr es, sortiert danach, was ich mit meinen Haaren vorhabe.</p></div>
+    <div id="favBox"></div>
+  </section>
+
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
     <div id="wissenListe"><div class="intro"><h1>Wissen</h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
@@ -827,7 +853,7 @@ window.showProducts = (type, cat) => { if(!T[type]) return; state.view = "produk
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="wissen"||a==="start"||a==="merkliste"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
+  if(a==="quiz"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
   if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -1106,6 +1132,28 @@ document.addEventListener("click", e => {
   if(state.view==="merkliste") renderMerk();
   else document.querySelectorAll(`button.save[data-mk="${CSS.escape(k)}"]`).forEach(x => { const on = MERK.includes(k); x.setAttribute("aria-pressed", on); x.title = on?"Gemerkt":"Merken"; });
 });
+/* ---------- Lauras Favorites (favoriten.json) ---------- */
+const FAV = {"hinweis": "Lauras Favorites: was Laura selbst benutzt. Produkte als {type, brand, name, wofuer} (genau wie im Guide, dann bekommen sie automatisch das Herz „Laura benutzt das“) oder als {frei, wofuer} für Dinge, die nicht im Guide sind.", "profil": [["Struktur", "Glatt. Nach dem Waschen kommt eine leichte Grundstruktur durch, die nach drei, vier Tagen immer glatter wird."], ["Länge", "Sehr lang, bis zum Steißbein"], ["Schnitt", "Keine Stufen, nur ein leichtes Face Framing"], ["Farbe", "Mittel- bis dunkelbraun, die Spitzen sind etwas heller (Sonne oder eine alte Tönung)"], ["Haardicke", ""], ["Waschen", "Ein- bis zweimal pro Woche"], ["Halt", "Locken vom Lockenstab halten bis zur nächsten Wäsche, Blowouts mit dem Multistyler ein paar Stunden"], ["Mein Lieblingsergebnis", "Glatt, geschmeidig und genährt"]], "abschnitte": [{"id": "waschtag", "titel": "Mein Waschtag", "text": "", "produkte": []}, {"id": "wellen", "titel": "Meine Wellen mit dem Lockenstab", "text": "So wie auf dem Foto.", "produkte": []}, {"id": "glatt", "titel": "Glatt und geschmeidig", "text": "", "produkte": []}, {"id": "zwischen", "titel": "Zwischen den Wäschen", "text": "", "produkte": []}, {"id": "nacht", "titel": "Über Nacht", "text": "", "produkte": []}]};
+const favFind = x => x.brand ? ALL.find(p => p.type===x.type && p.brand===x.brand && p.name===x.name) : null;
+const FAVSET = new Set(FAV.abschnitte.flatMap(a => a.produkte.map(favFind).filter(Boolean).map(p => p.mk)));
+function renderFav(){
+  const box = document.getElementById("favBox"), foto = document.querySelector(".hero .photo img");
+  const prof = FAV.profil.map(([k,v]) => `<div class="favrow"><dt>${esc(k)}</dt><dd>${v ? esc(v) : `<span class="favleer">kommt noch</span>`}</dd></div>`).join("");
+  const item = x => { const p = favFind(x);
+    if(p) return `<li class="favitem">${p.img?`<img src="${p.img}" alt="" loading="lazy">`:`<span class="favnoimg"></span>`}<div><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span>${x.wofuer?`<p>${esc(x.wofuer)}</p>`:""}<button type="button" class="linkbtn" data-favgo="${esc(p.mk)}">Zur Einordnung <span aria-hidden="true">→</span></button></div></li>`;
+    return `<li class="favitem"><span class="favnoimg"></span><div><span class="mname">${esc(x.frei||"")}</span>${x.wofuer?`<p>${esc(x.wofuer)}</p>`:""}</div></li>`; };
+  box.innerHTML = `<div class="favtop">
+      ${foto ? `<figure class="favfoto"><img src="${foto.src}" alt="Laura mit langen braunen Haaren und Wellen vom Lockenstab"><figcaption>Auf dem Foto: Wellen mit dem Lockenstab</figcaption></figure>` : ""}
+      <div><h2>Mein Haar</h2><dl class="favprof">${prof}</dl>
+      <div class="favnote"><b>Wichtig:</b> Das sind meine Produkte für mein Haar. Sie müssen nicht zu euren Haaren passen. Was zu euren Haaren passt, findet ihr in den Quizzen und bei den Produkten.
+        <div class="favbtns"><button type="button" class="btn dark" data-favview="quiz">Quiz machen</button><button type="button" class="btn" data-favview="produkte">Zu den Produkten</button></div></div></div>
+    </div>
+    ${FAV.abschnitte.map(a => `<section class="favsec" id="fav-${a.id}"><h2>${esc(a.titel)}</h2>${a.text?`<p class="favtxt">${esc(a.text)}</p>`:""}
+      ${a.produkte.length ? `<ul class="favlist">${a.produkte.map(item).join("")}</ul>` : `<p class="favleer">Hier kommen bald meine Produkte rein.</p>`}</section>`).join("")}`;
+  box.querySelectorAll("[data-favview]").forEach(b => b.onclick = () => { state.view = b.dataset.favview; render(); window.scrollTo({top:0}); });
+  box.querySelectorAll("[data-favgo]").forEach(b => b.onclick = () => { const p = ALL.find(x => x.mk===b.dataset.favgo); if(!p) return;
+    state.view = "produkte"; state.type = p.type; state.cat = "alle"; state.seg = "alle"; state.q = p.brand + " " + p.name; q.value = state.q; render(); window.scrollTo({top:0}); });
+}
 function renderMerk(){
   const box = document.getElementById("merkBox");
   const set = merkSet(); const mine = ALL.filter(p => set.has(p.mk));
@@ -1140,6 +1188,7 @@ function itemHtml(p, badge){
   if(p.zwei) tags.push(`<span class="pill">2-in-1: Styling + Hitzeschutz</span>`);
   if(p.heat && !(p.zwei && p.heat==="ja")) tags.push(p.heat==="ja" ? `<span class="pill">Mit Hitzeschutz</span>` : `<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
   if(p.kalk) tags.push(`<span class="pill">Löst auch Kalk</span>`);
+  if(FAVSET.has(p.mk)) tags.push(`<span class="pill favpill"><span aria-hidden="true">♥</span> Laura benutzt das</span>`);
   let body = "";
   if(p.type==="shampoo"){
     const h=p.hair;
@@ -1277,7 +1326,7 @@ function setHH(){ document.documentElement.style.setProperty("--hh", document.qu
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
-  for(const v of ["start","produkte","quiz","wissen","merkliste"]) document.getElementById("v-"+v).hidden = state.view!==v;
+  for(const v of ["start","produkte","quiz","wissen","merkliste","favoriten"]) document.getElementById("v-"+v).hidden = state.view!==v;
   navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.view===state.view ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
@@ -1285,6 +1334,7 @@ function render(){
   if(state.view==="produkte"){ state.q.trim() ? renderSearch() : renderGuide(); }
   if(state.view==="merkliste") renderMerk();
   if(state.view==="wissen") renderWissen();
+  if(state.view==="favoriten") renderFav();
   merkCount();
   writeHash();
 }

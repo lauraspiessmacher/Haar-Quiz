@@ -70,6 +70,7 @@ t = t.replace('<div class="jcover" aria-label="Platz für das Cover deiner Hair 
   ('<a class="jcover book" id="jbook" href="' + JOURNEY_IG + '" target="_blank" rel="noopener" aria-label="My Hair Journey: Collage meiner Haare von früher bis heute, auf Instagram ansehen">' + _book + '</a>') if os.path.exists(cov)
   else '<div class="jcover">Hier kommt das Cover deiner Hair Journey hin</div>')
 import base64
+t = t.replace('__FAV__', json.dumps(json.load(open(f'{S}/favoriten.json')), ensure_ascii=False))
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html')
 t = t.replace('<p class="note-banner">Vorschau mit allen echten Produkten aus deinen 6 Guides. Quiz und Wissen sind noch Platzhalter.</p>',
