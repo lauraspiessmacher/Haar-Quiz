@@ -41,7 +41,7 @@ Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder 
 - Oribe Hair Alchemy Fortifying Treatment Serum – im Guide (Leave-in).
 - (Gesund und genährt, ergänzt) OGX Coconut Miracle Oil Conditioner + Coconut Miracle Oil Haarkur – im Guide.
 
-## Meine Pre-Wash-Routine (09.10.)
+## Meine Pre-Wash-Routine (09.10.; Öl Magique Maske + Öl später nach „Gesund und genährt“ verschoben)
 - OGX Coconut Miracle Oil (Haaröl) – im Guide.
 - L'Oréal Elvital Öl Magique Haarmaske – dm 3122669 – NEU im Masken-Guide (normal–sehr dick, silikonfrei, nährend). INCI: Aqua, Cetearyl Alcohol, Stearamidopropyl Dimethylamine, Isopropyl Myristate, Cetyl Esters, Parfum, Sunflower Seed Oil, Shea Butter, … Coconut Oil, …, Camellia Japonica Seed Oil … Bild dm (2. Bild, freigestellt).
 - L'Oréal Paris Elvital Öl Magique (Haaröl) – im Guide.

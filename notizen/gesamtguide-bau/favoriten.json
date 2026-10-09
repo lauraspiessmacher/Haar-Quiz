@@ -164,6 +164,16 @@
      "type": "conditioner",
      "brand": "OGX",
      "name": "Nourishing Coconut Milk Conditioner"
+    },
+    {
+     "type": "maske",
+     "brand": "L'Oréal Elvital",
+     "name": "Öl Magique Haarmaske"
+    },
+    {
+     "type": "oel",
+     "brand": "L'Oréal Paris Elvital",
+     "name": "Öl Magique"
     }
    ]
   },
@@ -182,16 +192,6 @@
      "type": "oel",
      "brand": "OGX",
      "name": "Coconut Miracle Oil"
-    },
-    {
-     "type": "maske",
-     "brand": "L'Oréal Elvital",
-     "name": "Öl Magique Haarmaske"
-    },
-    {
-     "type": "oel",
-     "brand": "L'Oréal Paris Elvital",
-     "name": "Öl Magique"
     }
    ]
   },
