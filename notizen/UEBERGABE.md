@@ -339,3 +339,4 @@
 - Favorites Für mehr Volumen + NEQI Haarserum Opulent Oil (7 Produkte). Vorschau v152.
 - Favorites Glossy: NEQI Diamond Glass Mirror Rinse raus (10 Produkte). Vorschau v153.
 - Favorites Für eine gesunde Kopfhaut: K18 Peptide Prep Detox Shampoo statt OGX ProGrowth + Peptide (INCI-Analyse in lauras-favorites.md). Vorschau v154.
+- Favorites neue Reihenfolge: Kopfhaut, Pre-Wash, Schuppen, Nährende Pflege, Glossy, Hitzeschutz, Volumen, Repair. Vorschau v155.

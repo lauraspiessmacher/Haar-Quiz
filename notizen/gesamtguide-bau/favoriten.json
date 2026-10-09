@@ -36,110 +36,87 @@
  ],
  "abschnitte": [
   {
-   "id": "glossy",
-   "titel": "Für glossy Haare",
-   "text": "Diese Produkte nehme ich, wenn der Fokus auf Glanz liegt.",
+   "id": "kopfhaut",
+   "titel": "Für eine gesunde Kopfhaut",
+   "text": "",
    "produkte": [
     {
-     "type": "maske",
-     "brand": "L'Oréal Elvital",
-     "name": "Glycolic Gloss 5 Minuten Haar-Laminierung"
-    },
-    {
-     "type": "conditioner",
-     "brand": "L'Oréal Paris Elvital",
-     "name": "Glycolic Gloss Spiegelglanz Conditioner"
-    },
-    {
-     "type": "maske",
-     "brand": "NEQI",
-     "name": "Diamond Glass Haarmaske"
-    },
-    {
-     "frei": true,
-     "segment": "Drogerie",
-     "brand": "Balea Professional",
-     "name": "Glow & Shine Finishing Spray",
-     "art": "Finishing Spray",
-     "bild": "balea-glow-shine-finishing.webp"
-    },
-    {
-     "type": "oel",
-     "brand": "NEQI",
-     "name": "Haaröl Diamond Glass"
-    },
-    {
-     "type": "oel",
+     "type": "shampoo",
      "brand": "Dejan Garz",
-     "name": "Violet Hair Oil The Britney"
+     "name": "The Sensitive"
+    },
+    {
+     "type": "kopfhaut",
+     "brand": "Dejan Garz",
+     "name": "Haarserum The Sensitive Scalp"
     },
     {
      "type": "shampoo",
-     "brand": "Kérastase",
-     "name": "Gloss Absolu Bain Crème Hydra-Glaze"
+     "brand": "K18",
+     "name": "Peptide Prep Detox Shampoo"
     },
     {
-     "type": "maske",
-     "brand": "Kérastase",
-     "name": "Gloss Absolu Masque Crème Hydra-Glaze"
+     "type": "kopfhaut",
+     "brand": "head&shoulders",
+     "name": "Derma x Pro Scalp Reset Pre-Shampoo"
     },
     {
-     "type": "conditioner",
-     "brand": "Kérastase",
-     "name": "Gloss Absolu Insta Glaze Conditioner"
+     "type": "kopfhaut",
+     "brand": "The Ordinary",
+     "name": "Multi-Peptide Serum for Hair Density"
     },
     {
-     "type": "oel",
-     "brand": "Kérastase",
-     "name": "Gloss Absolu Glaze Drops"
+     "type": "kopfhaut",
+     "brand": "The Ordinary",
+     "name": "Glycolic Acid 7% Exfoliating Toner",
+     "wofuer": "Als Kopfhautpeeling"
     }
    ]
   },
   {
-   "id": "volumen",
-   "titel": "Für mehr Volumen",
-   "text": "Damit bereite ich meine Haare auf ein Blowout oder auf Locken vor. So hält alles ein bisschen besser.",
+   "id": "prewash",
+   "titel": "Meine Pre-Wash-Routine",
+   "text": "Das benutze ich vor der Haarwäsche.",
    "produkte": [
     {
-     "type": "shampoo",
-     "brand": "John Frieda",
-     "name": "Volume Lift"
+     "type": "oel",
+     "brand": "OGX",
+     "name": "Coconut Miracle Oil"
     },
     {
-     "type": "conditioner",
-     "brand": "John Frieda",
-     "name": "Volume Lift Nicht beschwerender Conditioner"
+     "type": "oel",
+     "brand": "Pantene Pro-V",
+     "name": "Hair Glowtox Öl"
     },
     {
      "type": "leavein",
-     "brand": "NEQI",
-     "name": "Haarserum Opulent Oil"
-    },
+     "brand": "OGX",
+     "name": "Overnight Serum Rescue Fusions",
+     "wofuer": "Als Overnight-Treatment vor der Haarwäsche"
+    }
+   ]
+  },
+  {
+   "id": "schuppen",
+   "titel": "Wenn ich Schuppen habe",
+   "text": "",
+   "produkte": [
     {
-     "frei": true,
-     "segment": "Drogerie",
-     "brand": "John Frieda",
-     "name": "Volume Lift Pushed-up Dry Texture Spray",
-     "art": "Texturspray",
-     "bild": "john-frieda-volume-lift-texture-spray.webp"
+     "type": "shampoo",
+     "brand": "ISANA MED",
+     "name": "Ultra Sensitiv+ Anti-Schuppen"
     },
     {
      "type": "shampoo",
-     "brand": "Oribe",
-     "name": "Shampoo for Magnificent Volume"
+     "brand": "Vichy",
+     "name": "Dercos Anti-Schuppen K",
+     "wofuer": "Zur Tiefenreinigung, mit Peelingkörnchen"
     },
     {
-     "type": "conditioner",
-     "brand": "Oribe",
-     "name": "Conditioner for Magnificent Volume"
-    },
-    {
-     "frei": true,
-     "segment": "High-End",
-     "brand": "Oribe",
-     "name": "Dry Texturizing Spray",
-     "art": "Texturspray",
-     "bild": "oribe-dry-texturizing-spray.webp"
+     "type": "shampoo",
+     "brand": "Vichy",
+     "name": "Dercos Anti-Schuppen DS für trockenes Haar",
+     "wofuer": "Bei trockener Kopfhaut"
     }
    ]
   },
@@ -201,114 +178,62 @@
    ]
   },
   {
-   "id": "repair",
-   "titel": "Repair",
-   "text": "Wenn meine Haare eine kleine Stärkung brauchen. Dabei greife ich eher zu Produkten mit Proteinen als zu Bond-Repair.",
+   "id": "glossy",
+   "titel": "Für glossy Haare",
+   "text": "Diese Produkte nehme ich, wenn der Fokus auf Glanz liegt.",
    "produkte": [
+    {
+     "type": "maske",
+     "brand": "L'Oréal Elvital",
+     "name": "Glycolic Gloss 5 Minuten Haar-Laminierung"
+    },
     {
      "type": "conditioner",
-     "brand": "Pantene Pro-V",
-     "name": "Repair & Care 3 Minute Miracle Spülung"
+     "brand": "L'Oréal Paris Elvital",
+     "name": "Glycolic Gloss Spiegelglanz Conditioner"
     },
     {
      "type": "maske",
-     "brand": "Pantene Pro-V",
-     "name": "Miracles Bond Repair Intensive Haarmaske"
+     "brand": "NEQI",
+     "name": "Diamond Glass Haarmaske"
+    },
+    {
+     "frei": true,
+     "segment": "Drogerie",
+     "brand": "Balea Professional",
+     "name": "Glow & Shine Finishing Spray",
+     "art": "Finishing Spray",
+     "bild": "balea-glow-shine-finishing.webp"
+    },
+    {
+     "type": "oel",
+     "brand": "NEQI",
+     "name": "Haaröl Diamond Glass"
+    },
+    {
+     "type": "oel",
+     "brand": "Dejan Garz",
+     "name": "Violet Hair Oil The Britney"
+    },
+    {
+     "type": "shampoo",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Bain Crème Hydra-Glaze"
     },
     {
      "type": "maske",
-     "brand": "Wella Professionals",
-     "name": "Ultimate Repair Mask"
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Masque Crème Hydra-Glaze"
     },
     {
-     "type": "leavein",
-     "brand": "Wella Professionals",
-     "name": "Ultimate Repair Miracle Hair Rescue"
-    }
-   ]
-  },
-  {
-   "id": "prewash",
-   "titel": "Meine Pre-Wash-Routine",
-   "text": "Das benutze ich vor der Haarwäsche.",
-   "produkte": [
-    {
-     "type": "oel",
-     "brand": "OGX",
-     "name": "Coconut Miracle Oil"
+     "type": "conditioner",
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Insta Glaze Conditioner"
     },
     {
      "type": "oel",
-     "brand": "Pantene Pro-V",
-     "name": "Hair Glowtox Öl"
-    },
-    {
-     "type": "leavein",
-     "brand": "OGX",
-     "name": "Overnight Serum Rescue Fusions",
-     "wofuer": "Als Overnight-Treatment vor der Haarwäsche"
-    }
-   ]
-  },
-  {
-   "id": "kopfhaut",
-   "titel": "Für eine gesunde Kopfhaut",
-   "text": "",
-   "produkte": [
-    {
-     "type": "shampoo",
-     "brand": "Dejan Garz",
-     "name": "The Sensitive"
-    },
-    {
-     "type": "kopfhaut",
-     "brand": "Dejan Garz",
-     "name": "Haarserum The Sensitive Scalp"
-    },
-    {
-     "type": "shampoo",
-     "brand": "K18",
-     "name": "Peptide Prep Detox Shampoo"
-    },
-    {
-     "type": "kopfhaut",
-     "brand": "head&shoulders",
-     "name": "Derma x Pro Scalp Reset Pre-Shampoo"
-    },
-    {
-     "type": "kopfhaut",
-     "brand": "The Ordinary",
-     "name": "Multi-Peptide Serum for Hair Density"
-    },
-    {
-     "type": "kopfhaut",
-     "brand": "The Ordinary",
-     "name": "Glycolic Acid 7% Exfoliating Toner",
-     "wofuer": "Als Kopfhautpeeling"
-    }
-   ]
-  },
-  {
-   "id": "schuppen",
-   "titel": "Wenn ich Schuppen habe",
-   "text": "",
-   "produkte": [
-    {
-     "type": "shampoo",
-     "brand": "ISANA MED",
-     "name": "Ultra Sensitiv+ Anti-Schuppen"
-    },
-    {
-     "type": "shampoo",
-     "brand": "Vichy",
-     "name": "Dercos Anti-Schuppen K",
-     "wofuer": "Zur Tiefenreinigung, mit Peelingkörnchen"
-    },
-    {
-     "type": "shampoo",
-     "brand": "Vichy",
-     "name": "Dercos Anti-Schuppen DS für trockenes Haar",
-     "wofuer": "Bei trockener Kopfhaut"
+     "brand": "Kérastase",
+     "name": "Gloss Absolu Glaze Drops"
     }
    ]
   },
@@ -336,6 +261,81 @@
      "type": "leavein",
      "brand": "Gisou",
      "name": "Honey Milk Active Repair Leave-In Conditioner Mist"
+    }
+   ]
+  },
+  {
+   "id": "volumen",
+   "titel": "Für mehr Volumen",
+   "text": "Damit bereite ich meine Haare auf ein Blowout oder auf Locken vor. So hält alles ein bisschen besser.",
+   "produkte": [
+    {
+     "type": "shampoo",
+     "brand": "John Frieda",
+     "name": "Volume Lift"
+    },
+    {
+     "type": "conditioner",
+     "brand": "John Frieda",
+     "name": "Volume Lift Nicht beschwerender Conditioner"
+    },
+    {
+     "type": "leavein",
+     "brand": "NEQI",
+     "name": "Haarserum Opulent Oil"
+    },
+    {
+     "frei": true,
+     "segment": "Drogerie",
+     "brand": "John Frieda",
+     "name": "Volume Lift Pushed-up Dry Texture Spray",
+     "art": "Texturspray",
+     "bild": "john-frieda-volume-lift-texture-spray.webp"
+    },
+    {
+     "type": "shampoo",
+     "brand": "Oribe",
+     "name": "Shampoo for Magnificent Volume"
+    },
+    {
+     "type": "conditioner",
+     "brand": "Oribe",
+     "name": "Conditioner for Magnificent Volume"
+    },
+    {
+     "frei": true,
+     "segment": "High-End",
+     "brand": "Oribe",
+     "name": "Dry Texturizing Spray",
+     "art": "Texturspray",
+     "bild": "oribe-dry-texturizing-spray.webp"
+    }
+   ]
+  },
+  {
+   "id": "repair",
+   "titel": "Repair",
+   "text": "Wenn meine Haare eine kleine Stärkung brauchen. Dabei greife ich eher zu Produkten mit Proteinen als zu Bond-Repair.",
+   "produkte": [
+    {
+     "type": "conditioner",
+     "brand": "Pantene Pro-V",
+     "name": "Repair & Care 3 Minute Miracle Spülung"
+    },
+    {
+     "type": "maske",
+     "brand": "Pantene Pro-V",
+     "name": "Miracles Bond Repair Intensive Haarmaske"
+    },
+    {
+     "type": "maske",
+     "brand": "Wella Professionals",
+     "name": "Ultimate Repair Mask"
+    },
+    {
+     "type": "leavein",
+     "brand": "Wella Professionals",
+     "name": "Ultimate Repair Miracle Hair Rescue"
     }
    ]
   }
