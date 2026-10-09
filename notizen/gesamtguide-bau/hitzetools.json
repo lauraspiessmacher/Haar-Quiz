@@ -28,7 +28,7 @@
  ],
  "intro": {
   "lead": "Hier findest du meine Empfehlungen für Föhne, Multistyler, Glätteisen und Lockenstäbe, mit Aufsätzen, Gewicht und Leistung auf einen Blick.",
-  "box": "<p><b>Ganz wichtig:</b> Vor jeder Hitze kommt ein Hitzeschutz, und stell dein Gerät nicht heißer ein als nötig. Auch beim Föhnen lieber mittel oder kühl statt heiß.</p><p class=\"small\">Gewicht, Leistung und Luftgeschwindigkeit sind Herstellerangaben. Die Marken messen unterschiedlich, deshalb sind die Werte nur grob vergleichbar. Wo es keine verlässliche Angabe gibt, lasse ich sie weg.</p>"
+  "box": "<p><b>Ganz wichtig:</b> Vor jeder Hitze kommt ein Hitzeschutz, und stell dein Gerät nicht heißer ein als nötig. Auch beim Föhnen lieber mittel oder kühl statt heiß.</p><p class=\"small\">Gewicht, Leistung und Luftgeschwindigkeit sind Herstellerangaben. Die Marken messen unterschiedlich, deshalb sind die Werte nur grob vergleichbar.</p>"
  },
  "items": [
   {
@@ -89,7 +89,7 @@
    "gewicht": "ca. 390 g",
    "leistung": "1.600 W",
    "luft": "22 m/s",
-   "tip": "In die Pflegedüse kommen Kapseln mit deinem eigenen Haaröl. Nimm nur wenig Öl, sonst werden die Haare schwer."
+   "tip": "In die Pflegedüse kommen Kapseln mit deinem eigenen Haaröl."
   },
   {
    "segment": "",
@@ -104,7 +104,7 @@
    "gewicht": "340 g",
    "leistung": "1.800 W",
    "luft": "65 m/s",
-   "tip": "Föhnt mit einem breiten, sanften Luftstrom unter 55 °C."
+   "tip": "Die Haare werden automatisch in die C-Kammer gezogen und dort getrocknet. Föhnt mit einem breiten, sanften Luftstrom unter 55 °C."
   },
   {
    "segment": "",
