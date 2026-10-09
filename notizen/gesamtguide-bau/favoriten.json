@@ -313,10 +313,9 @@
    ]
   },
   {
-   "id": "testen",
-   "titel": "Das teste ich gerade",
-   "text": "Neue Produkte, die ich gerade ausprobiere. Meine Einschätzung bekommt ihr, wenn ich sie lange genug benutzt habe.",
-   "test": true,
+   "id": "leavein",
+   "titel": "Leave-in und Hitzeschutz",
+   "text": "Das benutze ich nach der Haarwäsche und vor jeder Hitze.",
    "produkte": []
   }
  ]

@@ -326,3 +326,4 @@
 - John Frieda Volume Lift Nicht beschwerender Conditioner NEU im Conditioner-Guide + Favorites Für mehr Volumen (Drogerie). Bildquelle Flaconi (per Playwright, INCI dort nachgeladen → stattdessen johnfrieda.com/de-de). Vorschau v139.
 - Favorites Pre-Wash + Pantene Glowtox Öl + OGX Overnight Serum Rescue Fusions (beide schon im Guide). Vorschau v140.
 - Favorites „Für eine gesunde Kopfhaut“ gefüllt (6 Produkte, alle aus dem Guide). Vorschau v141.
+- Favorites: Abschnitt „Das teste ich gerade“ ersetzt durch „Leave-in und Hitzeschutz“ (Text: „Das benutze ich nach der Haarwäsche und vor jeder Hitze.“, noch leer). 8 Abschnitte. Vorschau v142.
