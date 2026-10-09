@@ -53,3 +53,10 @@ Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder 
 - Pantene Pro-V Miracles Bond Repair Intensive Haarmaske – dm 1336162 – NEU im Masken-Guide (normal–dick + kaputt, Bond laut Marke über Glutaminsäure). Bild dm.
 - Wella Professionals Ultimate Repair Mask – im Guide.
 - Wella Professionals Ultimate Repair Miracle Hair Rescue – im Guide (Leave-in). Ausgewählt als „stärkste“ Repair-Formulierung der drei Ultimate-Repair-Leave-ins: Äpfelsäure (AHA, Wellas Repair-Wirkstoff) steht direkt hinter dem Parfum und noch vor den Konservierern; beim Protective Leave-In erst hinter den Konservierern, beim Night Serum steht Phenoxyethanol schon an 3. Stelle. Wella positioniert es als Intensiv-Schritt. Unterschiede insgesamt klein, Wirkstoffe überall nur in kleiner Menge.
+
+## Vergleich Wella Oil Reflections vs. Ultimate Smooth (09.10., Lauras Frage „welche ist reichhaltiger“)
+(„Oil Infusion“ = Oil Reflections, weiß-gold, von Laura bestätigt. INCI lookfantastic.de)
+- Shampoo: Oil Reflections Luminous Reveal = SLS + SLES (zwei Sulfate, kräftig), kein Pflegepolymer, keine Öle. Ultimate Smooth = nur SLES + Betain, Polyquaternium-10, Glycerin, Glyceryl Oleate → milder und etwas pflegender. Sieger reichhaltig: Ultimate Smooth.
+- Conditioner: Oil Reflections Luminous Instant = Fettalkohole, Behentrimonium Chloride, Silikon (Bis-Aminopropyl Dimethicone); Macadamia/Kamelienöl ganz am Ende. Ultimate Smooth = Fettalkohole, aber Phenoxyethanol schon an 4. Stelle, kein Behentrimonium, kein Silikon → leichter. Sieger: Oil Reflections.
+- Maske: Oil Reflections Luminous Reboost = Fettalkohole, Behentrimonium, Silikon an 5. Stelle, Panthenol; Öle ganz am Ende. Ultimate Smooth Mask = Fettalkohole, Behentrimonium, Propylenglykol, Quaternium-80, Phenoxyethanol an 7. Stelle → etwas leichter. Sieger: Oil Reflections (knapp). Im Guide passend: Ultimate Smooth Mask dünn–normal, Oil Reflections Mask normal–dick.
+- Ehrlich: Beide Reihen enthalten kaum Öl (Öle jeweils hinter Parfum/Konservierern). Reichhaltigkeit kommt aus Fettalkoholen, Konditionierern und Silikon.
