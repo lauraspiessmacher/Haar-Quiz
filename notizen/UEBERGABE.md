@@ -322,3 +322,4 @@
 - Favorites Repair = Pantene Repair & Care 3 Minute Miracle Spülung (NEU im Conditioner-Guide, Bild Amazon) + Pantene Miracles Bond Repair Intensive Haarmaske (NEU im Masken-Guide, dm 1336162, wirkung r=bond wie classify-Regel kaputt+Bond im Namen). Vorschau v135.
 - Favorites Repair + Wella Ultimate Repair Mask + Ultimate Repair Miracle Hair Rescue (stärkste Repair-Formulierung der Leave-ins, Begründung in lauras-favorites.md). Vorschau v136.
 - Favorites Gesund und genährt: Ultimate Smooth Shampoo → Ultimate Smooth Conditioner (NEU im Guide), Ultimate Smooth Mask → Oil Reflections Luminous Reboost Mask. Vorschau v137.
+- Favorites Für mehr Volumen: John Frieda Volume Lift Shampoo + Pushed-up Dry Texture Spray (Drogerie). Volume Lift Conditioner offen (kein Abruf möglich, Laura um Link gebeten). Vorschau v138.

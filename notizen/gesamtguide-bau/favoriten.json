@@ -117,6 +117,19 @@
    "produkte": [
     {
      "type": "shampoo",
+     "brand": "John Frieda",
+     "name": "Volume Lift"
+    },
+    {
+     "frei": true,
+     "segment": "Drogerie",
+     "brand": "John Frieda",
+     "name": "Volume Lift Pushed-up Dry Texture Spray",
+     "art": "Texturspray",
+     "bild": "john-frieda-volume-lift-texture-spray.webp"
+    },
+    {
+     "type": "shampoo",
      "brand": "Oribe",
      "name": "Shampoo for Magnificent Volume"
     },
