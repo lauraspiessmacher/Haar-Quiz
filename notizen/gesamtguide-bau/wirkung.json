@@ -2836,5 +2836,16 @@
 "g": 0.7,
 "r": "protein",
 "p": false
+},
+"maske|OGX|Rescue Fusions Intense Hydration Recovery Haarmaske": {
+"t": [
+"feucht",
+"glaettend"
+],
+"h": 0.83,
+"e": 0.26,
+"g": 0.5,
+"r": "",
+"p": false
 }
 }

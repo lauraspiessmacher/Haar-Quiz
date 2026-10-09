@@ -318,3 +318,4 @@
 - Lauras Favorites (09.10.): Gesund und genährt + OGX Coconut Miracle Oil Conditioner und Haarkur. Pre-Wash-Routine = OGX Coconut Miracle Oil, Elvital Öl Magique Haarmaske (NEU im Masken-Guide), Elvital Öl Magique Haaröl. Vorschau v131.
 - Favorites Gesund und genährt: OGX Coconut Milk Conditioner statt Coconut Miracle Oil Conditioner (Conditioner NEU im Guide, Bild Hagel). Coconut Miracle Oil Haarkur raus; Rescue Fusions Maske offen (nicht bei dm gefunden, Laura fragen). Vorschau v132.
 - Favorites: Elvital Öl Magique Haarmaske + Öl Magique Haaröl von Pre-Wash nach „Gesund und genährt“ verschoben (Laura). Pre-Wash = nur OGX Coconut Miracle Oil. Vorschau v133.
+- Favorites Gesund und genährt: OGX Rescue Fusions Intense Hydration Recovery Haarmaske ergänzt (NEU im Masken-Guide). Jetzt 8 Produkte (Drogerie 4, High-End 4). Vorschau v134.
