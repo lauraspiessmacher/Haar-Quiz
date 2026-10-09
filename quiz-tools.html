@@ -236,9 +236,12 @@ function plan(e){
       text:`<p>Deine Haare sind von Natur aus glatt, ein Föhn mit Glättdüse reicht für ein glattes, glänzendes Ergebnis. Ein Glätteisen brauchst du nur, wenn es extra glatt sein soll oder für Spitzen, die nach innen fallen.</p>`};
     if(g==="W") return {rec:"Luftglätter oder Föhn mit Glättbürste", links:["glaett","foehn","multi"],
       text:`<p>Wellen bekommst du mit einem Luftglätter glatt, der trocknet und glättet in einem Schritt. Alternativ föhnst du mit einer Glättbürste oder einem Multistyler-Glättaufsatz und gehst bei Bedarf mit dem Glätteisen nach.</p>`};
-    return {rec:"Ein Glätteisen", links:["glaett","foehn"],
-      text:`<p>Für ein wirklich glattes Ergebnis bei Locken bist du mit einem Glätteisen am besten aufgestellt. Föhn die Haare vorher möglichst glatt, dann brauchst du weniger Durchgänge.${f.dick||f.viel ? " Bei dicken oder vielen Haaren sparen dir breite Platten viel Zeit." : ""}</p>
-      <p>Ein Luftglätter trocknet und glättet in einem Schritt. Ob er bei dir allein reicht, hängt von deinen Haaren ab. Luftfeuchtigkeit macht glatt gestylte Locken außerdem schnell wieder krauser.</p>`};
+    return {rec:"Rundbürste, Luftglätter oder Glätteisen", links:["foehn","glaett","multi"],
+      text:`<p>Welches Gerät zu dir passt, hängt davon ab, wie glatt es werden soll:</p>
+      <ul><li><strong>Glatt mit Volumen:</strong> Föhn mit Rundbürste. So bekommst du glatte Haare mit Schwung und Fülle.</li>
+      <li><strong>Glatt und unkompliziert:</strong> Ein Luftglätter trocknet und glättet in einem Schritt, auch im nassen Haar.</li>
+      <li><strong>Richtig sleek und glatt:</strong> Das Glätteisen. Föhn die Haare vorher möglichst glatt, dann brauchst du weniger Durchgänge.${f.dick||f.viel ? " Bei dicken oder vielen Haaren sparen dir breite Platten viel Zeit." : ""}</li></ul>
+      <p>Luftfeuchtigkeit macht glatt gestylte Locken schnell wieder krauser, ein leichter Schutz gegen Frizz hilft.</p>`};
   }
   /* von allem etwas */
   if(lvl==="low") return {rec:"Föhn und Lockenstab statt Multistyler", honest:unreal, links:["foehn","locken","multi"],
