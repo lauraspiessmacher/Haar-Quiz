@@ -2867,5 +2867,15 @@
 "g": 0.46,
 "r": "bond",
 "p": false
+},
+"conditioner|Wella Professionals|Ultimate Smooth Conditioner": {
+"t": [
+"feucht"
+],
+"h": 0.08,
+"e": 0.08,
+"g": 0.0,
+"r": "",
+"p": false
 }
 }

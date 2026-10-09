@@ -141,14 +141,14 @@
    "text": "Für ein richtig nährendes, geschmeidiges Ergebnis. Meine Haare vertragen auch schwere Produkte sehr gut.",
    "produkte": [
     {
-     "type": "shampoo",
+     "type": "conditioner",
      "brand": "Wella Professionals",
-     "name": "Ultimate Smooth Shampoo"
+     "name": "Ultimate Smooth Conditioner"
     },
     {
      "type": "maske",
      "brand": "Wella Professionals",
-     "name": "Ultimate Smooth Mask"
+     "name": "Oil Reflections Luminous Reboost Mask"
     },
     {
      "type": "conditioner",
