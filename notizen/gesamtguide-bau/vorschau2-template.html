@@ -93,6 +93,22 @@ main{padding-bottom:60px}
 .wres mark{background:none;color:var(--ink);font-weight:600}
 .wres .go{display:inline-block;margin-top:8px;font-size:14px;color:var(--ink)}
 .wnone{color:var(--muted);margin:18px 0 0}
+.faqbtn{display:inline-flex;align-items:center;gap:10px;margin:14px 0 0;padding:11px 18px;border:1px solid var(--ink);border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-size:15px;cursor:pointer}
+.faqbtn svg{width:20px;height:20px;flex:0 0 auto}
+.faqbtn:hover{background:var(--ink);color:var(--bg)}
+.wres .wfaq{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:26px 0 0}
+.faqgrp{margin:34px 0 0}
+.faqgrp .kap{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.wart .faqgrp h3{margin:4px 0 10px}
+.faq{border-bottom:1px solid var(--line-soft)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:14px 0;font-size:17px;line-height:1.4}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--muted);flex:0 0 auto;transition:transform .25s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wart .faq p{margin:0 0 16px;color:var(--ink);font-size:16px}
+.faq.hl summary{font-weight:600}
+.faqkap{background:none;border:0;padding:0;margin:12px 0 0;font:inherit;font-size:14px;color:var(--ink);border-bottom:1px solid var(--line);cursor:pointer}
 
 /* ---------- Produktarten als klickbare Kacheln ---------- */
 .types{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:22px 0 8px}
@@ -667,6 +683,7 @@ __ROUTINE__
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
     </div>
+    <button type="button" class="faqbtn" id="faqBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 16.8h.01"/></svg><span>Häufig gestellte Fragen</span><span aria-hidden="true">→</span></button>
     <div id="wissenSuche" aria-live="polite"></div>
     <div class="cards" id="wissenCards">
 
@@ -705,6 +722,8 @@ __ROUTINE__
 const DATA = __DATA__;
 /* Wissenstexte (aus wissen.json + wissen/*.html) */
 const WISSEN = __WISSEN__;
+/* Häufig gestellte Fragen, nach Kapitel sortiert (Quelle: faq.json, Entwurf aus den Kapiteltexten) */
+const FAQ = __FAQ__;
 /* Kaufen-Links (Affiliate), Schlüssel = Produktart|Marke|Name. Leer = kein Knopf. */
 const KAUF = __KAUF__;
 
@@ -748,7 +767,7 @@ let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:"", wissen:
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="wissen"||a==="start"||a==="merkliste"){ state.view = a; if(a==="wissen" && b && WISSEN.some(w=>w.id===b)) state.wissen = b; return; }
+  if(a==="quiz"||a==="wissen"||a==="start"||a==="merkliste"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
   if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -955,6 +974,20 @@ function wissenSnippet(raw, words){
   for(const w of words) if(w.length > 2) t = t.replace(new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"), "<mark>$1</mark>");
   return (a>0?"… ":"") + t + (b<raw.length?" …":"");
 }
+/* FAQ: Suche und Ansicht */
+const FTEXT = FAQ.flatMap(g => g.fragen.map((q,j) => ({k: g.kapitel+"-"+j, f: q.f, a: q.a, all: plain(q.f+" "+q.a)})));
+function openFaq(key){
+  state.wissen = "faq"; render();
+  const d = key && document.querySelector(`#wissenArt details[data-k="${key}"]`);
+  if(d){ d.open = true; d.classList.add("hl"); d.scrollIntoView({block:"center"}); } else window.scrollTo({top:0});
+}
+document.getElementById("faqBtn").addEventListener("click", () => openFaq());
+function faqHtml(){
+  return `<h2>Häufig gestellte Fragen</h2><p class="wdraft">Entwurf: Die Fragen und Antworten sind noch nicht von Laura geprüft.</p>
+  <p>Hier findet ihr die Fragen, die mir zu den einzelnen Themen am häufigsten begegnen, kurz und einfach beantwortet. Wenn ihr es genauer wissen wollt, lest das ganze Kapitel.</p>`
+  + FAQ.map(g => { const i = WISSEN.findIndex(w => w.id === g.kapitel); const w = WISSEN[i]; if(!w) return "";
+    return `<section class="faqgrp"><span class="kap">Kapitel ${i+1}</span><h3>${esc(w.titel)}</h3>${g.fragen.map((q,j) => `<details class="faq" data-k="${g.kapitel}-${j}"><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}<button type="button" class="faqkap" data-w="${w.id}">Ganzes Kapitel lesen →</button></section>`; }).join("");
+}
 function renderWissenSuche(){
   const q = (document.getElementById("wq").value||"").trim();
   const box = document.getElementById("wissenSuche"), cards = document.getElementById("wissenCards");
@@ -964,19 +997,29 @@ function renderWissenSuche(){
   const hits = WTEXT.filter(x => terms.every(t => x.all.includes(t)))
     .map(x => ({...x, score: terms.reduce((n,t) => n + (x.titel.includes(t)?100:0) + x.all.split(t).length - 1, 0)}))
     .sort((a,b) => b.score - a.score);
+  const fhits = FTEXT.filter(x => terms.every(t => x.all.includes(t))).slice(0, 6);
   cards.hidden = true;
-  box.innerHTML = hits.length
+  box.innerHTML = (hits.length
     ? `<ul class="wres">${hits.map(x => `<li><button type="button" data-w="${x.w.id}"><span class="kap">Kapitel ${x.i+1}${x.w.entwurf?" · Entwurf":""}</span><h3>${esc(x.w.titel)}</h3><p>${wissenSnippet(x.raw, words)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button></li>`).join("")}</ul>`
-    : `<p class="wnone">Dazu habe ich noch kein Kapitel. Probier ein anderes Wort, zum Beispiel „Spliss“, „Kopfhaut“ oder „Öl“.</p>`;
+    : fhits.length ? "" : `<p class="wnone">Dazu habe ich noch kein Kapitel. Probier ein anderes Wort, zum Beispiel „Spliss“, „Kopfhaut“ oder „Öl“.</p>`)
+    + (fhits.length ? `<p class="wres wfaq">Aus den häufig gestellten Fragen</p><ul class="wres">${fhits.map(x => `<li><button type="button" data-faq="${x.k}"><h3>${esc(x.f)}</h3><p>${wissenSnippet(x.a, words)}</p><span class="go">Zur Antwort <span aria-hidden="true">→</span></span></button></li>`).join("")}</ul>` : "");
   box.querySelectorAll("button[data-w]").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
+  box.querySelectorAll("button[data-faq]").forEach(b => b.onclick = () => openFaq(b.dataset.faq));
 }
 document.getElementById("wq").addEventListener("input", renderWissenSuche);
 function renderWissen(){
+  const isFaq = state.wissen === "faq";
   const w = WISSEN.find(x => x.id === state.wissen);
-  document.getElementById("wissenListe").hidden = !!w;
-  const art = document.getElementById("wissenArt"); art.hidden = !w;
-  if(!w){ art.innerHTML = ""; return; }
+  document.getElementById("wissenListe").hidden = !!(w || isFaq);
+  const art = document.getElementById("wissenArt"); art.hidden = !(w || isFaq);
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
+  if(isFaq){
+    art.innerHTML = back + faqHtml() + back;
+    art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
+    art.querySelectorAll(".faqkap").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
+    return;
+  }
+  if(!w){ art.innerHTML = ""; return; }
   art.innerHTML = back + (w.entwurf ? `<p class="wdraft">Entwurf: Dieser Text ist noch nicht von Laura geprüft.</p>` : "") + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;
   art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
   /* Links aus einem Kapitel zu einer Produktart, z. B. Haarbürsten */

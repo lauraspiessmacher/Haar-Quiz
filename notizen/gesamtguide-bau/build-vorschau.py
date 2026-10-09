@@ -48,6 +48,7 @@ t = t.replace('__KAUF__', open(f'{S}/kauflinks.json').read().strip() or '{}')
 _w = json.load(open(f'{S}/wissen.json'))
 for w in _w: w['html'] = open(f'{S}/wissen/' + w.pop('datei')).read()
 t = t.replace('__WISSEN__', json.dumps(_w, ensure_ascii=False).replace('</', '<\\/'))
+t = t.replace('__FAQ__', json.dumps(json.load(open(f'{S}/faq.json')), ensure_ascii=False).replace('</', '<\\/'))
 # Serie „Haarpflege 1x1“: Titelbilder als eingebettete Bilder
 _serie = json.load(open(f'{S}/serie.json'))
 for r in _serie:
