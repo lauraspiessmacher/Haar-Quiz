@@ -41,12 +41,9 @@
    "text": "Diese Produkte nehme ich, wenn der Fokus auf Glanz liegt.",
    "produkte": [
     {
-     "frei": true,
-     "segment": "Drogerie",
-     "brand": "L'Oréal Paris Elvital",
-     "name": "Glycolic Gloss Haarkur 5 Minuten Haar-Laminierung",
-     "art": "Haarkur",
-     "bild": "elvital-laminierung.webp"
+     "type": "maske",
+     "brand": "L'Oréal Elvital",
+     "name": "Glycolic Gloss 5 Minuten Haar-Laminierung"
     },
     {
      "type": "conditioner",
@@ -54,12 +51,9 @@
      "name": "Glycolic Gloss Spiegelglanz Conditioner"
     },
     {
-     "frei": true,
-     "segment": "Drogerie",
+     "type": "maske",
      "brand": "NEQI",
-     "name": "Diamond Glass Haarmaske",
-     "art": "Haarmaske",
-     "bild": "neqi-diamond-glass-maske.webp"
+     "name": "Diamond Glass Haarmaske"
     },
     {
      "type": "conditioner",
@@ -67,12 +61,9 @@
      "name": "Diamond Glass Mirror Rinse"
     },
     {
-     "frei": true,
-     "segment": "Drogerie",
+     "type": "maske",
      "brand": "NEQI",
-     "name": "Treatment Treasures Gloss Glaze",
-     "art": "Haarkur",
-     "bild": "neqi-gloss-glaze.webp"
+     "name": "Treatment Treasures Gloss Glaze"
     },
     {
      "frei": true,
@@ -103,12 +94,9 @@
      "name": "Gloss Absolu Masque Crème Hydra-Glaze"
     },
     {
-     "frei": true,
-     "segment": "High-End",
+     "type": "conditioner",
      "brand": "Kérastase",
-     "name": "Gloss Absolu Insta Glaze Conditioner",
-     "art": "Conditioner",
-     "bild": "kerastase-insta-glaze.webp"
+     "name": "Gloss Absolu Insta Glaze Conditioner"
     },
     {
      "type": "oel",
@@ -116,9 +104,9 @@
      "name": "Gloss Absolu Glaze Drops"
     },
     {
-     "type": "leavein",
+     "type": "maske",
      "brand": "Redken",
-     "name": "Acidic Color Gloss Heat Protection Treatment"
+     "name": "Acidic Color Gloss Activated Glass Gloss Treatment"
     }
    ]
   },

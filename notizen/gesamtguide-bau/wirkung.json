@@ -2741,5 +2741,58 @@
 "g": 1.04,
 "r": "",
 "p": false
+},
+"maske|L'Oréal Elvital|Glycolic Gloss 5 Minuten Haar-Laminierung": {
+"t": [
+"feucht",
+"naehrend"
+],
+"h": 0.46,
+"e": 0.26,
+"g": 0.36,
+"r": "",
+"p": false
+},
+"maske|NEQI|Diamond Glass Haarmaske": {
+"t": [
+"feucht",
+"glaettend"
+],
+"h": 1.69,
+"e": 0,
+"g": 0.9,
+"r": "protein",
+"p": false
+},
+"maske|NEQI|Treatment Treasures Gloss Glaze": {
+"t": [
+"feucht"
+],
+"h": 0.75,
+"e": 0.18,
+"g": 0.19,
+"r": "bond",
+"p": true
+},
+"conditioner|Kérastase|Gloss Absolu Insta Glaze Conditioner": {
+"t": [
+"feucht"
+],
+"h": 0.5,
+"e": 0.08,
+"g": 0.36,
+"r": "",
+"p": false
+},
+"maske|Redken|Acidic Color Gloss Activated Glass Gloss Treatment": {
+"t": [
+"feucht",
+"naehrend"
+],
+"h": 0.96,
+"e": 0.73,
+"g": 0.28,
+"r": "",
+"p": false
 }
 }
