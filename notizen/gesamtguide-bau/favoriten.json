@@ -59,6 +59,12 @@
      "wofuer": "Nutze ich als Tiefenreinigungsshampoo."
     },
     {
+     "type": "shampoo",
+     "brand": "Ketozolin",
+     "name": "2% Shampoo",
+     "wofuer": "Nutze ich einmal die Woche für eine gesunde, ausbalancierte Kopfhaut. Wichtig: 3 bis 5 Minuten einwirken lassen."
+    },
+    {
      "type": "kopfhaut",
      "brand": "head&shoulders",
      "name": "Derma x Pro Scalp Reset Pre-Shampoo",
