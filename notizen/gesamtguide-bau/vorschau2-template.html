@@ -263,6 +263,9 @@ html,body{overflow-x:clip}
 .wind{position:absolute;z-index:0;top:-40px;bottom:-30px;left:calc(50% - 50vw);width:100vw;pointer-events:none;
   -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
 .wind svg{width:100%;height:100%;display:block}
+#wissenListe{position:relative;isolation:isolate}
+#wissenListe > :not(.wind){position:relative;z-index:1}
+.wind.wind-w{top:-40px;bottom:auto;height:470px}
 .windctl{position:fixed;right:14px;bottom:14px;z-index:50;display:flex;align-items:center;gap:4px;background:#FFFDFA;border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 12px;font-size:12px;box-shadow:0 8px 20px -12px rgba(56,47,46,.5)}
 .windctl span{color:var(--muted);margin-right:4px}
 .windctl button{border:0;background:transparent;border-radius:999px;padding:6px 10px;font:inherit;cursor:pointer;color:var(--ink)}
@@ -793,7 +796,7 @@ __ROUTINE__
 
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
-    <div id="wissenListe"><div class="intro"><h1>Wissen</h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
+    <div id="wissenListe"><div class="wind wind-w" aria-hidden="true"></div><div class="intro"><h1>Wissen</h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
     <div class="searchwrap wsearch">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
@@ -1422,7 +1425,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
 })();
 /* ---------- Wehende Haarsträhnen (Test): Mähne = viele Strähnen wehen von rechts herein, Dezent = an den Rändern ---------- */
 (function(){
-  const box = document.getElementById("wind"), ctl = document.getElementById("windctl"); if(!box) return;
+  const boxes = [...document.querySelectorAll(".wind")], ctl = document.getElementById("windctl"); if(!boxes.length) return; let box = boxes[0];
   const still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   let rnd = 7; const R = () => { rnd = (rnd * 9301 + 49297) % 233280; return rnd / 233280; };
   let W = 1440, H = 760;
@@ -1459,7 +1462,8 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
     const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="${dur}s" begin="${beg}s" repeatCount="indefinite"/>`;
     return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">${anim}</path>`;
   }
-  function draw(mode){
+  function draw(mode){ boxes.forEach(b => { if(!b.clientWidth) return; box = b; drawOne(mode); }); }
+  function drawOne(mode){
     rnd = 7; let s = ""; const small = window.innerWidth < 760;
     W = Math.round(box.clientWidth) || 1440; H = Math.round(box.clientHeight) || 760; const k = Math.min(1, W/1440);
     if(mode === "dezent"){
@@ -1486,6 +1490,8 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   ctl.querySelectorAll("button").forEach(b => b.onclick = () => { mode = b.dataset.w; try { localStorage.setItem("windMode", mode); } catch(e){} draw(mode); });
   let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => draw(mode), 200); });
   draw(mode);
+  const ws = document.getElementById("v-wissen");
+  if(ws) new MutationObserver(() => { if(!ws.hidden) requestAnimationFrame(() => draw(mode)); }).observe(ws, {attributes:true, attributeFilter:["hidden"]});
 })();
 /* ---------- Lauras Favorites auf der Startseite: laufende Leiste, Rubriken abwechselnd gemischt ---------- */
 (function(){
