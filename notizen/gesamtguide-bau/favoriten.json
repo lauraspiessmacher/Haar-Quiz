@@ -43,33 +43,38 @@
     {
      "type": "shampoo",
      "brand": "Dejan Garz",
-     "name": "The Sensitive"
+     "name": "The Sensitive",
+     "wofuer": "Nutze ich, wenn meine Kopfhaut empfindlich ist."
     },
     {
      "type": "kopfhaut",
      "brand": "Dejan Garz",
-     "name": "Haarserum The Sensitive Scalp"
+     "name": "Haarserum The Sensitive Scalp",
+     "wofuer": "Nutze ich, wenn meine Kopfhaut Feuchtigkeit braucht."
     },
     {
      "type": "shampoo",
      "brand": "K18",
-     "name": "Peptide Prep Detox Shampoo"
+     "name": "Peptide Prep Detox Shampoo",
+     "wofuer": "Nutze ich als Tiefenreinigungsshampoo."
     },
     {
      "type": "kopfhaut",
      "brand": "head&shoulders",
-     "name": "Derma x Pro Scalp Reset Pre-Shampoo"
+     "name": "Derma x Pro Scalp Reset Pre-Shampoo",
+     "wofuer": "Nutze ich als Kopfhautpeeling vor der Haarwäsche, auf der feuchten Kopfhaut."
     },
     {
      "type": "kopfhaut",
      "brand": "The Ordinary",
-     "name": "Multi-Peptide Serum for Hair Density"
+     "name": "Multi-Peptide Serum for Hair Density",
+     "wofuer": "Nutze ich, damit meine Kopfhaut gut versorgt ist, die Basis für gesundes, kräftiges Haarwachstum."
     },
     {
      "type": "kopfhaut",
      "brand": "The Ordinary",
      "name": "Glycolic Acid 7% Exfoliating Toner",
-     "wofuer": "Als Kopfhautpeeling"
+     "wofuer": "Nutze ich als Kopfhautpeeling vor der Haarwäsche, auf der trockenen Kopfhaut."
     }
    ]
   },
@@ -104,7 +109,8 @@
     {
      "type": "shampoo",
      "brand": "ISANA MED",
-     "name": "Ultra Sensitiv+ Anti-Schuppen"
+     "name": "Ultra Sensitiv+ Anti-Schuppen",
+     "wofuer": "Nutze ich bei leichten, trockenen Schuppen."
     },
     {
      "type": "shampoo",
@@ -115,8 +121,8 @@
     {
      "type": "shampoo",
      "brand": "Vichy",
-     "name": "Dercos Anti-Schuppen DS für trockenes Haar",
-     "wofuer": "Bei trockener Kopfhaut"
+     "name": "Dercos Anti-Schuppen DS für trockene Kopfhaut",
+     "wofuer": "Nutze ich bei hartnäckigeren Schuppen."
     }
    ]
   },

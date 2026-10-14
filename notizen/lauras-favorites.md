@@ -26,8 +26,8 @@ High-End:
 Laura meinte „Dercos“ (Vichy), nicht Kérastase. Kérastase Symbiose wieder raus.
 - ISANA MED Ultra Sensitiv+ Anti-Schuppen – im Guide (Shampoo, Drogerie).
 - Vichy Dercos Anti-Schuppen K – im Guide; dunkelgrüne Flasche mit Peelingkörnchen, zur Tiefenreinigung.
-- Vichy Dercos Anti-Schuppen DS für trockenes Haar – NEU im Shampoo-Guide (Schuppen, Haarzustand trocken). INCI lookfantastic 11091703: Aqua, Sodium Laureth Sulfate, Glycol Distearate, Dimethicone, Coco-Betaine, Glycerin, Carbomer, CI 19140, Citric Acid, Menthol, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Salicylic Acid, Selenium Sulfide, …
-- (NICHT in den Favorites, nur im Guide) Vichy Dercos Anti-Schuppen DS für normales bis fettiges Haar – NEU im Shampoo-Guide (Schuppen, normal bis fettig). INCI lookfantastic 11091704: Aqua, Sodium Laureth Sulfate, Coco-Betaine, Cetyl Alcohol, Hydroxystearyl Cetyl Ether, Carbomer, CI 19140, Citric Acid, Dimethicone, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Propylene Glycol, Salicylic Acid, Selenium Sulfide, …
+- Vichy Dercos Anti-Schuppen DS für trockene Kopfhaut – NEU im Shampoo-Guide (Schuppen, Haarzustand trocken). INCI lookfantastic 11091703: Aqua, Sodium Laureth Sulfate, Glycol Distearate, Dimethicone, Coco-Betaine, Glycerin, Carbomer, CI 19140, Citric Acid, Menthol, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Salicylic Acid, Selenium Sulfide, …
+- (NICHT in den Favorites, nur im Guide) Vichy Dercos Anti-Schuppen DS für normale bis fettige Kopfhaut – NEU im Shampoo-Guide (Schuppen, normal bis fettig). INCI lookfantastic 11091704: Aqua, Sodium Laureth Sulfate, Coco-Betaine, Cetyl Alcohol, Hydroxystearyl Cetyl Ether, Carbomer, CI 19140, Citric Acid, Dimethicone, 2-Oleamido-1,3-Octadecanediol, PPG-5-Ceteth-20, Propylene Glycol, Salicylic Acid, Selenium Sulfide, …
 
 ## Für mehr Volumen (09.10.)
 - Oribe Shampoo for Magnificent Volume (braune Reihe) – im Guide (Shampoo).
@@ -84,3 +84,8 @@ Alle im Guide (Leave-in): Pantene Leave-In Spray Glowtox, OGX Overnight Serum Re
 INCI (mehrere Händler gleich, k18hair.com nicht auslesbar): Aqua, Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Hydroxysultaine, Salicylic Acid, Charcoal Powder, sh-Oligopeptide-78, Panthenol, Glycerin, Sodium Phytate, Guar Hydroxypropyltrimonium Chloride, Caprylyl Glycol, Caprylhydroxamic Acid, Citric Acid, Potassium Hydroxide, Sodium Hydroxide, Parfum, Benzyl Salicylate, Limonene.
 Einordnung: starkes Tensid (≈ SLES), Salicylsäure weit vorne = wirksam für Kopfhaut/Talg, 1 Kalkbinder (Phytat), Guar-Polymer legt leichten Film. Gegen Coco & Eve: besser für Kopfhaut/Talg, schwächer bei Kalk/„komplett blank“. Achtung: Lily's Pharmacy (IE) zeigt eine andere Liste ohne Salicylsäure/Kohle (Fehler oder neue Rezeptur?) — Laura soll auf der Flasche nachschauen.
 Laura: in Favorites „Für eine gesunde Kopfhaut“ statt OGX ProGrowth + Peptide.
+
+### Mini-Sätze (wofuer, nur in Favorites sichtbar) — 14.10.
+Kopfhaut: Dejan Garz The Sensitive „Nutze ich, wenn meine Kopfhaut empfindlich ist.“ · Serum The Sensitive Scalp „…wenn meine Kopfhaut Feuchtigkeit braucht.“ · K18 Detox „Nutze ich als Tiefenreinigungsshampoo.“ · head&shoulders Scalp Reset „Kopfhautpeeling vor der Haarwäsche, auf der feuchten Kopfhaut“ (laut Hersteller-Anwendung feucht) · TO Multi-Peptide „…damit meine Kopfhaut gut versorgt ist, die Basis für gesundes, kräftiges Haarwachstum.“ · TO Glycolic „Kopfhautpeeling vor der Haarwäsche, auf der trockenen Kopfhaut.“
+Schuppen: ISANA „bei leichten, trockenen Schuppen“ · Dercos K bleibt „Zur Tiefenreinigung, mit Peelingkörnchen“ · Dercos DS trockene Kopfhaut „bei hartnäckigeren Schuppen“.
+Nächster Schritt: Laura schaut, ob es gut aussieht, dann Sätze für die anderen Abschnitte.
