@@ -1483,6 +1483,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
       for(let i = 0; i < N; i++){ const p0 = P[Math.max(i-1,0)], p1 = P[i], p2 = P[i+1], p3 = P[Math.min(i+2,N)];
         d += ` C ${pt(p1[0] + (p2[0]-p0[0])/6, p1[1] + (p2[1]-p0[1])/6)}, ${pt(p2[0] - (p3[0]-p1[0])/6, p2[1] - (p3[1]-p1[1])/6)}, ${pt(p2[0], p2[1])}`; }
       /* Spitze rollt sich ein, Richtung = letzte Laufrichtung der Strähne, damit kein Knick entsteht */
+      if(r <= 0) return d;
       const [ex, ey] = P[N], tl = Math.hypot(ex - P[N-1][0], ey - P[N-1][1]), tx = (ex - P[N-1][0])/tl, ty = (ey - P[N-1][1])/tl;
       const sx = -ty*side, sy = tx*side, k = .552, r2 = r*.6;
       const q1x = ex + tx*r + sx*r, q1y = ey + ty*r + sy*r, q2x = ex + sx*2*r, q2y = ey + sy*2*r;
@@ -1515,7 +1516,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
         const f = i / n, y0 = -60 + f*H*0.45 + R()*40;
         const dx = -(W*(small ? .6 : .46) + R()*W*(small ? .15 : .12)), dy = H*(.55 + R()*.25);
         const op = (0.07 + R()*0.15).toFixed(2), sw = (0.6 + R()*0.9).toFixed(1);
-        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 12 : 24) + R()*(small ? 6 : 10), cols[Math.floor(R()*cols.length)], op, sw, (small ? 8 : 13) + R()*(small ? 6 : 12), 1, f*0.4);
+        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 12 : 24) + R()*(small ? 6 : 10), cols[Math.floor(R()*cols.length)], op, sw, box.classList.contains("wind-w") ? 0 : (small ? 8 : 13) + R()*(small ? 6 : 12), 1, f*0.4);
       }
     }
     box.innerHTML = s ? `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${s}</svg>` : "";
