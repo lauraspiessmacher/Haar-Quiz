@@ -101,16 +101,7 @@ main{padding-bottom:60px}
   transform:rotate(-1.2deg);filter:drop-shadow(0 2px 2px rgba(56,47,46,.13)) drop-shadow(0 8px 12px rgba(56,47,46,.10))}
 .patchtitel svg{width:78%;height:auto;display:block;overflow:visible;margin-top:2%}
 .patchtitel text{font-family:inherit;font-size:72px;letter-spacing:1px}
-/* Wird beim Öffnen „gestickt“: erst laufen die Stiche die Buchstaben entlang, dann füllt sich Buchstabe für Buchstabe mit Fäden */
 .patchtitel .stich{fill:none;stroke:#161515;stroke-width:1.3;stroke-dasharray:3.4 2.3;stroke-linecap:round}
-.patchtitel .zug{fill:none;stroke:#fff;stroke-width:5;stroke-dasharray:420;stroke-dashoffset:420;animation:stZug 1.7s cubic-bezier(.45,.1,.4,1) .25s forwards}
-.patchtitel .fuell tspan{fill-opacity:0;animation:stFuell .5s ease forwards}
-.patchtitel .fuell tspan:nth-child(1){animation-delay:1.35s}.patchtitel .fuell tspan:nth-child(2){animation-delay:1.5s}.patchtitel .fuell tspan:nth-child(3){animation-delay:1.65s}
-.patchtitel .fuell tspan:nth-child(4){animation-delay:1.8s}.patchtitel .fuell tspan:nth-child(5){animation-delay:1.95s}.patchtitel .fuell tspan:nth-child(6){animation-delay:2.1s}
-@keyframes stZug{to{stroke-dashoffset:0}}
-@keyframes stFuell{to{fill-opacity:1}}
-.patchtitel.fertig .zug{animation:none;stroke-dashoffset:0}.patchtitel.fertig .fuell tspan{animation:none;fill-opacity:1}
-@media (prefers-reduced-motion:reduce){ .patchtitel .zug{animation:none;stroke-dashoffset:0} .patchtitel .fuell tspan{animation:none;fill-opacity:1} }
 .searchwrap{position:relative;margin:20px 0 6px;max-width:520px}
 .searchwrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted)}
 .search{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 40px}
@@ -824,10 +815,9 @@ __ROUTINE__
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
     <div id="wissenListe"><div class="wind wind-w" aria-hidden="true"></div><div class="intro"><h1 class="patchtitel" aria-label="Wissen"><svg viewBox="0 0 300 74" aria-hidden="true"><defs>
-      <pattern id="satinFaden" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(-62)"><rect width="2.6" height="2.6" fill="#161515"/><rect width=".75" height="2.6" fill="#55514F" fill-opacity=".6"/><rect x="1.7" width=".6" height="2.6" fill="#000000" fill-opacity=".6"/></pattern>
-      <mask id="stichZug" maskUnits="userSpaceOnUse" x="-20" y="-20" width="340" height="120"><text class="zug" x="150" y="64" text-anchor="middle">WISSEN</text></mask></defs>
-      <text class="stich" x="150" y="64" text-anchor="middle" mask="url(#stichZug)">WISSEN</text>
-      <text class="fuell" x="150" y="64" text-anchor="middle" fill="url(#satinFaden)"><tspan>W</tspan><tspan>I</tspan><tspan>S</tspan><tspan>S</tspan><tspan>E</tspan><tspan>N</tspan></text></svg></h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
+      <pattern id="satinFaden" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(-62)"><rect width="2.6" height="2.6" fill="#161515"/><rect width=".75" height="2.6" fill="#55514F" fill-opacity=".6"/><rect x="1.7" width=".6" height="2.6" fill="#000000" fill-opacity=".6"/></pattern></defs>
+      <text class="stich" x="150" y="64" text-anchor="middle">WISSEN</text>
+      <text class="fuell" x="150" y="64" text-anchor="middle" fill="url(#satinFaden)">WISSEN</text></svg></h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
     <div class="searchwrap wsearch">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
@@ -1528,12 +1518,11 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => draw(mode), 200); });
   draw(mode);
   const ws = document.getElementById("v-wissen");
-  /* Wissen-Patch: Rahmen an die Schrift anpassen, nach dem ersten „Sticken“ bleibt sie fertig */
+  /* Wissen-Patch: Rahmen an die Schrift anpassen */
   const pt = document.querySelector(".patchtitel");
   if(pt){ const fit = () => { const sv = pt.querySelector("svg"), t = sv.querySelector(".fuell"); try { const b = t.getBBox(); if(b.width) sv.setAttribute("viewBox", `${(b.x-3).toFixed(1)} ${(b.y-3).toFixed(1)} ${(b.width+6).toFixed(1)} ${(b.height+6).toFixed(1)}`); } catch(e){} };
     (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(fit);
-    if(ws) new MutationObserver(() => { if(!ws.hidden) requestAnimationFrame(fit); }).observe(ws, {attributes:true, attributeFilter:["hidden"]});
-    pt.addEventListener("animationend", e => { if(e.animationName === "stFuell" && e.target === pt.querySelector(".fuell tspan:last-child")) pt.classList.add("fertig"); }); }
+    if(ws) new MutationObserver(() => { if(!ws.hidden) requestAnimationFrame(fit); }).observe(ws, {attributes:true, attributeFilter:["hidden"]}); }
   if(ws) new MutationObserver(() => { if(!ws.hidden) requestAnimationFrame(() => draw(mode)); }).observe(ws, {attributes:true, attributeFilter:["hidden"]});
 })();
 /* ---------- Lauras Favorites auf der Startseite: laufende Leiste, Rubriken abwechselnd gemischt ---------- */

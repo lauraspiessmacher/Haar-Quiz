@@ -380,3 +380,4 @@
 - Wissen-Patch überarbeitet (Laura: schwarzer Rand, wirkte eingefügt): neu freigestellt, Fransen in Stofffarbe statt dunkel, Schlagschatten vom schwarzen Grund entfernt, dunkle Kanten sanft aufgehellt, andersherum gedreht (270°). Patch kleiner (250 px), Schriftzug größer (bis 68 px) mit deutlicheren Fäden und Prägung, Schatten dezenter. Vorschau v195.
 - Wissen-Schriftzug ohne Schatten (Laura) und „wird gestickt“: SVG statt Text. Beim ersten Öffnen laufen die Stiche (gestrichelte Naht) die Buchstaben entlang, danach füllt sich Buchstabe für Buchstabe mit Satin-Fäden (Muster). Dauer ca. 2,6 s, nur beim ersten Öffnen pro Besuch (Klasse .fertig), bei „reduzierte Bewegung“ sofort fertig. Vorschau v196.
 - Wissen-Schriftzug: Garnfarbe Schwarz statt Braun (Laura), Animation bleibt. Vorschau v197.
+- Wissen-Schriftzug: Stick-Animation wieder raus (Laura), Schrift steht sofort fertig gestickt in Schwarz da. Vorschau v198.
