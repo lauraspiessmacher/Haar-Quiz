@@ -1477,29 +1477,31 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
     return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke">${anim}</path>`;
   }
   function lock(x0, y0, dx, dy, amp, col, op, sw, curl, side, delay){
-    /* eine lange Strähne: mehrere Wellen, die zur Spitze hin stärker werden, und eine eingedrehte Spitze */
-    const L = Math.hypot(dx, dy), ux = dx/L, uy = dy/L, nx = -uy, ny = ux, m = 6, seg = L/m;
+    /* eine lange Strähne als durchgehend weiche Kurve (Wellen zur Spitze hin stärker) mit eingedrehter Spitze.
+       Bewegung: die ganze Strähne wiegt sich von ihrem Ansatz aus, alle im selben Takt */
+    const L = Math.hypot(dx, dy), ux = dx/L, uy = dy/L, nx = -uy, ny = ux, N = 28, waves = 2.6;
     const pt = (x, y) => `${x.toFixed(1)} ${y.toFixed(1)}`;
-    const mk = (s, r, bend) => {
-      let d = `M${pt(x0, y0)}`, px = x0, py = y0;
-      for(let k = 1; k <= m; k++){
-        const a = amp * s * (0.45 + 0.55*k/m) * (k % 2 ? 1 : -1) + bend * (k/m) * (k/m);
-        const qx = x0 + dx*k/m, qy = y0 + dy*k/m;
-        d += ` C ${pt(px + ux*seg*.36 + nx*a, py + uy*seg*.36 + ny*a)}, ${pt(qx - ux*seg*.36 + nx*a, qy - uy*seg*.36 + ny*a)}, ${pt(qx, qy)}`;
-        px = qx; py = qy;
-      }
-      /* Spitze: rollt sich in einer kleinen Spirale ein */
-      const sx = nx*side, sy = ny*side, k = .552, r2 = r*.62;
-      const q1x = px + ux*r + sx*r, q1y = py + uy*r + sy*r;
-      const q2x = px + sx*2*r, q2y = py + sy*2*r;
-      const q3x = q2x - ux*r2 - sx*r2, q3y = q2y - uy*r2 - sy*r2;
-      d += ` C ${pt(px + ux*r*k, py + uy*r*k)}, ${pt(q1x - sx*r*k, q1y - sy*r*k)}, ${pt(q1x, q1y)}`;
-      d += ` C ${pt(q1x + sx*r*k, q1y + sy*r*k)}, ${pt(q2x + ux*r*k, q2y + uy*r*k)}, ${pt(q2x, q2y)}`;
-      d += ` C ${pt(q2x - ux*r2*k, q2y - uy*r2*k)}, ${pt(q3x + sx*r2*k, q3y + sy*r2*k)}, ${pt(q3x, q3y)}`;
+    const mk = (ph, r) => {
+      const P = [];
+      for(let i = 0; i <= N; i++){ const s = i/N, o = amp*(0.25 + 0.75*s)*Math.sin(2*Math.PI*waves*s + ph);
+        P.push([x0 + dx*s + nx*o, y0 + dy*s + ny*o]); }
+      let d = `M${pt(P[0][0], P[0][1])}`;
+      for(let i = 0; i < N; i++){ const p0 = P[Math.max(i-1,0)], p1 = P[i], p2 = P[i+1], p3 = P[Math.min(i+2,N)];
+        d += ` C ${pt(p1[0] + (p2[0]-p0[0])/6, p1[1] + (p2[1]-p0[1])/6)}, ${pt(p2[0] - (p3[0]-p1[0])/6, p2[1] - (p3[1]-p1[1])/6)}, ${pt(p2[0], p2[1])}`; }
+      /* Spitze rollt sich ein, Richtung = letzte Laufrichtung der Strähne, damit kein Knick entsteht */
+      const [ex, ey] = P[N], tl = Math.hypot(ex - P[N-1][0], ey - P[N-1][1]), tx = (ex - P[N-1][0])/tl, ty = (ey - P[N-1][1])/tl;
+      const sx = -ty*side, sy = tx*side, k = .552, r2 = r*.6;
+      const q1x = ex + tx*r + sx*r, q1y = ey + ty*r + sy*r, q2x = ex + sx*2*r, q2y = ey + sy*2*r;
+      const q3x = q2x - tx*r2 - sx*r2, q3y = q2y - ty*r2 - sy*r2;
+      d += ` C ${pt(ex + tx*r*k, ey + ty*r*k)}, ${pt(q1x - sx*r*k, q1y - sy*r*k)}, ${pt(q1x, q1y)}`;
+      d += ` C ${pt(q1x + sx*r*k, q1y + sy*r*k)}, ${pt(q2x + tx*r*k, q2y + ty*r*k)}, ${pt(q2x, q2y)}`;
+      d += ` C ${pt(q2x - tx*r2*k, q2y - ty*r2*k)}, ${pt(q3x + sx*r2*k, q3y + sy*r2*k)}, ${pt(q3x, q3y)}`;
       return d; };
-    const A = mk(1, curl, 0), B = mk(.55, curl*.85, amp*1.6), dur = "9", beg = (-delay).toFixed(2);
-    const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="${dur}s" begin="${beg}s" repeatCount="indefinite"/>`;
-    return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">${anim}</path>`;
+    const A = mk(0, curl), B = mk(0.9, curl);
+    const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="9s" begin="${(-delay).toFixed(2)}s" repeatCount="indefinite"/>`;
+    const o = `${x0.toFixed(1)} ${y0.toFixed(1)}`;
+    const rot = still ? "" : `<animateTransform attributeName="transform" type="rotate" values="0 ${o};3.2 ${o};0 ${o}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="9s" begin="${(-delay).toFixed(2)}s" repeatCount="indefinite"/>`;
+    return `<g>${rot}<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">${anim}</path></g>`;
   }
   function draw(mode){ boxes.forEach(b => { if(!b.clientWidth) return; box = b; drawOne(mode); }); }
   function drawOne(mode){
@@ -1519,7 +1521,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
         const f = i / n, y0 = -60 + f*H*0.45 + R()*40;
         const dx = -(W*(small ? .6 : .46) + R()*W*(small ? .15 : .12)), dy = H*(.55 + R()*.25);
         const op = (0.07 + R()*0.15).toFixed(2), sw = (0.6 + R()*0.9).toFixed(1);
-        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 20 : 42) + R()*(small ? 12 : 30), cols[Math.floor(R()*cols.length)], op, sw, (small ? 8 : 13) + R()*(small ? 6 : 12), 1, f*0.4);
+        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 12 : 24) + R()*(small ? 6 : 10), cols[Math.floor(R()*cols.length)], op, sw, (small ? 8 : 13) + R()*(small ? 6 : 12), 1, f*0.4);
       }
     }
     box.innerHTML = s ? `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${s}</svg>` : "";
