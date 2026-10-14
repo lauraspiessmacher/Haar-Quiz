@@ -256,6 +256,17 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .fine{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
 
 /* ---------- Startseite ---------- */
+/* Wehende Haarsträhnen hinter dem Startbereich (Test 14.10.) */
+html,body{overflow-x:clip}
+.hero{position:relative;isolation:isolate}
+.hero > :not(.wind){position:relative;z-index:1}
+.wind{position:absolute;z-index:0;top:-40px;bottom:-30px;left:calc(50% - 50vw);width:100vw;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 70%,transparent 100%)}
+.wind svg{width:100%;height:100%;display:block}
+.windctl{position:fixed;right:14px;bottom:14px;z-index:50;display:flex;align-items:center;gap:4px;background:#FFFDFA;border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 12px;font-size:12px;box-shadow:0 8px 20px -12px rgba(56,47,46,.5)}
+.windctl span{color:var(--muted);margin-right:4px}
+.windctl button{border:0;background:transparent;border-radius:999px;padding:6px 10px;font:inherit;cursor:pointer;color:var(--ink)}
+.windctl button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .hero{display:grid;grid-template-columns:minmax(0,390px) minmax(0,640px);justify-content:center;gap:44px;align-items:center;padding:36px 0 12px}
 @media (max-width:759px){ .hero{grid-template-columns:1fr;gap:22px;padding-top:22px} }
 .photo{aspect-ratio:4/5;border-radius:999px 999px 6px 6px;background:var(--card);border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:14px;padding:24px;overflow:hidden}
@@ -639,7 +650,9 @@ body{overflow-x:clip}
 
   <!-- ===================== STARTSEITE ===================== -->
   <section class="view" id="v-start">
+    <div class="windctl" id="windctl" role="group" aria-label="Test: Haarsträhnen im Hintergrund"><span>Strähnen</span><button type="button" data-w="dezent">Dezent</button><button type="button" data-w="fliessend">Fließend</button><button type="button" data-w="aus">Aus</button></div>
     <div class="hero">
+      <div class="wind" id="wind" aria-hidden="true"></div>
       <div class="photo has-img"><img src="__LAURA_FOTO__" alt="Laura mit langen, gesunden braunen Haaren" width="900" height="1350"></div>
       <div>
         <p class="kicker">Willkommen in der Healthy Hair Community</p>
@@ -1406,6 +1419,45 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   const wrap = document.getElementById("reelwrap");
   wrap.addEventListener("touchstart", () => wrap.classList.add("stop"), {passive:true});
   wrap.addEventListener("touchend", () => setTimeout(()=>wrap.classList.remove("stop"), 2500), {passive:true});
+})();
+/* ---------- Wehende Haarsträhnen (Test): Dezent = an den Rändern, Fließend = quer hinter dem Startbereich ---------- */
+(function(){
+  const box = document.getElementById("wind"), ctl = document.getElementById("windctl"); if(!box) return;
+  const still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let rnd = 7; const R = () => { rnd = (rnd * 9301 + 49297) % 233280; return rnd / 233280; };
+  let W = 1440, H = 760;
+  function strand(x0, y0, dx, len, sway, col, op, sw){
+    /* eine Strähne aus zwei Kurvenstücken, die sich langsam hin und her biegen */
+    const mk = s => { const a = sway*s, x1 = x0 + dx*0.5, y1 = y0 + len*0.5, x2 = x0 + dx, y2 = y0 + len;
+      return `M${x0.toFixed(1)} ${y0} C ${(x0+a).toFixed(1)} ${(y0+len*0.18).toFixed(1)}, ${(x1-a*1.2).toFixed(1)} ${(y1-len*0.16).toFixed(1)}, ${x1.toFixed(1)} ${y1.toFixed(1)} S ${(x2-a*0.9).toFixed(1)} ${(y2-len*0.14).toFixed(1)}, ${(x2+a*0.5).toFixed(1)} ${y2.toFixed(1)}`; };
+    const A = mk(1), B = mk(-0.7), dur = (8 + R()*6).toFixed(1), beg = (-R()*12).toFixed(1);
+    const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="${dur}s" begin="${beg}s" repeatCount="indefinite"/>`;
+    return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke">${anim}</path>`;
+  }
+  function draw(mode){
+    rnd = 7; let s = ""; const small = window.innerWidth < 760;
+    W = Math.round(box.clientWidth) || 1440; H = Math.round(box.clientHeight) || 760; const k = Math.min(1, W/1440);
+    if(mode === "dezent"){
+      const n = small ? 3 : 5;
+      for(let i = 0; i < n; i++){
+        const c = i % 2 ? "#9E8C80" : "#382F2E", op = (0.14 + R()*0.14).toFixed(2), sw = (0.9 + R()*0.7).toFixed(1);
+        s += strand(12 + i*(small?22:40) + R()*(small?10:20), -20, (small?14:30) + R()*(small?16:40), H*0.85 + R()*H*0.2, (small?14:26) + R()*(small?10:22), c, op, sw);
+        s += strand(W - 12 - i*(small?22:40) - R()*(small?10:20), -20, -((small?14:30) + R()*(small?16:40)), H*0.85 + R()*H*0.2, (small?14:26) + R()*(small?10:22), c, op, sw);
+      }
+    } else if(mode === "fliessend"){
+      const n = small ? 6 : 11;
+      for(let i = 0; i < n; i++){
+        const c = i % 3 === 0 ? "#382F2E" : "#9E8C80", op = (0.10 + R()*0.14).toFixed(2), sw = (0.8 + R()*0.8).toFixed(1);
+        s += strand(-60*k + i*(W/n) + R()*60*k, -40, (260 + R()*220)*k, H + 80, (40 + R()*40)*Math.max(k,.6), c, op, sw);
+      }
+    }
+    box.innerHTML = s ? `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${s}</svg>` : "";
+    ctl.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.w === mode ? "true" : "false"));
+  }
+  let mode = "dezent"; try { mode = localStorage.getItem("windMode") || mode; } catch(e){}
+  ctl.querySelectorAll("button").forEach(b => b.onclick = () => { mode = b.dataset.w; try { localStorage.setItem("windMode", mode); } catch(e){} draw(mode); });
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => draw(mode), 200); });
+  draw(mode);
 })();
 /* ---------- Lauras Favorites auf der Startseite: laufende Leiste, Rubriken abwechselnd gemischt ---------- */
 (function(){
