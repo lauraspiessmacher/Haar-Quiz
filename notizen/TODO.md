@@ -23,3 +23,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [ ] Frage an Laura: Hinweise „Fast die gleiche Basis wie …“ behalten oder für live rausnehmen?
 - [ ] Link zu Folge 7 fehlt noch.
 - [ ] Endgültige Übertragung in das offizielle Artifact.
+- [ ] Spliss- & Bruch-Check: Laura testet Fragen/Ergebnistexte (14.10.)
