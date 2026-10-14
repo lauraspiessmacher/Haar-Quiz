@@ -138,7 +138,7 @@ strong{font-weight:500}
 const ICO = {
  y:'<path d="M14 2 V28 M14 28 Q10 36 7 44 M14 28 Q18 36 21 44"/>',
  baum:'<path d="M14 2 V20 M14 20 Q10 26 9 32 M14 20 Q18 26 19 32 M9 32 Q6 38 5 44 M9 32 Q11 38 11 44 M19 32 Q17 38 17 44 M19 32 Q22 38 23 44"/>',
- punkt:'<path d="M14 2 V26 M14 34 V44"/><circle class="fill" cx="14" cy="30" r="3.4" fill="#F3ECE2"/>',
+ punkt:'<path d="M14 2 V37"/><circle class="fill" cx="14" cy="40.5" r="3.4" fill="#F3ECE2"/>',
  loch:'<path d="M14 2 V16 Q8 23 14 30 Q20 23 14 16 M14 30 V44"/>',
  frans:'<path d="M14 2 V32 M14 32 L10 41 M14 32 L13 44 M14 32 L16 43 M14 32 L19 40"/>',
  knoten:'<path d="M14 2 V20 Q8 24 13 28 Q19 30 15 23 Q12 20 14 30 V44"/>'
@@ -152,11 +152,11 @@ const QS = [
  {id:"bruch", t:"Siehst du kurze Haare, die abstehen?", h:"Am besten, wenn du die Haare glatt nach hinten streichst. Kurze Haare sind nicht immer abgebrochen: Jedes Haar ist in einer anderen Wachstumsphase, deshalb wachsen immer auch neue Haare nach. Nachwachsende Haare haben eine feine, spitz zulaufende Spitze. Abgebrochene Haare haben ein stumpfes oder ausgefranstes Ende. Wenn du es nicht erkennen kannst, nimm einfach „Weiß ich nicht“.", a:[
   ["Nein",{d:0}],["Ja, mit feiner Spitze, also eher nachwachsende Haare",{d:0,neu:1}],["Ja, mit stumpfem Ende, vor allem am Oberkopf oder am Ansatz",{d:1,zug:2,bOben:1}],["Ja, mit stumpfem Ende, vor allem in den Längen, etwa auf Schulterhöhe",{d:1,reib:2,bMitte:1}],["Ja, mit stumpfem Ende, überall verteilt",{d:2,ch:1,hz:1,bUeberall:1}],["Weiß ich nicht",{d:0,unsicher:1}]]},
  {id:"kaemmen", t:"Was passiert beim Kämmen oder Bürsten?", a:[
-  ["Es geht leicht durch",{d:0}],["Es ziept und verknotet sich schnell",{d:1,reib:1,pf:1}],["Es bleiben viele kurze, abgebrochene Stücke in der Bürste",{d:2,reib:2}]]},
+  ["Es geht leicht durch",{d:0}],["Es ziept und verknotet sich schnell",{d:1,reib:1,pf:1}],["Ich finde viele kurze, abgebrochene Haare im Waschbecken, im Schoß oder in der Bürste",{d:2,reib:2}]]},
  {id:"spliss", multi:1, t:"Schau dir etwa zehn Spitzen genau an. Was siehst du?", h:"Am besten vor einem hellen Hintergrund. Du kannst mehreres auswählen.", a:[
   ["Y-Spliss: die Spitze ist in zwei Teile gespalten",{d:1,s:"y",ico:"y"}],
   ["Baum-Spliss: die Spitze ist mehrfach verzweigt",{d:2,s:"baum",ico:"baum"}],
-  ["Weißer Punkt: eine helle Stelle im Haar",{d:1,s:"punkt",ico:"punkt"}],
+  ["Weißer Punkt: eine helle Stelle an der Haarspitze",{d:1,s:"punkt",ico:"punkt"}],
   ["Loch: das Haar ist in der Länge gespalten wie ein kleines Auge",{d:2,s:"loch",ico:"loch"}],
   ["Ausgefranste, dünne Spitzen",{d:1,s:"frans",ico:"frans",reib:1}],
   ["Knötchen: kleine Knoten im Haar",{d:1,s:"knoten",ico:"knoten",reib:1}],
@@ -186,7 +186,7 @@ const FINE = "Ich bin keine Friseurin und keine Ärztin, und ich kann deine Haar
 const SPL = {
  y:["Y-Spliss","Der klassische Spliss: Die Spitze hat sich in zwei Teile gespalten. Er entsteht, wenn die äußere Schuppenschicht an den ältesten Haarenden abgenutzt ist."],
  baum:["Baum-Spliss","Die Spitze hat sich mehrfach verzweigt. Das ist fortgeschrittener Spliss, der weiter nach oben wandert, wenn er nicht abgeschnitten wird."],
- punkt:["Weißer Punkt","Hier ist das Haar innen schon so geschwächt, dass es noch nicht gespalten ist, aber an dieser Stelle bald bricht."],
+ punkt:["Weißer Punkt","Der weiße Punkt sitzt immer an der Haarspitze. Hier ist das Haar innen schon so geschwächt, dass es noch nicht gespalten ist, aber an dieser Stelle bald abbricht."],
  loch:["Loch in der Länge","Das Haar ist mitten in der Länge gespalten und hält nur oben und unten noch zusammen. Das zeigt, dass das Haar nicht nur an den Spitzen, sondern auch in den Längen geschädigt ist, oft durch Hitze oder chemische Behandlungen."],
  frans:["Ausgefranste, dünne Spitzen","Die Spitzen sind über die Zeit abgenutzt und dünner geworden, meist durch Reibung. Sie verknoten leichter und brechen schneller."],
  knoten:["Knötchen","Einzelne Haare haben sich verknotet, das passiert vor allem bei Reibung und bei rauem Haar. Am Knoten bricht das Haar leicht ab."]
@@ -261,6 +261,8 @@ function evaluate(){
   /* Stufe: beansprucht, geschädigt, stark strukturgeschädigt */
   let lvl = d <= 5 ? 1 : d <= 11 ? 2 : 3;
   if(f.gummi && (f.blond || f.perm)) lvl = 3;
+  /* Auch sehr viel Hitze oder starke Reibung kann das Haar bis in die Struktur schädigen (Laura) */
+  if(f.gummi && (c.hz >= 4 || c.reib >= 5)) lvl = 3;
   if(f.gummi && lvl < 2) lvl = 2;
   if(lvl === 1 && (spl.includes("baum") || spl.includes("loch") || f.wo === "laengen")) lvl = 2;
   const causes = [
@@ -271,21 +273,21 @@ function evaluate(){
 const LVL = {
  1:["Leicht beansprucht","Deine Haare sind leicht beansprucht. Das ist ganz normal, gerade bei längeren Haaren, deren Spitzen schon ein paar Jahre alt sind. Hier reicht Pflege, die von außen schützt und stärkt. Wenn du jetzt Reibung und Hitze im Griff hast, bleibt es auch dabei."],
  2:["Geschädigt","Deine Haare sind geschädigt: Die Schuppenschicht ist an vielen Stellen aufgeraut, deshalb verlieren die Haare Feuchtigkeit, verknoten schneller und brechen leichter. Mit der richtigen Pflege von außen und weniger Reibung und Hitze bekommst du das gut in den Griff."],
- 3:["Stark strukturgeschädigt","Deine Haare sind nicht nur außen, sondern auch im Inneren geschädigt. Bindungen, die dem Haar Halt geben, sind aufgebrochen, meistens durch Blondieren oder chemische Behandlungen, manchmal auch durch sehr viel Hitze. Deshalb fühlt es sich nass oft wie Gummi an und bricht schnell. Hier reicht Pflege von außen allein nicht, dein Haar braucht etwas, das im Inneren ansetzt und es stabilisiert."]
+ 3:["Stark strukturgeschädigt","Deine Haare sind nicht nur außen, sondern auch im Inneren geschädigt. Bindungen, die dem Haar Halt geben, sind aufgebrochen, zum Beispiel durch Blondieren oder chemische Behandlungen, aber auch durch sehr viel Hitze oder starke Reibung über lange Zeit. Deshalb fühlt es sich nass oft wie Gummi an und bricht schnell. Hier reicht Pflege von außen allein nicht, dein Haar braucht etwas, das im Inneren ansetzt und es stabilisiert."]
 };
 const CAUSE = {
- reib:["Reibung","Reibung ist der größte Gegner deiner Haare. Bei jeder Bewegung reiben sie an Kissen, Kleidung, Bürste oder aneinander, und raue Haare reiben viel stärker als geschmeidige.", f => [
+ reib:["Reibung","Reibung ist der größte Gegner deiner Haare. Bei jeder Bewegung reiben sie an Kissen, Kleidung, Bürste oder aneinander, und raue Haare reiben viel stärker als geschmeidige. Ist die Reibung über lange Zeit sehr stark, wird das Haar nicht nur außen, sondern bis in die Struktur geschädigt.", f => [
    f.rubbeln ? "Nasse Haare nicht rubbeln, sondern mit einem weichen Handtuch oder Mikrofasertuch sanft ausdrücken." : "",
    f.nass ? "Nasse Haare sind am empfindlichsten. Gib erst ein Leave-in hinein und entwirre sie dann vorsichtig von unten nach oben, am besten mit einer Entwirrbürste." : "Entwirre deine Haare immer von unten nach oben, Stück für Stück.",
    f.kragen ? "Trag die Haare bei Rucksack, Schal oder hohem Kragen lieber nach vorne gelegt oder locker zusammengebunden." : "",
    f.sport ? "Beim Sport die Haare locker zusammenbinden, zum Beispiel zu einem lockeren Zopf mit Scrunchie." : "",
    f.spiel ? "Versuch, weniger an den Spitzen zu spielen und zu zwirbeln, genau dort entsteht sonst Spliss." : ""]],
- hz:["Hitze","Hitze nimmt den Haaren Feuchtigkeit und raut die Schuppenschicht auf. Zu heiß oder ohne Schutz entstehen sogar kleine Bläschen im Haar, an denen es bricht.", f => [
+ hz:["Hitze","Hitze nimmt den Haaren Feuchtigkeit und raut die Schuppenschicht auf. Zu heiß oder ohne Schutz entstehen sogar kleine Bläschen im Haar, an denen es bricht. Sehr viel Hitze schädigt das Haar mit der Zeit bis in die Struktur.", f => [
    "Vor jeder Hitze ein Hitzeschutz, ohne Ausnahme.",
    f.heiss || f.tunb ? "Stell dein Gerät höchstens auf 180 °C, bei feinem oder geschädigtem Haar lieber darunter. Mehr braucht es für ein schönes Ergebnis fast nie." : "Bleib bei der Temperatur so niedrig wie möglich.",
    "Geh mit dem Glätteisen nur einmal pro Strähne langsam durch, statt mehrmals schnell.",
    "Gönn deinen Haaren hitzefreie Tage, zum Beispiel mit Heatless Curls."]],
- ch:["Chemische Behandlungen","Blondieren, Dauerwelle und chemische Glättungen öffnen das Haar und brechen Bindungen im Inneren auf. Das ist die tiefste Art von Schaden.", f => [
+ ch:["Chemische Behandlungen","Blondieren, Dauerwelle und chemische Glättungen öffnen das Haar und brechen Bindungen im Inneren auf. Das schädigt das Haar am schnellsten bis ins Innere.", f => [
    f.blond ? "Lass zwischen zwei Blondierungen genug Zeit und frag nach einem Bond-Zusatz direkt beim Blondieren." : "Lass zwischen zwei Behandlungen genug Zeit, damit das Haar sich nicht immer weiter schwächt.",
    "Behandle möglichst nur den Ansatz neu, nicht jedes Mal die ganzen Längen.",
    "Nimm in den Wochen danach eine Pflege, die im Inneren ansetzt, und zusätzlich Proteine von außen."]],
@@ -312,7 +314,7 @@ function result(){
   const ebene = `<div class="block"><h3><span class="mark">1</span>So wird repariert</h3>
     <div class="two">
       <div class="box"><h3>Von außen</h3><p>Proteine lagern sich genau an die kaputten, rauen Stellen an und machen das Haar dort wieder widerstandsfähiger. Silikone und Pflegestoffe legen sich wie ein Film darüber, glätten die Oberfläche und verringern die Reibung. Das wäscht sich nach und nach aus, deshalb wirkt es am besten, wenn du es regelmäßig benutzt.</p></div>
-      <div class="box"><h3>Im Inneren</h3><p>Bond-Wirkstoffe sind so klein, dass sie ins Haar gelangen. Dort verbinden sie Bindungen, die beim Blondieren oder bei chemischen Behandlungen aufgebrochen sind, und stabilisieren das Haar von innen. Das brauchen vor allem stark strukturgeschädigte Haare.</p></div>
+      <div class="box"><h3>Im Inneren</h3><p>Bond-Wirkstoffe sind so klein, dass sie ins Haar gelangen. Dort verbinden sie Bindungen, die beim Blondieren, bei chemischen Behandlungen, durch viel Hitze oder starke Reibung aufgebrochen sind, und stabilisieren das Haar von innen. Das brauchen vor allem stark strukturgeschädigte Haare.</p></div>
     </div>
     <p>${lvl===3 ? "<strong>Für dich heißt das:</strong> Du brauchst beides. Ein Produkt, das im Inneren ansetzt und stabilisiert, und dazu Pflege von außen, die schützt und die Reibung senkt." : lvl===2 ? "<strong>Für dich heißt das:</strong> Pflege von außen reicht bei dir. Proteine regelmäßig, zum Beispiel als Conditioner bei jeder Wäsche und als Maske einmal pro Woche, halten dein Haar stabiler." : "<strong>Für dich heißt das:</strong> Pflege von außen reicht völlig. Vor allem Geschmeidigkeit schützt dich jetzt vor neuen Schäden, Proteine brauchst du nur ab und zu."}${f.sprode ? " Weil dein Haar beim Dehnungstest sofort reißt, fehlt ihm vor allem Feuchtigkeit. Achte auf feuchtigkeitsspendende Pflege und übertreib es nicht mit Proteinen, sonst wird das Haar noch spröder." : ""}</p></div>`;
   /* Spliss */
@@ -343,8 +345,8 @@ function result(){
     <li>Geh nie mit nassen Haaren ins Bett. Nass sind sie am empfindlichsten.</li></ul></div>`;
   const ll = `<div class="block"><h3><span class="mark">${nr+2}</span>Meine LL-Methode</h3>
     <p>Mit meiner Leave-in-Methode bleiben deine Haare jeden Tag geschmeidig, und geschmeidige Haare reiben weniger und brechen nicht so schnell.</p>
-    <ul><li><strong>Nach jeder Wäsche:</strong> Leave-in immer ins feuchte Haar, bevor du föhnst.</li>
-    <li><strong>Jeden Tag:</strong> Ein- bis zweimal ein Leave-in ins trockene Haar, vor allem in Längen und Spitzen.</li></ul>
+    <ul><li><strong>Nach jeder Wäsche:</strong> Leave-in immer ins feuchte Haar, bevor du föhnst, damit die Wirkstoffe ins Haar eindringen können.</li>
+    <li><strong>Jeden Tag:</strong> Ein- bis zweimal ein Leave-in ins trockene Haar, vor allem in Längen und Spitzen, damit sie weich und vor allem flexibel bleiben oder werden.</li></ul>
     ${val("leavein").li === 2 ? "<p>Das machst du schon richtig gut, bleib dabei.</p>" : "<p>Wenn dir täglich zu viel ist: Fang damit an, nach jeder Wäsche ein Leave-in zu benutzen. Das ist schon ein großer Unterschied zu gar keinem.</p>"}</div>`;
   const prodTxt = lvl===3 ? "Schau dir bei „Kaputte Haare“ die Produkte an, die im Inneren ansetzen, und kombiniere sie mit Proteinen von außen." : lvl===2 ? "Bei „Kaputte Haare“ findest du Produkte mit Proteinen, die dein Haar von außen stärken." : "Für dich passen vor allem Leave-ins und Conditioner, die geschmeidig machen. Bei „Kaputte Haare“ findest du außerdem Produkte mit Proteinen für ab und zu.";
   /* Kurze Haare: nachwachsend oder abgebrochen, die Pflege ist dieselbe */
