@@ -149,8 +149,8 @@ const QS = [
   ["Weich und geschmeidig",{d:0}],["Etwas trocken, aber eigentlich okay",{d:1,pf:1}],["Rau und strohig, sie verknoten schnell",{d:2,pf:2}],["Strohig, und nass fühlen sie sich fast an wie Gummi",{d:3,gummi:1,ch:2}]]},
  {id:"dehnung", t:"Mach den Dehnungstest: Was passiert?", h:"Nimm ein ausgefallenes Haar, mach es nass und zieh vorsichtig an beiden Enden.", a:[
   ["Es dehnt sich ein Stück und geht wieder zurück",{d:0}],["Es reißt sofort, fast ohne sich zu dehnen",{d:1,sprode:1,pf:2}],["Es dehnt sich sehr weit, bleibt ausgeleiert oder reißt dann",{d:3,gummi:1,ch:2}],["Habe ich nicht gemacht",{d:0}]]},
- {id:"bruch", t:"Siehst du kurze, abgebrochene Haare?", h:"Sie stehen oft ab, wenn du die Haare glatt nach hinten streichst.", a:[
-  ["Nein",{d:0}],["Ja, vor allem am Oberkopf oder am Ansatz",{d:1,zug:2,bOben:1}],["Ja, vor allem in den Längen, etwa auf Schulterhöhe",{d:1,reib:2,bMitte:1}],["Ja, überall verteilt",{d:2,ch:1,hz:1,bUeberall:1}],["Weiß ich nicht",{d:0}]]},
+ {id:"bruch", t:"Siehst du kurze Haare, die abstehen?", h:"Am besten, wenn du die Haare glatt nach hinten streichst. Kurze Haare sind nicht immer abgebrochen: Jedes Haar ist in einer anderen Wachstumsphase, deshalb wachsen immer auch neue Haare nach. Nachwachsende Haare haben eine feine, spitz zulaufende Spitze. Abgebrochene Haare haben ein stumpfes oder ausgefranstes Ende.", a:[
+  ["Nein",{d:0}],["Ja, mit feiner Spitze, also eher nachwachsende Haare",{d:0,neu:1}],["Ja, mit stumpfem Ende, vor allem am Oberkopf oder am Ansatz",{d:1,zug:2,bOben:1}],["Ja, mit stumpfem Ende, vor allem in den Längen, etwa auf Schulterhöhe",{d:1,reib:2,bMitte:1}],["Ja, mit stumpfem Ende, überall verteilt",{d:2,ch:1,hz:1,bUeberall:1}],["Ich kann es nicht erkennen",{d:0,unsicher:1}]]},
  {id:"kaemmen", t:"Was passiert beim Kämmen oder Bürsten?", a:[
   ["Es geht leicht durch",{d:0}],["Es ziept und verknotet sich schnell",{d:1,reib:1,pf:1}],["Es bleiben viele kurze, abgebrochene Stücke in der Bürste",{d:2,reib:2}]]},
  {id:"spliss", multi:1, t:"Schau dir etwa zehn Spitzen genau an. Was siehst du?", h:"Am besten vor einem hellen Hintergrund. Du kannst mehreres auswählen.", a:[
@@ -182,7 +182,7 @@ const QS = [
  {id:"umwelt", t:"Sind deine Haare oft Sonne, Chlor oder Salzwasser ausgesetzt?", a:[
   ["Selten",{}],["Im Sommer oft",{um:1}],["Das ganze Jahr über",{d:1,um:2}]]}
 ];
-const FINE = "Ich bin keine Friseurin und keine Ärztin. Der Check ersetzt keinen Blick von einem Profi, er hilft dir aber, deine Haare besser einzuschätzen. Wenn deine Haare plötzlich stark ausfallen oder abbrechen, lass das bitte ärztlich abklären.";
+const FINE = "Ich bin keine Friseurin und keine Ärztin, und ich kann deine Haare hier nicht sehen. Dein Ergebnis ist deshalb eine Einschätzung aus deinen Antworten. Der Check ersetzt keinen Blick von einem Profi, er hilft dir aber, deine Haare besser einzuschätzen. Wenn deine Haare plötzlich stark ausfallen oder abbrechen, lass das bitte ärztlich abklären.";
 const SPL = {
  y:["Y-Spliss","Der klassische Spliss: Die Spitze hat sich in zwei Teile gespalten. Er entsteht, wenn die äußere Schuppenschicht an den ältesten Haarenden abgenutzt ist."],
  baum:["Baum-Spliss","Die Spitze hat sich mehrfach verzweigt. Das ist fortgeschrittener Spliss, der weiter nach oben wandert, wenn er nicht abgeschnitten wird."],
@@ -293,7 +293,7 @@ const CAUSE = {
    f.nie || f.halb ? "Jede Haarwäsche endet mit Pflege: Conditioner oder Maske, keine Ausnahme. Lieber ein einfacher Conditioner als gar nichts." : "",
    f.sprode ? "Dein Dehnungstest zeigt: Deinen Haaren fehlt vor allem Feuchtigkeit. Setz auf feuchtigkeitsspendende Pflege und weniger auf Proteine." : "",
    "Mit meiner LL-Methode bleiben deine Haare auch zwischen den Wäschen geschmeidig, mehr dazu unten."]],
- zug:["Zug und Spannung","Wenn Haare am Oberkopf oder Ansatz abbrechen, liegt das oft an Zug: straffe Zöpfe, Gummis oder immer die gleiche Frisur.", f => [
+ zug:["Zug und Spannung","Wenn Haare am Oberkopf oder Ansatz mit stumpfem Ende abbrechen, liegt das oft an Zug: straffe Zöpfe, Gummis oder immer die gleiche Frisur.", f => [
    "Binde deine Haare locker zusammen und wechsle die Stelle des Zopfes.",
    "Nimm Scrunchies oder Spiralgummis statt Gummis mit Metall.",
    "Nie nasse Haare straff zusammenbinden, nass dehnen sie sich und brechen leichter."]],
@@ -353,7 +353,7 @@ function result(){
     <h1>${LVL[lvl][0]}</h1>
     <div class="lvl" aria-hidden="true"><span class="on"></span><span class="${lvl>=2?"on":""}"></span><span class="${lvl>=3?"on":""}"></span></div>
     <div class="lvlnames" aria-hidden="true"><span>beansprucht</span><span>geschädigt</span><span>strukturgeschädigt</span></div>
-    <div class="intro"><p>${LVL[lvl][1]}</p></div>
+    <div class="intro"><p>${LVL[lvl][1]}</p>${f.neu ? "<p>Die kurzen Haare mit feiner Spitze, die du siehst, sind sehr wahrscheinlich nachwachsende Haare. Das ist ganz normal und ein gutes Zeichen.</p>" : f.unsicher ? "<p>Ob kurze Haare abgebrochen sind oder nachwachsen, ist oft schwer zu erkennen. Schau dir beim nächsten Mal die Enden an: Eine feine Spitze heißt nachwachsend, ein stumpfes oder ausgefranstes Ende heißt abgebrochen.</p>" : ""}</div>
     ${ebene}
     ${splHtml}
     <div class="block"><h3><span class="mark">${nr}</span>Woher dein Haarbruch kommt</h3>${cz}</div>
