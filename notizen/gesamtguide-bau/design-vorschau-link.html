@@ -97,7 +97,7 @@ main{padding-bottom:60px}
 .patchtitel svg{width:78%;height:auto;display:block;overflow:visible;margin-top:2%}
 .patchtitel text{font-family:inherit;font-size:72px;letter-spacing:1px}
 /* Wird beim Öffnen „gestickt“: erst laufen die Stiche die Buchstaben entlang, dann füllt sich Buchstabe für Buchstabe mit Fäden */
-.patchtitel .stich{fill:none;stroke:#4A3C38;stroke-width:1.3;stroke-dasharray:3.4 2.3;stroke-linecap:round}
+.patchtitel .stich{fill:none;stroke:#161515;stroke-width:1.3;stroke-dasharray:3.4 2.3;stroke-linecap:round}
 .patchtitel .zug{fill:none;stroke:#fff;stroke-width:5;stroke-dasharray:420;stroke-dashoffset:420;animation:stZug 1.7s cubic-bezier(.45,.1,.4,1) .25s forwards}
 .patchtitel .fuell tspan{fill-opacity:0;animation:stFuell .5s ease forwards}
 .patchtitel .fuell tspan:nth-child(1){animation-delay:1.35s}.patchtitel .fuell tspan:nth-child(2){animation-delay:1.5s}.patchtitel .fuell tspan:nth-child(3){animation-delay:1.65s}
@@ -1021,7 +1021,7 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
     <div id="wissenListe"><div class="wind wind-w" aria-hidden="true"></div><div class="intro"><h1 class="patchtitel" aria-label="Wissen"><svg viewBox="0 0 300 74" aria-hidden="true"><defs>
-      <pattern id="satinFaden" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(-62)"><rect width="2.6" height="2.6" fill="#45372F"/><rect width=".75" height="2.6" fill="#7A665E" fill-opacity=".55"/><rect x="1.7" width=".6" height="2.6" fill="#2A201D" fill-opacity=".5"/></pattern>
+      <pattern id="satinFaden" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(-62)"><rect width="2.6" height="2.6" fill="#161515"/><rect width=".75" height="2.6" fill="#55514F" fill-opacity=".6"/><rect x="1.7" width=".6" height="2.6" fill="#000000" fill-opacity=".6"/></pattern>
       <mask id="stichZug" maskUnits="userSpaceOnUse" x="-20" y="-20" width="340" height="120"><text class="zug" x="150" y="64" text-anchor="middle">WISSEN</text></mask></defs>
       <text class="stich" x="150" y="64" text-anchor="middle" mask="url(#stichZug)">WISSEN</text>
       <text class="fuell" x="150" y="64" text-anchor="middle" fill="url(#satinFaden)"><tspan>W</tspan><tspan>I</tspan><tspan>S</tspan><tspan>S</tspan><tspan>E</tspan><tspan>N</tspan></text></svg></h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
