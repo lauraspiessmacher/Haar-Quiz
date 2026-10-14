@@ -79,6 +79,7 @@ if _fav.get('teaserbild'):  # Titelbild für die Favorites-Leiste auf der Starts
     _tb = _fav['teaserbild']; _mime = 'image/webp' if _tb.endswith('.webp') else ('image/png' if _tb.endswith('.png') else 'image/jpeg')
     _fav['teaserbild'] = f'data:{_mime};base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _tb, 'rb').read()).decode()
 t = t.replace('__FAV__', json.dumps(_fav, ensure_ascii=False))
+t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html').replace('__QUIZ_SPLISS__', 'quiz-spliss.html')
 t = t.replace('<p class="note-banner">Vorschau mit allen echten Produkten aus deinen 6 Guides. Quiz und Wissen sind noch Platzhalter.</p>',
