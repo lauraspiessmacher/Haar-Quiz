@@ -149,8 +149,8 @@ const QS = [
   ["Weich und geschmeidig",{d:0}],["Etwas trocken, aber eigentlich okay",{d:1,pf:1}],["Rau und strohig, sie verknoten schnell",{d:2,pf:2}],["Strohig, und nass fühlen sie sich fast an wie Gummi",{d:3,gummi:1,ch:2}]]},
  {id:"dehnung", t:"Mach den Dehnungstest: Was passiert?", h:"Nimm ein ausgefallenes Haar, mach es nass und zieh vorsichtig an beiden Enden.", a:[
   ["Es dehnt sich ein Stück und geht wieder zurück",{d:0}],["Es reißt sofort, fast ohne sich zu dehnen",{d:1,sprode:1,pf:2}],["Es dehnt sich sehr weit, bleibt ausgeleiert oder reißt dann",{d:3,gummi:1,ch:2}],["Habe ich nicht gemacht",{d:0}]]},
- {id:"bruch", t:"Siehst du kurze Haare, die abstehen?", h:"Am besten, wenn du die Haare glatt nach hinten streichst. Kurze Haare sind nicht immer abgebrochen: Jedes Haar ist in einer anderen Wachstumsphase, deshalb wachsen immer auch neue Haare nach. Nachwachsende Haare haben eine feine, spitz zulaufende Spitze. Abgebrochene Haare haben ein stumpfes oder ausgefranstes Ende.", a:[
-  ["Nein",{d:0}],["Ja, mit feiner Spitze, also eher nachwachsende Haare",{d:0,neu:1}],["Ja, mit stumpfem Ende, vor allem am Oberkopf oder am Ansatz",{d:1,zug:2,bOben:1}],["Ja, mit stumpfem Ende, vor allem in den Längen, etwa auf Schulterhöhe",{d:1,reib:2,bMitte:1}],["Ja, mit stumpfem Ende, überall verteilt",{d:2,ch:1,hz:1,bUeberall:1}],["Ich kann es nicht erkennen",{d:0,unsicher:1}]]},
+ {id:"bruch", t:"Siehst du kurze Haare, die abstehen?", h:"Am besten, wenn du die Haare glatt nach hinten streichst. Kurze Haare sind nicht immer abgebrochen: Jedes Haar ist in einer anderen Wachstumsphase, deshalb wachsen immer auch neue Haare nach. Nachwachsende Haare haben eine feine, spitz zulaufende Spitze. Abgebrochene Haare haben ein stumpfes oder ausgefranstes Ende. Wenn du es nicht erkennen kannst, nimm einfach „Weiß ich nicht“.", a:[
+  ["Nein",{d:0}],["Ja, mit feiner Spitze, also eher nachwachsende Haare",{d:0,neu:1}],["Ja, mit stumpfem Ende, vor allem am Oberkopf oder am Ansatz",{d:1,zug:2,bOben:1}],["Ja, mit stumpfem Ende, vor allem in den Längen, etwa auf Schulterhöhe",{d:1,reib:2,bMitte:1}],["Ja, mit stumpfem Ende, überall verteilt",{d:2,ch:1,hz:1,bUeberall:1}],["Weiß ich nicht",{d:0,unsicher:1}]]},
  {id:"kaemmen", t:"Was passiert beim Kämmen oder Bürsten?", a:[
   ["Es geht leicht durch",{d:0}],["Es ziept und verknotet sich schnell",{d:1,reib:1,pf:1}],["Es bleiben viele kurze, abgebrochene Stücke in der Bürste",{d:2,reib:2}]]},
  {id:"spliss", multi:1, t:"Schau dir etwa zehn Spitzen genau an. Was siehst du?", h:"Am besten vor einem hellen Hintergrund. Du kannst mehreres auswählen.", a:[
@@ -347,13 +347,18 @@ function result(){
     <li><strong>Jeden Tag:</strong> Ein- bis zweimal ein Leave-in ins trockene Haar, vor allem in Längen und Spitzen.</li></ul>
     ${val("leavein").li === 2 ? "<p>Das machst du schon richtig gut, bleib dabei.</p>" : "<p>Wenn dir täglich zu viel ist: Fang damit an, nach jeder Wäsche ein Leave-in zu benutzen. Das ist schon ein großer Unterschied zu gar keinem.</p>"}</div>`;
   const prodTxt = lvl===3 ? "Schau dir bei „Kaputte Haare“ die Produkte an, die im Inneren ansetzen, und kombiniere sie mit Proteinen von außen." : lvl===2 ? "Bei „Kaputte Haare“ findest du Produkte mit Proteinen, die dein Haar von außen stärken." : "Für dich passen vor allem Leave-ins und Conditioner, die geschmeidig machen. Bei „Kaputte Haare“ findest du außerdem Produkte mit Proteinen für ab und zu.";
+  /* Kurze Haare: nachwachsend oder abgebrochen, die Pflege ist dieselbe */
+  const schutzKurz = "für deine Pflege kommt es aufs Gleiche raus. Mit Schutz in der Nacht und meiner LL-Methode (beides findest du unten) pflegst und schützt du nachwachsende Haare genauso wie Haare, die schon beansprucht sind. Gerade neue Haare sind am Anfang noch fein und brechen schnell, wenn sie viel reiben. Mit dieser Pflege bleiben sie heil, während sie nachwachsen.";
+  const kurzSpl = e.spl.length ? " Und weil du Spliss hast, kommst du um einen Schnitt so oder so nicht herum." : "";
+  const kurz = f.neu ? `<p>Die kurzen Haare mit feiner Spitze sind sehr wahrscheinlich nachwachsende Haare. Das ist ganz normal und ein gutes Zeichen. Ob nachwachsend oder abgebrochen, ${schutzKurz}${kurzSpl}</p>`
+    : f.unsicher ? `<p>Ob kurze Haare abgebrochen sind oder nachwachsen, ist oft schwer zu erkennen, und das ist völlig okay. Denn ${schutzKurz}${kurzSpl}</p>` : "";
   app.innerHTML = `<section class="res fade">
     <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Dein Ergebnis</span></div>
     <p class="res-kicker">Deine Haare sind gerade</p>
     <h1>${LVL[lvl][0]}</h1>
     <div class="lvl" aria-hidden="true"><span class="on"></span><span class="${lvl>=2?"on":""}"></span><span class="${lvl>=3?"on":""}"></span></div>
     <div class="lvlnames" aria-hidden="true"><span>beansprucht</span><span>geschädigt</span><span>strukturgeschädigt</span></div>
-    <div class="intro"><p>${LVL[lvl][1]}</p>${f.neu ? "<p>Die kurzen Haare mit feiner Spitze, die du siehst, sind sehr wahrscheinlich nachwachsende Haare. Das ist ganz normal und ein gutes Zeichen.</p>" : f.unsicher ? "<p>Ob kurze Haare abgebrochen sind oder nachwachsen, ist oft schwer zu erkennen. Schau dir beim nächsten Mal die Enden an: Eine feine Spitze heißt nachwachsend, ein stumpfes oder ausgefranstes Ende heißt abgebrochen.</p>" : ""}</div>
+    <div class="intro"><p>${LVL[lvl][1]}</p>${kurz}</div>
     ${ebene}
     ${splHtml}
     <div class="block"><h3><span class="mark">${nr}</span>Woher dein Haarbruch kommt</h3>${cz}</div>
