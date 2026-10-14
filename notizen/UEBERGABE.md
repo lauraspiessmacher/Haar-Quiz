@@ -367,3 +367,4 @@
 - Mähne neu gebaut (Laura: Kanten + uneinheitlich): Strähnen jetzt aus 28 Punkten einer Sinuswelle per Catmull-Rom → durchgehend glatt, Spitze tangential angesetzt (kein Knick). Bewegung: ganze Strähne dreht sich um ihren Ansatz (SVG animateTransform rotate 0→3,2°, 9 s) + Wellen verschieben sich (Phase 0→0,9), alle im selben Takt. NICHT CSS-transform auf SVG-<g> verwenden: macht auf Retina (DPR 2) alles unsichtbar. Vorschau v180.
 - Wissen-Mähne ohne eingedrehte Spitzen (Strähnen laufen glatt aus), Startseite behält die Locken. Vorschau v181.
 - Mähne-Bewegung wie Wind (Laura: wirkte nicht wie Wind): laufende Welle Wurzel→Spitze (12 Phasen, 3,6 s Schleife, Amplitude wächst zur Spitze), dazu Windböe: Drehung um den Ansatz 0→4,5→1,5→3,5→0° in 9 s. Alle Strähnen gleicher Takt (0,4 s Versatz). Vorschau v182.
+- Startseite-Mähne welliger: 3,6 statt 2,6 Wellen pro Strähne, Wellenhöhe ×1,45 (Wissen unverändert 2,6). Kurve aus 36 Punkten. Vorschau v183.

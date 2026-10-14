@@ -1470,10 +1470,10 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
     const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="${dur}s" begin="${beg}s" repeatCount="indefinite"/>`;
     return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke">${anim}</path>`;
   }
-  function lock(x0, y0, dx, dy, amp, col, op, sw, curl, side, delay){
+  function lock(x0, y0, dx, dy, amp, col, op, sw, curl, side, delay, waves){
     /* eine lange Strähne als durchgehend weiche Kurve (Wellen zur Spitze hin stärker) mit eingedrehter Spitze.
        Bewegung: die ganze Strähne wiegt sich von ihrem Ansatz aus, alle im selben Takt */
-    const L = Math.hypot(dx, dy), ux = dx/L, uy = dy/L, nx = -uy, ny = ux, N = 28, waves = 2.6;
+    const L = Math.hypot(dx, dy), ux = dx/L, uy = dy/L, nx = -uy, ny = ux, N = 36;
     const pt = (x, y) => `${x.toFixed(1)} ${y.toFixed(1)}`;
     const mk = (ph, r) => {
       const P = [];
@@ -1514,11 +1514,12 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
     } else if(mode === "maehne"){
       /* wallende Mähne: viele Strähnen wehen von rechts herein, die Wurzeln sitzen außerhalb am rechten Rand */
       const n = small ? 18 : 38, cols = ["#382F2E","#5C4C47","#7A6A65","#9E8C80"];
+      const wl = box.classList.contains("wind-w");
       for(let i = 0; i < n; i++){
         const f = i / n, y0 = -60 + f*H*0.45 + R()*40;
         const dx = -(W*(small ? .6 : .46) + R()*W*(small ? .15 : .12)), dy = H*(.55 + R()*.25);
         const op = (0.07 + R()*0.15).toFixed(2), sw = (0.6 + R()*0.9).toFixed(1);
-        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 12 : 24) + R()*(small ? 6 : 10), cols[Math.floor(R()*cols.length)], op, sw, box.classList.contains("wind-w") ? 0 : (small ? 8 : 13) + R()*(small ? 6 : 12), 1, f*0.4);
+        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 12 : 24)*(wl ? 1 : 1.45) + R()*(small ? 6 : 10), cols[Math.floor(R()*cols.length)], op, sw, box.classList.contains("wind-w") ? 0 : (small ? 8 : 13) + R()*(small ? 6 : 12), 1, f*0.4, wl ? 2.6 : 3.6);
       }
     }
     box.innerHTML = s ? `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${s}</svg>` : "";
