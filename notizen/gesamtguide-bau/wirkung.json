@@ -161,8 +161,8 @@
 "h": 0.59,
 "e": 0.44,
 "g": 0.04,
-"r": "bond",
-"p": true
+"r": "protein",
+"p": false
 },
 "maske|Bali Curls|Deep Repair Mask": {
 "t": [
@@ -257,7 +257,7 @@
 "h": 0.49,
 "e": 0.76,
 "g": 0.04,
-"r": "bond",
+"r": "",
 "p": false
 },
 "maske|Pantene Pro-V|Grow Abundant Anti-Haarverlust Maske": {
@@ -440,7 +440,7 @@
 "h": 0.29,
 "e": 0.04,
 "g": 0.9,
-"r": "bond",
+"r": "",
 "p": false
 },
 "maske|Kérastase|Résistance Masque Thérapiste": {
@@ -1714,8 +1714,8 @@
 "h": 0.04,
 "e": 0.49,
 "g": 2.1,
-"r": "bond",
-"p": true
+"r": "protein",
+"p": false
 },
 "leavein|Herbal Essences|Leave-In Spray Blütensanft Rosenduft": {
 "t": [
@@ -2160,8 +2160,8 @@
 "h": 0.3,
 "e": 0.36,
 "g": 0.74,
-"r": "bond",
-"p": true
+"r": "protein",
+"p": false
 },
 "leavein|Schwarzkopf Gliss|Sealing Miracle Instant Sealing Spray": {
 "t": [
@@ -2334,7 +2334,7 @@
 "h": 0.08,
 "e": 0,
 "g": 1.27,
-"r": "bond",
+"r": "",
 "p": false
 },
 "leavein|Redken|Acidic Color Gloss Heat Protection Treatment": {
@@ -2418,7 +2418,7 @@
 "h": 1.39,
 "e": 0.71,
 "g": 0.0,
-"r": "bond",
+"r": "",
 "p": false
 },
 "leavein|L'Oréal Professionnel|Absolut Repair Molecular Leave-In Mask": {
@@ -2568,7 +2568,7 @@
 "h": 0.04,
 "e": 0.78,
 "g": 1.0,
-"r": "bond",
+"r": "",
 "p": false
 },
 "leavein|Redken|All Soft Mega Curls Hydramelt": {
@@ -2643,7 +2643,7 @@
 "h": 0.85,
 "e": 1.37,
 "g": 0.0,
-"r": "bond",
+"r": "",
 "p": false
 },
 "leavein|K18|Leave-In Molecular Repair Hair Mask": {
