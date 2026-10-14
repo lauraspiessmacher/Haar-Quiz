@@ -1477,7 +1477,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
     const pt = (x, y) => `${x.toFixed(1)} ${y.toFixed(1)}`;
     const mk = (ph, r) => {
       const P = [];
-      for(let i = 0; i <= N; i++){ const s = i/N, o = amp*(0.25 + 0.75*s)*Math.sin(2*Math.PI*waves*s + ph);
+      for(let i = 0; i <= N; i++){ const s = i/N, o = amp*(0.12 + 0.88*Math.pow(s, 1.25))*Math.sin(2*Math.PI*waves*s + ph);
         P.push([x0 + dx*s + nx*o, y0 + dy*s + ny*o]); }
       let d = `M${pt(P[0][0], P[0][1])}`;
       for(let i = 0; i < N; i++){ const p0 = P[Math.max(i-1,0)], p1 = P[i], p2 = P[i+1], p3 = P[Math.min(i+2,N)];
@@ -1492,10 +1492,12 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
       d += ` C ${pt(q1x + sx*r*k, q1y + sy*r*k)}, ${pt(q2x + tx*r*k, q2y + ty*r*k)}, ${pt(q2x, q2y)}`;
       d += ` C ${pt(q2x - tx*r2*k, q2y - ty*r2*k)}, ${pt(q3x + sx*r2*k, q3y + sy*r2*k)}, ${pt(q3x, q3y)}`;
       return d; };
-    const A = mk(0, curl), B = mk(0.9, curl);
-    const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="9s" begin="${(-delay).toFixed(2)}s" repeatCount="indefinite"/>`;
+    /* Wind: die Welle läuft von der Wurzel zur Spitze durch die Strähne (12 Phasen, nahtlose Schleife) */
+    const A = mk(0, curl), steps = 12, vals = [];
+    for(let j = 0; j <= steps; j++) vals.push(j === steps ? A : mk(-2*Math.PI*j/steps, curl));
+    const anim = still ? "" : `<animate attributeName="d" values="${vals.join(";")}" dur="3.6s" begin="${(-delay).toFixed(2)}s" repeatCount="indefinite"/>`;
     const o = `${x0.toFixed(1)} ${y0.toFixed(1)}`;
-    const rot = still ? "" : `<animateTransform attributeName="transform" type="rotate" values="0 ${o};3.2 ${o};0 ${o}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="9s" begin="${(-delay).toFixed(2)}s" repeatCount="indefinite"/>`;
+    const rot = still ? "" : `<animateTransform attributeName="transform" type="rotate" values="0 ${o};4.5 ${o};1.5 ${o};3.5 ${o};0 ${o}" keyTimes="0;0.3;0.55;0.75;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1" dur="9s" begin="${(-delay).toFixed(2)}s" repeatCount="indefinite"/>`;
     return `<g>${rot}<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">${anim}</path></g>`;
   }
   function draw(mode){ boxes.forEach(b => { if(!b.clientWidth) return; box = b; drawOne(mode); }); }
