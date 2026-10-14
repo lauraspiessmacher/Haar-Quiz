@@ -270,7 +270,7 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .offer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:40px 0 0;padding:0;list-style:none}
 @media (max-width:959px){ .offer{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:520px){ .offer{grid-template-columns:1fr} }
-.offer button{width:100%;height:100%;text-align:left;display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1px solid rgba(56,47,46,.30);border-radius:14px;padding:18px 18px 16px;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+.offer button{width:100%;height:100%;text-align:left;display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1.5px solid rgba(56,47,46,.45);border-radius:14px;padding:18px 18px 16px;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
 .offer button:hover{transform:translateY(-2px);box-shadow:0 10px 26px -16px rgba(56,47,46,.45)}
 .offer h3{font-size:24px}
 .offer p{margin:0;color:var(--muted);font-size:14.5px}
@@ -637,8 +637,8 @@ body{overflow-x:clip}
       </div>
     </div>
     <ul class="offer">
-      <li><button type="button" data-go="produkte"><h3>Produkte</h3><p>Über 500 Produkte von Shampoo bis Haaröl, sortiert nach Haardicke und Kopfhauttyp.</p><span class="go">Ansehen →</span></button></li>
-      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Vier kurze Checks: Welchen Kopfhauttyp habt ihr? Wie viel Pflege braucht euer Haar? Welche Struktur haben eure Haare? Und zum Schluss: Welche Routine passt zu euch? Dazu zwei Extra-Checks: Welches Hitze-Tool passt zu euren Haaren, und welcher Haarschnitt steht euch?</p><span class="go">Quiz starten →</span></button></li>
+      <li><button type="button" data-go="produkte"><h3>Produkte</h3><p>Über 500 Produkte von Shampoo bis Haaröl, dazu Hitzeschutz, Kopfhautpflege, Bürsten und Hitze-Tools. Jedes Produkt habe ich nach seinen Inhaltsstoffen eingeordnet und nach Haardicke und Kopfhauttyp sortiert, damit ihr seht, was wirklich zu euch passt.</p><span class="go">Ansehen →</span></button></li>
+      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Sechs kurze Quizze, die euch zeigen, was eure Haare brauchen: euren Kopfhauttyp, eure Haarstruktur, die passende Pflege und Routine, das richtige Hitze-Tool und einen Haarschnitt, der zu euch passt.</p><span class="go">Quiz starten →</span></button></li>
       <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Haarpflegethemen, zu Mythen und zum richtigen Umgang mit euren Haaren, einfach erklärt.</p><span class="go">Lesen →</span></button></li>
       <li><button type="button" data-go="me"><h3>Meine Haare</h3><p>Stellt einmal eure Haardicke und euren Kopfhauttyp ein und seht nur, was zu euch passt.</p><span class="go">Einstellen →</span></button></li>
     </ul>
