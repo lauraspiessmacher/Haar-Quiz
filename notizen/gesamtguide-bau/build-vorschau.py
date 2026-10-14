@@ -79,6 +79,7 @@ if _fav.get('teaserbild'):  # Titelbild für die Favorites-Leiste auf der Starts
     _tb = _fav['teaserbild']; _mime = 'image/webp' if _tb.endswith('.webp') else ('image/png' if _tb.endswith('.png') else 'image/jpeg')
     _fav['teaserbild'] = f'data:{_mime};base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _tb, 'rb').read()).decode()
 t = t.replace('__FAV__', json.dumps(_fav, ensure_ascii=False))
+t = t.replace('__ORDNER__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner-ringe.webp','rb').read()).decode())
 t = t.replace('__STOFFPATCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stoffpatch-quer.webp','rb').read()).decode())
 t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
