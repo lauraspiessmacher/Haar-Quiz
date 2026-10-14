@@ -86,18 +86,20 @@
     {
      "type": "oel",
      "brand": "OGX",
-     "name": "Coconut Miracle Oil"
+     "name": "Coconut Miracle Oil",
+     "wofuer": "Nutze ich für die ÖWC-Methode vor der Haarwäsche."
     },
     {
      "type": "oel",
      "brand": "Pantene Pro-V",
-     "name": "Hair Glowtox Öl"
+     "name": "Hair Glowtox Öl",
+     "wofuer": "Nutze ich für die ÖWC-Methode vor der Haarwäsche."
     },
     {
      "type": "leavein",
      "brand": "OGX",
      "name": "Overnight Serum Rescue Fusions",
-     "wofuer": "Als Overnight-Treatment vor der Haarwäsche"
+     "wofuer": "Als Overnight-Treatment vor der Haarwäsche, also für die LWC-Methode: Das Leave-in lasse ich gern über Nacht einwirken."
     }
    ]
   },
@@ -129,7 +131,7 @@
   {
    "id": "genaehrt",
    "titel": "Nährende Pflege",
-   "text": "Für ein richtig nährendes, geschmeidiges Ergebnis. Meine Haare vertragen auch schwere Produkte sehr gut.",
+   "text": "Für ein richtig nährendes, geschmeidiges Ergebnis, wenn sich meine Haare mal trocken und spröde anfühlen. Da ich normale bis dicke Haare habe und davon auch viele, komme ich mit reichhaltigeren Produkten sehr gut klar, feines Haar würden sie eher beschweren.",
    "produkte": [
     {
      "type": "conditioner",
@@ -186,7 +188,7 @@
   {
    "id": "glossy",
    "titel": "Für glossy Haare",
-   "text": "Diese Produkte nehme ich, wenn der Fokus auf Glanz liegt.",
+   "text": "Diese Produkte nehme ich, wenn ich meinen Haaren Feuchtigkeit geben und gleichzeitig noch mehr Glanz herausholen möchte. Für ein noch stärkeres Ergebnis trage ich die Haare danach glatt, denn auf einer glatten Oberfläche reflektiert sich das Licht am schönsten.",
    "produkte": [
     {
      "type": "maske",
@@ -246,39 +248,44 @@
   {
    "id": "leavein",
    "titel": "Hitzeschutz",
-   "text": "Das benutze ich vor jeder Hitze.",
+   "text": "Egal ob Föhnen, Glätten oder Locken: Vor jeder Hitzeanwendung kommt bei mir ein Produkt mit Hitzeschutz ins Haar. Für mich ist das einer der wichtigsten Schritte überhaupt, um Haarbruch und Spliss vorzubeugen.",
    "produkte": [
     {
      "type": "leavein",
      "brand": "Pantene Pro-V",
-     "name": "Leave-In Spray Glowtox"
+     "name": "Leave-In Spray Glowtox",
+     "wofuer": "Hitzeschutzspray / Leave-in-Spray"
     },
     {
      "type": "leavein",
      "brand": "L'Oréal Elvital",
-     "name": "Leave-In Serum Glycolic Gloss Spiegelglanz"
+     "name": "Leave-In Serum Glycolic Gloss Spiegelglanz",
+     "wofuer": "Hitzeschutzspray / Leave-in-Spray"
     },
     {
      "type": "leavein",
      "brand": "Kérastase",
-     "name": "Gloss Absolu Anti-Frizz Glaze Milk"
+     "name": "Gloss Absolu Anti-Frizz Glaze Milk",
+     "wofuer": "Hitzeschutzspray / Leave-in-Spray"
     },
     {
      "type": "leavein",
      "brand": "Gisou",
-     "name": "Honey Milk Active Repair Leave-In Conditioner Mist"
+     "name": "Honey Milk Active Repair Leave-In Conditioner Mist",
+     "wofuer": "Hitzeschutzspray / Leave-in-Spray"
     },
     {
      "type": "hitze",
      "brand": "Oribe",
-     "name": "Gold Lust Dry Heat Protection Spray"
+     "name": "Gold Lust Dry Heat Protection Spray",
+     "wofuer": "Trockener Hitzeschutz. Nutze ich für Hitzestyling auf trockenem Haar, zum Beispiel mit Glätteisen oder Lockenstab."
     }
    ]
   },
   {
    "id": "volumen",
    "titel": "Für mehr Volumen",
-   "text": "Damit bereite ich meine Haare auf ein Blowout oder auf Locken vor. So hält alles ein bisschen besser.",
+   "text": "Damit bereite ich meine Haare auf ein Blowout oder Locken vor. Ich achte darauf, dass die Pflege ganz leicht ist und nicht beschwert, so kommt meine natürliche Textur besser durch und die Stylings halten länger.",
    "produkte": [
     {
      "type": "shampoo",
@@ -326,7 +333,7 @@
   {
    "id": "repair",
    "titel": "Repair",
-   "text": "Wenn meine Haare eine kleine Stärkung brauchen. Dabei greife ich eher zu Produkten mit Proteinen als zu Bond-Repair.",
+   "text": "Wenn meine Haare eine kleine Stärkung brauchen. Diese Produkte wirken vor allem von außen: Sie legen sich auf geschädigte Stellen, glätten sie und machen die Haare geschmeidiger und widerstandsfähiger, das gilt auch für die Maske mit „Bond Repair“ im Namen.",
    "produkte": [
     {
      "type": "conditioner",
