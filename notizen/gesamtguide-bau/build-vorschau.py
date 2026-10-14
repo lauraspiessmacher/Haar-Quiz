@@ -73,6 +73,7 @@ import base64
 _fav = json.load(open(f'{S}/favoriten.json'))
 for _a in _fav['abschnitte']:  # eigene Bilder für Produkte, die (noch) nicht im Guide sind
     for _x in _a['produkte']:
+        if _x.get('hd'): _x['imgHD'] = 'data:image/webp;base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/hd/' + _x.pop('hd'), 'rb').read()).decode()  # scharfe Bilder nur für die Favorites
         if _x.get('bild'): _x['img'] = 'data:image/webp;base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _x.pop('bild'), 'rb').read()).decode()
 if _fav.get('teaserbild'):  # Titelbild für die Favorites-Leiste auf der Startseite (aus ../bilder/favoriten/)
     _tb = _fav['teaserbild']; _mime = 'image/webp' if _tb.endswith('.webp') else ('image/png' if _tb.endswith('.png') else 'image/jpeg')

@@ -44,43 +44,50 @@
      "type": "shampoo",
      "brand": "Dejan Garz",
      "name": "The Sensitive",
-     "wofuer": "Nutze ich, wenn meine Kopfhaut empfindlich ist."
+     "wofuer": "Nutze ich, wenn meine Kopfhaut empfindlich ist.",
+     "hd": "dejan-garz-the-sensitive.webp"
     },
     {
      "type": "kopfhaut",
      "brand": "Dejan Garz",
      "name": "Haarserum The Sensitive Scalp",
-     "wofuer": "Nutze ich, wenn meine Kopfhaut Feuchtigkeit braucht."
+     "wofuer": "Nutze ich, wenn meine Kopfhaut Feuchtigkeit braucht.",
+     "hd": "dejan-garz-haarserum-the-sensitive-scalp.webp"
     },
     {
      "type": "shampoo",
      "brand": "K18",
      "name": "Peptide Prep Detox Shampoo",
-     "wofuer": "Nutze ich als Tiefenreinigungsshampoo."
+     "wofuer": "Nutze ich als Tiefenreinigungsshampoo.",
+     "hd": "k18-peptide-prep-detox-shampoo.webp"
     },
     {
      "type": "shampoo",
      "brand": "Ketozolin",
      "name": "2% Shampoo",
-     "wofuer": "Nutze ich einmal die Woche für eine gesunde, ausbalancierte Kopfhaut. Wichtig: 3 bis 5 Minuten einwirken lassen."
+     "wofuer": "Nutze ich einmal die Woche für eine gesunde, ausbalancierte Kopfhaut. Wichtig: 3 bis 5 Minuten einwirken lassen.",
+     "hd": "ketozolin-2-shampoo.webp"
     },
     {
      "type": "kopfhaut",
      "brand": "head&shoulders",
      "name": "Derma x Pro Scalp Reset Pre-Shampoo",
-     "wofuer": "Nutze ich als Kopfhautpeeling vor der Haarwäsche, auf der feuchten Kopfhaut."
+     "wofuer": "Nutze ich als Kopfhautpeeling vor der Haarwäsche, auf der feuchten Kopfhaut.",
+     "hd": "head-shoulders-derma-x-pro-scalp-reset-pre-shampoo.webp"
     },
     {
      "type": "kopfhaut",
      "brand": "The Ordinary",
      "name": "Multi-Peptide Serum for Hair Density",
-     "wofuer": "Nutze ich, damit meine Kopfhaut gut versorgt ist, die Basis für gesundes, kräftiges Haarwachstum."
+     "wofuer": "Nutze ich, damit meine Kopfhaut gut versorgt ist, die Basis für gesundes, kräftiges Haarwachstum.",
+     "hd": "the-ordinary-multi-peptide-serum-for-hair-density.webp"
     },
     {
      "type": "kopfhaut",
      "brand": "The Ordinary",
      "name": "Glycolic Acid 7% Exfoliating Toner",
-     "wofuer": "Nutze ich als Kopfhautpeeling vor der Haarwäsche, auf der trockenen Kopfhaut."
+     "wofuer": "Nutze ich als Kopfhautpeeling vor der Haarwäsche, auf der trockenen Kopfhaut.",
+     "hd": "the-ordinary-glycolic-acid-7-exfoliating-toner.webp"
     }
    ]
   },
@@ -93,13 +100,15 @@
      "type": "oel",
      "brand": "OGX",
      "name": "Coconut Miracle Oil",
-     "wofuer": "Nutze ich für die ÖWC-Methode vor der Haarwäsche."
+     "wofuer": "Nutze ich für die ÖWC-Methode vor der Haarwäsche.",
+     "hd": "ogx-coconut-miracle-oil.webp"
     },
     {
      "type": "oel",
      "brand": "Pantene Pro-V",
      "name": "Hair Glowtox Öl",
-     "wofuer": "Nutze ich für die ÖWC-Methode vor der Haarwäsche."
+     "wofuer": "Nutze ich für die ÖWC-Methode vor der Haarwäsche.",
+     "hd": "pantene-pro-v-hair-glowtox-oel.webp"
     },
     {
      "type": "leavein",
@@ -130,7 +139,8 @@
      "type": "shampoo",
      "brand": "Vichy",
      "name": "Dercos Anti-Schuppen DS für trockene Kopfhaut",
-     "wofuer": "Nutze ich bei hartnäckigeren Schuppen."
+     "wofuer": "Nutze ich bei hartnäckigeren Schuppen.",
+     "hd": "vichy-dercos-anti-schuppen-ds-fuer-trockene-kopfhaut.webp"
     }
    ]
   },
@@ -142,52 +152,62 @@
     {
      "type": "conditioner",
      "brand": "Wella Professionals",
-     "name": "Oil Reflections Luminous Instant Conditioner"
+     "name": "Oil Reflections Luminous Instant Conditioner",
+     "hd": "wella-professionals-oil-reflections-luminous-instant-conditi.webp"
     },
     {
      "type": "maske",
      "brand": "Wella Professionals",
-     "name": "Oil Reflections Luminous Reboost Mask"
+     "name": "Oil Reflections Luminous Reboost Mask",
+     "hd": "wella-professionals-oil-reflections-luminous-reboost-mask.webp"
     },
     {
      "type": "shampoo",
      "brand": "Redken",
-     "name": "All Soft Shampoo"
+     "name": "All Soft Shampoo",
+     "hd": "redken-all-soft-shampoo.webp"
     },
     {
      "type": "leavein",
      "brand": "Oribe",
-     "name": "Gold Lust Restorative Night Crème for Hair"
+     "name": "Gold Lust Restorative Night Crème for Hair",
+     "hd": "oribe-gold-lust-restorative-night-cr-me-for-hair.webp"
     },
     {
      "type": "conditioner",
      "brand": "OGX",
-     "name": "Nourishing Coconut Milk Conditioner"
+     "name": "Nourishing Coconut Milk Conditioner",
+     "hd": "ogx-nourishing-coconut-milk-conditioner.webp"
     },
     {
      "type": "maske",
      "brand": "OGX",
-     "name": "Rescue Fusions Intense Hydration Recovery Haarmaske"
+     "name": "Rescue Fusions Intense Hydration Recovery Haarmaske",
+     "hd": "ogx-rescue-fusions-intense-hydration-recovery-haarmaske.webp"
     },
     {
      "type": "maske",
      "brand": "L'Oréal Elvital",
-     "name": "Öl Magique Haarmaske"
+     "name": "Öl Magique Haarmaske",
+     "hd": "l-oreal-elvital-oel-magique-haarmaske.webp"
     },
     {
      "type": "oel",
      "brand": "L'Oréal Paris Elvital",
-     "name": "Öl Magique"
+     "name": "Öl Magique",
+     "hd": "l-oreal-paris-elvital-oel-magique.webp"
     },
     {
      "type": "leavein",
      "brand": "Kérastase",
-     "name": "Nutritive 8H Magic Night Serum"
+     "name": "Nutritive 8H Magic Night Serum",
+     "hd": "kerastase-nutritive-8h-magic-night-serum.webp"
     },
     {
      "type": "leavein",
      "brand": "Balea Professional",
-     "name": "Leave-In Serum Brilliant Blond Hair Sealer"
+     "name": "Leave-In Serum Brilliant Blond Hair Sealer",
+     "hd": "balea-professional-leave-in-serum-brilliant-blond-hair-seale.webp"
     }
    ]
   },
@@ -199,17 +219,20 @@
     {
      "type": "maske",
      "brand": "L'Oréal Elvital",
-     "name": "Glycolic Gloss 5 Minuten Haar-Laminierung"
+     "name": "Glycolic Gloss 5 Minuten Haar-Laminierung",
+     "hd": "l-oreal-elvital-glycolic-gloss-5-minuten-haar-laminierung.webp"
     },
     {
      "type": "conditioner",
      "brand": "L'Oréal Paris Elvital",
-     "name": "Glycolic Gloss Spiegelglanz Conditioner"
+     "name": "Glycolic Gloss Spiegelglanz Conditioner",
+     "hd": "l-oreal-paris-elvital-glycolic-gloss-spiegelglanz-conditione.webp"
     },
     {
      "type": "maske",
      "brand": "NEQI",
-     "name": "Diamond Glass Haarmaske"
+     "name": "Diamond Glass Haarmaske",
+     "hd": "neqi-diamond-glass-haarmaske.webp"
     },
     {
      "frei": true,
@@ -217,37 +240,44 @@
      "brand": "Balea Professional",
      "name": "Glow & Shine Finishing Spray",
      "art": "Finishing Spray",
-     "bild": "balea-glow-shine-finishing.webp"
+     "bild": "balea-glow-shine-finishing.webp",
+     "hd": "balea-professional-glow-shine-finishing-spray.webp"
     },
     {
      "type": "oel",
      "brand": "NEQI",
-     "name": "Haaröl Diamond Glass"
+     "name": "Haaröl Diamond Glass",
+     "hd": "neqi-haaroel-diamond-glass.webp"
     },
     {
      "type": "oel",
      "brand": "Dejan Garz",
-     "name": "Violet Hair Oil The Britney"
+     "name": "Violet Hair Oil The Britney",
+     "hd": "dejan-garz-violet-hair-oil-the-britney.webp"
     },
     {
      "type": "shampoo",
      "brand": "Kérastase",
-     "name": "Gloss Absolu Bain Crème Hydra-Glaze"
+     "name": "Gloss Absolu Bain Crème Hydra-Glaze",
+     "hd": "kerastase-gloss-absolu-bain-cr-me-hydra-glaze.webp"
     },
     {
      "type": "maske",
      "brand": "Kérastase",
-     "name": "Gloss Absolu Masque Crème Hydra-Glaze"
+     "name": "Gloss Absolu Masque Crème Hydra-Glaze",
+     "hd": "kerastase-gloss-absolu-masque-cr-me-hydra-glaze.webp"
     },
     {
      "type": "conditioner",
      "brand": "Kérastase",
-     "name": "Gloss Absolu Insta Glaze Conditioner"
+     "name": "Gloss Absolu Insta Glaze Conditioner",
+     "hd": "kerastase-gloss-absolu-insta-glaze-conditioner.webp"
     },
     {
      "type": "oel",
      "brand": "Kérastase",
-     "name": "Gloss Absolu Glaze Drops"
+     "name": "Gloss Absolu Glaze Drops",
+     "hd": "kerastase-gloss-absolu-glaze-drops.webp"
     }
    ]
   },
@@ -260,19 +290,22 @@
      "type": "leavein",
      "brand": "Pantene Pro-V",
      "name": "Leave-In Spray Glowtox",
-     "wofuer": "Hitzeschutzspray / Leave-in-Spray"
+     "wofuer": "Hitzeschutzspray / Leave-in-Spray",
+     "hd": "pantene-pro-v-leave-in-spray-glowtox.webp"
     },
     {
      "type": "leavein",
      "brand": "L'Oréal Elvital",
      "name": "Leave-In Serum Glycolic Gloss Spiegelglanz",
-     "wofuer": "Hitzeschutzspray / Leave-in-Spray"
+     "wofuer": "Hitzeschutzspray / Leave-in-Spray",
+     "hd": "l-oreal-elvital-leave-in-serum-glycolic-gloss-spiegelglanz.webp"
     },
     {
      "type": "leavein",
      "brand": "Kérastase",
      "name": "Gloss Absolu Anti-Frizz Glaze Milk",
-     "wofuer": "Hitzeschutzspray / Leave-in-Spray"
+     "wofuer": "Hitzeschutzspray / Leave-in-Spray",
+     "hd": "kerastase-gloss-absolu-anti-frizz-glaze-milk.webp"
     },
     {
      "type": "leavein",
@@ -284,7 +317,8 @@
      "type": "hitze",
      "brand": "Oribe",
      "name": "Gold Lust Dry Heat Protection Spray",
-     "wofuer": "Trockener Hitzeschutz. Nutze ich für Hitzestyling auf trockenem Haar, zum Beispiel mit Glätteisen oder Lockenstab."
+     "wofuer": "Trockener Hitzeschutz. Nutze ich für Hitzestyling auf trockenem Haar, zum Beispiel mit Glätteisen oder Lockenstab.",
+     "hd": "oribe-gold-lust-dry-heat-protection-spray.webp"
     }
    ]
   },
@@ -296,17 +330,20 @@
     {
      "type": "shampoo",
      "brand": "John Frieda",
-     "name": "Volume Lift"
+     "name": "Volume Lift",
+     "hd": "john-frieda-volume-lift.webp"
     },
     {
      "type": "conditioner",
      "brand": "John Frieda",
-     "name": "Volume Lift Nicht beschwerender Conditioner"
+     "name": "Volume Lift Nicht beschwerender Conditioner",
+     "hd": "john-frieda-volume-lift-nicht-beschwerender-conditioner.webp"
     },
     {
      "type": "leavein",
      "brand": "NEQI",
-     "name": "Haarserum Opulent Oil"
+     "name": "Haarserum Opulent Oil",
+     "hd": "neqi-haarserum-opulent-oil.webp"
     },
     {
      "frei": true,
@@ -314,17 +351,20 @@
      "brand": "John Frieda",
      "name": "Volume Lift Pushed-up Dry Texture Spray",
      "art": "Texturspray",
-     "bild": "john-frieda-volume-lift-texture-spray.webp"
+     "bild": "john-frieda-volume-lift-texture-spray.webp",
+     "hd": "john-frieda-volume-lift-pushed-up-dry-texture-spray.webp"
     },
     {
      "type": "shampoo",
      "brand": "Oribe",
-     "name": "Shampoo for Magnificent Volume"
+     "name": "Shampoo for Magnificent Volume",
+     "hd": "oribe-shampoo-for-magnificent-volume.webp"
     },
     {
      "type": "conditioner",
      "brand": "Oribe",
-     "name": "Conditioner for Magnificent Volume"
+     "name": "Conditioner for Magnificent Volume",
+     "hd": "oribe-conditioner-for-magnificent-volume.webp"
     },
     {
      "frei": true,
@@ -332,7 +372,8 @@
      "brand": "Oribe",
      "name": "Dry Texturizing Spray",
      "art": "Texturspray",
-     "bild": "oribe-dry-texturizing-spray.webp"
+     "bild": "oribe-dry-texturizing-spray.webp",
+     "hd": "oribe-dry-texturizing-spray.webp"
     }
    ]
   },
@@ -344,22 +385,26 @@
     {
      "type": "conditioner",
      "brand": "Pantene Pro-V",
-     "name": "Repair & Care 3 Minute Miracle Spülung"
+     "name": "Repair & Care 3 Minute Miracle Spülung",
+     "hd": "pantene-pro-v-repair-care-3-minute-miracle-spuelung.webp"
     },
     {
      "type": "maske",
      "brand": "Pantene Pro-V",
-     "name": "Miracles Bond Repair Intensive Haarmaske"
+     "name": "Miracles Bond Repair Intensive Haarmaske",
+     "hd": "pantene-pro-v-miracles-bond-repair-intensive-haarmaske.webp"
     },
     {
      "type": "maske",
      "brand": "Wella Professionals",
-     "name": "Ultimate Repair Mask"
+     "name": "Ultimate Repair Mask",
+     "hd": "wella-professionals-ultimate-repair-mask.webp"
     },
     {
      "type": "leavein",
      "brand": "Wella Professionals",
-     "name": "Ultimate Repair Miracle Hair Rescue"
+     "name": "Ultimate Repair Miracle Hair Rescue",
+     "hd": "wella-professionals-ultimate-repair-miracle-hair-rescue.webp"
     }
    ]
   }

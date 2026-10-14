@@ -1127,7 +1127,7 @@ function renderFav(){
   const prof = FAV.profil.map(([k,v]) => `<div class="favrow"><dt>${esc(k)}</dt><dd>${v ? esc(v) : `<span class="favleer">kommt noch</span>`}</dd></div>`).join("");
   /* Produkte aus dem Guide verlinken auf ihre Karte, eigene Einträge (frei) zeigen Bild, Marke, Name und Produktart */
   const item = x => { const p = favFind(x), y = p || x, art = p ? (T[p.type] ? T[p.type].label : "") : (x.art||"");
-    return `<li class="favitem">${y.img?`<img src="${y.img}" alt="" loading="lazy">`:`<span class="favnoimg"></span>`}<div>${art?`<span class="favart">${esc(art)}</span>`:""}<span class="brand">${esc(y.brand||"")}</span><span class="mname">${esc(y.name||"")}</span>${x.wofuer?`<p>${esc(x.wofuer)}</p>`:""}${p?`<button type="button" class="linkbtn" data-favgo="${esc(p.mk)}">Zur Einordnung <span aria-hidden="true">→</span></button>`:""}</div></li>`; };
+    return `<li class="favitem">${(x.imgHD||y.img)?`<img src="${x.imgHD||y.img}" alt="" loading="lazy">`:`<span class="favnoimg"></span>`}<div>${art?`<span class="favart">${esc(art)}</span>`:""}<span class="brand">${esc(y.brand||"")}</span><span class="mname">${esc(y.name||"")}</span>${x.wofuer?`<p>${esc(x.wofuer)}</p>`:""}${p?`<button type="button" class="linkbtn" data-favgo="${esc(p.mk)}">Zur Einordnung <span aria-hidden="true">→</span></button>`:""}</div></li>`; };
   const seg = x => (favFind(x) || x).segment || "";
   const list = a => { const groups = ["Drogerie","High-End"].map(s => [s, a.produkte.filter(x => seg(x)===s)]).filter(g => g[1].length), rest = a.produkte.filter(x => !["Drogerie","High-End"].includes(seg(x)));
     if(groups.length < 2) return `<ul class="favlist">${a.produkte.map(item).join("")}</ul>`;
@@ -1377,7 +1377,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
 /* ---------- Lauras Favorites auf der Startseite: laufende Leiste, Rubriken abwechselnd gemischt ---------- */
 (function(){
   const track = document.getElementById("favtrack"); if(!track) return;
-  const lists = FAV.abschnitte.filter(a => !a.test).map(a => a.produkte.map(x => { const p = favFind(x), y = p || x; return y.img ? {sid:a.id, rub:a.titel, img:y.img, brand:y.brand||"", name:y.name||""} : null; }).filter(Boolean));
+  const lists = FAV.abschnitte.filter(a => !a.test).map(a => a.produkte.map(x => { const p = favFind(x), y = p || x; return (x.imgHD || y.img) ? {sid:a.id, rub:a.titel, img:x.imgHD || y.img, brand:y.brand||"", name:y.name||""} : null; }).filter(Boolean));
   const mix = []; for(let i = 0; lists.some(l => i < l.length); i++) lists.forEach(l => { if(l[i]) mix.push(l[i]); });
   const heroImg = document.querySelector(".hero .photo img");
   const coverSrc = FAV.teaserbild || (heroImg ? heroImg.src : "");
