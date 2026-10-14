@@ -1473,16 +1473,30 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
     const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="${dur}s" begin="${beg}s" repeatCount="indefinite"/>`;
     return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke">${anim}</path>`;
   }
-  function lock(x0, y0, dx, dy, amp, col, op, sw){
-    /* eine lange Strähne aus drei Wellen, die sich wie im Wind hin und her legt */
-    const L = Math.hypot(dx, dy), nx = -dy/L, ny = dx/L;
-    const P = f => [x0 + dx*f, y0 + dy*f];
-    const mk = (a1, a2, a3) => { const [x1,y1] = P(1/3), [x2,y2] = P(2/3), [x3,y3] = P(1);
-      const c = (f, a) => { const [x,y] = P(f); return `${(x+nx*a).toFixed(1)} ${(y+ny*a).toFixed(1)}`; };
-      return `M${x0.toFixed(1)} ${y0.toFixed(1)} C ${c(.1,a1*.6)}, ${c(.25,a1)}, ${x1.toFixed(1)} ${y1.toFixed(1)} S ${c(.58,a2)}, ${x2.toFixed(1)} ${y2.toFixed(1)} S ${c(.92,a3)}, ${x3.toFixed(1)} ${y3.toFixed(1)}`; };
-    const A = mk(amp, -amp*1.1, amp*1.3), B = mk(-amp*.7, amp*1.2, -amp*1.4), dur = (7 + R()*6).toFixed(1), beg = (-R()*12).toFixed(1);
+  function lock(x0, y0, dx, dy, amp, col, op, sw, curl, side){
+    /* eine lange Strähne: mehrere Wellen, die zur Spitze hin stärker werden, und eine eingedrehte Spitze */
+    const L = Math.hypot(dx, dy), ux = dx/L, uy = dy/L, nx = -uy, ny = ux, m = 6, seg = L/m;
+    const pt = (x, y) => `${x.toFixed(1)} ${y.toFixed(1)}`;
+    const mk = (s, r) => {
+      let d = `M${pt(x0, y0)}`, px = x0, py = y0;
+      for(let k = 1; k <= m; k++){
+        const a = amp * s * (0.45 + 0.55*k/m) * (k % 2 ? 1 : -1);
+        const qx = x0 + dx*k/m, qy = y0 + dy*k/m;
+        d += ` C ${pt(px + ux*seg*.36 + nx*a, py + uy*seg*.36 + ny*a)}, ${pt(qx - ux*seg*.36 + nx*a, qy - uy*seg*.36 + ny*a)}, ${pt(qx, qy)}`;
+        px = qx; py = qy;
+      }
+      /* Spitze: rollt sich in einer kleinen Spirale ein */
+      const sx = nx*side, sy = ny*side, k = .552, r2 = r*.62;
+      const q1x = px + ux*r + sx*r, q1y = py + uy*r + sy*r;
+      const q2x = px + sx*2*r, q2y = py + sy*2*r;
+      const q3x = q2x - ux*r2 - sx*r2, q3y = q2y - uy*r2 - sy*r2;
+      d += ` C ${pt(px + ux*r*k, py + uy*r*k)}, ${pt(q1x - sx*r*k, q1y - sy*r*k)}, ${pt(q1x, q1y)}`;
+      d += ` C ${pt(q1x + sx*r*k, q1y + sy*r*k)}, ${pt(q2x + ux*r*k, q2y + uy*r*k)}, ${pt(q2x, q2y)}`;
+      d += ` C ${pt(q2x - ux*r2*k, q2y - uy*r2*k)}, ${pt(q3x + sx*r2*k, q3y + sy*r2*k)}, ${pt(q3x, q3y)}`;
+      return d; };
+    const A = mk(1, curl), B = mk(-.75, curl*.82), dur = (7 + R()*6).toFixed(1), beg = (-R()*12).toFixed(1);
     const anim = still ? "" : `<animate attributeName="d" values="${A};${B};${A}" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" dur="${dur}s" begin="${beg}s" repeatCount="indefinite"/>`;
-    return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke">${anim}</path>`;
+    return `<path d="${A}" stroke="${col}" stroke-opacity="${op}" stroke-width="${sw}" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">${anim}</path>`;
   }
   function draw(mode){
     rnd = 7; let s = ""; const small = window.innerWidth < 760;
@@ -1501,7 +1515,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
         const f = i / n, y0 = -60 + f*H*0.45 + R()*40;
         const dx = -(W*(small ? .55 : .42) + R()*W*(small ? .3 : .22)), dy = H*(.45 + R()*.45);
         const op = (0.07 + R()*0.15).toFixed(2), sw = (0.6 + R()*0.9).toFixed(1);
-        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 16 : 34) + R()*(small ? 14 : 30), cols[Math.floor(R()*cols.length)], op, sw);
+        s += lock(W + 30 + R()*40, y0, dx, dy, (small ? 20 : 42) + R()*(small ? 12 : 30), cols[Math.floor(R()*cols.length)], op, sw, (small ? 8 : 13) + R()*(small ? 6 : 12), R() < .5 ? 1 : -1);
       }
     }
     box.innerHTML = s ? `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${s}</svg>` : "";
