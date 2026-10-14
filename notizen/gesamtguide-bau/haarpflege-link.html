@@ -317,6 +317,20 @@ dialog::backdrop{background:rgba(56,47,46,.35)}
 .reel .bald{position:absolute;top:12px;left:12px;background:#F3ECE2;color:#382F2E;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
 
 @media (max-width:520px){ .reel{width:150px} }
+/* ---------- Lauras Favorites auf der Startseite (laufende Leiste wie Haarpflege 1×1) ---------- */
+.favtile{flex:0 0 auto;width:178px;aspect-ratio:9/16;border-radius:14px;background:#FFFDFA;border:1px solid rgba(56,47,46,.18);display:flex;flex-direction:column;padding:14px 14px 16px;cursor:pointer;text-align:left;font:inherit;color:var(--ink,#382F2E);transition:transform .2s ease, box-shadow .2s ease}
+.favtile:hover{transform:translateY(-3px);box-shadow:0 10px 26px -16px rgba(56,47,46,.45)}
+.favtile .rub{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);line-height:1.35;min-height:2.7em}
+.favtile .pic{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:10px 0}
+.favtile .pic img{max-width:100%;max-height:100%;object-fit:contain}
+.favtile .b{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.favtile .n{font-family:var(--serif);font-size:17px;line-height:1.15;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.3em}
+.favtile.cover{position:relative;overflow:hidden;background:#382F2E center/cover no-repeat;color:#F3ECE2;border:0;justify-content:flex-end}
+.favtile.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(56,47,46,.85))}
+.favtile.cover > *{position:relative;z-index:1}
+.favtile.cover .herz{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase}
+.favtile.cover .t{font-family:var(--serif);font-size:24px;line-height:1.05;margin-top:6px}
+@media (max-width:520px){ .favtile{width:150px} .favtile .n{font-size:15.5px} .favtile.cover .t{font-size:21px} }
 
 /* ---------- Hair Journey ---------- */
 .journeylink{display:inline-flex;flex-wrap:wrap;gap:0 6px;margin-top:16px;color:var(--ink);font-size:15px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
@@ -628,6 +642,11 @@ body{overflow-x:clip}
       <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Haarpflegethemen, zu Mythen und zum richtigen Umgang mit euren Haaren, einfach erklärt.</p><span class="go">Lesen →</span></button></li>
       <li><button type="button" data-go="me"><h3>Meine Haare</h3><p>Stellt einmal eure Haardicke und euren Kopfhauttyp ein und seht nur, was zu euch passt.</p><span class="go">Einstellen →</span></button></li>
     </ul>
+    <div class="serie favband">
+      <div class="head"><div><h2>Lauras Favorites</h2><p class="sub">Produkte, auf die ich mich immer verlassen kann</p></div>
+        <div class="links"><button type="button" class="btn dark" data-go="favoriten">Zu meinen Favorites <span aria-hidden="true">→</span></button></div></div>
+      <div class="reelwrap" id="favwrap"><div class="reeltrack" id="favtrack"></div></div>
+    </div>
     <div class="serie">
       <div class="head"><div><h2>Haarpflege 1x1</h2><p class="sub">meine Serie auf Instagram und TikTok</p></div>
         <div class="links"><a class="btn" id="serieAlle" href="https://www.instagram.com/lauraspiessmacher/" target="_blank" rel="noopener">Alle Folgen ansehen <span aria-hidden="true">→</span></a></div></div>
@@ -1385,6 +1404,27 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   track.innerHTML = many + list.map(r => tile(r,true)).join("").repeat(list.length < 6 ? 2 : 1);
   track.querySelectorAll('a[href="#"]').forEach(a => a.onclick = e => e.preventDefault());
   const wrap = document.getElementById("reelwrap");
+  wrap.addEventListener("touchstart", () => wrap.classList.add("stop"), {passive:true});
+  wrap.addEventListener("touchend", () => setTimeout(()=>wrap.classList.remove("stop"), 2500), {passive:true});
+})();
+/* ---------- Lauras Favorites auf der Startseite: laufende Leiste, Rubriken abwechselnd gemischt ---------- */
+(function(){
+  const track = document.getElementById("favtrack"); if(!track) return;
+  const lists = FAV.abschnitte.filter(a => !a.test).map(a => a.produkte.map(x => { const p = favFind(x), y = p || x; return y.img ? {sid:a.id, rub:a.titel, img:y.img, brand:y.brand||"", name:y.name||""} : null; }).filter(Boolean));
+  const mix = []; for(let i = 0; lists.some(l => i < l.length); i++) lists.forEach(l => { if(l[i]) mix.push(l[i]); });
+  const heroImg = document.querySelector(".hero .photo img");
+  const coverSrc = FAV.teaserbild || (heroImg ? heroImg.src : "");
+  const cover = copy => `<button type="button" class="favtile cover" data-favsec="" ${copy?'aria-hidden="true" tabindex="-1"':'aria-label="Zu Lauras Favorites"'} style="background-image:url('${coverSrc}')"><span class="herz"><span aria-hidden="true">♥</span> Was ich selbst benutze</span><span class="t">Lauras Favorites</span></button>`;
+  const tile = (f, copy) => `<button type="button" class="favtile" data-favsec="${esc(f.sid)}" ${copy?'aria-hidden="true" tabindex="-1"':`aria-label="${esc(f.brand+" "+f.name)}, aus Lauras Favorites: ${esc(f.rub)}"`}><span class="rub">${esc(f.rub)}</span><span class="pic"><img src="${f.img}" alt="" loading="lazy"></span><span class="b">${esc(f.brand)}</span><span class="n">${esc(f.name)}</span></button>`;
+  const one = copy => cover(copy) + mix.map(f => tile(f, copy)).join("");
+  track.innerHTML = one(false) + one(true);
+  const speed = () => { const half = track.scrollWidth / 2; if(half > 0) track.style.animationDuration = Math.round(half / 42) + "s"; };
+  speed(); window.addEventListener("load", speed);
+  track.querySelectorAll("[data-favsec]").forEach(b => b.onclick = () => {
+    const sid = b.dataset.favsec; state.view = "favoriten"; state.wissen = null; render();
+    const el = sid && document.getElementById("fav-" + sid);
+    if(el) el.scrollIntoView({block:"start"}); else window.scrollTo({top:0}); });
+  const wrap = document.getElementById("favwrap");
   wrap.addEventListener("touchstart", () => wrap.classList.add("stop"), {passive:true});
   wrap.addEventListener("touchend", () => setTimeout(()=>wrap.classList.remove("stop"), 2500), {passive:true});
 })();

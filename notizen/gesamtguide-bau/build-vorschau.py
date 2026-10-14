@@ -74,6 +74,9 @@ _fav = json.load(open(f'{S}/favoriten.json'))
 for _a in _fav['abschnitte']:  # eigene Bilder für Produkte, die (noch) nicht im Guide sind
     for _x in _a['produkte']:
         if _x.get('bild'): _x['img'] = 'data:image/webp;base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _x.pop('bild'), 'rb').read()).decode()
+if _fav.get('teaserbild'):  # Titelbild für die Favorites-Leiste auf der Startseite (aus ../bilder/favoriten/)
+    _tb = _fav['teaserbild']; _mime = 'image/webp' if _tb.endswith('.webp') else ('image/png' if _tb.endswith('.png') else 'image/jpeg')
+    _fav['teaserbild'] = f'data:{_mime};base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _tb, 'rb').read()).decode()
 t = t.replace('__FAV__', json.dumps(_fav, ensure_ascii=False))
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html')
