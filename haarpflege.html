@@ -761,7 +761,7 @@ body{overflow-x:clip}
 
   <!-- ===================== LAURAS FAVORITES ===================== -->
   <section class="view" id="v-favoriten" hidden>
-    <div class="intro"><h1>Lauras Favorites</h1><p>Ihr fragt mich oft, was ich selbst benutze. Hier seht ihr es, sortiert danach, was ich mit meinen Haaren vorhabe.</p></div>
+    <div class="intro"><h1>Lauras Favorites</h1><p>Ihr fragt mich super oft, welche Produkte ich selbst benutze, hier sind sie alle. Ich wähle sie danach aus, welches Ergebnis ich mir für meine Haare wünsche und was meine Kopfhaut gerade braucht.</p></div>
     <div id="favBox"></div>
   </section>
 
@@ -1155,7 +1155,7 @@ function renderFav(){
   box.innerHTML = `<div class="favtop">
       ${foto ? `<figure class="favfoto"><img src="${foto.src}" alt="Laura mit langen braunen Haaren und Wellen vom Lockenstab"><figcaption>Auf dem Foto: Wellen mit dem Lockenstab</figcaption></figure>` : ""}
       <div class="favmain"><h2>Mein Haar</h2><dl class="favprof">${prof}</dl></div>
-      <div class="favnote"><p><b>Wichtig:</b> Das sind meine Produkte für mein Haar. Sie müssen nicht zu euren Haaren passen. Was zu euren Haaren passt, findet ihr in den Quizzen und bei den Produkten.</p>
+      <div class="favnote"><p><b>Wichtig:</b> Diese Produkte passen zu meinen Haaren, für eure können ganz andere die richtigen sein. Welche das sind, findet ihr am besten mit dem Quiz heraus.</p>
         <div class="favbtns"><button type="button" class="btn dark" data-favview="quiz">Quiz machen</button><button type="button" class="btn" data-favview="produkte">Zu den Produkten</button></div></div>
     </div>
     ${FAV.abschnitte.map(a => `<section class="favsec" id="fav-${a.id}"><h2>${esc(a.titel)}</h2>${a.text?`<p class="favtxt">${esc(a.text)}</p>`:""}
