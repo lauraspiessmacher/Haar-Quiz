@@ -395,3 +395,4 @@
 - Leave-in-Check (Laura): Ergebnis zeigt ALLE passenden Leave-ins aus der Produktkategorie (nicht die LL-Auswahl). Buttons heißen jetzt „Alle Leave-ins für feines Haar / kaputte Haare …“, Text „alle Leave-ins aus meiner Produktliste“. Vorschau v207.
 - LL-Seite Olaplex No.9: „Danach gern noch ein pflegendes Leave-in“ entfernt (Laura). Vorschau v208.
 - LL-Seite OGX Bond Protein Mist: „So benutzt du es“ nur noch feucht nach der Wäsche vor dem Föhnen (Hitzeschutz), kein „zwischendurch“, kein Pre-Wash (Laura). Vorschau v209.
+- LL-Seite Auswahl: Lauras drei Texturfotos (vorlagen/textur-60/61/62.jpg) quer gedreht als Kopfbänder der Gruppen: Sprays = glänzende Lotion (textur-milch), Seren = Gel mit Bläschen (textur-serum), Cremes = dicke Creme (textur-creme); Titel groß links auf dem Bild, leichter heller Verlauf. Repair = dunkles Band ohne Foto (noch kein Bild). Platzhalter __TEX_MILCH/SERUM/CREME__. Vorschau v210.
