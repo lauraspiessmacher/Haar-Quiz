@@ -411,3 +411,4 @@
 - „Meine Haare“-Button etwas heller und grünlicher (Laura): --khaki-button #4A4A39 (Hover #3E3E30), hebt sich jetzt klar vom dunkelbraunen aktiven Menüpunkt ab. Kästen bleiben im dunklen Khaki. Vorschau v222.
 - Leave-in-Check Frage Hitze jetzt Mehrfachauswahl (Laura): „Ich föhne meine Haare“ + „Ich style regelmäßig mit Glätteisen, Lockenstab oder Multistyler“ (beides wählbar) oder „Nie oder fast nie“. Stärkere Angabe zählt; bei beidem eigener Hitzeschutz-Text. Vorschau v223.
 - LL-Seite: Quiz-Karte „Leave-in-Check“ quer und flach statt hoch (Laura): bis 760 px breit, Text links, „Quiz starten“ rechts unten; Handy untereinander. Vorschau v224.
+- Vorschau v225: Wehende Haarsträhnen aus dem Wissensbereich entfernt (nur noch auf der Startseite).
