@@ -25,6 +25,6 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [ ] Endgültige Übertragung in das offizielle Artifact.
 - [ ] Spliss- & Bruch-Check: Laura testet Fragen/Ergebnistexte (14.10.)
 - [ ] LL-Methode-Seite: Leave-in-Auswahl mit Laura Schritt für Schritt abstimmen (ll-auswahl.json, Entwurf-Hinweis danach entfernen: "entwurf": false)
-- [ ] LL-Methode-Seite: Lauras Bilder einbauen (Spliss-Arten, So funktioniert die LL-Methode → Platzhalter .llbild)
+- [x] LL-Methode-Seite: Bild „So funktioniert die LL-Methode“ (3 Zeichnungen eingebaut); Spliss-Arten-Bilder von Laura optional
 - [ ] Leave-in-Check von Laura testen lassen
 - [ ] Produktseite: Texturbilder von Laura für Haaröl, Kopfhautpflege, Hitzeschutz (evtl. Bürsten/Hitze-Tools schlicht lassen) einbauen → TYPBILD in vorschau2-template.html

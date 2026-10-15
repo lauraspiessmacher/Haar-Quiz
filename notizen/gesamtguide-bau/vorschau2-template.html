@@ -691,6 +691,12 @@ body{overflow-x:clip}
 .llstep .llwann{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin:0 0 12px}
 .llstep p{margin:0 0 6px}
 .llstepn{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid rgba(243,236,226,.5);border-radius:50%;font-size:15px}
+.llschritte{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 20px}
+.llschritte figure{margin:0}
+.llschritte img{display:block;width:100%;height:auto;border-radius:14px}
+.llschritte figcaption{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.45;margin-top:10px}
+.llschritte figcaption span{flex:0 0 26px;height:26px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;font-size:13px}
+@media (max-width:759px){ .llschritte{grid-template-columns:1fr;max-width:360px} }
 .llbild{display:grid;place-items:center;min-height:180px;border:1px dashed var(--line);border-radius:16px;color:var(--muted);font-size:14px;text-align:center;padding:20px;margin:0 0 18px}
 .lltipps{list-style:none;padding:0;margin:0 0 18px;max-width:68ch}
 .lltipps li{position:relative;padding-left:22px;margin:0 0 10px}
@@ -840,7 +846,11 @@ __ROUTINE__
           <div class="llstep"><span class="llstepn">1</span><h3>Ins feuchte Haar</h3><p class="llwann">Nach jeder Wäsche, bevor ihr föhnt</p><p>Nach Shampoo und Conditioner oder Maske kommt eure Leave-in-Pflege ins handtuchtrockene, noch feuchte Haar, vor allem in Längen und Spitzen. Im feuchten Haar können die Wirkstoffe ins Haar eindringen.</p></div>
           <div class="llstep"><span class="llstepn">2</span><h3>Ins trockene Haar</h3><p class="llwann">Ein- bis zweimal am Tag</p><p>Eine kleine Menge in die trockenen Längen und Spitzen, damit sie weich und vor allem flexibel bleiben oder werden. Verreibt sie wie eine Handcreme in den Händen und arbeitet euch von den Spitzen nach oben.</p></div>
         </div>
-        <div class="llbild" role="img" aria-label="Platzhalter für Lauras Bild zur LL-Methode"><span>Hier kommt Lauras Bild: So funktioniert die LL-Methode</span></div>
+        <div class="llschritte">
+          <figure><img src="__LL_SCHRITT1__" alt="Zeichnung: Etwas Leave-in aus der Flasche in die Handfläche geben" width="640" height="800" loading="lazy"><figcaption><span>1</span>Eine kleine Menge Leave-in in die Hand geben</figcaption></figure>
+          <figure><img src="__LL_SCHRITT2__" alt="Zeichnung: Das Leave-in zwischen beiden Handflächen verreiben" width="640" height="800" loading="lazy"><figcaption><span>2</span>In den Händen verreiben, wie eine Handcreme</figcaption></figure>
+          <figure><img src="__LL_SCHRITT3__" alt="Zeichnung: Das Leave-in mit beiden Händen in Längen und Spitzen verteilen" width="640" height="800" loading="lazy"><figcaption><span>3</span>In Längen und Spitzen verteilen, von den Spitzen nach oben</figcaption></figure>
+        </div>
         <ul class="lltipps">
           <li><strong>Weniger ist mehr:</strong> Startet mit sehr wenig Produkt. Nachlegen könnt ihr immer, aber zu viel macht die Haare schwer und strähnig.</li>
           <li><strong>Die richtige Textur:</strong> Feines und dünnes Haar verträgt meistens leichte Sprays oder Seren, dickes Haar eher Milch und Cremes.</li>
