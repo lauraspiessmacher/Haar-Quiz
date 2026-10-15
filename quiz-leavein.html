@@ -147,8 +147,8 @@ const QS = [
   ["Meine Haare werden schnell platt oder strähnig",{schwer:1}],["Sie vertragen viel, ich merke kaum, wenn es zu viel ist",{satt:1}],["Weiß ich nicht",{}]]},
  {id:"wunsch", multi:1, t:"Was soll dein Leave-in vor allem können?", h:"Du kannst mehreres auswählen.", a:[
   ["Weniger Haarbruch und Spliss",{bruch:1}],["Leichter kämmen, weniger Knoten",{kaemm:1}],["Weniger Frizz",{frizz:1}],["Mehr Glanz",{glanz:1}],["Mehr Feuchtigkeit, weniger Trockenheit",{feucht:1}],["Wellen oder Locken definieren",{locke:1}]]},
- {id:"hitze", t:"Stylst du deine Haare mit Hitze?", h:"Glätteisen, Lockenstab, Multistyler oder heißes Föhnen.", a:[
-  ["Nie oder fast nie",{hz:0}],["Ich föhne meistens",{hz:1}],["Ich style regelmäßig mit Glätteisen, Lockenstab oder Multistyler",{hz:2}]]},
+ {id:"hitze", multi:1, t:"Stylst du deine Haare mit Hitze?", h:"Du kannst mehreres auswählen.", a:[
+  ["Ich föhne meine Haare",{hz:1,foehn:1}],["Ich style regelmäßig mit Glätteisen, Lockenstab oder Multistyler",{hz:2,tools:1}],["Nie oder fast nie",{x:1,hz:0}]]},
  {id:"jetzt", t:"Wie oft benutzt du gerade ein Leave-in?", a:[
   ["Gar nicht",{li:0}],["Nur nach dem Waschen",{li:1}],["Nach dem Waschen und auch zwischendurch",{li:2}]]}
 ];
@@ -225,6 +225,7 @@ const MENGE = {fein:"zwei bis drei Sprühstöße", duenn:"drei bis vier Sprühst
 function evaluate(){
   const f = {};
   visible().forEach(q => sel(q.id).forEach(x => Object.assign(f, x)));
+  f.hz = Math.max(0, ...sel("hitze").map(x => x.hz || 0)); /* Föhnen + Hitze-Tools: das Stärkere zählt */
   /* Haardicke: unbekannt → aus dem Gewicht ableiten */
   let dk = f.dk || (f.schwer ? "duenn" : f.satt ? "dick" : "normal");
   let i = STUFE.indexOf(dk);
@@ -251,7 +252,7 @@ function result(){
   if(f.z === 2) w.push(["Proteine","Proteine wie Keratin oder Weizenprotein lagern sich an die rauen, kaputten Stellen an und machen dein Haar dort wieder widerstandsfähiger. Das wäscht sich nach und nach aus, deshalb wirkt es am besten, wenn du es regelmäßig benutzt."]);
   if(f.z === 3) w.push(["Proteine und etwas, das im Inneren ansetzt","Blondiertes oder chemisch behandeltes Haar ist auch im Inneren geschädigt. Proteine stärken es von außen, und ein Leave-in mit Bond-Wirkstoff kann zusätzlich im Inneren stabilisieren. Danach am besten noch ein pflegendes Leave-in."]);
   if(lock) w.push(["Definition","Für Wellen und Locken eine Creme oder Gel-Creme ins nasse Haar, dann in Form kneten und nicht mehr anfassen, bis alles trocken ist."]);
-  if(f.hz) w.push(["Hitzeschutz", f.hz === 2 ? "Vor jeder Hitze ein Hitzeschutz, ohne Ausnahme. Ein Leave-in mit Hitzeschutz spart dir einen Schritt, bei Glätteisen und Lockenstab achte darauf, dass es für deine Temperatur reicht." : "Wenn du föhnst, nimm am besten ein Leave-in mit Hitzeschutz. Dann ist dein Haar direkt geschützt."]);
+  if(f.hz) w.push(["Hitzeschutz", f.tools ? (f.foehn ? "Du föhnst und stylst zusätzlich mit Glätteisen, Lockenstab oder Multistyler. Vor jeder Hitze ein Hitzeschutz, ohne Ausnahme. Ein Leave-in mit Hitzeschutz spart dir beim Föhnen einen Schritt, bei Glätteisen und Lockenstab achte darauf, dass es für deine Temperatur reicht." : "Vor jeder Hitze ein Hitzeschutz, ohne Ausnahme. Ein Leave-in mit Hitzeschutz spart dir einen Schritt, bei Glätteisen und Lockenstab achte darauf, dass es für deine Temperatur reicht.") : "Wenn du föhnst, nimm am besten ein Leave-in mit Hitzeschutz. Dann ist dein Haar direkt geschützt."]);
   if(!w.length) w.push(["Feuchtigkeit und Geschmeidigkeit","Deine Haare sind gut in Form. Ein Leave-in mit Feuchtigkeit und etwas glättender Pflege hält sie so: weich, flexibel und gut kämmbar."]);
   const wHtml = w.map(([h,t]) => `<div class="box"><h3>${h}</h3><p>${t}</p></div>`).join("");
   const menge = MENGE[e.tex];
