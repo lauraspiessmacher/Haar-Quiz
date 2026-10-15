@@ -61,7 +61,7 @@ html[data-look] .grid .item:nth-child(6){animation-delay:.2s}
 html[data-look] .grid .item:nth-child(n+7){animation-delay:.24s}
 @media (prefers-reduced-motion:reduce){ html[data-look] .grid .item{animation:none} }
 @media (max-width:759px){
-  html[data-look="b"] nav.main button{font-size:11.5px;letter-spacing:.06em}
+  html[data-look="b"] nav.main button{font-size:10px;letter-spacing:.03em}
   html[data-look="b"] .ptab{font-size:11.5px;letter-spacing:.08em}
   html[data-look] .logo .strands{height:34px}
   html[data-look] .logo b{font-size:16px;letter-spacing:.08em}
@@ -75,6 +75,10 @@ html[data-stil="rouje"] header.top{background:rgba(251,247,243,.97)}
 html[data-stil="rouje"] .logo b{font-size:25px;letter-spacing:.05em}
 html[data-stil="rouje"] .logo span{font-family:var(--sans);font-style:normal;font-size:13.5px;color:#7A6A65;letter-spacing:.03em;margin-top:3px}
 html[data-stil="rouje"] nav.main button,html[data-stil="rouje"] .ptab{font-size:11.5px;letter-spacing:.12em}
+/* Sechs Menüpunkte (mit LL-Methode): auf kleineren Laptops enger, auf dem Handy kleinere Schrift */
+@media (min-width:760px){ html[data-stil="rouje"] nav.main{gap:0} html[data-stil="rouje"] nav.main button{padding:9px 9px;gap:6px;letter-spacing:.06em} }
+@media (max-width:759px){ html[data-stil="rouje"] nav.main{gap:2px} html[data-stil="rouje"] nav.main button{font-size:9.5px;letter-spacing:.01em;padding-left:0;padding-right:0} }
+@media (max-width:374px){ html[data-stil="rouje"] nav.main button{font-size:8.6px;letter-spacing:0} }
 @media (min-width:760px){ html[data-stil="rouje"] .ptab{padding-left:10px;padding-right:10px} }
 /* 9 Produktarten (mit Haarbürsten und Hitze-Tools): auf Laptops kompakter, Anzahl ausblenden */
 @media (min-width:760px){ html[data-stil="rouje"] .ptab{padding-left:7px;padding-right:7px;letter-spacing:.07em;gap:5px} html[data-stil="rouje"] .ptab .n{display:none} }

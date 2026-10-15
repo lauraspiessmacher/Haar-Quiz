@@ -79,11 +79,12 @@ if _fav.get('teaserbild'):  # Titelbild für die Favorites-Leiste auf der Starts
     _tb = _fav['teaserbild']; _mime = 'image/webp' if _tb.endswith('.webp') else ('image/png' if _tb.endswith('.png') else 'image/jpeg')
     _fav['teaserbild'] = f'data:{_mime};base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _tb, 'rb').read()).decode()
 t = t.replace('__FAV__', json.dumps(_fav, ensure_ascii=False))
+t = t.replace('__LL_AUSWAHL__', json.dumps(json.load(open(f'{S}/ll-auswahl.json', encoding='utf-8')), ensure_ascii=False))
 t = t.replace('__ORDNER__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner-ringe.webp','rb').read()).decode())
 t = t.replace('__STOFFPATCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stoffpatch-quer.webp','rb').read()).decode())
 t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
-t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html').replace('__QUIZ_SPLISS__', 'quiz-spliss.html')
+t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html').replace('__QUIZ_SPLISS__', 'quiz-spliss.html').replace('__QUIZ_LEAVEIN__', 'quiz-leavein.html')
 t = t.replace('<p class="note-banner">Vorschau mit allen echten Produkten aus deinen 6 Guides. Quiz und Wissen sind noch Platzhalter.</p>',
               '<p class="note-banner">Wissen ist noch ein Platzhalter. Die Wissenstexte kommen später.</p>')
 open(f'{ROOT}/haarpflege.html', 'w').write(t)
@@ -102,7 +103,7 @@ d = d.replace('</head>\n<body>\n', '\n', 1)
 d = re.sub(r'</body>\s*</html>\s*$', '\n', d)
 open(f'{S}/design-vorschau-link.html', 'w').write(d)
 # Quizze direkt einbetten (in den privaten Links laufen eigene Unterseiten nicht zuverlässig)
-q = {f: open(f'{ROOT}/{f}').read() for f in ('quiz-kopfhaut.html', 'quiz-pflege.html', 'quiz-haar.html', 'quiz-routine.html', 'quiz-tools.html', 'quiz-schnitt.html', 'quiz-spliss.html')}
+q = {f: open(f'{ROOT}/{f}').read() for f in ('quiz-kopfhaut.html', 'quiz-pflege.html', 'quiz-haar.html', 'quiz-routine.html', 'quiz-tools.html', 'quiz-schnitt.html', 'quiz-spliss.html', 'quiz-leavein.html')}
 emb = open(f'{S}/quiz-einbettung.html').read().replace('__QUIZ_JSON__', json.dumps(q, ensure_ascii=False).replace('</', '<\\/'))
 for fn in ('haarpflege-link.html', 'design-vorschau-link.html'):
     x = open(f'{S}/{fn}').read().rstrip('\n') + '\n' + emb

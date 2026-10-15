@@ -1,0 +1,58 @@
+{
+ "stand": "2026-10-15",
+ "entwurf": true,
+ "hinweis": "Erster Entwurf (Claude), Auswahl und Texte stimmt Laura Schritt für Schritt ab. Produkte müssen exakt wie im Leave-in-Guide heißen (brand + name).",
+ "gruppen": [
+  {"id": "fein", "titel": "Für feines und dünnes Haar", "text": "Leicht, leichter, am leichtesten: Sprays und wässrige Seren, die pflegen, ohne zu beschweren.", "kat": "fein",
+   "produkte": [
+    {"brand": "Pantene Pro-V", "name": "Leave-In Spray Glowtox",
+     "fuerwen": "Für feines bis normales Haar, das schnell platt fällt, aber trotzdem glänzen und sich leicht kämmen lassen soll. Das leichte Amodimethicone legt sich nur dort an, wo das Haar rau ist, und beschwert deshalb kaum.",
+     "anwendung": "Feucht und trocken. Nach der Wäsche zwei bis drei Sprühstöße in die Längen, zwischendurch einen Sprühstoß in die Hände und über die Spitzen streichen. Schützt beim Föhnen vor Hitze."},
+    {"brand": "NEQI", "name": "Haarserum Opulent Oil",
+     "fuerwen": "Für feines und dünnes Haar, das bei Öl sofort strähnig wird. Der Name sagt „Oil“, drin ist aber ein ölfreies Serum auf Wasserbasis. Genau deshalb ist es so leicht.",
+     "anwendung": "Vor allem trocken, als zweiter Schritt der LL-Methode. Ein bis zwei Pumpstöße in den Händen verreiben und in die Spitzen geben. Schützt auch vor Hitze."},
+    {"brand": "Wella Professionals", "name": "Ultimate Repair Miracle Hair Rescue",
+     "fuerwen": "Für feines bis normales Haar, das schon etwas strapaziert ist und schnell verknotet. Entwirrt sofort, ohne zu beschweren.",
+     "anwendung": "Feucht, direkt nach dem Handtuch. Zwei bis drei Sprühstöße in die Längen, dann durchkämmen."}
+   ]},
+  {"id": "normal", "titel": "Für normales Haar", "text": "Dein Haar verträgt etwas mehr: Sprühmilch und leichte Seren, die glätten und Glanz geben.", "kat": "normal",
+   "produkte": [
+    {"brand": "L'Oréal Elvital", "name": "Leave-In Serum Glycolic Gloss Spiegelglanz",
+     "fuerwen": "Für normales Haar, das glanzlos wirkt. Eine silikonfreie Milch mit viel Kokosöl, die das Haar weich macht und ihm Glanz gibt.",
+     "anwendung": "Feucht, vor dem Föhnen. Eine haselnussgroße Menge in Längen und Spitzen. Schützt vor Hitze."},
+    {"brand": "Kérastase", "name": "Gloss Absolu Anti-Frizz Glaze Milk",
+     "fuerwen": "Für normales Haar mit Frizz, das glatt und glänzend fallen soll. Glättet spürbar und schützt dabei vor Hitze.",
+     "anwendung": "Feucht, vor dem Föhnen. Ein paar Sprühstöße in die Längen, dann föhnen oder glätten."},
+    {"brand": "Kérastase", "name": "Nutritive 8H Magic Night Serum",
+     "fuerwen": "Für dünnes bis normales Haar, das leicht trocken ist. Ein leichtes Nachtserum, das über Nacht geschmeidig macht und die Haare auf dem Kissen vor Reibung schützt.",
+     "anwendung": "Trocken, abends vor dem Schlafen. Ein bis zwei Pumpstöße in die Längen und Spitzen, dann eine lockere Schlaffrisur."}
+   ]},
+  {"id": "dick", "titel": "Für dickes und sehr dickes Haar", "text": "Kräftiges Haar verträgt Cremes gut. Sie machen weich und bändigen Frizz.", "kat": "dick",
+   "produkte": [
+    {"brand": "Balea", "name": "Leave-In Pflege feuchtigkeitsspendend",
+     "fuerwen": "Für dickes und sehr dickes Haar, das trocken ist. Eine silikonfreie Creme mit Glycerin, Kokosöl und Panthenol, die viel Feuchtigkeit gibt. Auch toll für Kinder.",
+     "anwendung": "Feucht und trocken. Nach der Wäsche eine haselnussgroße Menge, zwischendurch etwas in die trockenen Spitzen. Schützt vor Hitze."},
+    {"brand": "Dejan Garz", "name": "Leave-In Cream The Foundation",
+     "fuerwen": "Für dickes bis sehr dickes Haar, das normal bis trocken ist. Pflegt mit Argan-, Jojoba- und Rizinusöl und macht mit Amodimethicone schön geschmeidig.",
+     "anwendung": "Feucht, nach der Wäsche. Eine haselnussgroße Menge in den Händen verreiben und von den Spitzen nach oben einarbeiten."},
+    {"brand": "Oribe", "name": "Gold Lust Restorative Night Crème for Hair",
+     "fuerwen": "Für normales bis dickes Haar, das trocken oder strapaziert ist. Eine silikonfreie Nachtcreme, die über Nacht weich macht.",
+     "anwendung": "Trocken, abends vor dem Schlafen. Eine kleine Menge in die Längen und Spitzen, dann eine lockere Schlaffrisur."}
+   ]},
+  {"id": "kaputt", "titel": "Für kaputte Haare", "text": "Hier geht es um Stärkung: Proteine von außen und bei stark strukturgeschädigtem Haar etwas, das im Inneren ansetzt.", "kat": "kaputt",
+   "produkte": [
+    {"brand": "OGX", "name": "Overnight Serum Rescue Fusions",
+     "fuerwen": "Für dünnes bis normales Haar, das beansprucht und brüchig ist. Echtes Keratin steht schon an 4. Stelle, dazu Weizenprotein. Über Nacht haben die Proteine viel Zeit, sich an die kaputten Stellen anzulagern.",
+     "anwendung": "Trocken, abends vor dem Schlafen. Du kannst es auch vor der nächsten Wäsche als Overnight-Treatment nutzen."},
+    {"brand": "Gisou", "name": "Honey Milk Active Repair Leave-In Conditioner Mist",
+     "fuerwen": "Für dünnes bis normales Haar, das trocken und leicht beansprucht ist. Milch- und Gerstenprotein stärken von außen, Honig bindet Feuchtigkeit.",
+     "anwendung": "Feucht und trocken. Nach der Wäsche ein paar Sprühstöße, zwischendurch zum Auffrischen. Schützt vor Hitze."},
+    {"brand": "Balea Professional", "name": "Leave-In Serum Brilliant Blond Hair Sealer",
+     "fuerwen": "Für blondes oder blondiertes Haar, normal bis dick. Viel Silikon glättet die Oberfläche und lässt Blond schön glänzen. Als Repair-Produkt eher leicht, als Glanzpflege toll.",
+     "anwendung": "Feucht und trocken. Eine kleine Menge in die Längen und Spitzen, vor allem dort, wo das Haar rau ist. Schützt vor Hitze."},
+    {"brand": "K18", "name": "Leave-In Molecular Repair Hair Mask",
+     "fuerwen": "Für stark strukturgeschädigtes Haar, also blondiert oder chemisch behandelt. Das K18-Peptid ist so klein, dass es bis ins Innere des Haares kommt und sich dort an gebrochene Keratinketten anlagern soll. Das Haar wird elastischer und reißt weniger.",
+     "anwendung": "Nur feucht, nach der Wäsche ins handtuchtrockene Haar und drin lassen. Danach noch ein pflegendes Leave-in, weil Alkohol weit vorne steht."}
+   ]}
+ ]
+}

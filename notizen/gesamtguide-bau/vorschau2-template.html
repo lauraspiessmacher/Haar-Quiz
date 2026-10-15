@@ -30,7 +30,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .logo b{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.1}
 .logo span{font-size:13px;color:var(--muted)}
 nav.main{display:flex;gap:6px}
-nav.main button{display:flex;align-items:center;gap:8px;border:1px solid transparent;background:transparent;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:15px;color:var(--ink);position:relative}
+nav.main button{white-space:nowrap;display:flex;align-items:center;gap:8px;border:1px solid transparent;background:transparent;border-radius:999px;padding:9px 16px;cursor:pointer;font-size:15px;color:var(--ink);position:relative}
 nav.main button svg{width:20px;height:20px;flex:0 0 auto}
 nav.main button:hover{background:var(--card)}
 nav.main button[aria-current="page"]{background:var(--ink);color:var(--bg)}
@@ -230,6 +230,7 @@ h3.sec{font-size:24px;margin:24px 0 12px}
 .card.soon .go{background:transparent;color:var(--muted);border:1px solid var(--line)}
 
 .quizgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.quizgrid.vier{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px}
 @media (max-width:900px){ .quizgrid{grid-template-columns:1fr} }
 .qcard{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;min-height:340px;padding:26px 24px 22px;border-radius:20px;background:#382F2E;color:#F3ECE2;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease}
 .qcard:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(56,47,46,.6)}
@@ -393,7 +394,11 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 #merkBox h3.sec{margin-top:30px}
 #merkBox .cnt{font-family:var(--sans);font-size:14px;color:var(--muted)}
 @media (max-width:759px){
-  nav.main{grid-template-columns:repeat(5,1fr)}
+  nav.main{grid-template-columns:minmax(0,1fr) minmax(0,1.14fr) minmax(0,.86fr) minmax(0,1fr) minmax(0,1fr) 42px}
+  /* Meine Haare auf dem Handy nur als Symbol (drei Haarsträhnen), bleibt hervorgehoben */
+  nav.main button.me .melbl{display:none}
+  nav.main button.me{justify-content:center}
+  nav.main button.me svg{width:24px;height:24px}
   .merkn{position:absolute;top:3px;right:calc(50% - 22px);min-width:17px;height:17px;line-height:17px;font-size:10px}
 }
 
@@ -644,6 +649,52 @@ body{overflow-x:clip}
 .wart .splissarten svg{width:56px;height:140px}
 .wart .splissarten figcaption{font-size:13px;line-height:1.4;color:var(--muted);margin-top:8px}
 .wart .splissarten figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:17px;color:#382F2E;margin-bottom:4px}
+
+/* ---------- LL-Methode (eigene Seite für Lauras Signature-Thema) ---------- */
+.llhero{padding:34px 0 10px;max-width:780px}
+.llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
+.llhero .lead{font-size:17px;max-width:60ch;margin:0}
+.llhero .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.llsec{display:grid;grid-template-columns:90px minmax(0,1fr);gap:24px;border-top:1px solid var(--line);padding:38px 0 30px;margin-top:30px}
+@media (max-width:759px){ .llsec{grid-template-columns:1fr;gap:4px;padding-top:26px;margin-top:22px} }
+.llnr{font-family:var(--serif);font-size:44px;line-height:1;color:var(--taupe);margin:0}
+.llsec h2{font-size:clamp(30px,4.5vw,44px);line-height:1.05;margin:0 0 16px}
+.llsec h3{font-size:22px;margin:26px 0 10px}
+.llsec > div > p{max-width:68ch}
+.llpage .splissarten{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:10px 0 18px}
+@media (max-width:759px){ .llpage .splissarten{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.llpage .splissarten figure{margin:0;background:var(--paper);border:1px solid var(--line-soft);border-radius:14px;padding:14px 12px 16px;text-align:center}
+.llpage .splissarten svg{width:46px;height:115px;display:block;margin:0 auto}
+.llpage .splissarten figcaption{font-size:13px;line-height:1.4;color:var(--muted);margin-top:8px}
+.llpage .splissarten figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:17px;color:var(--ink);margin-bottom:4px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}
+.llmore{margin:18px 0 0}
+.llsteps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 18px}
+@media (max-width:759px){ .llsteps{grid-template-columns:1fr} }
+.llstep{background:var(--ink);color:var(--bg);border-radius:18px;padding:22px 22px 18px}
+.llstep h3{margin:12px 0 2px;color:var(--bg);font-size:26px}
+.llstep .llwann{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin:0 0 12px}
+.llstep p{margin:0 0 6px}
+.llstepn{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid rgba(243,236,226,.5);border-radius:50%;font-size:15px}
+.llbild{display:grid;place-items:center;min-height:180px;border:1px dashed var(--line);border-radius:16px;color:var(--muted);font-size:14px;text-align:center;padding:20px;margin:0 0 18px}
+.lltipps{list-style:none;padding:0;margin:0 0 18px;max-width:68ch}
+.lltipps li{position:relative;padding-left:22px;margin:0 0 10px}
+.lltipps li::before{content:"";position:absolute;left:4px;top:.68em;width:6px;height:6px;border-radius:50%;background:#7A6A65}
+.llboxes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:759px){ .llboxes{grid-template-columns:1fr} }
+.llbox{background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;padding:18px 20px 8px}
+.llbox h3{margin:0 0 8px;font-size:20px}
+.llbox p{margin:0 0 10px}
+.llbox ul{padding-left:18px;margin:0 0 10px}
+.llquiz{grid-template-columns:minmax(0,420px)}
+.llgruppe{margin:30px 0 0}
+.llgruppe h3.sec{margin:0 0 4px}
+.llgruppe .catdesc{margin:0 0 14px;color:var(--muted)}
+.llextra{border-left:2px solid var(--ink);padding:2px 0 2px 12px;margin:10px 0 12px}
+.llextra p{margin:0 0 8px;font-size:14.5px;line-height:1.5}
+.llextra p:last-child{margin-bottom:0}
+.llextra b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.llentwurf{border:1px dashed var(--line);border-radius:12px;padding:10px 14px;color:var(--muted);font-size:14px;margin:14px 0 0}
 </style>
 <!--DESIGN-->
 </head>
@@ -653,10 +704,11 @@ body{overflow-x:clip}
     <button class="logo" id="home" type="button"><b>Haarpflege einfach erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span></button>
     <nav class="main" aria-label="Hauptnavigation">
       <button type="button" data-view="produkte" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 12h8"/></svg>Produkte</button>
+      <button type="button" data-view="ll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8c3.4 4.3 5.8 7.4 5.8 10.6a5.8 5.8 0 0 1-11.6 0c0-3.2 2.4-6.3 5.8-10.6z"/><path d="M9.4 14.2a2.7 2.7 0 0 0 2.4 2.6"/></svg><span>LL-Methode</span></button>
       <button type="button" data-view="quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.3-2.7 4"/><circle cx="12" cy="17.4" r=".6" fill="currentColor"/></svg>Quiz</button>
       <button type="button" data-view="wissen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>Wissen</button>
       <button type="button" data-view="merkliste"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z"/></svg><span>Merkliste</span><span class="merkn" id="merkN" hidden>0</span></button>
-      <button type="button" class="me" id="meBtn" data-set="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3c-1.5 5 1.5 10 0 18"/><path d="M12 3c-1.5 5 1.5 10 0 18"/><path d="M16 3c-1.5 5 1.5 10 0 18"/></svg>Meine Haare</button>
+      <button type="button" class="me" id="meBtn" data-set="0" aria-label="Meine Haare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3c-1.5 5 1.5 10 0 18"/><path d="M12 3c-1.5 5 1.5 10 0 18"/><path d="M16 3c-1.5 5 1.5 10 0 18"/></svg><span class="melbl">Meine Haare</span></button>
     </nav>
   </div>
   <nav class="sub" id="subnav" aria-label="Produktarten"><div class="in" id="types"></div></nav>
@@ -698,7 +750,7 @@ body{overflow-x:clip}
     </div>
     <ul class="offer">
       <li><button type="button" data-go="produkte"><h3>Produkte</h3><p>Über 500 Produkte von Shampoo bis Haaröl, dazu Hitzeschutz, Kopfhautpflege, Bürsten und Hitze-Tools. Jedes Produkt habe ich nach seinen Inhaltsstoffen eingeordnet und nach Haardicke und Kopfhauttyp sortiert, damit ihr seht, was wirklich zu euch passt.</p><span class="go">Ansehen →</span></button></li>
-      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Sieben kurze Quizze, die euch zeigen, was eure Haare brauchen. Das Herzstück ist euer persönlicher Wochenplan aus dem Routine-Check, dazu kommen Checks für Kopfhaut, Pflege, Haarstruktur, Spliss und Haarbruch, Hitze-Tool und Haarschnitt.</p><span class="go">Quiz starten →</span></button></li>
+      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Acht kurze Quizze, die euch zeigen, was eure Haare brauchen. Das Herzstück ist euer persönlicher Wochenplan aus dem Routine-Check, dazu kommen Checks für Kopfhaut, Pflege, Haarstruktur, Leave-in, Spliss und Haarbruch, Hitze-Tool und Haarschnitt.</p><span class="go">Quiz starten →</span></button></li>
       <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Haarpflegethemen, zu Mythen und zum richtigen Umgang mit euren Haaren, einfach erklärt.</p><span class="go">Lesen →</span></button></li>
       <li><button type="button" data-go="me"><h3>Meine Haare</h3><p>Stellt einmal eure Haardicke und euren Kopfhauttyp ein und seht nur, was zu euch passt.</p><span class="go">Einstellen →</span></button></li>
     </ul>
@@ -734,8 +786,77 @@ __ROUTINE__
   </section>
 
   <!-- ===================== QUIZ ===================== -->
+  <!-- ===================== LL-METHODE (Lauras Signature-Thema) ===================== -->
+  <section class="view llpage" id="v-ll" hidden>
+    <div class="llhero">
+      <p class="kicker">Meine Signature-Methode</p>
+      <h1>Die LL-Methode</h1>
+      <p class="lead">Haarbruch und Spliss sind die Themen, zu denen ihr mir am meisten schreibt. Meine Antwort darauf ist fast immer dieselbe: Leave-in-Pflege, und zwar jeden Tag. Mit meiner LL-Methode bleiben eure Haare weich und vor allem flexibel, und flexible Haare brechen nicht so schnell.</p>
+      <div class="btns"><button type="button" class="btn dark" id="llQuizBtn">Welches Leave-in passt zu mir? <span aria-hidden="true">→</span></button><button type="button" class="btn" id="llZurAuswahl">Meine Leave-in-Auswahl</button></div>
+    </div>
+
+    <div class="llsec">
+      <p class="llnr">01</p>
+      <div>
+        <h2>Warum eure Haare brechen</h2>
+        <p>Eure Haare werden nicht nur am Waschtag beansprucht, sondern jeden Tag: beim Bürsten, beim Zusammenbinden, nachts auf dem Kissen, am Schal oder am Rucksack. Reibung ist dabei der größte Gegner. Mit jedem Tag nach der Wäsche verlieren die Haare etwas Feuchtigkeit und Geschmeidigkeit, sie werden rauer, reiben noch mehr und brechen schneller.</p>
+        <p>So entstehen Haarbruch und Spliss. Spliss lässt sich nicht reparieren, nur abschneiden. Deshalb setze ich aufs Vorbeugen: Haare, die jeden Tag gepflegt werden, bleiben flexibel und halten Reibung viel besser aus.</p>
+        <h3>Die Spliss-Arten</h3>
+        <div class="splissarten"><figure><svg viewBox="0 0 60 150" aria-hidden="true"><g stroke="#382F2E" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M30 6 C 31 40, 29 80, 30 118" stroke-width="2.4"/><circle cx="30" cy="124" r="4.2" fill="#FFFDFA" stroke-width="1.6"/></g></svg><figcaption><b>Der weiße Punkt</b>Ein winziger heller Punkt an der Spitze. Hier ist das Haar schon offen und geschädigt, und daraus können die anderen Splissarten entstehen.</figcaption></figure><figure><svg viewBox="0 0 60 150" aria-hidden="true"><g stroke="#382F2E" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M30 6 C 31 40, 29 70, 30 92" stroke-width="2.4"/><path d="M30 92 C 28 108, 24 122, 21 138" stroke-width="1.6"/><path d="M30 92 C 32 108, 36 122, 39 138" stroke-width="1.6"/></g></svg><figcaption><b>Der klassische Spliss</b>Das Ende spaltet sich in zwei Teile auf, wie ein kleines Y.</figcaption></figure><figure><svg viewBox="0 0 60 150" aria-hidden="true"><g stroke="#382F2E" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M30 6 C 31 40, 29 62, 30 80" stroke-width="2.4"/><path d="M30 80 C 26 96, 20 106, 15 120" stroke-width="1.5"/><path d="M30 80 C 30 100, 31 116, 30 136" stroke-width="1.5"/><path d="M30 80 C 34 96, 40 106, 45 120" stroke-width="1.5"/><path d="M15 120 L 10 134 M15 120 L 18 136" stroke-width="1.1"/><path d="M45 120 L 42 136 M45 120 L 50 133" stroke-width="1.1"/></g></svg><figcaption><b>Der Baumspliss</b>Das Ende verästelt sich in drei oder mehr Teile, fast wie ein kleiner Baum.</figcaption></figure><figure><svg viewBox="0 0 60 150" aria-hidden="true"><g stroke="#382F2E" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M30 6 C 31 40, 29 80, 30 138" stroke-width="2.2"/><path d="M30 88 L 24 97" stroke-width="1"/><path d="M30 92 L 36 101" stroke-width="1"/><path d="M30 98 L 22 107" stroke-width="1"/><path d="M30 102 L 38 111" stroke-width="1"/><path d="M30 108 L 21 117" stroke-width="1"/><path d="M30 112 L 39 121" stroke-width="1"/><path d="M30 118 L 22 127" stroke-width="1"/><path d="M30 122 L 38 131" stroke-width="1"/></g></svg><figcaption><b>Der Federspliss</b>Viele feine Fasern lösen sich seitlich vom Haar, die Spitze sieht aus wie eine kleine Feder.</figcaption></figure><figure><svg viewBox="0 0 60 150" aria-hidden="true"><g stroke="#382F2E" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M30 6 C 31 30, 30 48, 30 60" stroke-width="2.4"/><path d="M30 60 C 22 70, 22 88, 30 98" stroke-width="1.5"/><path d="M30 60 C 38 70, 38 88, 30 98" stroke-width="1.5"/><path d="M30 98 C 30 112, 31 126, 30 140" stroke-width="2.4"/></g></svg><figcaption><b>Spliss in der Mitte</b>Das Haar spaltet sich mitten in der Länge auf und bildet eine kleine Öse, während das Ende noch heil ist.</figcaption></figure></div>
+        <p class="llmore"><button type="button" class="linkbtn" data-wissen="unterschied">Mehr zu Haarbruch und Spliss im Wissen <span aria-hidden="true">→</span></button></p>
+      </div>
+    </div>
+
+    <div class="llsec">
+      <p class="llnr">02</p>
+      <div>
+        <h2>So geht meine LL-Methode</h2>
+        <div class="llsteps">
+          <div class="llstep"><span class="llstepn">1</span><h3>Ins feuchte Haar</h3><p class="llwann">Nach jeder Wäsche, bevor ihr föhnt</p><p>Nach Shampoo und Conditioner oder Maske kommt eure Leave-in-Pflege ins handtuchtrockene, noch feuchte Haar, vor allem in Längen und Spitzen. Im feuchten Haar können die Wirkstoffe ins Haar eindringen.</p></div>
+          <div class="llstep"><span class="llstepn">2</span><h3>Ins trockene Haar</h3><p class="llwann">Ein- bis zweimal am Tag</p><p>Eine kleine Menge in die trockenen Längen und Spitzen, damit sie weich und vor allem flexibel bleiben oder werden. Verreibt sie wie eine Handcreme in den Händen und arbeitet euch von den Spitzen nach oben.</p></div>
+        </div>
+        <div class="llbild" role="img" aria-label="Platzhalter für Lauras Bild zur LL-Methode"><span>Hier kommt Lauras Bild: So funktioniert die LL-Methode</span></div>
+        <ul class="lltipps">
+          <li><strong>Weniger ist mehr:</strong> Startet mit sehr wenig Produkt. Nachlegen könnt ihr immer, aber zu viel macht die Haare schwer und strähnig.</li>
+          <li><strong>Die richtige Textur:</strong> Feines und dünnes Haar verträgt meistens leichte Sprays oder Seren, dickes Haar eher Milch und Cremes.</li>
+          <li><strong>Haaröl als Extra:</strong> Wer mag, versiegelt die Spitzen danach noch mit etwas Öl. Das ersetzt aber kein Leave-in.</li>
+        </ul>
+        <div class="llboxes">
+          <div class="llbox"><h3>Wenn jeden Tag nicht klappt</h3><p>Das ist völlig okay. Dann gilt: lieber jeden zweiten oder dritten Tag als gar nicht. Und mindestens nach jeder Wäsche sollte eine Leave-in-Pflege drin sein.</p></div>
+          <div class="llbox"><h3>Woran ihr merkt, dass es wirkt</h3><ul><li>Eure Haare lassen sich leichter entwirren und verknoten weniger.</li><li>In der Bürste und im Waschbecken landen weniger abgebrochene Haare.</li><li>Die Spitzen fühlen sich weicher an und wirken weniger fransig.</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="llsec">
+      <p class="llnr">03</p>
+      <div>
+        <h2>Welches Leave-in passt zu dir?</h2>
+        <div class="quizgrid llquiz">
+          <a class="qcard" href="__QUIZ_LEAVEIN__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+            <span class="qfor">Für deine LL-Methode</span>
+            <h3>Leave-in-Check</h3>
+            <p>Spray, Milch, Serum oder Creme? Du erfährst, welche Textur und welche Wirkstoffe zu deinen Haaren passen, wie viel du nimmst und wie du es mit meiner LL-Methode benutzt.</p>
+            <span class="qmeta">7 Fragen · ca. 2 Minuten</span>
+            <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+          </span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="llsec" id="llAuswahl">
+      <p class="llnr">04</p>
+      <div>
+        <h2>Meine Leave-in-Auswahl</h2>
+        <p>Das sind die Leave-ins, die ich euch für die LL-Methode empfehle, sortiert nach Haardicke. Unter jedem steht, für wen ich es empfehle und wie ihr es benutzt.</p>
+        <div id="llBox"></div>
+        <p class="llmore"><button type="button" class="btn" id="llAlle">Alle Leave-ins ansehen <span aria-hidden="true">→</span></button></p>
+      </div>
+    </div>
+  </section>
+
   <section class="view" id="v-quiz" hidden>
-    <div class="intro"><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Danach kommt das Herzstück, der Routine-Check. Er stellt dir aus allem deinen persönlichen Wochenplan zusammen, damit Pflege für dich zur Gewohnheit wird. Dazu gibt es drei Extra-Checks: wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
+    <div class="intro"><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Danach kommt das Herzstück, der Routine-Check. Er stellt dir aus allem deinen persönlichen Wochenplan zusammen, damit Pflege für dich zur Gewohnheit wird. Dazu gibt es vier Extra-Checks: welches Leave-in zu dir passt, wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
       <a class="qcard" href="__QUIZ_KOPF__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
@@ -778,7 +899,14 @@ __ROUTINE__
     </div>
     <p class="qclosing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
     <h2 class="qsub">Extra-Checks</h2>
-    <div class="quizgrid">
+    <div class="quizgrid vier">
+      <a class="qcard" href="__QUIZ_LEAVEIN__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+        <span class="qfor">Für deine LL-Methode</span>
+        <h3>Leave-in-Check</h3>
+        <p>Spray, Milch, Serum oder Creme? Du erfährst, welches Leave-in zu deinen Haaren passt und wie du es mit meiner LL-Methode benutzt.</p>
+        <span class="qmeta">7 Fragen · ca. 2 Minuten</span>
+        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+      </span></a>
       <a class="qcard" href="__QUIZ_TOOLS__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Styling-Gerät</span>
         <h3>Hitze-Tool-Check</h3>
@@ -908,12 +1036,13 @@ let onlyMine = true;
 /* ---------- Zustand und Teilen-Link ---------- */
 let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:"", wissen:null};
 /* Aus einem Quiz heraus direkt zu einer Produktart springen (z. B. Hitze-Tool-Check → Lockenstäbe) */
+window.showLL = () => { state.view = "ll"; state.wissen = null; render(); window.scrollTo({top:0}); };
 window.showWissen = id => { state.view = "wissen"; state.wissen = WISSEN.some(w=>w.id===id) ? id : null; render(); window.scrollTo({top:0}); };
 window.showProducts = (type, cat) => { if(!T[type]) return; state.view = "produkte"; state.type = type; state.cat = cat || "alle"; state.seg = "alle"; state.q = ""; if(typeof q !== "undefined") q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); };
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
+  if(a==="quiz"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
   if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -1174,6 +1303,22 @@ function renderWissen(){
   art.querySelectorAll("a[data-typ]").forEach(a => a.onclick = e => { e.preventDefault(); state.view = "produkte"; state.type = a.dataset.typ; state.cat = a.dataset.cat || "alle"; state.q = ""; q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); });
 }
 
+/* ---------- LL-Methode: Lauras Leave-in-Auswahl (ll-auswahl.json) ---------- */
+const LLA = __LL_AUSWAHL__;
+function renderLL(){
+  const box = document.getElementById("llBox"); if(!box) return;
+  const find = x => ALL.find(p => p.type==="leavein" && p.brand===x.brand && p.name===x.name);
+  box.innerHTML = (LLA.entwurf ? `<p class="llentwurf">Entwurf: Auswahl und Texte stimmen Laura und ich noch Schritt für Schritt ab.</p>` : "") +
+    LLA.gruppen.map(g => { const items = g.produkte.map(x => { const p = find(x); if(!p) return "";
+      const extra = `<div class="llextra"><p><b>Für wen ich es empfehle</b>${esc(x.fuerwen)}</p><p><b>So benutzt du es</b>${esc(x.anwendung)}</p></div>`;
+      return itemHtml(p, "", extra); }).join("");
+      return `<div class="llgruppe"><h3 class="sec">${esc(g.titel)}</h3><p class="catdesc">${esc(g.text)}</p><ul class="grid">${items}</ul></div>`; }).join("");
+}
+document.getElementById("llZurAuswahl").onclick = () => document.getElementById("llAuswahl").scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+document.getElementById("llQuizBtn").onclick = () => document.querySelector("#v-ll .qcard").click();
+document.getElementById("llAlle").onclick = () => window.showProducts("leavein", "alle");
+document.querySelectorAll("#v-ll [data-wissen]").forEach(b => b.onclick = () => window.showWissen(b.dataset.wissen));
+
 /* ---------- Merkliste ---------- */
 let MERK = [];
 try { MERK = JSON.parse(localStorage.getItem("merkliste")||"[]") || []; } catch(e){}
@@ -1246,7 +1391,7 @@ function merkItemHtml(p){
   return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<div class="mtxt"><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span>${p.segment?`<span class="tag">${p.segment}</span>`:""}${buyHtml(p,true)}</div></li>`;
 }
 
-function itemHtml(p, badge){
+function itemHtml(p, badge, extra){
   const tags = p.segment ? [`<span class="tag">${p.segment}</span>`] : [];
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
   if(p.dry) tags.push(`<span class="pill">Trockenes Öl</span>`);
@@ -1299,7 +1444,7 @@ function itemHtml(p, badge){
   }
   return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
-    <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools" && p.type!=="buerste" && !p.zwei?`<div class="note">${esc(p.note)}</div>`:""}${body}${buyHtml(p)}</div></li>`;
+    <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools" && p.type!=="buerste" && !p.zwei?`<div class="note">${esc(p.note)}</div>`:""}${extra||""}${body}${buyHtml(p)}</div></li>`;
 }
 
 /* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */
@@ -1391,7 +1536,7 @@ function setHH(){ document.documentElement.style.setProperty("--hh", document.qu
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
-  for(const v of ["start","produkte","quiz","wissen","merkliste","favoriten"]) document.getElementById("v-"+v).hidden = state.view!==v;
+  for(const v of ["start","produkte","ll","quiz","wissen","merkliste","favoriten"]) document.getElementById("v-"+v).hidden = state.view!==v;
   navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.view===state.view ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
@@ -1400,6 +1545,7 @@ function render(){
   if(state.view==="merkliste") renderMerk();
   if(state.view==="wissen") renderWissen();
   if(state.view==="favoriten") renderFav();
+  if(state.view==="ll") renderLL();
   merkCount();
   writeHash();
 }
