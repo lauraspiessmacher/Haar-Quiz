@@ -394,3 +394,4 @@
 - epres (Laura nach Rücksprache): doch Herstelleranwendung. LL-Seite „So benutzt du es“: vor der Haarwäsche ins trockene Haar sprühen bis durchfeuchtet, mind. 10 Min. (gern länger), waschen, Conditioner/Maske, dann Leave-in, 1–2× pro Woche. Leave-in-Guide: ergänzt, dass das Konzentrat vor der Anwendung mit Wasser gemischt wird. Vorschau v206.
 - Leave-in-Check (Laura): Ergebnis zeigt ALLE passenden Leave-ins aus der Produktkategorie (nicht die LL-Auswahl). Buttons heißen jetzt „Alle Leave-ins für feines Haar / kaputte Haare …“, Text „alle Leave-ins aus meiner Produktliste“. Vorschau v207.
 - LL-Seite Olaplex No.9: „Danach gern noch ein pflegendes Leave-in“ entfernt (Laura). Vorschau v208.
+- LL-Seite OGX Bond Protein Mist: „So benutzt du es“ nur noch feucht nach der Wäsche vor dem Föhnen (Hitzeschutz), kein „zwischendurch“, kein Pre-Wash (Laura). Vorschau v209.
