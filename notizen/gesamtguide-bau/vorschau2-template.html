@@ -678,6 +678,7 @@ body{overflow-x:clip}
 .llpage .splissarten figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:17px;color:var(--ink);margin-bottom:4px}
 .linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}
 .llmore{margin:18px 0 0}
+.llmore-oben{margin:4px 0 6px}
 .llsteps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 18px}
 @media (max-width:759px){ .llsteps{grid-template-columns:1fr} }
 .llstep{background:var(--ink);color:var(--bg);border-radius:18px;padding:22px 22px 18px}
@@ -860,9 +861,11 @@ __ROUTINE__
       <p class="llnr">04</p>
       <div>
         <h2>Meine Leave-in-Auswahl</h2>
-        <p>Das sind die Leave-ins, die ich euch für die LL-Methode empfehle, sortiert nach Textur: Sprays, Seren und Cremes, dazu meine Repair-Leave-ins. Unter jedem steht, für wen ich es empfehle und wie ihr es benutzt.</p>
+        <p>Hier sind ein paar Leave-in-Pflegen aus den Kategorien Sprays, Seren und Cremes, dazu meine Repair-Leave-ins. Ich finde sie alle richtig gut, sonst hätte ich sie nicht ausgewählt. Es ist aber nur eine Auswahl, es gibt noch sehr viel mehr Leave-ins. Welches zu euch passt, hängt von euren Haaren ab, das verrät euch der Leave-in-Check.</p>
+        <p>Falls keins dabei ist, das euch zusagt, schaut euch alle Leave-in-Pflegen an.</p>
+        <p class="llmore llmore-oben"><button type="button" class="btn" id="llAlleOben">Alle Leave-in-Pflegen ansehen <span aria-hidden="true">→</span></button></p>
         <div id="llBox"></div>
-        <p class="llmore"><button type="button" class="btn" id="llAlle">Alle Leave-ins ansehen <span aria-hidden="true">→</span></button></p>
+        <p class="llmore"><button type="button" class="btn" id="llAlle">Alle Leave-in-Pflegen ansehen <span aria-hidden="true">→</span></button></p>
       </div>
     </div>
   </section>
@@ -1328,7 +1331,7 @@ function renderLL(){
 }
 document.getElementById("llZurAuswahl").onclick = () => document.getElementById("llAuswahl").scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
 document.getElementById("llQuizBtn").onclick = () => document.querySelector("#v-ll .qcard").click();
-document.getElementById("llAlle").onclick = () => window.showProducts("leavein", "alle");
+["llAlle","llAlleOben"].forEach(id => document.getElementById(id).onclick = () => window.showProducts("leavein", "alle"));
 document.querySelectorAll("#v-ll [data-wissen]").forEach(b => b.onclick = () => window.showWissen(b.dataset.wissen));
 
 /* ---------- Merkliste ---------- */
