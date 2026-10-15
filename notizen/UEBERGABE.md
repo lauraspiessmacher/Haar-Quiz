@@ -397,3 +397,4 @@
 - LL-Seite OGX Bond Protein Mist: „So benutzt du es“ nur noch feucht nach der Wäsche vor dem Föhnen (Hitzeschutz), kein „zwischendurch“, kein Pre-Wash (Laura). Vorschau v209.
 - LL-Seite Auswahl: Lauras drei Texturfotos (vorlagen/textur-60/61/62.jpg) quer gedreht als Kopfbänder der Gruppen: Sprays = glänzende Lotion (textur-milch), Seren = Gel mit Bläschen (textur-serum), Cremes = dicke Creme (textur-creme); Titel groß links auf dem Bild, leichter heller Verlauf. Repair = dunkles Band ohne Foto (noch kein Bild). Platzhalter __TEX_MILCH/SERUM/CREME__. Vorschau v210.
 - LL-Seite Kopfbänder (Laura): Sprays = Milchschaum-Foto (vorlagen/textur-63.jpg → textur-schaum.webp), Repair = das vorherige Lotion-Foto (textur-milch). Kein dunkles Band mehr. Vorschau v211.
+- Fix: „Zur Einordnung“ auf der Favorites-Seite war plötzlich fett/andere Schrift, weil die LL-Seite die Klasse .linkbtn global überschrieben hat. Jetzt nur noch .llpage .linkbtn. Vorschau v212.
