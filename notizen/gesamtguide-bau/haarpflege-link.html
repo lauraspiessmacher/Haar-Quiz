@@ -3,6 +3,8 @@
 :root{
   --bg:#F3ECE2; --card:#EBE2D6; --paper:#F8F3EC; --ink:#382F2E; --muted:#6E615C; --taupe:#9E8C80;
   --line:rgba(56,47,46,.22); --line-soft:rgba(56,47,46,.12);
+  /* Zweite Signature-Farbe (Laura, Bar-Noire-Prägung): kühles Dunkelbraun mit Khaki */
+  --khaki:#29261F; --khaki-hell:#E7E3D7; --khaki-linie:rgba(41,38,31,.45);
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Noto Serif",Georgia,serif;
   --sans:"Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   color-scheme: light;
@@ -718,10 +720,10 @@ body{overflow-x:clip}
 .llband.dunkel h3.sec{color:var(--bg)}
 @media (max-width:759px){ .llband{min-height:110px;padding:14px 16px;border-radius:12px} }
 .llgruppe .catdesc{margin:0 0 14px;color:var(--muted)}
-.llfit{background:#EFE5DA;border-radius:10px;padding:9px 12px;margin:10px 0 4px}
+.llfit{background:var(--khaki-hell);border:1px solid var(--khaki-linie);border-radius:10px;padding:9px 12px;margin:10px 0 4px}
 .llfit .line{margin:0}
 .llfit .line + .line{margin-top:3px}
-.llextra{border-left:2px solid var(--ink);padding:2px 0 2px 12px;margin:10px 0 12px}
+.llextra{border-left:2px solid var(--khaki);padding:2px 0 2px 12px;margin:10px 0 12px}
 .llextra p{margin:0 0 8px;font-size:14.5px;line-height:1.5}
 .llextra p:last-child{margin-bottom:0}
 .llextra b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
