@@ -709,7 +709,15 @@ body{overflow-x:clip}
 .llbox-oel{margin:0 0 12px;max-width:none}
 .llbox p{margin:0 0 10px}
 .llbox ul{padding-left:18px;margin:0 0 10px}
-.llquiz{grid-template-columns:minmax(0,420px)}
+.llquiz{grid-template-columns:minmax(0,760px)}
+/* Quiz-Karte auf der LL-Seite: quer und flach statt hoch (Laura) */
+.llquiz .qcard .paper{min-height:0;padding:24px 30px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:28px;row-gap:6px;align-items:end}
+.llquiz .qcard .qfor{grid-column:1/-1}
+.llquiz .qcard h3{padding-top:4px;grid-column:1}
+.llquiz .qcard p{grid-column:1;max-width:58ch}
+.llquiz .qcard .qmeta{grid-column:1}
+.llquiz .qcard .qgo{grid-column:2;grid-row:2/5;align-self:end;white-space:nowrap}
+@media (max-width:640px){ .llquiz .qcard .paper{grid-template-columns:1fr} .llquiz .qcard .qgo{grid-column:1;grid-row:auto;justify-self:start} }
 .llgruppe{margin:30px 0 0}
 .llgruppe h3.sec{margin:0 0 4px}
 .llband{position:relative;display:flex;align-items:flex-end;min-height:150px;border-radius:16px;background-size:cover;background-position:center;overflow:hidden;padding:18px 22px;margin:0 0 12px}
