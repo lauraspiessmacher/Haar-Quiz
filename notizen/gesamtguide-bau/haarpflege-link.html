@@ -662,7 +662,8 @@ body{overflow-x:clip}
 /* ---------- LL-Methode (eigene Seite für Lauras Signature-Thema) ---------- */
 .llhero{padding:34px 0 10px;max-width:780px}
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
-.llhero .lead{font-size:17px;max-width:60ch;margin:0}
+.llhero .lead{font-size:17px;max-width:62ch;margin:0 0 12px}
+.llhero .lead strong{font-weight:600}
 .llhero .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .llsec{display:grid;grid-template-columns:90px minmax(0,1fr);gap:24px;border-top:1px solid var(--line);padding:38px 0 30px;margin-top:30px}
 @media (max-width:759px){ .llsec{grid-template-columns:1fr;gap:4px;padding-top:26px;margin-top:22px} }
@@ -703,6 +704,7 @@ body{overflow-x:clip}
 @media (max-width:759px){ .llboxes{grid-template-columns:1fr} }
 .llbox{background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;padding:18px 20px 8px}
 .llbox h3{margin:0 0 8px;font-size:20px}
+.llbox-oel{margin:0 0 12px;max-width:none}
 .llbox p{margin:0 0 10px}
 .llbox ul{padding-left:18px;margin:0 0 10px}
 .llquiz{grid-template-columns:minmax(0,420px)}
@@ -857,7 +859,9 @@ body{overflow-x:clip}
     <div class="llhero">
       <p class="kicker">Meine Signature-Methode</p>
       <h1>Meine LL-Methode</h1>
-      <p class="lead">Haarbruch und Spliss sind die Themen, zu denen ihr mir am meisten schreibt. Meine Antwort darauf ist fast immer dieselbe: Leave-in-Pflege, und zwar jeden Tag. Mit meiner LL-Methode bleiben eure Haare weich und vor allem flexibel, und flexible Haare brechen nicht so schnell.</p>
+      <p class="lead">Die LL-Methode ist meine Signature-Methode. Als meine Haare selbst stark geschädigt waren und ich ständig mit Haarbruch und Spliss zu kämpfen hatte, war Leave-in-Pflege mein Holy-Grail-Produkt. Natürlich nicht das einzige, aber es hat mir am schnellsten geholfen, echte Erfolge zu sehen.</p>
+      <p class="lead">Haarbruch und Spliss sind auch die Themen, zu denen ihr mir am meisten schreibt. Meine Antwort darauf ist fast immer dieselbe: Leave-in-Pflege, und zwar jeden Tag, mit meiner LL-Methode.</p>
+      <p class="lead"><strong>Was ist Leave-in-Pflege?</strong> Das sind Produkte wie Sprays, Seren oder Cremes, die ihr ins feuchte oder ins trockene Haar gebt und nicht ausspült. Sie bleiben im Haar und pflegen es weiter.</p>
       <div class="btns"><button type="button" class="btn dark" id="llQuizBtn">Welches Leave-in passt zu mir? <span aria-hidden="true">→</span></button><button type="button" class="btn" id="llZurAuswahl">Meine Leave-in-Auswahl</button></div>
     </div>
 
@@ -878,6 +882,7 @@ body{overflow-x:clip}
       <p class="llnr">02</p>
       <div>
         <h2>So geht meine LL-Methode</h2>
+        <p>Wichtig ist beides: Leave-in immer ins feuchte Haar, damit die Wirkstoffe eindringen können, und jeden Tag ins trockene Haar, damit eure Haare weich und vor allem flexibel bleiben. So sind sie im Alltag viel weniger empfindlich. Und wenn ihr das konsequent durchzieht, dürft ihr auch mal etwas vergessen, ohne dass eure Haare gleich darunter leiden. Haarpflege muss dann nicht mehr so streng sein.</p>
         <div class="llsteps">
           <div class="llstep"><span class="llstepn">1</span><h3>Ins feuchte Haar</h3><p class="llwann">Nach jeder Wäsche, bevor ihr föhnt</p><p>Nach Shampoo und Conditioner oder Maske kommt eure Leave-in-Pflege ins handtuchtrockene, noch feuchte Haar, vor allem in Längen und Spitzen. Im feuchten Haar können die Wirkstoffe ins Haar eindringen.</p></div>
           <div class="llstep"><span class="llstepn">2</span><h3>Ins trockene Haar</h3><p class="llwann">Ein- bis zweimal am Tag</p><p>Eine kleine Menge in die trockenen Längen und Spitzen, damit sie weich und vor allem flexibel bleiben oder werden. Verreibt sie wie eine Handcreme in den Händen und arbeitet euch von den Spitzen nach oben.</p></div>
@@ -890,8 +895,8 @@ body{overflow-x:clip}
         <ul class="lltipps">
           <li><strong>Weniger ist mehr:</strong> Startet mit sehr wenig Produkt. Nachlegen könnt ihr immer, aber zu viel macht die Haare schwer und strähnig.</li>
           <li><strong>Die richtige Textur:</strong> Feines und dünnes Haar verträgt meistens leichte Sprays oder Seren, dickes Haar eher Milch und Cremes.</li>
-          <li><strong>Haaröl als Extra:</strong> Wer mag, versiegelt die Spitzen danach noch mit etwas Öl. Das ersetzt aber kein Leave-in.</li>
         </ul>
+        <div class="llbox llbox-oel"><h3>Und was ist mit Haaröl?</h3><p>Haaröl ist eigentlich auch ein Leave-in, gehört für mich aber nicht dazu. Für mich ist es ein Add-on-Produkt und trotzdem ein Must-have: Es macht geschmeidig und sorgt für Glanz, spendet aber keine aktive Feuchtigkeit. Wer nur Haaröl als Leave-in benutzt, wird keine großen Erfolge sehen. Deshalb kommt Öl bei mir immer zusätzlich, nach dem Leave-in.</p></div>
         <div class="llboxes">
           <div class="llbox"><h3>Wenn jeden Tag nicht klappt</h3><p>Das ist völlig okay. Dann gilt: lieber jeden zweiten oder dritten Tag als gar nicht. Und mindestens nach jeder Wäsche sollte eine Leave-in-Pflege drin sein.</p></div>
           <div class="llbox"><h3>Woran ihr merkt, dass es wirkt</h3><ul><li>Eure Haare lassen sich leichter entwirren und verknoten weniger.</li><li>In der Bürste und im Waschbecken landen weniger abgebrochene Haare.</li><li>Die Spitzen fühlen sich weicher an und wirken weniger fransig.</li></ul></div>
