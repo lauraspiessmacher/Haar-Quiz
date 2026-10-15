@@ -723,6 +723,9 @@ body{overflow-x:clip}
 .llband.dunkel h3.sec{color:var(--bg)}
 @media (max-width:759px){ .llband{min-height:110px;padding:14px 16px;border-radius:12px} }
 .llgruppe .catdesc{margin:0 0 14px;color:var(--muted)}
+.llfit{background:#EFE5DA;border-radius:10px;padding:9px 12px;margin:10px 0 4px}
+.llfit .line{margin:0}
+.llfit .line + .line{margin-top:3px}
 .llextra{border-left:2px solid var(--ink);padding:2px 0 2px 12px;margin:10px 0 12px}
 .llextra p{margin:0 0 8px;font-size:14.5px;line-height:1.5}
 .llextra p:last-child{margin-bottom:0}
@@ -1360,7 +1363,11 @@ function renderLL(){
   box.innerHTML = (LLA.entwurf ? `<p class="llentwurf">Entwurf: Die Texte unter den Produkten liest Laura noch gegen.</p>` : "") +
     LLA.gruppen.map(g => { const items = g.produkte.map(x => { const p = find(x); if(!p) return "";
       const extra = `<div class="llextra"><p><b>Für wen ich es empfehle</b>${esc(x.fuerwen)}</p><p><b>So benutzt du es</b>${esc(x.anwendung)}</p></div>`;
-      return itemHtml(p, "", extra); }).join("");
+      /* Haardicke und Haarzustand hervorheben (Laura): als hellbrauner Kasten direkt über „Für wen ich es empfehle“ */
+      let h = itemHtml(p, "", extra);
+      const fit = h.match(/<div class="line"><b>Haardicke:<\/b>.*?<\/div>(?:<div class="line"><b>Haarzustand:<\/b>.*?<\/div>)?/);
+      if(fit){ h = h.replace(fit[0], "").replace('<div class="llextra">', `<div class="llfit">${fit[0]}</div><div class="llextra">`); }
+      return h; }).join("");
       const bild = LLBILD[g.id];
       return `<div class="llgruppe">${bild ? `<div class="llband" style="background-image:url('${bild}')"><h3 class="sec">${esc(g.titel)}</h3></div>` : `<div class="llband dunkel"><h3 class="sec">${esc(g.titel)}</h3></div>`}<p class="catdesc">${esc(g.text)}</p><ul class="grid">${items}</ul></div>`; }).join("");
 }
