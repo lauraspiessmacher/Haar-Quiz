@@ -1327,8 +1327,8 @@ function renderWissen(){
 
 /* ---------- LL-Methode: Lauras Leave-in-Auswahl (ll-auswahl.json) ---------- */
 const LLA = __LL_AUSWAHL__;
-/* Texturfotos von Laura (quer gedreht) als Kopfbänder der Gruppen, Repair bekommt ein dunkles Band */
-const LLBILD = {sprays:"__TEX_MILCH__", seren:"__TEX_SERUM__", cremes:"__TEX_CREME__"};
+/* Texturfotos von Laura (quer gedreht) als Kopfbänder der Gruppen */
+const LLBILD = {sprays:"__TEX_SCHAUM__", seren:"__TEX_SERUM__", cremes:"__TEX_CREME__", repair:"__TEX_MILCH__"};
 function renderLL(){
   const box = document.getElementById("llBox"); if(!box) return;
   const find = x => ALL.find(p => p.type==="leavein" && p.brand===x.brand && p.name===x.name);

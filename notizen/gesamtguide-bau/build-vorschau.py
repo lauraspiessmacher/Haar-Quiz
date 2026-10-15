@@ -79,6 +79,7 @@ if _fav.get('teaserbild'):  # Titelbild für die Favorites-Leiste auf der Starts
     _tb = _fav['teaserbild']; _mime = 'image/webp' if _tb.endswith('.webp') else ('image/png' if _tb.endswith('.png') else 'image/jpeg')
     _fav['teaserbild'] = f'data:{_mime};base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _tb, 'rb').read()).decode()
 t = t.replace('__FAV__', json.dumps(_fav, ensure_ascii=False))
+t = t.replace('__TEX_SCHAUM__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-schaum.webp','rb').read()).decode())
 t = t.replace('__TEX_MILCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-milch.webp','rb').read()).decode())
 t = t.replace('__TEX_SERUM__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-serum.webp','rb').read()).decode())
 t = t.replace('__TEX_CREME__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-creme.webp','rb').read()).decode())
