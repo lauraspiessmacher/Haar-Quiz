@@ -213,6 +213,7 @@ function advance(){ const V = visible(); if(pos < V.length-1){ pos++; render(); 
 
 /* ---------- Auswertung ---------- */
 const STUFE = ["fein","duenn","normal","dick","sehrdick"];
+const KATNAME = {fein:"feines Haar",duenn:"dünnes Haar",normal:"normales Haar",dick:"dickes Haar",sehrdick:"sehr dickes Haar",kaputt:"kaputte Haare"};
 const TEX = {
  fein:["Ein leichtes Spray","Deine Haare fallen mit Cremes und Ölen schnell platt. Ein leichtes Spray oder ein Sprühnebel pflegt, ohne zu beschweren."],
  duenn:["Ein leichtes Spray oder Serum","Deine Haare mögen es leicht: ein Spray oder ein leichtes, wässriges Serum, sparsam in Längen und Spitzen."],
@@ -268,8 +269,8 @@ function result(){
       <li><strong>Jeden Tag:</strong> Ein- bis zweimal eine kleine Menge ins trockene Haar, vor allem in Längen und Spitzen, damit sie weich und vor allem flexibel bleiben oder werden. Verreib es wie eine Handcreme in den Händen und arbeite dich von den Spitzen nach oben.</li></ul>
       <p>${jetzt}</p></div>
     <div class="block"><h3><span class="mark">→</span>Meine Empfehlungen</h3>
-      <p>${e.cat === "kaputt" ? "Bei „Kaputte Haare“ findest du Leave-ins, die dein Haar stärken." : `Bei „${{fein:"Feines Haar",duenn:"Dünnes Haar",normal:"Normales Haar",dick:"Dickes Haar",sehrdick:"Sehr dickes Haar"}[e.cat]}“ findest du Leave-ins in der passenden Textur.`}</p>
-      <div class="actions links"><button class="secondary" data-cat="${e.cat}">Passende Leave-ins ansehen</button>${e.cat === "kaputt" && e.dk ? `<button class="secondary" data-cat="${e.dk}">Leave-ins für deine Haardicke</button>` : ""}<button class="secondary" id="toLL">Zu meiner LL-Methode</button></div></div>
+      <p>${e.cat === "kaputt" ? "Bei „Kaputte Haare“ findest du alle Leave-ins aus meiner Produktliste, die dein Haar stärken." : `Bei „${{fein:"Feines Haar",duenn:"Dünnes Haar",normal:"Normales Haar",dick:"Dickes Haar",sehrdick:"Sehr dickes Haar"}[e.cat]}“ findest du alle Leave-ins aus meiner Produktliste, die zu deiner Haardicke passen.`}</p>
+      <div class="actions links"><button class="secondary" data-cat="${e.cat}">Alle Leave-ins für ${KATNAME[e.cat]}</button>${e.cat === "kaputt" && e.dk ? `<button class="secondary" data-cat="${e.dk}">Alle Leave-ins für ${KATNAME[e.dk]}</button>` : ""}<button class="secondary" id="toLL">Zu meiner LL-Methode</button></div></div>
     <p class="closing">Ein Leave-in hält deine Haare jeden Tag weich und flexibel, und flexible Haare brechen nicht so schnell.</p>
     <div class="actions"><button class="secondary" id="copyRes">Ergebnis kopieren</button><span class="copied" id="copied" role="status"></span>
       <button class="ghost" id="again">Quiz neu starten</button></div>
