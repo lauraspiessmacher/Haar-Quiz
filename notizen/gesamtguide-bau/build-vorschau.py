@@ -80,6 +80,7 @@ if _fav.get('teaserbild'):  # Titelbild für die Favorites-Leiste auf der Starts
     _fav['teaserbild'] = f'data:{_mime};base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/favoriten/' + _tb, 'rb').read()).decode()
 t = t.replace('__FAV__', json.dumps(_fav, ensure_ascii=False))
 t = t.replace('__LL_AUSWAHL__', json.dumps(json.load(open(f'{S}/ll-auswahl.json', encoding='utf-8')), ensure_ascii=False))
+t = t.replace('__SILBERTABLETT__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/silbertablett.webp','rb').read()).decode())
 t = t.replace('__ORDNER__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner-ringe.webp','rb').read()).decode())
 t = t.replace('__STOFFPATCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stoffpatch-quer.webp','rb').read()).decode())
 t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())

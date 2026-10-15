@@ -96,6 +96,15 @@ main{padding-bottom:60px}
 .intro{padding:26px 0 6px}
 .intro h1{font-size:clamp(32px,6vw,46px)}
 .intro p{color:var(--muted);margin:6px 0 0;max-width:60ch}
+/* Favorites: ein paar Lieblinge auf dem Silbertablett, kommen als kleiner Gag vom rechten Bildschirmrand herein */
+.favintro{position:relative}
+.favintro > :not(.tablett){position:relative;z-index:1}
+.tablett{position:absolute;z-index:0;top:22px;right:calc((100% - 100vw) / 2);height:290px;width:auto;pointer-events:none;
+  filter:drop-shadow(-2px 5px 5px rgba(56,47,46,.12));animation:tablettRein .9s cubic-bezier(.2,.8,.25,1) .15s both}
+@keyframes tablettRein{from{transform:translateX(110%)}to{transform:none}}
+@media (max-width:1100px){ .tablett{height:230px} }
+@media (max-width:759px){ .tablett{height:150px;top:10px} .favintro h1{max-width:62%} }
+@media (prefers-reduced-motion:reduce){ .tablett{animation:none} }
 /* Wissen: Schriftzug wie aufgestickt auf Lauras echtem Stoff-Patch (Foto, freigestellt und quer gedreht) */
 .patchtitel{display:grid;place-items:center;width:min(250px,62vw);aspect-ratio:700/508;margin:4px 0 14px -2px;background:url("__STOFFPATCH__") center/100% 100% no-repeat;
   transform:rotate(-1.2deg);filter:drop-shadow(0 2px 2px rgba(56,47,46,.13)) drop-shadow(0 8px 12px rgba(56,47,46,.10))}
@@ -940,7 +949,7 @@ __ROUTINE__
 
   <!-- ===================== LAURAS FAVORITES ===================== -->
   <section class="view" id="v-favoriten" hidden>
-    <div class="intro"><h1>Lauras Favorites</h1><p>Ihr fragt mich super oft, welche Produkte ich selbst benutze. Durch meinen Job teste ich ständig Neues und wechsle viel ab, doch auf diese Produkte kann ich mich immer verlassen: Sie funktionieren gut für meine Haare und bringen genau die Ergebnisse, die ich mir wünsche. Sortiert sind sie danach, was meine Haare und meine Kopfhaut gerade brauchen.</p></div>
+    <div class="intro favintro"><img class="tablett" src="__SILBERTABLETT__" alt="" aria-hidden="true" width="565" height="760"><h1>Lauras Favorites</h1><p>Ihr fragt mich super oft, welche Produkte ich selbst benutze. Durch meinen Job teste ich ständig Neues und wechsle viel ab, doch auf diese Produkte kann ich mich immer verlassen: Sie funktionieren gut für meine Haare und bringen genau die Ergebnisse, die ich mir wünsche. Sortiert sind sie danach, was meine Haare und meine Kopfhaut gerade brauchen.</p></div>
     <div id="favBox"></div>
   </section>
 
