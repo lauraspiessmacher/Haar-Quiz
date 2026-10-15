@@ -28,3 +28,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [x] LL-Methode-Seite: Bild „So funktioniert die LL-Methode“ (3 Zeichnungen eingebaut); Spliss-Arten-Bilder von Laura optional
 - [ ] Leave-in-Check von Laura testen lassen
 - [ ] Produktseite: Texturbilder von Laura für Haaröl, Kopfhautpflege, Hitzeschutz (evtl. Bürsten/Hitze-Tools schlicht lassen) einbauen → TYPBILD in vorschau2-template.html
+- [ ] LL-Seite: Laura generiert selbst Bilder für die 3 Anwendungsschritte (ersetzen die Linienskizzen in .llschritte)
