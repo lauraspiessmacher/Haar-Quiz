@@ -29,3 +29,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [ ] Leave-in-Check von Laura testen lassen
 - [ ] Produktseite: Texturbilder von Laura für Haaröl, Kopfhautpflege, Hitzeschutz (evtl. Bürsten/Hitze-Tools schlicht lassen) einbauen → TYPBILD in vorschau2-template.html
 - [ ] LL-Seite: Laura generiert selbst Bilder für die 3 Anwendungsschritte (ersetzen die Linienskizzen in .llschritte)
+- Wissen-Test v226: Laura soll Themen-Aufteilung, Farben und Mythos-Karte bestätigen. Danach evtl. „Dein Lesestapel“ + Gelesen-Lesezeichen.

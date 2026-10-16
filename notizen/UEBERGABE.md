@@ -412,3 +412,4 @@
 - Leave-in-Check Frage Hitze jetzt Mehrfachauswahl (Laura): „Ich föhne meine Haare“ + „Ich style regelmäßig mit Glätteisen, Lockenstab oder Multistyler“ (beides wählbar) oder „Nie oder fast nie“. Stärkere Angabe zählt; bei beidem eigener Hitzeschutz-Text. Vorschau v223.
 - LL-Seite: Quiz-Karte „Leave-in-Check“ quer und flach statt hoch (Laura): bis 760 px breit, Text links, „Quiz starten“ rechts unten; Handy untereinander. Vorschau v224.
 - Vorschau v225: Wehende Haarsträhnen aus dem Wissensbereich entfernt (nur noch auf der Startseite).
+- Vorschau v226 (Test): Wissen neu – Mythos-oder-Fakt-Karte oben rechts (9 Mythen aus Kapitel Haarmythen, umdrehbar), Bücher in 6 Themen-Regalen mit Registerreiter und eigener Buchfarbe (Grundlagen dunkel, Kopfhaut khaki, Haarbruch/Spliss/Repair cognac, Pflege taupe, Werkzeuge leinen-hell, Haarfarbe pflaume). Kapitelnummern folgen jetzt den Regalen (Haarmythen = Kapitel 4). Themen-Aufteilung in WREGALE (vorschau2-template.html).

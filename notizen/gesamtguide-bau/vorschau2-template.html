@@ -648,6 +648,66 @@ body{overflow-x:clip}
 @keyframes leaf2{0%{transform:rotateY(0)} 55%{transform:rotateY(calc(-40deg + var(--i) * 4deg))} 100%{transform:rotateY(calc(var(--i) * -5deg))}}
 @media (prefers-reduced-motion:reduce){ #wissenCards .shelfbook .card,#wissenCards .shelfbook .bleaf{transition:none;animation:none !important} }
 
+
+/* ---------- Wissen: Mythos-Karte + Themen-Regale (Test 16.10.) ---------- */
+.whero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:40px;align-items:center}
+@media (max-width:899px){ .whero{grid-template-columns:1fr;gap:26px} }
+.mythos{perspective:1600px;transition:opacity .22s ease,transform .22s ease;margin-top:20px}
+.mythos.swap{opacity:0;transform:translateX(16px)}
+.mcard{display:grid;position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.45,.05,.25,1);transform:rotate(1.2deg)}
+.mcard.flip{transform:rotate(-.8deg) rotateY(180deg)}
+.mface{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:4px;padding:30px 28px 24px;min-height:300px;display:flex;flex-direction:column;
+  box-shadow:0 1px 0 rgba(56,47,46,.08),0 18px 34px -18px rgba(56,47,46,.55)}
+.mfront{background:#FFFDFA repeating-linear-gradient(180deg,transparent 0 31px,rgba(122,106,101,.18) 31px 32px);background-position:0 70px;border-top:5px solid var(--khaki-button,#4A4A39)}
+.mback{background:var(--khaki-button,#4A4A39);color:#F3ECE2;transform:rotateY(180deg)}
+.mstempel{align-self:flex-start;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7A3B32;border:1.5px solid #7A3B32;border-radius:3px;padding:5px 9px;transform:rotate(-3deg);opacity:.85}
+.mnr{position:absolute;top:30px;right:28px;font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.mback .mnr{color:rgba(243,236,226,.7)}
+.mq{font-family:var(--serif);font-size:clamp(25px,2.6vw,31px);line-height:1.15;color:var(--ink);margin:26px 0 8px}
+.mfrage{color:var(--muted);font-size:14px;margin:auto 0 12px}
+.mbtns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mfeed{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;margin:0 0 6px}
+.murteil{font-family:var(--serif);font-size:36px;line-height:1;margin:0 0 12px;color:#F3ECE2}
+.mtext{font-size:15px;line-height:1.5;margin:0 0 18px;color:#EDE6DA}
+.mback .mbtns{margin-top:auto}
+.mback .btn.dark{background:#F3ECE2;color:#29261F;border-color:#F3ECE2}
+.mback .linkbtn{background:none;border:0;padding:0;font:inherit;font-size:14px;color:#F3ECE2;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+@media (max-width:520px){ .mcard{transform:rotate(.6deg)} .mcard.flip{transform:rotate(-.4deg) rotateY(180deg)} .mface{padding:26px 20px 20px;min-height:280px} .mnr{top:26px;right:20px} }
+@media (prefers-reduced-motion:reduce){ .mcard,.mythos{transition:none} }
+html[data-stil="rouje"] .murteil{text-transform:uppercase}
+
+#wissenCards.cards{display:block;padding-top:10px}
+.wregal{margin:44px 0 0}
+.wtab{position:relative;display:flex;align-items:flex-end;gap:16px;border-bottom:2px solid var(--bc);margin:0}
+.wtext{margin:10px 0 24px;color:var(--muted);font-size:14.5px}
+.wtab h2{position:relative;margin:0 0 -2px;background:var(--bc);color:var(--bt);font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  padding:11px 20px 10px;border-radius:10px 10px 0 0;line-height:1.2}
+.wtab .wanz{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-left:auto;padding-bottom:8px}
+.wbooks{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:30px 24px;perspective:1400px}
+@media (max-width:520px){ .wbooks{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px} .wtab .wanz{display:none} .wtext{margin:8px 0 18px} .wregal{margin-top:34px} }
+/* Buchfarben pro Regal */
+.t-grund{--bc:#382F2E;--bt:#F3ECE2}
+.t-kopf{--bc:#4A4A39;--bt:#F3ECE2}
+.t-bruch{--bc:#6E4B3F;--bt:#F6EEE4}
+.t-pflege{--bc:#8C7D77;--bt:#FBF6EF}
+.t-werkzeug{--bc:#DCD3C4;--bt:#382F2E}
+.t-farbe{--bc:#5B3B3E;--bt:#F6EEE4}
+#wissenCards .wregal .card{background:var(--bc)}
+.t-werkzeug .wtab h2{border:1px solid rgba(56,47,46,.18);border-bottom:0}
+.t-werkzeug .card{color:#382F2E}
+#wissenCards .t-werkzeug .card .kap,#wissenCards .t-werkzeug .card p{color:#5C504C}
+#wissenCards .t-werkzeug .card h3{color:#382F2E}
+#wissenCards .t-werkzeug .card::after{border-color:rgba(56,47,46,.28)}
+#wissenCards .t-werkzeug .card .go{background:#382F2E;color:#F3ECE2}
+#wissenCards .t-werkzeug .card .emb{color:rgba(56,47,46,.30);filter:drop-shadow(0 1px 0 rgba(255,255,255,.55)) drop-shadow(0 -1px 0 rgba(56,47,46,.25))}
+#wissenCards .t-werkzeug .card::before{background:linear-gradient(90deg,rgba(56,47,46,.22),rgba(255,255,255,.3) 55%,rgba(56,47,46,.14) 80%,rgba(255,255,255,.2))}
+.bookfly.t-kopf .bf-cover .front{background:#4A4A39}
+.bookfly.t-bruch .bf-cover .front{background:#6E4B3F}
+.bookfly.t-pflege .bf-cover .front{background:#8C7D77}
+.bookfly.t-farbe .bf-cover .front{background:#5B3B3E}
+.bookfly.t-werkzeug .bf-cover .front{background:#DCD3C4}
+.bookfly.t-werkzeug .bf-cover .front .kap,.bookfly.t-werkzeug .bf-cover .front p{color:#5C504C}
+.bookfly.t-werkzeug .bf-cover .front h3{color:#382F2E}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1001,7 +1061,7 @@ __ROUTINE__
 
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
-    <div id="wissenListe"><div class="intro"><h1 class="patchtitel" aria-label="Wissen"><svg viewBox="0 0 300 74" aria-hidden="true"><defs>
+    <div id="wissenListe"><div class="whero"><div class="wherol"><div class="intro"><h1 class="patchtitel" aria-label="Wissen"><svg viewBox="0 0 300 74" aria-hidden="true"><defs>
       <pattern id="satinFaden" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(-62)"><rect width="2.6" height="2.6" fill="#161515"/><rect width=".75" height="2.6" fill="#55514F" fill-opacity=".6"/><rect x="1.7" width=".6" height="2.6" fill="#000000" fill-opacity=".6"/></pattern></defs>
       <text class="stich" x="150" y="64" text-anchor="middle">WISSEN</text>
       <text class="fuell" x="150" y="64" text-anchor="middle" fill="url(#satinFaden)">WISSEN</text></svg></h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
@@ -1010,6 +1070,7 @@ __ROUTINE__
       <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
     </div>
     <button type="button" class="faqbtn" id="faqBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 16.8h.01"/></svg><span>Häufig gestellte Fragen</span><span aria-hidden="true">→</span></button>
+    </div><div class="mythos" id="mythos" aria-live="polite"></div></div>
     <div id="wissenSuche" aria-live="polite"></div>
     <div class="cards" id="wissenCards">
 
@@ -1048,6 +1109,16 @@ __ROUTINE__
 const DATA = __DATA__;
 /* Wissenstexte (aus wissen.json + wissen/*.html) */
 const WISSEN = __WISSEN__;
+/* Wissen nach Themen (Test 16.10.): jedes Regal hat einen Registerreiter und eine eigene Buchfarbe */
+const WREGALE = [
+  {id:"grund", titel:"Grundlagen", text:"Was eure Haare mitbringen und was wirklich stimmt", kap:["genetik","haarzyklus","porositaet","mythen"]},
+  {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall"]},
+  {id:"bruch", titel:"Haarbruch, Spliss & Repair", text:"Mein Herzensthema: vorbeugen statt reparieren", kap:["unterschied","leavein","llmethode","reparatur","repair","splissschnitt"]},
+  {id:"pflege", titel:"Pflege verstehen", text:"Öle, Silikone und alles vor dem Shampoo", kap:["prewash","haaroele","silikone"]},
+  {id:"werkzeug", titel:"Werkzeuge", text:"Bürste, Schere, Kissen: was eure Haare jeden Tag berührt", kap:["buersten","seide","scheren"]},
+  {id:"farbe", titel:"Haarfarbe", text:"Färben, Tönen und Farbstiche verstehen", kap:["haarfarbe","farbstiche"]}
+];
+{ const ord = WREGALE.flatMap(r => r.kap); WISSEN.sort((a,b) => (ord.indexOf(a.id)+1 || 99) - (ord.indexOf(b.id)+1 || 99)); }
 /* Häufig gestellte Fragen, nach Kapitel sortiert (Quelle: faq.json, Entwurf aus den Kapiteltexten) */
 const FAQ = __FAQ__;
 /* Kaufen-Links (Affiliate), Schlüssel = Produktart|Marke|Name. Leer = kein Knopf. */
@@ -1260,7 +1331,11 @@ const PRAEGUNG = {
 };
 (function(){
   const box = document.getElementById("wissenCards");
-  box.insertAdjacentHTML("afterbegin", WISSEN.map((w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}${w.entwurf?" · Entwurf":""}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="emb" aria-hidden="true"><svg viewBox="0 0 24 24">${PRAEGUNG[w.id]||PRAEGUNG.buch}</svg></span><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`).join(""));
+  const bookHtml = (w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}${w.entwurf?" · Entwurf":""}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="emb" aria-hidden="true"><svg viewBox="0 0 24 24">${PRAEGUNG[w.id]||PRAEGUNG.buch}</svg></span><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`;
+  const used = new Set(WREGALE.flatMap(r => r.kap)), rest = WISSEN.filter(w => !used.has(w.id)).map(w => w.id);
+  const regale = rest.length ? [...WREGALE, {id:"grund", titel:"Weitere Kapitel", text:"", kap:rest}] : WREGALE;
+  box.insertAdjacentHTML("afterbegin", regale.map((r,n) => { const ws = r.kap.map(id => WISSEN.findIndex(w => w.id === id)).filter(i => i >= 0);
+    return `<section class="wregal t-${r.id}" aria-labelledby="wr-${n}"><div class="wtab"><h2 id="wr-${n}">${esc(r.titel)}</h2><span class="wanz">${ws.length} ${ws.length === 1 ? "Buch" : "Bücher"}</span></div>${r.text ? `<p class="wtext">${esc(r.text)}</p>` : ""}<div class="wbooks">${ws.map(i => bookHtml(WISSEN[i], i)).join("")}</div></section>`; }).join(""));
   /* jedes Buch bekommt Seiten dahinter, die beim Drüberfahren leicht blättern */
   box.querySelectorAll(".card").forEach(c => {
     const w = document.createElement("div"); w.className = "shelfbook";
@@ -1280,6 +1355,7 @@ function openBook(card, done){
   const r = shelf.getBoundingClientRect();
   const kap = (card.querySelector(".kap")||{}).textContent || "", tit = (card.querySelector("h3")||{}).textContent || "";
   const fly = document.createElement("div"); fly.className = "bookfly";
+  const reg = card.closest(".wregal"); if(reg) fly.classList.add(...[...reg.classList].filter(c => c.startsWith("t-")));
   fly.innerHTML = `<div class="bf-page"><span class="kap">${esc(kap)}</span><span class="t">${esc(tit)}</span><span class="lines"></span></div>
     <div class="bf-cover"><div class="front">${card.innerHTML}</div><div class="back"></div></div>`;
   /* scharf: in Endgröße zeichnen, am Anfang auf Buchgröße verkleinert, beim Zoom auf 100 % */
@@ -1294,6 +1370,35 @@ function openBook(card, done){
   setTimeout(() => { done(); shelf.classList.remove("away"); shelf.classList.remove("noflip"); fly.classList.add("fade"); }, 1480);
   setTimeout(() => fly.remove(), 1950);
 }
+/* Mythos oder Fakt? (Test 16.10.): Karteikarte oben im Wissen, Behauptungen und Antworten kommen aus dem Kapitel Haarmythen */
+(function(){
+  const box = document.getElementById("mythos"), kap = WISSEN.find(w => w.id === "mythen"); if(!box || !kap) return;
+  const tmp = document.createElement("div"); tmp.innerHTML = kap.html;
+  const M = [...tmp.querySelectorAll("h3")].map(h => { const p = h.nextElementSibling; if(!p || p.tagName !== "P") return null;
+    const st = p.querySelector("strong"), urteil = st ? st.textContent.trim() : "";
+    let text = p.textContent.replace(urteil, "").trim();
+    const satz = text.match(/[^.!?]+[.!?]+/g) || [text]; if(satz.length > 2) text = satz.slice(0,2).join("").trim();
+    return {q: h.textContent.trim(), urteil, text, wahr: /^stimmt\b(?! nicht| so nicht| so pauschal nicht)/i.test(urteil) && !/halb/i.test(urteil), halb: /halb|kommt darauf an/i.test(urteil)}; }).filter(Boolean);
+  if(!M.length) return;
+  let i = 0;
+  const show = () => { const m = M[i];
+    box.innerHTML = `<div class="mcard"><div class="mface mfront"><span class="mstempel">Mythos oder Fakt?</span><span class="mnr">${i+1} / ${M.length}</span>
+      <p class="mq">${esc(m.q)}</p><p class="mfrage">Was glaubst du?</p>
+      <div class="mbtns"><button type="button" class="btn" data-a="fakt">Stimmt</button><button type="button" class="btn dark" data-a="mythos">Stimmt nicht</button></div></div>
+      <div class="mface mback" aria-hidden="true"><span class="mnr">${i+1} / ${M.length}</span><p class="mfeed"></p><p class="murteil">${esc(m.urteil)}</p><p class="mtext">${esc(m.text)}</p>
+      <div class="mbtns"><button type="button" class="btn dark mnext">Nächster Mythos <span aria-hidden="true">→</span></button><button type="button" class="linkbtn mall">Alle Mythen lesen</button></div></div></div>`;
+    const c = box.querySelector(".mcard");
+    c.querySelectorAll("[data-a]").forEach(b => b.onclick = () => {
+      const tip = b.dataset.a, ok = m.halb ? null : (tip === "fakt") === m.wahr;
+      c.querySelector(".mfeed").textContent = ok === null ? "Halb richtig, es kommt darauf an:" : ok ? "Richtig getippt!" : "Erwischt! Das glauben ganz viele.";
+      c.classList.add("flip"); c.querySelector(".mfront").setAttribute("aria-hidden","true"); c.querySelector(".mback").removeAttribute("aria-hidden");
+      setTimeout(() => c.querySelector(".mnext").focus({preventScroll:true}), 400);
+    });
+    c.querySelector(".mnext").onclick = () => { i = (i + 1) % M.length; box.classList.add("swap"); setTimeout(() => { show(); box.classList.remove("swap"); box.querySelector("[data-a]").focus({preventScroll:true}); }, 220); };
+    c.querySelector(".mall").onclick = () => { state.wissen = "mythen"; render(); window.scrollTo({top:0}); };
+  };
+  show();
+})();
 /* Suche in den Wissenskapiteln: findet Schlagwörter im Titel, im Teaser und im ganzen Text */
 const WTEXT = WISSEN.map((w,i) => ({w, i, titel: plain(w.titel), all: plain(w.titel+" "+w.teaser+" "+w.html.replace(/<[^>]+>/g," ")),
   raw: (w.teaser+" · "+w.html.replace(/<h2[\s\S]*?<\/h2>/,"").replace(/<\/(h3|h4|li|td|th)>/g," · ").replace(/<[^>]+>/g," ")).replace(/\s+/g," ").replace(/( ·)+/g," ·").trim()}));
