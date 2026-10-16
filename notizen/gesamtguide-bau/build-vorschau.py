@@ -86,7 +86,8 @@ t = t.replace('__TEX_CREME__', 'data:image/webp;base64,' + base64.b64encode(open
 t = t.replace('__LL_AUSWAHL__', json.dumps(json.load(open(f'{S}/ll-auswahl.json', encoding='utf-8')), ensure_ascii=False))
 t = t.replace('__SILBERTABLETT__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/silbertablett.webp','rb').read()).decode())
 t = t.replace('__ORDNER__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner-ringe.webp','rb').read()).decode())
-t = t.replace('__STOFFPATCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stoffpatch-quer.webp','rb').read()).decode())
+# Stoff-Patch im Wissen auf Lauras Wunsch wieder entfernt (16.10.), Bild liegt weiter in bilder/deko
+# t = t.replace('__STOFFPATCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stoffpatch-quer.webp','rb').read()).decode())
 t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html').replace('__QUIZ_SPLISS__', 'quiz-spliss.html').replace('__QUIZ_LEAVEIN__', 'quiz-leavein.html')
