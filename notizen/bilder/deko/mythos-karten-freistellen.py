@@ -31,6 +31,22 @@ a[400:520, :] *= f[None, :]
 out = Image.fromarray(np.dstack([im, a.clip(0, 255)]).astype(np.uint8), 'RGBA').crop((x0, 20, x1, 1290))
 out.save('mythos-buegel.webp', quality=88, method=6); print('buegel', out.size)
 # --- Stapel ---
-im = Image.open('vorlagen/mythos-papierstapel.jpg').convert('RGBA')
-im.putalpha(Image.open(S + '/stapel-bire.png').convert('L'))
-out = im.crop((203, 253, 897, 1095)); out.save('mythos-stapel.webp', quality=88, method=6); print('stapel', out.size)
+# Laura (16.10.): leichter schwarzer Rand. Deshalb: Maske minimal enger, Kantenfarbe vom schwarzen Hintergrund befreien
+# (beobachtet = a*Vordergrund + (1-a)*Hintergrund, Hintergrund ~ dunkelgrau aus dem Foto geschätzt).
+from scipy import ndimage
+im = np.asarray(Image.open('vorlagen/mythos-papierstapel.jpg').convert('RGB')).astype(float)
+a = np.asarray(Image.open(S + '/stapel-bire.png').convert('L')).astype(float) / 255
+bgmask = a < 0.02
+B = np.array([np.median(im[..., c][bgmask]) for c in range(3)])
+a = np.clip((a - 0.18) / 0.78, 0, 1)
+a = np.minimum(a, ndimage.grey_erosion(a, size=(3, 3)) * 0.6 + a * 0.4)
+safe = np.maximum(a, 1e-3)[..., None]
+F = (im - (1 - a[..., None]) * B) / safe
+# an sehr dünnen Kanten statt Rechnung die Farbe des nächsten sicheren Innenpixels nehmen
+inner = a > 0.9
+idx = ndimage.distance_transform_edt(~inner, return_distances=False, return_indices=True)
+near = im[idx[0], idx[1]]
+w = np.clip((a - 0.25) / 0.6, 0, 1)[..., None]
+F = np.where(a[..., None] > 0.9, im, w * np.clip(F, 0, 255) + (1 - w) * near)
+out = Image.fromarray(np.dstack([np.clip(F, 0, 255), a * 255]).astype(np.uint8), 'RGBA').crop((203, 253, 897, 1095))
+out.save('mythos-stapel.webp', quality=90, method=6); print('stapel', out.size)
