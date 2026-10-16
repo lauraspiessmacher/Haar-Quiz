@@ -31,3 +31,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [ ] LL-Seite: Laura generiert selbst Bilder für die 3 Anwendungsschritte (ersetzen die Linienskizzen in .llschritte)
 - Wissen-Test v226: Laura soll Themen-Aufteilung, Farben und Mythos-Karte bestätigen. Danach evtl. „Dein Lesestapel“ + Gelesen-Lesezeichen.
 - Mythos-oder-Fakt-Karte: eleganteres Design (nicht liniertes Blatt) – Vorlage von Laura abwarten.
+- Später: Lauras Vorlage Handschuh hält Karte mit ovaler Silberbrosche (vorlagen/spaeter-handschuh-karte-silberbrosche.webp) irgendwo einsetzen.

@@ -84,6 +84,8 @@ t = t.replace('__TEX_MILCH__', 'data:image/webp;base64,' + base64.b64encode(open
 t = t.replace('__TEX_SERUM__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-serum.webp','rb').read()).decode())
 t = t.replace('__TEX_CREME__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-creme.webp','rb').read()).decode())
 t = t.replace('__LL_AUSWAHL__', json.dumps(json.load(open(f'{S}/ll-auswahl.json', encoding='utf-8')), ensure_ascii=False))
+for _k, _f in [('__MYTHOS_BUEGEL__', 'mythos-buegel.webp'), ('__MYTHOS_STAPEL__', 'mythos-stapel.webp')]:
+    t = t.replace(_k, 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/' + _f, 'rb').read()).decode())
 t = t.replace('__SILBERTABLETT__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/silbertablett.webp','rb').read()).decode())
 t = t.replace('__ORDNER__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner-ringe.webp','rb').read()).decode())
 # Stoff-Patch im Wissen auf Lauras Wunsch wieder entfernt (16.10.), Bild liegt weiter in bilder/deko

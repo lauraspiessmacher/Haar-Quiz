@@ -644,30 +644,31 @@ body{overflow-x:clip}
 
 
 /* ---------- Wissen: Mythos-Karte + Themen-Regale (Test 16.10.) ---------- */
-.whero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:40px;align-items:center}
-@media (max-width:899px){ .whero{grid-template-columns:1fr;gap:26px} }
-.mythos{perspective:1600px;transition:opacity .22s ease,transform .22s ease;margin-top:20px}
-.mythos.swap{opacity:0;transform:translateX(16px)}
-.mcard{display:grid;position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.45,.05,.25,1);transform:rotate(1.2deg)}
-.mcard.flip{transform:rotate(-.8deg) rotateY(180deg)}
-.mface{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:4px;padding:30px 28px 24px;min-height:300px;display:flex;flex-direction:column;
-  box-shadow:0 1px 0 rgba(56,47,46,.08),0 18px 34px -18px rgba(56,47,46,.55)}
-.mfront{background:#FFFDFA repeating-linear-gradient(180deg,transparent 0 31px,rgba(122,106,101,.18) 31px 32px);background-position:0 70px;border-top:5px solid var(--khaki-button,#4A4A39)}
-.mback{background:var(--khaki-button,#4A4A39);color:#F3ECE2;transform:rotateY(180deg)}
-.mstempel{align-self:flex-start;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7A3B32;border:1.5px solid #7A3B32;border-radius:3px;padding:5px 9px;transform:rotate(-3deg);opacity:.85}
-.mnr{position:absolute;top:30px;right:28px;font-size:12px;letter-spacing:.12em;color:var(--muted)}
-.mback .mnr{color:rgba(243,236,226,.7)}
-.mq{font-family:var(--serif);font-size:clamp(25px,2.6vw,31px);line-height:1.15;color:var(--ink);margin:26px 0 8px}
-.mfrage{color:var(--muted);font-size:14px;margin:auto 0 12px}
-.mbtns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.mfeed{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;margin:0 0 6px}
-.murteil{font-family:var(--serif);font-size:36px;line-height:1;margin:0 0 12px;color:#F3ECE2}
-.mtext{font-size:15px;line-height:1.5;margin:0 0 18px;color:#EDE6DA}
-.mback .mbtns{margin-top:auto}
-.mback .btn.dark{background:#F3ECE2;color:#29261F;border-color:#F3ECE2}
-.mback .linkbtn{background:none;border:0;padding:0;font:inherit;font-size:14px;color:#F3ECE2;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-@media (max-width:520px){ .mcard{transform:rotate(.6deg)} .mcard.flip{transform:rotate(-.4deg) rotateY(180deg)} .mface{padding:26px 20px 20px;min-height:280px} .mnr{top:26px;right:20px} }
-@media (prefers-reduced-motion:reduce){ .mcard,.mythos{transition:none} }
+.whero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--mw,520px));gap:36px;align-items:center}
+@media (max-width:899px){ .whero{grid-template-columns:1fr;gap:18px} }
+/* Mythos oder Fakt: Lauras Fotovorlagen (Bügel mit Clips / Papierstapel), Text liegt auf dem obersten Blatt */
+.mythos{position:relative;margin:10px auto 0;width:100%;max-width:var(--mw,520px)}
+.mythos[data-look="stapel"]{--mw:440px}
+.mythos .mbild{display:block;width:100%;height:auto;pointer-events:none;user-select:none;filter:drop-shadow(0 22px 26px rgba(56,47,46,.16))}
+.mythos .mblatt{position:absolute;left:var(--l);right:var(--r);top:var(--t);bottom:var(--b);display:grid;container-type:inline-size}
+.mythos[data-look="buegel"] .mblatt{--l:16.6%;--r:15.4%;--t:49%;--b:12.2%;transform:rotate(-.35deg)}
+.mythos[data-look="stapel"] .mblatt{--l:13.4%;--r:19.6%;--t:21%;--b:9%}
+.mseite{grid-area:1/1;display:flex;flex-direction:column;min-height:0;transition:opacity .45s ease,transform .45s ease}
+.mseite[aria-hidden="true"]{opacity:0;transform:translateY(6px);pointer-events:none;visibility:hidden}
+.mkopf{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7D7462;margin:0 0 4cqw}
+.mkopf .mnr{letter-spacing:.12em;font-variant-numeric:tabular-nums}
+.mq{font-family:var(--serif);font-size:clamp(19px,7.4cqw,30px);line-height:1.12;color:#29261F;margin:0}
+.mbtns{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:auto}
+.mbtn{font:inherit;font-size:clamp(10.5px,3.4cqw,12px);letter-spacing:.14em;text-transform:uppercase;padding:.75em 1.25em;white-space:nowrap;border-radius:999px;border:1px solid #29261F;background:transparent;color:#29261F;cursor:pointer;transition:background .2s,color .2s}
+.mbtn:hover,.mbtn.dark{background:#29261F;color:#F6F1E8}
+.mbtn.dark:hover{background:var(--khaki-button,#4A4A39);border-color:var(--khaki-button,#4A4A39)}
+.mlink{font:inherit;font-size:13px;background:none;border:0;padding:0;color:#29261F;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}
+.mfeed{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7D7462;margin:0 0 2cqw}
+.murteil{font-family:var(--serif);font-size:clamp(24px,9cqw,38px);line-height:1;margin:0 0 3cqw;color:#29261F}
+.mtext{font-size:clamp(12.5px,3.9cqw,15px);line-height:1.48;margin:0 0 3cqw;color:#4A423E}
+@container (max-width:300px){ .mlink{display:none} .mkopf{margin-bottom:3cqw} }
+@media (prefers-reduced-motion:reduce){ .mseite{transition:none} }
+.mythos.swap .mseite{opacity:0}
 html[data-stil="rouje"] .murteil{text-transform:uppercase}
 
 #wissenCards.cards{display:block;padding-top:10px}
@@ -694,7 +695,8 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .bookfly .bf-cover .front{background:var(--bc,#382F2E)}
 .bookfly.hell .bf-cover .front .kap,.bookfly.hell .bf-cover .front p{color:#5C504C}
 .bookfly.hell .bf-cover .front h3{color:#382F2E}
-.palctl{bottom:14px}
+.palctl{bottom:14px;flex-wrap:wrap;max-width:calc(100vw - 28px)}
+.palctl .pctl-sep{margin-left:8px;padding-left:10px;border-left:1px solid var(--line)}
 #wissenListe[hidden] ~ .palctl{display:none}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
@@ -1355,10 +1357,13 @@ const PRAEGUNG = {
   const setPal = k => { const P = WPAL[k] || WPAL.a;
     box.querySelectorAll(".wregal").forEach(r => { const id = [...r.classList].find(c => c.startsWith("t-")).slice(2), f = P[id] || P.grund;
       r.style.setProperty("--bc", f[0]); r.style.setProperty("--bt", f[1] ? "#382F2E" : "#F3ECE2"); r.classList.toggle("hell", !!f[1]); });
-    if(ctl) ctl.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.p === k));
+    if(ctl) ctl.querySelectorAll("[data-p]").forEach(b => b.setAttribute("aria-pressed", b.dataset.p === k));
     try { localStorage.setItem("wissenPal", k); } catch(e){} };
   let pk = "a"; try { pk = localStorage.getItem("wissenPal") || "a"; } catch(e){}
-  if(ctl){ ctl.innerHTML = `<span>Farben</span>` + Object.entries(WPAL).map(([k,P]) => `<button type="button" data-p="${k}">${esc(P.name)}</button>`).join(""); ctl.querySelectorAll("button").forEach(b => b.onclick = () => setPal(b.dataset.p)); }
+  if(ctl){ ctl.innerHTML = `<span>Farben</span>` + Object.entries(WPAL).map(([k,P]) => `<button type="button" data-p="${k}">${esc(P.name)}</button>`).join("")
+      + `<span class="pctl-sep">Karte</span><button type="button" data-look="buegel">Bügel</button><button type="button" data-look="stapel">Stapel</button>`;
+    ctl.querySelectorAll("[data-p]").forEach(b => b.onclick = () => setPal(b.dataset.p));
+    ctl.querySelectorAll("[data-look]").forEach(b => b.onclick = () => window.setMythosLook && window.setMythosLook(b.dataset.look)); }
   setPal(WPAL[pk] ? pk : "a");
   const open = id => { state.wissen = id; render(); window.scrollTo({top:0}); };
   box.querySelectorAll(".wcard").forEach(b => b.onclick = () => openBook(b, () => open(b.dataset.w)));
@@ -1387,6 +1392,7 @@ function openBook(card, done){
   setTimeout(() => { done(); shelf.classList.remove("away"); shelf.classList.remove("noflip"); fly.classList.add("fade"); }, 1480);
   setTimeout(() => fly.remove(), 1950);
 }
+const MYLOOK = {buegel:"__MYTHOS_BUEGEL__", stapel:"__MYTHOS_STAPEL__"};
 /* Mythos oder Fakt? (Test 16.10.): Karteikarte oben im Wissen, Behauptungen und Antworten kommen aus dem Kapitel Haarmythen */
 (function(){
   const box = document.getElementById("mythos"), kap = WISSEN.find(w => w.id === "mythen"); if(!box || !kap) return;
@@ -1398,23 +1404,29 @@ function openBook(card, done){
     return {q: h.textContent.trim(), urteil, text, wahr: /^stimmt\b(?! nicht| so nicht| so pauschal nicht)/i.test(urteil) && !/halb/i.test(urteil), halb: /halb|kommt darauf an/i.test(urteil)}; }).filter(Boolean);
   if(!M.length) return;
   let i = 0;
-  const show = () => { const m = M[i];
-    box.innerHTML = `<div class="mcard"><div class="mface mfront"><span class="mstempel">Mythos oder Fakt?</span><span class="mnr">${i+1} / ${M.length}</span>
-      <p class="mq">${esc(m.q)}</p><p class="mfrage">Was glaubst du?</p>
-      <div class="mbtns"><button type="button" class="btn" data-a="fakt">Stimmt</button><button type="button" class="btn dark" data-a="mythos">Stimmt nicht</button></div></div>
-      <div class="mface mback" aria-hidden="true"><span class="mnr">${i+1} / ${M.length}</span><p class="mfeed"></p><p class="murteil">${esc(m.urteil)}</p><p class="mtext">${esc(m.text)}</p>
-      <div class="mbtns"><button type="button" class="btn dark mnext">Nächster Mythos <span aria-hidden="true">→</span></button><button type="button" class="linkbtn mall">Alle Mythen lesen</button></div></div></div>`;
-    const c = box.querySelector(".mcard");
-    c.querySelectorAll("[data-a]").forEach(b => b.onclick = () => {
+  const look = () => { let k = "buegel"; try { k = localStorage.getItem("mythosLook") || k; } catch(e){} return MYLOOK[k] ? k : "buegel"; };
+  const show = () => { const m = M[i], k = look(), kurz = window.innerWidth < 520 ? (m.text.match(/[^.!?]+[.!?]+/) || [m.text])[0] : m.text;
+    const nr = n => String(n).padStart(2, "0");
+    box.dataset.look = k;
+    box.innerHTML = `<img class="mbild" src="${MYLOOK[k]}" alt="" aria-hidden="true"><div class="mblatt">
+      <div class="mseite mvorne"><div class="mkopf"><span>Mythos oder Fakt?</span><span class="mnr">${nr(i+1)} / ${nr(M.length)}</span></div>
+        <p class="mq">${esc(m.q)}</p>
+        <div class="mbtns"><button type="button" class="mbtn" data-a="fakt">Stimmt</button><button type="button" class="mbtn" data-a="mythos">Stimmt nicht</button></div></div>
+      <div class="mseite mhinten" aria-hidden="true"><p class="mfeed"></p><p class="murteil">${esc(m.urteil)}</p><p class="mtext">${esc(kurz)}</p>
+        <div class="mbtns"><button type="button" class="mbtn dark mnext">Nächster Mythos <span aria-hidden="true">→</span></button><button type="button" class="mlink mall">Alle Mythen</button></div></div></div>`;
+    const v = box.querySelector(".mvorne"), h = box.querySelector(".mhinten");
+    v.querySelectorAll("[data-a]").forEach(b => b.onclick = () => {
       const tip = b.dataset.a, ok = m.halb ? null : (tip === "fakt") === m.wahr;
-      c.querySelector(".mfeed").textContent = ok === null ? "Halb richtig, es kommt darauf an:" : ok ? "Richtig getippt!" : "Erwischt! Das glauben ganz viele.";
-      c.classList.add("flip"); c.querySelector(".mfront").setAttribute("aria-hidden","true"); c.querySelector(".mback").removeAttribute("aria-hidden");
-      setTimeout(() => c.querySelector(".mnext").focus({preventScroll:true}), 400);
+      h.querySelector(".mfeed").textContent = ok === null ? "Halb richtig" : ok ? "Richtig getippt" : "Erwischt";
+      v.setAttribute("aria-hidden","true"); h.removeAttribute("aria-hidden");
+      setTimeout(() => h.querySelector(".mnext").focus({preventScroll:true}), 350);
     });
-    c.querySelector(".mnext").onclick = () => { i = (i + 1) % M.length; box.classList.add("swap"); setTimeout(() => { show(); box.classList.remove("swap"); box.querySelector("[data-a]").focus({preventScroll:true}); }, 220); };
-    c.querySelector(".mall").onclick = () => { state.wissen = "mythen"; render(); window.scrollTo({top:0}); };
+    h.querySelector(".mnext").onclick = () => { i = (i + 1) % M.length; box.classList.add("swap"); setTimeout(() => { show(); box.classList.remove("swap"); box.querySelector("[data-a]").focus({preventScroll:true}); }, 300); };
+    h.querySelector(".mall").onclick = () => { state.wissen = "mythen"; render(); window.scrollTo({top:0}); };
   };
-  show();
+  /* Test: zwei Looks zum Umschalten (Bügel / Papierstapel), Schalter sitzt bei „Farben“ unten rechts */
+  window.setMythosLook = k => { try { localStorage.setItem("mythosLook", k); } catch(e){} show(); document.querySelectorAll("#palctl [data-look]").forEach(b => b.setAttribute("aria-pressed", b.dataset.look === k)); };
+  window.setMythosLook(look());
 })();
 /* Suche in den Wissenskapiteln: findet Schlagwörter im Titel, im Teaser und im ganzen Text */
 const WTEXT = WISSEN.map((w,i) => ({w, i, titel: plain(w.titel), all: plain(w.titel+" "+w.teaser+" "+w.html.replace(/<[^>]+>/g," ")),
