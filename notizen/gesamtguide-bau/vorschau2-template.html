@@ -539,7 +539,7 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 html[data-stil="rouje"] .bookfly .bf-page .t{text-transform:uppercase}
 .bookfly .bf-cover{position:absolute;inset:0;transform-origin:left center;transform-style:preserve-3d;transition:transform .72s cubic-bezier(.5,.05,.3,1)}
 .bookfly .bf-cover .front,.bookfly .bf-cover .back{position:absolute;inset:0;border-radius:3em 10em 10em 3em;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.bookfly .bf-cover .front{background:#382F2E;color:#F3ECE2;display:flex;flex-direction:column;align-items:center;gap:8em;text-align:center;padding:28em 18em 20em 30em}
+.bookfly .bf-cover .front{background:var(--bc,#382F2E);color:#F3ECE2;display:flex;flex-direction:column;align-items:center;gap:8em;text-align:center;padding:28em 18em 20em 30em}
 .bookfly .bf-cover .front .kap{font-size:10.5em;letter-spacing:.2em;text-transform:uppercase;color:#E9DFD2;margin-top:.4em}
 .bookfly .bf-cover .front h3{font-family:var(--serif);font-weight:400;color:#F3ECE2;font-size:24em;line-height:1.1;margin:.25em 0 0}
 .bookfly .bf-cover .front p{margin:0;color:#E9DFD2;font-size:13.5em;line-height:1.45}
@@ -686,28 +686,22 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .wbooks{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:30px 24px;perspective:1400px}
 @media (max-width:520px){ .wbooks{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px} .wtab .wanz{display:none} .wtext{margin:8px 0 18px} .wregal{margin-top:34px} }
 /* Buchfarben pro Regal */
-.t-grund{--bc:#382F2E;--bt:#F3ECE2}
-.t-kopf{--bc:#4A4A39;--bt:#F3ECE2}
-.t-bruch{--bc:#6E4B3F;--bt:#F6EEE4}
-.t-pflege{--bc:#8C7D77;--bt:#FBF6EF}
-.t-werkzeug{--bc:#DCD3C4;--bt:#382F2E}
-.t-farbe{--bc:#5B3B3E;--bt:#F6EEE4}
+/* Buchfarben pro Regal: kommen aus WPAL (JS), Laura testet die Varianten unten rechts */
+.wregal{--bc:#382F2E;--bt:#F3ECE2}
 #wissenCards .wregal .card{background:var(--bc)}
-.t-werkzeug .wtab h2{border:1px solid rgba(56,47,46,.18);border-bottom:0}
-.t-werkzeug .card{color:#382F2E}
-#wissenCards .t-werkzeug .card .kap,#wissenCards .t-werkzeug .card p{color:#5C504C}
-#wissenCards .t-werkzeug .card h3{color:#382F2E}
-#wissenCards .t-werkzeug .card::after{border-color:rgba(56,47,46,.28)}
-#wissenCards .t-werkzeug .card .go{background:#382F2E;color:#F3ECE2}
-#wissenCards .t-werkzeug .card .emb{color:rgba(56,47,46,.30);filter:drop-shadow(0 1px 0 rgba(255,255,255,.55)) drop-shadow(0 -1px 0 rgba(56,47,46,.25))}
-#wissenCards .t-werkzeug .card::before{background:linear-gradient(90deg,rgba(56,47,46,.22),rgba(255,255,255,.3) 55%,rgba(56,47,46,.14) 80%,rgba(255,255,255,.2))}
-.bookfly.t-kopf .bf-cover .front{background:#4A4A39}
-.bookfly.t-bruch .bf-cover .front{background:#6E4B3F}
-.bookfly.t-pflege .bf-cover .front{background:#8C7D77}
-.bookfly.t-farbe .bf-cover .front{background:#5B3B3E}
-.bookfly.t-werkzeug .bf-cover .front{background:#DCD3C4}
-.bookfly.t-werkzeug .bf-cover .front .kap,.bookfly.t-werkzeug .bf-cover .front p{color:#5C504C}
-.bookfly.t-werkzeug .bf-cover .front h3{color:#382F2E}
+.wregal.hell .wtab h2{border:1px solid rgba(56,47,46,.18);border-bottom:0}
+#wissenCards .wregal.hell .card{color:#382F2E}
+#wissenCards .wregal.hell .card .kap,#wissenCards .wregal.hell .card p{color:#5C504C}
+#wissenCards .wregal.hell .card h3{color:#382F2E}
+#wissenCards .wregal.hell .card::after{border-color:rgba(56,47,46,.28)}
+#wissenCards .wregal.hell .card .go{background:#382F2E;color:#F3ECE2}
+#wissenCards .wregal.hell .card .emb{color:rgba(56,47,46,.30);filter:drop-shadow(0 1px 0 rgba(255,255,255,.55)) drop-shadow(0 -1px 0 rgba(56,47,46,.25))}
+#wissenCards .wregal.hell .card::before{background:linear-gradient(90deg,rgba(56,47,46,.22),rgba(255,255,255,.3) 55%,rgba(56,47,46,.14) 80%,rgba(255,255,255,.2))}
+.bookfly .bf-cover .front{background:var(--bc,#382F2E)}
+.bookfly.hell .bf-cover .front .kap,.bookfly.hell .bf-cover .front p{color:#5C504C}
+.bookfly.hell .bf-cover .front h3{color:#382F2E}
+.palctl{bottom:14px}
+#wissenListe[hidden] ~ .palctl{display:none}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1079,6 +1073,7 @@ __ROUTINE__
 
 
     </div></div>
+    <div class="windctl palctl" id="palctl" role="group" aria-label="Test: Farben der Wissensregale"></div>
     <article class="wart" id="wissenArt" hidden></article>
   </section>
 </main>
@@ -1118,6 +1113,12 @@ const WREGALE = [
   {id:"werkzeug", titel:"Werkzeuge", text:"Bürste, Schere, Kissen: was eure Haare jeden Tag berührt", kap:["buersten","seide","scheren"]},
   {id:"farbe", titel:"Haarfarbe", text:"Färben, Tönen und Farbstiche verstehen", kap:["haarfarbe","farbstiche"]}
 ];
+/* Farbvarianten für die Regale (Test 16.10.): [Buchfarbe, hell?] je Regal, alle aus Lauras Seitenfarben abgeleitet */
+const WPAL = {
+  a: {name:"Ton in Ton", grund:["#382F2E"], kopf:["#544843"], bruch:["#6B5D57"], pflege:["#8C7D77"], werkzeug:["#B5A79D"], farbe:["#E2D8CC",1]},
+  b: {name:"Mit Khaki", grund:["#382F2E"], kopf:["#5E5848"], bruch:["#7A6A65"], pflege:["#9E8C80"], werkzeug:["#E9DFD2",1], farbe:["#4A3E3A"]},
+  c: {name:"Hell & dunkel", grund:["#382F2E"], kopf:["#E9DFD2",1], bruch:["#4A4239"], pflege:["#CDBFB3",1], werkzeug:["#7A6A65"], farbe:["#F1EBE3",1]}
+};
 { const ord = WREGALE.flatMap(r => r.kap); WISSEN.sort((a,b) => (ord.indexOf(a.id)+1 || 99) - (ord.indexOf(b.id)+1 || 99)); }
 /* Häufig gestellte Fragen, nach Kapitel sortiert (Quelle: faq.json, Entwurf aus den Kapiteltexten) */
 const FAQ = __FAQ__;
@@ -1343,6 +1344,15 @@ const PRAEGUNG = {
     w.innerHTML = [1,2,3,4,5].map(i => `<span class="bleaf" style="--i:${i}" aria-hidden="true"></span>`).join("");
     w.appendChild(c);
   });
+  const ctl = document.getElementById("palctl");
+  const setPal = k => { const P = WPAL[k] || WPAL.a;
+    box.querySelectorAll(".wregal").forEach(r => { const id = [...r.classList].find(c => c.startsWith("t-")).slice(2), f = P[id] || P.grund;
+      r.style.setProperty("--bc", f[0]); r.style.setProperty("--bt", f[1] ? "#382F2E" : "#F3ECE2"); r.classList.toggle("hell", !!f[1]); });
+    if(ctl) ctl.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.p === k));
+    try { localStorage.setItem("wissenPal", k); } catch(e){} };
+  let pk = "a"; try { pk = localStorage.getItem("wissenPal") || "a"; } catch(e){}
+  if(ctl){ ctl.innerHTML = `<span>Farben</span>` + Object.entries(WPAL).map(([k,P]) => `<button type="button" data-p="${k}">${esc(P.name)}</button>`).join(""); ctl.querySelectorAll("button").forEach(b => b.onclick = () => setPal(b.dataset.p)); }
+  setPal(WPAL[pk] ? pk : "a");
   const open = id => { state.wissen = id; render(); window.scrollTo({top:0}); };
   box.querySelectorAll(".wcard").forEach(b => b.onclick = () => openBook(b, () => open(b.dataset.w)));
 
@@ -1355,7 +1365,7 @@ function openBook(card, done){
   const r = shelf.getBoundingClientRect();
   const kap = (card.querySelector(".kap")||{}).textContent || "", tit = (card.querySelector("h3")||{}).textContent || "";
   const fly = document.createElement("div"); fly.className = "bookfly";
-  const reg = card.closest(".wregal"); if(reg) fly.classList.add(...[...reg.classList].filter(c => c.startsWith("t-")));
+  const reg = card.closest(".wregal"); if(reg){ fly.style.setProperty("--bc", reg.style.getPropertyValue("--bc")); if(reg.classList.contains("hell")) fly.classList.add("hell"); }
   fly.innerHTML = `<div class="bf-page"><span class="kap">${esc(kap)}</span><span class="t">${esc(tit)}</span><span class="lines"></span></div>
     <div class="bf-cover"><div class="front">${card.innerHTML}</div><div class="back"></div></div>`;
   /* scharf: in Endgröße zeichnen, am Anfang auf Buchgröße verkleinert, beim Zoom auf 100 % */
