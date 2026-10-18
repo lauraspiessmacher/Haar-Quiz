@@ -38,3 +38,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - (18.10.) Entschieden/gewünscht: „Neu im Regal“ (Startseite-Sektion + Produkt-Reiter „Neu“), Abstimmungen, Merkliste = Einkaufsliste, später App mit Strichcode-Scanner, Masterclass/Videokurse als Extra-Produkt (Ziel 1. Halbjahr nächstes Jahr). Monats- + Jahresabo, Gründungsmitglieder-Preis. Lauras Mann baut mit uns die echte Seite (Domain vorhanden): Kundenkonto, Anmeldung, persönlicher Bereich (Support, Zahlung, Kündigung, Rechnungen). Kündigungsbutton (§312k BGB) ohne Login erreichbar einplanen.
 - Offen: Routine-Check vs. Healthy Hair Plan (Vorschlag: Plan wird das Herzstück, Routine-Check-Fragen werden Teil davon).
 - Neu im Regal: Laura nennt die echten Neuheiten für neu.json (Monat + Produkte).
+- Ideen für später gesammelt in notizen/IDEEN.md (Mein Bereich, Gerade im Test, Frag Laura, Fahrpläne, Marketingversprechen/Packaging entschlüsseln …).
