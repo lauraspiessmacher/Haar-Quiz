@@ -444,3 +444,4 @@
   - wirkung.json: 3 Einträge per classify-Regeln ergänzt.
 - Vorschau v249: Neu im Regal – die 4 neuen Sebastian-Produkte (Shampoo, Conditioner, Maske, No Breaker) stehen vorne (Startseite zeigt diese 4), danach die 8 bisherigen Beispielprodukte (noch als Beispiel markiert).
 - Vorschau v250: No Breaker Leave-in: Haarzustand „frizzig, trocken“ + neue Zeile „Haartyp: wellig oder lockig“ (Laura: Wellen/Locken = Haartyp, nicht Zustand; HAARTYP-Map in leave-in-guide.html, Feld p.haartyp, Zeile in itemHtml). Neu im Regal = alle neu eingepflegten Produkte (Laura 19.10.), Beispielprodukte raus, Text angepasst, Untertitel „Diese Produkte habe ich neu für euch eingeordnet“. Offen: die übrigen 32 Produkte mit Locken/Wellen im Haarzustand ebenso umstellen?
+- Vorschau v251: No Breaker Haartyp jetzt „alle, besonders schön bei Wellen und Locken, weil der Halt sie definiert“ (Laura: Locken-Produkte sind nicht exklusiv).
