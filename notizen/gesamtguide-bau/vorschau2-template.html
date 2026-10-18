@@ -1108,7 +1108,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
       </ol>
     </div>
     <div class="serie neuband" id="neuband">
-      <div class="head"><div><p class="kicker" id="neuMonat"></p><h2>Neu im Regal</h2><p class="sub">Neuheiten aus Drogerie und Parfümerie, die ich mir angeschaut habe</p></div>
+      <div class="head"><div><p class="kicker" id="neuMonat"></p><h2>Neu im Regal</h2><p class="sub">Diese Produkte habe ich neu für euch eingeordnet</p></div>
         <div class="links"><button type="button" class="btn dark" id="neuAlle">Alle Neuheiten ansehen <span aria-hidden="true">→</span></button></div></div>
       <ul class="neugrid" id="neugrid"></ul>
     </div>
@@ -1866,7 +1866,7 @@ function renderLL(){
       const extra = `<div class="llextra"><p><b>Für wen ich es empfehle</b>${esc(x.fuerwen)}</p><p><b>So benutzt du es</b>${esc(x.anwendung)}</p></div>`;
       /* Haardicke und Haarzustand hervorheben (Laura): als hellbrauner Kasten direkt über „Für wen ich es empfehle“ */
       let h = itemHtml(p, "", extra);
-      const fit = h.match(/<div class="line"><b>Haardicke:<\/b>.*?<\/div>(?:<div class="line"><b>Haarzustand:<\/b>.*?<\/div>)?/);
+      const fit = h.match(/<div class="line"><b>Haardicke:<\/b>.*?<\/div>(?:<div class="line"><b>Haarzustand:<\/b>.*?<\/div>)?(?:<div class="line"><b>Haartyp:<\/b>.*?<\/div>)?/);
       if(fit){ h = h.replace(fit[0], "").replace('<div class="llextra">', `<div class="llfit">${fit[0]}</div><div class="llextra">`); }
       return h; }).join("");
       const bild = LLBILD[g.id];
@@ -2035,6 +2035,7 @@ function itemHtml(p, badge, extra){
   } else {
     const dt = dickeText(p); if(dt) body += `<div class="line"><b>Haardicke:</b> ${esc(dt)}</div>`;
     const z = Array.isArray(p.hair) ? p.hair[1] : ""; if(z) body += `<div class="line"><b>Haarzustand:</b> ${esc(z)}</div>`;
+    if(p.haartyp) body += `<div class="line"><b>Haartyp:</b> ${esc(p.haartyp)}</div>`;
     if(p.sil) body += `<div class="line"><b>Silikone:</b> ${p.sil.length ? "enthält "+esc(p.sil.join(", ")) : "silikonfrei"}</div>`;
     else if(p.type!=="shampoo") body += `<div class="line"><b>Silikone:</b> silikonfrei</div>`;
     if(p.rep){
