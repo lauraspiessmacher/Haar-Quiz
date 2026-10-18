@@ -432,3 +432,4 @@
 - Vorschau v242: Kategorie-Kacheln auf der Startseite entfernt (doppelt zur Leiste oben, Laura fand sie uninteressant).
 - Vorschau v243: Zitat direkt unter den Hero (vor Hair Journey).
 - Vorschau v244: Hero-Link „Ihr glaubt mir nicht?“ ersetzt durch „Meine Signature-Methode: Die LL-Methode gegen Haarbruch und Spliss →“ (führt zur LL-Seite).
+- Vorschau v245: „So startet ihr“ Schritt 2 und 3 braun eingerahmt (1.5px #382F2E).
