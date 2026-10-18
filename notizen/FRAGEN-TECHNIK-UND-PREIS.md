@@ -20,3 +20,7 @@ Sammeln wir hier, bis Laura das Go gibt, dass die echte Seite gebaut wird (Domai
 13. Freundin werben: Freundin 1. Monat halber Preis, Werbende bekommt Gratismonat erst nach dem 2. bezahlten Monat der Freundin.
 14. Geschenk-Abo.
 15. Masterclass/Videokurse als Extra-Produkt (für Abonnentinnen günstiger), Ziel 1. Halbjahr nächstes Jahr.
+
+## Frag Laura (18.10.)
+16. Wo landen die eingeschickten Fragen? Vorschlag: Postfach im Verwaltungsbereich (Liste mit Datum, Abo-Mitglied, Frage, Status „beantwortet/ausgewählt“) + optional Benachrichtigung per E-Mail. Laura wählt 3–5 pro Monat aus und trägt die Antwort ein, die dann in „Frag Laura“ (Wissen) und als Frage des Monats auf der Startseite erscheint.
+17. Begrenzung: z. B. eine Frage pro Mitglied und Monat, damit das Postfach überschaubar bleibt?

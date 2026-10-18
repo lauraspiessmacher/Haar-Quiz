@@ -867,6 +867,18 @@ html[data-stil="rouje"] .favtabs button{font-size:12px;letter-spacing:.14em;text
 .bextra:hover{border-style:solid}
 .bextra svg{width:14px;height:14px;opacity:.8}
 .bextra .bhk{width:22px;height:22px}
+
+/* ---------- Frage des Monats (Startseite) ---------- */
+.fdm{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center;margin:64px 0 0;padding:40px 44px;background:#EDE6DC;border-radius:22px;position:relative;overflow:hidden}
+@media (max-width:759px){ .fdm{grid-template-columns:1fr;gap:16px;padding:28px 22px;margin-top:48px} }
+.fdm .kicker{margin:0 0 6px}
+.fdm h2{font-size:clamp(34px,5vw,54px);margin:0 0 14px}
+.fdmq{font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.15;margin:0;color:var(--ink)}
+.fdma{margin:0 0 14px;font-size:16px;line-height:1.55}
+.fdmzu{margin:0 0 16px;color:var(--muted);font-family:var(--serif);font-style:italic;font-size:18px}
+.fdm .btns{display:flex;flex-wrap:wrap;gap:10px}
+#fragBtn{margin-left:8px}
+@media (max-width:520px){ #fragBtn{margin-left:0} }
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1044,6 +1056,7 @@ html[data-stil="rouje"] .favtabs button{font-size:12px;letter-spacing:.14em;text
         <div class="links"><button type="button" class="btn dark" id="neuAlle">Alle Neuheiten ansehen <span aria-hidden="true">→</span></button></div></div>
       <ul class="neugrid" id="neugrid"></ul>
     </div>
+    <div class="fdm" id="fdm"></div>
     <div class="serie">
       <div class="head"><div><h2>Haarpflege 1x1</h2><p class="sub">meine Serie auf Instagram und TikTok</p></div>
         <div class="links"><a class="btn" id="serieAlle" href="https://www.instagram.com/lauraspiessmacher/" target="_blank" rel="noopener">Alle Folgen ansehen <span aria-hidden="true">→</span></a></div></div>
@@ -1252,6 +1265,7 @@ __ROUTINE__
       <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
     </div>
     <button type="button" class="faqbtn" id="faqBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 16.8h.01"/></svg><span>Häufig gestellte Fragen</span><span aria-hidden="true">→</span></button>
+    <button type="button" class="faqbtn" id="fragBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Frag Laura</span><span aria-hidden="true">→</span></button>
     </div><div class="mythos" id="mythos" aria-live="polite"></div></div>
     <div id="wissenSuche" aria-live="polite"></div>
     <div class="cards" id="wissenCards">
@@ -1415,7 +1429,7 @@ window.showProducts = (type, cat) => { if(!T[type]) return; state.view = "produk
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
+  if(a==="quiz"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || b==="fraglaura" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
   if(T[a] || a === "neu"){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -1627,6 +1641,20 @@ function openBook(card, done){
 }
 const MYLOOK = {stapel:"__MYTHOS_STAPEL__"};
 const FRAGL = __FRAG_LAURA__;
+/* Frag Laura: neue Frage stellen (Abo) → Fragefeld in Mein Bereich */
+function frageStellen(){ if(!istAbo()){ zPaywall("frage"); return; } state.view = "bereich"; state.wissen = null; render(); window.scrollTo({top:0});
+  setTimeout(() => { const t = document.getElementById("bFrage"); if(t){ t.scrollIntoView({block:"center"}); t.focus({preventScroll:true}); } }, 50); }
+window.zeigeFragen = () => { state.view = "wissen"; state.wissen = "fraglaura"; render(); window.scrollTo({top:0}); };
+/* Archiv „Frag Laura“: nach Monat gruppiert; Gäste sehen die aktuelle Frage des Monats mit Antwort, die anderen Antworten im Abo */
+function fragenHtml(){
+  const monate = [...new Set(FRAGL.fragen.map(f => f.monat))];
+  return `<h2>Frag Laura</h2>${FRAGL.entwurf ? `<p class="wdraft">Beispiel: Die echten Fragen kommen aus der Community.</p>` : ""}
+  <p>Jeden Monat beantworte ich hier drei bis fünf eurer Fragen. Eure Frage stellt ihr in „Mein Bereich“.</p>
+  <p><button type="button" class="btn dark" id="fragArchivStellen">Deine Frage stellen <span aria-hidden="true">→</span></button></p>`
+  + monate.map(m => `<section class="faqgrp"><span class="kap">${esc(m)}</span>${FRAGL.fragen.map((f,j) => f.monat !== m ? "" : (istAbo() || j === 0)
+      ? `<details class="faq"${j===0?" open":""}><summary>${esc(f.frage)}</summary><p>${esc(f.antwort)}</p></details>`
+      : `<button type="button" class="faq zfaq"><span>${esc(f.frage)}</span>${ZSCHLOSS}</button>`).join("")}</section>`).join("");
+}
 /* Mythos oder Fakt? (Test 16.10.): Karteikarte oben im Wissen, Behauptungen und Antworten kommen aus dem Kapitel Haarmythen */
 (function(){
   const box = document.getElementById("mythos"), kap = WISSEN.find(w => w.id === "mythen"); if(!box || !kap) return;
@@ -1644,13 +1672,13 @@ const FRAGL = __FRAG_LAURA__;
   const showFrage = () => { const f = FRAGL.fragen[fi] || {frage:"", antwort:""};
     box.dataset.look = look();
     box.innerHTML = reiter() + `<img class="mbild" src="${MYLOOK[look()]}" alt="" aria-hidden="true"><div class="mblatt"><div class="mseite mfrage">
-      <div class="mkopf"><span>Frag Laura</span><span class="mnr">${esc(FRAGL.monat)}</span></div>
+      <div class="mkopf"><span>Frag Laura</span><span class="mnr">${esc(f.monat||"")}</span></div>
       <p class="mq mqf">${esc(f.frage)}</p><p class="mtext">${esc(f.antwort)}</p>
-      <div class="mbtns"><button type="button" class="mbtn dark" id="mFrageStellen">Deine Frage stellen <span aria-hidden="true">→</span></button>${FRAGL.fragen.length > 1 ? `<button type="button" class="mlink" id="mFrageWeiter">Nächste Frage</button>` : ""}</div>
+      <div class="mbtns"><button type="button" class="mbtn dark" id="mFrageStellen">Deine Frage stellen <span aria-hidden="true">→</span></button><button type="button" class="mlink" id="mFrageAlle">Alle Fragen</button></div>
       ${FRAGL.entwurf ? `<p class="mhint">${esc(FRAGL.hinweis)}</p>` : ""}</div></div>`;
     bindReiter();
-    box.querySelector("#mFrageStellen").onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } state.view = "bereich"; render(); window.scrollTo({top:0}); setTimeout(() => { const t = document.getElementById("bFrage"); if(t){ t.scrollIntoView({block:"center"}); t.focus({preventScroll:true}); } }, 50); };
-    const w = box.querySelector("#mFrageWeiter"); if(w) w.onclick = () => { fi = (fi + 1) % FRAGL.fragen.length; showFrage(); };
+    box.querySelector("#mFrageStellen").onclick = frageStellen;
+    box.querySelector("#mFrageAlle").onclick = () => window.zeigeFragen();
   };
   const show = () => { if(modus === "frage"){ showFrage(); return; } const m = M[i], k = look(), kurz = window.innerWidth < 340 ? (m.text.match(/[^.!?]+[.!?]+/) || [m.text])[0] : m.text;
     const nr = n => String(n).padStart(2, "0");
@@ -1694,6 +1722,7 @@ function openFaq(key){
   if(d){ d.open = true; d.classList.add("hl"); d.scrollIntoView({block:"center"}); } else window.scrollTo({top:0});
 }
 document.getElementById("faqBtn").addEventListener("click", () => openFaq());
+document.getElementById("fragBtn").addEventListener("click", () => window.zeigeFragen());
 function faqHtml(){
   return `<h2>Häufig gestellte Fragen</h2><p class="wdraft">Entwurf: Die Fragen und Antworten sind noch nicht von Laura geprüft.</p>
   <p>Hier findet ihr die Fragen, die mir zu den einzelnen Themen am häufigsten begegnen, kurz und einfach beantwortet. Wenn ihr es genauer wissen wollt, lest das ganze Kapitel.</p>`
@@ -1720,6 +1749,11 @@ function renderWissenSuche(){
 }
 document.getElementById("wq").addEventListener("input", renderWissenSuche);
 function renderWissen(){
+  if(state.wissen === "fraglaura"){ document.getElementById("wissenListe").hidden = true; const art = document.getElementById("wissenArt"); art.hidden = false;
+    const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`; art.innerHTML = back + fragenHtml() + back;
+    art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
+    art.querySelectorAll(".zfaq").forEach(b => b.onclick = () => zPaywall("frage"));
+    document.getElementById("fragArchivStellen").onclick = frageStellen; return; }
   const isFaq = state.wissen === "faq";
   let w = WISSEN.find(x => x.id === state.wissen);
   if(w && !kapFrei(w.id)){ state.wissen = null; w = null; setTimeout(() => zPaywall("kapitel"), 0); }
@@ -2186,6 +2220,17 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   box.innerHTML = neuItems().slice(0, 8).map(p => `<li><button type="button" class="neutile" aria-label="${esc(p.brand+" "+p.name)}: neu im Regal"><span class="neutag">Neu</span><span class="pic">${p.img ? `<img src="${p.img}" alt="" loading="lazy">` : ""}</span><span class="typ">${esc(T[p.type].label)}</span><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span></button></li>`).join("");
   box.querySelectorAll(".neutile").forEach(b => b.onclick = open);
   document.getElementById("neuAlle").onclick = open;
+})();
+
+/* ---------- Frage des Monats auf der Startseite ---------- */
+(function(){
+  const box = document.getElementById("fdm"); if(!box || !FRAGL.fragen.length) return;
+  const f = FRAGL.fragen[0];
+  box.innerHTML = `<div class="fdml"><p class="kicker">Frag Laura · ${esc(f.monat)}</p><h2>Frage des Monats</h2><p class="fdmq">„${esc(f.frage)}“</p></div>
+    <div class="fdmr"><p class="fdma">${esc(f.antwort)}</p><p class="fdmzu">Was möchtest du mich fragen? Jeden Monat beantworte ich drei bis fünf eurer Fragen.</p>
+      <div class="btns"><button type="button" class="btn dark" id="fdmStellen">Stell mir deine Frage <span aria-hidden="true">→</span></button><button type="button" class="btn" id="fdmAlle">Alle Fragen ansehen</button></div></div>`;
+  document.getElementById("fdmStellen").onclick = frageStellen;
+  document.getElementById("fdmAlle").onclick = () => window.zeigeFragen();
 })();
 /* ---------- Lauras Favorites auf der Startseite: laufende Leiste, Rubriken abwechselnd gemischt ---------- */
 (function(){
