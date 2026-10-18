@@ -923,6 +923,21 @@ html.zg-abo .swtag{display:none}
 html[data-stil="rouje"] .offer.kurz h3{font-size:20px}
 .offer.kurz p{font-size:13.5px;line-height:1.4}
 .offer.kurz .go{position:absolute;top:14px;right:16px;padding:0;font-size:16px;letter-spacing:0}
+
+/* ---------- Fußzeile ---------- */
+.fuss{background:#382F2E;color:#E9DFD2;margin-top:80px;padding:48px 0 28px}
+.fspalten{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+@media (max-width:900px){ .fspalten{grid-template-columns:1fr 1fr;gap:28px 20px} .fmarke{grid-column:1/-1} }
+.fmarke b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1;color:#F3ECE2}
+html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
+.fmarke span{display:block;font-size:13px;color:#C9BCAE;margin-top:4px}
+.fmarke p{font-size:13.5px;line-height:1.5;color:#C9BCAE;margin:16px 0 0;max-width:42ch}
+.fuss h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C9BCAE;font-weight:500;margin:4px 0 12px}
+.fuss ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.fuss ul button,.fuss ul a{background:none;border:0;padding:0;font:inherit;font-size:15px;color:#F3ECE2;cursor:pointer;text-decoration:none;text-align:left}
+.fuss ul button:hover,.fuss ul a:hover{text-decoration:underline;text-underline-offset:3px}
+.fuss .fkuend{font-weight:600}
+.fklein{border-top:1px solid rgba(243,236,226,.18);margin:36px 0 0;padding-top:18px;font-size:12.5px;color:#A89A92}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1324,6 +1339,22 @@ __ROUTINE__
     <article class="wart" id="wissenArt" hidden></article>
   </section>
 </main>
+<!-- ===================== FUSSZEILE (Platzhalter, Texte/Links kommen mit der echten Seite) ===================== -->
+<footer class="fuss">
+  <div class="in">
+    <div class="fspalten">
+      <div class="fmarke"><b>Haarpflege einfach erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span>
+        <p>Meine Einschätzung, nicht die der Marken. Mit „Werbelink“ gekennzeichnete Links sind Affiliate-Links: Kauft ihr darüber, bekomme ich eine kleine Provision, für euch ändert sich am Preis nichts.</p></div>
+      <nav aria-label="Seiten"><h4>Seiten</h4><ul>
+        <li><button type="button" data-fgo="produkte">Produkte</button></li><li><button type="button" data-fgo="ll">LL-Methode</button></li><li><button type="button" data-fgo="quiz">Quiz</button></li><li><button type="button" data-fgo="wissen">Wissen</button></li><li><button type="button" data-fgo="bereich">Mein Bereich</button></li></ul></nav>
+      <nav aria-label="Rechtliches"><h4>Rechtliches</h4><ul>
+        <li><button type="button" data-platz="Impressum">Impressum</button></li><li><button type="button" data-platz="Datenschutz">Datenschutz</button></li><li><button type="button" data-platz="AGB">AGB</button></li><li><button type="button" data-platz="Widerrufsbelehrung">Widerrufsbelehrung</button></li><li><button type="button" data-platz="Cookie-Einstellungen">Cookie-Einstellungen</button></li><li><button type="button" data-platz="Verträge hier kündigen" class="fkuend">Verträge hier kündigen</button></li></ul></nav>
+      <nav aria-label="Kontakt"><h4>Kontakt</h4><ul>
+        <li><a href="__JOURNEY_IG__" target="_blank" rel="noopener">Instagram</a></li><li><a href="__JOURNEY_TT__" target="_blank" rel="noopener">TikTok</a></li><li><button type="button" data-platz="Support-E-Mail">Support &amp; Fragen zum Abo</button></li><li><button type="button" data-platz="Kooperationen">Kooperationen</button></li></ul></nav>
+    </div>
+    <p class="fklein">© 2026 Haarpflege einfach erklärt · Platzhalter: Rechtstexte und Kontaktdaten folgen mit der echten Seite.</p>
+  </div>
+</footer>
 
 <dialog id="meDlg" aria-labelledby="meTitle">
   <form method="dialog" class="dlg" id="meForm">
@@ -2397,6 +2428,10 @@ function renderStartweg(){
   box.querySelectorAll("[data-swcheck]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.swcheck));
 }
 document.getElementById("swPlan").onclick = () => { state.view = "bereich"; render(); window.scrollTo({top:0}); };
+
+/* ---------- Fußzeile ---------- */
+document.querySelectorAll(".fuss [data-fgo]").forEach(b => b.onclick = () => { state.view = b.dataset.fgo; state.wissen = null; render(); window.scrollTo({top:0}); });
+document.querySelectorAll(".fuss [data-platz]").forEach(b => b.onclick = () => toast(`Platzhalter: „${b.dataset.platz}“ kommt mit der echten Seite`));
 /* ---------- Abo-Vorschau: Schalter Gast/Abo, Abo-Fenster, Anmelden (alles nur Test) ---------- */
 (function(){
   const setZG = k => { ZG = k; try { localStorage.setItem("zugangTest", k); } catch(e){}
