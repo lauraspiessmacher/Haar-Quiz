@@ -771,6 +771,10 @@ html.zg-abo .zbadge{display:none}
 .ptab.ptneu{color:var(--ink)}
 .ptab.ptneu svg{color:var(--khaki-button,#4A4A39)}
 .ghero.neuhero{background:#EDE6DC}
+
+/* Marketing-Check am Produkt */
+.mcheck{background:#EFEBE1;border-left:2px solid var(--khaki-button,#4A4A39);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
+.mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#4A4A39);margin-bottom:3px}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1763,6 +1767,13 @@ function merkItemHtml(p){
   return `<li class="mitem">${saveBtn(p)}${p.img?`<img class="mpic" src="${p.img}" alt="" loading="lazy">`:`<div class="mpic"></div>`}<div class="mtxt"><span class="brand">${esc(p.brand)}</span><span class="mname">${esc(p.name)}</span>${p.segment?`<span class="tag">${p.segment}</span>`:""}${buyHtml(p,true)}</div></li>`;
 }
 
+/* Marketing-Check (Laura 18.10.): „Haarausfall“ auf Produkten, die gar nicht auf die Kopfhaut kommen */
+const NICHT_KOPFHAUT = ["maske","conditioner","leavein","oel","hitze"];
+const HAARAUSFALL_WORT = /haarausfall|haarverlust|hair ?fall|hair ?loss|anti-?chute|pro ?growth|\bgrow\b|wachstum/i;
+function marketingCheck(p){
+  if(!NICHT_KOPFHAUT.includes(p.type) || !HAARAUSFALL_WORT.test(p.name)) return "";
+  return `<div class="mcheck"><b>Marketing-Check</b>Das Wort „Haarausfall“ oder „Wachstum“ steht hier, weil das Produkt zu einer Reihe der Marke gehört. Gegen Haarausfall hilft nur, was auf die Kopfhaut kommt. Dieses Produkt pflegst du in Längen und Spitzen, dort kann es Haarbruch mindern, und der wird oft mit Haarausfall verwechselt.</div>`;
+}
 function itemHtml(p, badge, extra){
   const tags = p.segment ? [`<span class="tag">${p.segment}</span>`] : [];
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
@@ -1814,6 +1825,7 @@ function itemHtml(p, badge, extra){
     }
     if(p.tip){ body += p.tip.startsWith("Anwendung: ") ? `<div class="tip"><b>Anwendung:</b> ${esc(p.tip.slice(11))}</div>` : `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`; }
   }
+  body = marketingCheck(p) + body;
   return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
     <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools" && p.type!=="buerste" && !p.zwei?`<div class="note">${esc(p.note)}</div>`:""}${extra||""}${body}${buyHtml(p)}</div></li>`;
