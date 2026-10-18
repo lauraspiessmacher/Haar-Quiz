@@ -39,3 +39,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - Offen: Routine-Check vs. Healthy Hair Plan (Vorschlag: Plan wird das Herzstück, Routine-Check-Fragen werden Teil davon).
 - Neu im Regal: Laura nennt die echten Neuheiten für neu.json (Monat + Produkte).
 - Ideen für später gesammelt in notizen/IDEEN.md (Mein Bereich, Gerade im Test, Frag Laura, Fahrpläne, Marketingversprechen/Packaging entschlüsseln …).
+- Fragen fürs Gespräch mit Lauras Mann gesammelt: notizen/FRAGEN-TECHNIK-UND-PREIS.md
