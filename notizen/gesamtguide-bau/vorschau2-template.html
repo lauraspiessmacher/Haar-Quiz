@@ -879,6 +879,11 @@ html[data-stil="rouje"] .favtabs button{font-size:12px;letter-spacing:.14em;text
 .fdm .btns{display:flex;flex-wrap:wrap;gap:10px}
 #fragBtn{margin-left:8px}
 @media (max-width:520px){ #fragBtn{margin-left:0} }
+
+/* Ähnliches Ziel aus der Drogerie */
+.altbox{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;display:flex;flex-direction:column;gap:3px}
+.altbox b{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.altlink{align-self:flex-start;background:none;border:0;padding:0;font:inherit;font-family:var(--serif);font-size:17px;color:var(--ink);text-align:left;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1901,6 +1906,16 @@ function merkItemHtml(p){
 /* Marketing-Check (Laura 18.10.): „Haarausfall“ auf Produkten, die gar nicht auf die Kopfhaut kommen */
 const NICHT_KOPFHAUT = ["maske","conditioner","leavein","oel","hitze"];
 const HAARAUSFALL_WORT = /haarausfall|haarverlust|hair ?fall|hair ?loss|anti-?chute|pro ?growth|\bgrow\b|wachstum/i;
+/* Ähnliches Ziel aus der Drogerie (alternativen.json) */
+const ALTERN = __ALTERNATIVEN__;
+function altHtml(p){
+  const a = ALTERN[p.type+"|"+p.brand+"|"+p.name]; if(!a) return "";
+  const d = ALL.find(x => x.type===a.typ && x.brand===a.brand && x.name===a.name); if(!d) return "";
+  return `<div class="altbox"><b>Ähnliches Ziel aus der Drogerie</b><button type="button" class="altlink" data-altmk="${esc(d.mk)}">${esc(d.brand)} ${esc(d.name)} <span aria-hidden="true">→</span></button><span>${esc(a.text)}</span></div>`;
+}
+document.addEventListener("click", e => { const b = e.target.closest && e.target.closest(".altlink"); if(!b) return;
+  const p = ALL.find(x => x.mk === b.dataset.altmk); if(!p) return;
+  state.view = "produkte"; state.type = p.type; state.cat = "alle"; state.seg = "alle"; state.q = p.brand + " " + p.name; q.value = state.q; render(); window.scrollTo({top:0}); });
 function marketingCheck(p){
   if(!NICHT_KOPFHAUT.includes(p.type) || !HAARAUSFALL_WORT.test(p.name)) return "";
   return `<div class="mcheck"><b>Marketing-Check</b>Das Wort „Haarausfall“ oder „Wachstum“ steht hier, weil das Produkt zu einer Reihe der Marke gehört. Gegen Haarausfall hilft nur, was auf die Kopfhaut kommt. Dieses Produkt pflegt die Längen und Spitzen und kann dort Haarbruch vorbeugen und mindern. Der wird oft mit Haarausfall verwechselt.</div>`;
@@ -1956,7 +1971,7 @@ function itemHtml(p, badge, extra){
     }
     if(p.tip){ body += p.tip.startsWith("Anwendung: ") ? `<div class="tip"><b>Anwendung:</b> ${esc(p.tip.slice(11))}</div>` : `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`; }
   }
-  body = marketingCheck(p) + body;
+  body = marketingCheck(p) + body + altHtml(p);
   return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">
     ${badge?`<div class="recl">${esc(badge)}</div>`:""}<div class="row"><span class="brand">${esc(p.brand)}</span><span class="tags">${tags.join("")}</span></div>
     <div class="name">${esc(p.name)}</div>${p.note && p.type!=="tools" && p.type!=="buerste" && !p.zwei?`<div class="note">${esc(p.note)}</div>`:""}${extra||""}${body}${buyHtml(p)}</div></li>`;

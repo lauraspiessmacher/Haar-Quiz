@@ -1,0 +1,11 @@
+{
+  "_hinweis": "Ähnliches Ziel aus der Drogerie (Laura 18.10.): nur bei sehr ähnlicher Formel UND gleicher Textur/passender Haardicke. Schlüssel = Produktart|Marke|Name des High-End-Produkts.",
+  "conditioner|Kérastase|Gloss Absolu Insta Glaze Conditioner": {
+    "typ": "maske", "brand": "L'Oréal Elvital", "name": "Glycolic Gloss 5 Minuten Haar-Laminierung",
+    "text": "Fast die gleiche Formel. Bei mir steht sie bei den Masken, weil du sie auch als Extra-Schritt vor dem Conditioner nutzen kannst."
+  },
+  "oel|Kérastase|Elixir Ultime L'Huile Originale": {
+    "typ": "oel", "brand": "L'Oréal Paris Elvital", "name": "Öl Magique",
+    "text": "Gleiche Basis, beim Kérastase stecken mehr verschiedene Öle drin."
+  }
+}
