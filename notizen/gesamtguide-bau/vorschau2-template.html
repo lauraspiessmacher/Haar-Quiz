@@ -402,9 +402,9 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 #merkBox h3.sec{margin-top:30px}
 #merkBox .cnt{font-family:var(--sans);font-size:14px;color:var(--muted)}
 @media (max-width:759px){
-  nav.main{grid-template-columns:minmax(0,1fr) minmax(0,1.14fr) minmax(0,.86fr) minmax(0,1fr) minmax(0,1fr) 42px}
-  /* Meine Haare auf dem Handy nur als Symbol (drei Haarsträhnen), bleibt hervorgehoben */
-  nav.main button.me .melbl{display:none}
+  nav.main{grid-template-columns:minmax(0,1fr) minmax(0,1.14fr) minmax(0,.8fr) minmax(0,.95fr) minmax(0,1.25fr)}
+  /* Mein Bereich auf dem Handy mit Symbol und Wort, bleibt hervorgehoben */
+  nav.main button.me .melbl{display:block}
   nav.main button.me{justify-content:center}
   nav.main button.me svg{width:24px;height:24px}
   .merkn{position:absolute;top:3px;right:calc(50% - 22px);min-width:17px;height:17px;line-height:17px;font-size:10px}
@@ -780,6 +780,48 @@ html.zg-abo .zbadge{display:none}
 /* Marketing-Check am Produkt */
 .mcheck{background:#EFEBE1;border-left:2px solid var(--khaki-button,#4A4A39);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
 .mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#4A4A39);margin-bottom:3px}
+
+/* ---------- Mein Bereich ---------- */
+.bgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px;align-items:start}
+@media (max-width:759px){ .bgrid{grid-template-columns:1fr;gap:12px} }
+.bkarte{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:22px 22px 20px}
+.bkarte h3{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:26px;margin:0 0 10px}
+.bkarte p{margin:0 0 12px}
+.bkarte .btn{margin-top:4px}
+.bplan{grid-column:1/-1;background:var(--ink);color:#F3ECE2;border-color:var(--ink);padding:28px 28px 26px}
+.bplan h2{color:#F3ECE2;font-size:clamp(32px,4.6vw,50px);line-height:1;margin:0 0 12px}
+.bplan .kicker{color:#C9BCAE;margin:0 0 6px}
+.bplan > p{max-width:62ch;color:#E3D8CB}
+.bplan .btn{background:#F3ECE2;color:#29261F;border-color:#F3ECE2}
+.bprog{height:6px;border-radius:999px;background:rgba(243,236,226,.18);overflow:hidden;max-width:420px;margin:16px 0 6px}
+.bprog span{display:block;height:100%;background:#F3ECE2;border-radius:999px}
+.bprogt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9BCAE}
+.bschritte{list-style:none;padding:0;margin:4px 0 18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:759px){ .bschritte{grid-template-columns:1fr 1fr} }
+.bschritte li{display:flex;flex-direction:column;gap:6px;border:1px solid rgba(243,236,226,.22);border-radius:12px;padding:12px}
+.bschritte em{font-style:normal;font-size:12px;color:#C9BCAE}
+.bhk{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;border:1px solid rgba(243,236,226,.5);font-size:13px}
+.bhk.ok{background:#F3ECE2;color:#29261F;border-color:#F3ECE2}
+.bme{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0 0 12px}
+.bme dt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.bme dd{margin:0}
+.bleer{color:var(--muted)}
+.bklein{font-size:13px;color:var(--muted)}
+.bmini{display:flex;gap:8px;margin:0 0 10px}
+.bmini img{width:54px;height:72px;object-fit:contain;background:#F6F2EC;border-radius:8px;padding:4px}
+.bzu{display:inline-flex;align-items:center;gap:5px;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.bzu svg{width:13px;height:13px}
+.bkarte textarea{display:block;width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);resize:vertical;margin:0 0 10px}
+.bkarte textarea:disabled{opacity:.6}
+.bstatus b{font-weight:600}
+.blinks{list-style:none;padding:0;margin:14px 0 10px;border-top:1px solid var(--line-soft)}
+.blinks li{border-bottom:1px solid var(--line-soft)}
+.blinks button{width:100%;text-align:left;background:none;border:0;padding:12px 2px;font:inherit;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between}
+.blinks button::after{content:"→";color:var(--muted)}
+#merkBack{margin:18px 0 0}
+nav.main button.me .merkn{margin-left:2px}
+@keyframes puls{0%{transform:scale(1)} 35%{transform:scale(1.12)} 100%{transform:scale(1)}}
+nav.main button.me.puls{animation:puls .6s ease}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -885,8 +927,7 @@ html.zg-abo .zbadge{display:none}
       <button type="button" data-view="ll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8c3.4 4.3 5.8 7.4 5.8 10.6a5.8 5.8 0 0 1-11.6 0c0-3.2 2.4-6.3 5.8-10.6z"/><path d="M9.4 14.2a2.7 2.7 0 0 0 2.4 2.6"/></svg><span>LL-Methode</span></button>
       <button type="button" data-view="quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.3-2.7 4"/><circle cx="12" cy="17.4" r=".6" fill="currentColor"/></svg>Quiz</button>
       <button type="button" data-view="wissen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>Wissen</button>
-      <button type="button" data-view="merkliste"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z"/></svg><span>Merkliste</span><span class="merkn" id="merkN" hidden>0</span></button>
-      <button type="button" class="me" id="meBtn" data-set="0" aria-label="Meine Haare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3c-1.5 5 1.5 10 0 18"/><path d="M12 3c-1.5 5 1.5 10 0 18"/><path d="M16 3c-1.5 5 1.5 10 0 18"/></svg><span class="melbl">Meine Haare</span></button>
+      <button type="button" class="me" id="meBtn" data-view="bereich" data-set="0" aria-label="Mein Bereich"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3c-1.5 5 1.5 10 0 18"/><path d="M12 3c-1.5 5 1.5 10 0 18"/><path d="M16 3c-1.5 5 1.5 10 0 18"/></svg><span class="melbl">Mein Bereich</span><span class="merkn" id="merkN" hidden>0</span></button>
     </nav>
   </div>
   <nav class="sub" id="subnav" aria-label="Produktarten"><div class="in" id="types"></div></nav>
@@ -1066,21 +1107,21 @@ __ROUTINE__
   <section class="view" id="v-quiz" hidden>
     <div class="intro"><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Danach kommt das Herzstück, der Routine-Check. Er stellt dir aus allem deinen persönlichen Wochenplan zusammen, damit Pflege für dich zur Gewohnheit wird. Dazu gibt es vier Extra-Checks: welches Leave-in zu dir passt, wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
-      <a class="qcard" href="__QUIZ_KOPF__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+      <a class="qcard" data-check="kopfhaut" href="__QUIZ_KOPF__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
         <h3>Kopfhaut-Check</h3>
         <p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast und worauf du vor dem Shampoo-Regal achtest.</p>
         <span class="qmeta">9 Fragen · ca. 2 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
-      <a class="qcard" href="__QUIZ_PFLEGE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+      <a class="qcard" data-check="pflege" href="__QUIZ_PFLEGE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für deine Pflege</span>
         <h3>Pflege-Check</h3>
         <p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf und wie viel Repair sie braucht.</p>
         <span class="qmeta">10 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
-      <a class="qcard" href="__QUIZ_HAAR__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+      <a class="qcard" data-check="haar" href="__QUIZ_HAAR__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Styling</span>
         <h3>Haar-Check</h3>
         <p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p>
@@ -1089,7 +1130,7 @@ __ROUTINE__
       </span></a>
     </div>
     <div class="qfeature">
-      <a class="qcard qwide qhero" data-abo="plan" href="__QUIZ_ROUTINE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Herzstück</span><span class="qhl">
+      <a class="qcard qwide qhero" data-abo="plan" data-check="routine" href="__QUIZ_ROUTINE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Herzstück</span><span class="qhl">
         <span class="qfor">Zum Schluss: dein persönlicher Wochenplan</span>
         <h3>Routine-Check</h3>
         <p>Wann wäschst du am besten, wie oft ist eine Maske dran und was tust du beim Sport und nachts für deine Haare? Am Ende bekommst du deinen eigenen Wochenplan, den du dir direkt in deine Notizen kopieren kannst. Am genauesten wird er, wenn du vorher die drei Checks darüber machst.</p>
@@ -1140,8 +1181,14 @@ __ROUTINE__
   </section>
 
   <!-- ===================== MERKLISTE ===================== -->
+  <!-- ===================== MEIN BEREICH (Vorschau 18.10.) ===================== -->
+  <section class="view" id="v-bereich" hidden>
+    <div class="intro"><h1>Mein Bereich</h1><p>Alles, was zu dir und deinen Haaren gehört, an einem Ort.</p></div>
+    <div class="bgrid" id="bereichBox"></div>
+  </section>
+
   <section class="view" id="v-merkliste" hidden>
-    <div class="intro"><h1>Merkliste</h1><p>Deine gemerkten Produkte, sortiert in der Reihenfolge deiner Routine. Gespeichert nur hier auf deinem Gerät, ohne Anmeldung.</p></div>
+    <button type="button" class="wback" id="merkBack">← Mein Bereich</button><div class="intro"><h1>Merkliste</h1><p>Deine gemerkten Produkte, sortiert in der Reihenfolge deiner Routine. Gespeichert nur hier auf deinem Gerät, ohne Anmeldung.</p></div>
     <div class="merktools" id="merkTools" hidden><button type="button" class="btn" id="merkCopy">Als Einkaufsliste kopieren</button><button type="button" class="linkbtn" id="merkClear">Alle entfernen</button></div>
     <div id="merkBox"></div>
   </section>
@@ -1204,7 +1251,7 @@ __ROUTINE__
       <p class="hast">Hast du schon</p></div>
     <div class="stufe abo"><span class="tag">Alles drin</span><h3>Abo</h3><ul>
       <li><b>Dein Healthy Hair Plan</b> mit Wochenplan</li><li>Alle Produkte mit meiner Einschätzung</li><li>Meine Leave-in-Auswahl für die LL-Methode</li>
-      <li>Alle Extra-Checks: Leave-in, Spliss &amp; Haarbruch, Hitze-Tools, Haarschnitt</li><li>Alle Wissenskapitel und häufigen Fragen</li><li>Deine Merkliste</li></ul>
+      <li>Alle Extra-Checks: Leave-in, Spliss &amp; Haarbruch, Hitze-Tools, Haarschnitt</li><li>Alle Wissenskapitel und häufigen Fragen</li><li>Deine Merkliste</li><li>Frag Laura: jeden Monat deine Fragen</li></ul>
       <p class="preis">Preis folgt</p><button type="button" class="btn dark" id="aboTest">Abo freischalten</button></div>
   </div>
   <p class="abofuss">Schon dabei? <button type="button" class="linkbtn" id="aboLogin">Anmelden</button></p>
@@ -1252,7 +1299,9 @@ const ZTEXT = {
   check: ["Dieser Check ist im Abo", "Die drei Basis-Checks sind kostenlos. Alle Extra-Checks schaltest du mit dem Abo frei."],
   plan: ["Dein Healthy Hair Plan", "Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt, inklusive Wochenplan."],
   ll: ["Meine Leave-in-Auswahl", "Welche Leave-ins ich dir für die LL-Methode empfehle, für wen und wie du sie benutzt, steht im Abo."],
-  merkliste: ["Deine Merkliste", "Mit dem Abo merkst du dir Produkte und hast sie im Laden sofort griffbereit."]
+  merkliste: ["Deine Merkliste", "Mit dem Abo merkst du dir Produkte und hast sie im Laden sofort griffbereit."],
+  frage: ["Frag Laura", "Im Abo kannst du mir deine Fragen schicken. Jeden Monat beantworte ich drei bis fünf davon ausführlich."],
+  bereich: ["Mein Abo", "Mit dem Abo schaltest du alles frei und sparst dir das Zusammensuchen."]
 };
 function zPaywall(art){ const [t, l] = ZTEXT[art] || ZTEXT.kapitel; const d = document.getElementById("aboDlg");
   document.getElementById("aboTitle").textContent = t; document.getElementById("aboLead").textContent = l;
@@ -1321,7 +1370,7 @@ window.showProducts = (type, cat) => { if(!T[type]) return; state.view = "produk
 function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
+  if(a==="quiz"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
   if(T[a] || a === "neu"){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -1672,7 +1721,7 @@ function merkCount(){ const n = MERK.length; const el = document.getElementById(
 document.addEventListener("click", e => {
   const b = e.target.closest && e.target.closest("button.save"); if(!b) return;
   const k = b.dataset.mk, i = MERK.indexOf(k);
-  if(i<0){ MERK.push(k); toast("Gemerkt. Du findest es unter Merkliste."); } else { MERK.splice(i,1); toast("Von der Merkliste entfernt"); }
+  if(i<0){ MERK.push(k); toast("Gemerkt. Du findest es unter Mein Bereich → Merkliste."); const mb = document.getElementById("meBtn"); mb.classList.remove("puls"); void mb.offsetWidth; mb.classList.add("puls"); } else { MERK.splice(i,1); toast("Von der Merkliste entfernt"); }
   saveMerk(); merkCount();
   if(state.view==="merkliste") renderMerk();
   else document.querySelectorAll(`button.save[data-mk="${CSS.escape(k)}"]`).forEach(x => { const on = MERK.includes(k); x.setAttribute("aria-pressed", on); x.title = on?"Gemerkt":"Merken"; });
@@ -1911,8 +1960,8 @@ function setHH(){ document.documentElement.style.setProperty("--hh", document.qu
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
-  for(const v of ["start","produkte","ll","quiz","wissen","merkliste","favoriten"]) document.getElementById("v-"+v).hidden = state.view!==v;
-  navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.view===state.view ? "page" : "false"));
+  for(const v of ["start","produkte","ll","quiz","wissen","merkliste","favoriten","bereich"]) document.getElementById("v-"+v).hidden = state.view!==v;
+  navBtns.forEach(b => b.setAttribute("aria-current", (b.dataset.view===state.view || (b.dataset.view==="bereich" && state.view==="merkliste")) ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
   document.getElementById("subnav").hidden = state.view!=="produkte"; setHH();
@@ -1921,13 +1970,14 @@ function render(){
   if(state.view==="wissen") renderWissen();
   if(state.view==="favoriten") renderFav();
   if(state.view==="ll") renderLL();
+  if(state.view==="bereich") renderBereich();
   merkCount();
   writeHash();
 }
 navBtns.forEach(b => b.onclick = () => { state.view = b.dataset.view; state.wissen = null; render(); window.scrollTo({top:0}); });
 document.getElementById("home").onclick = () => { state = {view:"start",type:"shampoo",cat:"alle",seg:"alle",q:""}; q.value=""; render(); window.scrollTo({top:0}); };
 document.querySelectorAll("#v-start [data-go]").forEach(b => b.onclick = () => {
-  if(b.dataset.go==="me"){ document.getElementById("meBtn").click(); return; }
+  if(b.dataset.go==="me"){ openMe(); return; }
   state.view = b.dataset.go; state.wissen = null; render(); window.scrollTo({top:0}); });
 let qt; q.addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(()=>{ state.q = q.value; render(); }, 120); });
 
@@ -1944,7 +1994,8 @@ function saveMe(){ try { localStorage.setItem("meineHaare", JSON.stringify(me));
 function reloadMe(){ try { const s = JSON.parse(localStorage.getItem("meineHaare")||"null"); if(s) me = Object.assign({dicke:null,kopf:null,kaputt:null,wunsch:null}, s); if(me.kaputt === "ja") me.kaputt = "bond"; } catch(e){} }
 window.addEventListener("storage", e => { if(e.key === "meineHaare"){ reloadMe(); render(); } });
 window.zeigeProdukte = type => { reloadMe(); onlyMine = true; state.view = "produkte"; state.type = type || "leavein"; state.cat = "alle"; if(window.closeQuiz) window.closeQuiz(); render(); window.scrollTo({top:0}); };
-document.getElementById("meBtn").onclick = () => { drawOpts(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); };
+function openMe(){ drawOpts(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); }
+document.getElementById("merkBack").onclick = () => { state.view = "bereich"; render(); window.scrollTo({top:0}); };
 document.getElementById("meForm").addEventListener("submit", () => { saveMe(); onlyMine = true; if(state.view!=="produkte") state.view="produkte"; render(); toast(meSet()?"Meine Haare gespeichert":"Meine Haare zurückgesetzt"); });
 document.getElementById("meReset").onclick = () => { me = {dicke:null,kopf:null,kaputt:null,wunsch:null}; drawOpts(); };
 document.getElementById("toQuiz").onclick = () => { dlg.close(); state.view="quiz"; render(); window.scrollTo({top:0}); };
@@ -2097,6 +2148,60 @@ document.getElementById("merkClear").onclick = () => { if(confirm("Alle Produkte
   }
 })();
 
+
+/* ---------- Mein Bereich (Vorschau 18.10.): Plan, Meine Haare, Merkliste, Frag Laura, Fortschritt, Abo & Konto ---------- */
+const CHECKS = [["kopfhaut","Kopfhaut-Check"],["pflege","Pflege-Check"],["haar","Haar-Check"]];
+const EXTRAS = [["leavein","Leave-in-Check"],["spliss","Spliss- & Haarbruch-Check"],["tools","Hitze-Tool-Check"],["schnitt","Haarschnitt-Check"]];
+function quizStand(){ try { return JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; } catch(e){ return {}; } }
+function oeffneCheck(key){
+  const a = document.querySelector(`#v-quiz .qcard[data-check="${key}"]`) || [...document.querySelectorAll("#v-quiz .qcard")].find(x => (x.getAttribute("href")||"").includes(key));
+  if(!a){ state.view = "quiz"; render(); window.scrollTo({top:0}); return; }
+  if(a.dataset.abo && !istAbo()){ zPaywall(a.dataset.abo); return; }
+  const href = a.getAttribute("href"); if(!(window.openQuiz && window.openQuiz(href))) window.location.href = href;
+}
+function renderBereich(){
+  const box = document.getElementById("bereichBox"); if(!box) return;
+  const st = quizStand(), erledigt = CHECKS.filter(([k]) => st[k]).length, offen = CHECKS.find(([k]) => !st[k]);
+  const haken = ok => `<span class="bhk${ok?" ok":""}" aria-hidden="true">${ok?"✓":""}</span>`;
+  const schloss = istAbo() ? "" : `<span class="bzu">${ZSCHLOSS} Im Abo</span>`;
+  const schritte = CHECKS.map(([k,l]) => `<li>${haken(st[k])}<span>${l}</span><em>${st[k]?"erledigt":"kostenlos"}</em></li>`).join("")
+    + `<li>${haken(st.routine && istAbo())}<span>Deinen Plan erstellen</span><em>${istAbo() ? (st.routine?"erledigt":"im Abo enthalten") : "im Abo"}</em></li>`;
+  const anz = erledigt + (st.routine && istAbo() ? 1 : 0);
+  const mi = ALL.filter(p => MERK.includes(p.mk));
+  const meZeilen = [["Haardicke", (DICKE.find(([v]) => v===me.dicke)||[])[1]], ["Kopfhaut", (KOPF.find(([v]) => v===me.kopf)||[])[1]], ["Haarzustand", me.kaputt ? (me.kaputt==="bond"?"strukturgeschädigt":"beansprucht") : ""], ["Wunsch", (WUNSCH.find(([v]) => v===me.wunsch)||[])[1]]];
+  box.innerHTML = `
+  <article class="bkarte bplan"><p class="kicker">Dein Herzstück</p><h2>Dein Healthy Hair Plan</h2>
+    <p>Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt: was deine Ergebnisse bedeuten, deine Grundregeln, dein Wochenplan, deine Einkaufsliste.</p>
+    <div class="bprog" role="img" aria-label="${anz} von 4 Schritten erledigt"><span style="width:${anz*25}%"></span></div><p class="bprogt">${anz} von 4 Schritten erledigt</p>
+    <ol class="bschritte">${schritte}</ol>
+    <button type="button" class="btn" id="bPlanGo">${offen ? `Weiter mit dem ${offen[1]}` : istAbo() ? "Plan erstellen" : "Plan freischalten"} <span aria-hidden="true">→</span></button></article>
+  <article class="bkarte"><h3>Meine Haare</h3>
+    ${meSet() || me.wunsch ? `<dl class="bme">${meZeilen.filter(([,v]) => v).map(([l,v]) => `<dt>${l}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : `<p class="bleer">Noch nichts eingestellt. Mach die Checks oder stell deine Haare selbst ein, dann siehst du überall zuerst, was zu dir passt.</p>`}
+    <p class="bklein">Erledigte Checks: ${[...CHECKS, ...EXTRAS].filter(([k]) => st[k]).map(([,l]) => l).join(", ") || "noch keine"}</p>
+    <button type="button" class="btn" id="bMe">Meine Haare einstellen</button></article>
+  <article class="bkarte"><h3>Merkliste ${schloss}</h3>
+    ${istAbo() ? (mi.length ? `<div class="bmini">${mi.slice(0,4).map(p => p.img ? `<img src="${p.img}" alt="" loading="lazy">` : "").join("")}</div><p class="bklein">${mi.length} ${mi.length===1?"Produkt":"Produkte"} gemerkt, deine Einkaufsliste für die Drogerie.</p>` : `<p class="bleer">Noch nichts gemerkt. Tipp bei einem Produkt auf das +, dann landet es hier.</p>`)
+      : `<p class="bleer">Merk dir Produkte und hab sie in der Drogerie sofort griffbereit.</p>`}
+    <button type="button" class="btn" id="bMerk">${istAbo() ? "Merkliste öffnen" : "Mit dem Abo freischalten"}</button></article>
+  <article class="bkarte"><h3>Frag Laura ${schloss}</h3>
+    <p>Stell mir deine Frage. Jeden Monat beantworte ich drei bis fünf davon ausführlich im Wissen.</p>
+    <textarea id="bFrage" rows="3" placeholder="Zum Beispiel: Wie oft sollte ich bei feinem Haar eine Maske benutzen?" ${istAbo()?"":"disabled"}></textarea>
+    <button type="button" class="btn" id="bFrageGo">${istAbo() ? "Frage abschicken" : "Mit dem Abo freischalten"}</button></article>
+  <article class="bkarte"><h3>Dein Fortschritt</h3>
+    <p>Mach alle vier Wochen ein Foto von deinen Längen und Spitzen, immer am gleichen Ort und im gleichen Licht. Leg dir dafür eine eigene Notiz in deiner Notizen-App an und pinn sie oben fest, oder einen Ordner in deinen Fotos. So siehst du schwarz auf weiß, was sich verändert.</p>
+    <p class="bklein">Deine Fotos bleiben nur bei dir auf dem Handy.</p></article>
+  <article class="bkarte bkonto"><h3>Abo &amp; Konto</h3>
+    <p class="bstatus">${istAbo() ? `<b>Abo aktiv</b> · Vorschau` : `<b>Kostenlos</b> · du siehst die Grundlagen`}</p>
+    ${istAbo() ? "" : `<button type="button" class="btn dark" id="bAbo">Abo ansehen</button>`}
+    <ul class="blinks"><li><button type="button" data-v="Rechnungen">Meine Rechnungen</button></li><li><button type="button" data-v="Zahlungsart">Zahlungsart ändern</button></li><li><button type="button" data-v="Kündigen">Abo kündigen</button></li><li><button type="button" data-v="Support">Support: Hilfe bei Zahlung und Konto</button></li><li><button type="button" data-v="Abmelden">Abmelden</button></li></ul>
+    <p class="bklein">Vorschau: Konto, Zahlung und Kündigung kommen mit der echten Version.</p></article>`;
+  document.getElementById("bPlanGo").onclick = () => offen ? oeffneCheck(offen[0]) : oeffneCheck("routine");
+  document.getElementById("bMe").onclick = openMe;
+  document.getElementById("bMerk").onclick = () => { if(!istAbo()){ zPaywall("merkliste"); return; } state.view = "merkliste"; render(); window.scrollTo({top:0}); };
+  document.getElementById("bFrageGo").onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } const t = document.getElementById("bFrage"); if(!t.value.trim()){ t.focus(); return; } t.value = ""; toast("Vorschau: Deine Frage ist angekommen"); };
+  const ab = document.getElementById("bAbo"); if(ab) ab.onclick = () => zPaywall("bereich");
+  box.querySelectorAll(".blinks button").forEach(b => b.onclick = () => toast(`Vorschau: „${b.dataset.v}“ kommt mit der echten Version`));
+}
 /* ---------- Abo-Vorschau: Schalter Gast/Abo, Abo-Fenster, Anmelden (alles nur Test) ---------- */
 (function(){
   const setZG = k => { ZG = k; try { localStorage.setItem("zugangTest", k); } catch(e){}
