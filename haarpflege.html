@@ -697,6 +697,69 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .bookfly .bf-cover .front{background:var(--bc,#382F2E)}
 .bookfly.hell .bf-cover .front .kap,.bookfly.hell .bf-cover .front p{color:#5C504C}
 .bookfly.hell .bf-cover .front h3{color:#382F2E}
+
+/* ---------- Abo-Vorschau: Schlösser, verschwommene Bereiche, Abo-Fenster ---------- */
+.zschloss{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--khaki-button,#4A4A39);color:#F3ECE2;margin:0 auto 10px}
+.zschloss svg{width:22px;height:22px}
+.zwrap{position:relative}
+.zgesperrt{filter:blur(6px);opacity:.7;pointer-events:none;user-select:none;max-height:720px;overflow:hidden;-webkit-mask-image:linear-gradient(#000 40%,transparent 92%);mask-image:linear-gradient(#000 40%,transparent 92%)}
+.zcta{position:absolute;left:50%;top:70px;transform:translateX(-50%);width:min(440px,calc(100% - 16px));background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:24px 24px 22px;text-align:center;
+  box-shadow:0 26px 60px -26px rgba(56,47,46,.5)}
+.zcta h3{font-size:24px;line-height:1.15;margin:0 0 8px}
+.zcta p{color:var(--muted);font-size:15px;margin:0 0 16px}
+.zprod{margin-top:6px}
+html.zg-abo .zzu,html.zg-abo .wabo{display:none}
+html.zg-gast #wissenCards .wcard[data-abo] .zfrei{display:none}
+html.zg-gast #wissenCards .wcard:not([data-abo]) .zzu,html:not(.zg-gast) .zzu{display:none}
+.zzu{display:inline-flex;align-items:center;gap:6px}
+.zzu svg,.wabo svg,.zfaq svg,.zsuchgo svg,.wres .go svg{width:14px;height:14px;flex:none}
+.wfrei,.wabo{display:inline-flex;align-items:center;gap:5px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:0 0 8px;color:var(--muted)}
+html.zg-abo .wfrei{display:none}
+.wfrei{color:#5E5848}
+.zfaq{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;text-align:left;background:none;border:0;border-bottom:1px solid var(--line-soft);padding:14px 2px;font:inherit;color:var(--muted);cursor:pointer}
+.zfaq svg{width:16px;height:16px}
+.zsuch{color:var(--muted);font-style:italic}
+.wres .go{display:inline-flex;align-items:center;gap:6px}
+/* Quizkarten im Abo: Schloss-Etikett */
+.zbadge{position:absolute;top:16px;right:52px;z-index:3;display:inline-flex;align-items:center;gap:6px;background:var(--khaki-button,#4A4A39);color:#F3ECE2;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.zbadge svg{width:13px;height:13px}
+html.zg-abo .zbadge{display:none}
+.zmerk{max-width:460px;margin:30px auto;text-align:center;background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:28px 24px}
+.zmerk h3{font-size:26px;margin:0 0 8px}.zmerk p{color:var(--muted);margin:0 0 16px}
+/* Abo-Fenster */
+#aboDlg{max-width:760px}
+#loginDlg{max-width:420px}
+.abodlg{position:relative;padding:30px 28px 22px}
+.aboclose{position:absolute;top:10px;right:12px;width:38px;height:38px;border:0;background:none;font-size:28px;line-height:1;color:var(--ink);cursor:pointer;border-radius:50%}
+.aboclose:hover{background:rgba(56,47,46,.08)}
+.abokopf{text-align:center;max-width:520px;margin:0 auto 22px}
+.abokopf .kicker{margin:0 0 4px}
+.abokopf h2{font-size:clamp(28px,4.2vw,38px);line-height:1.05;margin:0 0 10px}
+.abokopf .lead{color:var(--muted);margin:0}
+.abostufen{display:grid;grid-template-columns:1fr 1.25fr;gap:14px;align-items:stretch}
+@media (max-width:640px){ .abostufen{grid-template-columns:1fr;gap:18px} .abodlg{padding:22px 16px 16px} .stufe.abo{order:-1} .stufe:not(.abo){padding:14px 16px} .stufe:not(.abo) h3{font-size:19px;margin-bottom:6px} .stufe:not(.abo) ul{font-size:13.5px;margin-bottom:6px} .abokopf{margin-bottom:16px} .abokopf .zschloss{width:40px;height:40px;margin-bottom:6px} }
+.stufe{position:relative;border:1px solid var(--line);border-radius:16px;padding:20px 20px 18px;display:flex;flex-direction:column}
+.stufe h3{font-size:24px;margin:0 0 10px}
+.stufe ul{list-style:none;padding:0;margin:0 0 14px;font-size:14.5px;line-height:1.45}
+.stufe li{position:relative;padding-left:22px;margin:0 0 8px}
+.stufe li::before{content:"";position:absolute;left:2px;top:.45em;width:10px;height:6px;border-left:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(-45deg)}
+.stufe .hast{margin:auto 0 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.stufe.abo{background:var(--ink);color:#F3ECE2;border-color:var(--ink)}
+.stufe.abo h3{color:#F3ECE2}
+.stufe.abo .tag{position:absolute;top:-11px;right:18px;background:var(--khaki-button,#4A4A39);color:#F3ECE2;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.stufe .preis{margin:auto 0 10px;font-family:var(--serif);font-size:22px;color:#E9DFD2}
+.stufe.abo .btn{background:#F3ECE2;color:#29261F;border-color:#F3ECE2;align-self:flex-start}
+.abofuss{text-align:center;margin:18px 0 4px;font-size:15px}
+.abohinweis{text-align:center;font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.abodlg.login h2{font-size:34px;margin:0 0 16px}
+.abodlg.login label{display:block;font-size:13px;letter-spacing:.06em;color:var(--muted);margin:0 0 12px}
+.abodlg.login input{display:block;width:100%;margin-top:5px;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#FFFDFA;color:var(--ink)}
+.abodlg.login .btn{width:100%;justify-content:center;margin-top:6px}
+/* Test-Schalter unten links */
+.zgctl{position:fixed;left:14px;bottom:14px;z-index:60;display:flex;align-items:center;gap:4px;background:#FFFDFA;border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 12px;font-size:12px;box-shadow:0 8px 20px -12px rgba(56,47,46,.5)}
+.zgctl span{color:var(--muted);margin-right:4px}
+.zgctl button{border:0;background:transparent;border-radius:999px;padding:6px 10px;font:inherit;cursor:pointer;color:var(--ink)}
+.zgctl button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -991,7 +1054,7 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
       <div>
         <h2>Welches Leave-in passt zu dir?</h2>
         <div class="quizgrid llquiz">
-          <a class="qcard" href="quiz-leavein.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+          <a class="qcard" data-abo="check" href="quiz-leavein.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
             <span class="qfor">Für deine LL-Methode</span>
             <h3>Leave-in-Check</h3>
             <p>Spray, Milch, Serum oder Creme? Du erfährst, welche Textur und welche Wirkstoffe zu deinen Haaren passen, wie viel du nimmst und wie du es mit meiner LL-Methode benutzt.</p>
@@ -1040,7 +1103,7 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
       </span></a>
     </div>
     <div class="qfeature">
-      <a class="qcard qwide qhero" href="quiz-routine.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Herzstück</span><span class="qhl">
+      <a class="qcard qwide qhero" data-abo="plan" href="quiz-routine.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Herzstück</span><span class="qhl">
         <span class="qfor">Zum Schluss: dein persönlicher Wochenplan</span>
         <h3>Routine-Check</h3>
         <p>Wann wäschst du am besten, wie oft ist eine Maske dran und was tust du beim Sport und nachts für deine Haare? Am Ende bekommst du deinen eigenen Wochenplan, den du dir direkt in deine Notizen kopieren kannst. Am genauesten wird er, wenn du vorher die drei Checks darüber machst.</p>
@@ -1059,28 +1122,28 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
     <p class="qclosing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
     <h2 class="qsub">Extra-Checks</h2>
     <div class="quizgrid vier">
-      <a class="qcard" href="quiz-leavein.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+      <a class="qcard" data-abo="check" href="quiz-leavein.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für deine LL-Methode</span>
         <h3>Leave-in-Check</h3>
         <p>Spray, Milch, Serum oder Creme? Du erfährst, welches Leave-in zu deinen Haaren passt und wie du es mit meiner LL-Methode benutzt.</p>
         <span class="qmeta">7 Fragen · ca. 2 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
-      <a class="qcard" href="quiz-tools.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+      <a class="qcard" data-abo="check" href="quiz-tools.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Styling-Gerät</span>
         <h3>Hitze-Tool-Check</h3>
         <p>Multistyler, Lockenstab, Glätteisen oder ein guter Föhn? Du erfährst, welches Gerät für dein Wunschergebnis bei deinem Haar wirklich hält, bevor du Geld ausgibst.</p>
         <span class="qmeta">8 Fragen · ca. 2 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
-      <a class="qcard" href="quiz-schnitt.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+      <a class="qcard" data-abo="check" href="quiz-schnitt.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für deinen nächsten Friseurtermin</span>
         <h3>Haarschnitt-Check</h3>
         <p>Stufen oder gerade Spitzen, kurz oder lang? Du bekommst eine Orientierung aus deiner Gesichtsform, deinen Haaren und deinem Wunsch, die du mit zum Friseur nehmen kannst.</p>
         <span class="qmeta">13 bis 16 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
-      <a class="qcard" href="quiz-spliss.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+      <a class="qcard" data-abo="check" href="quiz-spliss.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für deine Längen und Spitzen</span>
         <h3>Spliss- &amp; Bruch-Check</h3>
         <p>Wie kaputt sind deine Haare wirklich, welchen Spliss hast du und woher kommt der Haarbruch? Du erfährst, wie du damit umgehst und wann nur noch die Schere hilft.</p>
@@ -1144,6 +1207,33 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
   </form>
 </dialog>
 <div class="toast" id="toast" role="status"></div>
+<!-- ===================== ABO (Vorschau, noch ohne echte Anmeldung und Bezahlung) ===================== -->
+<dialog id="aboDlg" aria-labelledby="aboTitle"><div class="abodlg">
+  <button type="button" class="aboclose" aria-label="Schließen">×</button>
+  <div class="abokopf"><span class="zschloss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><p class="kicker">Mein Abo</p><h2 id="aboTitle">Das ist Teil meines Abos</h2>
+    <p class="lead" id="aboLead">Mit dem Abo schaltest du alles frei und sparst dir das Zusammensuchen.</p></div>
+  <div class="abostufen">
+    <div class="stufe"><h3>Kostenlos</h3><ul>
+      <li>Startseite und meine Favorites</li><li>Kopfhaut-Check, Pflege-Check und Haar-Check</li><li>Wissen: die Grundlagen und Mythos oder Fakt</li></ul>
+      <p class="hast">Hast du schon</p></div>
+    <div class="stufe abo"><span class="tag">Alles drin</span><h3>Abo</h3><ul>
+      <li><b>Dein Healthy Hair Plan</b> mit Wochenplan</li><li>Alle Produkte mit meiner Einschätzung</li><li>Meine Leave-in-Auswahl für die LL-Methode</li>
+      <li>Alle Extra-Checks: Leave-in, Spliss &amp; Haarbruch, Hitze-Tools, Haarschnitt</li><li>Alle Wissenskapitel und häufigen Fragen</li><li>Deine Merkliste</li></ul>
+      <p class="preis">Preis folgt</p><button type="button" class="btn dark" id="aboTest">Abo freischalten</button></div>
+  </div>
+  <p class="abofuss">Schon dabei? <button type="button" class="linkbtn" id="aboLogin">Anmelden</button></p>
+  <p class="abohinweis">Vorschau: Konto und Bezahlung sind noch nicht echt. „Abo freischalten“ zeigt dir nur, wie die Seite mit Abo aussieht.</p>
+</div></dialog>
+<dialog id="loginDlg" aria-labelledby="loginTitle"><form method="dialog" class="abodlg login" novalidate>
+  <button type="button" class="aboclose" aria-label="Schließen">×</button>
+  <p class="kicker">Mein Konto</p><h2 id="loginTitle">Anmelden</h2>
+  <label>E-Mail<input type="email" autocomplete="email" placeholder="deine@email.de"></label>
+  <label>Passwort<input type="password" autocomplete="current-password"></label>
+  <button type="submit" class="btn dark">Anmelden</button>
+  <p class="abofuss">Noch kein Konto? <button type="button" class="linkbtn" id="loginReg">Kostenlos registrieren</button></p>
+  <p class="abohinweis">Vorschau: Die Anmeldung funktioniert erst in der echten Version.</p>
+</form></dialog>
+<div class="zgctl" id="zgctl" role="group" aria-label="Test: Ansicht als Gast oder mit Abo"><span>Ansicht</span><button type="button" data-zg="gast">Gast</button><button type="button" data-zg="abo">Abo</button></div>
 
 <!--DESIGN-SWITCH-->
 <script>
@@ -1165,6 +1255,32 @@ const WPAL = {
   b: {name:"Mit Khaki", grund:["#382F2E"], kopf:["#5E5848"], bruch:["#7A6A65"], pflege:["#9E8C80"], werkzeug:["#E9DFD2",1], farbe:["#4A3E3A"]},
   c: {name:"Hell & dunkel", grund:["#382F2E"], kopf:["#E9DFD2",1], bruch:["#4A4239"], pflege:["#CDBFB3",1], werkzeug:["#7A6A65"], farbe:["#F1EBE3",1]}
 };
+/* ---------- Zugang (Vorschau 18.10.): kostenlos vs. Abo. Echte Version: gesperrte Inhalte kommen erst nach Login vom Server ---------- */
+let ZG = "gast"; try { ZG = localStorage.getItem("zugangTest") || "gast"; } catch(e){}
+const istAbo = () => ZG === "abo";
+const ZSCHLOSS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
+const ZTEXT = {
+  produkte: ["Meine Einschätzungen zu allen Produkten", "Welches Produkt zu deiner Kopfhaut und deinen Haaren passt und warum, steht im Abo."],
+  kapitel: ["Dieses Kapitel ist im Abo", "Die Grundlagen kannst du kostenlos lesen. Alle anderen Kapitel schaltest du mit dem Abo frei."],
+  faq: ["Diese Antworten sind im Abo", "Die Fragen zu den Grundlagen sind kostenlos, alle anderen beantworte ich dir im Abo."],
+  check: ["Dieser Check ist im Abo", "Die drei Basis-Checks sind kostenlos. Alle Extra-Checks schaltest du mit dem Abo frei."],
+  plan: ["Dein Healthy Hair Plan", "Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt, inklusive Wochenplan."],
+  ll: ["Meine Leave-in-Auswahl", "Welche Leave-ins ich dir für die LL-Methode empfehle, für wen und wie du sie benutzt, steht im Abo."],
+  merkliste: ["Deine Merkliste", "Mit dem Abo merkst du dir Produkte und hast sie im Laden sofort griffbereit."]
+};
+function zPaywall(art){ const [t, l] = ZTEXT[art] || ZTEXT.kapitel; const d = document.getElementById("aboDlg");
+  document.getElementById("aboTitle").textContent = t; document.getElementById("aboLead").textContent = l;
+  if(d.showModal) d.showModal(); else d.setAttribute("open",""); }
+const kapFrei = id => istAbo() || (WREGALE[0].kap.includes(id));
+/* gesperrter Block: Überschrift bleibt sichtbar, darunter verschwommen + Hinweis */
+function zSperre(el, art, zeile){ if(!el || istAbo()) return;
+  const inner = document.createElement("div"); inner.className = "zgesperrt"; inner.setAttribute("aria-hidden","true"); inner.inert = true;
+  while(el.firstChild) inner.appendChild(el.firstChild);
+  inner.querySelectorAll("p, .why, .line, .catdesc, .llextra, .llfit").forEach(x => x.textContent = x.textContent.replace(/[A-Za-zÄÖÜäöüß]/g, "x"));
+  const [t] = ZTEXT[art];
+  el.classList.add("zwrap"); el.appendChild(inner);
+  el.insertAdjacentHTML("beforeend", `<div class="zcta"><span class="zschloss">${ZSCHLOSS}</span><h3>${esc(t)}</h3>${zeile?`<p>${zeile}</p>`:""}<button type="button" class="btn dark">Mit dem Abo freischalten</button></div>`);
+  el.querySelector(".zcta .btn").onclick = () => zPaywall(art); }
 { const ord = WREGALE.flatMap(r => r.kap); WISSEN.sort((a,b) => (ord.indexOf(a.id)+1 || 99) - (ord.indexOf(b.id)+1 || 99)); }
 /* Häufig gestellte Fragen, nach Kapitel sortiert (Quelle: faq.json, Entwurf aus den Kapiteltexten) */
 const FAQ = [{"kapitel": "genetik", "fragen": [{"f": "Kann ich feine Haare durch Pflege dicker machen?", "a": "Nein. Wie dick ein einzelnes Haar ist, haben euch eure Gene mitgegeben. Pflege macht feine Haare nicht dick und glatte nicht lockig. Was sie aber kann: dafür sorgen, dass eure Haare gesund, glänzend und geschmeidig sind, egal welche Haardicke ihr habt."}, {"f": "Warum verändern sich meine Haare, obwohl so viel vererbt ist?", "a": "Hormone können Struktur, Dicke und Dichte eurer Haare verändern, zum Beispiel in der Pubertät, in der Schwangerschaft oder in den Wechseljahren. Viele merken auch, dass ihre Haare mit dem Alter feiner oder trockener werden."}, {"f": "Was habe ich an meinen Haaren selbst in der Hand?", "a": "Eine ganze Menge: ob eure Längen weich oder brüchig sind, wie viel Spliss und Haarbruch entsteht, einen großen Teil der Porosität und wie wohl sich eure Kopfhaut fühlt. Und auch, ob eure Haare die Länge erreichen, die eure Gene möglich machen, oder ob sie vorher abbrechen."}]}, {"kapitel": "haarzyklus", "fragen": [{"f": "Wie viele Haare am Tag zu verlieren ist normal?", "a": "50 bis 100 Haare am Tag sind völlig normal. Jedes Haar hat seinen eigenen Rhythmus aus Wachsen, Ruhen und Ausfallen, deshalb verliert ihr jeden Tag ein paar und nie alle auf einmal."}, {"f": "Wie schnell wachsen Haare, und wie lang können sie werden?", "a": "Etwa einen Zentimeter pro Monat. Wie lang eure Haare maximal werden, hängt davon ab, wie lange ihre Wachstumsphase dauert, und das ist zu einem großen Teil vererbt. Bei zwei Jahren ist bei etwa 24 cm Schluss, bei sieben Jahren sind es über 80 cm."}, {"f": "Warum fallen mir erst Monate nach einer stressigen Zeit mehr Haare aus?", "a": "Starker Stress, Crash-Diäten oder Krankheiten können viele Haare gleichzeitig in die Ruhephase schicken. Die dauert zwei bis drei Monate, deshalb fallen die Haare erst mit Verzögerung aus. Verliert ihr über mehrere Wochen deutlich mehr Haare als sonst, lasst das bitte ärztlich abklären."}, {"f": "Helfen Vitamine oder Nahrungsergänzung beim Haarwachstum?", "a": "Nur, wenn euch wirklich etwas fehlt, zum Beispiel Eisen, Zink oder Vitamin D. Lasst das am besten beim Arzt prüfen, statt auf Verdacht Kapseln zu nehmen. Und Kapseln erreichen nur das Haar, das neu nachwächst, nicht eure vorhandenen Längen."}]}, {"kapitel": "porositaet", "fragen": [{"f": "Was bedeutet Porosität?", "a": "Porosität beschreibt, wie offen die Schuppenschicht eurer Haare ist, also wie leicht Feuchtigkeit und Pflege in das Haar hinein- und wieder herauskommen. Danach richtet sich, welche Produkte bei euch gut funktionieren."}, {"f": "Woran merke ich, dass meine Haare porös sind?", "a": "Poröse Haare saugen Wasser schnell auf, trocknen sehr schnell, wirken trocken und frizzig und verknoten leicht. Den Wasserglas-Test könnt ihr höchstens als ganz grobe Einschätzung nehmen. Wie sich eure Haare im Alltag verhalten, sagt viel mehr."}, {"f": "Warum sind meine Spitzen trockener als der Ansatz?", "a": "Die Spitzen sind der älteste Teil eurer Haare. Waschen, Kämmen, Reibung, Sonne und Hitze rauen die Schuppenschicht mit der Zeit auf, deshalb sind die Spitzen fast immer poröser als der Ansatz. Das ist ganz normal."}, {"f": "Kann man poröse Haare wieder „schließen“?", "a": "Leider nicht. Die richtige Pflege füllt die Lücken und glättet die Oberfläche, sodass sich eure Haare viel besser anfühlen. Ganz weg ist die hohe Porosität aber erst, wenn die Haare nachgewachsen und die porösen Längen abgeschnitten sind."}]}, {"kapitel": "kopfhaut", "fragen": [{"f": "Wonach suche ich mein Shampoo aus?", "a": "In erster Linie nach eurer Kopfhaut, erst in zweiter Linie nach euren Haaren. Shampoo gehört vor allem auf die Kopfhaut. Für die Längen sind Conditioner, Maske und Leave-in-Pflege zuständig. Welche Kopfhaut ihr habt, findet ihr im Kopfhaut-Check heraus."}, {"f": "Darf ich Öl auf die Kopfhaut geben?", "a": "Nur, wenn eure Kopfhaut trocken ist, und dort nie über Nacht. Sonst riskiert ihr, dass die Poren verstopfen."}, {"f": "Wie oft sollte ich eine Tiefenreinigung machen?", "a": "Je nach Kopfhauttyp und je nachdem, wie viele Stylingprodukte ihr benutzt, ein- bis dreimal im Monat."}, {"f": "Wann sollte ich mit meiner Kopfhaut zum Arzt?", "a": "Wenn eure Kopfhaut über längere Zeit juckt, brennt, gerötet ist oder stark schuppt. Dann lasst das bitte von einer Hautärztin oder einem Hautarzt anschauen. Pflege kann viel, aber sie ersetzt keine Behandlung."}]}, {"kapitel": "haarausfall", "fragen": [{"f": "Ist mein Haar ausgefallen oder abgebrochen?", "a": "Schaut euch das Haar genau an. Hat es am Ende ein kleines helles Knötchen, ist es mit der Wurzel ausgefallen. Fehlt das Knötchen, ist es abgebrochen. Das ist dann ein Pflegethema und kein Problem der Kopfhaut."}, {"f": "Wachsen die Haare nach stressbedingtem Haarausfall wieder nach?", "a": "In der Regel ja. Beim diffusen Haarausfall, zum Beispiel nach Stress, Fieber oder einer Schwangerschaft, bleiben die Haarwurzeln intakt. Wenn die Ursache behoben ist, wachsen die Haare meistens wieder nach."}, {"f": "Können straffe Zöpfe Haarausfall auslösen?", "a": "Ja. Frisuren, die dauerhaft ziehen, wie straffe Zöpfe, Dutts, eng geflochtene Braids oder manche Extensions, reizen die Haarwurzeln. Früh erkannt ist das umkehrbar, wenn ihr auf lockerere Frisuren umsteigt. Hält der Zug über Jahre an, können die Wurzeln dauerhaft absterben."}, {"f": "Wann sollte ich wegen Haarausfall zum Hautarzt?", "a": "Wenn ihr über mehrere Wochen deutlich mehr als 100 Haare am Tag verliert, euer Scheitel sichtbar breiter wird, kahle Stellen entstehen oder eure Kopfhaut juckt, brennt, gerötet ist oder schmerzt. Beim Hautarzt kann auch euer Blut untersucht werden, so findet ihr die eigentliche Ursache."}]}, {"kapitel": "unterschied", "fragen": [{"f": "Was ist der Unterschied zwischen Spliss und Haarbruch?", "a": "Bei Spliss spaltet sich das Haar auf, meistens an der Spitze. Bei Haarbruch reißt das Haar irgendwo in den Längen ab und hat danach ein stumpfes Ende. Beides hängt eng zusammen: Aus Spliss wird Haarbruch und umgekehrt."}, {"f": "Ist der kleine weiße Punkt an der Spitze auch Spliss?", "a": "Ja. Dort ist das Haar schon offen und geschädigt, und aus diesem Punkt können sich die anderen Splissarten entwickeln, zum Beispiel der klassische Y-Spliss oder der Baumspliss."}, {"f": "Woran erkenne ich Haarbruch?", "a": "An vielen kurzen, abstehenden Haaren in den Längen oder am Oberkopf, die sich nicht glatt legen lassen, oder an vielen kleinen Haarstücken im Waschbecken. Die Längen wirken dann dünner und ungleichmäßig."}]}, {"kapitel": "reparatur", "fragen": [{"f": "Kann man kaputte Haare reparieren?", "a": "Nicht dauerhaft. Eure Haarlängen bestehen aus abgestorbenen Zellen und können sich nicht selbst heilen. Pflege kann Schäden aber ausgleichen, das Haar stabilisieren und es vor neuen Schäden schützen."}, {"f": "Ist Keratin besser als andere Proteine?", "a": "Keratin ist eine Proteinart, und zwar die, aus der eure Haare selbst zum größten Teil bestehen. Dass es besser wirkt als andere Proteine, sagen vor allem die Marken, wirklich belegt ist das kaum. Nicht verwechseln mit der Keratin-Glättung beim Friseur, das ist eine chemische Behandlung."}, {"f": "Kann man zu viel Protein verwenden?", "a": "Ja. Zu viel Protein macht die Haare steif, strohig und sogar brüchiger. Wichtig ist die Balance: Proteine oder Bond Repair im Wechsel mit Feuchtigkeitspflege, statt wochenlang nur Repair."}, {"f": "Helfen Haarkapseln meinen kaputten Längen?", "a": "Nein. „Reparatur von innen“ über Ernährung oder Nahrungsergänzung betrifft nur das Haar, das neu nachwächst. Eure vorhandenen Längen erreicht keine Kapsel mehr."}]}, {"kapitel": "repair", "fragen": [{"f": "Brauchen trockene Haare Repair-Produkte?", "a": "Nicht automatisch. Trockenheit braucht in erster Linie Feuchtigkeit. Wer bei trockenen Haaren ständig zu Repair greift, hat irgendwann zu viele Proteine im Haar, und die Haare werden steif und strohig."}, {"f": "Meine Haare brechen, obwohl ich nicht färbe und keine Hitze nutze. Woran liegt das?", "a": "Meistens an Reibung: beim Bürsten, nachts auf dem Kissen, durch Zopfgummis oder Kleidung. Trockene, unflexible Haare halten das schlechter aus. Der erste Schritt ist deshalb Feuchtigkeit und ein sanfterer Umgang. Brechen sie trotzdem weiter, helfen oft schon Produkte mit Proteinen."}, {"f": "Wann lohnt sich Bond Repair?", "a": "Wenn eure Haare strukturell geschädigt sind, also blondiert, chemisch behandelt oder nass wie Gummi. Bei Haarbruch ohne solche Behandlungen reichen oft schon Proteine."}, {"f": "Bringt ein Repair-Shampoo etwas?", "a": "Kaum, denn es wird ganz schnell wieder ausgewaschen. Am meisten bringt Repair in einer Maske, die einwirken darf, und in einem Leave-in auf feuchtem Haar, weil die Wirkstoffe dort im Haar bleiben."}]}, {"kapitel": "leavein", "fragen": [{"f": "Was ist eine Leave-in-Pflege?", "a": "Alles, was im Haar bleibt und nicht ausgespült wird: Sprays, Seren, Lotionen, Cremes und auch Haaröle. Sie hält eure Haare weich und flexibel, verringert Reibung und beugt so Haarbruch und Spliss vor."}, {"f": "Kann eine Leave-in-Pflege Spliss reparieren?", "a": "Nein. Produkte, die Spliss „versiegeln“, kleben die Enden nur bis zur nächsten Wäsche zusammen. Wo „Spliss reparieren“ draufsteht, müsste eigentlich „Spliss kaschieren“ stehen. Loswerden könnt ihr Spliss nur mit einem Schnitt."}, {"f": "Wann und wie trage ich Leave-in auf?", "a": "Direkt nach der Wäsche ins handtuchtrockene Haar und gern auch zwischen den Wäschen ins trockene Haar. Nehmt wenig Produkt, verreibt es wie eine Handcreme und arbeitet euch von den Spitzen nach oben. Erst danach entwirrt ihr, ebenfalls von den Spitzen aus."}, {"f": "Warum sind nasse Haare so empfindlich?", "a": "Nasse und feuchte Haare dehnen sich stärker und reißen beim Kämmen oder bei Zug schneller ab. Deshalb lieber mit einem Mikrofaserhandtuch trocknen statt mit dem Frotteehandtuch rubbeln und nicht mit nassen Haaren schlafen gehen."}]}, {"kapitel": "llmethode", "fragen": [{"f": "Was ist die LL-Methode?", "a": "Meine Methode für Leave-in-Pflege: nach jeder Wäsche ins feuchte Haar und an den Tagen dazwischen eine kleine Menge ins trockene Haar. Eure Haare werden jeden Tag beansprucht, also sollten sie auch nicht nur am Waschtag Pflege bekommen."}, {"f": "Ich schaffe das nicht jeden Tag. Lohnt es sich trotzdem?", "a": "Auf jeden Fall. Lieber jeden zweiten oder dritten Tag als gar nicht. Und mindestens nach jeder Wäsche sollte eine Leave-in-Pflege drin sein."}, {"f": "Wie viel Leave-in nehme ich?", "a": "Sehr wenig. Nachlegen könnt ihr immer, aber zu viel macht die Haare schwer und strähnig. Feines Haar mag meistens leichte Sprays oder Seren, dickes Haar eher Lotionen und Cremes."}, {"f": "Woran merke ich, dass die LL-Methode wirkt?", "a": "Eure Haare lassen sich leichter entwirren, es landen weniger abgebrochene Haare in der Bürste und im Waschbecken, und die Spitzen fühlen sich weicher und weniger fransig an."}]}, {"kapitel": "prewash", "fragen": [{"f": "Was ist eine Pre-Wash-Routine?", "a": "Ihr pflegt eure Längen, bevor ihr sie wascht. Das schützt sie davor, beim Shampoonieren auszutrocknen, und gibt strapaziertem Haar einen Extra-Pflegeschub."}, {"f": "Was bedeutet ÖWC?", "a": "Öl, Waschen, Conditioner. Ihr gebt Öl in die trockenen Längen und Spitzen, lasst es 30 Minuten bis über Nacht einwirken, wascht dann und schließt mit Conditioner ab. Über Nacht bleibt das Öl aber nur in den Längen, nie auf der Kopfhaut."}, {"f": "Welche Pre-Wash passt zu feinen Haaren?", "a": "Feines Haar wird von Öl schnell schwer. Nehmt ein leichtes Öl oder gleich einen Conditioner (CWC) und gebt es nur in die Längen und Spitzen."}, {"f": "Muss ich vor jeder Wäsche eine Pre-Wash machen?", "a": "Nein, seht es als Extra. Schon einmal pro Woche oder vor Tagen, an denen eure Haare besonders viel aushalten müssen, zum Beispiel vor dem Föhnen und Glätten, macht einen spürbaren Unterschied."}]}, {"kapitel": "haaroele", "fragen": [{"f": "Spendet Haaröl Feuchtigkeit?", "a": "Nein, Öl enthält kein Wasser. Es kann aber die Feuchtigkeit aus der Wäsche oder eurer Leave-in-Pflege mit einem feinen Film einschließen. Deshalb kommt Öl immer nach einer anderen Pflege und nie stattdessen."}, {"f": "Was ist ein trockenes Öl?", "a": "Ein sehr leichtes, dünnflüssiges Öl, das schnell einzieht und sich nicht ölig anfühlt. Es hinterlässt nur einen hauchdünnen Film und ist deshalb ideal für feines Haar, das schnell beschwert wird."}, {"f": "Wie trage ich Haaröl richtig auf?", "a": "Startet mit einem Pumpstoß oder ein paar Tropfen, verreibt das Öl in den Händen und gebt es zuerst in die Spitzen, dann in die Längen, nie direkt an den Ansatz. Das geht ins handtuchtrockene Haar nach der Leave-in-Pflege oder nach dem Föhnen ins trockene Haar."}]}, {"kapitel": "silikone", "fragen": [{"f": "Sind Silikone schlecht für die Haare?", "a": "Nein, nicht pauschal. Silikone legen sich wie ein feiner Film um das Haar, verringern die Reibung, machen es kämmbar und geben Glanz. Für trockene, poröse und lange Haare können sie richtig hilfreich sein. Entscheidend ist, ob sie zu euren Haaren passen."}, {"f": "Ersticken Silikone die Haare?", "a": "Nein. Die Haarlängen bestehen aus abgestorbenen Zellen und atmen nicht."}, {"f": "Für wen sind Silikone eher nichts?", "a": "Für feine Haare, die schnell platt und strähnig werden. Hier lieber leichte, flüchtige oder wasserlösliche Silikone und sparsam dosieren. Auch wenn ihr viel Volumen am Ansatz wollt, gehören Silikone nur in Längen und Spitzen. Und manche Locken verlieren durch schwere Silikone ihre Sprungkraft."}, {"f": "Meine Haare fühlen sich schwer und „belegt“ an. Was tun?", "a": "Dann haben sich wahrscheinlich Rückstände abgelagert, zum Beispiel von schweren Silikonen. Das ist nicht schlimm: Eine Tiefenreinigung löst das, je nach Styling und Kopfhaut ein- bis dreimal im Monat."}]}, {"kapitel": "seide", "fragen": [{"f": "Was ist der Unterschied zwischen Seide und Satin?", "a": "Seide ist eine Naturfaser, glatt und atmungsaktiv. Satin ist eine Webart, die meisten günstigen Satin-Produkte sind aus Polyester. Beide sind glatt und verringern die Reibung, aber Polyester-Satin ist nicht atmungsaktiv."}, {"f": "Lohnt sich ein Kissenbezug aus Seide?", "a": "Ja, für Kissen und Schlafhaube empfehle ich Seide, weil ihr dort viele Stunden mit Haut und Kopfhaut direkt am Stoff liegt. Polyester-Satin staut die Wärme. Eine gute Alternative ist Bambusviskose. Seide ersetzt aber keine Pflege, sie ist ein schönes Extra."}, {"f": "Reicht ein Scrunchie aus Satin?", "a": "Ja, total. Beim Scrunchie geht es nur darum, dass er glatt ist und nicht zieht. Er liegt nicht großflächig auf der Haut, deshalb braucht ihr dafür keine Seide."}]}, {"kapitel": "buersten", "fragen": [{"f": "Wie bürste ich, ohne meine Haare kaputt zu machen?", "a": "Startet immer in den Spitzen und arbeitet euch Stück für Stück nach oben. Wenn die Bürste hängen bleibt, nicht ziehen, sondern die Stelle mit den Fingern lösen."}, {"f": "Darf ich nasse Haare bürsten?", "a": "Nur mit Leave-in und einer Entwirrbürste. Nasse Haare sind am empfindlichsten. Habt ihr viele Knoten, entwirrt sie lieber im trockenen Haar mit etwas Leave-in."}, {"f": "Muss man 100 Bürstenstriche am Tag machen?", "a": "Nein. Bürstet so oft wie nötig, nicht so oft wie möglich, denn beim Bürsten entsteht Reibung."}, {"f": "Wie reinige ich meine Haarbürste?", "a": "Entfernt regelmäßig die Haare und wascht die Bürste ab und zu mit etwas Shampoo und lauwarmem Wasser. Danach mit den Borsten nach unten gut trocknen lassen."}]}, {"kapitel": "splissschnitt", "fragen": [{"f": "Was ist ein Splissschnitt?", "a": "Beim Splissschnitt werden gezielt nur die gespaltenen Enden abgeschnitten, die aus einer eingedrehten Strähne herausstehen. Anders als beim Spitzenschnitt wird nicht die ganze Länge gekürzt."}, {"f": "Verliere ich beim Splissschnitt Länge?", "a": "Nein, die Länge bleibt erhalten. Sind die Spitzen insgesamt sehr dünn und kaputt, hilft aber nur, ein Stück abzuschneiden."}, {"f": "Kann ich mir den Splissschnitt selbst schneiden?", "a": "Ja. Schneidet in trockenem, gekämmtem Haar bei gutem Licht, dreht dünne Strähnen ein und schneidet jedes herausstehende Ende knapp oberhalb vom Spliss ab. Nehmt dafür unbedingt eine scharfe Friseurschere. Wie ich es mache, zeige ich euch im Video im Kapitel."}]}, {"kapitel": "scheren", "fragen": [{"f": "Warum sollte ich meine Haare nicht mit einer normalen Schere schneiden?", "a": "Eine Haushalts- oder Papierschere quetscht das Haar, bevor sie es durchtrennt. Die Schnittkante franst aus, und genau dort entsteht schnell neuer Spliss."}, {"f": "Lohnt sich eine Friseurschere?", "a": "Ja, wenn ihr regelmäßig selbst schneidet. Sie ist aus gehärtetem Stahl, sehr scharf geschliffen und bleibt lange scharf. Eine billige Schere, die eure Spitzen ausfranst, kostet euch am Ende mehr Länge."}, {"f": "Wie bleibt meine Schere lange scharf?", "a": "Benutzt sie nur für Haare, schneidet nur trockenes, sauberes Haar, lasst sie nicht fallen, bewahrt sie in einem Etui auf und lasst sie ab und zu professionell schleifen."}]}, {"kapitel": "haarfarbe", "fragen": [{"f": "Was ist der Unterschied zwischen Färben und Tönen?", "a": "Beim Färben entsteht die Farbe im Inneren des Haares, sie wäscht sich nicht raus und muss rauswachsen. Eine Tönung legt sich vor allem außen ans Haar und wäscht sich nach etwa 6 bis 8 Haarwäschen wieder raus."}, {"f": "Welche Haarfarbe wäscht sich wieder raus?", "a": "Tönung, Glossing und Shampoo oder Conditioner mit Farbpigmenten waschen sich raus, eine Intensivtönung nur zum Teil. Blondierung und dauerhafte Farbe müssen rauswachsen. Poröse Längen nehmen Farbe schneller auf und verlieren sie auch schneller."}, {"f": "Was sollte ich vor dem Färben beachten?", "a": "Macht bei dauerhaften Farben vor jeder Anwendung einen Allergietest und probiert neue Farben zuerst an einer unauffälligen Strähne aus. Habt ihr mit Henna oder Pflanzenfarben gefärbt, sagt das unbedingt eurem Friseur."}]}, {"kapitel": "farbstiche", "fragen": [{"f": "Warum bekommen meine Haare einen Gelb- oder Orangestich?", "a": "Beim Aufhellen gehen zuerst die dunklen Farbpigmente verloren, übrig bleiben die warmen. Bei dunklen Haaren kommt zuerst Rot, dann Orange durch, bei hellen Haaren Gelb. Auch wenn eine kühle Farbe verblasst, schimmert dieser warme Untergrund wieder durch."}, {"f": "Was hilft gegen Gelbstich?", "a": "Violett, zum Beispiel ein Silbershampoo. Gegen Orange hilft Blau, gegen Rot Grün. Benutzt ihr Silbershampoo zu oft oder zu lange, bekommen die Haare einen Lila- oder Grauschimmer. Dann einfach eine Weile weglassen."}, {"f": "Meine blonden Haare sind grünlich. Was kann ich tun?", "a": "Ein Grünstich entsteht oft durch Kupfer aus dem Schwimmbad- oder Leitungswasser. Hier hilft eher eine Tiefenreinigung als ein Farbprodukt."}, {"f": "Wann gehe ich mit einem Farbstich lieber zum Friseur?", "a": "Wenn der Stich sehr stark oder fleckig ist, wenn ihr mehrere Stufen heller oder dunkler werden wollt, wenn ihr eine Farbkorrektur braucht oder wenn ihr vorher mit Henna oder Pflanzenfarben gefärbt habt."}]}, {"kapitel": "mythen", "fragen": [{"f": "Wachsen Haare schneller, wenn man sie schneidet?", "a": "Nein. Die Haare wachsen in der Wurzel, und die bekommt vom Schneiden nichts mit. Wer Spliss rechtzeitig abschneidet, verhindert aber, dass die Haare weiter abbrechen, und behält so mehr Länge."}, {"f": "Gewöhnen sich Haare an ein Shampoo?", "a": "Nein. Wenn ein Produkt plötzlich nicht mehr so gut funktioniert, hat sich meistens etwas anderes verändert: eure Kopfhaut, die Jahreszeit oder es haben sich Rückstände von Stylingprodukten abgelagert."}, {"f": "Ist Lufttrocknen besser als Föhnen?", "a": "Nicht unbedingt. Nasse Haare sind empfindlich, und je länger sie nass sind, desto länger bleiben sie das. Für die Kopfhaut ist langes Feuchtsein auch nicht gut. Föhnt deshalb zumindest den Ansatz trocken, mit Hitzeschutz und bei niedriger Temperatur. Viele Locken fallen mit Lufttrocknen in den Längen trotzdem schöner."}, {"f": "Kann man seine Haare überpflegen?", "a": "Nur halb. „Überpflegt“ heißt eigentlich nur, dass zu viel oder unpassendes Produkt im Haar ist. Die Haare wirken dann schwer und strähnig. Schädlich ist das nicht, nur doof, und eine Tiefenreinigung löst es."}]}];
@@ -1378,11 +1494,11 @@ const PRAEGUNG = {
 };
 (function(){
   const box = document.getElementById("wissenCards");
-  const bookHtml = (w,i) => `<button type="button" class="card wcard" data-w="${w.id}"><span class="kap">Kapitel ${i+1}${w.entwurf?" · Entwurf":""}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="emb" aria-hidden="true"><svg viewBox="0 0 24 24"><g filter="url(#praeg)">${PRAEGUNG[w.id]||PRAEGUNG.buch}</g></svg></span><span class="go">Lesen <span aria-hidden="true">→</span></span></button>`;
+  const bookHtml = (w,i) => `<button type="button" class="card wcard" data-w="${w.id}"${WREGALE[0].kap.includes(w.id) ? "" : ' data-abo="1"'}><span class="kap">Kapitel ${i+1}${w.entwurf?" · Entwurf":""}</span><h3>${esc(w.titel)}</h3><p>${esc(w.teaser)}</p><span class="emb" aria-hidden="true"><svg viewBox="0 0 24 24"><g filter="url(#praeg)">${PRAEGUNG[w.id]||PRAEGUNG.buch}</g></svg></span><span class="go"><span class="zfrei">Lesen <span aria-hidden="true">→</span></span><span class="zzu">${ZSCHLOSS} Im Abo</span></span></button>`;
   const used = new Set(WREGALE.flatMap(r => r.kap)), rest = WISSEN.filter(w => !used.has(w.id)).map(w => w.id);
   const regale = rest.length ? [...WREGALE, {id:"grund", titel:"Weitere Kapitel", text:"", kap:rest}] : WREGALE;
   box.insertAdjacentHTML("afterbegin", regale.map((r,n) => { const ws = r.kap.map(id => WISSEN.findIndex(w => w.id === id)).filter(i => i >= 0);
-    return `<section class="wregal t-${r.id}" aria-labelledby="wr-${n}"><div class="wtab"><h2 id="wr-${n}">${esc(r.titel)}</h2><span class="wanz">${ws.length} ${ws.length === 1 ? "Buch" : "Bücher"}</span></div>${r.text ? `<p class="wtext">${esc(r.text)}</p>` : ""}<div class="wbooks">${ws.map(i => bookHtml(WISSEN[i], i)).join("")}</div></section>`; }).join(""));
+    return `<section class="wregal t-${r.id}" aria-labelledby="wr-${n}"><div class="wtab"><h2 id="wr-${n}">${esc(r.titel)}</h2>${r.id === "grund" ? `<span class="wfrei">Kostenlos</span>` : `<span class="wabo">${ZSCHLOSS} Im Abo</span>`}<span class="wanz">${ws.length} ${ws.length === 1 ? "Buch" : "Bücher"}</span></div>${r.text ? `<p class="wtext">${esc(r.text)}</p>` : ""}<div class="wbooks">${ws.map(i => bookHtml(WISSEN[i], i)).join("")}</div></section>`; }).join(""));
   /* jedes Buch bekommt Seiten dahinter, die beim Drüberfahren leicht blättern */
   box.querySelectorAll(".card").forEach(c => {
     const w = document.createElement("div"); w.className = "shelfbook";
@@ -1399,7 +1515,7 @@ const PRAEGUNG = {
   const pk = "a"; /* Laura (16.10.): Ton in Ton */
   setPal(WPAL[pk] ? pk : "a");
   const open = id => { state.wissen = id; render(); window.scrollTo({top:0}); };
-  box.querySelectorAll(".wcard").forEach(b => b.onclick = () => openBook(b, () => open(b.dataset.w)));
+  box.querySelectorAll(".wcard").forEach(b => b.onclick = () => { if(!kapFrei(b.dataset.w)){ zPaywall("kapitel"); return; } openBook(b, () => open(b.dataset.w)); });
 
 })();
 /* Buch klappt im Regal auf, dann zoomt man in die rechte Seite hinein, daraus wird die neue Seite */
@@ -1483,7 +1599,7 @@ function faqHtml(){
   return `<h2>Häufig gestellte Fragen</h2><p class="wdraft">Entwurf: Die Fragen und Antworten sind noch nicht von Laura geprüft.</p>
   <p>Hier findet ihr die Fragen, die mir zu den einzelnen Themen am häufigsten begegnen, kurz und einfach beantwortet. Wenn ihr es genauer wissen wollt, lest das ganze Kapitel.</p>`
   + FAQ.map(g => { const i = WISSEN.findIndex(w => w.id === g.kapitel); const w = WISSEN[i]; if(!w) return "";
-    return `<section class="faqgrp"><span class="kap">Kapitel ${i+1}</span><h3>${esc(w.titel)}</h3>${g.fragen.map((q,j) => `<details class="faq" data-k="${g.kapitel}-${j}"><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}<button type="button" class="faqkap" data-w="${w.id}">Ganzes Kapitel lesen →</button></section>`; }).join("");
+    return `<section class="faqgrp"><span class="kap">Kapitel ${i+1}</span><h3>${esc(w.titel)}</h3>${g.fragen.map((q,j) => kapFrei(w.id) ? `<details class="faq" data-k="${g.kapitel}-${j}"><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>` : `<button type="button" class="faq zfaq" data-k="${g.kapitel}-${j}"><span>${esc(q.f)}</span>${ZSCHLOSS}</button>`).join("")}${kapFrei(w.id) ? `<button type="button" class="faqkap" data-w="${w.id}">Ganzes Kapitel lesen →</button>` : ""}</section>`; }).join("");
 }
 function renderWissenSuche(){
   const q = (document.getElementById("wq").value||"").trim();
@@ -1497,16 +1613,17 @@ function renderWissenSuche(){
   const fhits = FTEXT.filter(x => terms.every(t => x.all.includes(t))).slice(0, 6);
   cards.hidden = true;
   box.innerHTML = (hits.length
-    ? `<ul class="wres">${hits.map(x => `<li><button type="button" data-w="${x.w.id}"><span class="kap">Kapitel ${x.i+1}${x.w.entwurf?" · Entwurf":""}</span><h3>${esc(x.w.titel)}</h3><p>${wissenSnippet(x.raw, words)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span></button></li>`).join("")}</ul>`
+    ? `<ul class="wres">${hits.map(x => `<li><button type="button" data-w="${x.w.id}"><span class="kap">Kapitel ${x.i+1}${x.w.entwurf?" · Entwurf":""}</span><h3>${esc(x.w.titel)}</h3>${kapFrei(x.w.id) ? `<p>${wissenSnippet(x.raw, words)}</p><span class="go">Lesen <span aria-hidden="true">→</span></span>` : `<p class="zsuch">Dieses Kapitel ist im Abo.</p><span class="go">${ZSCHLOSS} Im Abo</span>`}</button></li>`).join("")}</ul>`
     : fhits.length ? "" : `<p class="wnone">Dazu habe ich noch kein Kapitel. Probier ein anderes Wort, zum Beispiel „Spliss“, „Kopfhaut“ oder „Öl“.</p>`)
-    + (fhits.length ? `<p class="wres wfaq">Aus den häufig gestellten Fragen</p><ul class="wres">${fhits.map(x => `<li><button type="button" data-faq="${x.k}"><h3>${esc(x.f)}</h3><p>${wissenSnippet(x.a, words)}</p><span class="go">Zur Antwort <span aria-hidden="true">→</span></span></button></li>`).join("")}</ul>` : "");
+    + (fhits.length ? `<p class="wres wfaq">Aus den häufig gestellten Fragen</p><ul class="wres">${fhits.map(x => `<li><button type="button" data-faq="${x.k}"><h3>${esc(x.f)}</h3><p>${kapFrei(x.k.replace(/-\d+$/,"")) ? wissenSnippet(x.a, words) : "Die Antwort steht im Abo."}</p><span class="go">Zur Antwort <span aria-hidden="true">→</span></span></button></li>`).join("")}</ul>` : "");
   box.querySelectorAll("button[data-w]").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
   box.querySelectorAll("button[data-faq]").forEach(b => b.onclick = () => openFaq(b.dataset.faq));
 }
 document.getElementById("wq").addEventListener("input", renderWissenSuche);
 function renderWissen(){
   const isFaq = state.wissen === "faq";
-  const w = WISSEN.find(x => x.id === state.wissen);
+  let w = WISSEN.find(x => x.id === state.wissen);
+  if(w && !kapFrei(w.id)){ state.wissen = null; w = null; setTimeout(() => zPaywall("kapitel"), 0); }
   document.getElementById("wissenListe").hidden = !!(w || isFaq);
   const art = document.getElementById("wissenArt"); art.hidden = !(w || isFaq);
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
@@ -1514,6 +1631,7 @@ function renderWissen(){
     art.innerHTML = back + faqHtml() + back;
     art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
     art.querySelectorAll(".faqkap").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
+    art.querySelectorAll(".zfaq").forEach(b => b.onclick = () => zPaywall("faq"));
     return;
   }
   if(!w){ art.innerHTML = ""; return; }
@@ -1546,6 +1664,8 @@ function renderLL(){
 }
 document.getElementById("llZurAuswahl").onclick = () => document.getElementById("llAuswahl").scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
 document.getElementById("llQuizBtn").onclick = () => document.querySelector("#v-ll .qcard").click();
+/* Gast: Auswahl verschwommen */
+const _renderLL = renderLL; renderLL = function(){ _renderLL(); if(!istAbo()){ const b = document.getElementById("llBox"); b.querySelectorAll(".llgruppe").forEach((g,i) => { if(i > 0) g.remove(); }); zSperre(b, "ll", LLA.gruppen.reduce((n,g) => n + g.produkte.length, 0) + " Leave-ins, sortiert nach Textur, mit meiner Empfehlung, für wen sie passen und wie du sie benutzt."); } };
 ["llAlle","llAlleOben"].forEach(id => document.getElementById(id).onclick = () => window.showProducts("leavein", "alle"));
 document.querySelectorAll("#v-ll [data-wissen]").forEach(b => b.onclick = () => window.showWissen(b.dataset.wissen));
 
@@ -1596,6 +1716,9 @@ function renderFav(){
 }
 function renderMerk(){
   const box = document.getElementById("merkBox");
+  if(!istAbo()){ document.getElementById("merkTools").hidden = true;
+    box.innerHTML = `<div class="zmerk"><span class="zschloss">${ZSCHLOSS}</span><h3>Deine Merkliste ist im Abo</h3><p>Merk dir Produkte mit einem Tipp und hab sie in der Drogerie sofort griffbereit.</p><button type="button" class="btn dark">Mit dem Abo freischalten</button></div>`;
+    box.querySelector(".btn").onclick = () => zPaywall("merkliste"); return; }
   const set = merkSet(); const mine = ALL.filter(p => set.has(p.mk));
   document.getElementById("merkTools").hidden = !mine.length;
   if(!mine.length){ box.innerHTML = `<div class="merkempty"><p>Noch nichts gemerkt. Tippe bei einem Produkt auf das <b>+</b>, dann landet es hier.</p><button type="button" class="btn dark" id="merkGo">Zu den Produkten <span aria-hidden="true">→</span></button></div>`;
@@ -1711,6 +1834,19 @@ function bindControls(){
 }
 const segOk = p => state.seg==="alle" || !p.segment || p.segment===state.seg;
 
+/* Gast: Reiter, Filter und Anzahl bleiben, alles darunter verschwommen (nur die ersten Karten, kein endloses Scrollen) */
+function zProdukte(){ if(istAbo()) return; const g = document.querySelector("#guide .guide"); if(!g) return;
+  const kids = [...g.children]; const start = kids.findIndex(k => k.matches(".rec, .recset, h3.sec, .liste, ul.grid, .empty") || k.querySelector && k.querySelector("ul.grid"));
+  if(start < 0) return;
+  const head = kids.slice(start).find(k => k.matches("h3.sec"));
+  const box = document.createElement("div"); box.className = "zprod";
+  kids.slice(start).forEach(k => { if(k !== head) box.appendChild(k); });
+  if(head) g.appendChild(head); g.appendChild(box);
+  box.querySelectorAll("ul.grid").forEach((u,n) => [...u.children].forEach((li,i) => { if(n > 0 || i >= 6) li.remove(); }));
+  box.querySelectorAll("ul.grid").forEach((u,n) => { if(n > 0) u.remove(); });
+  const n = head ? (head.querySelector(".count")||{}).textContent : "";
+  zSperre(box, "produkte", n ? `${n} Produkte mit meiner Einschätzung, passend zu deiner Kopfhaut und deinen Haaren.` : "");
+}
 function renderGuide(){
   const t = T[state.type], g = DATA[state.type];
   const mine = myCats(state.type);
@@ -1772,7 +1908,7 @@ function render(){
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
   document.getElementById("subnav").hidden = state.view!=="produkte"; setHH();
-  if(state.view==="produkte"){ state.q.trim() ? renderSearch() : renderGuide(); }
+  if(state.view==="produkte"){ state.q.trim() ? renderSearch() : renderGuide(); zProdukte(); }
   if(state.view==="merkliste") renderMerk();
   if(state.view==="wissen") renderWissen();
   if(state.view==="favoriten") renderFav();
@@ -1942,8 +2078,27 @@ document.getElementById("merkClear").onclick = () => { if(confirm("Alle Produkte
     new IntersectionObserver(es => { const v = es[0].isIntersecting; if(v && !seen){ seen = true; setTimeout(peek, 350); } else if(!v){ seen = false; } }, {threshold:.6}).observe(book);
   }
 })();
+
+/* ---------- Abo-Vorschau: Schalter Gast/Abo, Abo-Fenster, Anmelden (alles nur Test) ---------- */
+(function(){
+  const setZG = k => { ZG = k; try { localStorage.setItem("zugangTest", k); } catch(e){}
+    document.documentElement.classList.toggle("zg-gast", k !== "abo"); document.documentElement.classList.toggle("zg-abo", k === "abo");
+    document.querySelectorAll("#zgctl [data-zg]").forEach(b => b.setAttribute("aria-pressed", b.dataset.zg === k)); render(); };
+  document.querySelectorAll(".qcard[data-abo] .paper").forEach(p => p.insertAdjacentHTML("afterbegin", `<span class="zbadge">${ZSCHLOSS} Im Abo</span>`));
+  document.querySelectorAll("#zgctl [data-zg]").forEach(b => b.onclick = () => setZG(b.dataset.zg));
+  const abo = document.getElementById("aboDlg"), login = document.getElementById("loginDlg");
+  const zu = d => { if(d.close) d.close(); else d.removeAttribute("open"); };
+  const auf = d => { if(d.showModal) d.showModal(); else d.setAttribute("open",""); };
+  [abo, login].forEach(d => { d.querySelector(".aboclose").onclick = () => zu(d); d.addEventListener("click", e => { if(e.target === d) zu(d); }); });
+  document.getElementById("aboTest").onclick = () => { zu(abo); setZG("abo"); toast("Vorschau: Abo ist freigeschaltet"); };
+  document.getElementById("aboLogin").onclick = () => { zu(abo); auf(login); };
+  document.getElementById("loginReg").onclick = () => toast("Vorschau: Registrieren kommt mit der echten Version");
+  login.querySelector("form").addEventListener("submit", () => toast("Vorschau: Anmelden kommt mit der echten Version"));
+  setZG(ZG === "abo" ? "abo" : "gast");
+})();
 /* ---------- Quiz-Blatt wächst zum Quiz ---------- */
 document.querySelectorAll(".qcard").forEach(a => a.addEventListener("click", e => {
+  if(a.dataset.abo && !istAbo()){ e.preventDefault(); e.stopPropagation(); zPaywall(a.dataset.abo); return; }
   const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   const href = a.getAttribute("href");
   const go = () => { if(window.openQuiz && window.openQuiz(href)) return; window.location.href = href; };
