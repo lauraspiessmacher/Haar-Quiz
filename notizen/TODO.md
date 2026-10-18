@@ -32,3 +32,5 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - Wissen-Test v226: Laura soll Themen-Aufteilung, Farben und Mythos-Karte bestätigen. Danach evtl. „Dein Lesestapel“ + Gelesen-Lesezeichen.
 - Mythos-oder-Fakt-Karte: eleganteres Design (nicht liniertes Blatt) – Vorlage von Laura abwarten.
 - Später: Lauras Vorlage Handschuh hält Karte mit ovaler Silberbrosche (vorlagen/spaeter-handschuh-karte-silberbrosche.webp) irgendwo einsetzen.
+- IDEE (18.10., Laura): Monetarisierung – Gratis / (evtl. kostenloses Konto) / Abo; Schlösser + Pop-up auf gesperrten Bereichen; Kundenkonto + Checkout. Feedback gegeben, Entscheidung offen. Wichtig: echte Paywall braucht Server (Inhalte dürfen nicht im HTML stecken), Zahlungsanbieter am besten „Merchant of Record“, Rechtstexte (Impressum, Datenschutz, AGB, Widerruf).
+- IDEE (18.10., Laura): „Ultimate Plan“ – persönlicher Schritt-für-Schritt-Plan aus allen Quiz-Ergebnissen in ganz einfacher Sprache (Was heißt mein Ergebnis? Grundregeln Reibung/Hitze/Chemie, LL-Methode, Wochenplan, Einkaufsliste, Tagesablauf). Kostenpflichtig (Abo oder Einmalkauf). Name noch offen.
