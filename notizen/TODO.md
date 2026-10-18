@@ -41,3 +41,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - Ideen für später gesammelt in notizen/IDEEN.md (Mein Bereich, Gerade im Test, Frag Laura, Fahrpläne, Marketingversprechen/Packaging entschlüsseln …).
 - Fragen fürs Gespräch mit Lauras Mann gesammelt: notizen/FRAGEN-TECHNIK-UND-PREIS.md
 - Healthy Hair Plan: Aufbau + Textbaustein-Liste in notizen/healthy-hair-plan.md (Entwurf, offene Fragen an Laura).
+- Offen: Startseite für Wiederkommerinnen (Plan-Fortschritt + Neu im Regal direkt unter dem Hero) – mit Laura besprechen.
