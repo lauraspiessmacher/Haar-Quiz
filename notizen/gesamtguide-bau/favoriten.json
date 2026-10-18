@@ -408,5 +408,36 @@
     }
    ]
   }
- ]
+ ],
+ "imTest": {
+  "entwurf": true,
+  "hinweis": "Beispiel: Laura trägt hier ein, was sie gerade ausprobiert, und schreibt ihr Zwischenfazit selbst.",
+  "text": "Neben meinen Favorites probiere ich jeden Monat neue Produkte aus. Hier seht ihr, was ich gerade teste und wie mein Zwischenstand ist. Ob ein Produkt bleibt, entscheide ich erst nach ein paar Wochen.",
+  "produkte": [
+   {
+    "type": "leavein",
+    "brand": "Gisou",
+    "name": "Honey Milk Active Repair Leave-In Conditioner Mist",
+    "seit": "seit 2 Wochen",
+    "status": "laeuft",
+    "fazit": ""
+   },
+   {
+    "type": "maske",
+    "brand": "Coco & Eve",
+    "name": "Bond Building Pre-Shampoo Treatment",
+    "seit": "seit 1 Woche",
+    "status": "laeuft",
+    "fazit": ""
+   },
+   {
+    "type": "shampoo",
+    "brand": "neboa",
+    "name": "Glossy Hair",
+    "seit": "seit 4 Wochen",
+    "status": "laeuft",
+    "fazit": ""
+   }
+  ]
+ }
 }
