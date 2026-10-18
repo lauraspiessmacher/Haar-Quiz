@@ -1,0 +1,16 @@
+{
+  "monat": "Oktober 2026",
+  "entwurf": true,
+  "hinweis": "Beispiel: Laura wählt jeden Monat die echten Neuheiten aus. Die Produkte stehen zusätzlich normal in ihrer Kategorie.",
+  "text": "Jeden Monat schaue ich mir an, was neu in Drogerie und Parfümerie steht, und nehme die Produkte auf, die ich wirklich nennenswert finde. Fehlt ein Produkt, kommt es entweder noch, oder ich finde andere spannender. Das heißt nicht, dass es schlecht ist.",
+  "produkte": [
+    {"typ": "leavein", "brand": "Dejan Garz", "name": "Leave-In Cream The Sensitive"},
+    {"typ": "shampoo", "brand": "neboa", "name": "Glossy Hair"},
+    {"typ": "maske", "brand": "Coco & Eve", "name": "Bond Building Pre-Shampoo Treatment"},
+    {"typ": "conditioner", "brand": "L'Oréal Paris Elvital", "name": "Dream Length Wonder Water"},
+    {"typ": "leavein", "brand": "Gisou", "name": "Honey Milk Active Repair Leave-In Conditioner Mist"},
+    {"typ": "kopfhaut", "brand": "Redken", "name": "Acidic Grow Full Serum"},
+    {"typ": "oel", "brand": "Wella Professionals", "name": "Oil Reflections Luminous Smoothening Oil"},
+    {"typ": "shampoo", "brand": "neboa", "name": "Repair & Shine"}
+  ]
+}

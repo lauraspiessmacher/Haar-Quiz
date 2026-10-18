@@ -83,6 +83,7 @@ t = t.replace('__TEX_SCHAUM__', 'data:image/webp;base64,' + base64.b64encode(ope
 t = t.replace('__TEX_MILCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-milch.webp','rb').read()).decode())
 t = t.replace('__TEX_SERUM__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-serum.webp','rb').read()).decode())
 t = t.replace('__TEX_CREME__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-creme.webp','rb').read()).decode())
+t = t.replace('__NEU__', json.dumps(json.load(open(f'{S}/neu.json', encoding='utf-8')), ensure_ascii=False))
 t = t.replace('__LL_AUSWAHL__', json.dumps(json.load(open(f'{S}/ll-auswahl.json', encoding='utf-8')), ensure_ascii=False))
 for _k, _f in [('__MYTHOS_STAPEL__', 'mythos-stapel.webp')]:  # Bügel-Variante verworfen (16.10.)
     t = t.replace(_k, 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/' + _f, 'rb').read()).decode())

@@ -755,6 +755,22 @@ html.zg-abo .zbadge{display:none}
 .zgctl span{color:var(--muted);margin-right:4px}
 .zgctl button{border:0;background:transparent;border-radius:999px;padding:6px 10px;font:inherit;cursor:pointer;color:var(--ink)}
 .zgctl button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* ---------- Neu im Regal ---------- */
+.neugrid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:900px){ .neugrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -16px;padding:4px 16px 10px;scrollbar-width:none} .neugrid::-webkit-scrollbar{display:none} .neugrid li{flex:0 0 46%;scroll-snap-align:start} }
+.neutile{position:relative;display:flex;flex-direction:column;width:100%;height:100%;text-align:left;font:inherit;color:var(--ink);background:#FFFDFA;border:1px solid var(--line-soft);border-radius:16px;padding:12px 12px 14px;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.neutile:hover{transform:translateY(-3px);box-shadow:0 16px 30px -20px rgba(56,47,46,.45)}
+.neutile .pic{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;background:#F6F2EC;border-radius:10px;margin:0 0 12px;overflow:hidden}
+.neutile .pic img{display:block;width:auto!important;height:auto!important;max-width:62%;max-height:86%;object-fit:contain;margin:0}
+.neutag{position:absolute;top:20px;left:20px;z-index:1;background:var(--ink);color:#F3ECE2;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
+.neutile .typ{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.neutile .brand{font-size:13px;color:var(--muted);margin-top:6px}
+.neutile .name{font-family:var(--serif);font-size:19px;line-height:1.15;margin-top:2px}
+.neuband .kicker{margin:0 0 4px}
+.ptab.ptneu{color:var(--ink)}
+.ptab.ptneu svg{color:var(--khaki-button,#4A4A39)}
+.ghero.neuhero{background:#EDE6DC}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1094,6 +1110,11 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
       <div class="head"><div><h2>Lauras Favorites</h2><p class="sub">Produkte, auf die ich mich immer verlassen kann</p></div>
         <div class="links"><button type="button" class="btn dark" data-go="favoriten">Zu meinen Favorites <span aria-hidden="true">→</span></button></div></div>
       <div class="reelwrap" id="favwrap"><div class="reeltrack" id="favtrack"></div></div>
+    </div>
+    <div class="serie neuband" id="neuband">
+      <div class="head"><div><p class="kicker" id="neuMonat"></p><h2>Neu im Regal</h2><p class="sub">Neuheiten aus Drogerie und Parfümerie, die ich mir angeschaut habe</p></div>
+        <div class="links"><button type="button" class="btn dark" id="neuAlle">Alle Neuheiten ansehen <span aria-hidden="true">→</span></button></div></div>
+      <ul class="neugrid" id="neugrid"></ul>
     </div>
     <div class="serie">
       <div class="head"><div><h2>Haarpflege 1x1</h2><p class="sub">meine Serie auf Instagram und TikTok</p></div>
@@ -1480,6 +1501,10 @@ const TYPES = [
  {id:"tools", label:"Hitze-Tools", by:"nach Gerät", icon:'<path d="M4 9a5 5 0 0 1 9.5-2.2H19a1.5 1.5 0 0 1 0 3h-5.5A5 5 0 0 1 4 9z"/><path d="M8 13l-1 8h3l1-7"/><path d="M21 6.5l1.5-1M21 9.5l1.5 1"/>'},
 ];
 const T = Object.fromEntries(TYPES.map(t=>[t.id,t]));
+/* Neu im Regal (Vorschau 18.10.): Laura pflegt jeden Monat neu.json; die Produkte stehen zusätzlich normal in ihrer Kategorie */
+const NEU = {"monat": "Oktober 2026", "entwurf": true, "hinweis": "Beispiel: Laura wählt jeden Monat die echten Neuheiten aus. Die Produkte stehen zusätzlich normal in ihrer Kategorie.", "text": "Jeden Monat schaue ich mir an, was neu in Drogerie und Parfümerie steht, und nehme die Produkte auf, die ich wirklich nennenswert finde. Fehlt ein Produkt, kommt es entweder noch, oder ich finde andere spannender. Das heißt nicht, dass es schlecht ist.", "produkte": [{"typ": "leavein", "brand": "Dejan Garz", "name": "Leave-In Cream The Sensitive"}, {"typ": "shampoo", "brand": "neboa", "name": "Glossy Hair"}, {"typ": "maske", "brand": "Coco & Eve", "name": "Bond Building Pre-Shampoo Treatment"}, {"typ": "conditioner", "brand": "L'Oréal Paris Elvital", "name": "Dream Length Wonder Water"}, {"typ": "leavein", "brand": "Gisou", "name": "Honey Milk Active Repair Leave-In Conditioner Mist"}, {"typ": "kopfhaut", "brand": "Redken", "name": "Acidic Grow Full Serum"}, {"typ": "oel", "brand": "Wella Professionals", "name": "Oil Reflections Luminous Smoothening Oil"}, {"typ": "shampoo", "brand": "neboa", "name": "Repair & Shine"}]};
+const NEUICO = '<path d="M11 3l1.9 4.9L17.8 9.8l-4.9 1.9L11 16.6l-1.9-4.9L4.2 9.8l4.9-1.9z"/><path d="M18.5 14.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>';
+const neuItems = () => NEU.produkte.map(x => ALL.find(p => p.type === x.typ && p.brand === x.brand && p.name === x.name)).filter(Boolean);
 const PLURAL = {buerste:"Haarbürsten",tools:"Hitze-Tools",shampoo:"Shampoos",maske:"Masken",conditioner:"Conditioner",leavein:"Leave-ins",hitze:"Hitzeschutz-Produkte",oel:"Haaröle",kopfhaut:"Kopfhautprodukte"};
 const DEIN = {buerste:"deine Haarbürste",tools:"dein Hitze-Tool",shampoo:"dein Shampoo",maske:"deine Maske",conditioner:"deinen Conditioner",leavein:"dein Leave-in",hitze:"deinen Hitzeschutz",oel:"dein Haaröl",kopfhaut:"deine Kopfhautpflege"};
 const KOPF_ADJ = {normal:"normale",trocken:"trockene",fettend:"schnell fettende",sensibel:"sensible",juckend:"juckende",schuppen:"schuppige"};
@@ -1512,7 +1537,7 @@ function readHash(){
   const h = location.hash.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
   if(a==="quiz"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"){ state.view = a; if(a==="wissen" && b && (b==="faq" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
-  if(T[a]){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
+  if(T[a] || a === "neu"){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
   const h = state.view==="produkte" ? `#${state.type}.${state.cat}` : (state.view==="wissen" && state.wissen) ? `#wissen.${state.wissen}` : `#${state.view}`;
@@ -1983,7 +2008,7 @@ function itemHtml(p, badge, extra){
 /* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */
 const typesBox = document.getElementById("types");
 function drawTypes(){
-  typesBox.innerHTML = TYPES.map(t => `<button type="button" class="ptab" data-type="${t.id}" aria-current="${!state.q.trim() && state.view==="produkte" && state.type===t.id}">
+  typesBox.innerHTML = `<button type="button" class="ptab ptneu" data-type="neu" aria-current="${!state.q.trim() && state.view==="produkte" && state.type==="neu"}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${NEUICO}</svg><span>Neu</span><span class="n">${neuItems().length}</span></button>` + TYPES.map(t => `<button type="button" class="ptab" data-type="${t.id}" aria-current="${!state.q.trim() && state.view==="produkte" && state.type===t.id}">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${t.icon}</svg>
     <span>${t.label}</span><span class="n">${DATA[t.id].items.length}</span></button>`).join("");
   typesBox.querySelectorAll(".ptab").forEach(b => b.onclick = () => {
@@ -2026,6 +2051,16 @@ function zProdukte(){ if(istAbo()) return; const g = document.querySelector("#gu
   box.querySelectorAll("ul.grid").forEach((u,n) => { if(n > 0) u.remove(); });
   const n = head ? (head.querySelector(".count")||{}).textContent : "";
   zSperre(box, "produkte", n ? `${n} Produkte mit meiner Einschätzung, passend zu deiner Kopfhaut und deinen Haaren.` : "");
+}
+function renderNeu(){
+  let items = neuItems().filter(segOk);
+  let html = `<div class="guide"><div class="ghero neuhero"><div class="ghead"><div><h2>Neu im Regal</h2><div class="sub">${esc(NEU.monat)} · ${neuItems().length} Produkte</div></div></div>
+    <div class="gintro"><p>${esc(NEU.text)}</p>${NEU.entwurf ? `<div class="box">${esc(NEU.hinweis)}</div>` : ""}</div></div>
+    <div class="controls"><div class="crow">${segSwitch()}</div></div>
+    <h3 class="sec">Alle Neuheiten<span class="count">${items.length}</span></h3>`;
+  html += items.length ? `<ul class="grid">${items.map(p => itemHtml(p, T[p.type].label)).join("")}</ul>` : `<p class="empty">In diesem Bereich gibt es diesen Monat nichts Neues.</p>`;
+  guide.innerHTML = html + `</div>`;
+  bindControls();
 }
 function renderGuide(){
   const t = T[state.type], g = DATA[state.type];
@@ -2088,7 +2123,7 @@ function render(){
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
   document.getElementById("subnav").hidden = state.view!=="produkte"; setHH();
-  if(state.view==="produkte"){ state.q.trim() ? renderSearch() : renderGuide(); zProdukte(); }
+  if(state.view==="produkte"){ state.q.trim() ? renderSearch() : state.type === "neu" ? renderNeu() : renderGuide(); zProdukte(); }
   if(state.view==="merkliste") renderMerk();
   if(state.view==="wissen") renderWissen();
   if(state.view==="favoriten") renderFav();
@@ -2215,6 +2250,16 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => draw(mode), 200); });
   draw(mode);
   const ws = document.getElementById("v-wissen");
+})();
+
+/* ---------- Neu im Regal auf der Startseite ---------- */
+(function(){
+  const box = document.getElementById("neugrid"); if(!box) return;
+  document.getElementById("neuMonat").textContent = NEU.monat;
+  const open = () => { state.view = "produkte"; state.type = "neu"; state.cat = "alle"; state.seg = "alle"; state.q = ""; q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); };
+  box.innerHTML = neuItems().slice(0, 8).map(p => `<li><button type="button" class="neutile" aria-label="${esc(p.brand+" "+p.name)}: neu im Regal"><span class="neutag">Neu</span><span class="pic">${p.img ? `<img src="${p.img}" alt="" loading="lazy">` : ""}</span><span class="typ">${esc(T[p.type].label)}</span><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span></button></li>`).join("");
+  box.querySelectorAll(".neutile").forEach(b => b.onclick = open);
+  document.getElementById("neuAlle").onclick = open;
 })();
 /* ---------- Lauras Favorites auf der Startseite: laufende Leiste, Rubriken abwechselnd gemischt ---------- */
 (function(){
