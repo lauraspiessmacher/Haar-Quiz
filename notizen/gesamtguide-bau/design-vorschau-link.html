@@ -367,7 +367,7 @@ html,body{overflow-x:clip}
 @media (max-width:520px){ .favtile{width:150px} .favtile .n{font-size:15.5px} .favtile.cover .t{font-size:21px} }
 
 /* ---------- Hair Journey ---------- */
-.journeylink{display:inline-flex;flex-wrap:wrap;gap:0 6px;margin-top:16px;color:var(--ink);font-size:15px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.journeylink{font:inherit;background:none;border-top:0;border-left:0;border-right:0;cursor:pointer;text-align:left;padding-left:0;padding-right:0;display:inline-flex;flex-wrap:wrap;gap:0 6px;margin-top:16px;color:var(--ink);font-size:15px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
 .journeylink span:first-child{font-family:var(--serif);font-style:italic;font-size:17px}
 .journeylink:hover{opacity:.75}
 .journey{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:40px;align-items:center;margin:48px 0 0}
@@ -1221,7 +1221,7 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
         <h1>Von kaputten zu gesunden Haaren</h1>
         <p class="lead">Hey, ich bin Laura. Auf Instagram nehme ich meine Community mit und zeige ihr, wie sie das Beste aus ihren Haaren herausholt und wie der Weg von geschädigten Haaren zurück zu gesunden Haaren aussehen kann. Hier findet ihr alles an einem Ort: meine Produkteinschätzungen und Empfehlungen, Quizze, mit denen ihr eure Haare besser kennenlernt, und Wissen rund um Haare und die richtige Pflege.</p>
         <div class="btns"><button type="button" class="btn dark" data-go="produkte">Zu den Produkten <span aria-hidden="true">→</span></button><button type="button" class="btn" data-go="quiz">Quiz machen</button><button type="button" class="btn" data-go="favoriten"><span aria-hidden="true">♥</span> Lauras Favorites</button></div>
-        <a class="journeylink" href="https://www.instagram.com/p/DVS6Ig9jeKW/" target="_blank" rel="noopener"><span>Ihr glaubt mir nicht?</span> Schaut euch meine Hair Journey an <span aria-hidden="true">→</span></a>
+        <button type="button" class="journeylink" data-go="ll"><span>Meine Signature-Methode:</span> Die LL-Methode gegen Haarbruch und Spliss <span aria-hidden="true">→</span></button>
       </div>
     </div>
     <div class="promise">

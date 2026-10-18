@@ -431,3 +431,4 @@
 - Vorschau v241: Startseite nach Laura: Hero → Hair Journey („Ihr glaubt mir nicht?“) → So startet ihr (wieder die größere Version von v239) → Kacheln klein mit Symbolen → Neu im Regal (nur 4 Produkte) → Zitat → Favorites → Frage des Monats → Haarpflege 1x1 → Eure Routine (ganz unten).
 - Vorschau v242: Kategorie-Kacheln auf der Startseite entfernt (doppelt zur Leiste oben, Laura fand sie uninteressant).
 - Vorschau v243: Zitat direkt unter den Hero (vor Hair Journey).
+- Vorschau v244: Hero-Link „Ihr glaubt mir nicht?“ ersetzt durch „Meine Signature-Methode: Die LL-Methode gegen Haarbruch und Spliss →“ (führt zur LL-Seite).
