@@ -1,12 +1,21 @@
 {
-  "entwurf": true,
+  "entwurf": false,
   "hinweis": "Beispiel: Laura beantwortet hier jeden Monat drei bis fünf echte Fragen aus der Community. Die Antworten unten sind aus Lauras eigenen Sprachnachrichten zusammengefasst.",
   "fragen": [
-    {"monat": "Oktober 2026", "frage": "Kann ich von Conditioner Haarausfall bekommen?",
-     "antwort": "Nein. Conditioner gebt ihr nur in die Längen und Spitzen, an die Kopfhaut kommt er gar nicht. Haarausfall entsteht aber an der Haarwurzel in der Kopfhaut. Was viele für Haarausfall halten, ist oft Haarbruch, und gegen den hilft Conditioner sogar."},
-    {"monat": "Oktober 2026", "frage": "Warum habe ich im Winter ständig Knoten im Nacken?",
-     "antwort": "Das liegt an Schal und Jacke. Egal ob eure Haare darunter oder darüber liegen: Sobald ihr euch bewegt, reiben sie und verknoten. Tragt die Haare draußen zusammen, zum Beispiel geflochten oder als Dutt, und macht sie drinnen wieder auf. Zieht eure Routine durch und gebt vor dem Rausgehen etwas Haaröl in die Spitzen."},
-    {"monat": "Oktober 2026", "frage": "Reicht im Urlaub ein Shampoo und vielleicht ein Conditioner?",
-     "antwort": "Bitte nicht. Im Urlaub sind eure Haare durch Sonne, Salz- und Chlorwasser mehr strapaziert als sonst. Nehmt eure komplette Routine mit, spült die Haare nach dem Meer mit einer Flasche Wasser aus, tragt sie möglichst zusammen und gönnt ihnen abends eine Maske und euer Leave-in."}
+    {
+      "monat": "Oktober 2026",
+      "frage": "Kann ich von Conditioner Haarausfall bekommen?",
+      "antwort": "Nein. Conditioner gebt ihr nur in die Längen und Spitzen, an die Kopfhaut kommt er gar nicht. Haarausfall entsteht aber an der Haarwurzel in der Kopfhaut. Was viele für Haarausfall halten, ist oft Haarbruch, und gegen den hilft Conditioner sogar."
+    },
+    {
+      "monat": "Oktober 2026",
+      "frage": "Warum habe ich im Winter ständig Knoten im Nacken?",
+      "antwort": "Das liegt an Schal und Jacke. Egal ob eure Haare darunter oder darüber liegen: Sobald ihr euch bewegt, reiben sie und verknoten. Tragt die Haare draußen zusammen, zum Beispiel geflochten oder als Dutt, und macht sie drinnen wieder auf. Zieht eure Routine durch und gebt vor dem Rausgehen etwas Haaröl in die Spitzen."
+    },
+    {
+      "monat": "Oktober 2026",
+      "frage": "Reicht im Urlaub ein Shampoo und vielleicht ein Conditioner?",
+      "antwort": "Bitte nicht. Im Urlaub sind eure Haare durch Sonne, Salz- und Chlorwasser mehr strapaziert als sonst. Nehmt eure komplette Routine mit, spült die Haare nach dem Meer mit einer Flasche Wasser aus, tragt sie möglichst zusammen und gönnt ihnen abends eine Maske und euer Leave-in."
+    }
   ]
 }
