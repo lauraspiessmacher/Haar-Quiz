@@ -891,6 +891,11 @@ html[data-stil="rouje"] .startweg h2,html[data-stil="rouje"] .startweg h2,html[d
 .swliste li{position:relative;background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px}
 .swliste li.sw1{background:var(--ink);color:#F3ECE2;border-color:var(--ink)}
 .swliste li:not(.sw1){border:1.5px solid #382F2E}
+.swtag{position:absolute;top:22px;right:20px;display:inline-flex;align-items:center;gap:5px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.swtag svg{width:12px;height:12px}
+.swtag.frei{background:#F3ECE2;color:#29261F}
+.swtag.abo{background:var(--khaki-button,#4A4A39);color:#F3ECE2}
+html.zg-abo .swtag{display:none}
 .swliste li.sw1 h3{color:#F3ECE2}
 .swliste li.sw1 p{color:#E3D8CB}
 .swliste h3{font-size:24px;line-height:1.1;margin:0}
@@ -1244,9 +1249,9 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
     <div class="startweg" id="startweg">
       <div class="head"><p class="kicker">Neu hier?</p><h2>So startet ihr</h2></div>
       <ol class="swliste">
-        <li class="sw1"><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
-        <li><span class="swn">2</span><h3>Bekommt euren Healthy Hair Plan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Plan →</button></li>
-        <li><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
+        <li class="sw1"><span class="swtag frei">Kostenlos</span><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
+        <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">2</span><h3>Bekommt euren Healthy Hair Plan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Plan →</button></li>
+        <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
       </ol>
     </div>
     <div class="serie neuband" id="neuband">
