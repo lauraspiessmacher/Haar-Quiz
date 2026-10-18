@@ -435,3 +435,10 @@
 - Vorschau v245: „So startet ihr“ Schritt 2 und 3 braun eingerahmt (1.5px #382F2E).
 - Vorschau v246: „So startet ihr“ mit Etiketten: Schritt 1 „Kostenlos“, Schritt 2 und 3 „🔒 Im Abo“ (mit Abo ausgeblendet).
 - Vorschau v247: Fußzeile (dunkelbraun, auf allen Seiten): Marke + Werbelink-Hinweis, Seiten, Rechtliches (Impressum, Datenschutz, AGB, Widerrufsbelehrung, Cookie-Einstellungen, „Verträge hier kündigen“ – alles Platzhalter), Kontakt (Instagram, TikTok, Support & Fragen zum Abo, Kooperationen).
+- Vorschau v248: Neue Produkte von Laura (ZIP 18.10., Sebastian Professional, INCI aus Douglas-Screenshots; Maske-INCI von johnbeerens.com, kein Screenshot dabei). Bilder aus Lauras Einzelfotos freigestellt (nicht aus den Screenshots), gespeichert in notizen/bilder/sebastian-dark-oil/.
+  - Shampoo „Dark Oil Silky Shine Shampoo“ (High-End): SLES+SLS, ohne Silikon → Fettende Kopfhaut, Haar fein bis normal (RANK kraeftig am Ende).
+  - Conditioner „Dark Oil Smooth & Shine Conditioner“: dünn–dick, frizzig/glanzlos, Silikone Amodimethicone + Quaternium-80.
+  - Maske „Dark Oil Smooth & Shine Mask“: normal–dick, trocken/frizzig, Silikon nur in Spuren (Quaternium-80), Parabene.
+  - Leave-in „No Breaker Bonding & Styling Leave-in Cream“: normal–dick, Styling-Creme mit Halt (PVP, Polyquaternium-4), silikonfrei, Hitzeschutz 230 °C; „Bonding“ = Apfelsäure (pH), keine Reparatur.
+  - Öl „Dark Oil“ (gab es schon): nur schärferes Bild.
+  - wirkung.json: 3 Einträge per classify-Regeln ergänzt.

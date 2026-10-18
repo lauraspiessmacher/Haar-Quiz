@@ -2920,5 +2920,36 @@
 "g": 0.72,
 "r": "",
 "p": false
+},
+"conditioner|Sebastian Professional|Dark Oil Smooth & Shine Conditioner": {
+"t": [
+"glaettend"
+],
+"h": 0.08,
+"e": 0.08,
+"g": 0.36,
+"r": "",
+"p": false
+},
+"maske|Sebastian Professional|Dark Oil Smooth & Shine Mask": {
+"t": [
+"feucht"
+],
+"h": 0.08,
+"e": 0.08,
+"g": 0.0,
+"r": "",
+"p": false
+},
+"leavein|Sebastian Professional|No Breaker Bonding & Styling Leave-in Cream": {
+"t": [
+"feucht",
+"glaettend"
+],
+"h": 0.53,
+"e": 0,
+"g": 0.46,
+"r": "",
+"p": false
 }
 }
