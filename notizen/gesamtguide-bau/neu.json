@@ -5,6 +5,11 @@
   "text": "Hier findet ihr alle Produkte, die ich neu in meine Einschätzungen aufgenommen habe: frische Neuheiten aus Drogerie und Parfümerie, aber auch Produkte, die schon länger im Regal stehen und die ich mir jetzt angeschaut habe. Fehlt ein Produkt, kommt es entweder noch, oder ich finde andere spannender. Das heißt nicht, dass es schlecht ist.",
   "produkte": [
     {
+      "typ": "maske",
+      "brand": "Redken",
+      "name": "All Soft All-in Mask"
+    },
+    {
       "typ": "shampoo",
       "brand": "Sebastian Professional",
       "name": "Dark Oil Silky Shine Shampoo"

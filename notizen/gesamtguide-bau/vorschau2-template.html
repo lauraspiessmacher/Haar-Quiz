@@ -1474,6 +1474,8 @@ const T = Object.fromEntries(TYPES.map(t=>[t.id,t]));
 /* Neu im Regal (Vorschau 18.10.): Laura pflegt jeden Monat neu.json; die Produkte stehen zusätzlich normal in ihrer Kategorie */
 const NEU = __NEU__;
 const NEUICO = '<path d="M11 3l1.9 4.9L17.8 9.8l-4.9 1.9L11 16.6l-1.9-4.9L4.2 9.8l4.9-1.9z"/><path d="M18.5 14.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>';
+/* Haartyp-Zeile (haartyp.json): Wellen und Locken hervorheben, ohne andere auszuschließen */
+const HAARTYP = __HAARTYP__;
 const neuItems = () => NEU.produkte.map(x => ALL.find(p => p.type === x.typ && p.brand === x.brand && p.name === x.name)).filter(Boolean);
 const PLURAL = {buerste:"Haarbürsten",tools:"Hitze-Tools",shampoo:"Shampoos",maske:"Masken",conditioner:"Conditioner",leavein:"Leave-ins",hitze:"Hitzeschutz-Produkte",oel:"Haaröle",kopfhaut:"Kopfhautprodukte"};
 const DEIN = {buerste:"deine Haarbürste",tools:"dein Hitze-Tool",shampoo:"dein Shampoo",maske:"deine Maske",conditioner:"deinen Conditioner",leavein:"dein Leave-in",hitze:"deinen Hitzeschutz",oel:"dein Haaröl",kopfhaut:"deine Kopfhautpflege"};
@@ -1528,7 +1530,7 @@ function dickeText(p){
 const ALL = [];
 for(const t of TYPES){
   for(const p of DATA[t.id].items){
-    p.type = t.id; p.mk = (p.von||t.id)+"|"+p.brand+"|"+p.name; /* Hitzeschutz-Produkte teilen sich Merk- und Kaufschlüssel mit Leave-in bzw. Öl */
+    p.type = t.id; p.mk = (p.von||t.id)+"|"+p.brand+"|"+p.name; { const ht = HAARTYP[(p.von||t.id)+"|"+p.brand+"|"+p.name]; if(ht) p.haartyp = ht; } /* Hitzeschutz-Produkte teilen sich Merk- und Kaufschlüssel mit Leave-in bzw. Öl */
     const rep = p.rep ? (Array.isArray(p.rep) ? p.rep.join(" ") : (p.rep.art+" "+p.rep.list.join(" "))) : "";
     const hair = Array.isArray(p.hair) ? p.hair.join(" ") : (p.hair||"");
     p.hay = plain([t.label, p.brand, p.name, p.note||"", p.tip||"", hair, rep, p.wirk||"", p.duft||"", p.art||"", p.hint||"", p.wofuer||"", p.wirkung||"", p.fuer||"", p.anw||"", p.zwei?"2-in-1 Styling Anti-Frizz":"",
@@ -2005,7 +2007,8 @@ function itemHtml(p, badge, extra){
     const h=p.hair;
     if(h){ if(typeof h==="string") body += `<div class="line"><b>Für dein Haar:</b> ${esc(h)}</div>`;
       else if(h[0]==="alle"&&h[1]==="alle") body += `<div class="line"><b>Für dein Haar:</b> alle Haardicken und Haarzustände</div>`;
-      else body += `<div class="line"><b>Haardicke:</b> ${esc(h[0])}</div><div class="line"><b>Haarzustand:</b> ${esc(h[1])}</div>`; }
+      else body += `<div class="line"><b>Haardicke:</b> ${esc(h[0])}</div>${h[1] ? `<div class="line"><b>Haarzustand:</b> ${esc(h[1])}</div>` : ""}`; }
+    if(p.haartyp) body += `<div class="line"><b>Haartyp:</b> ${esc(p.haartyp)}</div>`;
     { const t = p.cats.map(c=>label("shampoo",c)).join(", "); body += `<span class="also${t.length>34?" long":""}">Passt zu: ${t}</span>`; }
   } else if(p.type==="tools"){
     /* Hitze-Tools kurz und knapp (Laura 09.10.): Aufsätze, Gewicht, Leistung/Luftstrom bzw. Temperatur, Gut zu wissen */
