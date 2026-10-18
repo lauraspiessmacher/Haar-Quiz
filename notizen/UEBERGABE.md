@@ -442,3 +442,4 @@
   - Leave-in „No Breaker Bonding & Styling Leave-in Cream“: normal–dick, Styling-Creme mit Halt (PVP, Polyquaternium-4), silikonfrei, Hitzeschutz 230 °C; „Bonding“ = Apfelsäure (pH), keine Reparatur.
   - Öl „Dark Oil“ (gab es schon): nur schärferes Bild.
   - wirkung.json: 3 Einträge per classify-Regeln ergänzt.
+- Vorschau v249: Neu im Regal – die 4 neuen Sebastian-Produkte (Shampoo, Conditioner, Maske, No Breaker) stehen vorne (Startseite zeigt diese 4), danach die 8 bisherigen Beispielprodukte (noch als Beispiel markiert).
