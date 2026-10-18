@@ -652,7 +652,7 @@ body{overflow-x:clip}
 .mythos .mbild{display:block;width:100%;height:auto;pointer-events:none;user-select:none;filter:drop-shadow(0 18px 22px rgba(56,47,46,.10))}
 .mythos .mblatt{position:absolute;left:var(--l);right:var(--r);top:var(--t);bottom:var(--b);display:grid;container-type:inline-size}
 .mythos[data-look="buegel"] .mblatt{--l:16.6%;--r:15.4%;--t:49%;--b:12.2%;transform:rotate(-.35deg)}
-.mythos[data-look="stapel"] .mblatt{--l:13.4%;--r:19.6%;--t:21%;--b:9%}
+.mythos[data-look="stapel"] .mblatt{--l:13.4%;--r:21.5%;--t:21%;--b:9%}
 .mseite{grid-area:1/1;display:flex;flex-direction:column;min-height:0;transition:opacity .45s ease,transform .45s ease}
 .mseite[aria-hidden="true"]{opacity:0;transform:translateY(6px);pointer-events:none;visibility:hidden}
 .mkopf{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#7D7462;margin:0 0 4cqw}
@@ -843,6 +843,30 @@ html[data-stil="rouje"] .favtabs button{font-size:12px;letter-spacing:.14em;text
 .testseit{font-size:12px;color:var(--muted)}
 .testfazit{font-size:14px;line-height:1.45;margin:0 0 8px}
 .testfazit b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+
+/* Reiter am Papierstapel: Mythos oder Fakt / Frage des Monats */
+.mythos{margin-top:34px}
+.mreiter{position:absolute;z-index:2;right:13.4%;top:calc(5% - 30px);display:flex;gap:4px;justify-content:flex-end}
+.mreiter button{font:inherit;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding:9px 13px 14px;border:0;border-radius:8px 8px 0 0;cursor:pointer;
+  background:#DAD9D4;color:#6E6A61;transform:translateY(5px);box-shadow:inset 0 -6px 8px -6px rgba(0,0,0,.18);transition:transform .2s ease,background .2s ease,color .2s ease}
+.mreiter button[aria-selected="true"]{background:#E9E9E7;color:#29261F;transform:none;box-shadow:0 -2px 6px -3px rgba(0,0,0,.2)}
+.mreiter button:hover{color:#29261F}
+@media (max-width:520px){ .mreiter button{font-size:9.5px;padding:8px 9px 13px;letter-spacing:.06em} }
+.mythos.blatt .mblatt{animation:blatt .52s ease}
+@keyframes blatt{0%{transform:none;opacity:1} 45%{transform:translateY(-14px) rotate(-.6deg);opacity:0} 55%{transform:translateY(-14px) rotate(-.6deg);opacity:0} 100%{transform:none;opacity:1}}
+.mqf{font-size:clamp(21px,8.2cqw,32px);margin:0 0 4cqw}
+.mfrage .mtext{margin-bottom:5cqw}
+.mfrage .mbtns{margin-top:0}
+@media (max-width:520px){ .mfrage .mhint{display:none} }
+@media (prefers-reduced-motion:reduce){ .mythos.blatt .mblatt{animation:none} }
+
+.bextras{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:-4px 0 18px}
+.bextras p{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9BCAE}
+.bextras > div{display:flex;flex-wrap:wrap;gap:8px}
+.bextra{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;color:#F3ECE2;background:transparent;border:1px dashed rgba(243,236,226,.4);border-radius:999px;padding:6px 14px 6px 6px;cursor:pointer}
+.bextra:hover{border-style:solid}
+.bextra svg{width:14px;height:14px;opacity:.8}
+.bextra .bhk{width:22px;height:22px}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1602,6 +1626,7 @@ function openBook(card, done){
   setTimeout(() => fly.remove(), 1950);
 }
 const MYLOOK = {stapel:"__MYTHOS_STAPEL__"};
+const FRAGL = __FRAG_LAURA__;
 /* Mythos oder Fakt? (Test 16.10.): Karteikarte oben im Wissen, Behauptungen und Antworten kommen aus dem Kapitel Haarmythen */
 (function(){
   const box = document.getElementById("mythos"), kap = WISSEN.find(w => w.id === "mythen"); if(!box || !kap) return;
@@ -1612,17 +1637,31 @@ const MYLOOK = {stapel:"__MYTHOS_STAPEL__"};
     const satz = text.match(/[^.!?]+[.!?]+/g) || [text]; if(satz.length > 2) text = satz.slice(0,2).join("").trim();
     return {q: h.textContent.trim(), urteil, text, wahr: /^stimmt\b(?! nicht| so nicht| so pauschal nicht)/i.test(urteil) && !/halb/i.test(urteil), halb: /halb|kommt darauf an/i.test(urteil)}; }).filter(Boolean);
   if(!M.length) return;
-  let i = 0;
+  let i = 0, fi = 0, modus = "mythos";
   const look = () => "stapel";
-  const show = () => { const m = M[i], k = look(), kurz = window.innerWidth < 340 ? (m.text.match(/[^.!?]+[.!?]+/) || [m.text])[0] : m.text;
+  const reiter = () => `<div class="mreiter" role="tablist" aria-label="Mythos oder Fakt / Frage des Monats"><button type="button" role="tab" data-modus="mythos" aria-selected="${modus==="mythos"}">Mythos oder Fakt?</button><button type="button" role="tab" data-modus="frage" aria-selected="${modus==="frage"}">Frage des Monats</button></div>`;
+  const bindReiter = () => box.querySelectorAll("[data-modus]").forEach(b => b.onclick = () => { if(modus === b.dataset.modus) return; modus = b.dataset.modus; box.classList.add("blatt"); setTimeout(() => { show(); box.classList.remove("blatt"); }, 260); });
+  const showFrage = () => { const f = FRAGL.fragen[fi] || {frage:"", antwort:""};
+    box.dataset.look = look();
+    box.innerHTML = reiter() + `<img class="mbild" src="${MYLOOK[look()]}" alt="" aria-hidden="true"><div class="mblatt"><div class="mseite mfrage">
+      <div class="mkopf"><span>Frag Laura</span><span class="mnr">${esc(FRAGL.monat)}</span></div>
+      <p class="mq mqf">${esc(f.frage)}</p><p class="mtext">${esc(f.antwort)}</p>
+      <div class="mbtns"><button type="button" class="mbtn dark" id="mFrageStellen">Deine Frage stellen <span aria-hidden="true">→</span></button>${FRAGL.fragen.length > 1 ? `<button type="button" class="mlink" id="mFrageWeiter">Nächste Frage</button>` : ""}</div>
+      ${FRAGL.entwurf ? `<p class="mhint">${esc(FRAGL.hinweis)}</p>` : ""}</div></div>`;
+    bindReiter();
+    box.querySelector("#mFrageStellen").onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } state.view = "bereich"; render(); window.scrollTo({top:0}); setTimeout(() => { const t = document.getElementById("bFrage"); if(t){ t.scrollIntoView({block:"center"}); t.focus({preventScroll:true}); } }, 50); };
+    const w = box.querySelector("#mFrageWeiter"); if(w) w.onclick = () => { fi = (fi + 1) % FRAGL.fragen.length; showFrage(); };
+  };
+  const show = () => { if(modus === "frage"){ showFrage(); return; } const m = M[i], k = look(), kurz = window.innerWidth < 340 ? (m.text.match(/[^.!?]+[.!?]+/) || [m.text])[0] : m.text;
     const nr = n => String(n).padStart(2, "0");
     box.dataset.look = k;
-    box.innerHTML = `<img class="mbild" src="${MYLOOK[k]}" alt="" aria-hidden="true"><div class="mblatt">
+    box.innerHTML = reiter() + `<img class="mbild" src="${MYLOOK[k]}" alt="" aria-hidden="true"><div class="mblatt">
       <div class="mseite mvorne"><div class="mkopf"><span>Mythos oder Fakt?</span><span class="mnr">${nr(i+1)} / ${nr(M.length)}</span></div>
         <p class="mq">${esc(m.q)}</p>
         <div class="mbtns"><button type="button" class="mbtn" data-a="fakt">Stimmt</button><button type="button" class="mbtn" data-a="mythos">Stimmt nicht</button></div><p class="mhint">Tipp auf deine Antwort, ich löse direkt auf.</p></div>
       <div class="mseite mhinten" aria-hidden="true"><p class="mfeed"></p><p class="murteil">${esc(m.urteil)}</p><p class="mtext">${esc(kurz)}</p>
         <div class="mbtns"><button type="button" class="mbtn dark mnext">Nächster Mythos <span aria-hidden="true">→</span></button><button type="button" class="mlink mall">Alle Mythen</button></div></div></div>`;
+    bindReiter();
     const v = box.querySelector(".mvorne"), h = box.querySelector(".mhinten");
     v.querySelectorAll("[data-a]").forEach(b => b.onclick = () => {
       const tip = b.dataset.a, ok = m.halb ? null : (tip === "fakt") === m.wahr;
@@ -1830,7 +1869,7 @@ const NICHT_KOPFHAUT = ["maske","conditioner","leavein","oel","hitze"];
 const HAARAUSFALL_WORT = /haarausfall|haarverlust|hair ?fall|hair ?loss|anti-?chute|pro ?growth|\bgrow\b|wachstum/i;
 function marketingCheck(p){
   if(!NICHT_KOPFHAUT.includes(p.type) || !HAARAUSFALL_WORT.test(p.name)) return "";
-  return `<div class="mcheck"><b>Marketing-Check</b>Das Wort „Haarausfall“ oder „Wachstum“ steht hier, weil das Produkt zu einer Reihe der Marke gehört. Gegen Haarausfall hilft nur, was auf die Kopfhaut kommt. Dieses Produkt pflegst du in Längen und Spitzen, dort kann es Haarbruch mindern, und der wird oft mit Haarausfall verwechselt.</div>`;
+  return `<div class="mcheck"><b>Marketing-Check</b>Das Wort „Haarausfall“ oder „Wachstum“ steht hier, weil das Produkt zu einer Reihe der Marke gehört. Gegen Haarausfall hilft nur, was auf die Kopfhaut kommt. Dieses Produkt pflegt die Längen und Spitzen und kann dort Haarbruch vorbeugen und mindern. Der wird oft mit Haarausfall verwechselt.</div>`;
 }
 function itemHtml(p, badge, extra){
   const tags = p.segment ? [`<span class="tag">${p.segment}</span>`] : [];
@@ -2217,6 +2256,7 @@ function renderBereich(){
     <p>Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt: was deine Ergebnisse bedeuten, deine Grundregeln, dein Wochenplan, deine Einkaufsliste.</p>
     <div class="bprog" role="img" aria-label="${anz} von 4 Schritten erledigt"><span style="width:${anz*25}%"></span></div><p class="bprogt">${anz} von 4 Schritten erledigt</p>
     <ol class="bschritte">${schritte}</ol>
+    <div class="bextras"><p>Macht deinen Plan noch genauer</p><div>${EXTRAS.filter(([k]) => k==="leavein" || k==="spliss").map(([k,l]) => `<button type="button" class="bextra" data-extra="${k}">${haken(st[k])}<span>${l}</span>${istAbo() ? "" : ZSCHLOSS}</button>`).join("")}</div></div>
     <button type="button" class="btn" id="bPlanGo">${offen ? `Weiter mit dem ${offen[1]}` : istAbo() ? "Plan erstellen" : "Plan freischalten"} <span aria-hidden="true">→</span></button></article>
   <article class="bkarte"><h3>Meine Haare</h3>
     ${meSet() || me.wunsch ? `<dl class="bme">${meZeilen.filter(([,v]) => v).map(([l,v]) => `<dt>${l}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : `<p class="bleer">Noch nichts eingestellt. Mach die Checks oder stell deine Haare selbst ein, dann siehst du überall zuerst, was zu dir passt.</p>`}
@@ -2240,6 +2280,7 @@ function renderBereich(){
     <p class="bklein">Vorschau: Konto, Zahlung und Kündigung kommen mit der echten Version.</p></article>`;
   document.getElementById("bPlanGo").onclick = () => offen ? oeffneCheck(offen[0]) : oeffneCheck("routine");
   document.getElementById("bMe").onclick = openMe;
+  box.querySelectorAll("[data-extra]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.extra));
   document.getElementById("bMerk").onclick = () => { if(!istAbo()){ zPaywall("merkliste"); return; } state.view = "merkliste"; render(); window.scrollTo({top:0}); };
   document.getElementById("bFrageGo").onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } const t = document.getElementById("bFrage"); if(!t.value.trim()){ t.focus(); return; } t.value = ""; toast("Vorschau: Deine Frage ist angekommen"); };
   const ab = document.getElementById("bAbo"); if(ab) ab.onclick = () => zPaywall("bereich");
