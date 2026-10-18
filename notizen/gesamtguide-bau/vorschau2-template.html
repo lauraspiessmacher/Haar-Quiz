@@ -886,26 +886,34 @@ html[data-stil="rouje"] .favtabs button{font-size:12px;letter-spacing:.14em;text
 .altbox b{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .altlink{align-self:flex-start;background:none;border:0;padding:0;font:inherit;font-family:var(--serif);font-size:17px;color:var(--ink);text-align:left;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 
-/* ---------- Startseite: So startet ihr ---------- */
-.startweg{margin:56px 0 0}
-html[data-stil="rouje"] .startweg h2,html[data-stil="rouje"] .fdm h2{text-transform:uppercase}
-.startweg .kicker{margin:0 0 4px}
-.startweg h2{font-size:clamp(34px,5vw,54px);margin:0 0 20px}
-.swliste{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;counter-reset:sw}
-@media (max-width:900px){ .swliste{grid-template-columns:1fr;gap:12px} }
-.swliste li{position:relative;background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px}
-.swliste li.sw1{background:var(--ink);color:#F3ECE2;border-color:var(--ink)}
-.swliste li.sw1 h3{color:#F3ECE2}
-.swliste li.sw1 p{color:#E3D8CB}
-.swliste h3{font-size:24px;line-height:1.1;margin:0}
-.swliste p{margin:0;color:var(--muted);font-size:15px}
-.swliste .linkbtn{margin-top:auto;align-self:flex-start;padding-top:6px}
-.swn{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid currentColor;font-size:15px;opacity:.8}
-.swchecks{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.swcheck{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;color:#29261F;background:#F3ECE2;border:0;border-radius:999px;padding:6px 14px 6px 6px;cursor:pointer}
+/* ---------- Startseite: So startet ihr (kompakt) ---------- */
+.startweg{margin:44px 0 0;background:var(--ink);color:#F3ECE2;border-radius:20px;padding:20px 24px;display:grid;grid-template-columns:auto 1fr;gap:10px 28px;align-items:center}
+@media (max-width:900px){ .startweg{grid-template-columns:1fr;padding:18px 18px} }
+.swtitel{margin:0;font-family:var(--serif);font-size:28px;line-height:1.05;color:#F3ECE2}
+.swtitel span{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C9BCAE;margin-bottom:4px}
+html[data-stil="rouje"] .swtitel{text-transform:uppercase}
+.swliste{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:10px}
+@media (max-width:900px){ .swliste{grid-template-columns:1fr;gap:8px} }
+.swliste li{display:flex;align-items:flex-start;gap:12px;border:1px solid rgba(243,236,226,.2);border-radius:14px;padding:12px 14px}
+.swliste b{display:block;font-weight:500;font-size:15px;margin:3px 0 6px}
+.swliste .linkbtn{color:#F3ECE2;font-size:13px;font-weight:400}
+.swn{flex:none;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid rgba(243,236,226,.6);font-size:14px}
+.swchecks{display:flex;flex-wrap:wrap;gap:6px}
+.swcheck{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13px;color:#29261F;background:#F3ECE2;border:0;border-radius:999px;padding:4px 12px 4px 4px;cursor:pointer}
 .swcheck:hover{background:#FFFDFA}
-.swcheck .bhk{border-color:rgba(41,38,31,.4);width:22px;height:22px}
+.swcheck .bhk{border-color:rgba(41,38,31,.4);width:20px;height:20px;font-size:12px}
 .swcheck .bhk.ok{background:var(--khaki-button,#4A4A39);color:#F3ECE2;border-color:var(--khaki-button,#4A4A39)}
+/* Kacheln kurz mit Symbol */
+.offer.kurz{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}
+.offer.kurz li{grid-column:auto !important}
+@media (max-width:959px){ .offer.kurz{grid-template-columns:repeat(2,minmax(0,1fr))} .offer.kurz li:last-child{grid-column:1/-1 !important} }
+.offer.kurz button{position:relative;padding:16px 16px 14px;gap:4px}
+.offer.kurz .oico{display:block;width:28px;height:28px;margin-bottom:6px;color:var(--khaki-button,#4A4A39)}
+.offer.kurz .oico svg{width:100%;height:100%}
+.offer.kurz h3{font-size:20px}
+html[data-stil="rouje"] .offer.kurz h3{font-size:20px}
+.offer.kurz p{font-size:13.5px;line-height:1.4}
+.offer.kurz .go{position:absolute;top:14px;right:16px;padding:0;font-size:16px;letter-spacing:0}
 /* ---------- Versprechen als Zitat ---------- */
 .pquote{margin:0;position:relative}
 .pquote blockquote{margin:0}
@@ -1052,20 +1060,25 @@ html[data-stil="rouje"] .startweg h2,html[data-stil="rouje"] .fdm h2{text-transf
       </div>
     </div>
     <div class="startweg" id="startweg">
-      <div class="head"><p class="kicker">Neu hier?</p><h2>So startet ihr</h2></div>
+      <p class="swtitel"><span>Neu hier?</span> So startet ihr</p>
       <ol class="swliste">
-        <li class="sw1"><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
-        <li><span class="swn">2</span><h3>Bekommt euren Healthy Hair Plan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Plan →</button></li>
-        <li><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
+        <li class="sw1"><span class="swn">1</span><div><b>Drei kostenlose Checks</b><div class="swchecks" id="swChecks"></div></div></li>
+        <li><span class="swn">2</span><div><b>Euer Healthy Hair Plan</b><button type="button" class="linkbtn" id="swPlan">Zum Plan →</button></div></li>
+        <li><span class="swn">3</span><div><b>Eure passenden Produkte</b><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></div></li>
       </ol>
     </div>
-    <ul class="offer">
-      <li><button type="button" data-go="produkte"><h3>Produkte</h3><p>Über 500 Produkte von Shampoo bis Haaröl, dazu Hitzeschutz, Kopfhautpflege, Bürsten und Hitze-Tools. Jedes Produkt habe ich nach seinen Inhaltsstoffen eingeordnet und nach Haardicke und Kopfhauttyp sortiert, damit ihr seht, was wirklich zu euch passt.</p><span class="go">Ansehen →</span></button></li>
-      <li><button type="button" data-go="ll"><h3>LL-Methode</h3><p>Meine Signature-Methode gegen Haarbruch und Spliss: Leave-in-Pflege ins feuchte und ins trockene Haar, damit eure Haare weich und vor allem flexibel bleiben.</p><span class="go">Kennenlernen →</span></button></li>
-      <li><button type="button" data-go="quiz"><h3>Quiz</h3><p>Kurze Checks, die euch zeigen, was eure Haare brauchen: Kopfhaut, Pflege, Haarstruktur und mehr. Daraus entsteht euer Healthy Hair Plan mit Wochenplan.</p><span class="go">Quiz starten →</span></button></li>
-      <li><button type="button" data-go="wissen"><h3>Wissen</h3><p>Aufklärung zu Haarpflegethemen, zu Mythen und zum richtigen Umgang mit euren Haaren, einfach erklärt. Dazu jeden Monat: Frag Laura.</p><span class="go">Lesen →</span></button></li>
-      <li><button type="button" data-go="bereich"><h3>Mein Bereich</h3><p>Euer Plan, eure Haare, eure Merkliste und eure Fragen an mich, alles an einem Ort.</p><span class="go">Öffnen →</span></button></li>
+    <ul class="offer kurz">
+      <li><button type="button" data-go="produkte"><span class="oico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 12h8"/></svg></span><h3>Produkte</h3><p>Über 500 Produkte, nach euren Haaren sortiert</p><span class="go" aria-hidden="true">→</span></button></li>
+      <li><button type="button" data-go="ll"><span class="oico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8c3.4 4.3 5.8 7.4 5.8 10.6a5.8 5.8 0 0 1-11.6 0c0-3.2 2.4-6.3 5.8-10.6z"/><path d="M9.4 14.2a2.7 2.7 0 0 0 2.4 2.6"/></svg></span><h3>LL-Methode</h3><p>Meine Methode gegen Haarbruch und Spliss</p><span class="go" aria-hidden="true">→</span></button></li>
+      <li><button type="button" data-go="quiz"><span class="oico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.3-2.7 4"/><circle cx="12" cy="17.4" r=".6" fill="currentColor"/></svg></span><h3>Quiz</h3><p>Findet heraus, was eure Haare brauchen</p><span class="go" aria-hidden="true">→</span></button></li>
+      <li><button type="button" data-go="wissen"><span class="oico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg></span><h3>Wissen</h3><p>Haarpflege einfach erklärt</p><span class="go" aria-hidden="true">→</span></button></li>
+      <li><button type="button" data-go="bereich"><span class="oico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3c-1.5 5 1.5 10 0 18"/><path d="M12 3c-1.5 5 1.5 10 0 18"/><path d="M16 3c-1.5 5 1.5 10 0 18"/></svg></span><h3>Mein Bereich</h3><p>Euer Plan, eure Merkliste, eure Fragen</p><span class="go" aria-hidden="true">→</span></button></li>
     </ul>
+    <div class="serie neuband" id="neuband">
+      <div class="head"><div><p class="kicker" id="neuMonat"></p><h2>Neu im Regal</h2><p class="sub">Neuheiten aus Drogerie und Parfümerie, die ich mir angeschaut habe</p></div>
+        <div class="links"><button type="button" class="btn dark" id="neuAlle">Alle Neuheiten ansehen <span aria-hidden="true">→</span></button></div></div>
+      <ul class="neugrid" id="neugrid"></ul>
+    </div>
     <div class="promise">
       <figure class="pquote"><span class="bigq" aria-hidden="true">“</span><blockquote><h2>„Meine Einschätzung, nicht die der Marken.“</h2></blockquote><figcaption>Laura</figcaption></figure>
       <div>
@@ -1073,6 +1086,17 @@ html[data-stil="rouje"] .startweg h2,html[data-stil="rouje"] .fdm h2{text-transf
         <p>Ich sage euch auch, wo ein Produkt an seine Grenzen kommt und für wen es nicht passt. So findet ihr heraus, was zu euren Haaren und eurer Kopfhaut passt.</p>
       </div>
     </div>
+    <div class="routine">
+      <h2>Eure Routine</h2>
+      <p class="sub">in sechs Schritten zu geschmeidigen Haaren</p>
+__ROUTINE__
+    </div>
+    <div class="serie favband">
+      <div class="head"><div><h2>Lauras Favorites</h2><p class="sub">Produkte, auf die ich mich immer verlassen kann</p></div>
+        <div class="links"><button type="button" class="btn dark" data-go="favoriten">Zu meinen Favorites <span aria-hidden="true">→</span></button><button type="button" class="btn" id="zumTest">Gerade im Test</button></div></div>
+      <div class="reelwrap" id="favwrap"><div class="reeltrack" id="favtrack"></div></div>
+    </div>
+    <div class="fdm" id="fdm"></div>
     <div class="journey">
       <div class="jcover" aria-label="Platz für das Cover deiner Hair Journey">__JOURNEY_COVER__</div>
       <div>
@@ -1081,22 +1105,6 @@ html[data-stil="rouje"] .startweg h2,html[data-stil="rouje"] .fdm h2{text-transf
         <p>Von meiner frühen Jugend bis heute: Auf Instagram und TikTok zeige ich euch, wie sich meine Haare verändert haben. Auch ich hatte früher große Probleme mit meinen Haaren, weil ich sie falsch behandelt und dadurch stark geschädigt habe. Genau das, was ich euch hier erkläre, habe ich selbst angewandt, und so sind meine Haare wieder gesund geworden.</p>
         <div class="btns"><a class="btn dark" href="__JOURNEY_IG__" target="_blank" rel="noopener">Auf Instagram ansehen <span aria-hidden="true">→</span></a><a class="btn" href="__JOURNEY_TT__" target="_blank" rel="noopener">Auf TikTok ansehen</a></div>
       </div>
-    </div>
-    <div class="routine">
-      <h2>Eure Routine</h2>
-      <p class="sub">in sechs Schritten zu geschmeidigen Haaren</p>
-__ROUTINE__
-    </div>
-    <div class="serie neuband" id="neuband">
-      <div class="head"><div><p class="kicker" id="neuMonat"></p><h2>Neu im Regal</h2><p class="sub">Neuheiten aus Drogerie und Parfümerie, die ich mir angeschaut habe</p></div>
-        <div class="links"><button type="button" class="btn dark" id="neuAlle">Alle Neuheiten ansehen <span aria-hidden="true">→</span></button></div></div>
-      <ul class="neugrid" id="neugrid"></ul>
-    </div>
-    <div class="fdm" id="fdm"></div>
-    <div class="serie favband">
-      <div class="head"><div><h2>Lauras Favorites</h2><p class="sub">Produkte, auf die ich mich immer verlassen kann</p></div>
-        <div class="links"><button type="button" class="btn dark" data-go="favoriten">Zu meinen Favorites <span aria-hidden="true">→</span></button><button type="button" class="btn" id="zumTest">Gerade im Test</button></div></div>
-      <div class="reelwrap" id="favwrap"><div class="reeltrack" id="favtrack"></div></div>
     </div>
     <div class="serie">
       <div class="head"><div><h2>Haarpflege 1x1</h2><p class="sub">meine Serie auf Instagram und TikTok</p></div>
