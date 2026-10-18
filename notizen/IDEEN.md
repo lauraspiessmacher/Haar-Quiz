@@ -45,3 +45,11 @@ Ziel: Die Leute sollen merken, dass sie bei Laura zu vielen Themen eine ehrliche
 - **Freundin werben**: halber Preis für die Freundin + Gratismonat erst nach 2. bezahltem Monat finden wir gut → mit Lauras Mann besprechen.
 - **Reihenfolge**: Mein Bereich (Vorschau) → Healthy Hair Plan durchplanen → Gerade im Test.
 - **Marketingversprechen/Packaging**: ins Wissen. Dazu Hinweis direkt am Produkt, wenn „Haarausfall“ auf einem Produkt steht, das nicht auf die Kopfhaut kommt (Conditioner, Maske, Leave-in, Öl): bringt dagegen nichts, gehört nur zur Reihe der Marke.
+
+## Drogerie-Alternative: Kérastase Insta Glaze Conditioner ↔ Elvital Glycolic Gloss 5 Minuten Haar-Laminierung (Vergleich 18.10.)
+Kérastase-INCI laut beautysense.ca (kanadischer Shop, EU-Packung prüfen): Aqua, Cetearyl Alcohol, Cocamidopropyl Betaine, Behentrimonium Chloride, Propylene Glycol, Amodimethicone, Parfum, Isopropyl Alcohol, Sodium Chloride, Phenoxyethanol, Hydroxypropyl Guar, Ethanolamine, Polyquaternium-37, Limonene, Caprylyl Glycol, Propylene Glycol Dicaprylate/Dicaprate, Cocos Nucifera Oil, Trideceth-6, PPG-1 Trideceth-6, Linalool, Citronellol, Cetrimonium Chloride, Acrylates/Stearyl Methacrylate Copolymer, Sorbitan Oleate, Sodium Hyaluronate, Caprylic/Capric Triglyceride, Lactic Acid, Hexyl Cinnamal, Alpha-Isomethyl Ionone, Glycolic Acid, Citric Acid, EDTA, Rosa Canina Flower Extract.
+Elvital-INCI: siehe lauras-favorites.md.
+- Die ersten 6 Inhaltsstoffe identisch und in gleicher Reihenfolge (Wasser, Cetearyl Alcohol, Cocamidopropyl Betaine, Behentrimonium Chloride, Propylene Glycol, Amodimethicone). Gleiche Pflegepolymere (Hydroxypropyl Guar, Polyquaternium-37, Acrylates-Copolymer, Cetrimonium Chloride), Glykolsäure bei beiden ganz hinten.
+- Unterschiede nur in Spuren: Kérastase zusätzlich Hyaluron, Milchsäure, Triglyceride, Wildrosenextrakt (alle hinter dem Parfum). Elvital mit Farbstoffen, Kokosöl etwas weiter vorne.
+- Fazit: praktisch dieselbe Formel. Die „Laminierung“ ist von der Formel her ein Conditioner. Gleiche Einwirkzeit = gleiche Wirkung; die 5 Minuten stehen nur in der Gebrauchsanweisung.
+- Offen (Laura): als Paar aufnehmen? Elvital-Laminierung zu den Conditionern umsortieren?
