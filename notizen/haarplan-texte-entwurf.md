@@ -245,7 +245,7 @@ Die Produkte setzt die Seite automatisch ein. Darüber steht:
 
 > Das sind die Produkte, die zu deinen Ergebnissen passen. Du musst nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.
 
-**Vorschlag (noch offen):** Pro Produktart steht oben **eine erste Wahl**, das Produkt, das am besten zu deinen Ergebnissen passt, egal ob Drogerie oder High-End. Darunter stehen **zwei Alternativen**, mindestens eine aus der Drogerie und eine High-End, von anderen Marken. Ganz unten kommt ein Link „Alle passenden ansehen“, der direkt zur gefilterten Produktliste führt.
+**Entschieden (Laura 19.10.: „top“):** Pro Produktart steht oben **eine erste Wahl**, das Produkt, das am besten zu deinen Ergebnissen passt, egal ob Drogerie oder High-End. Darunter stehen **zwei Alternativen**, mindestens eine aus der Drogerie und eine High-End, von anderen Marken. Ganz unten kommt ein Link „Alle passenden ansehen“, der direkt zur gefilterten Produktliste führt.
 
 ---
 
