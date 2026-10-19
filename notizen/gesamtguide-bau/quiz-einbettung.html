@@ -13,10 +13,10 @@
   const QUIZ = __QUIZ_JSON__;
   const NAMES = {"quiz-kopfhaut.html":"Kopfhaut-Check","quiz-pflege.html":"Pflege-Check","quiz-haar.html":"Haar-Check","quiz-routine.html":"Routine-Check","quiz-tools.html":"Hitze-Tool-Check","quiz-schnitt.html":"Haarschnitt-Check","quiz-spliss.html":"Spliss- & Bruch-Check","quiz-leavein.html":"Leave-in-Check"};
   const box = document.getElementById("qover"), fr = document.getElementById("qframe");
-  let back = null;
-  function open(f){ back = document.activeElement; fr.srcdoc = QUIZ[f]; document.getElementById("qname").textContent = NAMES[f] || "";
+  let back = null, offen = "";
+  function open(f){ back = document.activeElement; offen = f; fr.srcdoc = QUIZ[f]; document.getElementById("qname").textContent = NAMES[f] || "";
     box.dataset.open = "1"; document.documentElement.style.overflow = "hidden"; document.getElementById("qclose").focus(); }
-  function close(){ box.dataset.open = "0"; fr.srcdoc = ""; document.documentElement.style.overflow = ""; if(back) back.focus(); }
+  function close(){ box.dataset.open = "0"; fr.srcdoc = ""; document.documentElement.style.overflow = ""; if(back) back.focus(); window.dispatchEvent(new CustomEvent("quizzu", {detail:offen})); }
   window.closeQuiz = () => { if(box.dataset.open === "1") close(); };
   window.openQuiz = f => { if(!QUIZ[f]) return false; open(f); return true; };
   document.getElementById("qclose").onclick = close;
