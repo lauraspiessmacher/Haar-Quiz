@@ -156,8 +156,8 @@ const Q = [
 
 /* ---------- Texte ---------- */
 const TH = [
- {name:"Feines Haar", key:"fein",
-  text:"Deine einzelnen Haare haben einen kleinen Durchmesser und werden schnell beschwert. Das hat nichts damit zu tun, wie viele Haare du hast, auch viele feine Haare fallen schnell platt. Für dich passt Pflege mit leichter Reichhaltigkeit, zum Beispiel Leave-in-Sprays, leichte Leave-in-Seren, leichte Conditioner und Wonder Water.",
+ {name:"Dünnes Haar", key:"duenn",
+  text:"Deine einzelnen Haare haben einen kleinen Durchmesser und werden schnell beschwert. Das hat nichts damit zu tun, wie viele Haare du hast, auch viele dünne Haare fallen schnell platt. Für dich passt Pflege mit leichter Reichhaltigkeit, zum Beispiel Leave-in-Sprays, leichte Leave-in-Seren, leichte Conditioner und Wonder Water. Es gibt auch noch feineres Haar, umgangssprachlich Feenhaar. Ist dir selbst das, was hier steht, noch zu schwer, gehörst du wahrscheinlich dazu. Dann achtest du noch genauer auf ganz leichte Texturen und nimmst noch weniger Produkt.",
   cond:"ein Conditioner mit leichter Reichhaltigkeit oder ein Wonder Water. Das ist ein flüssiger Conditioner, der dein Haar pflegt, ohne es zu beschweren",
   leave:"ein Leave-in-Spray oder ein leichtes Leave-in-Serum mit leichter Reichhaltigkeit", oil:"ein Trockenöl, das sich beim Verteilen in den Händen fast trocken anfühlt",
   no:"Reichhaltige Pflege am Ansatz und zu viel Produkt auf einmal."},
@@ -167,7 +167,7 @@ const TH = [
   leave:"eine Leave-in-Lotion oder eine leichte Leave-in-Creme mit mittlerer Reichhaltigkeit", oil:"ein normales Haaröl",
   no:"Immer zum reichhaltigsten Produkt greifen, auch wenn deine Haare sich mit leichteren wohlfühlen."},
  {name:"Dickes Haar", key:"dick",
-  text:"Deine einzelnen Haare haben einen großen Durchmesser, schlucken viel Pflege und werden kaum beschwert. Für dich passt Pflege mit hoher Reichhaltigkeit, zum Beispiel Leave-in-Cremes, reichhaltige Conditioner und Masken. Wenig Haare zu haben heißt übrigens nicht, dass sie fein sind, auch wenige dicke Haare vertragen viel Pflege.",
+  text:"Deine einzelnen Haare haben einen großen Durchmesser, schlucken viel Pflege und werden kaum beschwert. Für dich passt Pflege mit hoher Reichhaltigkeit, zum Beispiel Leave-in-Cremes, reichhaltige Conditioner und Masken. Wenig Haare zu haben heißt übrigens nicht, dass sie fein sind, auch wenige dicke Haare vertragen viel Pflege. Und es gibt noch eine Stufe darüber, sehr dickes Haar. Ist dir selbst das, was hier steht, noch zu leicht, gehörst du wahrscheinlich dazu. Dann brauchst du richtig nährende Texturen wie sehr reichhaltige Cremes und Buttern.",
   cond:"ein Conditioner mit hoher Reichhaltigkeit",
   leave:"eine Leave-in-Creme mit hoher Reichhaltigkeit", oil:"ein reichhaltigeres Haaröl, das sich ruhig cremig oder ölig anfühlen darf",
   no:"Nur mit leichten Sprays pflegen, wenn sich deine Längen trotzdem rau anfühlen."}
@@ -175,11 +175,11 @@ const TH = [
 const ST = [
  {name:"gesund", text:"Deine Haare sind in gutem Zustand. Bei dir geht es um Vorbeugung: Halte sie flexibel und geschmeidig, damit Reibung im Alltag, nachts und beim Styling möglichst wenig anrichtet.",
   mask:"Feuchtigkeitsmasken", no:"Die Pflege weglassen, weil die Haare ja gesund sind. Gerade mit Pflege bleiben sie es."},
- {name:"beansprucht", text:"Deine Haare zeigen erste Spuren von Chemie, Hitze oder Reibung. Jetzt lohnt sich regelmäßige Pflege, damit aus beansprucht nicht strapaziert wird. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Baumwoll-Viskose und als Rundumschutz eine Seidenhaube.",
+ {name:"beansprucht", text:"Deine Haare zeigen erste Spuren von Chemie, Hitze oder Reibung. Jetzt lohnt sich regelmäßige Pflege, damit aus beansprucht nicht strapaziert wird. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Bambusviskose und als Rundumschutz eine Seidenhaube.",
   mask:"Feuchtigkeits- und Repair-Masken im Wechsel", no:"Hitze ohne Hitzeschutz, aggressives Bürsten und Entwirren von oben nach unten, weil die Knoten so in Längen und Spitzen rutschen und dort abbrechen."},
- {name:"stark strapaziert", text:"Deine Haare sind deutlich geschädigt. Sie brauchen jetzt intensive Pflege, einen sanften Umgang und möglichst wenig neue Belastung durch Hitze und Chemie. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Baumwoll-Viskose und als Rundumschutz eine Seidenhaube.",
+ {name:"stark strapaziert", text:"Deine Haare sind deutlich geschädigt. Sie brauchen jetzt intensive Pflege, einen sanften Umgang und möglichst wenig neue Belastung durch Hitze und Chemie. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Bambusviskose und als Rundumschutz eine Seidenhaube.",
   mask:"Repair- oder Bond-Repair-Masken im Wechsel mit Feuchtigkeitsmasken", no:"Neue Blondierungen oder Glättungen, bevor sich die Haare erholt haben, Hitze ohne Schutz, aggressives Bürsten und Entwirren von oben nach unten, weil die Knoten so in Längen und Spitzen rutschen und dort abbrechen."},
- {name:"strukturell stark geschädigt", text:"Wenn sich nasse Haare wie Gummi dehnen, ist das Innere des Haares so angegriffen, dass es kaum noch Halt hat. Kein Produkt macht diese Längen wieder wie vorher, jetzt geht es um Schadensbegrenzung. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Baumwoll-Viskose und als Rundumschutz eine Seidenhaube.",
+ {name:"strukturell stark geschädigt", text:"Wenn sich nasse Haare wie Gummi dehnen, ist das Innere des Haares so angegriffen, dass es kaum noch Halt hat. Kein Produkt macht diese Längen wieder wie vorher, jetzt geht es um Schadensbegrenzung. Zum sanften Umgang gehört auch die Nacht: eine lockere Schlaffrisur, ein Kissenbezug aus Seide oder Bambusviskose und als Rundumschutz eine Seidenhaube.",
   mask:"Repair- oder Bond-Repair-Masken im Wechsel mit Feuchtigkeitsmasken", no:"Jede weitere Chemie und Hitze, bis die geschädigten Längen geschnitten sind, und jedes Ziehen an den nassen Haaren."}
 ];
 const MASK = [ // [Zustand][Dicke]
@@ -190,7 +190,7 @@ const MASK = [ // [Zustand][Dicke]
 ];
 const AMOUNT = ["eher wenig","eine mittlere Menge","eher mehr"];
 const FTXT = {
- open:"Schlaf mit einer lockeren Schlaffrisur auf einem Kissenbezug aus Seide oder Baumwoll-Viskose. Rundum geschützt sind deine Haare mit einer Seidenhaube.",
+ open:"Schlaf mit einer lockeren Schlaffrisur auf einem Kissenbezug aus Seide oder Bambusviskose. Rundum geschützt sind deine Haare mit einer Seidenhaube.",
  wet:"Geh nicht mit nassen Haaren ins Bett, denn nass sind sie am empfindlichsten.",
  brush:"Bürste sanft und starte immer in den Spitzen, dann arbeitest du dich nach oben, damit du keine Knoten in die Längen ziehst. Hast du viele Knoten, entwirrst du am besten im trockenen Haar. Willst du nass oder feucht entwirren, dann nur mit einem Leave-in und einer Entwirrbürste.",
  towel:"Drück deine Haare mit einem Mikrofaserhandtuch oder Turban aus, statt sie zu rubbeln.",
@@ -287,7 +287,7 @@ function result(){
 
   try { const all = JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; all.pflege = {th, st, laenge:["kinn","schulter","brust","lang"][picks[4]], chem:(picks[5]||[]).map(i=>["gefaerbt","blond","chemie","nichts"][i]), hitze:["selten","manchmal","taeglich"][picks[6]], zustand:["weich","trocken","strohig","gummi"][picks[8]], spliss:["kaum","spliss","bruch"][picks[9]]}; localStorage.setItem("quizErgebnisse", JSON.stringify(all)); } catch(e){}
   const mismatch =
-    (th===0 && st>=2) ? `<div class="box"><h3>Feines Haar mit starken Schäden</h3><p>Du brauchst Repair, aber reichhaltige Produkte machen dein Haar platt. Greif zu leichten Repair-Produkten wie Leave-in-Sprays oder leichten Leave-in-Seren, gib die Maske nur in Längen und Spitzen oder als Pflege vor dem Shampoo und arbeite lieber mit mehreren kleinen Mengen.</p></div>` :
+    (th===0 && st>=2) ? `<div class="box"><h3>Dünnes Haar mit starken Schäden</h3><p>Du brauchst Repair, aber reichhaltige Produkte machen dein Haar platt. Greif zu leichten Repair-Produkten wie Leave-in-Sprays oder leichten Leave-in-Seren, gib die Maske nur in Längen und Spitzen oder als Pflege vor dem Shampoo und arbeite lieber mit mehreren kleinen Mengen.</p></div>` :
     (th===2 && st===0) ? `<div class="box"><h3>Reichhaltig darf, muss aber nicht</h3><p>Reichhaltige Pflege ist bei dir möglich, aber kein Muss. Wenn sich deine Haare mit leichteren Produkten gut anfühlen, bleib ruhig dabei.</p></div>` : "";
 
   const gumBox = st===3 ? `<div class="box warn"><h3>Was du jetzt tun kannst</h3><p>Pausiere Hitze-Tools wie Glätteisen und Lockenstab und chemische Behandlungen. Föhnen auf mittlerer und kalter Stufe mit Hitzeschutz ist okay. Pflege im Wechsel mit Bond Repair und Feuchtigkeit, entwirre nur ganz sanft und lass dich beim Friseur beraten, wie viel von den geschädigten Längen ab muss. Kein Produkt macht diese Längen wieder wie vorher, aber gute Pflege schützt den Rest und das nachwachsende Haar.</p></div>` : "";

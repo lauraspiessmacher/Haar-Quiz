@@ -152,7 +152,7 @@ if(PREV.kopfhaut) PRE.kopf = [{N:"normal",F:"fettend",T:"trocken",S:"sensibel",S
 else if(ME.kopf) PRE.kopf = [ME.kopf === "juckend" ? "sensibel" : ME.kopf, "„Meine Haare“"];
 if(ME.dicke) PRE.dicke = [ME.dicke, "„Meine Haare“"];
 if(ME.wunsch) PRE.wunsch = [ME.wunsch, "„Meine Haare“"];
-else if(PREV.pflege) PRE.dicke = [["fein","normal","dick"][PREV.pflege.th], "deinem Pflege-Check"];
+else if(PREV.pflege) PRE.dicke = [["duenn","normal","dick"][PREV.pflege.th], "deinem Pflege-Check"];
 if(PREV.haar) PRE.struktur = [{G1:"glatt",GT:"glatt",W:"wellig",L:"lockig",E:"lockig"}[PREV.haar.key], "deinem Haar-Check"];
 if(PREV.pflege){
   const P = PREV.pflege, src = "deinem Pflege-Check";

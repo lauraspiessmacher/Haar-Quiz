@@ -1,4 +1,4 @@
-# Haarplan: Textentwürfe zum Gegenlesen (Entwurf 19.10.)
+# Haarplan: Textentwürfe zum Gegenlesen (Entwurf 19.10., 2. Fassung mit Lauras Anmerkungen)
 
 Alles in „du“, weil der Plan persönlich ist. Grundlage sind die schon geprüften Quiz-Ergebnisse, nur stark gekürzt. Die ausführlichen Ergebnisse bleiben in den Quizzen. Im Plan kommt alles noch einmal gebündelt und einfach.
 
@@ -36,18 +36,22 @@ Pro Ergebnis gibt es einen Satz „Das heißt für dich“ und drei Punkte „Da
 **Normale Kopfhaut**
 Deine Kopfhaut ist ausgeglichen, du hast beim Shampoo die größte Auswahl.
 - Du wählst dein Shampoo nach deinem Haarwunsch: Glanz, Volumen oder Feuchtigkeit.
+- Du shampoonierst zweimal.
 - Ein- bis zweimal im Monat machst du eine Tiefenreinigung, je nachdem, wie viel Styling du benutzt.
 - Ein Anti-Schuppen- oder Tiefenreinigungsshampoo nimmst du nicht als Alltagsshampoo.
 
 **Fettige Kopfhaut**
 Deine Talgdrüsen arbeiten fleißig. Kein Shampoo kann das abstellen, es nimmt den Talg nur gründlich weg.
 - Du nimmst ein Shampoo mit kräftigerer Reinigung und massierst es nur auf der Kopfhaut ein.
+- Du shampoonierst zweimal: zuerst mit deinem kräftigen Shampoo, dann mit einem Sensitiv-Shampoo.
+- [Wenn du dreimal pro Woche oder öfter wäschst:] Bei ein bis zwei Wäschen pro Woche nimmst du nur das Sensitiv-Shampoo. Sonst kann deine Kopfhaut trotz Talg austrocknen.
 - Pflege kommt nur in die Längen und Spitzen, nichts Reichhaltiges an den Ansatz.
 - Ein- bis zweimal im Monat machst du eine Tiefenreinigung, bei viel Trockenshampoo auch einmal pro Woche.
 
 **Trockene Kopfhaut**
 Deine Kopfhaut bildet wenig Talg oder ihre Schutzbarriere ist gerade geschwächt. Deshalb spannt sie manchmal.
 - Du nimmst ein sanftes Shampoo, gern mit Glycerin, Panthenol oder Urea.
+- Du shampoonierst zweimal. Ist deine Kopfhaut sehr trocken, reicht einmal, dafür lässt du das Shampoo kurz einwirken.
 - Du wäschst lauwarm statt heiß.
 - Trockenshampoo benutzt du nicht viele Tage hintereinander.
 
@@ -55,27 +59,34 @@ Deine Kopfhaut bildet wenig Talg oder ihre Schutzbarriere ist gerade geschwächt
 Deine Kopfhaut reagiert schnell mit Brennen, Rötung oder Jucken, entweder immer oder gerade jetzt.
 - Du nimmst ein Sensitiv-Shampoo, am besten ohne oder mit wenig Parfum.
 - Neue Produkte testest du erst an einer kleinen Stelle.
+- Du shampoonierst zweimal. Ist deine Kopfhaut sehr empfindlich, reicht einmal, dafür lässt du das Shampoo kurz einwirken.
 - Menthol, Pfefferminz- und Teebaumöl lässt du weg.
 
 **Schuppige Kopfhaut, trocken**
-Du hast feine, weiße Flocken. Oft ist das eine trockene Kopfhaut, manchmal eine leichte Form von Schuppen.
-- Zuerst benutzt du zwei bis drei Wochen ein mildes Feuchtigkeits- oder Sensitiv-Shampoo.
-- Wird es nicht besser, wechselst du zu einem milden Anti-Schuppen-Shampoo.
+Du hast feine, weiße Flocken. Das können Trockenheitsschüppchen sein oder eine leichte Form von echten Schuppen. Die beiden sehen sich sehr ähnlich.
+- Zuerst testest du zwei bis drei Wochen ein mildes Feuchtigkeits- oder Sensitiv-Shampoo. Verschwinden die Flocken, war es Trockenheit, zum Beispiel weil dein altes Shampoo zu stark gereinigt hat.
+- Bleiben sie, sind es wahrscheinlich echte Schuppen. Dann wechselst du zu einem milden Anti-Schuppen-Shampoo.
+- Du shampoonierst zweimal, außer deine Kopfhaut ist sehr trocken.
 - Du kratzt nicht und wäschst nicht heiß.
 
 **Schuppige Kopfhaut, fettig**
 Du hast größere, gelbliche Schuppen, die an der Kopfhaut haften. Meist spielt ein Hefepilz mit, der sich von Talg ernährt.
 - Du benutzt regelmäßig ein Anti-Schuppen-Shampoo und lässt es so lange einwirken, wie es auf der Packung steht.
+- Du shampoonierst zweimal: zuerst mit einem normalen Shampoo, dann mit dem Anti-Schuppen-Shampoo. So kommt der Wirkstoff auf eine saubere Kopfhaut.
 - Öl kommt nicht auf die Kopfhaut. In den Längen ist es kein Problem.
 - Wird es nach etwa vier Wochen nicht besser, gehst du zum Hautarzt.
 
+**Für alle Kopfhauttypen** (ein Satz unter dem Ergebnis)
+Für deine Kopfhaut gibt es auch eine passende Kopfhautpflege: [Produktart]. Sie ist ein Extra. Dein Plan funktioniert auch ohne sie, weil dein Shampoo-Rhythmus schon darauf achtet, dass deine Kopfhaut nicht austrocknet.
+
 ### Haardicke (aus dem Pflege-Check)
 
-**Feines Haar**
-Deine einzelnen Haare sind dünn und werden schnell beschwert.
+**Dünnes Haar** (bisher „Feines Haar“, im Pflege-Check schon umbenannt)
+Deine einzelnen Haare haben einen kleinen Durchmesser und werden schnell beschwert.
 - Du nimmst leichte Pflege: Leave-in-Spray, leichtes Serum, leichten Conditioner oder Wonder Water.
 - Du nimmst lieber wenig Produkt und legst bei Bedarf nach.
 - Reichhaltiges kommt nie an den Ansatz.
+- Es gibt auch noch feineres Haar, umgangssprachlich Feenhaar. Ist dir selbst das hier noch zu schwer, gehörst du wahrscheinlich dazu. Dann achtest du noch genauer auf ganz leichte Texturen und nimmst noch weniger Produkt.
 
 **Mittelstarkes Haar**
 Deine Haare vertragen die meisten Produkte.
@@ -88,6 +99,7 @@ Deine einzelnen Haare sind dick, schlucken viel Pflege und werden kaum beschwert
 - Du nimmst reichhaltige Pflege: Leave-in-Creme, reichhaltigen Conditioner und eine Maske.
 - Du darfst ruhig mehr Produkt nehmen.
 - Fühlen sich deine Längen trotz Spray rau an, steigst du auf eine Creme um.
+- Es gibt noch eine Stufe darüber, sehr dickes Haar. Ist dir selbst das hier noch zu leicht, gehörst du wahrscheinlich dazu. Dann brauchst du richtig nährende Texturen wie sehr reichhaltige Cremes und Buttern.
 
 ### Haarzustand (aus dem Pflege-Check)
 
@@ -101,17 +113,17 @@ Deinen Haaren geht es gut. Bei dir geht es ums Vorbeugen.
 Deine Haare zeigen erste Spuren von Chemie, Hitze oder Reibung.
 - Du machst [Maskenrhythmus] eine Maske, Feuchtigkeit und Repair im Wechsel.
 - Du benutzt immer Hitzeschutz und entwirrst von den Spitzen nach oben.
-- Nachts trägst du eine lockere Frisur auf Seide oder Baumwoll-Viskose.
+- Nachts trägst du eine lockere Frisur auf Seide oder Bambusviskose.
 
 **Stark strapaziert**
 Deine Haare sind deutlich geschädigt. Jetzt zählen intensive Pflege und so wenig neue Belastung wie möglich.
-- Bei jeder Wäsche machst du eine Repair- oder Bond-Repair-Maske, im Wechsel mit Feuchtigkeit.
+- Bei jeder Wäsche machst du eine Maske, und zwar abwechselnd: einmal Repair oder Bond Repair, einmal Feuchtigkeit. So bleibt die Balance, und deine Haare werden nicht steif.
 - Blondierung und Glättung machen jetzt Pause.
 - Hitze nimmst du runter und benutzt sie nur mit Schutz.
 
 **Strukturell stark geschädigt**
 Deine nassen Haare dehnen sich wie Gummi, das Innere hat kaum noch Halt. Kein Produkt macht diese Längen wieder wie vorher.
-- Jetzt geht es um Schadensbegrenzung: Bond-Repair, ganz sanfter Umgang und kein Ziehen an nassen Haaren.
+- Jetzt geht es um Schadensbegrenzung: bei jeder Wäsche eine Maske, abwechselnd Bond Repair und Feuchtigkeit, dazu ganz sanfter Umgang und kein Ziehen an nassen Haaren.
 - Keine Chemie und keine Hitze, bis die kaputten Längen geschnitten sind.
 - Mit deiner Friseurin planst du, wie viel nach und nach ab muss.
 
@@ -120,32 +132,32 @@ Deine nassen Haare dehnen sich wie Gummi, das Innere hat kaum noch Halt. Kein Pr
 **Glatt und seidig**
 Deine Haare glänzen von Natur aus. Der Talg wandert leicht in die Längen, deshalb wirken sie schneller strähnig.
 - Pflege kommt nur in die Längen und Spitzen, in leichten Texturen.
-- Dein Leave-in gibst du ins feuchte Haar.
+- Dein Leave-in gibst du nach dem Waschen ins feuchte Haar, damit die Pflegestoffe einziehen, und zwischen den Wäschen in die trockenen Längen.
 - Locken vom Lockenstab lässt du vor dem Lösen auskühlen.
 
 **Glatt mit Textur**
 Deine Haare sind glatt, haben aber mehr Griff, etwas Frizz und manchmal einen leichten Schwung.
-- Glättende Pflege ist dein bester Freund, Leave-in nach jeder Wäsche.
+- Glättende Pflege ist dein bester Freund: Leave-in nach jeder Wäsche ins feuchte Haar und zwischen den Wäschen in die trockenen Längen.
 - Du drückst deine Haare mit einem Mikrofaserhandtuch aus, statt sie zu rubbeln.
 - Willst du einen glatten Look, lässt du sie nicht ohne Pflege an der Luft trocknen.
 
 **Wellig**
 Deine Haare bilden S-förmige Wellen, die schnell beschwert oder durch Bürsten aufgelöst werden.
 - Du entwirrst unter der Dusche, solange der Conditioner drin ist.
-- Du drückst deine Haare aus, statt sie zu rubbeln, und gibst dein Leave-in ins feuchte Haar.
+- Du drückst deine Haare aus, statt sie zu rubbeln, und gibst dein Leave-in ins feuchte Haar. Zwischen den Wäschen frischst du deine Wellen mit etwas Leave-in auf.
 - Du bürstest sie nicht trocken.
 
 **Lockig**
 Deine Locken sind in den Längen oft trockener und empfindlicher gegen Reibung.
-- Leave-in gehört bei dir zur Basis.
+- Leave-in gehört bei dir zur Basis: nach jeder Wäsche ins feuchte Haar und zwischen den Wäschen in die trockenen Längen.
 - Du entwirrst nur mit Conditioner und arbeitest dich von den Spitzen nach oben.
-- Nachts schützen Satin oder Seide deine Locken.
+- Du drückst deine Locken mit einem Mikrofaserhandtuch oder T-Shirt aus, statt sie zu rubbeln.
 
 **Eng gelockt**
 Deine Haare bilden sehr enge Spiralen und können an den Biegungen leicht brechen.
 - Feuchtigkeit und Schutz vor Reibung kommen bei dir zuerst.
 - Du entwirrst in Abschnitten und mit viel Conditioner.
-- Schutzfrisuren sind deine Freunde, Hitze gibt es nur selten.
+- Schutzfrisuren sind bei dir das A und O. Hitze gibt es nur selten.
 
 ### Wunsch (aus dem Routine-Check)
 
@@ -158,13 +170,13 @@ Glanz kommt von einer glatten Haaroberfläche.
 **Volumen**
 Volumen entsteht am Ansatz, nicht in den Längen.
 - Pflege kommt nur in die Längen.
-- Du föhnst den Ansatz gegen die Wuchsrichtung.
+- Du föhnst den Ansatz über Kopf oder hebst ihn beim Föhnen mit einem Kamm oder einer Rundbürste an.
 - Du nimmst lieber leichte Produkte und weniger davon.
 
 **Wellen und Locken betonen**
 Definierte Wellen und Locken brauchen Feuchtigkeit und Ruhe.
-- Du gibst dein Leave-in und dein Stylingprodukt ins nasse Haar.
-- Du trocknest mit dem Diffusor oder an der Luft und fasst die Haare dabei möglichst wenig an.
+- Du knetest dein Leave-in und dein Stylingprodukt ins nasse Haar, von den Spitzen Richtung Ansatz (das nennt man Scrunchen).
+- Dann trocknest du mit dem Diffusor oder an der Luft und lässt die Haare in Ruhe, bis sie ganz trocken sind. Hast du ein Gel benutzt, knetest du die feste Schicht danach sanft aus den Haaren.
 - Du bürstest trockene Wellen und Locken nicht durch.
 
 ---
@@ -172,7 +184,7 @@ Definierte Wellen und Locken brauchen Feuchtigkeit und Ruhe.
 ## 2. Dein Wochenplan
 Kommt aus dem Routine-Check, wie bisher. Darunter steht ein Satz:
 
-> Das ist kein Plan für zwei Wochen. Das ist dein Plan für ab jetzt.
+> Das ist kein Plan für zwei Wochen. Das ist dein Plan für die nächsten Monate, und wenn er dir guttut, auch für die nächsten Jahre. Deine Produkte darfst du wechseln, und dein Haarzustand kann sich verändern. Aber die Basics bleiben immer: wenig Reibung, Hitze mit Maß, Pausen bei chemischen Behandlungen, und jede Wäsche endet mit Pflege.
 
 ---
 
@@ -183,7 +195,7 @@ Kommt aus dem Routine-Check, wie bisher. Darunter steht ein Satz:
 **Was du tust**
 - Deinen Wochenplan, und zwar dauerhaft.
 - Jeden Tag die LL-Methode: Leave-in nach dem Waschen ins feuchte Haar und ein- bis zweimal am Tag in die trockenen Längen. Dein Leave-in: [Produktart aus dem Pflege-Check].
-- Jede Wäsche endet mit Pflege, nie nur mit Shampoo.
+- Jede Wäsche endet mit Pflege (Conditioner oder Maske), nie nur mit Shampoo. Shampoo reinigt, es pflegt nicht.
 - Du hältst die Reibung klein: von den Spitzen nach oben bürsten, ausdrücken statt rubbeln, nachts locker zusammen.
 - Schaffst du an einem Tag nicht alles, nimmst du wenigstens etwas Leave-in. Ein bisschen Pflege ist immer besser als gar keine.
 
@@ -212,17 +224,19 @@ Kommt aus dem Routine-Check, wie bisher. Darunter steht ein Satz:
   - wie du sie pflegst;
   - wie du mit deiner Kopfhaut umgehst.
 - Dazwischen liegt einiges: Stress, Ernährung, Hormone und Medikamente beeinflussen deine Haare auch. Deshalb verändern sie sich manchmal, zum Beispiel nach einer Schwangerschaft. ⚠️ (Schwangerschaft als Beispiel okay für dich?)
+- **Aber:** Das alles wirkt nur an der Wurzel, also auf Haar, das gerade erst entsteht. Sobald ein Haar aus der Kopfhaut gewachsen ist, ist es totes Gewebe. Daran ändern Ernährung, Vitamine oder Hormone nichts mehr. In den Längen entscheidest nur noch du, durch Pflege und Umgang.
 
 ---
 
 ## 4. Deine Grundregeln
-Für alle gleich. Die Reihenfolge passt sich an: Wer viel Hitze benutzt, bekommt die Hitze-Regel zuerst.
+Für alle gleich (jetzt 6 Regeln, die Nacht ist dazugekommen). Die Reihenfolge passt sich an: Wer viel Hitze benutzt, bekommt die Hitze-Regel zuerst.
 
-1. **Reibung ist dein größter Gegner.** Bürsten, Handtuch, Kissen, Schal, Haargummi: Der meiste Schaden entsteht ganz nebenbei. Geschmeidige Haare halten das aus, raue Haare brechen.
+1. **Reibung ist dein größter Gegner.** Falsches Bürsten und Entwirren, Rubbeln mit dem Handtuch, raue Kissenbezüge, Schal und Jacke, Haargummis mit Metall oder rauer Oberfläche: Der meiste Schaden entsteht ganz nebenbei. Geschmeidige Haare halten das aus, raue Haare brechen.
 2. **Jede Wäsche endet mit Pflege.** Wenigstens Conditioner, besser noch Leave-in. Eine Wäsche ohne Pflege hinterlässt raue Haare, und raue Haare reiben mehr.
-3. **Hitze nur mit Schutz und mit Maß.** Immer Hitzeschutz, nicht die höchste Stufe, und nie auf nassen Haaren glätten.
-4. **Chemie mit Pausen.** Blondieren, Färben und Glätten belasten das Haar von innen. Plan Pausen ein und mach nicht alles auf einmal.
-5. **Shampoo für die Kopfhaut, Pflege für die Längen.** Shampoo massierst du auf der Kopfhaut ein, Conditioner, Maske und Leave-in kommen in die Längen und Spitzen.
+3. **Hitze nur mit Schutz und mit Maß.** Immer Hitzeschutz und nicht die höchste Stufe. Ein Glätteisen kommt nie auf nasse Haare. Geräte, die Föhnen und Glätten verbinden, sind für feuchtes Haar gemacht, aber auch da gilt: Hitzeschutz und nicht die höchste Stufe.
+4. **Chemische Behandlungen mit Pausen.** Blondieren, Färben, Dauerwelle oder Keratinglättung belasten das Haar von innen. Plan Pausen ein und mach nicht alles auf einmal.
+5. **Shampoo für die Kopfhaut, Pflege für die Längen.** Shampoo massierst du auf der Kopfhaut ein und wählst es nach deinem Kopfhauttyp. Conditioner, Maske und Leave-in kommen in die Längen und Spitzen, die wählst du nach Haardicke und Haarzustand.
+6. **Nachts schläfst du auf Seide oder Bambusviskose,** mit einer lockeren Schlaffrisur. Das gilt für jeden Haartyp, nicht nur für Locken.
 
 ---
 
@@ -231,7 +245,7 @@ Die Produkte setzt die Seite automatisch ein. Darüber steht:
 
 > Das sind die Produkte, die zu deinen Ergebnissen passen. Du musst nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.
 
-⚠️ Noch offen: pro Produktart 1 Empfehlung oder 1 Drogerie + 1 High-End?
+**Vorschlag (noch offen):** Pro Produktart steht oben **eine erste Wahl**, das Produkt, das am besten zu deinen Ergebnissen passt, egal ob Drogerie oder High-End. Darunter stehen **zwei Alternativen**, mindestens eine aus der Drogerie und eine High-End, von anderen Marken. Ganz unten kommt ein Link „Alle passenden ansehen“, der direkt zur gefilterten Produktliste führt.
 
 ---
 
@@ -245,14 +259,14 @@ Die Produkte setzt die Seite automatisch ein. Darüber steht:
 **Abends**
 - Leave-in in die Spitzen
 - Lockerer Zopf oder Dutt mit Scrunchie
-- Kissen aus Seide oder Baumwoll-Viskose, nie mit nassen Haaren ins Bett
+- Kissen aus Seide oder Bambusviskose, nie mit nassen Haaren ins Bett
 
 **Am Waschtag**
 - [Pre-Wash, wenn im Wochenplan]
-- Shampoo nur auf die Kopfhaut
+- Zweimal shampoonieren, nur auf der Kopfhaut [bei sehr trockener oder sehr sensibler Kopfhaut: einmal und kurz einwirken lassen]
 - Conditioner oder Maske in die Längen, damit entwirren
 - Ausdrücken statt rubbeln
-- Leave-in ins feuchte Haar, Hitzeschutz vor dem Föhnen
+- Leave-in ins feuchte Haar, damit die Pflegestoffe einziehen, Hitzeschutz vor dem Föhnen
 
 ---
 
@@ -269,7 +283,6 @@ Die Produkte setzt die Seite automatisch ein. Darüber steht:
 **Die häufigsten Fehler**
 - **Nach zwei Wochen aufgeben**, weil „sich nichts tut“.
 - **Aufhören, sobald die Haare schön sind.** Die Haare sind schön, weil du pflegst.
-- **Jede Woche neue Produkte ausprobieren.** So weißt du nie, was wirkt.
 - **Nur am Waschtag pflegen.** Die LL-Methode ist für die Tage dazwischen.
 - **Im Urlaub die Routine weglassen.**
 - **Erwarten, dass ein Produkt kaputte Haare repariert.**
@@ -295,9 +308,15 @@ Erscheint je nach Jahreszeit oder Ergebnis (Blondieren, wenn im Pflege-Check ang
 - Blondierte Haare machst du nicht im Chlorwasser nass, um dann in die Sonne zu gehen, sonst kann ein Grünstich entstehen.
 - Du trägst die Haare möglichst zusammen. Abends gibt es eine Maske und vor allem dein Leave-in.
 
-**Blondieren** ⚠️ (dazu hast du noch nichts gesagt, bitte besonders prüfen)
-- **Vorher:** Zwei bis drei Wochen gut pflegen, damit die Haare geschmeidig in die Blondierung gehen. In der Zeit keine zusätzliche Hitze und keine weitere Chemie. Frag im Salon nach einem Bond-Zusatz in der Blondierung.
-- **Nachher:** Bond-Repair-Maske im Wechsel mit Feuchtigkeit und die LL-Methode jeden Tag. Hitze nimmst du runter, und zwischen zwei Blondierungen planst du lieber mehr Zeit ein als weniger.
+**Blondieren** (mit deinen Anmerkungen neu geschrieben, bitte noch einmal prüfen)
+- **Vorher:** Sprich mit deiner Friseurin oder deinem Friseur in einem Beratungsgespräch darüber, welche Blondierung benutzt wird und ob eine Bond-Repair-Pflege mit hineingemischt wird. Es gibt Blondierungen, die schonender sind als andere.
+- In den Wochen davor pflegst du deine Haare so weich und geschmeidig wie möglich, damit keine trockenen, spröden Haare unter die Blondierung kommen.
+- **Nachher ist noch wichtiger als vorher**, denn jetzt ist ein struktureller Schaden entstanden. Deine Haare sind trocken und eventuell spröde.
+- Repair- und Bond-Repair-Pflege helfen jetzt. Welche Produkte und wann, steht in deinem Wochenplan.
+- Die Devise bleibt: Haare so weich, flexibel und geschmeidig halten wie möglich, damit sie bei Reibung und Hitze im Alltag nicht noch mehr abbrechen.
+- Zwischen zwei Blondierungen planst du lieber mehr Zeit ein als weniger.
+
+> Jedes Haar ist anders, und deine Vorgeschichte spielt mit. Ich weiß nicht, mit welcher Blondierung bei dir gearbeitet wird. Das hier sind deshalb Tipps und Empfehlungen, keine persönliche Beratung.
 
 ---
 

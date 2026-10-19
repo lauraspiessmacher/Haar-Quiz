@@ -56,3 +56,6 @@ Elvital-INCI: siehe lauras-favorites.md.
 
 ### Worum es auf der Seite geht (Laura 19.10., für Startseite/Abo-Texte merken)
 Von außen muss klar werden: Es geht um eure Haare und eure Routine, darum, das Bestmögliche aus euren Haaren rauszuholen, und um Wissen, das an einem Ort gesammelt ist. Dazu eine Produktdatenbank, die ständig erneuert wird und die Laura nach Haartypen und Bedürfnissen sortiert hat. Der Haarplan macht das am besten sichtbar. Lauras Erfahrung: Auf Social Media zählen viele nicht eins und eins zusammen, auch wenn Videos aufeinander aufbauen. Der Plan ist die Chance, dass es zusammenhängend verstanden wird.
+
+### Mythos-Idee: „Haare gewöhnen sich an Produkte“ (Laura 19.10.)
+Stimmt nicht. Das Haar außerhalb der Kopfhaut ist totes Gewebe und „merkt“ nicht, ob du heute eine andere Marke benutzt als gestern. Auch die Kopfhaut reagiert nur auf Wirkstoffe, nicht auf Marken. Wer gern zehn getestete Leave-ins zu Hause hat und abwechselt, muss sich keine Sorgen machen. (Für Mythos oder Fakt / Wissen, nicht in den Plan.)
