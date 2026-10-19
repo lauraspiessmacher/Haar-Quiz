@@ -223,7 +223,7 @@ Kommt aus dem Routine-Check, wie bisher. Darunter steht ein Satz:
   - wie viel Reibung, Hitze, Chemie, Sonne, Salz- und Chlorwasser deine Haare abbekommen;
   - wie du sie pflegst;
   - wie du mit deiner Kopfhaut umgehst.
-- Dazwischen liegt einiges: Stress, Ernährung, Hormone und Medikamente beeinflussen deine Haare auch. Deshalb verändern sie sich manchmal, zum Beispiel nach einer Schwangerschaft. ⚠️ (Schwangerschaft als Beispiel okay für dich?)
+- Dazwischen liegt einiges: Stress, Ernährung, Hormone und Medikamente beeinflussen deine Haare auch. Bei hormonellen Veränderungen (zum Beispiel in und nach einer Schwangerschaft) können sich deine Haare deshalb verändern.
 - **Aber:** Das alles wirkt nur an der Wurzel, also auf Haar, das gerade erst entsteht. Sobald ein Haar aus der Kopfhaut gewachsen ist, ist es totes Gewebe. Daran ändern Ernährung, Vitamine oder Hormone nichts mehr. In den Längen entscheidest nur noch du, durch Pflege und Umgang.
 
 ---
@@ -275,7 +275,8 @@ Die Produkte setzt die Seite automatisch ein. Darüber steht:
 > Ich weiß, ihr wollt schnell Ergebnisse sehen. Aber Haare brauchen Zeit, und das können wir nicht ändern. Damit du weißt, worauf du dich einstellen kannst:
 
 - **Ab der ersten Wäsche:** Deine Längen fühlen sich weicher an und glänzen mehr. Das macht die Pflege, die außen auf dem Haar sitzt. Das ist schön, hält aber nur, solange du dranbleibst.
-- **Nach 4 bis 8 Wochen:** Die Routine sitzt. Du hast weniger Knoten und findest weniger abgebrochene Haare in der Bürste. ⚠️ Das ist ein Erfahrungswert, keine Studie.
+- **Schon nach ein paar Wochen:** Du hast weniger Knoten. Wenn du sanfter mit deinen Haaren umgehst, deine Pflege besser zu dir passt und du jeden Tag Leave-in nimmst, verknoten sie sich weniger, und das merkst du schnell.
+- **Nach 4 bis 8 Wochen:** Die Routine sitzt, und du findest weniger abgebrochene Haare in der Bürste.
 - **Nach etwa 3 Monaten:** Jedes Haar ruht etwa drei Monate, bevor es ausfällt. Was heute ausfällt, hat sich also schon vor rund drei Monaten verabschiedet. Deshalb siehst du bei Haarausfall frühestens jetzt eine Veränderung.
 - **Nach 4 bis 6 Monaten:** Jetzt siehst du erste echte Ergebnisse an Kopfhaut und Ansatz. Haare wachsen etwa einen Zentimeter im Monat. Du hast also 4 bis 6 Zentimeter neues Haar, das von Anfang an gut behandelt wurde.
 - **Nach 1 bis 3 Jahren:** Erst dann ist das neue Haar bis in die Längen nachgewachsen. Schulterlange Haare sind an den Spitzen schon gut zwei Jahre alt. Bei starker Schädigung dauert es deshalb Jahre, bis alles gesund nachgewachsen ist. In der Zwischenzeit können deine Haare trotzdem richtig schön aussehen.
