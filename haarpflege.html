@@ -42,7 +42,7 @@ nav.main button.me[data-set="1"]::after{content:"";position:absolute;top:7px;rig
 @media (max-width:759px){
   .top .in{flex-direction:column;align-items:stretch;gap:6px;padding-top:10px;padding-bottom:8px;min-height:0}
   .logo b{font-size:21px}
-  nav.main{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+  nav.main{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
   nav.main button{flex-direction:column;gap:3px;padding:7px 2px;font-size:12.5px;border-radius:12px}
   nav.main button.me{border-color:transparent;background:var(--card)}
   nav.main button.me[aria-current="page"]{background:var(--ink)}
@@ -403,7 +403,7 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 #merkBox h3.sec{margin-top:30px}
 #merkBox .cnt{font-family:var(--sans);font-size:14px;color:var(--muted)}
 @media (max-width:759px){
-  nav.main{grid-template-columns:minmax(0,1fr) minmax(0,1.14fr) minmax(0,.8fr) minmax(0,.95fr) minmax(0,1.25fr)}
+  nav.main{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr) minmax(0,1fr) minmax(0,.72fr) minmax(0,.9fr) minmax(0,1.2fr)}
   /* Mein Bereich auf dem Handy mit Symbol und Wort, bleibt hervorgehoben */
   nav.main button.me .melbl{display:block}
   nav.main button.me{justify-content:center}
@@ -782,6 +782,58 @@ html.zg-abo .zbadge{display:none}
 .mcheck{background:#EFEBE1;border-left:2px solid var(--khaki-button,#4A4A39);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
 .mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#4A4A39);margin-bottom:3px}
 
+/* ---------- Haarplan-Seite (Arbeitstitel) ---------- */
+#v-plan{overflow-x:clip}
+#v-plan .bprog{background:rgba(56,47,46,.12);margin:22px 0 8px}
+#v-plan .bprog span{background:var(--ink)}
+.pstandt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0}
+.psub{font-size:clamp(26px,3.4vw,36px);margin:48px 0 16px}
+.pzu{max-width:62ch;color:var(--muted);margin:-6px 0 16px}
+.pweg{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.pweg li{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;align-items:center;gap:14px 20px;background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:18px 20px}
+.pweg li.jetzt{border:1.5px solid #382F2E}
+.pweg li.ok{background:transparent}
+.pnr{font-family:var(--serif);font-size:40px;line-height:1;color:#382F2E;width:1.2em;text-align:center}
+.pweg li.ok .pnr{color:var(--muted)}
+.ptx h3{font-size:26px;margin:0 0 4px}
+.ptx p{margin:0;color:#5E524D;font-size:15px;max-width:52ch}
+.pst{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.pst .bhk{border-color:rgba(56,47,46,.35);width:22px;height:22px}
+.pst .bhk.ok{background:var(--khaki-button,#4A4A39);color:#F3ECE2;border-color:var(--khaki-button,#4A4A39)}
+.pweg .btn{white-space:nowrap}
+@media (max-width:759px){
+  .pweg li{grid-template-columns:auto minmax(0,1fr);padding:16px}
+  .pweg .pst{grid-column:2}
+  .pweg .btn{grid-column:1/-1;justify-content:center}
+  .ptx h3{font-size:23px}
+}
+.pfeature{margin-top:6px}
+.pextras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:759px){ .pextras{grid-template-columns:1fr} }
+.pextra{display:flex;align-items:center;gap:12px;text-align:left;font:inherit;color:var(--ink);background:transparent;border:1px dashed rgba(56,47,46,.4);border-radius:14px;padding:14px 16px;cursor:pointer}
+.pextra:hover{border-style:solid;background:#FFFDFA}
+.pextra > span:nth-child(2){display:flex;flex-direction:column;gap:2px;flex:1}
+.pextra b{font-weight:500;font-size:16px}
+.pextra i{font-style:normal;font-size:14px;color:var(--muted)}
+.pextra .bhk{border-color:rgba(56,47,46,.35);flex:0 0 auto}
+.pextra .bhk.ok{background:var(--khaki-button,#4A4A39);color:#F3ECE2;border-color:var(--khaki-button,#4A4A39)}
+.pzu2 svg{width:15px;height:15px;opacity:.7}
+.pkap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:959px){ .pkap{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:520px){ .pkap{grid-template-columns:1fr} }
+.pkap li{background:#382F2E;color:#F3ECE2;border-radius:16px;padding:18px 18px 20px}
+.pkap .pknr{display:block;font-size:12px;letter-spacing:.16em;color:#C9BCAE;margin-bottom:22px}
+.pkap h3{color:#F3ECE2;font-size:23px;margin:0 0 6px}
+.pkap p{margin:0;color:#E3D8CB;font-size:14.5px}
+.pkap li.pkhin{grid-column:1/-1;background:transparent;color:var(--muted);padding:4px 2px}
+.pkap li.pkhin p{color:var(--muted);display:flex;align-items:center;gap:8px}
+.pkap li.pkhin svg{width:15px;height:15px}
+.qplanhint{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;background:#382F2E;color:#F3ECE2;border-radius:20px;padding:26px 28px;margin-top:48px}
+.qplanhint .kicker{color:#C9BCAE;margin:0 0 6px}
+.qplanhint .qph{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.25;margin:0;max-width:34ch}
+.qplanhint .btn{background:#F3ECE2;color:#29261F;border-color:#F3ECE2}
+.bplanbtns{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+.bplan .linkbtn{color:#F3ECE2}
 /* ---------- Mein Bereich ---------- */
 .bgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px;align-items:start}
 @media (max-width:759px){ .bgrid{grid-template-columns:1fr;gap:12px} }
@@ -1041,6 +1093,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
     <nav class="main" aria-label="Hauptnavigation">
       <button type="button" data-view="produkte" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 12h8"/></svg>Produkte</button>
       <button type="button" data-view="ll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8c3.4 4.3 5.8 7.4 5.8 10.6a5.8 5.8 0 0 1-11.6 0c0-3.2 2.4-6.3 5.8-10.6z"/><path d="M9.4 14.2a2.7 2.7 0 0 0 2.4 2.6"/></svg><span>LL-Methode</span></button>
+      <button type="button" data-view="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10l1.5 1.5 3-3"/><path d="M8.5 16l1.5 1.5 3-3"/><path d="M15 10.5h1.5M15 16.5h1.5"/></svg>Haarplan</button>
       <button type="button" data-view="quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.3-2.7 4"/><circle cx="12" cy="17.4" r=".6" fill="currentColor"/></svg>Quiz</button>
       <button type="button" data-view="wissen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>Wissen</button>
       <button type="button" class="me" id="meBtn" data-view="bereich" data-set="0" aria-label="Mein Bereich"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3c-1.5 5 1.5 10 0 18"/><path d="M12 3c-1.5 5 1.5 10 0 18"/><path d="M16 3c-1.5 5 1.5 10 0 18"/></svg><span class="melbl">Mein Bereich</span><span class="merkn" id="merkN" hidden>0</span></button>
@@ -1103,7 +1156,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
       <div class="head"><p class="kicker">Neu hier?</p><h2>So startet ihr</h2></div>
       <ol class="swliste">
         <li class="sw1"><span class="swtag frei">Kostenlos</span><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
-        <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">2</span><h3>Bekommt euren Healthy Hair Plan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Plan →</button></li>
+        <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">2</span><h3>Bekommt euren Haarplan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Haarplan →</button></li>
         <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
       </ol>
     </div>
@@ -1262,8 +1315,39 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
     </div>
   </section>
 
+  <!-- ===================== HAARPLAN (Arbeitstitel, Vorschau 19.10.) ===================== -->
+  <section class="view" id="v-plan" hidden>
+    <div class="intro"><h1>Dein Haarplan</h1><p>Hier entsteht dein persönlicher Plan für deine Haare. Nimm dir ein paar Minuten Zeit und mach die Checks in Ruhe, danach bist du schon eine ganze Ecke schlauer. Und du wirst sehen: Die Lösung ist nicht immer nur ein Produkt. Oft sind es kleine Gewohnheiten, die den größten Unterschied machen.</p></div>
+    <div class="pstand" id="planStand"></div>
+    <h2 class="psub">Schritt 1 bis 3: deine drei Checks</h2>
+    <ol class="pweg" id="planWeg"></ol>
+    <h2 class="psub">Schritt 4: dein Plan</h2>
+    <div class="qfeature pfeature">
+      <a class="qcard qwide qhero" data-abo="plan" data-check="routine" href="quiz-routine.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Schritt 4</span><span class="qhl">
+        <span class="qfor">Zum Schluss: alles zusammen</span>
+        <h3>Plan erstellen</h3>
+        <p>Wann wäschst du am besten, wie oft ist eine Maske dran und was tust du beim Sport und nachts für deine Haare? Aus diesen Antworten und deinen drei Checks entsteht dein Plan, mit deinem eigenen Wochenplan. Am genauesten wird er, wenn du vorher die drei Checks darüber machst.</p>
+        <span class="qmeta">Bis zu 14 Fragen · ca. 3 Minuten</span>
+        <span class="qgo">Meinen Plan erstellen <span aria-hidden="true">→</span></span>
+      </span><span class="qweek" aria-hidden="true"><span class="qwk-t">So kann dein Plan aussehen</span><span class="qwk-g">
+<span class="qd"><b>Mo</b><i class="o">Pre-Wash</i><i class="w">Wäsche</i></span>
+<span class="qd"><b>Di</b><i>Leave-in</i></span>
+<span class="qd"><b>Mi</b><i class="s">Sport&shy;frisur</i></span>
+<span class="qd"><b>Do</b><i class="w">Wäsche</i><i class="m">Maske</i></span>
+<span class="qd"><b>Fr</b><i>Leave-in</i></span>
+<span class="qd"><b>Sa</b><i>Leave-in</i></span>
+<span class="qd"><b>So</b><i class="s">Trocken&shy;shampoo</i><i>Leave-in</i></span>
+</span></span></span></a>
+    </div>
+    <h2 class="psub">Mach deinen Plan noch genauer</h2>
+    <p class="pzu">Freiwillig und ganz in deinem Tempo: Jeder Extra-Check macht deinen Plan ein Stück genauer. Du kannst sie auch über die nächsten Wochen verteilt machen.</p>
+    <div class="pextras" id="planExtras"></div>
+    <h2 class="psub">Das steht in deinem fertigen Plan</h2>
+    <ol class="pkap" id="planKap"></ol>
+  </section>
+
   <section class="view" id="v-quiz" hidden>
-    <div class="intro"><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Danach kommt das Herzstück, der Routine-Check. Er stellt dir aus allem deinen persönlichen Wochenplan zusammen, damit Pflege für dich zur Gewohnheit wird. Dazu gibt es vier Extra-Checks: welches Leave-in zu dir passt, wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
+    <div class="intro"><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es vier Extra-Checks: welches Leave-in zu dir passt, wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
       <a class="qcard" data-check="kopfhaut" href="quiz-kopfhaut.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
@@ -1287,23 +1371,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
     </div>
-    <div class="qfeature">
-      <a class="qcard qwide qhero" data-abo="plan" data-check="routine" href="quiz-routine.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Herzstück</span><span class="qhl">
-        <span class="qfor">Zum Schluss: dein persönlicher Wochenplan</span>
-        <h3>Routine-Check</h3>
-        <p>Wann wäschst du am besten, wie oft ist eine Maske dran und was tust du beim Sport und nachts für deine Haare? Am Ende bekommst du deinen eigenen Wochenplan, den du dir direkt in deine Notizen kopieren kannst. Am genauesten wird er, wenn du vorher die drei Checks darüber machst.</p>
-        <span class="qmeta">Bis zu 14 Fragen · ca. 3 Minuten</span>
-        <span class="qgo">Meinen Wochenplan erstellen <span aria-hidden="true">→</span></span>
-      </span><span class="qweek" aria-hidden="true"><span class="qwk-t">So kann dein Plan aussehen</span><span class="qwk-g">
-<span class="qd"><b>Mo</b><i class="o">Pre-Wash</i><i class="w">Wäsche</i></span>
-<span class="qd"><b>Di</b><i>Leave-in</i></span>
-<span class="qd"><b>Mi</b><i class="s">Sport&shy;frisur</i></span>
-<span class="qd"><b>Do</b><i class="w">Wäsche</i><i class="m">Maske</i></span>
-<span class="qd"><b>Fr</b><i>Leave-in</i></span>
-<span class="qd"><b>Sa</b><i>Leave-in</i></span>
-<span class="qd"><b>So</b><i class="s">Trocken&shy;shampoo</i><i>Leave-in</i></span>
-</span></span></span></a>
-    </div>
+    <div class="qplanhint"><div><p class="kicker">Aus deinen Ergebnissen</p><p class="qph">Wenn du die drei Checks gemacht hast, entsteht daraus dein Haarplan.</p></div><button type="button" class="btn" id="zumPlan">Zum Haarplan <span aria-hidden="true">→</span></button></div>
     <p class="qclosing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
     <h2 class="qsub">Extra-Checks</h2>
     <div class="quizgrid vier">
@@ -1385,7 +1453,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
       <div class="fmarke"><b>Haarpflege einfach erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span>
         <p>Meine Einschätzung, nicht die der Marken. Mit „Werbelink“ gekennzeichnete Links sind Affiliate-Links: Kauft ihr darüber, bekomme ich eine kleine Provision, für euch ändert sich am Preis nichts.</p></div>
       <nav aria-label="Seiten"><h4>Seiten</h4><ul>
-        <li><button type="button" data-fgo="produkte">Produkte</button></li><li><button type="button" data-fgo="ll">LL-Methode</button></li><li><button type="button" data-fgo="quiz">Quiz</button></li><li><button type="button" data-fgo="wissen">Wissen</button></li><li><button type="button" data-fgo="bereich">Mein Bereich</button></li></ul></nav>
+        <li><button type="button" data-fgo="produkte">Produkte</button></li><li><button type="button" data-fgo="ll">LL-Methode</button></li><li><button type="button" data-fgo="plan">Haarplan</button></li><li><button type="button" data-fgo="quiz">Quiz</button></li><li><button type="button" data-fgo="wissen">Wissen</button></li><li><button type="button" data-fgo="bereich">Mein Bereich</button></li></ul></nav>
       <nav aria-label="Rechtliches"><h4>Rechtliches</h4><ul>
         <li><button type="button" data-platz="Impressum">Impressum</button></li><li><button type="button" data-platz="Datenschutz">Datenschutz</button></li><li><button type="button" data-platz="AGB">AGB</button></li><li><button type="button" data-platz="Widerrufsbelehrung">Widerrufsbelehrung</button></li><li><button type="button" data-platz="Cookie-Einstellungen">Cookie-Einstellungen</button></li><li><button type="button" data-platz="Verträge hier kündigen" class="fkuend">Verträge hier kündigen</button></li></ul></nav>
       <nav aria-label="Kontakt"><h4>Kontakt</h4><ul>
@@ -1425,7 +1493,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
       <li>Startseite und meine Favorites</li><li>Kopfhaut-Check, Pflege-Check und Haar-Check</li><li>Wissen: die Grundlagen und Mythos oder Fakt</li></ul>
       <p class="hast">Hast du schon</p></div>
     <div class="stufe abo"><span class="tag">Alles drin</span><h3>Abo</h3><ul>
-      <li><b>Dein Healthy Hair Plan</b> mit Wochenplan</li><li>Alle Produkte mit meiner Einschätzung</li><li>Meine Leave-in-Auswahl für die LL-Methode</li>
+      <li><b>Dein Haarplan</b> mit Wochenplan</li><li>Alle Produkte mit meiner Einschätzung</li><li>Meine Leave-in-Auswahl für die LL-Methode</li>
       <li>Alle Extra-Checks: Leave-in, Spliss &amp; Haarbruch, Hitze-Tools, Haarschnitt</li><li>Alle Wissenskapitel und häufigen Fragen</li><li>Deine Merkliste</li><li>Frag Laura: jeden Monat deine Fragen</li></ul>
       <p class="preis">Preis folgt</p><button type="button" class="btn dark" id="aboTest">Abo freischalten</button></div>
   </div>
@@ -1472,7 +1540,7 @@ const ZTEXT = {
   kapitel: ["Dieses Kapitel ist im Abo", "Die Grundlagen kannst du kostenlos lesen. Alle anderen Kapitel schaltest du mit dem Abo frei."],
   faq: ["Diese Antworten sind im Abo", "Die Fragen zu den Grundlagen sind kostenlos, alle anderen beantworte ich dir im Abo."],
   check: ["Dieser Check ist im Abo", "Die drei Basis-Checks sind kostenlos. Alle Extra-Checks schaltest du mit dem Abo frei."],
-  plan: ["Dein Healthy Hair Plan", "Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt, inklusive Wochenplan."],
+  plan: ["Dein Haarplan", "Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt, inklusive Wochenplan."],
   ll: ["Meine Leave-in-Auswahl", "Welche Leave-ins ich dir für die LL-Methode empfehle, für wen und wie du sie benutzt, steht im Abo."],
   merkliste: ["Deine Merkliste", "Mit dem Abo merkst du dir Produkte und hast sie im Laden sofort griffbereit."],
   frage: ["Frag Laura", "Im Abo kannst du mir deine Fragen schicken. Jeden Monat beantworte ich drei bis fünf davon ausführlich."],
@@ -1540,14 +1608,16 @@ let onlyMine = true;
 
 /* ---------- Zustand und Teilen-Link ---------- */
 let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:"", wissen:null};
+/* Link-Ziel gleich merken: beim Start zeichnet die Seite schon einmal (Abo-Schalter) und würde es sonst mit #start überschreiben */
+const HASH0 = location.hash;
 /* Aus einem Quiz heraus direkt zu einer Produktart springen (z. B. Hitze-Tool-Check → Lockenstäbe) */
 window.showLL = () => { state.view = "ll"; state.wissen = null; render(); window.scrollTo({top:0}); };
 window.showWissen = id => { state.view = "wissen"; state.wissen = WISSEN.some(w=>w.id===id) ? id : null; render(); window.scrollTo({top:0}); };
 window.showProducts = (type, cat) => { if(!T[type]) return; state.view = "produkte"; state.type = type; state.cat = cat || "alle"; state.seg = "alle"; state.q = ""; if(typeof q !== "undefined") q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); };
 function readHash(){
-  const h = location.hash.replace(/^#/,""); if(!h) return;
+  const h = HASH0.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || b==="fraglaura" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
+  if(a==="quiz"||a==="plan"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || b==="fraglaura" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
   if(T[a] || a === "neu"){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -2205,7 +2275,7 @@ function setHH(){ document.documentElement.style.setProperty("--hh", document.qu
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
-  for(const v of ["start","produkte","ll","quiz","wissen","merkliste","favoriten","bereich"]) document.getElementById("v-"+v).hidden = state.view!==v;
+  for(const v of ["start","produkte","ll","plan","quiz","wissen","merkliste","favoriten","bereich"]) document.getElementById("v-"+v).hidden = state.view!==v;
   navBtns.forEach(b => b.setAttribute("aria-current", (b.dataset.view===state.view || (b.dataset.view==="bereich" && state.view==="merkliste")) ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
@@ -2216,6 +2286,7 @@ function render(){
   if(state.view==="favoriten") renderFav();
   if(state.view==="ll") renderLL();
   if(state.view==="bereich") renderBereich();
+  if(state.view==="plan") renderPlan();
   if(state.view==="start") renderStartweg();
   merkCount();
   writeHash();
@@ -2412,7 +2483,7 @@ const CHECKS = [["kopfhaut","Kopfhaut-Check"],["pflege","Pflege-Check"],["haar",
 const EXTRAS = [["leavein","Leave-in-Check"],["spliss","Spliss- & Haarbruch-Check"],["tools","Hitze-Tool-Check"],["schnitt","Haarschnitt-Check"]];
 function quizStand(){ try { return JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; } catch(e){ return {}; } }
 function oeffneCheck(key){
-  const a = document.querySelector(`#v-quiz .qcard[data-check="${key}"]`) || [...document.querySelectorAll("#v-quiz .qcard")].find(x => (x.getAttribute("href")||"").includes(key));
+  const a = document.querySelector(`.qcard[data-check="${key}"]`) || [...document.querySelectorAll(".qcard")].find(x => (x.getAttribute("href")||"").includes(key));
   if(!a){ state.view = "quiz"; render(); window.scrollTo({top:0}); return; }
   if(a.dataset.abo && !istAbo()){ zPaywall(a.dataset.abo); return; }
   const href = a.getAttribute("href"); if(!(window.openQuiz && window.openQuiz(href))) window.location.href = href;
@@ -2428,12 +2499,12 @@ function renderBereich(){
   const mi = ALL.filter(p => MERK.includes(p.mk));
   const meZeilen = [["Haardicke", (DICKE.find(([v]) => v===me.dicke)||[])[1]], ["Kopfhaut", (KOPF.find(([v]) => v===me.kopf)||[])[1]], ["Haarzustand", me.kaputt ? (me.kaputt==="bond"?"strukturgeschädigt":"beansprucht") : ""], ["Wunsch", (WUNSCH.find(([v]) => v===me.wunsch)||[])[1]]];
   box.innerHTML = `
-  <article class="bkarte bplan"><p class="kicker">Dein Herzstück</p><h2>Dein Healthy Hair Plan</h2>
+  <article class="bkarte bplan"><p class="kicker">Dein Herzstück</p><h2>Dein Haarplan</h2>
     <p>Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt: was deine Ergebnisse bedeuten, deine Grundregeln, dein Wochenplan, deine Einkaufsliste.</p>
     <div class="bprog" role="img" aria-label="${anz} von 4 Schritten erledigt"><span style="width:${anz*25}%"></span></div><p class="bprogt">${anz} von 4 Schritten erledigt</p>
     <ol class="bschritte">${schritte}</ol>
     <div class="bextras"><p>Macht deinen Plan noch genauer</p><div>${EXTRAS.filter(([k]) => k==="leavein" || k==="spliss").map(([k,l]) => `<button type="button" class="bextra" data-extra="${k}">${haken(st[k])}<span>${l}</span>${istAbo() ? "" : ZSCHLOSS}</button>`).join("")}</div></div>
-    <button type="button" class="btn" id="bPlanGo">${offen ? `Weiter mit dem ${offen[1]}` : istAbo() ? "Plan erstellen" : "Plan freischalten"} <span aria-hidden="true">→</span></button></article>
+    <div class="bplanbtns"><button type="button" class="btn" id="bPlanGo">${offen ? `Weiter mit dem ${offen[1]}` : istAbo() ? "Plan erstellen" : "Plan freischalten"} <span aria-hidden="true">→</span></button><button type="button" class="linkbtn" id="bZumPlan">Zur Haarplan-Seite →</button></div></article>
   <article class="bkarte"><h3>Meine Haare</h3>
     ${meSet() || me.wunsch ? `<dl class="bme">${meZeilen.filter(([,v]) => v).map(([l,v]) => `<dt>${l}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : `<p class="bleer">Noch nichts eingestellt. Mach die Checks oder stell deine Haare selbst ein, dann siehst du überall zuerst, was zu dir passt.</p>`}
     <p class="bklein">Erledigte Checks: ${[...CHECKS, ...EXTRAS].filter(([k]) => st[k]).map(([,l]) => l).join(", ") || "noch keine"}</p>
@@ -2455,6 +2526,7 @@ function renderBereich(){
     <ul class="blinks"><li><button type="button" data-v="Rechnungen">Meine Rechnungen</button></li><li><button type="button" data-v="Zahlungsart">Zahlungsart ändern</button></li><li><button type="button" data-v="Kündigen">Abo kündigen</button></li><li><button type="button" data-v="Support">Support: Hilfe bei Zahlung und Konto</button></li><li><button type="button" data-v="Abmelden">Abmelden</button></li></ul>
     <p class="bklein">Vorschau: Konto, Zahlung und Kündigung kommen mit der echten Version.</p></article>`;
   document.getElementById("bPlanGo").onclick = () => offen ? oeffneCheck(offen[0]) : oeffneCheck("routine");
+  document.getElementById("bZumPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
   document.getElementById("bMe").onclick = openMe;
   box.querySelectorAll("[data-extra]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.extra));
   document.getElementById("bMerk").onclick = () => { if(!istAbo()){ zPaywall("merkliste"); return; } state.view = "merkliste"; render(); window.scrollTo({top:0}); };
@@ -2463,6 +2535,31 @@ function renderBereich(){
   box.querySelectorAll(".blinks button").forEach(b => b.onclick = () => toast(`Vorschau: „${b.dataset.v}“ kommt mit der echten Version`));
 }
 
+/* ---------- Haarplan-Seite (Arbeitstitel, Vorschau 19.10.): Schritte 1–3 kostenlos, Schritt 4 Plan erstellen, Extra-Checks freiwillig ---------- */
+const PLANCHK = {kopfhaut:"Welche Kopfhaut du gerade hast und worauf du beim Shampoo achtest.", pflege:"Wie dick deine Haare sind, wie es ihnen geht und wie reichhaltig deine Pflege sein darf.", haar:"Ob deine Haare glatt, wellig oder lockig sind und wie du deine Struktur pflegst."};
+const PLANEXTRA = {leavein:"Welches Leave-in zu dir passt", spliss:"Wie kaputt deine Haare wirklich sind", tools:"Welches Hitze-Tool zu deinen Haaren passt", schnitt:"Welcher Haarschnitt dir steht"};
+const PLANKAP = [["Das bist du","Was deine Ergebnisse bedeuten und was du ab jetzt machst."],["Deine Grundregeln","Reibung, Hitze, Chemie, LL-Methode und richtig waschen, sortiert nach dem, was bei dir am meisten zählt."],["Dein Wochenplan","Wann du wäschst, wann eine Maske dran ist und was du beim Sport und nachts machst."],["Deine Einkaufsliste","Für jede Produktart die Produkte, die wirklich zu dir passen."],["Dein Tag","Deine kleine Abhakliste für morgens und abends."],["Wenn sich etwas ändert","Was du vor und nach dem Blondieren, im Winter und im Urlaub anders machst."],["Was dich erwartet","Was sich nach 4, 8 und 12 Wochen tut, und die häufigsten Fehler."],["Dein Friseur-Spickzettel","Aus dem Haarschnitt-Check, wenn du ihn gemacht hast."]];
+function renderPlan(){
+  const st = quizStand(), haken = ok => `<span class="bhk${ok?" ok":""}" aria-hidden="true">${ok?"✓":""}</span>`;
+  const anz = CHECKS.filter(([k]) => st[k]).length + (st.routine && istAbo() ? 1 : 0);
+  const naechst = (CHECKS.find(([k]) => !st[k]) || [])[0];
+  document.getElementById("planStand").innerHTML = `<div class="bprog" role="img" aria-label="${anz} von 4 Schritten erledigt"><span style="width:${anz*25}%"></span></div><p class="pstandt">${anz} von 4 Schritten erledigt${anz === 4 ? " · dein Plan ist fertig" : ""}</p>`;
+  const weg = document.getElementById("planWeg");
+  weg.innerHTML = CHECKS.map(([k,l], i) => `<li class="${st[k] ? "ok" : k === naechst ? "jetzt" : ""}"><span class="pnr">${i+1}</span><div class="ptx"><h3>${l}</h3><p>${PLANCHK[k]}</p></div><span class="pst">${haken(st[k])}${st[k] ? "erledigt" : k === naechst ? "als Nächstes" : "kostenlos"}</span><button type="button" class="btn${st[k] ? "" : " dark"}" data-pcheck="${k}">${st[k] ? "Nochmal machen" : "Check starten"} <span aria-hidden="true">→</span></button></li>`).join("");
+  weg.querySelectorAll("[data-pcheck]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.pcheck));
+  const ex = document.getElementById("planExtras");
+  ex.innerHTML = EXTRAS.map(([k,l]) => `<button type="button" class="pextra${st[k]?" ok":""}" data-pextra="${k}">${haken(st[k])}<span><b>${l}</b><i>${PLANEXTRA[k]}</i></span>${istAbo() ? "" : `<span class="pzu2">${ZSCHLOSS}</span>`}</button>`).join("");
+  ex.querySelectorAll("[data-pextra]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.pextra));
+  document.getElementById("planKap").innerHTML = PLANKAP.map(([t,l], i) => `<li><span class="pknr">${String(i+1).padStart(2,"0")}</span><h3>${t}</h3><p>${l}</p></li>`).join("")
+    + `<li class="pkhin"><p>${istAbo() ? "Vorschau: Die Kapitel füllen sich mit deinen Ergebnissen, sobald die Texte fertig sind." : `${ZSCHLOSS} Dein fertiger Plan ist im Abo.`}</p></li>`;
+}
+document.getElementById("zumPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
+/* Quiz-Fenster zu: Häkchen neu zeichnen; nach „Plan erstellen“ landest du auf der Haarplan-Seite */
+window.addEventListener("quizzu", e => {
+  if(e.detail === "quiz-routine.html" && quizStand().routine && istAbo()){ state.view = "plan"; render(); window.scrollTo({top:0}); return; }
+  if(["plan","bereich","start"].includes(state.view)) render();
+});
+
 /* ---------- Startseite: „So startet ihr“ – die drei kostenlosen Checks mit Häkchen ---------- */
 function renderStartweg(){
   const box = document.getElementById("swChecks"); if(!box) return;
@@ -2470,7 +2567,7 @@ function renderStartweg(){
   box.innerHTML = CHECKS.map(([k,l]) => `<button type="button" class="swcheck${st[k]?" ok":""}" data-swcheck="${k}"><span class="bhk${st[k]?" ok":""}" aria-hidden="true">${st[k]?"✓":""}</span>${l}</button>`).join("");
   box.querySelectorAll("[data-swcheck]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.swcheck));
 }
-document.getElementById("swPlan").onclick = () => { state.view = "bereich"; render(); window.scrollTo({top:0}); };
+document.getElementById("swPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
 
 /* ---------- Fußzeile ---------- */
 document.querySelectorAll(".fuss [data-fgo]").forEach(b => b.onclick = () => { state.view = b.dataset.fgo; state.wissen = null; render(); window.scrollTo({top:0}); });
