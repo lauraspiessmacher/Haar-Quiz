@@ -374,7 +374,7 @@ function sketchHtml(e){
 }
 function result(){
   const e = evaluate(), r = cut(e), f = e.f, sk = sketchHtml(e);
-  try { const all = JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; all.schnitt = {empfehlung:r.rec, gesicht:e.face||null}; localStorage.setItem("quizErgebnisse", JSON.stringify(all)); } catch(err){}
+  try { const all = JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; all.schnitt = {empfehlung:r.rec, gesicht:e.face||null, text:r.text, gesichtName:FACENAME[e.face]||"", spliss:e.f.spliss||0}; localStorage.setItem("quizErgebnisse", JSON.stringify(all)); } catch(err){}
   const boxes = [];
   boxes.push(currentBlock(e));
   if(FACETIPS[e.face]) boxes.push(`<div class="box"><h3>Deine Gesichtsform: ${FACENAME[e.face]}</h3><p>${FACETIPS[e.face]}</p></div>`);

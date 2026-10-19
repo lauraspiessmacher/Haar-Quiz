@@ -567,7 +567,7 @@ function result(){
   const a = ans, R = plan(a);
   /* Ergebnis merken, auch für „Meine Haare“ */
   try {
-    const all = load("quizErgebnisse") || {}; all.routine = {datum: new Date().toISOString().slice(0,10)}; localStorage.setItem("quizErgebnisse", JSON.stringify(all));
+    const all = load("quizErgebnisse") || {}; all.routine = {datum: new Date().toISOString().slice(0,10), a, week: R.week, regel: R.regel, chips: R.chips, st: R.st, rep: R.repStufe}; /* der Haarplan baut daraus Kapitel 2 und mehr */ localStorage.setItem("quizErgebnisse", JSON.stringify(all));
     const me = load("meineHaare") || {};
     me.dicke = a.dicke || me.dicke || null;
     me.kopf = (a.kopf === "sensibel" && me.kopf === "juckend") ? "juckend" : (a.kopf || me.kopf || null);
@@ -594,6 +594,7 @@ function result(){
     <div class="tbl tblw"><table class="week">${regelRows}</table></div>
     <div class="box"><h3>Meine Produktempfehlungen für dich</h3><p>Deine Haardicke, deinen Kopfhauttyp, ob deine Haare Repair brauchen und dein Wunschergebnis habe ich unter „Meine Haare“ gespeichert. In der Produktsektion siehst du bei Maske, Conditioner und Leave-in ganz oben meine Empfehlung für dich: ein Produkt mit Feuchtigkeit, eins, das nährt, und wenn nötig eins mit Repair. Darunter findest du alle Produkte, die zu dir passen, von Drogerie bis High-End.</p>
       ${inEmbed ? `<button class="secondary" id="toProducts" style="margin-bottom:14px">Meine Empfehlungen ansehen</button>` : ""}</div>
+    ${inEmbed ? `<div class="box"><h3>Dein Haarplan</h3><p>Aus diesem Wochenplan und deinen Checks ist jetzt dein Haarplan entstanden: alles auf einen Blick, deine Grundregeln, deine Einkaufsliste und was dich erwartet.</p><button class="primary" id="toPlan" style="margin-bottom:14px">Zu deinem Haarplan</button></div>` : ""}
     <div class="copyrow"><button class="primary" id="copy">Wochenplan kopieren</button><span class="copied" id="copied" role="status"></span></div>
     <div class="actions"><button class="ghost" id="again">Quiz neu starten</button></div>
     <p class="fine">${FINE}</p>
@@ -603,6 +604,8 @@ function result(){
   document.getElementById("copy").onclick = () => copyText(asText(R));
   const tp = document.getElementById("toProducts");
   if(tp) tp.onclick = () => { try { window.parent.zeigeProdukte("leavein"); } catch(e){} };
+  const tpl = document.getElementById("toPlan");
+  if(tpl) tpl.onclick = () => { try { window.parent.closeQuiz(); } catch(e){} };
   window.scrollTo(0,0);
 }
 

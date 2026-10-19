@@ -782,6 +782,87 @@ html.zg-abo .zbadge{display:none}
 .mcheck{background:#EFEBE1;border-left:2px solid var(--khaki-button,#4A4A39);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
 .mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#4A4A39);margin-bottom:3px}
 
+/* ---------- Der fertige Haarplan ---------- */
+#v-plan.fertig .nurvorher{display:none}
+.hplan{margin-top:26px}
+.hptoc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.hptoc button{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;color:var(--ink);background:#FFFDFA;border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 8px;cursor:pointer}
+.hptoc button:hover{border-color:var(--ink)}
+.hptoc button span{font-size:11px;letter-spacing:.1em;background:var(--ink);color:#F3ECE2;border-radius:999px;padding:3px 7px}
+.hpkap{padding:40px 0 8px;scroll-margin-top:calc(var(--hh,120px) + 12px)}
+.hpkap > header{display:flex;align-items:baseline;gap:14px;border-top:1px solid rgba(56,47,46,.25);padding-top:16px;margin-bottom:18px}
+.hpnr{font-size:13px;letter-spacing:.16em;color:var(--muted)}
+.hpkap h2{font-size:clamp(30px,4.2vw,46px);line-height:1;margin:0}
+.hpkap > p{max-width:64ch}
+.hpgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:759px){ .hpgrid{grid-template-columns:1fr} }
+.hpblk{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:16px;padding:18px 20px}
+.hplab{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.hpblk h3{font-size:25px;margin:0 0 6px}
+.hpblk p{margin:0 0 8px}
+.hpkap ul{margin:6px 0 0;padding-left:20px}
+.hpkap li{margin-bottom:6px}
+.hpklein{font-size:14px;color:var(--muted);max-width:64ch;margin-top:14px}
+.hpchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.hpchips span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px;background:#FFFDFA}
+.hptab{overflow-x:auto}
+.hpweek{width:100%;border-collapse:collapse;font-size:15px}
+.hpweek th,.hpweek td{text-align:left;vertical-align:top;padding:12px 14px;border-top:1px solid var(--line-soft)}
+.hpweek th{width:9em;font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.15}
+.hpweek th small{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.hpweek tr.wash{background:#FFFDFA}
+.hpweek ul{margin:0;padding-left:18px}
+@media (max-width:759px){ .hpweek,.hpweek tbody,.hpweek tr,.hpweek th,.hpweek td{display:block;width:100%} .hpweek th{border-top:1px solid var(--line-soft);padding-bottom:4px} .hpweek td{border-top:0;padding-top:0} }
+.hpsub{font-size:24px;margin:28px 0 8px}
+.hpquote{font-family:var(--serif);font-size:clamp(20px,2.5vw,27px);line-height:1.3;max-width:46ch;margin:26px 0 0;padding-left:18px;border-left:2px solid var(--ink)}
+.hpdark{background:#382F2E;color:#F3ECE2;border-radius:20px;padding:28px 28px 22px}
+.hpdark h3{color:#F3ECE2;font-size:26px;margin:18px 0 6px}
+.hpdark li{color:#E9DFD2}
+.hpdark b{color:#F3ECE2;font-weight:500}
+.hpdi{font-family:var(--serif);font-size:clamp(20px,2.4vw,26px);line-height:1.3;margin:0;color:#F3ECE2}
+.hp2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 28px}
+.hp3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:759px){ .hp2,.hp3{grid-template-columns:1fr} .hpdark{padding:22px 18px 16px} }
+.hpgene{border:1.5px solid #382F2E;border-radius:20px;padding:22px 24px;margin-top:14px}
+.hpgene h3{font-size:26px;margin:0 0 10px}
+.hpgene .hplab{margin-top:8px}
+.hpgene > p{margin:12px 0 0;max-width:70ch}
+.hpregeln{margin:0;padding-left:24px;max-width:72ch}
+.hpregeln li{margin-bottom:12px;padding-left:4px}
+.hpregeln b{font-weight:500}
+.hpeink{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+@media (max-width:959px){ .hpeink{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:600px){ .hpeink{grid-template-columns:1fr} }
+.hpek{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.hpek h3{font-size:24px;margin:0 0 2px}
+.hpprod{display:flex;align-items:center;gap:12px;text-align:left;font:inherit;color:var(--ink);background:transparent;border:1px solid var(--line-soft);border-radius:12px;padding:8px 10px;cursor:pointer}
+.hpprod:hover{border-color:var(--ink)}
+.hpprod:first-of-type{border-color:#382F2E;border-width:1.5px}
+.hpprod img,.hpnoimg{width:44px;height:64px;object-fit:contain;flex:0 0 auto}
+.hppt{display:flex;flex-direction:column;gap:1px;min-width:0}
+.hptag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hpprod .brand{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7A6A65}
+.hpprod .name{font-family:var(--serif);font-size:17px;line-height:1.2}
+.hpseg{font-size:11.5px;color:var(--muted)}
+.hpek .linkbtn{align-self:flex-start;margin-top:4px}
+.hpday{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:16px;padding:16px 18px;font-size:15px}
+.hpday h3{font-size:22px;margin:0 0 6px}
+.hpkap .hpday ul{list-style:none;padding:0}
+.hpday label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.hpday input{width:18px;height:18px;margin-top:2px;accent-color:#382F2E;flex:0 0 auto}
+.hpday input:checked + span{text-decoration:line-through;color:var(--muted)}
+.hpzeit{list-style:none;margin:16px 0 0;padding:0 0 0 22px;border-left:2px solid #382F2E;max-width:70ch}
+.hpzeit li{position:relative;margin-bottom:16px;display:flex;flex-direction:column;gap:2px}
+.hpzeit li::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:#F7F2EA;border:2px solid #382F2E}
+.hpzeit b{font-family:var(--serif);font-weight:400;font-size:21px}
+.hpdet{border:1px solid var(--line-soft);background:#FFFDFA;border-radius:14px;padding:4px 18px;margin-bottom:10px}
+.hpdet summary{font-family:var(--serif);font-size:22px;padding:12px 0;cursor:pointer}
+.hpdet ul{margin-bottom:12px}
+.hpzettel{background:#FFFDFA;border:1px dashed rgba(56,47,46,.5);border-radius:16px;padding:20px 22px;max-width:640px}
+.hpzettel .hpklein{margin-top:0}
+.hpzettel h3{font-size:28px;margin:4px 0 8px}
+.hpende{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;border-top:1px solid rgba(56,47,46,.25);margin-top:40px;padding-top:20px}
+.hpende p{margin:0;color:var(--muted);max-width:56ch}
 /* ---------- Haarplan-Seite (Arbeitstitel) ---------- */
 #v-plan{overflow-x:clip}
 #v-plan .bprog{background:rgba(56,47,46,.12);margin:22px 0 8px}
@@ -1278,12 +1359,13 @@ __ROUTINE__
 
   <!-- ===================== HAARPLAN (Arbeitstitel, Vorschau 19.10.) ===================== -->
   <section class="view" id="v-plan" hidden>
-    <div class="intro"><h1>Dein Haarplan</h1><p>Hier entsteht dein persönlicher Plan für deine Haare. Nimm dir ein paar Minuten Zeit und mach die Checks in Ruhe, danach bist du schon eine ganze Ecke schlauer. Und du wirst sehen: Die Lösung ist nicht immer nur ein Produkt. Oft sind es kleine Gewohnheiten, die den größten Unterschied machen.</p></div>
+    <div class="intro"><h1>Dein Haarplan</h1><p id="planIntro">Hier entsteht dein persönlicher Plan für deine Haare. Nimm dir ein paar Minuten Zeit und mach die Checks in Ruhe, danach bist du schon eine ganze Ecke schlauer. Und du wirst sehen: Die Lösung ist nicht immer nur ein Produkt. Oft sind es kleine Gewohnheiten, die den größten Unterschied machen.</p></div>
     <div class="pstand" id="planStand"></div>
-    <h2 class="psub">Schritt 1 bis 3: deine drei Checks</h2>
+    <div class="hplan" id="planFertig" hidden></div>
+    <h2 class="psub" id="planWegH">Schritt 1 bis 3: deine drei Checks</h2>
     <ol class="pweg" id="planWeg"></ol>
-    <h2 class="psub">Schritt 4: dein Plan</h2>
-    <div class="qfeature pfeature">
+    <h2 class="psub nurvorher">Schritt 4: dein Plan</h2>
+    <div class="qfeature pfeature nurvorher">
       <a class="qcard qwide qhero" data-abo="plan" data-check="routine" href="__QUIZ_ROUTINE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Schritt 4</span><span class="qhl">
         <span class="qfor">Zum Schluss: alles zusammen</span>
         <h3>Plan erstellen</h3>
@@ -1303,8 +1385,8 @@ __ROUTINE__
     <h2 class="psub">Mach deinen Plan noch genauer</h2>
     <p class="pzu">Freiwillig und ganz in deinem Tempo: Jeder Extra-Check macht deinen Plan ein Stück genauer. Du kannst sie auch über die nächsten Wochen verteilt machen.</p>
     <div class="pextras" id="planExtras"></div>
-    <h2 class="psub">Das steht in deinem fertigen Plan</h2>
-    <ol class="pkap" id="planKap"></ol>
+    <h2 class="psub nurvorher">Das steht in deinem fertigen Plan</h2>
+    <ol class="pkap nurvorher" id="planKap"></ol>
   </section>
 
   <section class="view" id="v-quiz" hidden>
@@ -1544,6 +1626,7 @@ const NEU = __NEU__;
 const NEUICO = '<path d="M11 3l1.9 4.9L17.8 9.8l-4.9 1.9L11 16.6l-1.9-4.9L4.2 9.8l4.9-1.9z"/><path d="M18.5 14.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>';
 /* Haartyp-Zeile (haartyp.json): Wellen und Locken hervorheben, ohne andere auszuschließen */
 const HAARTYP = __HAARTYP__;
+const HPLAN = __HAARPLAN__; /* Texte für den fertigen Haarplan (haarplan.json) */
 const neuItems = () => NEU.produkte.map(x => ALL.find(p => p.type === x.typ && p.brand === x.brand && p.name === x.name)).filter(Boolean);
 const PLURAL = {buerste:"Haarbürsten",tools:"Hitze-Tools",shampoo:"Shampoos",maske:"Masken",conditioner:"Conditioner",leavein:"Leave-ins",hitze:"Hitzeschutz-Produkte",oel:"Haaröle",kopfhaut:"Kopfhautprodukte"};
 const DEIN = {buerste:"deine Haarbürste",tools:"dein Hitze-Tool",shampoo:"dein Shampoo",maske:"deine Maske",conditioner:"deinen Conditioner",leavein:"dein Leave-in",hitze:"deinen Hitzeschutz",oel:"dein Haaröl",kopfhaut:"deine Kopfhautpflege"};
@@ -2512,7 +2595,107 @@ function renderPlan(){
   ex.innerHTML = EXTRAS.map(([k,l]) => `<button type="button" class="pextra${st[k]?" ok":""}" data-pextra="${k}">${haken(st[k])}<span><b>${l}</b><i>${PLANEXTRA[k]}</i></span>${istAbo() ? "" : `<span class="pzu2">${ZSCHLOSS}</span>`}</button>`).join("");
   ex.querySelectorAll("[data-pextra]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.pextra));
   document.getElementById("planKap").innerHTML = PLANKAP.map(([t,l], i) => `<li><span class="pknr">${String(i+1).padStart(2,"0")}</span><h3>${t}</h3><p>${l}</p></li>`).join("")
-    + `<li class="pkhin"><p>${istAbo() ? "Vorschau: Die Kapitel füllen sich mit deinen Ergebnissen, sobald die Texte fertig sind." : `${ZSCHLOSS} Dein fertiger Plan ist im Abo.`}</p></li>`;
+    + `<li class="pkhin"><p>${istAbo() ? "Sobald du Schritt 4 gemacht hast, steht hier dein fertiger Plan." : `${ZSCHLOSS} Dein fertiger Plan ist im Abo.`}</p></li>`;
+  renderPlanFertig();
+}
+
+/* ---------- Der fertige Haarplan (Vorschau 19.10.): setzt die Kapitel aus allen Check-Ergebnissen zusammen, Texte aus haarplan.json ---------- */
+const mdb = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+const PLAN_INTRO0 = document.getElementById("planIntro").innerHTML;
+function planDaten(){
+  const st = quizStand(), r = st.routine || {}, a = r.a || {};
+  const kopf = st.kopfhaut ? st.kopfhaut.key : ({normal:"N",fettend:"F",trocken:"T",sensibel:"S",schuppen:"ST"})[a.kopf];
+  const dIdx = st.pflege ? st.pflege.th : a.dicke ? ({fein:0,duenn:0,normal:1,dick:2,sehrdick:2})[a.dicke] : null;
+  const chem = [...(a.chem || []), ...((st.pflege && st.pflege.chem) || [])].filter(c => c !== "nichts");
+  return {st, r, a, kopf, dIdx, dicke: dIdx == null ? null : ["duenn","mittel","dick"][dIdx],
+    zst: st.pflege ? st.pflege.st : r.st, struktur: st.haar ? st.haar.key : ({glatt:"G1",wellig:"W",lockig:"L"})[a.struktur],
+    wunsch: a.wunsch && a.wunsch !== "gesund" ? a.wunsch : null, chem, blond: chem.includes("blond"),
+    hitze: a.hitze || (st.pflege && st.pflege.hitze), wash: +a.wash || 0};
+}
+function planEinkauf(){
+  const D = planDaten(), heat = D.hitze === "manchmal" || D.hitze === "taeglich";
+  /* fettige Kopfhaut: zweiter Waschgang mit einem Sensitiv-Shampoo, deshalb eine eigene Zeile */
+  const typen = [["shampoo","Shampoo"]].concat(D.kopf === "F" ? [["shampoo","Sensitiv-Shampoo, für den zweiten Waschgang","sensibel"]] : [], [["conditioner","Conditioner"],["maske","Maske"],["leavein","Leave-in"]], heat ? [["hitze","Hitzeschutz"]] : [], [["kopfhaut","Kopfhautpflege, als Extra"]]);
+  return typen.map(([type, lab, nurCat]) => {
+    let items = ALL.filter(p => p.type === type && (nurCat ? p.cats.includes(nurCat) : fitsMe(p)));
+    if(type === "hitze"){ const mc = myCats("hitze"); if(mc.length) items = items.filter(p => p.cats.some(c => mc.includes(c))); }
+    const cat = nurCat || (myCats(type) || [])[0];
+    try { if(cat) items = items.slice().sort(sorter(type, cat)); } catch(e){}
+    const rec = REC_TYPES.includes(type) ? pickRec(items, type) : [];
+    const lbl = new Map(rec.map(([p, l]) => [p, l]));
+    const kand = [...rec.map(([p]) => p), ...items.filter(p => !lbl.has(p))];
+    if(!kand.length) return null;
+    const erste = kand[0], marken = new Set([erste.brand]), alt = [];
+    const nimm = ok => { const p = kand.find(x => x !== erste && !alt.includes(x) && !marken.has(x.brand) && ok(x)); if(p){ alt.push(p); marken.add(p.brand); } };
+    nimm(x => !erste.segment || !x.segment || x.segment !== erste.segment);
+    nimm(() => true);
+    return {type, lab, erste, alt, lbl};
+  }).filter(Boolean);
+}
+function planHtml(){
+  const H = HPLAN, D = planDaten(), W = H.wichtig;
+  const maske = D.zst != null && D.dIdx != null ? H.maske[D.zst][D.dIdx] : (() => { const c = (D.r.chips || []).find(x => /Maske/.test(x)); return c ? c.replace(/^(\d+)× Maske$/, "$1-mal pro Woche") : "regelmäßig"; })();
+  const leavein = D.dicke ? H.dicke[D.dicke].leavein : "ein Leave-in, das zu deiner Haardicke passt";
+  const fill = t => t === "{oft}" ? (D.kopf === "F" && D.wash >= 3 ? H.kopfOft.replace("{wash}", D.wash) : null) : t.replace("{maske}", maske).replace("{leavein}", leavein);
+  const blk = (b, lab) => b ? `<div class="hpblk"><p class="hplab">${lab}</p><h3>${esc(b.name)}</h3><p>${esc(b.satz)}</p><ul>${b.punkte.map(fill).filter(Boolean).map(x => `<li>${mdb(x)}</li>`).join("")}</ul></div>` : "";
+  const li = arr => arr.map(x => `<li>${mdb(fill(x) || "")}</li>`).join("");
+  const kap = (n, id, titel, inhalt) => `<section class="hpkap" id="hp-${id}"><header><span class="hpnr">${String(n).padStart(2,"0")}</span><h2>${titel}</h2></header>${inhalt}</section>`;
+  const K = [];
+  /* 1 Das bist du */
+  K.push(["du","Das bist du", `<div class="hpgrid">${blk(H.kopf[D.kopf],"Deine Kopfhaut")}${blk(D.dicke && H.dicke[D.dicke],"Deine Haardicke")}${blk(D.zst != null && H.zustand[D.zst],"Dein Haarzustand")}${blk(H.struktur[D.struktur],"Deine Haarstruktur")}${blk(D.wunsch && H.wunsch[D.wunsch],"Dein Wunsch")}</div>${D.kopf ? `<p class="hpklein">${esc(H.kopfExtra)}</p>` : ""}`]);
+  /* 2 Wochenplan */
+  const r = D.r;
+  K.push(["woche","Dein Wochenplan", r.week ? `<div class="hpchips">${(r.chips||[]).map(c => `<span>${esc(c)}</span>`).join("")}</div>
+    <div class="hptab"><table class="hpweek">${r.week.map(w => `<tr class="${w.wash ? "wash" : ""}"><th>${esc(w.tag)}<small>${esc(w.label)}</small></th><td><ul>${w.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></td></tr>`).join("")}</table></div>
+    <h3 class="hpsub">Regelmäßig</h3><div class="hptab"><table class="hpweek">${(r.regel||[]).map(x => `<tr><th>${esc(x[0])}</th><td>${esc(x[1])}</td></tr>`).join("")}</table></div>
+    <p class="hpquote">${esc(H.wochenplan)}</p>` : `<p>Mach den Routine-Check noch einmal, dann steht hier dein Wochenplan.</p>`]);
+  /* 3 Das Wichtigste */
+  K.push(["wichtig","Das Wichtigste auf einen Blick", `<div class="hpdark"><p class="hpdi">${esc(W.intro)}</p>
+    <div class="hp2"><div><h3>Was du tust</h3><ul>${li(W.tust)}</ul></div><div><h3>Dein Ziel</h3><ul>${li(W.ziel)}</ul></div></div>
+    <h3>Was du verstehen musst</h3><ul class="hpverst">${li(W.verstehen)}</ul></div>
+    <div class="hpgene"><h3>Was du beeinflussen kannst und was nicht</h3><div class="hp2"><div><p class="hplab">Das liegt in deinen Genen</p><ul>${li(W.genen)}</ul></div><div><p class="hplab">Das liegt in deiner Hand</p><ul>${li(W.hand)}</ul></div></div><p>${mdb(W.dazwischen)}</p><p>${mdb(W.wurzel)}</p></div>`]);
+  /* 4 Grundregeln: wer viel Hitze nutzt, bekommt die Hitze zuerst, wer chemisch behandelt, die Chemie früh */
+  const vorn = [D.hitze === "taeglich" || D.hitze === "manchmal" ? "hitze" : null, D.chem.length ? "chemie" : null].filter(Boolean);
+  const regeln = [...H.regeln.filter(x => vorn.includes(x[0])).sort((x, y) => vorn.indexOf(x[0]) - vorn.indexOf(y[0])), ...H.regeln.filter(x => !vorn.includes(x[0]))];
+  K.push(["regeln","Deine Grundregeln", `<ol class="hpregeln">${regeln.map(x => `<li><b>${esc(x[1])}</b> ${esc(x[2])}</li>`).join("")}</ol>`]);
+  /* 5 Einkaufsliste: 1 erste Wahl + 2 Alternativen */
+  const mini = (p, tag) => `<button type="button" class="hpprod" data-ptype="${p.type}">${p.img ? `<img src="${p.img}" alt="">` : `<span class="hpnoimg"></span>`}<span class="hppt"><span class="hptag">${esc(tag)}</span><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span>${p.segment ? `<span class="hpseg">${esc(p.segment)}</span>` : ""}</span></button>`;
+  K.push(["einkauf","Deine Einkaufsliste", `<p>${esc(H.einkauf)}</p><div class="hpeink">${planEinkauf().map(e => `<div class="hpek"><h3>${esc(e.lab)}</h3>${mini(e.erste, "Meine erste Wahl" + (e.lbl.get(e.erste) ? " · " + e.lbl.get(e.erste) : ""))}${e.alt.map(p => mini(p, "Alternative" + (e.lbl.get(p) ? " · " + e.lbl.get(p) : ""))).join("")}<button type="button" class="linkbtn" data-ptype="${e.type}">Alle passenden ansehen →</button></div>`).join("")}</div>`]);
+  /* 6 Dein Tag zum Abhaken (Häkchen gelten für heute) */
+  const TG = H.tag, heute = new Date().toISOString().slice(0,10);
+  let hk = {}; try { const x = JSON.parse(localStorage.getItem("planTag")||"null"); if(x && x.d === heute) hk = x.c || {}; } catch(e){}
+  const tsens = D.kopf === "T" || D.kopf === "S";
+  const tfill = t => t === "{prewash}" ? TG.prewash : t === "{shampoo}" ? (tsens ? TG.shampoo1 : TG.shampoo2) : t;
+  const tl = (k, titel) => `<div class="hpday"><h3>${titel}</h3><ul>${TG[k].map((t, i) => { const id = k + i; return `<li><label><input type="checkbox" data-hk="${id}" ${hk[id] ? "checked" : ""}><span>${esc(tfill(t))}</span></label></li>`; }).join("")}</ul></div>`;
+  K.push(["tag","Dein Tag", `<p class="hpklein">Deine Häkchen gelten für heute und sind morgen wieder frei.</p><div class="hp3">${tl("morgens","Morgens")}${tl("abends","Abends")}${tl("waschtag","Am Waschtag")}</div>`]);
+  /* 7 Was dich erwartet */
+  const E = H.erwartet;
+  K.push(["erwartet","Was dich erwartet", `<p>${esc(E.intro)}</p><ol class="hpzeit">${E.zeit.map(([t, x]) => `<li><b>${esc(t)}</b><span>${esc(x)}</span></li>`).join("")}</ol><h3 class="hpsub">Die häufigsten Fehler</h3><ul class="hpfehler">${li(E.fehler)}</ul>`]);
+  /* 8 Wenn sich etwas ändert: Jahreszeit offen, Blondieren nur bei Blondierung */
+  const A = H.aendert, mon = new Date().getMonth(), winter = mon >= 9 || mon <= 2;
+  K.push(["aendert","Wenn sich etwas ändert", `<details class="hpdet" ${winter ? "open" : ""}><summary>Winter</summary><ul>${li(A.winter)}</ul></details><details class="hpdet" ${winter ? "" : "open"}><summary>Sommer und Urlaub</summary><ul>${li(A.sommer)}</ul></details>${D.blond ? `<details class="hpdet" open><summary>Blondieren</summary><ul>${li(A.blond)}</ul><p class="hpklein">${esc(A.blondHinweis)}</p></details>` : ""}`]);
+  /* 9 Friseur-Spickzettel */
+  const s = D.st.schnitt;
+  K.push(["friseur","Dein Friseur-Spickzettel", s ? `<div class="hpzettel"><p class="hpklein">${esc(H.friseur)}</p><h3>${esc(s.empfehlung)}</h3>${s.text ? `<p>${esc(s.text)}</p>` : ""}<ul>${[s.gesichtName ? "Gesichtsform: " + s.gesichtName : "", D.dicke ? "Haardicke: " + H.dicke[D.dicke].name : "", D.struktur ? "Haarstruktur: " + H.struktur[D.struktur].name : "", s.spliss === 1 ? "Spliss in den Spitzen: Spitzen schneiden, bis der Spliss weg ist" : s.spliss === 2 ? "Spliss auch in den Längen: Splissschnitt, ohne Länge zu verlieren" : ""].filter(Boolean).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>`
+    : `<p>${esc(H.friseurOhne)}</p><button type="button" class="btn" id="hpSchnitt">Haarschnitt-Check machen <span aria-hidden="true">→</span></button>`]);
+  return `<nav class="hptoc" aria-label="Kapitel">${K.map(([id, t], i) => `<button type="button" data-hp="${id}"><span>${String(i+1).padStart(2,"0")}</span>${t}</button>`).join("")}</nav>`
+    + K.map(([id, t, x], i) => kap(i+1, id, t, x)).join("")
+    + `<div class="hpende"><p>Hat sich bei dir etwas verändert? Mach die Checks einfach noch einmal, dein Plan passt sich an.</p><button type="button" class="btn" id="hpNeu">Plan neu erstellen <span aria-hidden="true">→</span></button></div>`;
+}
+function renderPlanFertig(){
+  const box = document.getElementById("planFertig"), st = quizStand(), fertig = !!(st.routine && istAbo());
+  document.getElementById("v-plan").classList.toggle("fertig", fertig);
+  document.getElementById("planIntro").innerHTML = fertig ? esc(HPLAN.intro) : PLAN_INTRO0;
+  document.getElementById("planWegH").textContent = fertig ? "Deine Checks, falls du sie wiederholen möchtest" : "Schritt 1 bis 3: deine drei Checks";
+  box.hidden = !fertig; if(!fertig){ box.innerHTML = ""; return; }
+  reloadMe(); box.innerHTML = planHtml();
+  box.querySelectorAll("[data-hp]").forEach(b => b.onclick = () => document.getElementById("hp-" + b.dataset.hp).scrollIntoView({behavior:"smooth", block:"start"}));
+  box.querySelectorAll("[data-ptype]").forEach(b => b.onclick = () => window.zeigeProdukte(b.dataset.ptype));
+  box.querySelectorAll("[data-hk]").forEach(c => c.onchange = () => { const heute = new Date().toISOString().slice(0,10); let x = {d:heute, c:{}};
+    try { const y = JSON.parse(localStorage.getItem("planTag")||"null"); if(y && y.d === heute) x = y; } catch(e){}
+    x.c[c.dataset.hk] = c.checked; try { localStorage.setItem("planTag", JSON.stringify(x)); } catch(e){} });
+  const sb = document.getElementById("hpSchnitt"); if(sb) sb.onclick = () => oeffneCheck("schnitt");
+  document.getElementById("hpNeu").onclick = () => oeffneCheck("routine");
 }
 document.getElementById("zumPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
 /* Quiz-Fenster zu: Häkchen neu zeichnen; nach „Plan erstellen“ landest du auf der Haarplan-Seite */

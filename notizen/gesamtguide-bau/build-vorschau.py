@@ -85,6 +85,7 @@ t = t.replace('__TEX_SERUM__', 'data:image/webp;base64,' + base64.b64encode(open
 t = t.replace('__TEX_CREME__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-creme.webp','rb').read()).decode())
 t = t.replace('__FRAG_LAURA__', json.dumps(json.load(open(f'{S}/frag-laura.json', encoding='utf-8')), ensure_ascii=False))
 t = t.replace('__ALTERNATIVEN__', json.dumps({k: v for k, v in json.load(open(f'{S}/alternativen.json', encoding='utf-8')).items() if not k.startswith('_')}, ensure_ascii=False))
+t = t.replace('__HAARPLAN__', json.dumps({k: v for k, v in json.load(open(f'{S}/haarplan.json', encoding='utf-8')).items() if not k.startswith('_')}, ensure_ascii=False))
 t = t.replace('__HAARTYP__', json.dumps({k: v for k, v in json.load(open(f'{S}/haartyp.json', encoding='utf-8')).items() if not k.startswith('_')}, ensure_ascii=False))
 t = t.replace('__NEU__', json.dumps(json.load(open(f'{S}/neu.json', encoding='utf-8')), ensure_ascii=False))
 t = t.replace('__LL_AUSWAHL__', json.dumps(json.load(open(f'{S}/ll-auswahl.json', encoding='utf-8')), ensure_ascii=False))
