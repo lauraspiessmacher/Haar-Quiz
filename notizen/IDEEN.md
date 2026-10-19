@@ -59,3 +59,6 @@ Von außen muss klar werden: Es geht um eure Haare und eure Routine, darum, das 
 
 ### Mythos-Idee: „Haare gewöhnen sich an Produkte“ (Laura 19.10.)
 Stimmt nicht. Das Haar außerhalb der Kopfhaut ist totes Gewebe und „merkt“ nicht, ob du heute eine andere Marke benutzt als gestern. Auch die Kopfhaut reagiert nur auf Wirkstoffe, nicht auf Marken. Wer gern zehn getestete Leave-ins zu Hause hat und abwechselt, muss sich keine Sorgen machen. (Für Mythos oder Fakt / Wissen, nicht in den Plan.)
+
+### Einkaufsliste im Haarplan: bessere Vorschläge (Laura 19.10., offen)
+Die automatische Auswahl passt nicht immer (Laura bekam z. B. Coco & Eve Bond Therapy als Conditioner-Alternative, die für sie nicht passt). Ideen: (1) Lauras Favorites bevorzugen, wenn sie passen; (2) Laura markiert pro Produktart ihre „Plan-Favoriten“ (z. B. je Haardicke 3–5 Produkte), die zuerst gezogen werden; (3) Rückmeldung „passt mir nicht“ an einem Produkt, dann rückt die nächste Alternative nach (braucht Konto/Speicher).

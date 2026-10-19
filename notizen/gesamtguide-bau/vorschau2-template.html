@@ -851,6 +851,8 @@ html.zg-abo .zbadge{display:none}
 .hpday label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
 .hpday input{width:18px;height:18px;margin-top:2px;accent-color:#382F2E;flex:0 0 auto}
 .hpday input:checked + span{text-decoration:line-through;color:var(--muted)}
+.hpextra{font-style:normal;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 7px;margin-right:2px;color:var(--muted);white-space:nowrap}
+.hpcopy{margin-top:14px}
 .hpzeit{list-style:none;margin:16px 0 0;padding:0 0 0 22px;border-left:2px solid #382F2E;max-width:70ch}
 .hpzeit li{position:relative;margin-bottom:16px;display:flex;flex-direction:column;gap:2px}
 .hpzeit li::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:#F7F2EA;border:2px solid #382F2E}
@@ -1634,7 +1636,7 @@ const KOPF_ADJ = {normal:"normale",trocken:"trockene",fettend:"schnell fettende"
 const DICKE_ADJ = {fein:"feines",duenn:"dünnes",normal:"normales",dick:"dickes",sehrdick:"sehr dickes"};
 const HAIRGUIDE = id => ["maske","conditioner","leavein","hitze","oel"].includes(id);
 /* Hitzeschutz ist nach Konsistenz sortiert: welche Konsistenz passt zu welcher Haardicke? */
-const HITZE_FOR = {fein:["trocken","spray"],duenn:["trocken","spray","serum"],normal:["trocken","spray","serum","oel"],dick:["trocken","serum","creme","oel"],sehrdick:["trocken","creme","oel"]}; /* trockener Hitzeschutz passt beim Styling auf trockenem Haar zu allen Haardicken */
+const HITZE_FOR = {fein:["trocken","spray"],duenn:["trocken","spray","serum"],normal:["trocken","spray","serum"],dick:["trocken","spray","serum","creme"],sehrdick:["trocken","spray","creme","oel"]}; /* trockener Hitzeschutz passt beim Styling auf trockenem Haar zu allen Haardicken; Öl als Hitzeschutz nur bei sehr dickem Haar (Laura 19.10.) */
 
 /* ---------- Meine Haare ---------- */
 const DICKE = [["fein","Fein"],["duenn","Dünn"],["normal","Normal"],["dick","Dick"],["sehrdick","Sehr dick"]];
@@ -2614,22 +2616,47 @@ function planDaten(){
 }
 function planEinkauf(){
   const D = planDaten(), heat = D.hitze === "manchmal" || D.hitze === "taeglich";
-  /* fettige Kopfhaut: zweiter Waschgang mit einem Sensitiv-Shampoo, deshalb eine eigene Zeile */
-  const typen = [["shampoo","Shampoo"]].concat(D.kopf === "F" ? [["shampoo","Sensitiv-Shampoo, für den zweiten Waschgang","sensibel"]] : [], [["conditioner","Conditioner"],["maske","Maske"],["leavein","Leave-in"]], heat ? [["hitze","Hitzeschutz"]] : [], [["kopfhaut","Kopfhautpflege, als Extra"]]);
-  return typen.map(([type, lab, nurCat]) => {
-    let items = ALL.filter(p => p.type === type && (nurCat ? p.cats.includes(nurCat) : fitsMe(p)));
-    if(type === "hitze"){ const mc = myCats("hitze"); if(mc.length) items = items.filter(p => p.cats.some(c => mc.includes(c))); }
-    const cat = nurCat || (myCats(type) || [])[0];
-    try { if(cat) items = items.slice().sort(sorter(type, cat)); } catch(e){}
-    const rec = REC_TYPES.includes(type) ? pickRec(items, type) : [];
+  const has = (p, k) => (p.wt || []).includes(k);
+  const tief = p => /tiefenrein|deep cleans|clarif/i.test(p.brand + " " + p.name);
+  /* jede Zeile: Produktart, Überschrift, Vorauswahl, optional feste Rollen für die drei Plätze */
+  const zeilen = [
+    {type:"shampoo", lab:"Shampoo", pool: p => fitsMe(p), erstOk: p => !tief(p)},
+    D.kopf === "F" ? {type:"shampoo", lab:"Sensitiv-Shampoo, für den zweiten Waschgang", cat:"sensibel", pool: p => p.cats.includes("sensibel")} : null,
+    {type:"conditioner", lab:"Conditioner", pool: p => fitsMe(p)},
+    {type:"maske", lab:"Maske", pool: p => fitsMe(p)},
+    {type:"leavein", lab:"Leave-in", pool: p => fitsMe(p)},
+    /* Hitzeschutz: sicher ist ein Spray, fürs Styling auf trockenem Haar ein trockener Hitzeschutz, Öl nur bei sehr dickem Haar */
+    heat ? {type:"hitze", lab:"Hitzeschutz", pool: p => p.cats.some(c => (HITZE_FOR[me.dicke] || ["trocken","spray"]).includes(c)),
+      rollen: [["Hitzeschutzspray", p => p.cats.includes("spray")], ["Trockener Hitzeschutz fürs Styling", p => p.cats.includes("trocken")], [null, p => p.cats.includes("spray") || p.cats.includes("serum") || p.cats.includes("creme")]]} : null,
+    /* Kopfhautpflege: zuerst eine pflegende (kein Peeling, kein Haarausfall-Serum), dazu ein Peeling */
+    {type:"kopfhaut", lab:"Kopfhautpflege, als Extra", pool: p => fitsMe(p) && !p.cats.includes("haarausfall"),
+      rollen: [["Pflege", p => !p.cats.includes("peeling")], ["Peeling", p => p.cats.includes("peeling")], ["Pflege", p => !p.cats.includes("peeling")]]}
+  ].filter(Boolean);
+  const marken = new Map(), zaehl = b => marken.get(b) || 0, nimm = b => marken.set(b, zaehl(b) + 1);
+  return zeilen.map(z => {
+    let items = ALL.filter(p => p.type === z.type && z.pool(p));
+    const cat = z.cat || (myCats(z.type) || [])[0];
+    try { if(cat) items = items.slice().sort(sorter(z.type, cat)); } catch(e){}
+    const rec = REC_TYPES.includes(z.type) ? pickRec(items, z.type) : [];
     const lbl = new Map(rec.map(([p, l]) => [p, l]));
-    const kand = [...rec.map(([p]) => p), ...items.filter(p => !lbl.has(p))];
+    let kand = [...rec.map(([p]) => p), ...items.filter(p => !lbl.has(p))];
+    /* Wunsch glatt und glänzend: bei Conditioner, Maske und Leave-in zuerst etwas Glättendes */
+    if(D.wunsch === "glatt" && REC_TYPES.includes(z.type)){ const g = kand.find(p => has(p, "glaettend")); if(g){ kand = [g, ...kand.filter(p => p !== g)]; if(!lbl.has(g)) lbl.set(g, "Glättend"); } }
     if(!kand.length) return null;
-    const erste = kand[0], marken = new Set([erste.brand]), alt = [];
-    const nimm = ok => { const p = kand.find(x => x !== erste && !alt.includes(x) && !marken.has(x.brand) && ok(x)); if(p){ alt.push(p); marken.add(p.brand); } };
-    nimm(x => !erste.segment || !x.segment || x.segment !== erste.segment);
-    nimm(() => true);
-    return {type, lab, erste, alt, lbl};
+    /* keine Marke soll die Liste beherrschen: eine Marke höchstens zweimal, als erste Wahl nur einmal */
+    const gew = [], frei = (p, max) => !gew.includes(p) && !gew.some(x => x.brand === p.brand) && zaehl(p.brand) < max;
+    const such = (ok, max) => kand.find(p => frei(p, max) && ok(p));
+    /* Drogerie und High-End gemischt, solange es noch nicht gemischt ist */
+    const mix = p => !gew.length || !p.segment || gew.some(x => x.segment && x.segment !== p.segment) || gew.every(x => x.segment !== p.segment);
+    /* Bei Conditioner, Maske, Leave-in bleiben die Rollen aus der Empfehlung (Feuchtigkeit, Nährend, Repair), damit die Balance stimmt */
+    const rolle = l => /Glätt/.test(l) ? p => has(p, "glaettend") : /Feucht/.test(l) ? p => has(p, "feucht") : /Nähr/.test(l) ? p => has(p, "naehrend") : /Repair/.test(l) ? p => p.cats.includes("kaputt") : () => true;
+    const recRollen = [...new Set([lbl.get(kand[0]), ...rec.map(([, l]) => l)].filter(Boolean))].map(l => [l, rolle(l)]);
+    const rollen = z.rollen || (recRollen.length ? recRollen : [[null, p => !z.erstOk || z.erstOk(p)]]).concat([[null, () => true], [null, () => true]]).slice(0, 3);
+    rollen.forEach(([name, ok], i) => {
+      const ok1 = i === 0 && z.erstOk ? p => ok(p) && z.erstOk(p) : ok;
+      const p = such(p => ok1(p) && mix(p), 1) || such(ok1, 1) || such(p => ok1(p) && mix(p), 2) || such(ok1, 2) || such(p => mix(p), 2) || such(() => true, 2);
+      if(p){ gew.push(p); nimm(p.brand); if(name && ok(p)) lbl.set(p, name); } });
+    return gew.length ? {type: z.type, lab: z.lab, erste: gew[0], alt: gew.slice(1), lbl} : null;
   }).filter(Boolean);
 }
 function planHtml(){
@@ -2666,8 +2693,9 @@ function planHtml(){
   let hk = {}; try { const x = JSON.parse(localStorage.getItem("planTag")||"null"); if(x && x.d === heute) hk = x.c || {}; } catch(e){}
   const tsens = D.kopf === "T" || D.kopf === "S";
   const tfill = t => t === "{prewash}" ? TG.prewash : t === "{shampoo}" ? (tsens ? TG.shampoo1 : TG.shampoo2) : t;
-  const tl = (k, titel) => `<div class="hpday"><h3>${titel}</h3><ul>${TG[k].map((t, i) => { const id = k + i; return `<li><label><input type="checkbox" data-hk="${id}" ${hk[id] ? "checked" : ""}><span>${esc(tfill(t))}</span></label></li>`; }).join("")}</ul></div>`;
-  K.push(["tag","Dein Tag", `<p class="hpklein">Deine Häkchen gelten für heute und sind morgen wieder frei.</p><div class="hp3">${tl("morgens","Morgens")}${tl("abends","Abends")}${tl("waschtag","Am Waschtag")}</div>`]);
+  const extra = t => /^Extra: /.test(t) ? `<em class="hpextra">Extra</em> ${esc(t.slice(7))}` : esc(t);
+  const tl = (k, titel) => `<div class="hpday"><h3>${titel}</h3><ul>${TG[k].map((t, i) => { const id = k + i; return `<li><label><input type="checkbox" data-hk="${id}" ${hk[id] ? "checked" : ""}><span>${extra(tfill(t))}</span></label></li>`; }).join("")}</ul></div>`;
+  K.push(["tag","Dein Tag", `<p class="hpklein">Deine Häkchen gelten für heute und sind morgen wieder frei. Du kannst dir die Liste auch in deine Notizen kopieren.</p><div class="hp3">${tl("morgens","Morgens")}${tl("abends","Abends")}${tl("waschtag","Am Waschtag")}</div><div class="hpcopy"><button type="button" class="btn" id="hpTagCopy">Checkliste kopieren</button></div>`]);
   /* 7 Was dich erwartet */
   const E = H.erwartet;
   K.push(["erwartet","Was dich erwartet", `<p>${esc(E.intro)}</p><ol class="hpzeit">${E.zeit.map(([t, x]) => `<li><b>${esc(t)}</b><span>${esc(x)}</span></li>`).join("")}</ol><h3 class="hpsub">Die häufigsten Fehler</h3><ul class="hpfehler">${li(E.fehler)}</ul>`]);
@@ -2695,6 +2723,13 @@ function renderPlanFertig(){
     try { const y = JSON.parse(localStorage.getItem("planTag")||"null"); if(y && y.d === heute) x = y; } catch(e){}
     x.c[c.dataset.hk] = c.checked; try { localStorage.setItem("planTag", JSON.stringify(x)); } catch(e){} });
   const sb = document.getElementById("hpSchnitt"); if(sb) sb.onclick = () => oeffneCheck("schnitt");
+  /* Checkliste als Text für die Notizen-App */
+  document.getElementById("hpTagCopy").onclick = async () => {
+    const t = ["MEIN HAARPLAN · DEIN TAG", ""].concat(...[...box.querySelectorAll("#hp-tag .hpday")].map(d => [d.querySelector("h3").textContent.toUpperCase(), ...[...d.querySelectorAll("li span")].map(x => "◻︎ " + x.textContent.trim()), ""])).join("\n");
+    let ok = false; try { await navigator.clipboard.writeText(t); ok = true; } catch(e){}
+    if(!ok){ const ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch(e){} ta.remove(); }
+    toast(ok ? "Checkliste kopiert" : "Kopieren hat nicht geklappt");
+  };
   document.getElementById("hpNeu").onclick = () => oeffneCheck("routine");
 }
 document.getElementById("zumPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };

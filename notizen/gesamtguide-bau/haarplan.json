@@ -86,7 +86,7 @@
     "Je trockener sich deine Haare anfühlen, desto reichhaltiger darf es sein.",
     "Du greifst nicht automatisch zum reichhaltigsten Produkt."
    ],
-   "leavein": "eine Leave-in-Lotion oder eine leichte Leave-in-Creme"
+   "leavein": "eine Leave-in-Lotion, ein Leave-in-Serum oder eine leichte Leave-in-Creme"
   },
   "dick": {
    "name": "Dickes Haar",
@@ -97,7 +97,7 @@
     "Fühlen sich deine Längen trotz Spray rau an, steigst du auf eine Creme um.",
     "Es gibt noch eine Stufe darüber, sehr dickes Haar. Ist dir selbst das hier noch zu leicht, gehörst du wahrscheinlich dazu. Dann brauchst du richtig nährende Texturen wie sehr reichhaltige Cremes und Buttern."
    ],
-   "leavein": "eine Leave-in-Creme"
+   "leavein": "eine Leave-in-Creme oder ein Leave-in-Serum"
   }
  },
  "zustand": [
@@ -241,7 +241,7 @@
   "intro": "Du hast jetzt viel gelesen. Hier ist alles noch einmal ganz einfach, zum Merken.",
   "tust": [
    "Deinen Wochenplan, und zwar dauerhaft.",
-   "Jeden Tag die LL-Methode: Leave-in nach dem Waschen ins feuchte Haar und ein- bis zweimal am Tag in die trockenen Längen. Dein Leave-in: {leavein}.",
+   "Jeden Tag die LL-Methode: Leave-in nach dem Waschen ins feuchte Haar und ein- bis zweimal am Tag in die trockenen Längen. Dein Leave-in: {leavein}. Die Konsistenz ist ein Richtwert: Kommst du mit einer anderen gut klar, bleib ruhig dabei.",
    "Jede Wäsche endet mit Pflege (Conditioner oder Maske), nie nur mit Shampoo. Shampoo reinigt, es pflegt nicht.",
    "Du hältst die Reibung klein: von den Spitzen nach oben bürsten, ausdrücken statt rubbeln, nachts locker zusammen.",
    "Schaffst du an einem Tag nicht alles, nimmst du wenigstens etwas Leave-in. Ein bisschen Pflege ist immer besser als gar keine."
@@ -306,15 +306,17 @@
    "mit einer lockeren Schlaffrisur. Das gilt für jeden Haartyp, nicht nur für Locken."
   ]
  ],
- "einkauf": "Das sind die Produkte, die zu deinen Ergebnissen passen. Du musst nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.",
+ "einkauf": "Das sind meine Vorschläge, die zu deinen Ergebnissen passen. Sieh sie als Startpunkt, nicht als Pflicht: Jedes Haar reagiert ein bisschen anders. Kommst du mit einem Produkt nicht klar, liegt das nicht an dir. Dann probier eine Alternative oder schau unter „Alle passenden ansehen“. Du musst auch nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.",
  "tag": {
   "morgens": [
    "Leave-in in die trockenen Längen (LL-Methode)",
+   "Extra: zum Versiegeln etwas Haaröl in Längen und Spitzen",
    "Sanft bürsten, von den Spitzen nach oben",
-   "Draußen bei Wind oder mit Schal: Haare locker zusammen"
+   "Gehst du bei Wind oder mit Schal raus: Haare locker zusammen"
   ],
   "abends": [
-   "Leave-in in die Spitzen",
+   "Leave-in in Längen und Spitzen",
+   "Extra: zum Versiegeln etwas Haaröl in Längen und Spitzen",
    "Lockerer Zopf oder Dutt mit Scrunchie",
    "Kissen aus Seide oder Bambusviskose, nie mit nassen Haaren ins Bett"
   ],

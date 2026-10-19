@@ -194,7 +194,7 @@ Kommt aus dem Routine-Check, wie bisher. Darunter steht ein Satz:
 
 **Was du tust**
 - Deinen Wochenplan, und zwar dauerhaft.
-- Jeden Tag die LL-Methode: Leave-in nach dem Waschen ins feuchte Haar und ein- bis zweimal am Tag in die trockenen Längen. Dein Leave-in: [Produktart aus dem Pflege-Check].
+- Jeden Tag die LL-Methode: Leave-in nach dem Waschen ins feuchte Haar und ein- bis zweimal am Tag in die trockenen Längen. Dein Leave-in: [Produktart aus dem Pflege-Check, immer mit einer zweiten Konsistenz als Alternative]. Die Konsistenz ist ein Richtwert: Kommst du mit einer anderen gut klar, bleib ruhig dabei.
 - Jede Wäsche endet mit Pflege (Conditioner oder Maske), nie nur mit Shampoo. Shampoo reinigt, es pflegt nicht.
 - Du hältst die Reibung klein: von den Spitzen nach oben bürsten, ausdrücken statt rubbeln, nachts locker zusammen.
 - Schaffst du an einem Tag nicht alles, nimmst du wenigstens etwas Leave-in. Ein bisschen Pflege ist immer besser als gar keine.
@@ -243,7 +243,7 @@ Für alle gleich (jetzt 6 Regeln, die Nacht ist dazugekommen). Die Reihenfolge p
 ## 5. Deine Einkaufsliste
 Die Produkte setzt die Seite automatisch ein. Darüber steht:
 
-> Das sind die Produkte, die zu deinen Ergebnissen passen. Du musst nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.
+> Das sind meine Vorschläge, die zu deinen Ergebnissen passen. Sieh sie als Startpunkt, nicht als Pflicht: Jedes Haar reagiert ein bisschen anders. Kommst du mit einem Produkt nicht klar, liegt das nicht an dir. Dann probier eine Alternative oder schau unter „Alle passenden ansehen“. Du musst auch nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.
 
 **Entschieden (Laura 19.10.: „top“):** Pro Produktart steht oben **eine erste Wahl**, das Produkt, das am besten zu deinen Ergebnissen passt, egal ob Drogerie oder High-End. Darunter stehen **zwei Alternativen**, mindestens eine aus der Drogerie und eine High-End, von anderen Marken. Ganz unten kommt ein Link „Alle passenden ansehen“, der direkt zur gefilterten Produktliste führt.
 
@@ -253,11 +253,13 @@ Die Produkte setzt die Seite automatisch ein. Darüber steht:
 
 **Morgens**
 - Leave-in in die trockenen Längen (LL-Methode)
+- Extra: zum Versiegeln etwas Haaröl in Längen und Spitzen
 - Sanft bürsten, von den Spitzen nach oben
-- Draußen bei Wind oder mit Schal: Haare locker zusammen
+- Gehst du bei Wind oder mit Schal raus: Haare locker zusammen
 
 **Abends**
-- Leave-in in die Spitzen
+- Leave-in in Längen und Spitzen
+- Extra: zum Versiegeln etwas Haaröl in Längen und Spitzen
 - Lockerer Zopf oder Dutt mit Scrunchie
 - Kissen aus Seide oder Bambusviskose, nie mit nassen Haaren ins Bett
 

@@ -276,15 +276,15 @@ function advance(){ const L = vis(); if(idx < L.length-1){ idx++; render(); } el
 const DICKE = ["fein","duenn","normal","dick","sehrdick"];
 const KOPFNAME = {normal:"unkomplizierter",fettend:"schnell fettender",trocken:"trockener",sensibel:"sensibler",schuppen:"schuppiger"};
 const COND = ["Wonder Water oder ein leichter Conditioner","ein leichter Conditioner","ein Conditioner mit mittlerer Reichhaltigkeit","ein reichhaltiger Conditioner","ein sehr reichhaltiger Conditioner"];
-const LEAVE_FEUCHT = ["ein Leave-in-Spray","ein Leave-in-Spray oder ein leichtes Leave-in-Serum","eine Leave-in-Lotion oder ein Leave-in-Serum","eine Leave-in-Creme","eine reichhaltige Leave-in-Creme"];
-const LEAVE_TROCKEN = ["ein Leave-in-Spray","ein Leave-in-Spray oder ein leichtes Serum","ein Leave-in-Serum oder eine leichte Lotion","ein Leave-in-Serum oder eine Leave-in-Creme","eine Leave-in-Creme"];
+const LEAVE_FEUCHT = ["ein Leave-in-Spray oder ein ganz leichtes Leave-in-Serum","ein Leave-in-Spray oder ein leichtes Leave-in-Serum","eine Leave-in-Lotion, ein Leave-in-Serum oder eine leichte Leave-in-Creme","eine Leave-in-Creme oder ein Leave-in-Serum","eine reichhaltige Leave-in-Creme oder eine leichtere Leave-in-Creme"]; /* immer mit Alternative, damit niemand an einer Konsistenz festhängt (Laura 19.10.) */
+const LEAVE_TROCKEN = ["ein Leave-in-Spray oder ein ganz leichtes Serum","ein Leave-in-Spray oder ein leichtes Serum","ein Leave-in-Serum oder eine leichte Lotion","ein Leave-in-Serum oder eine Leave-in-Creme","eine Leave-in-Creme oder ein Leave-in-Serum"];
 const OEL = ["ein trockenes, leichtes Öl in die Spitzen","ein trockenes, leichtes Öl in die Spitzen","ein Haaröl in Längen und Spitzen","ein Haaröl in Längen und Spitzen","ein Haaröl in Längen und Spitzen"];
 const HS = [
  "ein trockenes Hitzeschutzspray. Es ist von der Textur wie Haarspray oder Trockenshampoo, beschwert nicht und ist ideal auf trockenem Haar vor dem Styling. Ins feuchte Haar passt ein leichtes klassisches Hitzeschutzspray.",
  "ein trockenes Hitzeschutzspray. Es ist von der Textur wie Haarspray oder Trockenshampoo, beschwert nicht und ist ideal auf trockenem Haar vor dem Styling. Ins feuchte Haar passt ein leichtes klassisches Hitzeschutzspray.",
- "ein klassisches Hitzeschutzspray oder ein Leave-in-Serum mit Hitzeschutz. Wenn deine Längen trocken sind, darf es auch ein Haaröl mit Hitzeschutz sein.",
- "eine Leave-in-Creme mit Hitzeschutz oder ein Haaröl mit Hitzeschutz.",
- "eine Leave-in-Creme mit Hitzeschutz oder ein Haaröl mit Hitzeschutz."
+ "ein klassisches Hitzeschutzspray oder ein Leave-in-Serum mit Hitzeschutz.",
+ "ein klassisches Hitzeschutzspray oder eine Leave-in-Creme mit Hitzeschutz.",
+ "ein klassisches Hitzeschutzspray oder eine Leave-in-Creme mit Hitzeschutz. Bei sehr dicken oder krausen Haaren geht auch ein Haaröl mit Hitzeschutz."
 ];
 const PREWASH = ["LWC- oder CWC-Methode","LWC- oder CWC-Methode","CWC- oder MWC-Methode","ÖWC- oder MWC-Methode","ÖWC- oder MWC-Methode"];
 
@@ -416,7 +416,7 @@ function plan(a){
     } else {
       label = sp ? "Pflegetag mit Sport" : "Pflegetag";
       items.push(`LL-Methode: ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen`);
-      if(d === tsDay) items.push(`${tsSensitiv ? "Sensitiv-Trockenshampoo" : "Trockenshampoo"} am Ansatz, ${tsWhy}`);
+      if(d === tsDay) items.push(`${tsSensitiv ? "Sensitiv-Trockenshampoo" : "Trockenshampoo"} am Ansatz, ${tsWhy} (nach Bedarf, kein Muss)`);
       else if(sp && !kopfOk) items.push("Nach dem Sport den Ansatz mit dem Föhn auf kalter Stufe trocknen");
     }
     return {tag, label, items, wash: isWash};
@@ -439,7 +439,7 @@ function plan(a){
   if(st === 3) T.push({warn:true, h:"Deine Haare sind strukturell stark geschädigt", p:["Wenn sich nasse Haare wie Gummi dehnen, ist das Innere des Haares stark angegriffen. Pausiere Hitze-Tools wie Glätteisen und Lockenstab und chemische Behandlungen (Föhnen auf mittlerer und kalter Stufe mit Hitzeschutz ist okay), steig auf Bond-Produkte um und lass dich beim Friseur beraten, wie viel von den geschädigten Längen ab muss. Kein Produkt macht diese Längen wieder wie vorher, aber gute Pflege schützt den Rest und das nachwachsende Haar."]});
 
   T.push({h:"Deine Basis", p:["Diese Schritte gehören in jede Routine, egal wie viel Zeit du hast. Sie halten deine Haare geschmeidig und flexibel, und genau das schützt sie vor Haarbruch und Spliss."], li:[
-    `**Nach jeder Wäsche ein Leave-in:** ${LEAVE_FEUCHT[dk]} ins noch feuchte Haar.`,
+    `**Nach jeder Wäsche ein Leave-in:** ${LEAVE_FEUCHT[dk]} ins noch feuchte Haar. Die Konsistenz ist ein Richtwert: Kommst du mit einer anderen gut klar, bleib ruhig dabei.`,
     `**Jeden Tag die LL-Methode:** Auch zwischen den Wäschen kommt ${LEAVE_TROCKEN[dk]} in die trockenen Längen und Spitzen.${dk === 0 ? " Wenn das nicht jeden Tag klappt, ist zum Beispiel jeder zweite Tag auch gut." : ""}`,
     `**Immer Hitzeschutz:** vor dem Föhnen, Glätten und Locken.`,
     `**Zum Abschluss versiegeln:** ${OEL[dk].charAt(0).toUpperCase() + OEL[dk].slice(1)}. Ich empfehle es immer, es ist ein schönes Add-on-Produkt. Öl ersetzt keine andere Pflege, sondern versiegelt, was vorher an Pflege drin ist.${fine ? " Bei feinen Haaren ist ein trockenes, leichtes Öl wichtig, damit nichts beschwert." : ""}`,
@@ -453,7 +453,7 @@ function plan(a){
   if(fine) mp += " Bei feinen Haaren reicht eine leichte Maske nur in Längen und Spitzen, damit nichts beschwert.";
   if(effort === "wenig" && Math.max(byDk, bySt) > m) mp += ` Eigentlich könnten deine Haare sogar ${Math.min(n, Math.max(byDk, bySt))} Masken pro Woche vertragen. Wenn du mal mehr Zeit hast, lohnt sich das.`;
   wp.push(mp);
-  if(prewashDay != null) wp.push(`**Pre-Wash-Pflege:** Ein- bis zweimal pro Woche, nach Bedarf, schützt du deine Längen vor dem Shampoo. Theoretisch geht das vor jeder Wäsche, ein Muss ist es aber nicht. Für dich passt die ${PREWASH[dk]}. ${dk <= 2 ? "Bei der CWC-Methode machst du die Haare nass, gibst Conditioner in die Längen und shampoonierst direkt danach den Ansatz, da musst du nichts lange einwirken lassen. " : ""}Bei der ${dk <= 1 ? "LWC-Methode" : dk === 2 ? "MWC-Methode" : "ÖWC- und MWC-Methode"} gibst du ${dk <= 1 ? "ein Leave-in" : dk === 2 ? "eine Maske" : "Öl oder Maske"} in die trockenen Längen und lässt ${dk === 2 ? "sie" : "es"} 10 bis 60 Minuten einwirken, aber nie über Nacht.`);
+  if(prewashDay != null) wp.push(`**Pre-Wash-Pflege:** Ein- bis zweimal pro Woche, nach Bedarf, schützt du deine Längen vor dem Shampoo. Theoretisch geht das vor jeder Wäsche, ein Muss ist es aber nicht. Für dich passt die ${PREWASH[dk]}. ${dk <= 2 ? "Bei der CWC-Methode machst du die Haare nass, gibst Conditioner in die Längen und shampoonierst direkt danach den Ansatz, da musst du nichts lange einwirken lassen. " : ""}Bei der ${dk <= 1 ? "LWC-Methode" : dk === 2 ? "MWC-Methode" : "ÖWC- und MWC-Methode"} gibst du ${dk <= 1 ? "ein Leave-in" : dk === 2 ? "eine Maske" : "Öl oder Maske"} in die trockenen Längen und lässt ${dk === 2 ? "sie" : "es"} 10 bis 60 Minuten einwirken.${dk >= 3 ? " Machst du die ÖWC-Methode nur in Längen und Spitzen, darf das Öl auch über Nacht einwirken, wenn du Lust hast. Ein Muss ist das nicht." : ""}`);
   T.push({h:"Deine Waschtage", p:wp});
 
   const zp = [];
@@ -560,7 +560,7 @@ const HS_DETAILS = `<details><summary>Welcher Hitzeschutz passt zu wem?</summary
     <li><strong>Trockene Hitzeschutzsprays</strong> sind von der Textur wie Haarspray oder Trockenshampoo. Sie beschweren nicht und sind ideal auf trockenem Haar vor dem Styling, auch für feine und dünne Haare.</li>
     <li><strong>Klassische Hitzeschutzsprays</strong> kommen ins feuchte Haar, du kannst sie aber auch auf trockenem Haar nutzen. Lass sie dann vor Lockenstab und Glätteisen antrocknen. Ein Blick auf die Inhaltsstoffe lohnt sich, weil auch hier beschwerende Stoffe drin sein können.</li>
     <li><strong>Leave-in-Seren und Leave-in-Cremes mit Hitzeschutz</strong> pflegen und schützen in einem Schritt. Leave-in-Cremes sind ideal für dicke bis sehr dicke Haare.</li>
-    <li><strong>Haaröle mit Hitzeschutz</strong> gibt es auch. Achte hier auf die Reichhaltigkeit. Öle empfehle ich nur für normale bis sehr dicke Haare, nicht für feine oder dünne.</li>
+    <li><strong>Haaröle mit Hitzeschutz</strong> gibt es auch. Als Hitzeschutz empfehle ich sie aber nur bei sehr dicken oder krausen Haaren, weil man davon einiges braucht und die Textur dafür schwierig ist. Sicherer bist du mit einem Hitzeschutzspray.</li>
   </ul></div></details>`;
 
 function result(){
