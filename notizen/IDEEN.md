@@ -62,3 +62,9 @@ Stimmt nicht. Das Haar außerhalb der Kopfhaut ist totes Gewebe und „merkt“ 
 
 ### Einkaufsliste im Haarplan: bessere Vorschläge (Laura 19.10., offen)
 Die automatische Auswahl passt nicht immer (Laura bekam z. B. Coco & Eve Bond Therapy als Conditioner-Alternative, die für sie nicht passt). Ideen: (1) Lauras Favorites bevorzugen, wenn sie passen; (2) Laura markiert pro Produktart ihre „Plan-Favoriten“ (z. B. je Haardicke 3–5 Produkte), die zuerst gezogen werden; (3) Rückmeldung „passt mir nicht“ an einem Produkt, dann rückt die nächste Alternative nach (braucht Konto/Speicher).
+
+### Neuer Check: Passende Kopfhautpflege finden (Laura 19.10.)
+Eigenes Quiz, das die passende Kopfhautpflege findet, auch Kombinationen aus zwei Produkten bzw. Serien (z. B. Feuchtigkeitsserum + Peeling). Als späterer Extra-Check, „damit immer wieder was Neues dazukommt“.
+
+### Haarausfall größer machen (Laura 19.10., Ort noch offen)
+Bisher: Wissen-Kapitel „Haarausfall“ + „Der Haarzyklus“, Produktkategorie „Bei Haarausfall“ (Kopfhautpflege), Marketing-Hinweis an Produkten. Im Haarplan bewusst keine Haarausfall-Seren. Mögliche Orte: (1) eigener Check „Haarausfall-Check“ (Art: diffus, erblich, kreisrund, nach Stress/Schwangerschaft; wann zum Arzt; was Pflege kann und was nicht); (2) Haarausfall als eigenes Regal/Schwerpunkt im Wissen; (3) im Plan ein Kapitel, das nur erscheint, wenn im Kopfhaut-Check Haarausfall angegeben wurde.
