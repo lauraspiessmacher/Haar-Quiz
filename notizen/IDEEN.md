@@ -53,3 +53,6 @@ Elvital-INCI: siehe lauras-favorites.md.
 - Unterschiede nur in Spuren: Kérastase zusätzlich Hyaluron, Milchsäure, Triglyceride, Wildrosenextrakt (alle hinter dem Parfum). Elvital mit Farbstoffen, Kokosöl etwas weiter vorne.
 - Fazit: praktisch dieselbe Formel. Die „Laminierung“ ist von der Formel her ein Conditioner. Gleiche Einwirkzeit = gleiche Wirkung; die 5 Minuten stehen nur in der Gebrauchsanweisung.
 - Offen (Laura): als Paar aufnehmen? Elvital-Laminierung zu den Conditionern umsortieren?
+
+### Worum es auf der Seite geht (Laura 19.10., für Startseite/Abo-Texte merken)
+Von außen muss klar werden: Es geht um eure Haare und eure Routine, darum, das Bestmögliche aus euren Haaren rauszuholen, und um Wissen, das an einem Ort gesammelt ist. Dazu eine Produktdatenbank, die ständig erneuert wird und die Laura nach Haartypen und Bedürfnissen sortiert hat. Der Haarplan macht das am besten sichtbar. Lauras Erfahrung: Auf Social Media zählen viele nicht eins und eins zusammen, auch wenn Videos aufeinander aufbauen. Der Plan ist die Chance, dass es zusammenhängend verstanden wird.

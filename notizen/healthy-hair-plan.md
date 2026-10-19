@@ -3,6 +3,8 @@
 Das Herzstück des Abos. Kein Quiz, sondern eine persönliche Seite in „Mein Bereich“, die aus allen Check-Ergebnissen zusammengesetzt wird. Technik: wie die Quizze regelbasiert (keine KI), Laura schreibt die Bausteine, die Seite setzt sie je nach Ergebnis zusammen. Der Routine-Check wird zu „Deinen Healthy Hair Plan erstellen“ (seine Fragen bleiben, sein Wochenplan wird Kapitel 3).
 
 ## Aufbau
+> **Neu 19.10.:** Aufbau überarbeitet (9 Kapitel, neues Kapitel „Das Wichtigste auf einen Blick“ nach dem Wochenplan, Zeitleiste mit Faktencheck). Alle Textentwürfe stehen in `notizen/haarplan-texte-entwurf.md`. Die Liste unten ist der alte Stand.
+
 0. **Fortschritt**: 3 kostenlose Checks (Kopfhaut, Pflege, Haar) + Plan erstellen. Fehlende Checks direkt verlinkt. (Steht schon in „Mein Bereich“.)
 1. **Das bist du** – pro Ergebnis: „Das heißt für dich“ (2–3 einfache Sätze) + „Das machst du ab jetzt“ (3 Punkte).
 2. **Deine Grundregeln** – für alle gleich, Reihenfolge je nach Person (wer viel Hitze nutzt, bekommt Hitze zuerst).

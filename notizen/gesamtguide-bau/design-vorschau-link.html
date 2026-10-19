@@ -813,8 +813,8 @@ html.zg-abo .zbadge{display:none}
 .pextra .bhk{border-color:rgba(56,47,46,.35);flex:0 0 auto}
 .pextra .bhk.ok{background:var(--khaki-button,#4A4A39);color:#F3ECE2;border-color:var(--khaki-button,#4A4A39)}
 .pzu2 svg{width:15px;height:15px;opacity:.7}
-.pkap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-@media (max-width:959px){ .pkap{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.pkap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:759px){ .pkap{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:520px){ .pkap{grid-template-columns:1fr} }
 .pkap li{background:#382F2E;color:#F3ECE2;border-radius:16px;padding:18px 18px 20px}
 .pkap .pknr{display:block;font-size:12px;letter-spacing:.16em;color:#C9BCAE;margin-bottom:22px}
@@ -2718,7 +2718,7 @@ function renderBereich(){
 /* ---------- Haarplan-Seite (Arbeitstitel, Vorschau 19.10.): Schritte 1–3 kostenlos, Schritt 4 Plan erstellen, Extra-Checks freiwillig ---------- */
 const PLANCHK = {kopfhaut:"Welche Kopfhaut du gerade hast und worauf du beim Shampoo achtest.", pflege:"Wie dick deine Haare sind, wie es ihnen geht und wie reichhaltig deine Pflege sein darf.", haar:"Ob deine Haare glatt, wellig oder lockig sind und wie du deine Struktur pflegst."};
 const PLANEXTRA = {leavein:"Welches Leave-in zu dir passt", spliss:"Wie kaputt deine Haare wirklich sind", tools:"Welches Hitze-Tool zu deinen Haaren passt", schnitt:"Welcher Haarschnitt dir steht"};
-const PLANKAP = [["Das bist du","Was deine Ergebnisse bedeuten und was du ab jetzt machst."],["Deine Grundregeln","Reibung, Hitze, Chemie, LL-Methode und richtig waschen, sortiert nach dem, was bei dir am meisten zählt."],["Dein Wochenplan","Wann du wäschst, wann eine Maske dran ist und was du beim Sport und nachts machst."],["Deine Einkaufsliste","Für jede Produktart die Produkte, die wirklich zu dir passen."],["Dein Tag","Deine kleine Abhakliste für morgens und abends."],["Wenn sich etwas ändert","Was du vor und nach dem Blondieren, im Winter und im Urlaub anders machst."],["Was dich erwartet","Was sich nach 4, 8 und 12 Wochen tut, und die häufigsten Fehler."],["Dein Friseur-Spickzettel","Aus dem Haarschnitt-Check, wenn du ihn gemacht hast."]];
+const PLANKAP = [["Das bist du","Deine Ergebnisse aus allen Checks, kurz und auf den Punkt."],["Dein Wochenplan","Wann du wäschst, wann eine Maske dran ist und was du beim Sport und nachts machst."],["Das Wichtigste auf einen Blick","Was du tust, was dein Ziel ist und was du verstehen musst. Nur Stichpunkte, zum Merken."],["Deine Grundregeln","Reibung, Pflege, Hitze, Chemie und richtig waschen, sortiert nach dem, was bei dir am meisten zählt."],["Deine Einkaufsliste","Für jede Produktart die Produkte, die wirklich zu dir passen."],["Dein Tag","Deine kleine Abhakliste für morgens, abends und den Waschtag."],["Was dich erwartet","Was sich nach Wochen, Monaten und Jahren tut, und die häufigsten Fehler."],["Wenn sich etwas ändert","Was du im Winter, im Urlaub und rund ums Blondieren anders machst."],["Dein Friseur-Spickzettel","Aus dem Haarschnitt-Check, wenn du ihn gemacht hast."]];
 function renderPlan(){
   const st = quizStand(), haken = ok => `<span class="bhk${ok?" ok":""}" aria-hidden="true">${ok?"✓":""}</span>`;
   const anz = CHECKS.filter(([k]) => st[k]).length + (st.routine && istAbo() ? 1 : 0);
