@@ -243,7 +243,7 @@ Für alle gleich (jetzt 6 Regeln, die Nacht ist dazugekommen). Die Reihenfolge p
 ## 5. Deine Einkaufsliste
 Die Produkte setzt die Seite automatisch ein. Darüber steht:
 
-> Das sind meine Vorschläge, die zu deinen Ergebnissen passen. Sieh sie als Startpunkt, nicht als Pflicht: Jedes Haar reagiert ein bisschen anders. Kommst du mit einem Produkt nicht klar, liegt das nicht an dir. Dann probier eine Alternative oder schau unter „Alle passenden ansehen“. Du musst auch nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.
+> Das ist eine kleine Auswahl an Produkten, die zu deinen Ergebnissen passen könnten. Unter „Alle passenden … ansehen“ findest du in jeder Kategorie alle Produkte, die zu deinem Haartyp und deiner Kopfhaut passen. Jedes Haar reagiert ein bisschen anders: Kennst du ein Produkt schon und es hat bei dir nicht funktioniert, tipp auf „Passt mir nicht“, dann rückt das nächste nach. Du musst auch nicht alles auf einmal kaufen. Fang mit dem an, was dir gerade fehlt, und brauch auf, was du schon hast.
 
 **Entschieden (Laura 19.10.: „top“):** Pro Produktart steht oben **eine erste Wahl**, das Produkt, das am besten zu deinen Ergebnissen passt, egal ob Drogerie oder High-End. Darunter stehen **zwei Alternativen**, mindestens eine aus der Drogerie und eine High-End, von anderen Marken. Ganz unten kommt ein Link „Alle passenden ansehen“, der direkt zur gefilterten Produktliste führt.
 

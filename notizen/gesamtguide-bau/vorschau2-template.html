@@ -835,9 +835,12 @@ html.zg-abo .zbadge{display:none}
 @media (max-width:600px){ .hpeink{grid-template-columns:1fr} }
 .hpek{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
 .hpek h3{font-size:24px;margin:0 0 2px}
-.hpprod{display:flex;align-items:center;gap:12px;text-align:left;font:inherit;color:var(--ink);background:transparent;border:1px solid var(--line-soft);border-radius:12px;padding:8px 10px;cursor:pointer}
-.hpprod:hover{border-color:var(--ink)}
-.hpprod:first-of-type{border-color:#382F2E;border-width:1.5px}
+.hpprodw{position:relative;border:1px solid var(--line-soft);border-radius:12px}
+.hpprodw.erste{border-color:#382F2E;border-width:1.5px}
+.hpprodw:hover{border-color:var(--ink)}
+.hpprod{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--ink);background:transparent;border:0;border-radius:12px;padding:8px 10px 26px;cursor:pointer}
+.hpnein{position:absolute;right:8px;bottom:6px;font:inherit;font-size:11.5px;color:var(--muted);background:none;border:0;padding:2px 4px;text-decoration:underline;cursor:pointer}
+.hpnein:hover{color:var(--ink)}
 .hpprod img,.hpnoimg{width:44px;height:64px;object-fit:contain;flex:0 0 auto}
 .hppt{display:flex;flex-direction:column;gap:1px;min-width:0}
 .hptag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -2633,8 +2636,9 @@ function planEinkauf(){
       rollen: [["Pflege", p => !p.cats.includes("peeling")], ["Peeling", p => p.cats.includes("peeling")], ["Pflege", p => !p.cats.includes("peeling")]]}
   ].filter(Boolean);
   const marken = new Map(), zaehl = b => marken.get(b) || 0, nimm = b => marken.set(b, zaehl(b) + 1);
+  const nein = planNein();
   return zeilen.map(z => {
-    let items = ALL.filter(p => p.type === z.type && z.pool(p));
+    let items = ALL.filter(p => p.type === z.type && z.pool(p) && !nein.includes(p.mk));
     const cat = z.cat || (myCats(z.type) || [])[0];
     try { if(cat) items = items.slice().sort(sorter(z.type, cat)); } catch(e){}
     const rec = REC_TYPES.includes(z.type) ? pickRec(items, z.type) : [];
@@ -2651,14 +2655,21 @@ function planEinkauf(){
     /* Bei Conditioner, Maske, Leave-in bleiben die Rollen aus der Empfehlung (Feuchtigkeit, Nährend, Repair), damit die Balance stimmt */
     const rolle = l => /Glätt/.test(l) ? p => has(p, "glaettend") : /Feucht/.test(l) ? p => has(p, "feucht") : /Nähr/.test(l) ? p => has(p, "naehrend") : /Repair/.test(l) ? p => p.cats.includes("kaputt") : () => true;
     const recRollen = [...new Set([lbl.get(kand[0]), ...rec.map(([, l]) => l)].filter(Boolean))].map(l => [l, rolle(l)]);
-    const rollen = z.rollen || (recRollen.length ? recRollen : [[null, p => !z.erstOk || z.erstOk(p)]]).concat([[null, () => true], [null, () => true]]).slice(0, 3);
+    let rollen = z.rollen || (recRollen.length ? recRollen : [[null, p => !z.erstOk || z.erstOk(p)]]).concat([[null, () => true], [null, () => true]]).slice(0, 3);
+    /* Passt einer von Lauras Favorites, steht er ganz oben und übernimmt die Rolle, die er erfüllt */
+    const fav = kand.find(p => FAVSET.has(p.mk) && (!z.erstOk || z.erstOk(p)) && frei(p, 1)) || kand.find(p => FAVSET.has(p.mk) && (!z.erstOk || z.erstOk(p)) && frei(p, 2));
+    if(fav){ const ri = rollen.findIndex(([n, ok]) => n && ok(fav)), r = ri >= 0 ? rollen[ri] : null;
+      gew.push(fav); nimm(fav.brand); lbl.set(fav, "Lauras Favorit" + (r && r[0] ? " · " + r[0] : ""));
+      rollen = rollen.filter((x, i) => i !== (ri >= 0 ? ri : rollen.length - 1)); }
     rollen.forEach(([name, ok], i) => {
-      const ok1 = i === 0 && z.erstOk ? p => ok(p) && z.erstOk(p) : ok;
+      const ok1 = i === 0 && !gew.length && z.erstOk ? p => ok(p) && z.erstOk(p) : ok;
       const p = such(p => ok1(p) && mix(p), 1) || such(ok1, 1) || such(p => ok1(p) && mix(p), 2) || such(ok1, 2) || such(p => mix(p), 2) || such(() => true, 2);
       if(p){ gew.push(p); nimm(p.brand); if(name && ok(p)) lbl.set(p, name); } });
     return gew.length ? {type: z.type, lab: z.lab, erste: gew[0], alt: gew.slice(1), lbl} : null;
   }).filter(Boolean);
 }
+function planNein(){ try { return JSON.parse(localStorage.getItem("planNein")||"[]") || []; } catch(e){ return []; } }
+const PLANMEHR = {shampoo:"Shampoos", conditioner:"Conditioner", maske:"Masken", leavein:"Leave-ins", hitze:"Hitzeschutz-Produkte", kopfhaut:"Kopfhautpflegen"};
 function planHtml(){
   const H = HPLAN, D = planDaten(), W = H.wichtig;
   const maske = D.zst != null && D.dIdx != null ? H.maske[D.zst][D.dIdx] : (() => { const c = (D.r.chips || []).find(x => /Maske/.test(x)); return c ? c.replace(/^(\d+)× Maske$/, "$1-mal pro Woche") : "regelmäßig"; })();
@@ -2686,8 +2697,9 @@ function planHtml(){
   const regeln = [...H.regeln.filter(x => vorn.includes(x[0])).sort((x, y) => vorn.indexOf(x[0]) - vorn.indexOf(y[0])), ...H.regeln.filter(x => !vorn.includes(x[0]))];
   K.push(["regeln","Deine Grundregeln", `<ol class="hpregeln">${regeln.map(x => `<li><b>${esc(x[1])}</b> ${esc(x[2])}</li>`).join("")}</ol>`]);
   /* 5 Einkaufsliste: 1 erste Wahl + 2 Alternativen */
-  const mini = (p, tag) => `<button type="button" class="hpprod" data-ptype="${p.type}">${p.img ? `<img src="${p.img}" alt="">` : `<span class="hpnoimg"></span>`}<span class="hppt"><span class="hptag">${esc(tag)}</span><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span>${p.segment ? `<span class="hpseg">${esc(p.segment)}</span>` : ""}</span></button>`;
-  K.push(["einkauf","Deine Einkaufsliste", `<p>${esc(H.einkauf)}</p><div class="hpeink">${planEinkauf().map(e => `<div class="hpek"><h3>${esc(e.lab)}</h3>${mini(e.erste, "Meine erste Wahl" + (e.lbl.get(e.erste) ? " · " + e.lbl.get(e.erste) : ""))}${e.alt.map(p => mini(p, "Alternative" + (e.lbl.get(p) ? " · " + e.lbl.get(p) : ""))).join("")}<button type="button" class="linkbtn" data-ptype="${e.type}">Alle passenden ansehen →</button></div>`).join("")}</div>`]);
+  const mini = (p, tag, erste) => `<div class="hpprodw${erste ? " erste" : ""}"><button type="button" class="hpprod" data-ptype="${p.type}">${p.img ? `<img src="${p.img}" alt="">` : `<span class="hpnoimg"></span>`}<span class="hppt"><span class="hptag">${esc(tag)}</span><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span>${p.segment ? `<span class="hpseg">${esc(p.segment)}</span>` : ""}</span></button><button type="button" class="hpnein" data-nein="${esc(p.mk)}" aria-label="${esc(p.brand + " " + p.name)}: passt mir nicht">Passt mir nicht</button></div>`;
+  const neinN = planNein().length;
+  K.push(["einkauf","Deine Einkaufsliste", `<p>${esc(H.einkauf)}</p>${neinN ? `<p class="hpklein">${neinN === 1 ? "Ein Produkt hast du" : neinN + " Produkte hast du"} ausgeblendet. <button type="button" class="linkbtn" id="hpNeinReset">Wieder zeigen</button></p>` : ""}<div class="hpeink">${planEinkauf().map(e => `<div class="hpek"><h3>${esc(e.lab)}</h3>${mini(e.erste, (FAVSET.has(e.erste.mk) ? "" : "Meine erste Wahl") + (e.lbl.get(e.erste) ? (FAVSET.has(e.erste.mk) ? "" : " · ") + e.lbl.get(e.erste) : ""), true)}${e.alt.map(p => mini(p, "Alternative" + (e.lbl.get(p) ? " · " + e.lbl.get(p) : ""))).join("")}<button type="button" class="linkbtn" data-ptype="${e.type}">Alle passenden ${PLANMEHR[e.type] || "Produkte"} ansehen →</button></div>`).join("")}</div>`]);
   /* 6 Dein Tag zum Abhaken (Häkchen gelten für heute) */
   const TG = H.tag, heute = new Date().toISOString().slice(0,10);
   let hk = {}; try { const x = JSON.parse(localStorage.getItem("planTag")||"null"); if(x && x.d === heute) hk = x.c || {}; } catch(e){}
@@ -2719,6 +2731,10 @@ function renderPlanFertig(){
   reloadMe(); box.innerHTML = planHtml();
   box.querySelectorAll("[data-hp]").forEach(b => b.onclick = () => document.getElementById("hp-" + b.dataset.hp).scrollIntoView({behavior:"smooth", block:"start"}));
   box.querySelectorAll("[data-ptype]").forEach(b => b.onclick = () => window.zeigeProdukte(b.dataset.ptype));
+  /* „Passt mir nicht“: Produkt ausblenden, die nächste Alternative rückt nach (gespeichert nur auf diesem Gerät) */
+  const neuZeichnen = () => { const y = document.getElementById("hp-einkauf").getBoundingClientRect().top; renderPlanFertig(); const e = document.getElementById("hp-einkauf"); window.scrollBy(0, e.getBoundingClientRect().top - y); };
+  box.querySelectorAll("[data-nein]").forEach(b => b.onclick = () => { const n = planNein(); if(!n.includes(b.dataset.nein)) n.push(b.dataset.nein); try { localStorage.setItem("planNein", JSON.stringify(n)); } catch(e){} neuZeichnen(); toast("Ausgeblendet, die nächste Alternative ist nachgerückt"); });
+  const nr = document.getElementById("hpNeinReset"); if(nr) nr.onclick = () => { try { localStorage.removeItem("planNein"); } catch(e){} neuZeichnen(); };
   box.querySelectorAll("[data-hk]").forEach(c => c.onchange = () => { const heute = new Date().toISOString().slice(0,10); let x = {d:heute, c:{}};
     try { const y = JSON.parse(localStorage.getItem("planTag")||"null"); if(y && y.d === heute) x = y; } catch(e){}
     x.c[c.dataset.hk] = c.checked; try { localStorage.setItem("planTag", JSON.stringify(x)); } catch(e){} });
