@@ -477,3 +477,4 @@
 - Vorschau v276: Bürsten-Test-Zeichnung kompakter (ca. ein Drittel niedriger, Typ A/B mit Beschriftung links neben dem Haar), damit die Antworten direkt darunter sichtbar sind.
 - Vorschau v277: Bürsten-Test-Zeichnung: Erklärschrift (An der Wurzel, Nicht verwechseln, Typ A/B, Beide ohne Wurzel) kleiner (12,5 → 11).
 - Vorschau v278: Neu im Regal: Produktbilder jetzt als SVG mit festem 100×100-Raster (Größe/Lage als Zahlen, gleiche Fläche je Produkt), weil Laura Shampoo/Conditioner in ihrem Browser kleiner sah als die Masken (in Chromium waren sie größer). Bitte bestätigen lassen, dass die Bilder bei ihr sichtbar und gleich groß sind.
+- 20.10.: Ideensammlung „Wissen lebendiger machen“ in notizen/IDEEN-WISSEN-VISUELL.md (17 Bausteine + Ideen pro Kapitel + Pilot-Vorschlag). Wartet auf Lauras Auswahl.
