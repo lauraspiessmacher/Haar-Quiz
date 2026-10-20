@@ -724,6 +724,31 @@ html.zg-abo .zbadge{display:none}
 .zmerk h3{font-size:26px;margin:0 0 8px}.zmerk p{color:var(--muted);margin:0 0 16px}
 /* Abo-Fenster */
 #aboDlg{max-width:760px}
+#ergDlg{max-width:760px;max-height:88vh}
+.ergdlg{position:relative;padding:26px 24px 20px;overflow:auto;max-height:88vh}
+.ergtext h1{font-size:clamp(30px,5vw,44px);line-height:1;margin:0 0 12px}
+.ergtext h2{font-size:26px;margin:22px 0 8px}
+.ergtext h3{font-size:22px;margin:0 0 6px}
+.ergtext .box,.ergtext .block{border:1px solid var(--line-soft);background:#FFFDFA;border-radius:14px;padding:14px 16px;margin:12px 0}
+.ergtext .box.warn{border-color:#B5654A}
+.ergtext p{margin:0 0 8px}
+.ergtext ul{margin:4px 0 8px;padding-left:20px}
+.ergtext table{width:100%;border-collapse:collapse;font-size:14.5px}
+.ergtext td,.ergtext th{vertical-align:top;text-align:left;padding:8px 10px;border-top:1px solid var(--line-soft)}
+.ergtext small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.ergtext .chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.ergtext .chips span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.ergtext svg{max-width:100%;height:auto}
+.ergtext .mark{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#F3ECE2;font-family:var(--sans);font-size:12px;margin-right:8px;vertical-align:2px}
+.ergtext .lvlnames{display:flex;justify-content:space-between;gap:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:2px 0 14px}
+.ergtext details > :not(summary){display:block}
+.ergliste{list-style:none;padding:0;margin:4px 0 12px;display:flex;flex-direction:column;gap:6px}
+.ergliste button{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;font-size:15px;color:var(--ink);background:transparent;border:1px solid var(--line-soft);border-radius:10px;padding:10px 12px;cursor:pointer}
+.ergliste button:hover{border-color:var(--ink)}
+.ergliste em{font-style:normal;font-size:12px;color:var(--muted);white-space:nowrap}
+.hpextras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:759px){ .hpextras{grid-template-columns:1fr} }
+.hpextras .hpblk .linkbtn{margin-top:4px}
 #loginDlg{max-width:420px}
 .abodlg{position:relative;padding:30px 28px 22px}
 .aboclose{position:absolute;top:10px;right:12px;width:38px;height:38px;border:0;background:none;font-size:28px;line-height:1;color:var(--ink);cursor:pointer;border-radius:50%}
@@ -1425,7 +1450,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 </span></span></span></a>
     </div>
     <h2 class="psub">Mach deinen Plan noch genauer</h2>
-    <p class="pzu">Freiwillig und ganz in deinem Tempo: Jeder Extra-Check macht deinen Plan ein Stück genauer. Du kannst sie auch über die nächsten Wochen verteilt machen.</p>
+    <p class="pzu">Freiwillig und ganz in deinem Tempo: Jeder Extra-Check macht deinen Plan ein Stück genauer. Du kannst sie auch über die nächsten Wochen verteilt machen. Deine Ergebnisse findest du danach in deinem Plan und unter „Mein Bereich“, zum Nachlesen, so oft du willst.</p>
     <div class="pextras" id="planExtras"></div>
     <h2 class="psub nurvorher">Das steht in deinem fertigen Plan</h2>
     <ol class="pkap nurvorher" id="planKap"></ol>
@@ -1568,6 +1593,11 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
   </form>
 </dialog>
 <div class="toast" id="toast" role="status"></div>
+<!-- Gespeichertes Check-Ergebnis zum Nachlesen -->
+<dialog id="ergDlg" aria-labelledby="ergTitel"><div class="abodlg ergdlg">
+  <button type="button" class="aboclose" aria-label="Schließen">×</button>
+  <p class="kicker" id="ergKicker"></p><div class="ergtext" id="ergBox"></div>
+</div></dialog>
 <!-- ===================== ABO (Vorschau, noch ohne echte Anmeldung und Bezahlung) ===================== -->
 <dialog id="aboDlg" aria-labelledby="aboTitle"><div class="abodlg">
   <button type="button" class="aboclose" aria-label="Schließen">×</button>
@@ -2576,6 +2606,22 @@ function oeffneCheck(key){
   if(a.dataset.abo && !istAbo()){ zPaywall(a.dataset.abo); return; }
   const href = a.getAttribute("href"); if(!(window.openQuiz && window.openQuiz(href))) window.location.href = href;
 }
+/* gespeicherte Check-Ergebnisse (quiz-einbettung.html sichert sie beim Schließen) */
+const ERGNAME = {kopfhaut:"Kopfhaut-Check", pflege:"Pflege-Check", haar:"Haar-Check", routine:"Routine-Check (Wochenplan)", leavein:"Leave-in-Check", spliss:"Spliss- & Haarbruch-Check", tools:"Hitze-Tool-Check", schnitt:"Haarschnitt-Check"};
+function quizTexte(){ try { return JSON.parse(localStorage.getItem("quizTexte")||"null") || {}; } catch(e){ return {}; } }
+function zeigeErgebnis(k){
+  const e = quizTexte()[k]; if(!e) return;
+  const d = document.getElementById("ergDlg");
+  document.getElementById("ergKicker").textContent = (ERGNAME[k] || "Dein Ergebnis") + (e.datum ? " · " + e.datum.split("-").reverse().join(".") : "");
+  document.getElementById("ergBox").innerHTML = e.html; /* stammt aus den eigenen Quiz-Seiten */
+  if(d.showModal) d.showModal(); else d.setAttribute("open", "");
+}
+(function(){ const d = document.getElementById("ergDlg"); const zu = () => { if(d.close) d.close(); else d.removeAttribute("open"); };
+  d.querySelector(".aboclose").onclick = zu; d.addEventListener("click", e => { if(e.target === d) zu(); }); })();
+function ergListe(keys){
+  const T = quizTexte(), da = keys.filter(k => T[k]);
+  return da.length ? `<ul class="ergliste">${da.map(k => `<li><button type="button" data-erg="${k}"><span>${esc(ERGNAME[k])}${T[k].titel ? `: <b>${esc(T[k].titel)}</b>` : ""}</span><em>Ansehen →</em></button></li>`).join("")}</ul>` : "";
+}
 function renderBereich(){
   const box = document.getElementById("bereichBox"); if(!box) return;
   const st = quizStand(), erledigt = CHECKS.filter(([k]) => st[k]).length, offen = CHECKS.find(([k]) => !st[k]);
@@ -2597,6 +2643,9 @@ function renderBereich(){
     ${meSet() || me.wunsch ? `<dl class="bme">${meZeilen.filter(([,v]) => v).map(([l,v]) => `<dt>${l}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : `<p class="bleer">Noch nichts eingestellt. Mach die Checks oder stell deine Haare selbst ein, dann siehst du überall zuerst, was zu dir passt.</p>`}
     <p class="bklein">Erledigte Checks: ${[...CHECKS, ...EXTRAS].filter(([k]) => st[k]).map(([,l]) => l).join(", ") || "noch keine"}</p>
     <button type="button" class="btn" id="bMe">Meine Haare einstellen</button></article>
+  <article class="bkarte"><h3>Meine Ergebnisse</h3>
+    ${ergListe(Object.keys(ERGNAME)) || `<p class="bleer">Sobald du einen Check gemacht hast, findest du hier dein ausführliches Ergebnis zum Nachlesen.</p>`}
+    <p class="bklein">Gespeichert nur hier auf deinem Gerät.</p></article>
   <article class="bkarte"><h3>Merkliste ${schloss}</h3>
     ${istAbo() ? (mi.length ? `<div class="bmini">${mi.slice(0,4).map(p => p.img ? `<img src="${p.img}" alt="" loading="lazy">` : "").join("")}</div><p class="bklein">${mi.length} ${mi.length===1?"Produkt":"Produkte"} gemerkt, deine Einkaufsliste für die Drogerie.</p>` : `<p class="bleer">Noch nichts gemerkt. Tipp bei einem Produkt auf das +, dann landet es hier.</p>`)
       : `<p class="bleer">Merk dir Produkte und hab sie in der Drogerie sofort griffbereit.</p>`}
@@ -2616,6 +2665,7 @@ function renderBereich(){
   document.getElementById("bPlanGo").onclick = () => offen ? oeffneCheck(offen[0]) : oeffneCheck("routine");
   document.getElementById("bZumPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
   document.getElementById("bMe").onclick = openMe;
+  box.querySelectorAll("[data-erg]").forEach(b => b.onclick = () => zeigeErgebnis(b.dataset.erg));
   box.querySelectorAll("[data-extra]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.extra));
   document.getElementById("bMerk").onclick = () => { if(!istAbo()){ zPaywall("merkliste"); return; } state.view = "merkliste"; render(); window.scrollTo({top:0}); };
   document.getElementById("bFrageGo").onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } const t = document.getElementById("bFrage"); if(!t.value.trim()){ t.focus(); return; } t.value = ""; toast("Vorschau: Deine Frage ist angekommen"); };
@@ -2724,8 +2774,12 @@ function planHtml(){
   const K = [];
   /* 1 Das bist du */
   K.push(["du","Das bist du", `<div class="hpgrid">${blk(H.kopf[D.kopf],"Deine Kopfhaut")}${blk(D.dicke && H.dicke[D.dicke],"Deine Haardicke")}${blk(D.zst != null && H.zustand[D.zst],"Dein Haarzustand")}${blk(H.struktur[D.struktur],"Deine Haarstruktur")}${blk(D.wunsch && H.wunsch[D.wunsch],"Dein Wunsch")}</div>${D.kopf ? `<p class="hpklein">${esc(H.kopfExtra)}</p>` : ""}`]);
+  /* Extra-Checks: Ergebnis kurz + ganz nachlesen */
+  const ET = quizTexte(), ex = ["leavein","spliss","tools","schnitt"].filter(k => D.st[k]);
+  const ergKap = ex.length ? `<p>Diese Extra-Checks hast du schon gemacht. Tipp auf ein Ergebnis, um es noch einmal ganz zu lesen.</p><div class="hpextras">${ex.map(k => `<div class="hpblk"><p class="hplab">${esc(ERGNAME[k])}</p><h3>${esc((ET[k] && ET[k].titel) || "Erledigt")}</h3>${ET[k] ? `<button type="button" class="linkbtn" data-erg="${k}">Ganzes Ergebnis lesen →</button>` : `<p class="hpklein">Mach den Check noch einmal, dann kannst du dein Ergebnis hier nachlesen.</p>`}</div>`).join("")}</div>` : "";
   /* 2 Wochenplan */
   const r = D.r;
+  if(ergKap) K.push(["extras","Deine Extra-Checks", ergKap]);
   K.push(["woche","Dein Wochenplan", r.week ? `<div class="hpchips">${(r.chips||[]).map(c => `<span>${esc(c)}</span>`).join("")}</div>
     <div class="hptab"><table class="hpweek">${r.week.map(w => `<tr class="${w.wash ? "wash" : ""}"><th>${esc(w.tag)}<small>${esc(w.label)}</small></th><td><ul>${w.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></td></tr>`).join("")}</table></div>
     <h3 class="hpsub">Regelmäßig</h3><div class="hptab"><table class="hpweek">${(r.regel||[]).map(x => `<tr><th>${esc(x[0])}</th><td>${esc(x[1])}</td></tr>`).join("")}</table></div>
@@ -2774,6 +2828,7 @@ function renderPlanFertig(){
   reloadMe(); box.innerHTML = planHtml();
   box.querySelectorAll("[data-hp]").forEach(b => b.onclick = () => document.getElementById("hp-" + b.dataset.hp).scrollIntoView({behavior:"smooth", block:"start"}));
   box.querySelectorAll("[data-ptype]").forEach(b => b.onclick = () => window.zeigeProdukte(b.dataset.ptype));
+  box.querySelectorAll("[data-erg]").forEach(b => b.onclick = () => zeigeErgebnis(b.dataset.erg));
   /* „Passt mir nicht“: Produkt ausblenden, die nächste Alternative rückt nach (gespeichert nur auf diesem Gerät) */
   const neuZeichnen = () => { const y = document.getElementById("hp-einkauf").getBoundingClientRect().top; renderPlanFertig(); const e = document.getElementById("hp-einkauf"); window.scrollBy(0, e.getBoundingClientRect().top - y); };
   box.querySelectorAll("[data-nein]").forEach(b => b.onclick = () => { const n = planNein(); if(!n.includes(b.dataset.nein)) n.push(b.dataset.nein); try { localStorage.setItem("planNein", JSON.stringify(n)); } catch(e){} neuZeichnen(); toast("Ausgeblendet, die nächste Alternative ist nachgerückt"); });
@@ -2865,7 +2920,15 @@ readHash(); q.value = state.q; render();
   let back = null, offen = "";
   function open(f){ back = document.activeElement; offen = f; fr.srcdoc = QUIZ[f]; document.getElementById("qname").textContent = NAMES[f] || "";
     box.dataset.open = "1"; document.documentElement.style.overflow = "hidden"; document.getElementById("qclose").focus(); }
-  function close(){ box.dataset.open = "0"; fr.srcdoc = ""; document.documentElement.style.overflow = ""; if(back) back.focus(); window.dispatchEvent(new CustomEvent("quizzu", {detail:offen})); }
+  /* Ergebnis sichern, damit es später in „Mein Bereich“ und im Haarplan nachzulesen ist (nur auf diesem Gerät) */
+  function sichern(){ try {
+    const d = fr.contentDocument, res = d && d.querySelector("section.res"); if(!res || !offen) return;
+    const c = res.cloneNode(true); c.querySelectorAll(".top,.actions,.copyrow,.fine,button,script,details summary").forEach(x => x.remove());
+    const T = JSON.parse(localStorage.getItem("quizTexte") || "null") || {};
+    T[offen.replace(/^quiz-|\.html$/g, "")] = {datum: new Date().toISOString().slice(0,10), titel: ((c.querySelector("h1") || {}).textContent || "").trim(), html: c.innerHTML};
+    localStorage.setItem("quizTexte", JSON.stringify(T));
+  } catch(e){} }
+  function close(){ sichern(); box.dataset.open = "0"; fr.srcdoc = ""; document.documentElement.style.overflow = ""; if(back) back.focus(); window.dispatchEvent(new CustomEvent("quizzu", {detail:offen})); }
   window.closeQuiz = () => { if(box.dataset.open === "1") close(); };
   window.openQuiz = f => { if(!QUIZ[f]) return false; open(f); return true; };
   document.getElementById("qclose").onclick = close;

@@ -24,3 +24,6 @@ Sammeln wir hier, bis Laura das Go gibt, dass die echte Seite gebaut wird (Domai
 ## Frag Laura (18.10.)
 16. Wo landen die eingeschickten Fragen? Vorschlag: Postfach im Verwaltungsbereich (Liste mit Datum, Abo-Mitglied, Frage, Status „beantwortet/ausgewählt“) + optional Benachrichtigung per E-Mail. Laura wählt 3–5 pro Monat aus und trägt die Antwort ein, die dann in „Frag Laura“ (Wissen) und als Frage des Monats auf der Startseite erscheint.
 17. Begrenzung: z. B. eine Frage pro Mitglied und Monat, damit das Postfach überschaubar bleibt?
+
+## Check-Ergebnisse speichern (Laura 20.10.)
+In der Vorschau liegen alle Check-Ergebnisse, der Haarplan und die Merkliste nur im Browser. Wird der Speicher geleert (anderes Gerät, privates Fenster, App-Wechsel), sind sie weg. Auf der echten Seite müssen sie im Konto auf dem Server gespeichert werden, damit nach einem Check nie etwas verloren geht und man sie auf jedem Gerät nachlesen kann.

@@ -16,7 +16,15 @@
   let back = null, offen = "";
   function open(f){ back = document.activeElement; offen = f; fr.srcdoc = QUIZ[f]; document.getElementById("qname").textContent = NAMES[f] || "";
     box.dataset.open = "1"; document.documentElement.style.overflow = "hidden"; document.getElementById("qclose").focus(); }
-  function close(){ box.dataset.open = "0"; fr.srcdoc = ""; document.documentElement.style.overflow = ""; if(back) back.focus(); window.dispatchEvent(new CustomEvent("quizzu", {detail:offen})); }
+  /* Ergebnis sichern, damit es später in „Mein Bereich“ und im Haarplan nachzulesen ist (nur auf diesem Gerät) */
+  function sichern(){ try {
+    const d = fr.contentDocument, res = d && d.querySelector("section.res"); if(!res || !offen) return;
+    const c = res.cloneNode(true); c.querySelectorAll(".top,.actions,.copyrow,.fine,button,script,details summary").forEach(x => x.remove());
+    const T = JSON.parse(localStorage.getItem("quizTexte") || "null") || {};
+    T[offen.replace(/^quiz-|\.html$/g, "")] = {datum: new Date().toISOString().slice(0,10), titel: ((c.querySelector("h1") || {}).textContent || "").trim(), html: c.innerHTML};
+    localStorage.setItem("quizTexte", JSON.stringify(T));
+  } catch(e){} }
+  function close(){ sichern(); box.dataset.open = "0"; fr.srcdoc = ""; document.documentElement.style.overflow = ""; if(back) back.focus(); window.dispatchEvent(new CustomEvent("quizzu", {detail:offen})); }
   window.closeQuiz = () => { if(box.dataset.open === "1") close(); };
   window.openQuiz = f => { if(!QUIZ[f]) return false; open(f); return true; };
   document.getElementById("qclose").onclick = close;
