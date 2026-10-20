@@ -62,6 +62,11 @@ t = t.replace('__KAUF__', open(f'{S}/kauflinks.json').read().strip() or '{}')
 # Wissenstexte: Übersicht aus wissen.json, Inhalt aus wissen/<id>.html
 _w = json.load(open(f'{S}/wissen.json'))
 for w in _w: w['html'] = open(f'{S}/wissen/' + w.pop('datei')).read()
+# Lauras Fotos in den Kapiteln (wissen-bilder/*.jpg) als data-URI einsetzen
+import re as _re
+def _wbild(m):
+    return 'src="data:image/jpeg;base64,' + _b64.b64encode(open(f'{S}/wissen-bilder/' + m.group(1), 'rb').read()).decode() + '"'
+for w in _w: w['html'] = _re.sub(r'src="wbild:([\w.-]+)"', _wbild, w['html'])
 t = t.replace('__WISSEN__', json.dumps(_w, ensure_ascii=False).replace('</', '<\\/'))
 t = t.replace('__FAQ__', json.dumps(json.load(open(f'{S}/faq.json')), ensure_ascii=False).replace('</', '<\\/'))
 # Serie „Haarpflege 1x1“: Titelbilder als eingebettete Bilder

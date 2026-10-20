@@ -623,6 +623,18 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-ok,.wart .wb-nein{display:block;width:max-content;margin:0 auto 6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:4px 10px;background:#382F2E;color:#F3ECE2}
 .wart .wb-nein{background:transparent;color:#382F2E;border:1px solid #382F2E}
 @media (max-width:420px){ .wart .wb-tage{grid-template-columns:repeat(2,minmax(0,1fr))} .wart .wb-wofuer{grid-template-columns:1fr} .wart .wb-wofuer div{flex-direction:row;text-align:left;gap:12px} .wart .wb-wofuer div span{margin-left:auto;text-align:right} }
+.wart .wb-foto{margin:4px 0 24px}
+.wart .wb-foto img{display:block;width:100%;height:auto;border-radius:16px}
+.wart .wb-fotos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 24px}
+.wart .wb-fotos .wb-foto{margin:0}
+.wart .wb-mengen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0 26px}
+.wart .wb-mengen .wb-kick,.wart .wb-mengen .wb-mtext{grid-column:1/-1;margin:0}
+.wart .wb-mengen .wb-mtext{font-size:15px}
+.wart .wb-mengen figure{margin:0}
+.wart .wb-mengen img{display:block;width:100%;height:auto;border-radius:12px}
+.wart .wb-mengen figcaption{text-align:center;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.2}
+.wart .wb-mengen figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:#382F2E}
+@media (max-width:520px){ .wart .wb-mengen{grid-template-columns:repeat(2,minmax(0,1fr))} }
 .wb-fort{position:fixed;left:0;top:0;height:3px;width:0;background:#382F2E;z-index:40;pointer-events:none;transition:width .1s linear}
 .wfine{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:16px;margin-top:30px}
 
