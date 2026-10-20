@@ -460,3 +460,4 @@
 - Vorschau v261 (Kommentar Laura): Neu im Regal: alle Produktbilder gleich hoch (72 % der Kachel, breite Tiegel höchstens 70 % breit), vorher hing die Größe an der Bilddatei.
 - Vorschau v262: Fix zu v261: Neu-im-Regal-Bilder waren auf dem Handy weg (Bild mit Breite 0 + lazy loading lud nie). Jetzt feste Box 70 % × 72 % mit object-fit:contain, ohne lazy; alle vier laden auf Handy und Desktop.
 - Vorschau v263 (Laura 20.10.: Shampoo/Conditioner wirkten kleiner): Neu-im-Regal-Bilder bekommen per gleichGross() dieselbe Fläche (ca. 1/3 der Kachel, Höhe max. 86 %, Breite max. 80 %): Flaschen/Tuben werden höher, Tiegel schmaler, alle wirken gleich groß.
+- Vorschau v264: Neu-im-Regal-Bilder ohne Skript: Höhe 86 %, Breite max. 58 % (object-fit contain). Flaschen/Tuben ca. 86 % hoch, Tiegel ca. 50 %; vorher hing es an einem Skript, das in Lauras Ansicht offenbar nicht griff.
