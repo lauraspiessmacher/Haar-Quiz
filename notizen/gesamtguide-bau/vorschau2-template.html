@@ -2282,11 +2282,11 @@ function wissenBausteine(art, w){
 
 /* ---------- LL-Methode: Lauras Leave-in-Auswahl (ll-auswahl.json) ---------- */
 const LLA = __LL_AUSWAHL__;
-/* Texturfotos von Laura (quer gedreht) als Kopfbänder der Gruppen */
-const TEX = {schaum:"__TEX_SCHAUM__", serum:"__TEX_SERUM__", creme:"__TEX_CREME__", milch:"__TEX_MILCH__"};
-const LLBILD = {sprays:TEX.schaum, seren:TEX.serum, cremes:TEX.creme, repair:TEX.milch};
+/* Konsistenz-Fotos von Laura (20.10.) als Kopfbänder der Gruppen */
+const TEX = {schaum:"__TEX_SCHAUM__", serum:"__TEX_SERUM__", creme:"__TEX_CREME__", milch:"__TEX_MILCH__", oel:"__TEX_OEL__", kopf:"__TEX_KOPF__", tube:"__TEX_TUBE__", glanz:"__TEX_GLANZ__"};
+const LLBILD = {sprays:TEX.milch, seren:TEX.serum, cremes:TEX.creme, repair:TEX.tube};
 /* Produktseite: Texturfoto hinter Titel und Einleitung (nur wo eine Textur passt) */
-const TYPBILD = {shampoo:TEX.schaum, maske:TEX.creme, conditioner:TEX.milch, leavein:TEX.serum};
+const TYPBILD = {shampoo:TEX.schaum, maske:TEX.creme, conditioner:TEX.tube, leavein:TEX.serum, oel:TEX.oel, kopfhaut:TEX.kopf, hitze:TEX.glanz};
 function renderLL(){
   const box = document.getElementById("llBox"); if(!box) return;
   const find = x => ALL.find(p => p.type==="leavein" && p.brand===x.brand && p.name===x.name);
