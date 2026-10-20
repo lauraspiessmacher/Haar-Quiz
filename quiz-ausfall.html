@@ -109,28 +109,30 @@ li{margin-bottom:8px}
 /* ---------- Haarausfall-Check „Ausfall oder Bruch?“ (Laura 20.10.) ---------- */
 const load = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch(e){ return null; } };
 /* Zeichnung: ausgefallenes Haar mit Wurzel, abgebrochenes Haar, Spliss */
-const BILD = `<svg class="haare" viewBox="0 0 340 352" role="img" aria-label="Haare im Vergleich: ausgefallenes Haar mit Wurzel am Ansatz-Ende, zwei Arten von abgebrochenen Haaren ohne Wurzel, und Spliss an der Spitze, der nicht mit der Wurzel verwechselt werden darf">
+const BILD = `<svg class="haare" viewBox="0 0 340 368" role="img" aria-label="Oben: So erkennst du ein ausgefallenes Haar, an der Wurzel in Tropfenform; nicht verwechseln mit einem weißen Pünktchen oder Spliss an der Spitze. Unten: So erkennst du ein abgebrochenes Haar, ausgefranst oder glatt, ohne Wurzel und meist kürzer.">
   <g fill="#9E8C80" font-family="Avenir Next, Avenir, Segoe UI, Arial, sans-serif" font-size="10.5" letter-spacing=".08em">
     <text x="8" y="14">← ANSATZ-ENDE</text><text x="332" y="14" text-anchor="end">SPITZE →</text></g>
+  <g font-family="Iowan Old Style, Palatino, Georgia, serif" font-size="17" fill="#F3ECE2">
+    <text x="8" y="44">So erkennst du ein ausgefallenes Haar</text>
+    <text x="8" y="222">So erkennst du ein abgebrochenes Haar</text></g>
   <g fill="none" stroke="#F3ECE2" stroke-linecap="round" stroke-width="2">
-    <path d="M30 46 C 100 42, 190 50, 330 45"/>
-    <path d="M112 104 C 170 101, 250 108, 330 103"/>
-    <path d="M146 164 C 200 161, 270 168, 330 163" stroke-linecap="butt" stroke-width="2.4"/>
-    <path d="M30 260 C 100 256, 200 264, 298 259"/>
-    <path d="M298 259 l 26 -9 M298 259 l 28 6" stroke-width="1.6"/>
-    <path d="M30 318 C 100 314, 200 322, 330 317"/>
-    <path d="M112 104 l -10 -6 M112 104 l -12 1 M112 104 l -9 7" stroke-width="1.3"/>
+    <path d="M30 70 C 100 66, 190 74, 330 69"/>
+    <path d="M30 136 C 100 132, 190 140, 296 135"/>
+    <path d="M296 135 l 28 -8 M296 135 l 30 6" stroke-width="1.6"/>
+    <path d="M112 252 C 170 249, 250 256, 330 251"/>
+    <path d="M112 252 l -10 -6 M112 252 l -12 -1 M112 252 l -11 4 M112 252 l -8 8" stroke-width="1.3"/>
+    <path d="M146 314 C 200 311, 270 318, 330 313" stroke-linecap="butt" stroke-width="2.4"/>
   </g>
-  <path d="M14 46 C 14 40.5, 22 39.5, 29 43 L 35 45.4 L 35 46.6 L 29 49 C 22 52.5, 14 51.5, 14 46 Z" fill="#F3ECE2"/>
-  <circle cx="300" cy="318" r="3.6" fill="#F3ECE2"/>
-  <line x1="8" y1="214" x2="332" y2="214" stroke="#9E8C80" stroke-dasharray="3 4"/>
+  <path d="M14 70 C 14 64.5, 22 63.5, 29 67 L 35 69.4 L 35 70.6 L 29 73 C 22 76.5, 14 75.5, 14 70 Z" fill="#F3ECE2"/>
+  <circle cx="270" cy="135.5" r="3.4" fill="#F3ECE2"/>
+  <line x1="8" y1="194" x2="332" y2="194" stroke="#9E8C80" stroke-dasharray="3 4"/>
   <g fill="#C9BCAE" font-family="Avenir Next, Avenir, Segoe UI, Arial, sans-serif" font-size="13">
-    <text x="8" y="72"><tspan fill="#F3ECE2">Ausgefallen:</tspan> helle Wurzel in Tropfenform</text>
-    <text x="8" y="130"><tspan fill="#F3ECE2">Abgebrochen, Typ A:</tspan> ausgefranst, ohne Wurzel</text>
-    <text x="8" y="190"><tspan fill="#F3ECE2">Abgebrochen, Typ B:</tspan> glatt, ohne Wurzel</text>
-    <text x="8" y="236" fill="#F3ECE2">Nicht verwechseln, das sitzt an der Spitze:</text>
-    <text x="8" y="286"><tspan fill="#F3ECE2">Spliss:</tspan> aufgespaltene Spitze</text>
-    <text x="8" y="344"><tspan fill="#F3ECE2">Weißes Pünktchen</tspan> an der Spitze: Bruchstelle</text>
+    <text x="8" y="96"><tspan fill="#F3ECE2">An der Wurzel:</tspan> eine helle Tropfenform</text>
+    <text x="8" y="162"><tspan fill="#F3ECE2">Nicht verwechseln</tspan> mit einem weißen Pünktchen</text>
+    <text x="8" y="178">oder Spliss an der Spitze. Das ist keine Wurzel.</text>
+    <text x="8" y="278"><tspan fill="#F3ECE2">Typ A:</tspan> ausgefranst wie Spliss, ohne Wurzel</text>
+    <text x="8" y="340"><tspan fill="#F3ECE2">Typ B:</tspan> glatt abgebrochen, ohne Wurzel</text>
+    <text x="8" y="360">Beide sind meist kürzer als deine Haare.</text>
   </g></svg>`;
 const Q = [
  {id:"sorge", t:"Wo fallen dir die vielen Haare auf?", h:"Du kannst mehreres auswählen.", multi:true, a:[
@@ -249,8 +251,8 @@ function result(){
       <p>Normal sind etwa 50 bis 100 Haare am Tag. Jedes Haar wächst ein paar Jahre, ruht dann etwa drei Monate und fällt aus. Aus derselben Wurzel wächst danach ein neues Haar nach. Neue Haarwurzeln entstehen nicht einfach an Stellen, wo vorher keine waren. Deshalb muss das alte Haar raus, damit das neue Platz hat.</p></div>
     <div class="block"><h3><span class="mark">2</span>Der Bürsten-Test</h3>
       <div class="bildbox">${BILD}</div>
-      <p>Schau immer auf das Ende, das an der Kopfhaut saß. Ist dort eine kleine, helle Tropfenform, ist das die Wurzel: Das Haar ist ausgefallen. Ist dort keine Wurzel, sondern das Haar ist ausgefranst oder glatt abgebrochen, und ist es oft kürzer als deine Haare, ist es abgebrochen.</p>
-      <p>Viele verwechseln die Wurzel mit einem weißen Pünktchen an der Spitze. Das ist aber eine Bruchstelle, also Spliss, genau wie eine aufgespaltene Spitze. Beides sitzt am anderen Ende und hat mit Haarausfall nichts zu tun.</p></div>
+      <p><b>Ein ausgefallenes Haar</b> erkennst du an der Wurzel: Am Ansatz-Ende sitzt eine kleine, helle Tropfenform. Bitte nicht verwechseln mit einem weißen Pünktchen oder Spliss an der Spitze, das ist keine Wurzel.</p>
+      <p><b>Ein abgebrochenes Haar</b> hat keine Wurzel. Das Ende ist entweder ausgefranst wie Spliss (Typ A) oder glatt abgebrochen (Typ B), und meistens ist das Haar kürzer als deine anderen Haare.</p></div>
     <div class="block"><h3><span class="mark">3</span>Warum es oft nach mehr aussieht</h3>
       <ul>${gruende.map(g => `<li>${g}</li>`).join("")}</ul></div>
     <div class="block"><h3><span class="mark">4</span>Mehr Haare im Spätsommer und Herbst?</h3>
