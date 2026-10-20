@@ -478,3 +478,4 @@
 - Vorschau v277: Bürsten-Test-Zeichnung: Erklärschrift (An der Wurzel, Nicht verwechseln, Typ A/B, Beide ohne Wurzel) kleiner (12,5 → 11).
 - Vorschau v278: Neu im Regal: Produktbilder jetzt als SVG mit festem 100×100-Raster (Größe/Lage als Zahlen, gleiche Fläche je Produkt), weil Laura Shampoo/Conditioner in ihrem Browser kleiner sah als die Masken (in Chromium waren sie größer). Bitte bestätigen lassen, dass die Bilder bei ihr sichtbar und gleich groß sind.
 - 20.10.: Ideensammlung „Wissen lebendiger machen“ in notizen/IDEEN-WISSEN-VISUELL.md (17 Bausteine + Ideen pro Kapitel + Pilot-Vorschlag). Wartet auf Lauras Auswahl.
+- 20.10.: Wissen-Konzept visuell als eigene Design-Leinwand: https://claude.ai/artifact/6r61YAAt41VRr3rC4c4yu8 (3 Handy-Entwürfe: Pilot Haarzyklus mit allen Bausteinen, Haarmythen als Rate-Karten, Haarporosität mit Schuppenschicht-Zeichnung). Noch nicht in die Seite eingebaut, wartet auf Lauras Feedback.
