@@ -42,6 +42,18 @@ for _i, _p in enumerate(_ht['items']):
     _p['ord'] = _i
     _p['img'] = 'data:image/webp;base64,' + __import__('base64').b64encode(open(f'{S}/../bilder/hitze-tools/' + _p.pop('bild'), 'rb').read()).decode()
 _data['tools'] = {'cats': _ht['cats'], 'rank': None, 'items': _ht['items'], 'intro': _ht['intro']}
+# Seitenverhältnis jedes Produktbilds (Breite/Höhe), damit Kacheln die Bilder ohne Skript gleich groß zeigen können
+import base64 as _b64, io as _io
+from PIL import Image as _Img
+for _t, _v in _data.items():
+    for _x in (_v.get('items') or []) if isinstance(_v, dict) else []:
+        _u = _x.get('img') or ''
+        if _u.startswith('data:image'):
+            try:
+                _w, _h = _Img.open(_io.BytesIO(_b64.b64decode(_u.split(',', 1)[1]))).size
+                _x['ir'] = round(_w / _h, 3)
+            except Exception:
+                pass
 data = json.dumps(_data, ensure_ascii=False).replace('</', '<\\/')
 t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 # Regal im Wissen-Bereich entfernt (08.10.); Dateien liegen weiter in regal/

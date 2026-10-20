@@ -767,8 +767,8 @@ html.zg-abo .zbadge{display:none}
 @media (max-width:900px){ .neugrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -16px;padding:4px 16px 10px;scrollbar-width:none} .neugrid::-webkit-scrollbar{display:none} .neugrid li{flex:0 0 46%;scroll-snap-align:start} }
 .neutile{position:relative;display:flex;flex-direction:column;width:100%;height:100%;text-align:left;font:inherit;color:var(--ink);background:#FFFDFA;border:1px solid var(--line-soft);border-radius:16px;padding:12px 12px 14px;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
 .neutile:hover{transform:translateY(-3px);box-shadow:0 16px 30px -20px rgba(56,47,46,.45)}
-.neutile .pic{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;background:#F6F2EC;border-radius:10px;margin:0 0 12px;overflow:hidden}
-.neutile .pic img{display:block;height:86%!important;width:auto!important;max-width:58%;object-fit:contain;margin:0} /* schmale Flaschen werden so hoch wie möglich, breite Tiegel werden über die Breite gebremst: alle wirken gleich groß (Laura 20.10.), ohne Skript */ /* alle Bilder gleich hoch, egal wie groß die Datei ist (Laura 19.10.) */
+.neutile .pic{position:relative;display:block;height:0;padding-top:100%;background:#F6F2EC;border-radius:10px;margin:0 0 12px;overflow:hidden} /* Quadrat ohne aspect-ratio, klappt in jedem Browser */
+.neutile .pic img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:block;width:58%;height:58%;object-fit:contain;margin:0} /* genaue Breite/Höhe aus dem Seitenverhältnis (neuBild): Flaschen hoch, Tiegel schmaler, alle wirken gleich groß (Laura 20.10.) */
 .neutag{position:absolute;top:20px;left:20px;z-index:1;background:var(--ink);color:#F3ECE2;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
 .neutile .typ{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .neutile .brand{font-size:13px;color:var(--muted);margin-top:6px}
@@ -2464,11 +2464,13 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
 })();
 
 /* ---------- Neu im Regal auf der Startseite ---------- */
+/* Bildgröße aus dem Seitenverhältnis: schmale Flaschen bis 86 % hoch, breite Tiegel höchstens 58 % breit; feste Breite und Höhe, damit es in jedem Browser klappt */
+function neuBild(p){ const r = p.ir || 1; let h = 0.86, w = h * r; if(w > 0.58){ w = 0.58; h = w / r; } return `width:${(w*100).toFixed(1)}%;height:${(h*100).toFixed(1)}%`; }
 (function(){
   const box = document.getElementById("neugrid"); if(!box) return;
   document.getElementById("neuMonat").textContent = NEU.monat;
   const open = () => { state.view = "produkte"; state.type = "neu"; state.cat = "alle"; state.seg = "alle"; state.q = ""; q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); };
-  box.innerHTML = neuItems().slice(0, 4).map(p => `<li><button type="button" class="neutile" aria-label="${esc(p.brand+" "+p.name)}: neu im Regal"><span class="neutag">Neu</span><span class="pic">${p.img ? `<img src="${p.img}" alt="">` : ""}</span><span class="typ">${esc(T[p.type].label)}</span><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span></button></li>`).join("");
+  box.innerHTML = neuItems().slice(0, 4).map(p => `<li><button type="button" class="neutile" aria-label="${esc(p.brand+" "+p.name)}: neu im Regal"><span class="neutag">Neu</span><span class="pic">${p.img ? `<img src="${p.img}" alt="" style="${neuBild(p)}">` : ""}</span><span class="typ">${esc(T[p.type].label)}</span><span class="brand">${esc(p.brand)}</span><span class="name">${esc(p.name)}</span></button></li>`).join("");
   box.querySelectorAll(".neutile").forEach(b => b.onclick = open);
   document.getElementById("neuAlle").onclick = open;
 })();
