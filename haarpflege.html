@@ -811,39 +811,6 @@ html.zg-abo .zbadge{display:none}
 .mcheck{background:#EFEBE1;border-left:2px solid var(--khaki-button,#4A4A39);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
 .mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#4A4A39);margin-bottom:3px}
 
-/* ---------- Wissen: Kopf mit Karteikasten (20.10., 2. Fassung) ---------- */
-.wkopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:40px;align-items:center;margin-bottom:10px}
-.wkopf .mythos,.wkopf .mythos[data-look]{--mw:420px;margin:34px auto 0}
-.wkopf.nurkartei{grid-template-columns:minmax(0,1fr)} .wkopf.nurkartei .mythos{display:none}
-@media (max-width:899px){ .wkopf{grid-template-columns:1fr;gap:8px} .wkopf .mythos,.wkopf .mythos[data-look]{--mw:360px} }
-.kartei{position:relative;max-width:560px;margin:26px 0 8px}
-.kreiter{position:relative;z-index:1;display:flex;gap:4px;padding-left:12px}
-.kreiter button{font:inherit;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#6E615C;background:#EDE5D9;border:1px solid rgba(56,47,46,.16);border-bottom:0;border-radius:9px 9px 0 0;padding:9px 15px 9px;margin-bottom:-1px;cursor:pointer;white-space:nowrap}
-.kreiter button:hover{color:var(--ink)}
-.kreiter button[aria-selected="true"]{background:#FFFDFA;color:var(--ink);padding-top:11px}
-.kkarte{position:relative;background:#FFFDFA;border:1px solid rgba(56,47,46,.16);border-radius:3px 14px 14px 14px;padding:18px 22px 16px;
-  background-image:linear-gradient(transparent 46px,rgba(181,101,74,.35) 46px,rgba(181,101,74,.35) 47px,transparent 47px),repeating-linear-gradient(transparent 0 33px,rgba(56,47,46,.07) 33px 34px);background-position:0 0,0 47px;
-  box-shadow:0 3px 0 -1px #F4EEE5,0 3px 0 0 rgba(56,47,46,.12),0 7px 0 -1px #EDE5D9,0 7px 0 0 rgba(56,47,46,.10),0 18px 30px -18px rgba(56,47,46,.35)}
-.klabel{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);height:24px}
-.ksuche{display:flex;align-items:center;gap:10px;margin-top:10px;border-bottom:1px solid rgba(56,47,46,.35);padding:4px 0 6px}
-.ksuche svg{width:18px;height:18px;color:var(--muted);flex:none}
-.ksuche input{flex:1;min-width:0;border:0;background:transparent;font-family:var(--serif);font-size:20px;color:var(--ink);padding:2px 0;outline:none}
-.ksuche input::placeholder{color:#9A8C86;font-style:italic}
-.kvorschlag{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:12px 0 0;font-size:13px;color:var(--muted)}
-.kvorschlag button{font:inherit;font-size:13px;color:var(--ink);background:none;border:0;padding:0;text-decoration:underline;text-decoration-color:rgba(56,47,46,.3);text-underline-offset:3px;cursor:pointer}
-@media (max-width:520px){ .kreiter{padding-left:6px;gap:3px} .kreiter button{font-size:10.5px;letter-spacing:.08em;padding:8px 9px} .kkarte{padding:16px 16px 14px} .ksuche input{font-size:17px} }
-/* ---------- Wissen: Abteilungen als Lesesaal-Nischen mit Messingschild (20.10.) ---------- */
-#wissenCards .wregal{position:relative;margin:30px 0 0;padding:26px 28px 46px;border-radius:26px;background:color-mix(in srgb,var(--bc) 8%,#FBF7F1);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 0 0 1px color-mix(in srgb,var(--bc) 12%,transparent)}
-#wissenCards > .wregal:first-child{margin-top:8px}
-#wissenCards .wregal .wtab{border-bottom:0;align-items:center;flex-wrap:wrap;gap:10px 16px}
-#wissenCards .wregal .wtab h2{margin:0;padding:9px 18px 8px;border:0;border-radius:4px;color:#3B2F22;font-size:11.5px;letter-spacing:.22em;
-  background:linear-gradient(180deg,#E4CC96 0%,#C9A866 45%,#B08F50 100%);box-shadow:inset 0 1px 0 rgba(255,250,230,.7),inset 0 -1px 0 rgba(80,55,20,.35),0 2px 4px rgba(56,47,46,.18);
-  background-image:radial-gradient(circle at 7px 50%,#8C6F3A 0 1.6px,transparent 2.2px),radial-gradient(circle at calc(100% - 7px) 50%,#8C6F3A 0 1.6px,transparent 2.2px),linear-gradient(180deg,#E4CC96 0%,#C9A866 45%,#B08F50 100%)}
-#wissenCards .wregal .wtab .wanz,#wissenCards .wregal .wtab .wfrei,#wissenCards .wregal .wtab .wabo{padding-bottom:0}
-#wissenCards .wregal .wtext{margin:12px 0 26px}
-/* schmale Kante unter jeder Buchreihe */
-#wissenCards .wregal .shelfbook::after{content:"";position:absolute;left:-14px;right:-14px;bottom:-16px;height:9px;z-index:-1;border-radius:2px;background:color-mix(in srgb,var(--bc) 30%,#E4D9CA);box-shadow:0 6px 10px -6px rgba(56,47,46,.45),inset 0 1px 0 rgba(255,255,255,.45)}
-@media (max-width:520px){ #wissenCards .wregal{padding:20px 14px 36px;border-radius:20px} #wissenCards .wregal .shelfbook::after{left:-10px;right:-10px;bottom:-13px;height:7px} }
 /* ---------- Einheitliche Seitenköpfe: kleine Zeile, Überschrift, ein Satz ---------- */
 .seitenkopf .kicker{margin:0 0 8px}
 .seitenkopf h1,html[data-stil] .intro.seitenkopf h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 14px}
@@ -1605,19 +1572,14 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
-    <div class="wkopf" id="wissenKopf"><div class="wkl">
-      <div class="intro seitenkopf"><p class="kicker">Meine Haarpflege-Bibliothek</p><h1>Wissen</h1><p>Alles, was ihr über eure Haare wissen wollt, einfach erklärt. Fangt mit den Grundlagen an, die sind kostenlos.</p></div>
-      <!-- Karteikasten wie früher in der Bibliothek: Reiter ragen oben heraus, vorne die Suche (20.10.) -->
-      <div class="kartei">
-        <div class="kreiter" role="tablist" aria-label="Bereiche im Wissen"><button type="button" role="tab" data-wtab="">Katalog</button><button type="button" role="tab" data-wtab="faq">Häufige Fragen</button><button type="button" role="tab" data-wtab="fraglaura">Frag Laura</button></div>
-        <div class="kkarte">
-          <label class="klabel" for="wq">Im Katalog suchen</label>
-          <div class="ksuche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="wq" type="search" placeholder="Zum Beispiel Haarausfall oder Silikone" aria-label="Wissen durchsuchen"></div>
-          <p class="kvorschlag">Oft gesucht: <button type="button" data-ks="Spliss">Spliss</button><button type="button" data-ks="Silikone">Silikone</button><button type="button" data-ks="Haarausfall">Haarausfall</button><button type="button" data-ks="Porosität">Porosität</button></p>
-        </div>
-      </div>
+    <div id="wissenListe"><div class="whero"><div class="wherol"><div class="intro"><h1>Wissen</h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
+    <div class="searchwrap wsearch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
+    </div>
+    <button type="button" class="faqbtn" id="faqBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 16.8h.01"/></svg><span>Häufig gestellte Fragen</span><span aria-hidden="true">→</span></button>
+    <button type="button" class="faqbtn" id="fragBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Frag Laura</span><span aria-hidden="true">→</span></button>
     </div><div class="mythos" id="mythos" aria-live="polite"></div></div>
-    <div id="wissenListe">
     <div id="wissenSuche" aria-live="polite"></div>
     <div class="cards" id="wissenCards">
 
@@ -2098,8 +2060,8 @@ function openFaq(key){
   const d = key && document.querySelector(`#wissenArt details[data-k="${key}"]`);
   if(d){ d.open = true; d.classList.add("hl"); d.scrollIntoView({block:"center"}); } else window.scrollTo({top:0});
 }
-/* Reiter im Wissen: Bibliothek, Häufige Fragen, Frag Laura */
-document.querySelectorAll("[data-wtab]").forEach(b => b.onclick = () => { const k = b.dataset.wtab; if(k === "faq"){ openFaq(); return; } state.wissen = k || null; render(); window.scrollTo({top:0}); });
+document.getElementById("faqBtn").addEventListener("click", () => openFaq());
+document.getElementById("fragBtn").addEventListener("click", () => window.zeigeFragen());
 function faqHtml(){
   return `<h2>Häufig gestellte Fragen</h2><p class="wdraft">Entwurf: Die Fragen und Antworten sind noch nicht von Laura geprüft.</p>
   <p>Hier findet ihr die Fragen, die mir zu den einzelnen Themen am häufigsten begegnen, kurz und einfach beantwortet. Wenn ihr es genauer wissen wollt, lest das ganze Kapitel.</p>`
@@ -2124,17 +2086,10 @@ function renderWissenSuche(){
   box.querySelectorAll("button[data-w]").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
   box.querySelectorAll("button[data-faq]").forEach(b => b.onclick = () => openFaq(b.dataset.faq));
 }
-document.querySelectorAll("[data-ks]").forEach(b => b.onclick = () => { const w = document.getElementById("wq"); w.value = b.dataset.ks; w.dispatchEvent(new Event("input")); w.focus(); });
-document.getElementById("wq").addEventListener("input", () => { if(state.wissen){ state.wissen = null; render(); } renderWissenSuche(); });
+document.getElementById("wq").addEventListener("input", renderWissenSuche);
 function renderWissen(){
-  /* Kopf mit Reitern über Bibliothek, Häufigen Fragen und Frag Laura; beim Lesen eines Kapitels ausgeblendet */
-  const modus = state.wissen === "faq" || state.wissen === "fraglaura" ? state.wissen : "";
-  document.getElementById("wissenKopf").hidden = !!(state.wissen && !modus);
-  document.getElementById("wissenKopf").classList.toggle("nurkartei", !!modus);
-  document.querySelector(".klabel").textContent = modus ? "Kapitel und Fragen durchsuchen" : "Im Katalog suchen";
-  document.querySelectorAll("[data-wtab]").forEach(b => b.setAttribute("aria-selected", b.dataset.wtab === modus ? "true" : "false"));
   if(state.wissen === "fraglaura"){ document.getElementById("wissenListe").hidden = true; const art = document.getElementById("wissenArt"); art.hidden = false;
-    const back = `<button type="button" class="wback">← Zur Bibliothek</button>`; art.innerHTML = fragenHtml() + back;
+    const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`; art.innerHTML = back + fragenHtml() + back;
     art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
     art.querySelectorAll(".zfaq").forEach(b => b.onclick = () => zPaywall("frage"));
     document.getElementById("fragArchivStellen").onclick = frageStellen; return; }
@@ -2145,7 +2100,7 @@ function renderWissen(){
   const art = document.getElementById("wissenArt"); art.hidden = !(w || isFaq);
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
   if(isFaq){
-    art.innerHTML = faqHtml() + back.replace("Alle Wissensthemen", "Zur Bibliothek");
+    art.innerHTML = back + faqHtml() + back;
     art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
     art.querySelectorAll(".faqkap").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
     art.querySelectorAll(".zfaq").forEach(b => b.onclick = () => zPaywall("faq"));
