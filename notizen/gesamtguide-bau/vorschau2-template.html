@@ -477,6 +477,98 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .wart .note p:last-child,.wart .note ul:last-child{margin-bottom:0}
 .wdraft{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#7A6A65;border:1px dashed rgba(56,47,46,.35);border-radius:4px;padding:5px 10px;margin:0 0 18px}
+/* ---------- Wissen-Bausteine (Laura 20.10.: Kapitel visueller, wie ein Karussell) ---------- */
+.wart .wb-meta{display:flex;gap:8px;flex-wrap:wrap;margin:-6px 0 22px}
+.wart .wb-meta span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
+.wart .wb-kick{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.wart .wb-zt{font-family:var(--serif);font-size:24px;line-height:1.18;margin:0 0 14px}
+.wart .wb-blick{background:#382F2E;color:#F3ECE2;border-radius:20px;padding:22px 22px 8px;margin:4px 0 26px}
+.wart .wb-blick .wb-kick{color:#D6B98F}
+.wart .wb-blick > div{display:flex;gap:14px;align-items:flex-start;margin:0 0 14px;font-size:16px;line-height:1.45}
+.wart .wb-blick svg{width:28px;height:28px;flex:none;fill:none;stroke:#D6B98F;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wart .wb-zahl{text-align:center;margin:34px auto 30px;max-width:420px}
+.wart .wb-zahl b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(58px,12vw,84px);line-height:1}
+.wart .wb-zahl span{display:block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.wart .wb-zahl p{margin:10px 0 0}
+.wart .wb-kreis{margin:6px 0 10px;text-align:center}
+.wart .wb-kreis svg{width:min(230px,100%);height:auto}
+.wart .wb-kreis .wb-kz{font-family:var(--serif);font-size:30px;fill:#382F2E}
+.wart .wb-kreis .wb-kl{font-family:var(--sans);font-size:11px;letter-spacing:1.5px;fill:#6E615C}
+.wart .wb-kreis figcaption{font-size:14px;color:var(--muted);margin-top:4px}
+.wart .wb-wischtipp{font-size:13px;color:var(--muted);margin:14px 0 8px}
+.wart .wb-wisch{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;margin:0 0 18px;scrollbar-width:thin}
+.wart .wb-karte{flex:0 0 min(240px,82%);scroll-snap-align:start;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:18px;padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.45}
+.wart .wb-karte .wb-kick{margin:0}
+.wart .wb-karte .wb-kick i{width:11px;height:11px;border-radius:50%;flex:none}
+.wart .wb-karte .wb-kick i.leer{border:1.5px solid #382F2E}
+.wart .wb-karte b{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.1}
+.wart .wb-karte small{font-size:13px;color:var(--muted)}
+.wart .wb-karte.dunkel{background:#382F2E;color:#F3ECE2;border-color:#382F2E}
+.wart .wb-karte.dunkel .wb-kick{color:#D6B98F}
+.wart .wb-zeit{background:#E9E2D8;border-radius:20px;padding:22px 22px 14px;margin:30px 0 8px}
+.wart .wb-zeit ol{list-style:none;padding:0;margin:0}
+.wart .wb-zeit li{position:relative;padding:0 0 18px 30px;margin:0;font-size:15px;line-height:1.45}
+.wart .wb-zeit li::before{content:"";position:absolute;left:0;top:4px;width:14px;height:14px;border-radius:50%;background:#382F2E}
+.wart .wb-zeit li::after{content:"";position:absolute;left:6px;top:20px;bottom:0;width:1.5px;background:#382F2E}
+.wart .wb-zeit li.z2::before{background:#9E8C80}.wart .wb-zeit li.z3::before{background:#D6B98F}
+.wart .wb-zeit li.z4::before{background:transparent;border:1.5px solid #382F2E;box-sizing:border-box}
+.wart .wb-zeit li:last-child::after{display:none}
+.wart .wb-zeit li b{display:block;font-weight:500}
+.wart .wb-balken{margin:22px 0 8px}
+.wart .wb-balken div{display:grid;grid-template-columns:1fr auto;gap:6px 10px;margin:0 0 14px;font-size:14.5px}
+.wart .wb-balken b{font-weight:500}
+.wart .wb-balken i{grid-column:1/-1;height:4px;border-radius:4px;background:#382F2E}
+.wart .wb-tipp{display:flex;gap:16px;align-items:flex-start;margin:34px 0 10px}
+.wart .wb-mono{width:54px;height:54px;flex:none;border-radius:50%;background:#382F2E;color:#F3ECE2;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:28px}
+.wart .wb-zitat{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.3;margin:0}
+.wart .wb-frage{border:1px solid rgba(56,47,46,.28);border-radius:20px;padding:22px;margin:30px 0 10px;display:flex;flex-direction:column;gap:10px}
+.wart .wb-frage .wb-kick{margin:0}
+.wart .wb-fq{font-family:var(--serif);font-size:23px;line-height:1.2;margin:0 0 4px}
+.wart .wb-frage button,.wart .wb-myth .wb-mb button{min-height:46px;text-align:left;font:inherit;font-size:15.5px;border-radius:999px;padding:10px 18px;cursor:pointer;border:1px solid #382F2E;background:transparent;color:#382F2E}
+.wart .wb-frage button[aria-pressed="true"]{background:#382F2E;color:#F3ECE2}
+.wart .wb-antwort{background:#E9E2D8;border-radius:14px;padding:14px 16px;margin:4px 0 0;font-size:15px}
+.wart .wb-check{margin:30px 0 10px;display:flex;flex-direction:column;gap:10px}
+.wart .wb-check .wb-zt{margin-bottom:4px}
+.wart .wb-check button{display:flex;gap:14px;align-items:flex-start;text-align:left;font:inherit;font-size:15px;line-height:1.45;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:14px;padding:13px 16px;cursor:pointer;color:#382F2E}
+.wart .wb-check button::before{content:"";width:20px;height:20px;flex:none;border-radius:6px;border:1.5px solid #382F2E;box-sizing:border-box;margin-top:1px}
+.wart .wb-check button[aria-pressed="true"]::before{background:#382F2E url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 6.5' fill='none' stroke='%23F3ECE2' stroke-width='2'/%3E%3C/svg%3E") center/100% no-repeat}
+.wart .wb-check button[aria-pressed="true"] span{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px}
+.wart .wb-hinweis{font-size:13px;color:var(--muted);margin:0}
+.wart a.wb-weiter{display:flex;flex-direction:column;gap:8px;background:#382F2E;color:#F3ECE2;border-radius:20px;padding:24px 22px;margin:30px 0 0;text-decoration:none;font-weight:400}
+.wart a.wb-weiter .wb-kick{color:#D6B98F;margin:0}
+.wart a.wb-weiter b{font-family:var(--serif);font-weight:400;font-size:29px;line-height:1.1}
+.wart a.wb-weiter em{font-style:normal;align-self:flex-start;margin-top:6px;background:#F3ECE2;color:#382F2E;border-radius:999px;padding:11px 20px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.wart .wb-stufen{margin:0 0 10px}
+.wart .wb-stufe{border-top:1px solid var(--line-soft);padding:14px 0 6px}
+.wart .wb-stufe p{margin:0 0 8px;font-size:15px}
+.wart .wb-stufe p:first-child{display:flex;justify-content:space-between;align-items:baseline}
+.wart .wb-stufe p:first-child b{font-family:var(--serif);font-weight:400;font-size:25px}
+.wart .wb-stufe p:first-child span{font-size:13px;color:var(--muted)}
+.wart .wb-stufe small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.wart .wb-stufe svg{display:block;width:100%;max-width:420px;height:auto;margin:0 0 8px}
+.wart .wb-stufe rect{fill:#E9E2D8}
+.wart .wb-stufe path{fill:none;stroke:#382F2E;stroke-width:1.4;stroke-linecap:round}
+.wart .wb-skala{background:#E9E2D8;border-radius:20px;padding:22px;margin:20px 0 10px}
+.wart .wb-skala p:last-child{margin:0;font-size:15px}
+.wart .wb-band{display:flex;height:12px;border-radius:999px;overflow:hidden;border:1px solid rgba(56,47,46,.2)}
+.wart .wb-band i{flex:1}.wart .wb-band i:nth-child(1){background:#FFFDFA}.wart .wb-band i:nth-child(2){background:#D6B98F}.wart .wb-band i:nth-child(3){background:#382F2E}
+.wart .wb-bandtext{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin:6px 0 14px!important}
+.wart .wb-glas{display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(56,47,46,.28);border-radius:20px;padding:20px 22px;margin:30px 0 10px}
+.wart .wb-glas svg{width:46px;height:66px;flex:none;fill:none;stroke:#382F2E;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-top:4px}
+.wart .wb-glas h3{margin:8px 0 6px}
+@media (max-width:759px){ .wart .wb-glas{flex-direction:column;gap:6px} .wart .wb-glas svg{width:34px;height:48px} .wart .wb-stufen ~ .wb-wisch .wb-karte,.wart .wb-wisch .wb-karte:only-child{flex-basis:88%} }
+.wart .wb-glas p{margin:0;font-size:15px}
+.wart .wb-stempel{display:inline-block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:5px 11px;background:#D6B98F;color:#382F2E}
+.wart .wb-myth{background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:20px;padding:20px 22px;margin:0 0 14px}
+.wart .wb-myth h3{margin:4px 0 14px;font-size:23px;line-height:1.2}
+.wart .wb-myth .wb-mb{display:flex;gap:10px}
+.wart .wb-myth .wb-mb button{flex:1;text-align:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:10px 8px;white-space:nowrap}
+.wart .wb-myth .wb-mb button + button{background:#382F2E;color:#F3ECE2}
+.wart .wb-myth .wb-mstand{display:block;font-size:13px;color:var(--muted);margin-top:10px}
+.wart .wb-myth > p strong{display:inline-block;font-weight:400;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:5px 11px;background:#382F2E;color:#F3ECE2;margin-right:6px}
+.wart .wb-myth.halb > p strong{background:#D6B98F;color:#382F2E}
+.wart .wb-myth > p{margin:0;font-size:15.5px}
+.wb-fort{position:fixed;left:0;top:0;height:3px;width:0;background:#382F2E;z-index:40;pointer-events:none;transition:width .1s linear}
 .wfine{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:16px;margin-top:30px}
 
 /* ---------- Hair Journey als Buch ---------- */
@@ -2083,7 +2175,41 @@ function renderWissen(){
   art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
   /* Links aus einem Kapitel zu einer Produktart, z. B. Haarbürsten */
   art.querySelectorAll("a[data-typ]").forEach(a => a.onclick = e => { e.preventDefault(); state.view = "produkte"; state.type = a.dataset.typ; state.cat = a.dataset.cat || "alle"; state.q = ""; q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); });
+  wissenBausteine(art, w);
 }
+/* Wissen-Bausteine: Lesezeit, Mini-Frage, Checkliste (gespeichert), Mythen als Rate-Karten */
+function wissenBausteine(art, w){
+  const h2 = art.querySelector("h2"), worte = w.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+  if(h2) h2.insertAdjacentHTML("afterend", `<div class="wb-meta"><span>ca. ${Math.max(1, Math.round(worte / 180))} Min. Lesezeit</span></div>`);
+  art.querySelectorAll(".wb-frage").forEach(f => f.querySelectorAll("button").forEach(b => b.onclick = () => {
+    f.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    const a = f.querySelector(".wb-antwort"); a.hidden = false;
+    a.innerHTML = `<b>${b.hasAttribute("data-ok") ? "Richtig!" : "Nicht ganz."}</b> ` + a.dataset.t; }));
+  art.querySelectorAll(".wb-antwort").forEach(a => a.dataset.t = a.innerHTML);
+  let gespeichert = {}; try { gespeichert = JSON.parse(localStorage.getItem("wbCheck") || "{}"); } catch(e){}
+  art.querySelectorAll(".wb-check").forEach(c => { const id = c.dataset.id, an = new Set(gespeichert[id] || []);
+    c.querySelectorAll("button").forEach((b, i) => { b.innerHTML = `<span>${b.innerHTML}</span>`; b.setAttribute("aria-pressed", an.has(i));
+      b.onclick = () => { an.has(i) ? an.delete(i) : an.add(i); b.setAttribute("aria-pressed", an.has(i));
+        gespeichert[id] = [...an]; try { localStorage.setItem("wbCheck", JSON.stringify(gespeichert)); } catch(e){} }; }); });
+  if(w.id === "mythen") [...art.querySelectorAll("h3")].forEach((h, n) => { const p = h.nextElementSibling; if(!p || p.tagName !== "P") return;
+    const st = p.querySelector("strong"), urteil = st ? st.textContent : "";
+    const halb = /halb|kommt darauf an/i.test(urteil), wahr = !halb && /^stimmt\b(?! nicht| so nicht| so pauschal nicht)/i.test(urteil);
+    const k = document.createElement("div"); k.className = "wb-myth" + (halb ? " halb" : "");
+    h.before(k); k.innerHTML = `<p class="wb-kick">Mythos ${n + 1}</p>`; k.append(h);
+    const btns = document.createElement("div"); btns.className = "wb-mb"; btns.innerHTML = `<button type="button">Stimmt</button><button type="button">Stimmt nicht</button>`; k.append(btns);
+    k.append(p); p.hidden = true;
+    btns.querySelectorAll("button").forEach((b, j) => b.onclick = () => { const ok = halb || (j === 0) === wahr;
+      btns.remove(); p.hidden = false; p.insertAdjacentHTML("afterend", `<span class="wb-mstand">${halb ? "Hier liegt ihr mit beidem ein bisschen richtig." : ok ? "Richtig geraten!" : "Viele glauben das, aber es stimmt nicht."}</span>`); }); });
+}
+/* dünner Lesebalken oben, solange ein Kapitel offen ist */
+(function(){
+  const bar = document.createElement("div"); bar.className = "wb-fort"; bar.setAttribute("aria-hidden", "true"); document.body.append(bar);
+  const upd = () => { const art = document.getElementById("wissenArt");
+    if(!art || art.hidden || state.view !== "wissen" || !art.querySelector(".wb-meta")){ bar.style.width = "0"; return; }
+    const r = art.getBoundingClientRect(), weg = Math.min(Math.max(-r.top + innerHeight * 0.3, 0), r.height);
+    bar.style.width = (r.height ? weg / r.height * 100 : 0).toFixed(1) + "%"; };
+  addEventListener("scroll", upd, {passive: true}); addEventListener("resize", upd);
+})();
 
 /* ---------- LL-Methode: Lauras Leave-in-Auswahl (ll-auswahl.json) ---------- */
 const LLA = __LL_AUSWAHL__;
