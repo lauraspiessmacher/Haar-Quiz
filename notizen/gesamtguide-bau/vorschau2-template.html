@@ -811,6 +811,25 @@ html.zg-abo .zbadge{display:none}
 .mcheck{background:#EFEBE1;border-left:2px solid var(--khaki-button,#4A4A39);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
 .mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#4A4A39);margin-bottom:3px}
 
+/* ---------- Wissen: Kopf mit Reitern (20.10.) ---------- */
+.wnav{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px;border-bottom:1.5px solid var(--ink);margin:22px 0 34px}
+.wtabs{display:flex;gap:4px}
+.wtabs button{font:inherit;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:0;border-radius:12px 12px 0 0;padding:12px 18px;cursor:pointer;white-space:nowrap}
+.wtabs button:hover{background:rgba(56,47,46,.06)}
+.wtabs button[aria-selected="true"]{background:var(--ink);color:#F3ECE2}
+.wnav .wsearch{margin:0 0 8px;flex:0 1 360px}
+@media (max-width:759px){ .wnav{flex-direction:column-reverse;align-items:stretch;gap:12px;margin:16px 0 26px} .wnav .wsearch{flex:none;margin:0} .wtabs{overflow-x:auto;scrollbar-width:none} .wtabs button{padding:10px 12px;font-size:11.5px;letter-spacing:.1em} }
+#wissenCards > .wregal:first-child{margin-top:0}
+#wissenCards.cards{margin-top:0}
+.wmythos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:40px;align-items:center;margin:20px 0 56px;padding:24px 40px;border:1px solid var(--line-soft);border-radius:24px;background:#FFFDFA}
+.wmythos .mythos,.wmythos .mythos[data-look]{--mw:400px;margin:0 auto}
+.wmtext h2{font-size:clamp(30px,4vw,44px);margin:0 0 10px}
+.wmtext p:last-child{color:var(--muted);max-width:42ch;margin:0}
+@media (max-width:899px){ .wmythos{grid-template-columns:1fr;gap:6px;padding:22px 16px 10px;margin:10px 0 40px} }
+/* ---------- Einheitliche Seitenköpfe: kleine Zeile, Überschrift, ein Satz ---------- */
+.seitenkopf .kicker{margin:0 0 8px}
+.seitenkopf h1,html[data-stil] .intro.seitenkopf h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 14px}
+.seitenkopf > p:last-child{font-size:17px;max-width:60ch}
 /* ---------- Der fertige Haarplan ---------- */
 #v-plan.fertig .nurvorher{display:none}
 .hplan{margin-top:26px}
@@ -950,6 +969,11 @@ html.zg-abo .zbadge{display:none}
 .bplanbtns{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
 .bplan .linkbtn{color:#F3ECE2}
 /* ---------- Mein Bereich ---------- */
+.bkarte.baboteaser{background:#EFE8DE;border-color:#EFE8DE}
+.bteaser{list-style:none;margin:4px 0 16px;padding:0;display:grid;gap:10px}
+.bteaser li{display:flex;flex-direction:column;gap:2px;background:#FFFDFA;border-radius:12px;padding:12px 14px}
+.bteaser b{font-family:var(--serif);font-weight:400;font-size:20px}
+.bteaser span{color:var(--muted);font-size:14.5px}
 .bgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px;align-items:start}
 @media (max-width:759px){ .bgrid{grid-template-columns:1fr;gap:12px} }
 .bkarte{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:22px 22px 20px}
@@ -1122,7 +1146,19 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 .wart .splissarten figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:17px;color:#382F2E;margin-bottom:4px}
 
 /* ---------- LL-Methode (eigene Seite für Lauras Signature-Thema) ---------- */
-.llhero{padding:34px 0 10px;max-width:780px}
+.llhero{padding:34px 0 10px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:48px;align-items:center}
+@media (max-width:959px){ .llhero{grid-template-columns:1fr;gap:26px} }
+.llkarte{background:#382F2E;color:#F3ECE2;border-radius:24px;padding:28px 26px 24px}
+.llkarte .kicker{color:#C9BCAE;margin:0 0 6px}
+.llkarte h2{color:#F3ECE2;font-size:30px;line-height:1.1;margin:0 0 18px}
+.llkurz{list-style:none;counter-reset:ll;margin:0;padding:0;display:grid;gap:14px}
+.llkurz li{counter-increment:ll;display:grid;grid-template-columns:34px minmax(0,1fr);gap:2px 12px}
+.llkurz li::before{content:counter(ll);grid-row:span 2;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(243,236,226,.5);font-family:var(--serif);font-size:18px}
+.llkurz b{font-weight:500;font-size:15px;letter-spacing:.02em}
+.llkurz span{color:#E3D8CB;font-size:14.5px}
+.llwas{margin:20px 0 0;padding-top:16px;border-top:1px solid rgba(243,236,226,.2);font-size:14.5px;color:#E3D8CB}
+.llwas strong{color:#F3ECE2;font-weight:600}
+@media (max-width:600px){ .llkarte{padding:22px 16px 18px} .llkarte h2{font-size:24px;margin-bottom:14px} .llkurz{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px} .llkurz li{grid-template-columns:1fr;text-align:center;justify-items:center;background:rgba(243,236,226,.07);border-radius:14px;padding:12px 8px} .llkurz li::before{grid-row:auto;width:28px;height:28px;font-size:15px;margin-bottom:4px} .llkurz b{font-size:13px} .llkurz span{font-size:12.5px;line-height:1.35} }
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
 .llhero .lead{font-size:17px;max-width:62ch;margin:0 0 12px}
 .llhero .lead strong{font-weight:600}
@@ -1316,12 +1352,20 @@ __ROUTINE__
   <!-- ===================== LL-METHODE (Lauras Signature-Thema) ===================== -->
   <section class="view llpage" id="v-ll" hidden>
     <div class="llhero">
+      <div class="lltext">
       <p class="kicker">Meine Signature-Methode</p>
       <h1>Meine LL-Methode</h1>
       <p class="lead">Die LL-Methode ist meine Signature-Methode. Als meine Haare selbst stark geschädigt waren und ich ständig mit Haarbruch und Spliss zu kämpfen hatte, war Leave-in-Pflege mein Holy-Grail-Produkt. Natürlich nicht das einzige, aber es hat mir am schnellsten geholfen, echte Erfolge zu sehen.</p>
       <p class="lead">Haarbruch und Spliss sind auch die Themen, zu denen ihr mir am meisten schreibt. Meine Antwort darauf ist fast immer dieselbe: Leave-in-Pflege, und zwar jeden Tag, mit meiner LL-Methode.</p>
-      <p class="lead"><strong>Was ist Leave-in-Pflege?</strong> Das sind Produkte wie Sprays, Seren oder Cremes, die ihr ins feuchte oder ins trockene Haar gebt und nicht ausspült. Sie bleiben im Haar und pflegen es weiter.</p>
       <div class="btns"><button type="button" class="btn dark" id="llQuizBtn">Welches Leave-in passt zu mir? <span aria-hidden="true">→</span></button><button type="button" class="btn" id="llZurAuswahl">Meine Leave-in-Auswahl</button></div>
+      </div>
+      <!-- Platzhalter bis zum Foto: die Methode auf einen Blick (20.10.) -->
+      <aside class="llkarte" aria-label="Die LL-Methode auf einen Blick">
+        <p class="kicker">Auf einen Blick</p>
+        <h2>Die LL-Methode in 3 Schritten</h2>
+        <ol class="llkurz"><li><b>Nach jeder Wäsche</b><span>Leave-in ins feuchte Haar, damit die Pflegestoffe einziehen.</span></li><li><b>Jeden Tag</b><span>Ein- bis zweimal Leave-in in die trockenen Längen und Spitzen.</span></li><li><b>Extra</b><span>Etwas Öl zum Versiegeln, wenn ihr mögt.</span></li></ol>
+        <p class="llwas"><strong>Was ist Leave-in-Pflege?</strong> Das sind Produkte wie Sprays, Seren oder Cremes, die ihr ins feuchte oder ins trockene Haar gebt und nicht ausspült. Sie bleiben im Haar und pflegen es weiter.</p>
+      </aside>
     </div>
 
     <div class="llsec">
@@ -1393,7 +1437,7 @@ __ROUTINE__
 
   <!-- ===================== HAARPLAN (Arbeitstitel, Vorschau 19.10.) ===================== -->
   <section class="view" id="v-plan" hidden>
-    <div class="intro"><h1>Dein Haarplan</h1><p id="planIntro">Hier entsteht dein persönlicher Plan für deine Haare. Nimm dir ein paar Minuten Zeit und mach die Checks in Ruhe, danach bist du schon eine ganze Ecke schlauer. Und du wirst sehen: Die Lösung ist nicht immer nur ein Produkt. Oft sind es kleine Gewohnheiten, die den größten Unterschied machen.</p></div>
+    <div class="intro seitenkopf"><p class="kicker">Dein persönlicher Plan</p><h1>Dein Haarplan</h1><p id="planIntro">Hier entsteht dein persönlicher Plan für deine Haare. Nimm dir ein paar Minuten Zeit und mach die Checks in Ruhe, danach bist du schon eine ganze Ecke schlauer. Und du wirst sehen: Die Lösung ist nicht immer nur ein Produkt. Oft sind es kleine Gewohnheiten, die den größten Unterschied machen.</p></div>
     <div class="pstand" id="planStand"></div>
     <div class="hplan" id="planFertig" hidden></div>
     <h2 class="psub" id="planWegH">Schritt 1 bis 3: deine drei Checks</h2>
@@ -1424,7 +1468,7 @@ __ROUTINE__
   </section>
 
   <section class="view" id="v-quiz" hidden>
-    <div class="intro"><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es vier Extra-Checks: welches Leave-in zu dir passt, wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
+    <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es vier Extra-Checks: welches Leave-in zu dir passt, wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
       <a class="qcard" data-check="kopfhaut" href="__QUIZ_KOPF__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
@@ -1486,7 +1530,7 @@ __ROUTINE__
   <!-- ===================== MERKLISTE ===================== -->
   <!-- ===================== MEIN BEREICH (Vorschau 18.10.) ===================== -->
   <section class="view" id="v-bereich" hidden>
-    <div class="intro"><h1>Mein Bereich</h1><p>Alles, was zu dir und deinen Haaren gehört, an einem Ort.</p></div>
+    <div class="intro seitenkopf"><p class="kicker">Dein Konto</p><h1>Mein Bereich</h1><p>Alles, was zu dir und deinen Haaren gehört, an einem Ort.</p></div>
     <div class="bgrid" id="bereichBox"></div>
   </section>
 
@@ -1504,14 +1548,18 @@ __ROUTINE__
 
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
-    <div id="wissenListe"><div class="whero"><div class="wherol"><div class="intro"><h1>Wissen</h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
-    <div class="searchwrap wsearch">
+    <div class="wkopf" id="wissenKopf">
+      <div class="intro seitenkopf"><p class="kicker">Meine Haarpflege-Bibliothek</p><h1>Wissen</h1><p>Alles, was ihr über eure Haare wissen wollt, einfach erklärt. Fangt mit den Grundlagen an, die sind kostenlos.</p></div>
+      <div class="wnav">
+        <div class="wtabs" role="tablist" aria-label="Bereiche im Wissen"><button type="button" role="tab" data-wtab="">Bibliothek</button><button type="button" role="tab" data-wtab="faq">Häufige Fragen</button><button type="button" role="tab" data-wtab="fraglaura">Frag Laura</button></div>
+        <div class="searchwrap wsearch">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">
     </div>
-    <button type="button" class="faqbtn" id="faqBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 16.8h.01"/></svg><span>Häufig gestellte Fragen</span><span aria-hidden="true">→</span></button>
-    <button type="button" class="faqbtn" id="fragBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Frag Laura</span><span aria-hidden="true">→</span></button>
-    </div><div class="mythos" id="mythos" aria-live="polite"></div></div>
+      </div>
+    </div>
+    <div id="wissenListe">
+    <div class="wmythos" id="wmythos"><div class="wmtext"><p class="kicker">Zwischendurch</p><h2>Mythos oder Fakt?</h2><p>Testet euer Wissen: Tippt auf eure Antwort, ich löse direkt auf. Und unter „Frage des Monats“ beantworte ich jeden Monat eine eurer Fragen.</p></div><div class="mythos" id="mythos" aria-live="polite"></div></div>
     <div id="wissenSuche" aria-live="polite"></div>
     <div class="cards" id="wissenCards">
 
@@ -1881,6 +1929,8 @@ const PRAEGUNG = {
       r.style.setProperty("--bc", f[0]); r.style.setProperty("--bt", f[1] ? "#382F2E" : "#F3ECE2"); r.classList.toggle("hell", !!f[1]); });
     if(ctl) ctl.querySelectorAll("[data-p]").forEach(b => b.setAttribute("aria-pressed", b.dataset.p === k));
   };
+  /* Mythos oder Fakt steht nach dem ersten Regal, damit oben zuerst die Bücher kommen */
+  const wm = document.getElementById("wmythos"), r1 = box.querySelector(".wregal"); if(wm && r1) r1.after(wm);
   const pk = "a"; /* Laura (16.10.): Ton in Ton */
   setPal(WPAL[pk] ? pk : "a");
   const open = id => { state.wissen = id; render(); window.scrollTo({top:0}); };
@@ -1992,8 +2042,8 @@ function openFaq(key){
   const d = key && document.querySelector(`#wissenArt details[data-k="${key}"]`);
   if(d){ d.open = true; d.classList.add("hl"); d.scrollIntoView({block:"center"}); } else window.scrollTo({top:0});
 }
-document.getElementById("faqBtn").addEventListener("click", () => openFaq());
-document.getElementById("fragBtn").addEventListener("click", () => window.zeigeFragen());
+/* Reiter im Wissen: Bibliothek, Häufige Fragen, Frag Laura */
+document.querySelectorAll("[data-wtab]").forEach(b => b.onclick = () => { const k = b.dataset.wtab; if(k === "faq"){ openFaq(); return; } state.wissen = k || null; render(); window.scrollTo({top:0}); });
 function faqHtml(){
   return `<h2>Häufig gestellte Fragen</h2><p class="wdraft">Entwurf: Die Fragen und Antworten sind noch nicht von Laura geprüft.</p>
   <p>Hier findet ihr die Fragen, die mir zu den einzelnen Themen am häufigsten begegnen, kurz und einfach beantwortet. Wenn ihr es genauer wissen wollt, lest das ganze Kapitel.</p>`
@@ -2018,10 +2068,14 @@ function renderWissenSuche(){
   box.querySelectorAll("button[data-w]").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
   box.querySelectorAll("button[data-faq]").forEach(b => b.onclick = () => openFaq(b.dataset.faq));
 }
-document.getElementById("wq").addEventListener("input", renderWissenSuche);
+document.getElementById("wq").addEventListener("input", () => { if(state.wissen){ state.wissen = null; render(); } renderWissenSuche(); });
 function renderWissen(){
+  /* Kopf mit Reitern über Bibliothek, Häufigen Fragen und Frag Laura; beim Lesen eines Kapitels ausgeblendet */
+  const modus = state.wissen === "faq" || state.wissen === "fraglaura" ? state.wissen : "";
+  document.getElementById("wissenKopf").hidden = !!(state.wissen && !modus);
+  document.querySelectorAll("[data-wtab]").forEach(b => b.setAttribute("aria-selected", b.dataset.wtab === modus ? "true" : "false"));
   if(state.wissen === "fraglaura"){ document.getElementById("wissenListe").hidden = true; const art = document.getElementById("wissenArt"); art.hidden = false;
-    const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`; art.innerHTML = back + fragenHtml() + back;
+    const back = `<button type="button" class="wback">← Zur Bibliothek</button>`; art.innerHTML = fragenHtml() + back;
     art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
     art.querySelectorAll(".zfaq").forEach(b => b.onclick = () => zPaywall("frage"));
     document.getElementById("fragArchivStellen").onclick = frageStellen; return; }
@@ -2032,7 +2086,7 @@ function renderWissen(){
   const art = document.getElementById("wissenArt"); art.hidden = !(w || isFaq);
   const back = `<button type="button" class="wback">← Alle Wissensthemen</button>`;
   if(isFaq){
-    art.innerHTML = back + faqHtml() + back;
+    art.innerHTML = faqHtml() + back.replace("Alle Wissensthemen", "Zur Bibliothek");
     art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
     art.querySelectorAll(".faqkap").forEach(b => b.onclick = () => { state.wissen = b.dataset.w; render(); window.scrollTo({top:0}); });
     art.querySelectorAll(".zfaq").forEach(b => b.onclick = () => zPaywall("faq"));
@@ -2613,7 +2667,7 @@ function renderBereich(){
   <article class="bkarte"><h3>Meine Ergebnisse</h3>
     ${ergListe(Object.keys(ERGNAME)) || `<p class="bleer">Sobald du einen Check gemacht hast, findest du hier dein ausführliches Ergebnis zum Nachlesen.</p>`}
     <p class="bklein">Gespeichert nur hier auf deinem Gerät.</p></article>
-  <article class="bkarte"><h3>Merkliste ${schloss}</h3>
+  ${istAbo() ? `  <article class="bkarte"><h3>Merkliste ${schloss}</h3>
     ${istAbo() ? (mi.length ? `<div class="bmini">${mi.slice(0,4).map(p => p.img ? `<img src="${p.img}" alt="" loading="lazy">` : "").join("")}</div><p class="bklein">${mi.length} ${mi.length===1?"Produkt":"Produkte"} gemerkt, deine Einkaufsliste für die Drogerie.</p>` : `<p class="bleer">Noch nichts gemerkt. Tipp bei einem Produkt auf das +, dann landet es hier.</p>`)
       : `<p class="bleer">Merk dir Produkte und hab sie in der Drogerie sofort griffbereit.</p>`}
     <button type="button" class="btn" id="bMerk">${istAbo() ? "Merkliste öffnen" : "Mit dem Abo freischalten"}</button></article>
@@ -2621,6 +2675,9 @@ function renderBereich(){
     <p>Stell mir deine Frage. Jeden Monat beantworte ich drei bis fünf davon ausführlich im Wissen.</p>
     <textarea id="bFrage" rows="3" placeholder="Zum Beispiel: Wie oft sollte ich bei feinem Haar eine Maske benutzen?" ${istAbo()?"":"disabled"}></textarea>
     <button type="button" class="btn" id="bFrageGo">${istAbo() ? "Frage abschicken" : "Mit dem Abo freischalten"}</button></article>
+` : `<article class="bkarte baboteaser"><h3>Das wartet im Abo auf dich</h3>
+    <ul class="bteaser"><li><b>Dein Haarplan</b><span>Wochenplan, Grundregeln und Einkaufsliste, Schritt für Schritt.</span></li><li><b>Deine Merkliste</b><span>Produkte merken und im Laden sofort griffbereit haben.</span></li><li><b>Frag Laura</b><span>Schick mir deine Fragen, jeden Monat beantworte ich drei bis fünf.</span></li></ul>
+    <button type="button" class="btn dark" id="bAboTeaser">Abo ansehen <span aria-hidden="true">→</span></button></article>`}
   <article class="bkarte"><h3>Dein Fortschritt</h3>
     <p>Mach alle vier Wochen ein Foto von deinen Längen und Spitzen, immer am gleichen Ort und im gleichen Licht. Leg dir dafür eine eigene Notiz in deiner Notizen-App an und pinn sie oben fest, oder einen Ordner in deinen Fotos. So siehst du schwarz auf weiß, was sich verändert.</p>
     <p class="bklein">Deine Fotos bleiben nur bei dir auf dem Handy.</p></article>
@@ -2634,8 +2691,9 @@ function renderBereich(){
   document.getElementById("bMe").onclick = openMe;
   box.querySelectorAll("[data-erg]").forEach(b => b.onclick = () => zeigeErgebnis(b.dataset.erg));
   box.querySelectorAll("[data-extra]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.extra));
-  document.getElementById("bMerk").onclick = () => { if(!istAbo()){ zPaywall("merkliste"); return; } state.view = "merkliste"; render(); window.scrollTo({top:0}); };
-  document.getElementById("bFrageGo").onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } const t = document.getElementById("bFrage"); if(!t.value.trim()){ t.focus(); return; } t.value = ""; toast("Vorschau: Deine Frage ist angekommen"); };
+  const bat = document.getElementById("bAboTeaser"); if(bat) bat.onclick = () => zPaywall("bereich");
+  const bmk = document.getElementById("bMerk"); if(bmk) bmk.onclick = () => { if(!istAbo()){ zPaywall("merkliste"); return; } state.view = "merkliste"; render(); window.scrollTo({top:0}); };
+  const bfg = document.getElementById("bFrageGo"); if(bfg) bfg.onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } const t = document.getElementById("bFrage"); if(!t.value.trim()){ t.focus(); return; } t.value = ""; toast("Vorschau: Deine Frage ist angekommen"); };
   const ab = document.getElementById("bAbo"); if(ab) ab.onclick = () => zPaywall("bereich");
   box.querySelectorAll(".blinks button").forEach(b => b.onclick = () => toast(`Vorschau: „${b.dataset.v}“ kommt mit der echten Version`));
 }
