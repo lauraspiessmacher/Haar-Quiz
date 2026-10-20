@@ -549,7 +549,8 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-stufe rect{fill:#E9E2D8}
 .wart .wb-stufe path{fill:none;stroke:#382F2E;stroke-width:1.4;stroke-linecap:round}
 .wart .wb-skala{background:#E9E2D8;border-radius:20px;padding:22px;margin:20px 0 10px}
-.wart .wb-skala p:last-child{margin:0;font-size:15px}
+.wart .wb-skala > p:last-child{margin:0;font-size:15px}
+.wart .wb-skala .wb-meters{margin:0}.wart .wb-skala .wb-meter{border-color:rgba(56,47,46,.16)}.wart .wb-skala .wb-meter p:last-child{color:var(--muted);font-size:14px}
 .wart .wb-band{display:flex;height:12px;border-radius:999px;overflow:hidden;border:1px solid rgba(56,47,46,.2)}
 .wart .wb-band i{flex:1}.wart .wb-band i:nth-child(1){background:#FFFDFA}.wart .wb-band i:nth-child(2){background:#D6B98F}.wart .wb-band i:nth-child(3){background:#382F2E}
 .wart .wb-bandtext{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin:6px 0 14px!important}
@@ -568,6 +569,60 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-myth > p strong{display:inline-block;font-weight:400;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:5px 11px;background:#382F2E;color:#F3ECE2;margin-right:6px}
 .wart .wb-myth.halb > p strong{background:#D6B98F;color:#382F2E}
 .wart .wb-myth > p{margin:0;font-size:15.5px}
+.wart .wb-karte p{margin:0}
+.wart .wb-karte p small{display:block;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.wart .wb-karte.dunkel p small{color:#D6B98F}
+.wart .wb-karte em{font-style:normal;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:-2px}
+.wart .wb-karte.dunkel em{color:#D6B98F}
+.wart .wb-check h3.wb-zt{margin:0 0 4px}
+.wart .wb-bild{margin:18px 0 22px;text-align:center}
+.wart .wb-bild svg{display:block;width:100%;max-width:440px;height:auto;margin:0 auto}
+.wart .wb-bild figcaption{font-size:13.5px;color:var(--muted);margin-top:6px}
+.wart .note .wb-bild{margin:14px 0 4px}
+.wart .wb-bild.wb-gross{background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:16px;padding:12px 10px 8px}
+.wart .wb-kt{font-family:var(--serif);font-size:22px;fill:#382F2E}.wart .wb-kt.hell{fill:#F3ECE2}
+.wart .wb-kl{font-family:var(--sans);font-size:10.5px;letter-spacing:1.4px;fill:#6E615C}
+.wart .wb-kl2{font-family:var(--sans);font-size:11.5px;fill:#382F2E}
+.wart .wb-ziegel{text-align:left}
+.wart .wb-ziegel .wb-stufe:first-child{border-top:0;padding-top:0}
+.wart .wb-meters{margin:6px 0 18px}
+.wart .wb-meter{border-top:1px solid var(--line-soft);padding:12px 0}
+.wart .wb-meter p{margin:0;font-size:15px}
+.wart .wb-meter p:first-child{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:4px}
+.wart .wb-meter b{font-weight:500}
+.wart .wb-punkte{display:flex;gap:5px;flex:none}
+.wart .wb-punkte i{width:12px;height:12px;border-radius:50%;border:1.4px solid #382F2E;box-sizing:border-box}
+.wart .wb-punkte i.an{background:#382F2E}
+.wart .wb-tage{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:6px 0 20px}
+.wart .wb-tag{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:14px;padding:12px 6px;font-size:12.5px;line-height:1.3}
+.wart .wb-tag svg{width:24px;height:24px;fill:none;stroke:#382F2E;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wart .wb-tag b{font-weight:500;font-size:13px}
+.wart .wb-tag span{color:var(--muted)}
+.wart .wb-tag.nass{background:#382F2E;border-color:#382F2E;color:#F3ECE2}.wart .wb-tag.nass svg{stroke:#D6B98F}.wart .wb-tag.nass span{color:#E7E3D7}
+.wart .wb-schritte{background:#E9E2D8;border-radius:20px;padding:22px 22px 10px;margin:28px 0 10px}
+.wart .wb-schritte ol,.wart ol.wb-nummern{list-style:none;padding:0;margin:0 0 18px;counter-reset:wbn}
+.wart .wb-schritte li,.wart ol.wb-nummern li{counter-increment:wbn;position:relative;padding:0 0 14px 46px;margin:0;font-size:15.5px;line-height:1.45;min-height:34px}
+.wart .wb-schritte li::before,.wart ol.wb-nummern li::before{content:counter(wbn);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;background:#382F2E;color:#F3ECE2;font-family:var(--serif);font-size:18px;display:flex;align-items:center;justify-content:center}
+.wart .wb-schritte li b{display:block;font-weight:500}
+.wart .wb-verlauf{height:12px;border-radius:999px;background:linear-gradient(90deg,#FFFDFA,#D6B98F 50%,#382F2E);border:1px solid rgba(56,47,46,.2)}
+.wart .wb-marken{position:relative;height:50px;margin-top:2px}
+.wart .wb-marken span{position:absolute;top:2px;font-size:12.5px;line-height:1.2;white-space:nowrap;display:flex;flex-direction:column;align-items:center}
+.wart .wb-marken span i{width:1.5px;height:8px;background:#382F2E;margin-bottom:3px}
+.wart .wb-marken span:nth-child(even) i{height:22px}
+.wart .wb-skala .wb-bandtext{color:var(--muted);margin:2px 0 0!important}
+.wart .wb-wofuer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 10px}
+.wart .wb-wofuer .wb-kick{grid-column:1/-1;margin:0}
+.wart .wb-wofuer div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:16px;padding:14px 8px;font-size:13.5px;line-height:1.3}
+.wart .wb-wofuer svg{width:28px;height:28px;fill:none;stroke:#382F2E;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wart .wb-wofuer b{font-family:var(--serif);font-weight:400;font-size:18px}
+.wart .wb-wofuer span{color:var(--muted)}
+.wart .wb-rf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:8px 0 20px}
+.wart .wb-rf figure{margin:0;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:16px;padding:12px 12px 14px;text-align:center}
+.wart .wb-rf svg{width:100%;max-width:150px;height:auto}
+.wart .wb-rf figcaption{font-size:13.5px;line-height:1.4;margin-top:6px}
+.wart .wb-ok,.wart .wb-nein{display:block;width:max-content;margin:0 auto 6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:4px 10px;background:#382F2E;color:#F3ECE2}
+.wart .wb-nein{background:transparent;color:#382F2E;border:1px solid #382F2E}
+@media (max-width:420px){ .wart .wb-tage{grid-template-columns:repeat(2,minmax(0,1fr))} .wart .wb-wofuer{grid-template-columns:1fr} .wart .wb-wofuer div{flex-direction:row;text-align:left;gap:12px} .wart .wb-wofuer div span{margin-left:auto;text-align:right} }
 .wb-fort{position:fixed;left:0;top:0;height:3px;width:0;background:#382F2E;z-index:40;pointer-events:none;transition:width .1s linear}
 .wfine{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:16px;margin-top:30px}
 
@@ -2106,8 +2161,10 @@ function fragenHtml(){
   show();
 })();
 /* Suche in den Wissenskapiteln: findet Schlagwörter im Titel, im Teaser und im ganzen Text */
-const WTEXT = WISSEN.map((w,i) => ({w, i, titel: plain(w.titel), all: plain(w.titel+" "+w.teaser+" "+w.html.replace(/<[^>]+>/g," ")),
-  raw: (w.teaser+" · "+w.html.replace(/<h2[\s\S]*?<\/h2>/,"").replace(/<\/(h3|h4|li|td|th)>/g," · ").replace(/<[^>]+>/g," ")).replace(/\s+/g," ").replace(/( ·)+/g," ·").trim()}));
+/* Suche: Hilfstexte der Bausteine (Auf einen Blick, Wischt zur Seite, Check starten) nicht mitsuchen */
+const wbClean = h => h.replace(/<(p|span) class="wb-(kick|wischtipp|hinweis)">[\s\S]*?<\/\1>/g, " ").replace(/<em>Check starten →<\/em>/g, " ");
+const WTEXT = WISSEN.map((w,i) => ({w, i, titel: plain(w.titel), all: plain(w.titel+" "+w.teaser+" "+wbClean(w.html).replace(/<[^>]+>/g," ")),
+  raw: (w.teaser+" · "+wbClean(w.html).replace(/<h2[\s\S]*?<\/h2>/,"").replace(/<\/(h3|h4|li|td|th)>/g," · ").replace(/<[^>]+>/g," ")).replace(/\s+/g," ").replace(/( ·)+/g," ·").trim()}));
 function wissenSnippet(raw, words){
   const low = raw.toLowerCase(); let pos = -1;
   for(const w of words){ const k = low.indexOf(w); if(k >= 0){ pos = k; break; } }
