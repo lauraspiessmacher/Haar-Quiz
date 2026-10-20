@@ -1492,7 +1492,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
   </section>
 
   <section class="view" id="v-quiz" hidden>
-    <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es fünf Extra-Checks: welches Leave-in zu dir passt, welche Kopfhautpflege und welches Peeling du brauchst, wie kaputt deine Haare sind, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
+    <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es sechs Extra-Checks: welches Leave-in zu dir passt, welche Kopfhautpflege und welches Peeling du brauchst, wie kaputt deine Haare sind, ob dein Haarverlust normal ist, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
       <a class="qcard" data-check="kopfhaut" href="quiz-kopfhaut.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
@@ -1539,6 +1539,13 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
         <h3>Spliss- &amp; Bruch-Check</h3>
         <p>Wie kaputt sind deine Haare wirklich, welchen Spliss hast du und woher kommt der Haarbruch? Du erfährst, wie du damit umgehst und wann nur noch die Schere hilft.</p>
         <span class="qmeta">Bis zu 15 Fragen · ca. 3 Minuten</span>
+        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
+      </span></a>
+      <a class="qcard" data-abo="check" href="quiz-ausfall.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
+        <span class="qfor">Für deine Ruhe</span>
+        <h3>Haarausfall-Check</h3>
+        <p>Ausfall oder Bruch? Mit dem Bürsten-Test und dem Zupftest findest du heraus, ob dein Haarverlust normal ist, vorübergeht oder ob du ihn abklären lassen solltest.</p>
+        <span class="qmeta">8 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
       </span></a>
       <a class="qcard" data-abo="check" href="quiz-tools.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
@@ -1651,7 +1658,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
       <p class="hast">Hast du schon</p></div>
     <div class="stufe abo"><span class="tag">Alles drin</span><h3>Abo</h3><ul>
       <li><b>Dein Haarplan</b> mit Wochenplan</li><li>Alle Produkte mit meiner Einschätzung</li><li>Meine Leave-in-Auswahl für die LL-Methode</li>
-      <li>Alle Extra-Checks: Leave-in, Kopfhautpflege, Spliss &amp; Haarbruch, Hitze-Tools, Haarschnitt</li><li>Alle Wissenskapitel und häufigen Fragen</li><li>Deine Merkliste</li><li>Frag Laura: jeden Monat deine Fragen</li></ul>
+      <li>Alle Extra-Checks: Leave-in, Kopfhautpflege, Spliss &amp; Haarbruch, Haarausfall, Hitze-Tools, Haarschnitt</li><li>Alle Wissenskapitel und häufigen Fragen</li><li>Deine Merkliste</li><li>Frag Laura: jeden Monat deine Fragen</li></ul>
       <p class="preis">Preis folgt</p><button type="button" class="btn dark" id="aboTest">Abo freischalten</button></div>
   </div>
   <p class="abofuss">Schon dabei? <button type="button" class="linkbtn" id="aboLogin">Anmelden</button></p>
@@ -2640,7 +2647,7 @@ document.getElementById("merkClear").onclick = () => { if(confirm("Alle Produkte
 
 /* ---------- Mein Bereich (Vorschau 18.10.): Plan, Meine Haare, Merkliste, Frag Laura, Fortschritt, Abo & Konto ---------- */
 const CHECKS = [["kopfhaut","Kopfhaut-Check"],["pflege","Pflege-Check"],["haar","Haar-Check"]];
-const EXTRAS = [["leavein","Leave-in-Check"],["kopfpflege","Kopfhautpflege-Check"],["spliss","Spliss- & Haarbruch-Check"],["tools","Hitze-Tool-Check"],["schnitt","Haarschnitt-Check"]];
+const EXTRAS = [["leavein","Leave-in-Check"],["kopfpflege","Kopfhautpflege-Check"],["spliss","Spliss- & Haarbruch-Check"],["ausfall","Haarausfall-Check"],["tools","Hitze-Tool-Check"],["schnitt","Haarschnitt-Check"]];
 function quizStand(){ try { return JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; } catch(e){ return {}; } }
 function oeffneCheck(key){
   const a = document.querySelector(`.qcard[data-check="${key}"]`) || [...document.querySelectorAll(".qcard")].find(x => (x.getAttribute("href")||"").includes(key));
@@ -2649,7 +2656,7 @@ function oeffneCheck(key){
   const href = a.getAttribute("href"); if(!(window.openQuiz && window.openQuiz(href))) window.location.href = href;
 }
 /* gespeicherte Check-Ergebnisse (quiz-einbettung.html sichert sie beim Schließen) */
-const ERGNAME = {kopfhaut:"Kopfhaut-Check", pflege:"Pflege-Check", haar:"Haar-Check", routine:"Routine-Check (Wochenplan)", kopfpflege:"Kopfhautpflege-Check", leavein:"Leave-in-Check", spliss:"Spliss- & Haarbruch-Check", tools:"Hitze-Tool-Check", schnitt:"Haarschnitt-Check"};
+const ERGNAME = {kopfhaut:"Kopfhaut-Check", pflege:"Pflege-Check", haar:"Haar-Check", routine:"Routine-Check (Wochenplan)", kopfpflege:"Kopfhautpflege-Check", ausfall:"Haarausfall-Check", leavein:"Leave-in-Check", spliss:"Spliss- & Haarbruch-Check", tools:"Hitze-Tool-Check", schnitt:"Haarschnitt-Check"};
 function quizTexte(){ try { return JSON.parse(localStorage.getItem("quizTexte")||"null") || {}; } catch(e){ return {}; } }
 function zeigeErgebnis(k){
   const e = quizTexte()[k]; if(!e) return;
@@ -2721,7 +2728,7 @@ function renderBereich(){
 
 /* ---------- Haarplan-Seite (Arbeitstitel, Vorschau 19.10.): Schritte 1–3 kostenlos, Schritt 4 Plan erstellen, Extra-Checks freiwillig ---------- */
 const PLANCHK = {kopfhaut:"Welche Kopfhaut du gerade hast und worauf du beim Shampoo achtest.", pflege:"Wie dick deine Haare sind, wie es ihnen geht und wie reichhaltig deine Pflege sein darf.", haar:"Ob deine Haare glatt, wellig oder lockig sind und wie du deine Struktur pflegst."};
-const PLANEXTRA = {leavein:"Welches Leave-in zu dir passt", kopfpflege:"Welche Kopfhautpflege und welches Peeling zu dir passen", spliss:"Wie kaputt deine Haare wirklich sind", tools:"Welches Hitze-Tool zu deinen Haaren passt", schnitt:"Welcher Haarschnitt dir steht"};
+const PLANEXTRA = {leavein:"Welches Leave-in zu dir passt", kopfpflege:"Welche Kopfhautpflege und welches Peeling zu dir passen", ausfall:"Ausfall oder Bruch, und ist das noch normal?", spliss:"Wie kaputt deine Haare wirklich sind", tools:"Welches Hitze-Tool zu deinen Haaren passt", schnitt:"Welcher Haarschnitt dir steht"};
 const PLANKAP = [["Das bist du","Deine Ergebnisse aus allen Checks, kurz und auf den Punkt."],["Dein Wochenplan","Wann du wäschst, wann eine Maske dran ist und was du beim Sport und nachts machst."],["Das Wichtigste auf einen Blick","Was du tust, was dein Ziel ist und was du verstehen musst. Nur Stichpunkte, zum Merken."],["Deine Grundregeln","Reibung, Pflege, Hitze, Chemie und richtig waschen, sortiert nach dem, was bei dir am meisten zählt."],["Deine Einkaufsliste","Für jede Produktart die Produkte, die wirklich zu dir passen."],["Dein Tag","Deine kleine Abhakliste für morgens, abends und den Waschtag."],["Was dich erwartet","Was sich nach Wochen, Monaten und Jahren tut, und die häufigsten Fehler."],["Wenn sich etwas ändert","Was du im Winter, im Urlaub und rund ums Blondieren anders machst."],["Dein Friseur-Spickzettel","Aus dem Haarschnitt-Check, wenn du ihn gemacht hast."]];
 function renderPlan(){
   const st = quizStand(), haken = ok => `<span class="bhk${ok?" ok":""}" aria-hidden="true">${ok?"✓":""}</span>`;
@@ -2832,7 +2839,7 @@ function planHtml(){
   /* 1 Das bist du */
   K.push(["du","Das bist du", `<div class="hpgrid">${blk(H.kopf[D.kopf],"Deine Kopfhaut")}${blk(D.dicke && H.dicke[D.dicke],"Deine Haardicke")}${blk(D.zst != null && H.zustand[D.zst],"Dein Haarzustand")}${blk(H.struktur[D.struktur],"Deine Haarstruktur")}${blk(D.wunsch && H.wunsch[D.wunsch],"Dein Wunsch")}${KPD ? `<div class="hpblk"><p class="hplab">Deine Kopfhautpflege</p><h3>${KPD.wurzel ? "Pflege für die Haarwurzel" : {A:"Feuchtigkeit & Beruhigung",B:"Ausgleichend",C:"Gegen Schuppen"}[KPD.basis]}</h3><ul><li>${KPD.wurzel ? "Jeden Tag ein Serum mit Wirkstoffen für die Haarwurzel, nur dann kann es wirken." : "Dein Kopfhautserum am besten jeden Tag, sonst jeden zweiten oder dritten Tag."}</li><li>Scheitel für Scheitel auf die Kopfhaut, am besten nach dem Waschen vor dem Föhnen.</li><li>Peeling: ${esc(KPD.peelOft)}</li></ul></div>` : ""}</div>${D.kopf ? `<p class="hpklein">${esc(H.kopfExtra)}</p>` : ""}`]);
   /* Extra-Checks: Ergebnis kurz + ganz nachlesen */
-  const ET = quizTexte(), ex = ["leavein","kopfpflege","spliss","tools","schnitt"].filter(k => D.st[k]);
+  const ET = quizTexte(), ex = ["leavein","kopfpflege","spliss","ausfall","tools","schnitt"].filter(k => D.st[k]);
   const ergKap = ex.length ? `<p>Diese Extra-Checks hast du schon gemacht. Tipp auf ein Ergebnis, um es noch einmal ganz zu lesen.</p><div class="hpextras">${ex.map(k => `<div class="hpblk"><p class="hplab">${esc(ERGNAME[k])}</p><h3>${esc((ET[k] && ET[k].titel) || "Erledigt")}</h3>${ET[k] ? `<button type="button" class="linkbtn" data-erg="${k}">Ganzes Ergebnis lesen →</button>` : `<p class="hpklein">Mach den Check noch einmal, dann kannst du dein Ergebnis hier nachlesen.</p>`}</div>`).join("")}</div>` : "";
   /* 2 Wochenplan */
   const r = D.r;
