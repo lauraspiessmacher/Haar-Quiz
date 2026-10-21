@@ -16,3 +16,4 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
    - Abschnitt „Was ihr beeinflussen könnt → Eure Kopfhaut“: recherchieren und einbauen: Es gibt einen (teils genetisch) vorgegebenen Kopfhauttyp (normal, trocken, sensibel, schnell fettend), den man ausgleichen, aber nicht grundsätzlich ändern kann. Dazu kommt der Kopfhautzustand, der von Faktoren abhängt und beeinflussbar ist. Laura prüft das danach selbst noch einmal.
    - Rest des Kapitels passt (Nachricht endet mit „alles andere wäre …“).
 5. Wissen „Hormone und Haare“: freigeben.
+6. Wissen „Graue Haare“: freigeben.
