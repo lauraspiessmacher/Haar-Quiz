@@ -665,6 +665,28 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wb-bewegt .wb-balken.wb-an div:nth-of-type(2) i{transition-delay:.2s}.wb-bewegt .wb-balken.wb-an div:nth-of-type(3) i{transition-delay:.4s}
 .wb-bewegt .wb-punkte i.an{background:transparent;transition:background .35s ease}
 .wb-bewegt .wb-an .wb-punkte i.an{background:#382F2E}
+.wart .wb-zwei{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 22px}
+@media (max-width:520px){ .wart .wb-zwei{grid-template-columns:1fr} }
+.wart .wb-seite{background:#382F2E;color:#F3ECE2;border-radius:18px;padding:18px}
+.wart .wb-seite .wb-kick{color:#D6B98F}
+.wart .wb-seite.hell{background:#FFFDFA;color:#382F2E;border:1px solid rgba(56,47,46,.14)}
+.wart .wb-seite.hell .wb-kick{color:var(--muted)}
+.wart .wb-seite ul{margin:0}
+.wart .wb-seite li{display:flex;gap:10px;padding:0;margin:0 0 10px;font-size:15px;line-height:1.4}
+.wart .wb-seite li::before{display:none}
+.wart .wb-seite li svg{width:18px;height:18px;flex:none;margin-top:2px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wb-bewegt .wb-zwei .wb-seite{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.wb-bewegt .wb-zwei.wb-an .wb-seite{opacity:1;transform:none}.wb-bewegt .wb-zwei.wb-an .wb-seite.hell{transition-delay:.25s}
+.wart .wb-quecksilber{transform-box:fill-box;transform-origin:bottom;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.wb-bewegt .wb-bild:not(.wb-an) .wb-quecksilber{transform:scaleY(.05)}
+.wart .wb-frizz .fz{animation:wbfrizz 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:top}
+.wart .wb-frizz .fz:nth-child(even){animation-delay:-1.4s}
+@keyframes wbfrizz{0%,100%{transform:rotate(0)}50%{transform:rotate(2.5deg) scaleX(1.05)}}
+.wart .wb-leiter .lose{animation:wblose 2.8s ease-in-out infinite}
+@keyframes wblose{0%,100%{opacity:1}50%{opacity:.25}}
+.wart .wb-mizelle > g:first-of-type{transform-box:view-box;transform-origin:160px 75px;animation:wbdreh 14s linear infinite}
+@keyframes wbdreh{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){ .wart .wb-frizz .fz,.wart .wb-leiter .lose,.wart .wb-mizelle > g:first-of-type{animation:none} }
 .wart .wb-grau path{stroke-dasharray:130;stroke-dashoffset:0}
 .wb-bewegt .wb-bild:not(.wb-an) .wb-grau path{stroke-dashoffset:130}
 .wb-bewegt .wb-bild .wb-grau path{transition:stroke-dashoffset 1s ease}
@@ -1866,9 +1888,9 @@ const WISSEN = __WISSEN__;
 /* Wissen nach Themen (Test 16.10.): jedes Regal hat einen Registerreiter und eine eigene Buchfarbe */
 const WREGALE = [
   {id:"grund", titel:"Grundlagen", text:"Was eure Haare mitbringen und was wirklich stimmt", kap:["genetik","haarzyklus","graue-haare","porositaet","mythen"]},
-  {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall"]},
-  {id:"bruch", titel:"Haarbruch, Spliss & Repair", text:"Mein Herzensthema: vorbeugen statt reparieren", kap:["unterschied","leavein","llmethode","reparatur","repair","splissschnitt"]},
-  {id:"pflege", titel:"Pflege verstehen", text:"Öle, Silikone und alles vor dem Shampoo", kap:["prewash","haaroele","silikone"]},
+  {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall","hormone"]},
+  {id:"bruch", titel:"Haarbruch, Spliss & Repair", text:"Mein Herzensthema: vorbeugen statt reparieren", kap:["unterschied","nasses-haar","leavein","llmethode","reparatur","repair","hitze","splissschnitt"]},
+  {id:"pflege", titel:"Pflege verstehen", text:"Shampoo, Öle, Silikone und Frizz", kap:["shampoo","prewash","haaroele","silikone","frizz"]},
   {id:"werkzeug", titel:"Werkzeuge", text:"Bürste, Schere, Kissen: was eure Haare jeden Tag berührt", kap:["buersten","seide","scheren"]},
   {id:"farbe", titel:"Haarfarbe", text:"Färben, Tönen und Farbstiche verstehen", kap:["haarfarbe","farbstiche"]}
 ];
@@ -2344,7 +2366,7 @@ function wbBewegung(art, w){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
   art.classList.add("wb-bewegt");
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("wb-an"); io.unobserve(e.target); } }), {threshold: .25});
-  art.querySelectorAll(".wb-bild:has(.wb-grau),.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen").forEach(el => io.observe(el));
+  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen").forEach(el => io.observe(el));
   /* Punkte nacheinander füllen */
   art.querySelectorAll(".wb-meter").forEach((m, i) => m.querySelectorAll(".wb-punkte i").forEach((p, j) => p.style.transitionDelay = (i * 120 + j * 140) + "ms"));
   /* große Zahl zählt hoch */

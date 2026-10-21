@@ -155,5 +155,45 @@
     "teaser": "Wachsen Haare schneller, wenn man sie schneidet? Sollte feines Haar auf Conditioner verzichten?",
     "datei": "mythen.html",
     "arzt": false
+  },
+  {
+    "id": "shampoo",
+    "titel": "Shampoo verstehen",
+    "teaser": "Tenside, Sulfate und der Mythos „sulfatfrei“: Was in eurem Shampoo arbeitet und was Studien dazu sagen.",
+    "datei": "shampoo.html",
+    "arzt": false,
+    "entwurf": true
+  },
+  {
+    "id": "frizz",
+    "titel": "Frizz",
+    "teaser": "Warum eure Haare bei Regen aufplustern, was die Luftfeuchtigkeit macht und was wirklich hilft.",
+    "datei": "frizz.html",
+    "arzt": false,
+    "entwurf": true
+  },
+  {
+    "id": "nasses-haar",
+    "titel": "Nasses Haar",
+    "teaser": "Warum Haare nass so empfindlich sind und wo die meisten Schäden entstehen.",
+    "datei": "nasses-haar.html",
+    "arzt": false,
+    "entwurf": true
+  },
+  {
+    "id": "hormone",
+    "titel": "Hormone und Haare",
+    "teaser": "Schwangerschaft, Pille, Wechseljahre: Wie Hormone eure Haare verändern.",
+    "datei": "hormone.html",
+    "arzt": true,
+    "entwurf": true
+  },
+  {
+    "id": "hitze",
+    "titel": "Hitze verstehen",
+    "teaser": "Föhnen oder Lufttrocknen, wie heiß darf es sein und was Hitzeschutz wirklich kann.",
+    "datei": "hitze.html",
+    "arzt": false,
+    "entwurf": true
   }
 ]
