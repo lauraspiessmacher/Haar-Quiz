@@ -516,3 +516,4 @@
 - v313: Haarplan-Seite: neues Kopfbild von Laura (Karte auf Silbertablett) statt Handschuh-Hand. Bild 300 px breit, Wochenplan-Text sitzt auf der Karte (kleinere Schrift, passt komplett).
 - v314: Haarplan-Kopfbild freigestellt (Hintergrund weg, auch in den Griffen; Modell isnet-general-use), weicher Schatten per CSS, Wochenplan-Text neu auf der Karte ausgerichtet.
 - v315: Haarplan-Tablett jetzt auch auf Handy/kleinem Tablet (unter 900 px): mittig unter dem Einleitungstext, max. 280 px breit. Karten-Styles gelten für alle Breiten. Beim fertigen Plan weiterhin ausgeblendet.
+- v316: Fußbereich: gestickter Schriftzug „Healthy Hair Club“ (Laura) freigestellt (isnet-general-use, Maske leicht enger gegen weißen Rand), Datei notizen/bilder/deko/healthy-hair-club.webp, Platzhalter __HHCLUB__. Desktop: unten rechts unter Kontakt (150 px). Handy: neben den Kontakt-Links.

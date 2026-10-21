@@ -120,6 +120,7 @@ for _n in (1, 2):
     t = t.replace('__LL_SCHRITT%d__' % _n, 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ll-schritt%d.jpg' % _n,'rb').read()).decode())
 # Haarplan-Seite: Karte in Handschuh-Hand (Lauras Vorlage)
 t = t.replace('__PLANBILD__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/planbild.webp','rb').read()).decode())
+t = t.replace('__HHCLUB__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/healthy-hair-club.webp','rb').read()).decode())
 # Schnitt-Animation auf der Startseite (Lauras Scheren-Fotos, freigestellt)
 for _k in ('offen', 'zu'):
     t = t.replace('__SCHERE_' + _k.upper() + '__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/schere-' + _k + '.webp','rb').read()).decode())
