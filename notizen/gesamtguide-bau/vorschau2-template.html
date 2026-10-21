@@ -169,6 +169,10 @@ main{padding-bottom:60px}
 .ghero.tex::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(251,247,243,.82) 0%,rgba(251,247,243,.35) 55%,rgba(251,247,243,.15) 100%)}
 .ghero.tex .ghead{border-top:0;padding-top:0}
 .ghero.tex .gfilm{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;pointer-events:none}
+/* Haaröl: Pipette kommt von rechts ins Banner, läuft weich in den Hintergrund aus */
+.ghero.tex .gfilm.rechts{left:auto;width:min(300px,42%);object-position:100% 30%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%);z-index:0}
+.ghero.tex > .ghead,.ghero.tex > .gintro{position:relative;z-index:1}
+@media (max-width:759px){ .ghero.tex .gfilm.rechts{width:46%;height:180px;object-position:100% 20%} }
 .ghero.tex .gintro{background:rgba(255,253,250,.86)}
 @media (max-width:759px){ .ghero.tex{padding:20px 18px 18px;border-radius:14px} }
 .ghero .gintro{flex:1 1 340px;max-width:560px;margin:0 0 4px}
@@ -2534,6 +2538,7 @@ const LLBILD = {sprays:TEX.milch, seren:TEX.serum, cremes:TEX.creme, repair:TEX.
 /* Produktseite: Texturfoto hinter Titel und Einleitung (nur wo eine Textur passt) */
 /* Shampoo-Banner: bewegter Schaum aus Lauras Video statt Standbild (Laura 21.10.); bei „Bewegung reduzieren“ bleibt das Bild */
 const SCHAUMFILM = matchMedia("(prefers-reduced-motion: reduce)").matches ? "" : `<video class="gfilm" poster="__SCHAUM_POSTER__" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="__SCHAUM_MP4__" type="video/mp4"><source src="__SCHAUM_WEBM__" type="video/webm"></video>`;
+const OELFILM = matchMedia("(prefers-reduced-motion: reduce)").matches ? "" : `<video class="gfilm rechts" poster="__OELB_POSTER__" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="__OELB_MP4__" type="video/mp4"><source src="__OELB_WEBM__" type="video/webm"></video>`;
 const TYPBILD = {shampoo:TEX.schaum, maske:TEX.maske, conditioner:TEX.tube, leavein:TEX.serum, oel:TEX.oel, kopfhaut:TEX.kopf, hitze:TEX.glanz};
 function renderLL(){
   const box = document.getElementById("llBox"); if(!box) return;
@@ -2793,7 +2798,7 @@ function renderGuide(){
     .concat([`<button type="button" class="chip" data-cat="liste" aria-pressed="${state.cat==="liste"}">Liste</button>`]).join("");
   const intro = g.intro || {};
   const tb = TYPBILD[state.type];
-  let html = `<div class="guide"><div class="ghero${tb?" tex":""}"${tb?` style="background-image:url('${tb}')"`:""}>${state.type==="shampoo"?SCHAUMFILM:""}<div class="ghead"><div><h2>${t.label}</h2><div class="sub">${t.by} · ${g.items.length} Produkte</div></div></div>
+  let html = `<div class="guide"><div class="ghero${tb?" tex":""}"${tb?` style="background-image:url('${tb}')"`:""}>${state.type==="shampoo"?SCHAUMFILM:state.type==="oel"?OELFILM:""}<div class="ghead"><div><h2>${t.label}</h2><div class="sub">${t.by} · ${g.items.length} Produkte</div></div></div>
     ${(intro.lead||intro.box)?`<div class="gintro"><p>${intro.lead||""}</p>${intro.box?`<div class="box">${intro.box}</div>`:""}</div>`:""}</div>
     ${g.items.length ? `<div class="controls"><div class="crow">${state.type==="tools"?"":segSwitch()}${fitHtml(state.type)}</div><div class="chips" role="group" aria-label="Kategorie wählen">${chips}</div></div>` : ""}`;
   if(!g.items.length){ guide.innerHTML = html + `</div>`; bindControls(); return; }

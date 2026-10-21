@@ -532,3 +532,4 @@
 - v329: Wissen „Haaröle“: Lauras Pipetten-Video statt Foto oben (280 px, Handy 220 px), Autoplay ohne Ton in Schleife, bei 'Bewegung reduzieren' Standbild. MP4 (H.264) + WebM-Fallback je ca. 105 KB, Poster-JPG; Build bettet wbild: jetzt auch für video/source/poster ein.
 - v330: Öl-Video auch auf der LL-Seite in der Box „Und was ist mit Haaröl?“ (rechts, 150 px, Handy 92 px). Im Haaröl-Kapitel steht das Video jetzt neben „Auf einen Blick“ (gleiche Höhe, 210 px breit); Handy: klein darüber.
 - v331: Produkte → Shampoo: Banner-Hintergrund jetzt Lauras Schaum-Video (quer zugeschnitten 720×380 aus der Mitte, MP4 110 KB + WebM 78 KB, Poster), stumm in Schleife hinter dem Schriftzug; Standbild bleibt als Rückfall und bei 'Bewegung reduzieren'.
+- v332: Produkte → Haaröl: Pipetten-Video rechts im Banner (Pipette kommt von rechts, links weich ausgeblendet, 300 px; Handy 46 % breit, 180 px hoch oben rechts, Text liegt davor). Eigener Ausschnitt oel-banner.mp4/.webm/.jpg.
