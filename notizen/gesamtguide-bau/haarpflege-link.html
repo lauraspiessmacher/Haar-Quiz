@@ -1395,6 +1395,26 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 .llwas strong{color:#F3ECE2;font-weight:600}
 @media (max-width:600px){ .llkarte{padding:22px 16px 18px} .llkarte h2{font-size:24px;margin-bottom:14px} .llkurz{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px} .llkurz li{grid-template-columns:1fr;text-align:center;justify-items:center;background:rgba(243,236,226,.07);border-radius:14px;padding:12px 8px} .llkurz li::before{grid-row:auto;width:28px;height:28px;font-size:15px;margin-bottom:4px} .llkurz b{font-size:13px} .llkurz span{font-size:12.5px;line-height:1.35} }
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
+/* LL-Seite: Serum läuft ganz langsam an der Linie unter der Kopfzeile herunter (Laura 21.10.) */
+.llhero{position:relative}
+.llhero .lltext{position:relative;z-index:1}
+.llserum{position:absolute;top:0;right:404px;width:40px;height:540px;overflow:visible;pointer-events:none;z-index:0}
+.llserum .sr-koerper{opacity:.72;filter:drop-shadow(0 0 .7px rgba(120,78,35,.7)) drop-shadow(2px 4px 4px rgba(90,60,30,.2))}
+.llserum .sr-glanz{opacity:.75}
+.llserum .sr-strang{transform-box:fill-box;transform-origin:50% 0;animation:srStrang 18s cubic-bezier(.45,.05,.55,.95) infinite}
+.llserum .sr-tropfen{animation:srTropfen 18s infinite}
+@keyframes srStrang{0%{transform:scaleY(.025)}50%{transform:scaleY(.6)}62%{transform:scaleY(.64)}80%{transform:scaleY(.09)}100%{transform:scaleY(.025)}}
+@keyframes srTropfen{
+  0%{transform:translateY(9px);opacity:1;animation-timing-function:cubic-bezier(.45,.05,.55,.95)}
+  50%{transform:translateY(244px)}
+  62%{transform:translateY(262px);animation-timing-function:cubic-bezier(.55,0,.9,.6)}
+  88%{transform:translateY(520px);opacity:1}
+  91%{transform:translateY(536px);opacity:0}
+  92%{transform:translateY(9px);opacity:0}
+  100%{transform:translateY(9px);opacity:1}
+}
+@media (max-width:959px){ .llserum{right:-14px;transform:scale(.68);transform-origin:100% 0} .llserum .sr-koerper{opacity:.45} }
+@media (prefers-reduced-motion:reduce){ .llserum .sr-strang,.llserum .sr-tropfen{animation:none} .llserum .sr-strang{transform:scaleY(.3)} .llserum .sr-tropfen{transform:translateY(122px)} }
 /* Haarplan-Seite: Karte auf dem Silbertablett mit angedeutetem Wochenplan (Laura 21.10.) */
 .planbild{display:block;margin:0;container-type:inline-size}
 .planbild img{display:block;width:100%;height:auto;filter:drop-shadow(-10px 14px 14px rgba(56,47,46,.22))}
@@ -1685,6 +1705,21 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
   <!-- ===================== LL-METHODE (Lauras Signature-Thema) ===================== -->
   <section class="view llpage" id="v-ll" hidden>
     <div class="llhero">
+      <svg class="llserum" viewBox="0 0 40 540" aria-hidden="true">
+        <defs>
+          <linearGradient id="serumFarbe" x1="0" x2="1"><stop offset="0" stop-color="#9E6C35"/><stop offset=".35" stop-color="#DDB377"/><stop offset=".6" stop-color="#EFD7AA"/><stop offset="1" stop-color="#A97A40"/></linearGradient>
+          <filter id="serumGoo" x="-80%" y="-5%" width="260%" height="110%"><feGaussianBlur in="SourceGraphic" stdDeviation="3.6"/><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"/></filter>
+        </defs>
+        <g class="sr-koerper"><g filter="url(#serumGoo)" fill="url(#serumFarbe)">
+          <path d="M-8 0H48C34 0 29 3 27 11H13C11 3 6 0-8 0Z"/>
+          <path class="sr-strang" d="M12 0H28C25 110 23.6 250 22.8 400H17.2C16.4 250 15 110 12 0Z"/>
+          <ellipse class="sr-tropfen" cx="20" cy="2" rx="9.6" ry="11.5"/>
+        </g></g>
+        <g fill="#FFFDF8">
+          <path class="sr-strang sr-glanz" d="M15.2 4H17.2C17.4 140 17.9 270 18.5 396H17.6C16.9 270 16.2 140 15.2 4Z"/>
+          <ellipse class="sr-tropfen sr-glanz" cx="16" cy="-1" rx="2.3" ry="4.4"/><circle class="sr-tropfen sr-glanz" cx="23.5" cy="8" r="1.1"/>
+        </g>
+      </svg>
       <div class="lltext">
       <p class="kicker">Meine Signature-Methode</p>
       <h1><em class="hkurs">Meine</em> LL-Methode</h1>
