@@ -1412,6 +1412,15 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 /* fertiger Plan: dort steht der echte Plan, das Deko-Bild entfällt */
 #v-plan:has(#planFertig:not([hidden])) .planbild{display:none}
 #v-plan:has(#planFertig:not([hidden])) .seitenkopf.mitbild{padding-right:0}
+/* Handy-Ansicht */
+.zgctl .handybtn{display:inline-flex;align-items:center;gap:5px;margin-left:4px;border-left:1px solid var(--line)!important;border-radius:0 999px 999px 0!important;padding-left:12px!important}
+.zgctl .handybtn svg{width:15px;height:15px}
+@media (max-width:700px){ .zgctl .handybtn{display:none} }
+.handyover{position:fixed;inset:0;z-index:2000;background:rgba(30,25,24,.62);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px}
+.handyrahmen{background:#141110;border-radius:48px;padding:12px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);height:min(868px,calc(100vh - 90px))}
+.handyrahmen iframe{display:block;width:390px;height:100%;border:0;border-radius:36px;background:#F7F2EA}
+.handyleiste{display:flex;align-items:center;gap:14px;color:#F3ECE2;font-size:13px}
+.handyzu{font:inherit;font-size:13px;border:1px solid rgba(243,236,226,.5);background:transparent;color:#F3ECE2;border-radius:999px;padding:7px 14px;cursor:pointer}
 /* LL-Zeichnungen: Hand mit fünf Fingern (Laura 21.10.) */
 /* „Meine“ / „Dein“ im großen Seitentitel: größer, kursiv, nicht in Großbuchstaben (Laura 21.10.) */
 .whero .intro h1,html[data-stil] .whero .intro h1{font-size:clamp(40px,6.2vw,80px)}
@@ -1913,10 +1922,12 @@ __ROUTINE__
   <p class="abofuss">Noch kein Konto? <button type="button" class="linkbtn" id="loginReg">Kostenlos registrieren</button></p>
   <p class="abohinweis">Vorschau: Die Anmeldung funktioniert erst in der echten Version.</p>
 </form></dialog>
-<div class="zgctl" id="zgctl" role="group" aria-label="Test: Ansicht als Gast oder mit Abo"><span>Ansicht</span><button type="button" data-zg="gast">Gast</button><button type="button" data-zg="abo">Abo</button></div>
+<div class="zgctl" id="zgctl" role="group" aria-label="Test: Ansicht als Gast oder mit Abo"><span>Ansicht</span><button type="button" data-zg="gast">Gast</button><button type="button" data-zg="abo">Abo</button><button type="button" id="handyBtn" class="handybtn" title="Seite in Handygröße ansehen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Handy</button></div>
 
 <!--DESIGN-SWITCH-->
 <script>
+/* Handy-Ansicht (Laura 21.10.): Seiteninhalt vor dem ersten Rendern merken, damit er im Handy-Rahmen frisch starten kann */
+try { window.__KOPF0 = [...document.querySelectorAll("head style, head link[rel=stylesheet]")].map(e => e.outerHTML).join("\n"); window.__SEITE0 = document.body ? document.body.innerHTML : ""; } catch(e){}
 const DATA = __DATA__;
 /* Wissenstexte (aus wissen.json + wissen/*.html) */
 const WISSEN = __WISSEN__;
@@ -2014,7 +2025,7 @@ let onlyMine = true;
 /* ---------- Zustand und Teilen-Link ---------- */
 let state = {view:"start", type:"shampoo", cat:"alle", seg:"alle", q:"", wissen:null};
 /* Link-Ziel gleich merken: beim Start zeichnet die Seite schon einmal (Abo-Schalter) und würde es sonst mit #start überschreiben */
-const HASH0 = location.hash;
+const HASH0 = window.__STARTHASH || location.hash;
 /* Aus einem Quiz heraus direkt zu einer Produktart springen (z. B. Hitze-Tool-Check → Lockenstäbe) */
 window.showLL = () => { state.view = "ll"; state.wissen = null; render(); window.scrollTo({top:0}); };
 window.showWissen = id => { state.view = "wissen"; state.wissen = WISSEN.some(w=>w.id===id) ? id : null; render(); window.scrollTo({top:0}); };
@@ -3327,6 +3338,21 @@ readHash(); q.value = state.q; render();
     const svg = figs[0].querySelector("svg"), c = document.createElementNS(NS, "circle"); c.setAttribute("cx", "118"); c.setAttribute("cy", "86"); c.setAttribute("r", "3.2"); c.setAttribute("class", "ll-tropfen"); svg.append(c); }
   const io = new IntersectionObserver(es => es.forEach(e => { e.target.classList.toggle("ll-an", e.isIntersecting); if(e.isIntersecting) e.target.classList.add("ll-da"); }), {threshold: 0, rootMargin: "0px 0px -12% 0px"});
   v.querySelectorAll(".llkarte, .llsec, .splissarten, .llsteps, .llschritte, .lltipps, .llboxes, .llbox-oel").forEach(el => io.observe(el));
+})();
+
+/* ---------- Handy-Ansicht: die ganze Seite in einem iPhone-Rahmen (390 × 844) ---------- */
+(function(){
+  const b = document.getElementById("handyBtn"); if(!b) return;
+  if(window.__IMHANDY || !window.__SEITE0){ b.remove(); return; }
+  b.onclick = () => {
+    const html = '<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>window.__IMHANDY=1;window.__STARTHASH=' + JSON.stringify(location.hash) + ';<\/script>' + (window.__KOPF0 || "") + '</head><body>' + window.__SEITE0 + (window.__SEITE1 || "") + '</body></html>';
+    const ov = document.createElement("div"); ov.className = "handyover"; ov.setAttribute("role", "dialog"); ov.setAttribute("aria-label", "Handy-Ansicht");
+    ov.innerHTML = '<div class="handyrahmen"><iframe title="Seite in Handygröße"></iframe></div><div class="handyleiste"><span>So sieht die Seite auf dem Handy aus (390 × 844)</span><button type="button" class="handyzu">Schließen ×</button></div>';
+    document.body.append(ov); ov.querySelector("iframe").srcdoc = html; document.documentElement.style.overflow = "hidden";
+    const esc = e => { if(e.key === "Escape") zu(); };
+    const zu = () => { ov.remove(); document.documentElement.style.overflow = ""; removeEventListener("keydown", esc); };
+    ov.querySelector(".handyzu").onclick = zu; ov.onclick = e => { if(e.target === ov) zu(); }; addEventListener("keydown", esc);
+  };
 })();
 </script>
 </body>

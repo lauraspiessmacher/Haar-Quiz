@@ -511,3 +511,4 @@
 - Vorschau v308: Produktkarten Shampoo und Kopfhautpflege: „Passt zu: <Kopfhauttyp>“ dunkelbraun umrandet, Text dunkel, „Passt zu:“ fett (.also.kopftyp).
 - Vorschau v309: Kopfhauttyp-Feld (Shampoo, Kopfhautpflege) jetzt dunkelbraun gefüllt mit weißer Schrift.
 - Vorschau v309b: Haarplan-Seite: Lauras Vorlage (Handschuh-Hand mit Karte + Silberbrosche, bilder/deko/planbild.webp) rechts neben dem Seitenkopf, auf der Karte ein angedeuteter Wochenplan (HTML-Text, skaliert per cqw). Nur ab 900 px Breite, ausgeblendet sobald der fertige Plan angezeigt wird.
+- v311: Handy-Ansicht: Knopf „Handy“ in der Ansicht-Leiste (unten links, nur auf großen Bildschirmen) öffnet die ganze Seite in einem iPhone-Rahmen 390 × 844. Seite startet darin frisch (Styles aus head + Body + Quiz-Teil werden beim Laden gemerkt), Startseite = aktuelle Ansicht, Quizze öffnen im Rahmen. Schließen per Knopf, Klick daneben oder Esc.
