@@ -505,3 +505,4 @@
 - Vorschau v302: Überschriften mit hervorgehobenem Wort (em.hk: kursiv, 1,2×, leicht kräftiger per text-stroke): Startseite (Haaren, Meine, glaubt, startet, Neu, Lauras, Monats, 1x1, Eure, Fehlkäufen), LL (brechen, meine, dir, Meine), Quiz (Extra), Plan (genauer), Mein Bereich (Mein, hkurs), Favorites (Lauras). Titel-Wörter (hkurs) jetzt auch leicht kräftiger.
 - Vorschau v303: Hervorgehobene Wörter in Überschriften nur noch kursiv und größer, nicht mehr dicker (text-stroke entfernt, auch bei hkurs).
 - Vorschau v304: Logo oben links und im Fußbereich: „einfach“ kursiv (em.lk).
+- Vorschau v305: LL-Methode: wieder die Zeichnungen statt Fotos (Laura), Hand neu gezeichnet mit 4 Fingern + Daumen (vorher 3 + Daumen) in allen drei Schritten. Fotos ll-schritt1/2.jpg bleiben in bilder/deko (Build-Platzhalter ungenutzt).
