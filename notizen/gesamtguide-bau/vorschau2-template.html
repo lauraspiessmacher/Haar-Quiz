@@ -641,6 +641,10 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-fotos .wb-foto{margin:0}
 .wart .wb-foto.wb-grafik{max-width:460px;margin-left:auto;margin-right:auto}.wart .wb-foto.wb-grafik img{mix-blend-mode:multiply;border-radius:0}
 .wart .wb-foto.wb-hoch{max-width:380px;margin-left:auto;margin-right:auto}
+/* kurzes Video statt Foto, bewusst klein (Laura 21.10.) */
+.wart .wb-foto.wb-film{max-width:280px;margin-left:auto;margin-right:auto}
+.wart .wb-foto.wb-film video{display:block;width:100%;height:auto;border-radius:16px;background:#D9D7D4}
+@media (max-width:759px){ .wart .wb-foto.wb-film{max-width:220px} }
 /* ganzes Motiv zeigen, nichts abschneiden (Schere bis zur Spitze, Laura 21.10.) */
 .wart .wb-foto.wb-ganz{max-width:300px}
 .wart .wb-foto.wb-ganz img{max-height:none;object-fit:contain}
@@ -2433,6 +2437,12 @@ function renderWissen(){
 /* Wissen-Bausteine: Lesezeit, Mini-Frage, Checkliste (gespeichert), Mythen als Rate-Karten */
 function wissenBausteine(art, w){
   wbBewegung(art, w);
+  /* kurze Videos im Kapitel: still bei „Bewegung reduzieren“, sonst sicher abspielen */
+  art.querySelectorAll("video").forEach(v => {
+    v.muted = true;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); }
+    else { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+  });
   const h2 = art.querySelector("h2"), worte = w.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
   if(h2) h2.insertAdjacentHTML("afterend", `<div class="wb-meta"><span>ca. ${Math.max(1, Math.round(worte / 180))} Min. Lesezeit</span></div>`);
   art.querySelectorAll(".wb-frage").forEach(f => f.querySelectorAll("button").forEach(b => b.onclick = () => {
