@@ -488,3 +488,4 @@
 - Vorschau v285: Foto „kaputte Spitzen“ im Kapitel Spliss & Haarbruch, nach „Was ist Spliss?“.
 - Vorschau v286: Foto Friseurschere im Kapitel Haarschere (vor „Warum die Schere so wichtig ist“).
 - Vorschau v287: Lauras Grafik „Der Haarwachstumszyklus“ ersetzt im Kapitel Haarzyklus das Kreisdiagramm mit Prozenten (Prozente stehen weiter in den Wischkarten). Weißer Hintergrund per mix-blend-mode multiply angeglichen. Auf dem Handy ist die kleine Schrift in der Grafik knapp lesbar.
+- Vorschau v288: Foto Seidenkissen + Scrunchie im Kapitel Seide oder Satin (vor „Was ist der Unterschied?“).
