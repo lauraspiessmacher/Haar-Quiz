@@ -507,3 +507,4 @@
 - Vorschau v304: Logo oben links und im Fußbereich: „einfach“ kursiv (em.lk).
 - Vorschau v305: LL-Methode: wieder die Zeichnungen statt Fotos (Laura), Hand neu gezeichnet mit 4 Fingern + Daumen (vorher 3 + Daumen) in allen drei Schritten. Fotos ll-schritt1/2.jpg bleiben in bilder/deko (Build-Platzhalter ungenutzt).
 - Vorschau v306: LL-Zeichnung 1: Flasche umgedreht (Pumpe zeigt nach unten zur Hand). Zeichnung 2: linke Pfeilspitze sitzt jetzt am unteren Ende wie rechts.
+- Vorschau v307: Menü: kleine Lücke vor „Mein Bereich“ (6 px, Handy 4 px), damit aktiver Reiter und grüner Knopf nicht zusammenkleben.
