@@ -1399,6 +1399,8 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 @supports (container-type:inline-size){ .whero .wherol .intro{container-type:inline-size} .whero .intro h1 .hlang{font-size:min(1em,13cqw)} }
 h1 em.hkurs,html[data-stil] h1 em.hkurs{font-style:italic;text-transform:none;font-size:1.3em;letter-spacing:0;font-weight:inherit;line-height:.9;margin-right:.04em}
 /* einzelne Wörter in Überschriften hervorheben (Laura 21.10.): kursiv, etwas größer und kräftiger */
+/* Logo: „einfach“ kursiv (Laura 21.10.) */
+b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:italic;text-transform:none;letter-spacing:0;font-size:1.2em;font-weight:inherit;line-height:.9}
 :is(h1,h2) em.hk,html[data-stil] :is(h1,h2) em.hk{font-style:italic;text-transform:none;font-size:1.2em;letter-spacing:0;font-weight:inherit;line-height:.9}
 .llhero .lead{font-size:17px;max-width:62ch;margin:0 0 12px}
 .llhero .lead strong{font-weight:600}
@@ -1481,7 +1483,7 @@ h1 em.hkurs,html[data-stil] h1 em.hkurs{font-style:italic;text-transform:none;fo
 <body>
 <header class="top">
   <div class="in">
-    <button class="logo" id="home" type="button"><b>Haarpflege einfach erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span></button>
+    <button class="logo" id="home" type="button"><b>Haarpflege <em class="lk">einfach</em> erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span></button>
     <nav class="main" aria-label="Hauptnavigation">
       <button type="button" data-view="produkte" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 12h8"/></svg>Produkte</button>
       <button type="button" data-view="ll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8c3.4 4.3 5.8 7.4 5.8 10.6a5.8 5.8 0 0 1-11.6 0c0-3.2 2.4-6.3 5.8-10.6z"/><path d="M9.4 14.2a2.7 2.7 0 0 0 2.4 2.6"/></svg><span>LL-Methode</span></button>
@@ -1865,7 +1867,7 @@ h1 em.hkurs,html[data-stil] h1 em.hkurs{font-style:italic;text-transform:none;fo
 <footer class="fuss">
   <div class="in">
     <div class="fspalten">
-      <div class="fmarke"><b>Haarpflege einfach erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span>
+      <div class="fmarke"><b>Haarpflege <em class="lk">einfach</em> erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span>
         <p>Meine Einschätzung, nicht die der Marken. Mit „Werbelink“ gekennzeichnete Links sind Affiliate-Links: Kauft ihr darüber, bekomme ich eine kleine Provision, für euch ändert sich am Preis nichts.</p></div>
       <nav aria-label="Seiten"><h4>Seiten</h4><ul>
         <li><button type="button" data-fgo="produkte">Produkte</button></li><li><button type="button" data-fgo="ll">LL-Methode</button></li><li><button type="button" data-fgo="plan">Haarplan</button></li><li><button type="button" data-fgo="quiz">Quiz</button></li><li><button type="button" data-fgo="wissen">Wissen</button></li><li><button type="button" data-fgo="bereich">Mein Bereich</button></li></ul></nav>
