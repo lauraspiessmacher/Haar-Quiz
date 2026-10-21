@@ -379,6 +379,11 @@ html,body{overflow-x:clip}
 .journeylink span:first-child{font-family:var(--serif);font-style:italic;font-size:17px}
 .journeylink:hover{opacity:.75}
 .journey{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:40px;align-items:center;margin:48px 0 0}
+/* Leave-in-Klecks (Laura 21.10.): Schweif reicht in den braunen Zitat-Kasten, der Klecks läuft Richtung „Ihr glaubt mir nicht?“ */
+.journey{position:relative}
+.journey .klecks{position:absolute;right:46px;top:-112px;width:170px;height:auto;z-index:2;pointer-events:none;transform:rotate(5deg);transform-origin:50% 0;filter:drop-shadow(-6px 10px 12px rgba(56,47,46,.22))}
+@media (max-width:1023px){ .journey .klecks{width:150px;right:24px;top:-150px} }
+@media (max-width:759px){ .journey .klecks{width:96px;right:-4px;top:-92px} }
 @media (max-width:759px){ .journey{grid-template-columns:1fr;gap:18px} }
 .jcover{aspect-ratio:3/4;border-radius:6px;background:#382F2E;color:#E9DFD2;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:14px;overflow:hidden}
 .jcover img{width:100%;height:100%;object-fit:cover;display:block}
@@ -1608,6 +1613,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
       </div>
     </div>
     <div class="journey">
+      <img class="klecks" src="__KLECKS__" alt="" aria-hidden="true">
       <div class="jcover" aria-label="Platz für das Cover deiner Hair Journey">__JOURNEY_COVER__</div>
       <div>
         <p class="kicker">Meine Hair Journey</p>
