@@ -509,3 +509,4 @@
 - Vorschau v306: LL-Zeichnung 1: Flasche umgedreht (Pumpe zeigt nach unten zur Hand). Zeichnung 2: linke Pfeilspitze sitzt jetzt am unteren Ende wie rechts.
 - Vorschau v307: Menü: kleine Lücke vor „Mein Bereich“ (6 px, Handy 4 px), damit aktiver Reiter und grüner Knopf nicht zusammenkleben.
 - Vorschau v308: Produktkarten Shampoo und Kopfhautpflege: „Passt zu: <Kopfhauttyp>“ dunkelbraun umrandet, Text dunkel, „Passt zu:“ fett (.also.kopftyp).
+- Vorschau v309: Kopfhauttyp-Feld (Shampoo, Kopfhautpflege) jetzt dunkelbraun gefüllt mit weißer Schrift.
