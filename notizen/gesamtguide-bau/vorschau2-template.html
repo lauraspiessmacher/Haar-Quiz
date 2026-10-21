@@ -172,6 +172,7 @@ main{padding-bottom:60px}
 /* Haaröl: Pipette kommt von rechts ins Banner, läuft weich in den Hintergrund aus */
 .ghero.tex .gfilm.rechts{left:auto;width:min(300px,42%);object-position:100% 30%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%);z-index:0}
 .ghero.tex > .ghead,.ghero.tex > .gintro{position:relative;z-index:1}
+.ghero.oelhero{background:linear-gradient(90deg,#F4EFE9 0%,#E6E3E0 55%,#CBCBCD 100%)}
 @media (max-width:759px){ .ghero.tex .gfilm.rechts{width:46%;height:180px;object-position:100% 20%} }
 .ghero.tex .gintro{background:rgba(255,253,250,.86)}
 @media (max-width:759px){ .ghero.tex{padding:20px 18px 18px;border-radius:14px} }
@@ -2539,7 +2540,7 @@ const LLBILD = {sprays:TEX.milch, seren:TEX.serum, cremes:TEX.creme, repair:TEX.
 /* Shampoo-Banner: bewegter Schaum aus Lauras Video statt Standbild (Laura 21.10.); bei „Bewegung reduzieren“ bleibt das Bild */
 const SCHAUMFILM = matchMedia("(prefers-reduced-motion: reduce)").matches ? "" : `<video class="gfilm" poster="__SCHAUM_POSTER__" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="__SCHAUM_MP4__" type="video/mp4"><source src="__SCHAUM_WEBM__" type="video/webm"></video>`;
 const OELFILM = matchMedia("(prefers-reduced-motion: reduce)").matches ? "" : `<video class="gfilm rechts" poster="__OELB_POSTER__" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="__OELB_MP4__" type="video/mp4"><source src="__OELB_WEBM__" type="video/webm"></video>`;
-const TYPBILD = {shampoo:TEX.schaum, maske:TEX.maske, conditioner:TEX.tube, leavein:TEX.serum, oel:TEX.oel, kopfhaut:TEX.kopf, hitze:TEX.glanz};
+const TYPBILD = {shampoo:TEX.schaum, maske:TEX.maske, conditioner:TEX.tube, leavein:TEX.serum, kopfhaut:TEX.kopf, hitze:TEX.glanz}; /* Haaröl: statt Foto nur das Pipetten-Video (Laura 21.10.) */
 function renderLL(){
   const box = document.getElementById("llBox"); if(!box) return;
   const find = x => ALL.find(p => p.type==="leavein" && p.brand===x.brand && p.name===x.name);
@@ -2798,7 +2799,8 @@ function renderGuide(){
     .concat([`<button type="button" class="chip" data-cat="liste" aria-pressed="${state.cat==="liste"}">Liste</button>`]).join("");
   const intro = g.intro || {};
   const tb = TYPBILD[state.type];
-  let html = `<div class="guide"><div class="ghero${tb?" tex":""}"${tb?` style="background-image:url('${tb}')"`:""}>${state.type==="shampoo"?SCHAUMFILM:state.type==="oel"?OELFILM:""}<div class="ghead"><div><h2>${t.label}</h2><div class="sub">${t.by} · ${g.items.length} Produkte</div></div></div>
+  const oelh = state.type==="oel";
+  let html = `<div class="guide"><div class="ghero${tb||oelh?" tex":""}${oelh?" oelhero":""}"${tb?` style="background-image:url('${tb}')"`:""}>${state.type==="shampoo"?SCHAUMFILM:state.type==="oel"?OELFILM:""}<div class="ghead"><div><h2>${t.label}</h2><div class="sub">${t.by} · ${g.items.length} Produkte</div></div></div>
     ${(intro.lead||intro.box)?`<div class="gintro"><p>${intro.lead||""}</p>${intro.box?`<div class="box">${intro.box}</div>`:""}</div>`:""}</div>
     ${g.items.length ? `<div class="controls"><div class="crow">${state.type==="tools"?"":segSwitch()}${fitHtml(state.type)}</div><div class="chips" role="group" aria-label="Kategorie wählen">${chips}</div></div>` : ""}`;
   if(!g.items.length){ guide.innerHTML = html + `</div>`; bindControls(); return; }

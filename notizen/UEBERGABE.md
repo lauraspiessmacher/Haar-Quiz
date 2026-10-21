@@ -533,3 +533,4 @@
 - v330: Öl-Video auch auf der LL-Seite in der Box „Und was ist mit Haaröl?“ (rechts, 150 px, Handy 92 px). Im Haaröl-Kapitel steht das Video jetzt neben „Auf einen Blick“ (gleiche Höhe, 210 px breit); Handy: klein darüber.
 - v331: Produkte → Shampoo: Banner-Hintergrund jetzt Lauras Schaum-Video (quer zugeschnitten 720×380 aus der Mitte, MP4 110 KB + WebM 78 KB, Poster), stumm in Schleife hinter dem Schriftzug; Standbild bleibt als Rückfall und bei 'Bewegung reduzieren'.
 - v332: Produkte → Haaröl: Pipetten-Video rechts im Banner (Pipette kommt von rechts, links weich ausgeblendet, 300 px; Handy 46 % breit, 180 px hoch oben rechts, Text liegt davor). Eigener Ausschnitt oel-banner.mp4/.webm/.jpg.
+- v333: Haaröl-Banner: altes Öl-Foto (TEX.oel) entfernt, Hintergrund jetzt heller Verlauf ins Video-Grau, nur noch das Pipetten-Video.
