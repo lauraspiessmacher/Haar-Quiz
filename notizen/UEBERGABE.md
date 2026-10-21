@@ -487,3 +487,4 @@
 - Vorschau v284: 7 neue Fotos von Laura eingebaut: Schuppen (Kopfhaut, bei den Kopfhauttypen), Maske in nassen Längen (Reparatur, Pflege von außen), 4 Konsistenzen (Leave-in, nach der Definition), wellig+lockig (Genetik, nach der Gene-Liste; glatt fehlt), Wasser perlt ab (Porosität, nach den drei Stufen), Creme zwischen den Fingern (LL-Methode, nach So geht's), Masken-Tiegel als Kopfband der Produktseite Maske (textur-maske.webp).
 - Vorschau v285: Foto „kaputte Spitzen“ im Kapitel Spliss & Haarbruch, nach „Was ist Spliss?“.
 - Vorschau v286: Foto Friseurschere im Kapitel Haarschere (vor „Warum die Schere so wichtig ist“).
+- Vorschau v287: Lauras Grafik „Der Haarwachstumszyklus“ ersetzt im Kapitel Haarzyklus das Kreisdiagramm mit Prozenten (Prozente stehen weiter in den Wischkarten). Weißer Hintergrund per mix-blend-mode multiply angeglichen. Auf dem Handy ist die kleine Schrift in der Grafik knapp lesbar.
