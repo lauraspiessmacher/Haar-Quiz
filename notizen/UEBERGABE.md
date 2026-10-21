@@ -515,3 +515,4 @@
 - v312: Handy: Quiz-Karten kompakter (weniger Abstand, kleinere Überschrift), Extra-Checks untereinander statt schmal nebeneinander, Abo-Plakette oben links, Knopf rechts neben Fragenanzahl. Quiz-Seite ca. 1.100 px kürzer. „Mein Bereich“-Schrift im Handy-Menü kleiner (lief übers Feld). Wissen, Haarplan, LL unverändert (Laura zufrieden).
 - v313: Haarplan-Seite: neues Kopfbild von Laura (Karte auf Silbertablett) statt Handschuh-Hand. Bild 300 px breit, Wochenplan-Text sitzt auf der Karte (kleinere Schrift, passt komplett).
 - v314: Haarplan-Kopfbild freigestellt (Hintergrund weg, auch in den Griffen; Modell isnet-general-use), weicher Schatten per CSS, Wochenplan-Text neu auf der Karte ausgerichtet.
+- v315: Haarplan-Tablett jetzt auch auf Handy/kleinem Tablet (unter 900 px): mittig unter dem Einleitungstext, max. 280 px breit. Karten-Styles gelten für alle Breiten. Beim fertigen Plan weiterhin ausgeblendet.
