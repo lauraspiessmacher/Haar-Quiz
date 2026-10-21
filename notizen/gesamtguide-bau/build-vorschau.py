@@ -101,7 +101,7 @@ t = t.replace('__TEX_MILCH__', 'data:image/webp;base64,' + base64.b64encode(open
 t = t.replace('__TEX_SERUM__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-serum.webp','rb').read()).decode())
 t = t.replace('__TEX_CREME__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-creme.webp','rb').read()).decode())
 # Lauras Konsistenz-Fotos (20.10.): weitere Kopfbänder
-for _k in ('oel', 'kopf', 'tube', 'glanz'):
+for _k in ('oel', 'kopf', 'tube', 'glanz', 'maske'):
     t = t.replace('__TEX_' + _k.upper() + '__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/textur-' + _k + '.webp','rb').read()).decode())
 t = t.replace('__FRAG_LAURA__', json.dumps(json.load(open(f'{S}/frag-laura.json', encoding='utf-8')), ensure_ascii=False))
 t = t.replace('__ALTERNATIVEN__', json.dumps({k: v for k, v in json.load(open(f'{S}/alternativen.json', encoding='utf-8')).items() if not k.startswith('_')}, ensure_ascii=False))

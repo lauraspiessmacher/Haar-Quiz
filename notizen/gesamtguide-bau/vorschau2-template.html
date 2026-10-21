@@ -627,6 +627,7 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-foto img{display:block;width:100%;height:auto;border-radius:16px}
 .wart .wb-fotos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 24px}
 .wart .wb-fotos .wb-foto{margin:0}
+.wart .wb-foto.wb-hoch{max-width:380px;margin-left:auto;margin-right:auto}
 .wart .wb-foto figcaption{font-size:13.5px;line-height:1.4;color:var(--muted);margin-top:6px}
 .wart .wb-foto figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;color:#382F2E}
 .wart .wb-mengen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0 26px}
@@ -2285,10 +2286,10 @@ function wissenBausteine(art, w){
 /* ---------- LL-Methode: Lauras Leave-in-Auswahl (ll-auswahl.json) ---------- */
 const LLA = __LL_AUSWAHL__;
 /* Konsistenz-Fotos von Laura (20.10.) als Kopfbänder der Gruppen */
-const TEX = {schaum:"__TEX_SCHAUM__", serum:"__TEX_SERUM__", creme:"__TEX_CREME__", milch:"__TEX_MILCH__", oel:"__TEX_OEL__", kopf:"__TEX_KOPF__", tube:"__TEX_TUBE__", glanz:"__TEX_GLANZ__"};
+const TEX = {schaum:"__TEX_SCHAUM__", serum:"__TEX_SERUM__", creme:"__TEX_CREME__", milch:"__TEX_MILCH__", oel:"__TEX_OEL__", kopf:"__TEX_KOPF__", tube:"__TEX_TUBE__", glanz:"__TEX_GLANZ__", maske:"__TEX_MASKE__"};
 const LLBILD = {sprays:TEX.milch, seren:TEX.serum, cremes:TEX.creme, repair:TEX.tube};
 /* Produktseite: Texturfoto hinter Titel und Einleitung (nur wo eine Textur passt) */
-const TYPBILD = {shampoo:TEX.schaum, maske:TEX.creme, conditioner:TEX.tube, leavein:TEX.serum, oel:TEX.oel, kopfhaut:TEX.kopf, hitze:TEX.glanz};
+const TYPBILD = {shampoo:TEX.schaum, maske:TEX.maske, conditioner:TEX.tube, leavein:TEX.serum, oel:TEX.oel, kopfhaut:TEX.kopf, hitze:TEX.glanz};
 function renderLL(){
   const box = document.getElementById("llBox"); if(!box) return;
   const find = x => ALL.find(p => p.type==="leavein" && p.brand===x.brand && p.name===x.name);

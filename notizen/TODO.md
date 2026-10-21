@@ -48,5 +48,5 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - Kopfhautpflege-Check: Laura liest notizen/kopfhaut-check-konzept.md gegen (5 offene Fragen), danach bauen. Wissen-Seite „Bibliothek“-Look: Laura überlegt (nicht von sich aus wieder anfangen).
 
 ## Fotos für Wissen-Kapitel (Laura liefert, Stand 21.10.)
-Passend sind schon: Haarausfall (Mengen 50–200), Kopfhaut (Massage, Serum am Scheitel), Leave-in (leicht/cremig), Haaröle (Öl-Pipette), Silikone (Glanz).
-Noch kein passendes Foto: Genetik, Haarzyklus, Porosität, Spliss & Haarbruch, Kann man Haar reparieren, Repair, LL-Methode, Pre-Wash, Seide/Satin, Haarbürsten, Splissschnitt, Haarschere, Haarfarbe, Farbstiche, Haarmythen (Wunschliste mit Motiven in der Antwort an Laura vom 21.10.).
+Passend sind schon: Haarausfall (Mengen 50–200), Kopfhaut (Serum am Scheitel, Massage, Schuppen), Leave-in (4 Konsistenzen, leicht/cremig), LL-Methode (Creme zwischen den Fingern), Porosität (Wasser perlt ab), Reparatur (Maske in den Längen), Genetik (wellig + lockig, glatt fehlt noch), Haaröle (Öl-Pipette), Silikone (Glanz). Produktseite Maske: Tiegel-Foto.
+Noch kein passendes Foto: Genetik glatt (für die Reihe glatt/wellig/lockig), Haarzyklus, Spliss & Haarbruch, Repair, Pre-Wash, Seide/Satin, Haarbürsten, Splissschnitt, Haarschere, Haarfarbe, Farbstiche, (Haarmythen optional).
