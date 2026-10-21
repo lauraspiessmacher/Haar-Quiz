@@ -19,8 +19,7 @@
     "titel": "Graue Haare",
     "teaser": "Warum Haare ihre Farbe verlieren, was Stress damit zu tun hat und wie ihr graue Haare pflegt.",
     "datei": "graue-haare.html",
-    "arzt": true,
-    "entwurf": true
+    "arzt": true
   },
   {
     "id": "porositaet",
@@ -114,8 +113,7 @@
     "titel": "Haarbürsten",
     "teaser": "Welche Bürste wofür, und wie ihr bürstet, ohne eure Haare kaputt zu machen.",
     "datei": "buersten.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "splissschnitt",
@@ -130,8 +128,7 @@
     "titel": "Haarschere ist nicht gleich Haarschere",
     "teaser": "Warum sich eine Friseurschere lohnt, wenn ihr selbst schneidet.",
     "datei": "scheren.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "haarfarbe",
@@ -183,8 +180,7 @@
     "titel": "Hormone und Haare",
     "teaser": "Schwangerschaft, Pille, Wechseljahre: Wie Hormone eure Haare verändern.",
     "datei": "hormone.html",
-    "arzt": true,
-    "entwurf": true
+    "arzt": true
   },
   {
     "id": "hitze",

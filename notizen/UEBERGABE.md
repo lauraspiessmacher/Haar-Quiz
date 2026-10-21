@@ -524,3 +524,4 @@
 - v321: Healthy-Hair-Club-Patch auf Lauras Wunsch oben rechts im Fußbereich: eigene 5. Spalte (130 px, 901–1100 px: 104 px), Kontakt rückt nach links; Handy: neben den Kontakt-Links.
 - v322: Laura hat freigegeben: Wissen „Farbstiche und der Farbkreis“ und „Haarfarbe verstehen“ (Entwurf-Markierung entfernt).
 - v323: Wissen „Haarschere“: Scherenfoto wird nicht mehr oben/unten abgeschnitten (neue Klasse wb-ganz: ganzes Motiv, 300 px breit am Computer, 240 px Handy).
+- v324: Sammelliste umgesetzt: freigegeben Haarschere, Hormone, Graue Haare, Haarbürsten; Bürsten: Paddle nur trocken, Wildschweinborsten-Karte, Reinigung als 4 Schritte (Wasserbad, Plastik einlegen, Holz nur Borsten); Genetik: Struktur-Grafik statt Fotos, Abschnitt Kopfhauttyp vs. Kopfhautzustand mit Studien.

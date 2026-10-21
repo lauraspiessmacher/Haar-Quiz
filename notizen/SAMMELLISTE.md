@@ -17,3 +17,8 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
    - Rest des Kapitels passt (Nachricht endet mit „alles andere wäre …“).
 5. Wissen „Hormone und Haare“: freigeben.
 6. Wissen „Graue Haare“: freigeben.
+
+**Umgesetzt am 21.10. nach Lauras „Erstmal alles ändern“ (v324):** Punkte 1, 3, 4, 5, 6.
+- Bürsten: Naturborsten-Karte sagt jetzt „oft Naturborsten gemischt mit Kunststoffborsten“, eigene Karte Wildschweinborstenbürste. Kapitel freigegeben (Lauras „dann ist das Kapitel auch …“ als Freigabe verstanden).
+- Genetik: Fotos wellig/lockig ersetzt durch Grafik Querschnitt rund/oval/flach → glatt/wellig/lockig. Neuer Abschnitt „Kopfhauttyp und Kopfhautzustand“ mit Studien (Korea-Zwillinge 2017: Talg ca. 1/5 genetisch; Frankreich 2008: 44 % sensible Kopfhaut). Bleibt Entwurf, Laura prüft.
+- Offen: Punkt 2 „Seide oder Satin?“ (Nachricht abgeschnitten).
