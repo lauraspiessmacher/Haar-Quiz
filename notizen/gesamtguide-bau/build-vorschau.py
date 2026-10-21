@@ -115,6 +115,9 @@ t = t.replace('__SILBERTABLETT__', 'data:image/webp;base64,' + base64.b64encode(
 t = t.replace('__ORDNER__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner-ringe.webp','rb').read()).decode())
 # Stoff-Patch im Wissen auf Lauras Wunsch wieder entfernt (16.10.), Bild liegt weiter in bilder/deko
 # t = t.replace('__STOFFPATCH__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stoffpatch-quer.webp','rb').read()).decode())
+# LL-Methode: Lauras Schritt-Fotos (Schritt 3 folgt)
+for _n in (1, 2):
+    t = t.replace('__LL_SCHRITT%d__' % _n, 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ll-schritt%d.jpg' % _n,'rb').read()).decode())
 # Schnitt-Animation auf der Startseite (Lauras Scheren-Fotos, freigestellt)
 for _k in ('offen', 'zu'):
     t = t.replace('__SCHERE_' + _k.upper() + '__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/schere-' + _k + '.webp','rb').read()).decode())
