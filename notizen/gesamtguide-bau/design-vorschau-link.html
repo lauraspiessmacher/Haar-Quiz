@@ -1387,6 +1387,8 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 .llwas strong{color:#F3ECE2;font-weight:600}
 @media (max-width:600px){ .llkarte{padding:22px 16px 18px} .llkarte h2{font-size:24px;margin-bottom:14px} .llkurz{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px} .llkurz li{grid-template-columns:1fr;text-align:center;justify-items:center;background:rgba(243,236,226,.07);border-radius:14px;padding:12px 8px} .llkurz li::before{grid-row:auto;width:28px;height:28px;font-size:15px;margin-bottom:4px} .llkurz b{font-size:13px} .llkurz span{font-size:12.5px;line-height:1.35} }
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
+/* „Meine“ / „Dein“ im großen Seitentitel: größer, kursiv, nicht in Großbuchstaben (Laura 21.10.) */
+h1 em.hkurs,html[data-stil] h1 em.hkurs{font-style:italic;text-transform:none;font-size:1.3em;letter-spacing:0;font-weight:inherit;line-height:.9;margin-right:.04em}
 .llhero .lead{font-size:17px;max-width:62ch;margin:0 0 12px}
 .llhero .lead strong{font-weight:600}
 .llhero .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
@@ -1788,7 +1790,7 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
     <div class="llhero">
       <div class="lltext">
       <p class="kicker">Meine Signature-Methode</p>
-      <h1>Meine LL-Methode</h1>
+      <h1><em class="hkurs">Meine</em> LL-Methode</h1>
       <p class="lead">Die LL-Methode ist meine Signature-Methode. Als meine Haare selbst stark geschädigt waren und ich ständig mit Haarbruch und Spliss zu kämpfen hatte, war Leave-in-Pflege mein Holy-Grail-Produkt. Natürlich nicht das einzige, aber es hat mir am schnellsten geholfen, echte Erfolge zu sehen.</p>
       <p class="lead">Haarbruch und Spliss sind auch die Themen, zu denen ihr mir am meisten schreibt. Meine Antwort darauf ist fast immer dieselbe: Leave-in-Pflege, und zwar jeden Tag, mit meiner LL-Methode.</p>
       <div class="btns"><button type="button" class="btn dark" id="llQuizBtn">Welches Leave-in passt zu mir? <span aria-hidden="true">→</span></button><button type="button" class="btn" id="llZurAuswahl">Meine Leave-in-Auswahl</button></div>
@@ -1871,7 +1873,7 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
 
   <!-- ===================== HAARPLAN (Arbeitstitel, Vorschau 19.10.) ===================== -->
   <section class="view" id="v-plan" hidden>
-    <div class="intro seitenkopf"><p class="kicker">Dein persönlicher Plan</p><h1>Dein Haarplan</h1><p id="planIntro">Hier entsteht dein persönlicher Plan für deine Haare. Nimm dir ein paar Minuten Zeit und mach die Checks in Ruhe, danach bist du schon eine ganze Ecke schlauer. Und du wirst sehen: Die Lösung ist nicht immer nur ein Produkt. Oft sind es kleine Gewohnheiten, die den größten Unterschied machen.</p></div>
+    <div class="intro seitenkopf"><p class="kicker">Dein persönlicher Plan</p><h1><em class="hkurs">Dein</em> Haarplan</h1><p id="planIntro">Hier entsteht dein persönlicher Plan für deine Haare. Nimm dir ein paar Minuten Zeit und mach die Checks in Ruhe, danach bist du schon eine ganze Ecke schlauer. Und du wirst sehen: Die Lösung ist nicht immer nur ein Produkt. Oft sind es kleine Gewohnheiten, die den größten Unterschied machen.</p></div>
     <div class="pstand" id="planStand"></div>
     <div class="hplan" id="planFertig" hidden></div>
     <h2 class="psub" id="planWegH">Schritt 1 bis 3: deine drei Checks</h2>
