@@ -138,16 +138,14 @@
     "titel": "Haarfarbe verstehen",
     "teaser": "Blondieren, Färben, Tönen, Glossing: Was wächst raus, was wäscht sich raus?",
     "datei": "haarfarbe.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "farbstiche",
     "titel": "Farbstiche und der Farbkreis",
     "teaser": "Rot-, Orange- oder Gelbstich? Eure Mini-Farbberatung mit dem Farbkreis.",
     "datei": "farbstiche.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "mythen",

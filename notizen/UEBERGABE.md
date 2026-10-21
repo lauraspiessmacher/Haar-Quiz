@@ -522,3 +522,4 @@
 - v319: LL-Gel nach Lauras Feedback: kein fallender Tropfen mehr, nur langsames Dehnen nach unten (11 s hin und zurück, scaleY 1→1,13). Breiterer Ausschnitt aus dem Foto mit beiden Tropfen (gel.webp, alte gel-strang/gel-tropfen gelöscht), läuft leicht hinter Titel-Ende und Textzeilen; Text wieder volle Breite.
 - v320: Healthy-Hair-Club-Patch am Computer in die rechte untere Ecke des Fußbereichs (absolut, über der Trennlinie, neben der Copyright-Zeile), 138 px; 901–1180 px Breite 108 px. Handy unverändert (neben Kontakt-Links).
 - v321: Healthy-Hair-Club-Patch auf Lauras Wunsch oben rechts im Fußbereich: eigene 5. Spalte (130 px, 901–1100 px: 104 px), Kontakt rückt nach links; Handy: neben den Kontakt-Links.
+- v322: Laura hat freigegeben: Wissen „Farbstiche und der Farbkreis“ und „Haarfarbe verstehen“ (Entwurf-Markierung entfernt).
