@@ -502,3 +502,4 @@
 - Vorschau v299: Seitentitel „Meine LL-Methode“ und „Dein Haarplan“: „Meine“/„Dein“ kursiv, 1,3× größer, nicht in Großbuchstaben (em.hkurs).
 - Vorschau v300: Seitentitel „Dein Haar-Quiz“ und „Mein Wissen“ mit kursivem, größerem erstem Wort (wie LL/Haarplan); Wissen-Titel einzeilig (nowrap, max. 96 px).
 - Vorschau v301: Wissen-Titel jetzt „Deine Wissensbibliothek“ (Laura): „Deine“ kursiv in eigener Zeile, „Wissensbibliothek“ passt sich per Container-Einheit der Spaltenbreite an (kein Überlauf 320–1600 px). Hinweis an Laura: Wissen-Texte sonst in „ihr“.
+- Vorschau v302: Überschriften mit hervorgehobenem Wort (em.hk: kursiv, 1,2×, leicht kräftiger per text-stroke): Startseite (Haaren, Meine, glaubt, startet, Neu, Lauras, Monats, 1x1, Eure, Fehlkäufen), LL (brechen, meine, dir, Meine), Quiz (Extra), Plan (genauer), Mein Bereich (Mein, hkurs), Favorites (Lauras). Titel-Wörter (hkurs) jetzt auch leicht kräftiger.
