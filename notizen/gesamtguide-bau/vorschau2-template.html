@@ -1400,27 +1400,14 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 .llwas strong{color:#F3ECE2;font-weight:600}
 @media (max-width:600px){ .llkarte{padding:22px 16px 18px} .llkarte h2{font-size:24px;margin-bottom:14px} .llkurz{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px} .llkurz li{grid-template-columns:1fr;text-align:center;justify-items:center;background:rgba(243,236,226,.07);border-radius:14px;padding:12px 8px} .llkurz li::before{grid-row:auto;width:28px;height:28px;font-size:15px;margin-bottom:4px} .llkurz b{font-size:13px} .llkurz span{font-size:12.5px;line-height:1.35} }
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
-/* LL-Seite: Gel aus Lauras Foto läuft ganz langsam von der Linie unter der Kopfzeile herunter, der Tropfen löst sich und fällt (Laura 21.10.) */
+/* LL-Seite: Gel aus Lauras Foto hängt an der Linie unter der Kopfzeile und dehnt sich ganz langsam nach unten, ohne zu tropfen; läuft leicht hinter den Text (Laura 21.10.) */
 .llhero{position:relative}
 .llhero .lltext,.llhero > :not(.llgel):not(.lltext){position:relative;z-index:1}
-.llgel{position:absolute;top:0;right:384px;width:89px;height:480px;pointer-events:none;z-index:0}
-.llgel img{position:absolute;left:0;width:100%;height:auto;display:block}
-.llgel .gel-strang{top:0;-webkit-mask-image:linear-gradient(rgba(0,0,0,.5),#000 45%);mask-image:linear-gradient(rgba(0,0,0,.5),#000 45%);transform-origin:50% 0;animation:gelStrang 16s ease-in-out infinite}
-.llgel .gel-tropfen{top:380.5px;transform-origin:50% 0;animation:gelTropfen 16s infinite}
-@keyframes gelStrang{0%{transform:scaleY(1)}45%{transform:scaleY(1.06)}58%{transform:scaleY(1.065)}85%{transform:scaleY(1)}100%{transform:scaleY(1)}}
-@keyframes gelTropfen{
-  0%{transform:translateY(0) scale(.45);opacity:1;animation-timing-function:ease-in-out}
-  45%{transform:translateY(23.4px) scale(1)}
-  56%{transform:translateY(26px) scale(1,1.04);animation-timing-function:cubic-bezier(.5,0,.9,.55)}
-  74%{transform:translateY(190px) scale(.96,1.08);opacity:1}
-  78%{transform:translateY(215px) scale(.96,1.08);opacity:0}
-  79%{transform:translateY(0) scale(.15);opacity:0}
-  86%{transform:translateY(0) scale(.25);opacity:1}
-  100%{transform:translateY(0) scale(.45);opacity:1}
-}
-@media (min-width:960px){ .llhero .lltext{padding-right:44px} }
-@media (max-width:959px){ .llgel{right:-10px;transform:scale(.62);transform-origin:100% 0;opacity:.8} }
-@media (prefers-reduced-motion:reduce){ .llgel img{animation:none!important} }
+.llgel{position:absolute;top:0;right:398px;width:145px;pointer-events:none;z-index:0}
+.llgel img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(rgba(0,0,0,.5),#000 40%);mask-image:linear-gradient(rgba(0,0,0,.5),#000 40%);transform-origin:50% 0;animation:gelDehnen 11s ease-in-out infinite alternate}
+@keyframes gelDehnen{from{transform:scale(1,1)}to{transform:scale(.97,1.13)}}
+@media (max-width:959px){ .llgel{right:-14px;transform:scale(.6);transform-origin:100% 0;opacity:.8} }
+@media (prefers-reduced-motion:reduce){ .llgel img{animation:none} }
 /* Haarplan-Seite: Karte auf dem Silbertablett mit angedeutetem Wochenplan (Laura 21.10.) */
 .planbild{display:block;margin:0;container-type:inline-size}
 .planbild img{display:block;width:100%;height:auto;filter:drop-shadow(-10px 14px 14px rgba(56,47,46,.22))}
@@ -1673,7 +1660,7 @@ __ROUTINE__
   <!-- ===================== LL-METHODE (Lauras Signature-Thema) ===================== -->
   <section class="view llpage" id="v-ll" hidden>
     <div class="llhero">
-      <div class="llgel" aria-hidden="true"><img class="gel-strang" src="__GEL_STRANG__" alt=""><img class="gel-tropfen" src="__GEL_TROPFEN__" alt=""></div>
+      <div class="llgel" aria-hidden="true"><img src="__GEL__" alt=""></div>
       <div class="lltext">
       <p class="kicker">Meine Signature-Methode</p>
       <h1><em class="hkurs">Meine</em> LL-Methode</h1>
