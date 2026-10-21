@@ -498,3 +498,4 @@
 - Vorschau v295: Kapitel Graue Haare ins Regal Kopfhaut & Haarausfall verschoben (nach Hormone und Haare).
 - Vorschau v296: Frizz-Kapitel: Fotopaar glatt/Frizz (frizz-glatt.jpg, frizz-frizz.jpg) vor „Was im Haar passiert“. LL-Seite: Schritt 1 und 2 jetzt Lauras Fotos (bilder/deko/ll-schritt1/2.jpg, Platzhalter __LL_SCHRITT1/2__), Schritt 3 bleibt Zeichnung bis Lauras Foto kommt.
 - Vorschau v297: Frizz-Fotos neu beschriftet: beide zeigen Frizz (glattes Haar: abstehende Härchen / welliges Haar: aufgeplustert).
+- Vorschau v298: Neues Wissen-Kapitel „Neue Haare, Haarbruch oder Frizz?“ (babyhaare.html, Entwurf, Regal Pflege nach Frizz): warum Haare nie gleich lang sind (18.000–36.000 neue Haare/Jahr gerechnet aus 50–100/Tag), Längen-Balken, Dreier-Zeichnung (neues Haar wächst in Schleife), Vergleichskarten, 5 Schritte zum Erkennen (Ende: fein/stumpf/volle Länge), Mini-Frage, warum neue Haare abstehen, Pflege-Checkliste, Hinweis, Karte Spliss-Check.

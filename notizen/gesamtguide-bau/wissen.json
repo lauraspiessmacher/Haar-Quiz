@@ -195,5 +195,13 @@
     "datei": "hitze.html",
     "arzt": false,
     "entwurf": true
+  },
+  {
+    "id": "babyhaare",
+    "titel": "Neue Haare, Haarbruch oder Frizz?",
+    "teaser": "Kurze, abstehende Härchen? Oft sind es einfach neue Haare. So erkennt ihr den Unterschied.",
+    "datei": "babyhaare.html",
+    "arzt": false,
+    "entwurf": true
   }
 ]

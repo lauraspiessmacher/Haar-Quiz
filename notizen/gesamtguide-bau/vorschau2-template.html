@@ -687,6 +687,9 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-mizelle > g:first-of-type{transform-box:view-box;transform-origin:160px 75px;animation:wbdreh 14s linear infinite}
 @keyframes wbdreh{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){ .wart .wb-frizz .fz,.wart .wb-leiter .lose,.wart .wb-mizelle > g:first-of-type{animation:none} }
+.wart .wb-dreier .wb-neu{transform-box:fill-box;transform-origin:top;animation:wbwachs 4.5s ease-in-out infinite}
+@keyframes wbwachs{0%{transform:scaleY(.15)}70%,100%{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){ .wart .wb-dreier .wb-neu{animation:none} }
 .wart .wb-grau path{stroke-dasharray:130;stroke-dashoffset:0}
 .wb-bewegt .wb-bild:not(.wb-an) .wb-grau path{stroke-dashoffset:130}
 .wb-bewegt .wb-bild .wb-grau path{transition:stroke-dashoffset 1s ease}
@@ -1891,7 +1894,7 @@ const WREGALE = [
   {id:"grund", titel:"Grundlagen", text:"Was eure Haare mitbringen und was wirklich stimmt", kap:["genetik","haarzyklus","porositaet","mythen"]},
   {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall","hormone","graue-haare"]},
   {id:"bruch", titel:"Haarbruch, Spliss & Repair", text:"Mein Herzensthema: vorbeugen statt reparieren", kap:["unterschied","nasses-haar","leavein","llmethode","reparatur","repair","hitze","splissschnitt"]},
-  {id:"pflege", titel:"Pflege verstehen", text:"Shampoo, Öle, Silikone und Frizz", kap:["shampoo","prewash","haaroele","silikone","frizz"]},
+  {id:"pflege", titel:"Pflege verstehen", text:"Shampoo, Öle, Silikone und Frizz", kap:["shampoo","prewash","haaroele","silikone","frizz","babyhaare"]},
   {id:"werkzeug", titel:"Werkzeuge", text:"Bürste, Schere, Kissen: was eure Haare jeden Tag berührt", kap:["buersten","seide","scheren"]},
   {id:"farbe", titel:"Haarfarbe", text:"Färben, Tönen und Farbstiche verstehen", kap:["haarfarbe","farbstiche"]}
 ];
