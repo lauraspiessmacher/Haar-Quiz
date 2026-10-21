@@ -49,4 +49,5 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 
 ## Fotos für Wissen-Kapitel (Laura liefert, Stand 21.10.)
 Passend sind schon: Haarausfall (Mengen 50–200), Kopfhaut (Serum am Scheitel, Massage, Schuppen), Leave-in (4 Konsistenzen, leicht/cremig), LL-Methode (Creme zwischen den Fingern), Porosität (Wasser perlt ab), Reparatur (Maske in den Längen), Genetik (wellig + lockig, glatt fehlt noch), Haaröle (Öl-Pipette), Silikone (Glanz). Produktseite Maske: Tiegel-Foto.
-Noch kein passendes Foto: Genetik glatt (für die Reihe glatt/wellig/lockig), Haarzyklus, Spliss & Haarbruch, Repair, Pre-Wash, Seide/Satin, Haarbürsten, Splissschnitt, Haarschere, Haarfarbe, Farbstiche, (Haarmythen optional).
+Spliss & Haarbruch hat jetzt „kaputte Spitzen“ (21.10.).
+Noch kein passendes Foto: Genetik glatt (für die Reihe glatt/wellig/lockig), Haarzyklus, Repair, Pre-Wash, Seide/Satin, Haarbürsten, Splissschnitt, Haarschere, Haarfarbe, Farbstiche, (Haarmythen optional).
