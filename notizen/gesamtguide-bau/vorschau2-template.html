@@ -665,6 +665,10 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wb-bewegt .wb-balken.wb-an div:nth-of-type(2) i{transition-delay:.2s}.wb-bewegt .wb-balken.wb-an div:nth-of-type(3) i{transition-delay:.4s}
 .wb-bewegt .wb-punkte i.an{background:transparent;transition:background .35s ease}
 .wb-bewegt .wb-an .wb-punkte i.an{background:#382F2E}
+.wart .wb-grau path{stroke-dasharray:130;stroke-dashoffset:0}
+.wb-bewegt .wb-bild:not(.wb-an) .wb-grau path{stroke-dashoffset:130}
+.wb-bewegt .wb-bild .wb-grau path{transition:stroke-dashoffset 1s ease}
+.wb-bewegt .wb-bild .wb-grau path:nth-child(2){transition-delay:.3s}.wb-bewegt .wb-bild .wb-grau path:nth-child(3){transition-delay:.6s}.wb-bewegt .wb-bild .wb-grau path:nth-child(n+4){transition-delay:.9s}
 .wart .wb-kreislauf path[marker-end]{stroke-dasharray:5 5;animation:wbfluss 1.2s linear infinite}
 @keyframes wbfluss{to{stroke-dashoffset:-20}}
 @media (prefers-reduced-motion:reduce){ .wart .wb-kreislauf path[marker-end]{animation:none;stroke-dasharray:none} }
@@ -1861,7 +1865,7 @@ const DATA = __DATA__;
 const WISSEN = __WISSEN__;
 /* Wissen nach Themen (Test 16.10.): jedes Regal hat einen Registerreiter und eine eigene Buchfarbe */
 const WREGALE = [
-  {id:"grund", titel:"Grundlagen", text:"Was eure Haare mitbringen und was wirklich stimmt", kap:["genetik","haarzyklus","porositaet","mythen"]},
+  {id:"grund", titel:"Grundlagen", text:"Was eure Haare mitbringen und was wirklich stimmt", kap:["genetik","haarzyklus","graue-haare","porositaet","mythen"]},
   {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall"]},
   {id:"bruch", titel:"Haarbruch, Spliss & Repair", text:"Mein Herzensthema: vorbeugen statt reparieren", kap:["unterschied","leavein","llmethode","reparatur","repair","splissschnitt"]},
   {id:"pflege", titel:"Pflege verstehen", text:"Öle, Silikone und alles vor dem Shampoo", kap:["prewash","haaroele","silikone"]},
@@ -2305,6 +2309,7 @@ function renderWissen(){
   art.innerHTML = back + (w.entwurf ? `<p class="wdraft">Entwurf: Dieser Text ist noch nicht von Laura geprüft.</p>` : "") + w.html + (w.arzt ? `<p class="wfine">Ich bin keine Ärztin und stelle keine Diagnosen. Bei Kopfhautproblemen oder Haarausfall lasst das bitte ärztlich abklären.</p>` : "") + back;
   art.querySelectorAll(".wback").forEach(b => b.onclick = () => { state.wissen = null; render(); window.scrollTo({top:0}); });
   /* Links aus einem Kapitel zu einer Produktart, z. B. Haarbürsten */
+  art.querySelectorAll("a[data-wissen]").forEach(a => a.onclick = e => { e.preventDefault(); window.showWissen(a.dataset.wissen); });
   art.querySelectorAll("a[data-typ]").forEach(a => a.onclick = e => { e.preventDefault(); state.view = "produkte"; state.type = a.dataset.typ; state.cat = a.dataset.cat || "alle"; state.q = ""; q.value = ""; state.wissen = null; render(); window.scrollTo({top:0}); });
   wissenBausteine(art, w);
 }
@@ -2339,11 +2344,11 @@ function wbBewegung(art, w){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
   art.classList.add("wb-bewegt");
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("wb-an"); io.unobserve(e.target); } }), {threshold: .25});
-  art.querySelectorAll(".wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen").forEach(el => io.observe(el));
+  art.querySelectorAll(".wb-bild:has(.wb-grau),.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen").forEach(el => io.observe(el));
   /* Punkte nacheinander füllen */
   art.querySelectorAll(".wb-meter").forEach((m, i) => m.querySelectorAll(".wb-punkte i").forEach((p, j) => p.style.transitionDelay = (i * 120 + j * 140) + "ms"));
   /* große Zahl zählt hoch */
-  art.querySelectorAll(".wb-zahl b").forEach(b => { const ziel = parseInt(b.textContent.replace(/\D/g, ""), 10); if(!ziel) return;
+  art.querySelectorAll(".wb-zahl b").forEach(b => { if(!/^[\d.]+$/.test(b.textContent.trim())) return; const ziel = parseInt(b.textContent.replace(/\D/g, ""), 10); if(!ziel) return;
     const fmt = n => n.toLocaleString("de-DE"); b.textContent = fmt(0);
     const o = new IntersectionObserver(es => { if(!es[0].isIntersecting) return; o.disconnect(); let t0 = null;
       const go = t => { if(t0 === null) t0 = t; const p = Math.min((t - t0) / 1400, 1), e = 1 - Math.pow(1 - p, 3);

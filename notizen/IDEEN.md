@@ -68,3 +68,19 @@ Eigenes Quiz, das die passende Kopfhautpflege findet, auch Kombinationen aus zwe
 
 ### Haarausfall größer machen (Laura 19.10., Ort noch offen)
 Bisher: Wissen-Kapitel „Haarausfall“ + „Der Haarzyklus“, Produktkategorie „Bei Haarausfall“ (Kopfhautpflege), Marketing-Hinweis an Produkten. Im Haarplan bewusst keine Haarausfall-Seren. Mögliche Orte: (1) eigener Check „Haarausfall-Check“ (Art: diffus, erblich, kreisrund, nach Stress/Schwangerschaft; wann zum Arzt; was Pflege kann und was nicht); (2) Haarausfall als eigenes Regal/Schwerpunkt im Wissen; (3) im Plan ein Kapitel, das nur erscheint, wenn im Kopfhaut-Check Haarausfall angegeben wurde.
+
+## Neue Wissen-Kapitel (Vorschläge 21.10., Laura entscheidet)
+Fertig als Entwurf: Graue Haare (wissen/graue-haare.html, Quellen: Sun et al. Nature 2023 [Mäuse], Panhard et al. BJD 2012 [50-50-50], Rosenberg et al. eLife 2021 [Stress, kleine Studie], Zhang et al. Nature 2020 [Mäuse]).
+Ideen:
+1. INCI lesen lernen (Reihenfolge, „Alkohol ist nicht gleich Alkohol“, Fettalkohole)
+2. Shampoo verstehen (milde/starke Tenside, Mythos sulfatfrei, zweimal shampoonieren)
+3. Frizz: warum er entsteht (Luftfeuchtigkeit, Porosität) und was hilft
+4. Nasses Haar: warum es so empfindlich ist (Wasserstoffbrücken, Dehnung)
+5. Haare durchs Jahr: Winter (Heizungsluft, Mütze, statisch), Sommer (UV, Chlor, Salzwasser), Haarausfall im Herbst (Recherche liegt vor)
+6. Hormone und Haare: Schwangerschaft, nach der Geburt, Pille, Wechseljahre (mit Arzt-Hinweis)
+7. Nahrungsergänzung: was sie kann und was nicht (Biotin nur bei Mangel, Biotin kann Blutwerte verfälschen)
+8. Hitze verstehen: wie Hitzeschutz funktioniert, Temperaturen, Glätteisen-Dauer
+9. Schwimmbad und Meer: Chlor, Kupfer (Grünstich), Salz
+10. Haarwachstum: wie schnell, was wirklich hilft, Mythen (Rosmarinöl, Kopfstand)
+11. pH-Wert und Haare (Schuppenschicht, saure Rinse)
+12. Glossar: alle Fachbegriffe kurz erklärt (gut zum Nachschlagen und für Captions)
