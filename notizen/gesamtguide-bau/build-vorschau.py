@@ -123,6 +123,8 @@ for _n in (1, 2):
 t = t.replace('__PLANBILD__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/planbild.webp','rb').read()).decode())
 t = t.replace('__HHCLUB__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/healthy-hair-club.webp','rb').read()).decode())
 t = t.replace('__KLECKS__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/leavein-klecks.webp','rb').read()).decode())
+for _ph, _f, _typ in [('__OELVIDEO_MP4__','oel-video.mp4','video/mp4'),('__OELVIDEO_WEBM__','oel-video.webm','video/webm'),('__OELVIDEO_POSTER__','oel-video.jpg','image/jpeg')]:
+    t = t.replace(_ph, 'data:' + _typ + ';base64,' + base64.b64encode(open(f'{S}/wissen-bilder/' + _f,'rb').read()).decode())
 t = t.replace('__GEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/gel.webp','rb').read()).decode())
 # Schnitt-Animation auf der Startseite (Lauras Scheren-Fotos, freigestellt)
 for _k in ('offen', 'zu'):

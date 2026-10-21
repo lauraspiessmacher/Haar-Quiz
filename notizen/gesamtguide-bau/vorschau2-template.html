@@ -645,6 +645,12 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-foto.wb-film{max-width:280px;margin-left:auto;margin-right:auto}
 .wart .wb-foto.wb-film video{display:block;width:100%;height:auto;border-radius:16px;background:#D9D7D4}
 @media (max-width:759px){ .wart .wb-foto.wb-film{max-width:220px} }
+/* Video neben „Auf einen Blick“ (Laura 21.10.) */
+.wart .wb-blickfilm{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:18px;align-items:stretch;margin:4px 0 26px}
+.wart .wb-blickfilm .wb-blick{margin:0}
+.wart .wb-blickfilm .wb-foto.wb-film{max-width:none;margin:0}
+.wart .wb-blickfilm .wb-film video{height:100%;object-fit:cover}
+@media (max-width:640px){ .wart .wb-blickfilm{grid-template-columns:1fr} .wart .wb-blickfilm .wb-foto.wb-film{order:-1;max-width:200px;margin:0 auto} .wart .wb-blickfilm .wb-film video{height:auto} }
 /* ganzes Motiv zeigen, nichts abschneiden (Schere bis zur Spitze, Laura 21.10.) */
 .wart .wb-foto.wb-ganz{max-width:300px}
 .wart .wb-foto.wb-ganz img{max-height:none;object-fit:contain}
@@ -1527,6 +1533,10 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
 .llbox h3{margin:0 0 8px;font-size:20px}
 .llbox-oel{margin:0 0 12px;max-width:none}
 .llbox p{margin:0 0 10px}
+/* Haaröl-Box mit kleinem Pipetten-Video (Laura 21.10.) */
+.llbox-oel.mitfilm{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:22px;align-items:center;padding-bottom:18px}
+.llbox-oel .oelfilm{display:block;width:100%;height:auto;border-radius:12px;background:#D9D7D4}
+@media (max-width:600px){ .llbox-oel.mitfilm{grid-template-columns:minmax(0,1fr) 92px;gap:14px} }
 .llbox ul{padding-left:18px;margin:0 0 10px}
 .llquiz{grid-template-columns:minmax(0,760px)}
 /* Quiz-Karte auf der LL-Seite: quer und flach statt hoch (Laura) */
@@ -1724,7 +1734,7 @@ __ROUTINE__
           <li><strong>Weniger ist mehr:</strong> Startet mit sehr wenig Produkt. Nachlegen könnt ihr immer, aber zu viel macht die Haare schwer und strähnig.</li>
           <li><strong>Die richtige Textur:</strong> Feines bis dünnes Haar verträgt meistens leichte Sprays oder Seren. Normales bis dickes Haar kann eigentlich alles nutzen, ob Spray, Serum oder Creme. Sehr dickes Haar mag eher Lotionen und Cremes.</li>
         </ul>
-        <div class="llbox llbox-oel"><h3>Und was ist mit Haaröl?</h3><p>Haaröl ist eigentlich auch ein Leave-in, gehört für mich aber nicht dazu. Für mich ist es ein Add-on-Produkt und trotzdem ein Must-have: Es macht geschmeidig und sorgt für Glanz, spendet aber keine aktive Feuchtigkeit. Wer nur Haaröl als Leave-in benutzt, wird keine großen Erfolge sehen. Deshalb kommt Öl bei mir immer zusätzlich, nach dem Leave-in.</p></div>
+        <div class="llbox llbox-oel mitfilm"><div><h3>Und was ist mit Haaröl?</h3><p>Haaröl ist eigentlich auch ein Leave-in, gehört für mich aber nicht dazu. Für mich ist es ein Add-on-Produkt und trotzdem ein Must-have: Es macht geschmeidig und sorgt für Glanz, spendet aber keine aktive Feuchtigkeit. Wer nur Haaröl als Leave-in benutzt, wird keine großen Erfolge sehen. Deshalb kommt Öl bei mir immer zusätzlich, nach dem Leave-in.</p></div><video class="oelfilm" poster="__OELVIDEO_POSTER__" autoplay muted loop playsinline preload="auto" aria-label="Haaröl tropft langsam aus einer Pipette"><source src="__OELVIDEO_MP4__" type="video/mp4"><source src="__OELVIDEO_WEBM__" type="video/webm"></video></div>
         <div class="llboxes">
           <div class="llbox"><h3>Wenn jeden Tag nicht klappt</h3><p>Für jeden Haartyp gibt es ein passendes Leave-in. Werden eure Haare davon strähnig oder schwer, passt das Produkt nicht zu euch, nicht die Methode. Und wenn ihr es nicht jeden Tag schafft, ist das okay: lieber jeden zweiten oder dritten Tag als gar nicht, mindestens aber nach jeder Haarwäsche. Wie schnell ihr dann Erfolge seht, hängt auch vom Zustand eurer Haare ab.</p></div>
           <div class="llbox"><h3>Woran ihr merkt, dass es wirkt</h3><ul><li>Eure Haare lassen sich leichter entwirren und verknoten weniger.</li><li>In der Bürste und im Waschbecken landen weniger abgebrochene Haare.</li><li>Die Spitzen fühlen sich weicher und geschmeidiger an und sind nicht mehr so trocken oder spröde.</li><li>Je nach Haarstruktur glänzen eure Haare auch mehr.</li></ul></div>
@@ -3413,6 +3423,8 @@ readHash(); q.value = state.q; render();
     ov.querySelector(".handyzu").onclick = zu; ov.onclick = e => { if(e.target === ov) zu(); }; addEventListener("keydown", esc);
   };
 })();
+/* LL-Seite: Öl-Video bei „Bewegung reduzieren“ anhalten */
+document.querySelectorAll("video.oelfilm").forEach(v => { v.muted = true; if (matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); } });
 </script>
 </body>
 </html>
