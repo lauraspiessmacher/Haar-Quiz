@@ -639,6 +639,14 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-mengen figcaption{text-align:center;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.2}
 .wart .wb-mengen figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:#382F2E}
 @media (max-width:520px){ .wart .wb-mengen{grid-template-columns:repeat(2,minmax(0,1fr))} }
+/* ---------- Schnitt-Animation (Startseite) ---------- */
+.schnitt{position:fixed;inset:0;z-index:200;pointer-events:none;overflow:hidden;transition:opacity .5s ease}
+.schnitt.weg{opacity:0}
+.schnitt-schere{position:absolute;left:0;width:min(64vw,500px);aspect-ratio:789/420;will-change:transform;filter:drop-shadow(0 10px 14px rgba(56,47,46,.18))}
+.schnitt-schere img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.schnitt-schere img.zu{opacity:0}
+.schnitt-schere.knips img.zu{opacity:1}.schnitt-schere.knips img:not(.zu){opacity:0}
+.schnitt-linie{position:absolute;left:0;height:0;width:0;border-top:1.5px dashed rgba(56,47,46,.55)}
 .wb-fort{position:fixed;left:0;top:0;height:3px;width:0;background:#382F2E;z-index:40;pointer-events:none;transition:width .1s linear}
 .wfine{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:16px;margin-top:30px}
 
@@ -3127,6 +3135,32 @@ document.querySelectorAll(".qcard").forEach(a => a.addEventListener("click", e =
 }, true));
 window.addEventListener("resize", setHH);
 readHash(); q.value = state.q; render();
+
+/* ---------- Schnitt beim Aufruf der Startseite (Laura 21.10.): Schere schneidet einmal quer über die Seite ---------- */
+(function(){
+  if(state.view !== "start") return;
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const box = document.createElement("div"); box.className = "schnitt"; box.setAttribute("aria-hidden", "true");
+  box.innerHTML = `<div class="schnitt-linie"></div><div class="schnitt-schere"><img src="__SCHERE_OFFEN__" alt=""><img src="__SCHERE_ZU__" alt="" class="zu"></div>`;
+  document.body.append(box);
+  const sch = box.querySelector(".schnitt-schere"), linie = box.querySelector(".schnitt-linie"), imgs = box.querySelectorAll("img");
+  const ende = () => { box.classList.add("weg"); setTimeout(() => box.remove(), 600); };
+  Promise.all([...imgs].map(i => i.decode ? i.decode().catch(() => {}) : 0)).then(() => {
+    const W = innerWidth, w = sch.offsetWidth, h = sch.offsetHeight, y = Math.round(innerHeight * 0.36);
+    const spitze = 0.975, hoehe = 0.40;              /* Lage der Klingenspitze im Bild */
+    sch.style.top = (y - h * hoehe) + "px"; linie.style.top = y + "px";
+    const von = -w, bis = W + w * 0.15, dauer = Math.max(2000, Math.min(2600, W * 2));
+    let t0 = null, frame = 0;
+    const schritt = t => { if(t0 === null) t0 = t; const p = Math.min((t - t0) / dauer, 1);
+      const e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2, x = von + (bis - von) * e;
+      sch.style.transform = `translateX(${x}px)`;
+      linie.style.width = Math.max(0, Math.min(W, x + w * spitze)) + "px";
+      const f = Math.floor((t - t0) / 130) % 2; if(f !== frame){ frame = f; sch.classList.toggle("knips", f === 1); }
+      if(p < 1) requestAnimationFrame(schritt); else ende(); };
+    requestAnimationFrame(schritt);
+  });
+  setTimeout(() => box.isConnected && ende(), 4500);   /* Sicherheitsnetz */
+})();
 </script>
 </body>
 </html>

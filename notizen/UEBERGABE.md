@@ -489,3 +489,4 @@
 - Vorschau v286: Foto Friseurschere im Kapitel Haarschere (vor „Warum die Schere so wichtig ist“).
 - Vorschau v287: Lauras Grafik „Der Haarwachstumszyklus“ ersetzt im Kapitel Haarzyklus das Kreisdiagramm mit Prozenten (Prozente stehen weiter in den Wischkarten). Weißer Hintergrund per mix-blend-mode multiply angeglichen. Auf dem Handy ist die kleine Schrift in der Grafik knapp lesbar.
 - Vorschau v288: Foto Seidenkissen + Scrunchie im Kapitel Seide oder Satin (vor „Was ist der Unterschied?“).
+- Vorschau v289: Schnitt-Animation beim Aufruf der Startseite: Lauras Scheren-Fotos (offen/zu, freigestellt mit rembg birefnet-general-lite, am Drehgelenk ausgerichtet, 90° gedreht, Unterarm ausgeblendet) in bilder/deko/schere-offen.webp / schere-zu.webp. Schere fährt einmal von links nach rechts (2–2,6 s), knipst alle 130 ms, hinterlässt gestrichelte Schnittlinie, blendet aus. Nur wenn die Startseite geöffnet wird, nicht bei „weniger Bewegung“. Läuft bei jedem Neuladen.
