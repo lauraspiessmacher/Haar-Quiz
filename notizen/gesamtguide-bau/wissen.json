@@ -4,8 +4,7 @@
     "titel": "Was ist genetisch bedingt?",
     "teaser": "Haardicke, Struktur, Länge: Was euch eure Gene mitgeben und was ihr trotzdem beeinflussen könnt.",
     "datei": "genetik.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "haarzyklus",
