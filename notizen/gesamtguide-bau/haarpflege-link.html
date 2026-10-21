@@ -1388,6 +1388,7 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 @media (max-width:600px){ .llkarte{padding:22px 16px 18px} .llkarte h2{font-size:24px;margin-bottom:14px} .llkurz{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px} .llkurz li{grid-template-columns:1fr;text-align:center;justify-items:center;background:rgba(243,236,226,.07);border-radius:14px;padding:12px 8px} .llkurz li::before{grid-row:auto;width:28px;height:28px;font-size:15px;margin-bottom:4px} .llkurz b{font-size:13px} .llkurz span{font-size:12.5px;line-height:1.35} }
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
 /* „Meine“ / „Dein“ im großen Seitentitel: größer, kursiv, nicht in Großbuchstaben (Laura 21.10.) */
+.whero .intro h1,html[data-stil] .whero .intro h1{white-space:nowrap;font-size:clamp(46px,7.4vw,96px)}
 h1 em.hkurs,html[data-stil] h1 em.hkurs{font-style:italic;text-transform:none;font-size:1.3em;letter-spacing:0;font-weight:inherit;line-height:.9;margin-right:.04em}
 .llhero .lead{font-size:17px;max-width:62ch;margin:0 0 12px}
 .llhero .lead strong{font-weight:600}
@@ -1736,7 +1737,7 @@ h1 em.hkurs,html[data-stil] h1 em.hkurs{font-style:italic;text-transform:none;fo
   </section>
 
   <section class="view" id="v-quiz" hidden>
-    <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1>Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es sechs Extra-Checks: welches Leave-in zu dir passt, welche Kopfhautpflege und welches Peeling du brauchst, wie kaputt deine Haare sind, ob dein Haarverlust normal ist, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
+    <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1><em class="hkurs">Dein</em> Haar-Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es sechs Extra-Checks: welches Leave-in zu dir passt, welche Kopfhautpflege und welches Peeling du brauchst, wie kaputt deine Haare sind, ob dein Haarverlust normal ist, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
       <a class="qcard" data-check="kopfhaut" href="quiz-kopfhaut.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
         <span class="qfor">Für dein Shampoo</span>
@@ -1830,7 +1831,7 @@ h1 em.hkurs,html[data-stil] h1 em.hkurs{font-style:italic;text-transform:none;fo
 
   <!-- ===================== WISSEN ===================== -->
   <section class="view" id="v-wissen" hidden>
-    <div id="wissenListe"><div class="whero"><div class="wherol"><div class="intro"><h1>Wissen</h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
+    <div id="wissenListe"><div class="whero"><div class="wherol"><div class="intro"><h1><em class="hkurs">Mein</em> Wissen</h1><p>Ihr habt Fragen zu bestimmten Themen, oder euch interessiert ein Bereich der Haarpflege ganz besonders? Hier findet ihr meine kleine Haarpflege-Bibliothek.</p></div>
     <div class="searchwrap wsearch">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="wq" type="search" placeholder="Wonach suchst du? Zum Beispiel „Haarausfall“ oder „Silikone“" aria-label="Wissen durchsuchen">

@@ -500,3 +500,4 @@
 - Vorschau v297: Frizz-Fotos neu beschriftet: beide zeigen Frizz (glattes Haar: abstehende Härchen / welliges Haar: aufgeplustert).
 - Vorschau v298: Neues Wissen-Kapitel „Neue Haare, Haarbruch oder Frizz?“ (babyhaare.html, Entwurf, Regal Pflege nach Frizz): warum Haare nie gleich lang sind (18.000–36.000 neue Haare/Jahr gerechnet aus 50–100/Tag), Längen-Balken, Dreier-Zeichnung (neues Haar wächst in Schleife), Vergleichskarten, 5 Schritte zum Erkennen (Ende: fein/stumpf/volle Länge), Mini-Frage, warum neue Haare abstehen, Pflege-Checkliste, Hinweis, Karte Spliss-Check.
 - Vorschau v299: Seitentitel „Meine LL-Methode“ und „Dein Haarplan“: „Meine“/„Dein“ kursiv, 1,3× größer, nicht in Großbuchstaben (em.hkurs).
+- Vorschau v300: Seitentitel „Dein Haar-Quiz“ und „Mein Wissen“ mit kursivem, größerem erstem Wort (wie LL/Haarplan); Wissen-Titel einzeilig (nowrap, max. 96 px).
