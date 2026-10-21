@@ -46,3 +46,7 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - **Zum Schluss fragen (wenn Laura „gibt es noch offene Punkte?“ fragt):** Soll der Name „Haarplan“ bleiben oder nicht? (Laura 19.10.: erstmal so lassen.)
 - **Zum Schluss fragen:** Möchte Laura für die Haarplan-Einkaufsliste eine eigene „Plan-Auswahl“ pflegen (pro Produktart ihre Top-Produkte, z. B. je Haardicke 3–5), die der Plan zuerst zieht? (Laura 19.10.: fürs Erste nicht, später erinnern.)
 - Kopfhautpflege-Check: Laura liest notizen/kopfhaut-check-konzept.md gegen (5 offene Fragen), danach bauen. Wissen-Seite „Bibliothek“-Look: Laura überlegt (nicht von sich aus wieder anfangen).
+
+## Fotos für Wissen-Kapitel (Laura liefert, Stand 21.10.)
+Passend sind schon: Haarausfall (Mengen 50–200), Kopfhaut (Massage, Serum am Scheitel), Leave-in (leicht/cremig), Haaröle (Öl-Pipette), Silikone (Glanz).
+Noch kein passendes Foto: Genetik, Haarzyklus, Porosität, Spliss & Haarbruch, Kann man Haar reparieren, Repair, LL-Methode, Pre-Wash, Seide/Satin, Haarbürsten, Splissschnitt, Haarschere, Haarfarbe, Farbstiche, Haarmythen (Wunschliste mit Motiven in der Antwort an Laura vom 21.10.).
