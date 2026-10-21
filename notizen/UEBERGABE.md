@@ -510,3 +510,4 @@
 - Vorschau v307: Menü: kleine Lücke vor „Mein Bereich“ (6 px, Handy 4 px), damit aktiver Reiter und grüner Knopf nicht zusammenkleben.
 - Vorschau v308: Produktkarten Shampoo und Kopfhautpflege: „Passt zu: <Kopfhauttyp>“ dunkelbraun umrandet, Text dunkel, „Passt zu:“ fett (.also.kopftyp).
 - Vorschau v309: Kopfhauttyp-Feld (Shampoo, Kopfhautpflege) jetzt dunkelbraun gefüllt mit weißer Schrift.
+- Vorschau v309b: Haarplan-Seite: Lauras Vorlage (Handschuh-Hand mit Karte + Silberbrosche, bilder/deko/planbild.webp) rechts neben dem Seitenkopf, auf der Karte ein angedeuteter Wochenplan (HTML-Text, skaliert per cqw). Nur ab 900 px Breite, ausgeblendet sobald der fertige Plan angezeigt wird.
