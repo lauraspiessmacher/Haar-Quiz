@@ -307,24 +307,8 @@ html,body{overflow-x:clip}
 /* Silbernes Healthy-Hair-Club-Siegel statt Nadel (Laura 22.10.): halb auf dem Foto, halb auf der Seite */
 .nadel.siegel{width:112px;top:-42px;left:calc(50% - 56px);transform:rotate(-7deg);filter:none}
 .hero:has(.nadel.siegel){padding-top:58px}
-/* Siegel glitzert (Laura 22.10.): viele kleine Funken blitzen nacheinander auf (kein Lichtstreif mehr) */
+/* Siegel als Hintergrundbild (Glitzern auf Lauras Wunsch wieder entfernt, 22.10.) */
 .nadel.siegel{display:block;aspect-ratio:408/380;height:auto;background:var(--s) center/contain no-repeat}
-.siegel .funke{position:absolute;width:20%;aspect-ratio:1;pointer-events:none;opacity:0;transform:scale(.2) rotate(0);
-  background:radial-gradient(circle,#fff 0 12%,rgba(255,255,255,.55) 22%,transparent 40%),
-    linear-gradient(#fff,#fff) center/4% 100% no-repeat,linear-gradient(#fff,#fff) center/100% 4% no-repeat;
-  -webkit-mask:radial-gradient(circle,#000 30%,transparent 72%);mask:radial-gradient(circle,#000 30%,transparent 72%);
-  filter:drop-shadow(0 0 1px rgba(60,50,45,.75)) drop-shadow(0 0 3px rgba(255,255,255,1)) drop-shadow(0 0 7px rgba(255,255,255,.9));animation:siegelFunke 3s ease-in-out infinite}
-.siegel .f1{left:3%;top:5%;width:32%;animation-delay:0.00s}
-.siegel .f2{left:61%;top:0%;width:24%;animation-delay:0.33s}
-.siegel .f3{left:67%;top:55%;width:29%;animation-delay:0.66s}
-.siegel .f4{left:25%;top:35%;width:18%;animation-delay:0.99s}
-.siegel .f5{left:47%;top:17%;width:14%;animation-delay:1.32s}
-.siegel .f6{left:9%;top:57%;width:22%;animation-delay:1.65s}
-.siegel .f7{left:79%;top:25%;width:19%;animation-delay:1.98s}
-.siegel .f8{left:39%;top:65%;width:16%;animation-delay:2.31s}
-.siegel .f9{left:53%;top:43%;width:21%;animation-delay:2.64s}
-@keyframes siegelFunke{0%,100%{opacity:0;transform:scale(.2) rotate(0)}12%{opacity:1;transform:scale(1) rotate(30deg)}22%{opacity:1;transform:scale(.85) rotate(60deg)}34%{opacity:0;transform:scale(.3) rotate(90deg)}}
-@media (prefers-reduced-motion:reduce){ .siegel .funke{animation:none;opacity:0} }
 @media (max-width:759px){ .nadel.siegel{width:78px;top:-29px;left:calc(50% - 39px)} .hero:has(.nadel.siegel){padding-top:44px} }
 .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
 .hero h1{font-size:clamp(38px,6vw,64px);line-height:1}
@@ -1657,7 +1641,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
     <div class="windctl" id="windctl" role="group" aria-label="Test: Haarsträhnen im Hintergrund"><span>Strähnen</span><button type="button" data-w="maehne">Mähne</button><button type="button" data-w="dezent">Dezent</button><button type="button" data-w="aus">Aus</button></div>
     <div class="hero">
       <div class="wind" id="wind" aria-hidden="true"></div>
-      <div class="photowrap"><span class="nadel siegel" style="--s:url(__SIEGEL_HHC__)" aria-hidden="true"><i class="funke f1"></i><i class="funke f2"></i><i class="funke f3"></i><i class="funke f4"></i><i class="funke f5"></i><i class="funke f6"></i><i class="funke f7"></i><i class="funke f8"></i><i class="funke f9"></i></span>
+      <div class="photowrap"><span class="nadel siegel" style="--s:url(__SIEGEL_HHC__)" aria-hidden="true"></span>
       <div class="photo has-img"><img src="__LAURA_FOTO__" alt="Laura mit langen, gesunden braunen Haaren" width="900" height="1350"></div></div>
       <div>
         <p class="kicker">Willkommen in der Healthy Hair Community</p>

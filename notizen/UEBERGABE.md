@@ -552,3 +552,4 @@
 - v344: Siegel war auf dem Handy unter der Kopfzeile abgeschnitten: kleiner (112 px, Handy 78 px), Startseiten-Kopf etwas mehr Abstand oben; geprüft 390/768/1280 px: Siegel komplett unter der Kopfzeile.
 - v345: Siegel glitzert: alle 5 s läuft ein Lichtstreif über das Silber (Maske = Siegelform), dazu nacheinander 3 kleine Funken am Rand. Siegel jetzt als span mit Hintergrundbild (--s), bei 'Bewegung reduzieren' still.
 - v346: Siegel: Lichtstreif raus, stattdessen 9 Funken (größer, heller, dunkler Hauch als Kontur), überlappend alle 0,33 s, Zyklus 3 s. Vorschau-Video notizen/bilder/deko/siegel-glitzer-vorschau.mp4.
+- v347: Siegel-Glitzern auf Lauras Wunsch komplett entfernt (Siegel bleibt, ohne Effekt).
