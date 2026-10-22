@@ -548,3 +548,4 @@
   - Spitze (aktiv): notizen/brief/brief.html = brief-spitze.html → `python3 notizen/brief/einbauen.py`
   - Siegel (alt): notizen/brief/brief-siegel-alt.html → `python3 notizen/brief/einbauen.py --siegel`
   - danach Seite neu bauen (dump.js + build-vorschau.py). Zwischenversion mit grauem Hintergrund und aufklappender Klappe: brief-umschlag-v1.html (braucht umschlag.py-Ebenen, nicht mehr im Einbauskript).
+- v343: Startseite: Stecknadel am Foto ersetzt durch Lauras silbernes Healthy-Hair-Club-Siegel (freigestellt, Schatten im Bild, leicht gedreht), halb auf dem Foto, halb auf der Seite (150 px, Handy 100 px). Nadel-Bild bleibt im Ordner. ACHTUNG: Auf Lauras Siegelbild steht „Healthy Cair Club“ (C statt H), Laura informiert.

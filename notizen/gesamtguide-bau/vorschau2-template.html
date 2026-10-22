@@ -304,6 +304,9 @@ html,body{overflow-x:clip}
 .photowrap{position:relative}
 .nadel{position:absolute;z-index:2;top:-29px;left:calc(50% - 17px);width:74px;height:auto;pointer-events:none;filter:drop-shadow(5px 9px 5px rgba(40,30,28,.32))}
 @media (max-width:759px){ .nadel{width:56px;top:-14px;left:calc(50% - 13px)} }
+/* Silbernes Healthy-Hair-Club-Siegel statt Nadel (Laura 22.10.): halb auf dem Foto, halb auf der Seite */
+.nadel.siegel{width:150px;top:-54px;left:calc(50% - 75px);transform:rotate(-7deg);filter:none}
+@media (max-width:759px){ .nadel.siegel{width:100px;top:-34px;left:calc(50% - 50px)} }
 .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
 .hero h1{font-size:clamp(38px,6vw,64px);line-height:1}
 .hero p.lead{font-size:16px;margin:18px 0 0;max-width:52ch}
@@ -1635,7 +1638,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
     <div class="windctl" id="windctl" role="group" aria-label="Test: Haarsträhnen im Hintergrund"><span>Strähnen</span><button type="button" data-w="maehne">Mähne</button><button type="button" data-w="dezent">Dezent</button><button type="button" data-w="aus">Aus</button></div>
     <div class="hero">
       <div class="wind" id="wind" aria-hidden="true"></div>
-      <div class="photowrap"><img class="nadel" src="__STECKNADEL__" alt="" aria-hidden="true" width="240" height="242">
+      <div class="photowrap"><img class="nadel siegel" src="__SIEGEL_HHC__" alt="" aria-hidden="true" width="408" height="380">
       <div class="photo has-img"><img src="__LAURA_FOTO__" alt="Laura mit langen, gesunden braunen Haaren" width="900" height="1350"></div></div>
       <div>
         <p class="kicker">Willkommen in der Healthy Hair Community</p>

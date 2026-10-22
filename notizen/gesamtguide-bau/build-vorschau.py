@@ -133,6 +133,7 @@ t = t.replace('__GEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}
 # Schnitt-Animation auf der Startseite (Lauras Scheren-Fotos, freigestellt)
 for _k in ('offen', 'zu'):
     t = t.replace('__SCHERE_' + _k.upper() + '__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/schere-' + _k + '.webp','rb').read()).decode())
+t = t.replace('__SIEGEL_HHC__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/siegel-hhc.webp','rb').read()).decode())
 t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html').replace('__QUIZ_SPLISS__', 'quiz-spliss.html').replace('__QUIZ_LEAVEIN__', 'quiz-leavein.html').replace('__QUIZ_KOPFPFLEGE__', 'quiz-kopfpflege.html').replace('__QUIZ_AUSFALL__', 'quiz-ausfall.html')
