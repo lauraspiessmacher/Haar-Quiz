@@ -32,3 +32,4 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
 1. Wissen „Nasses Haar“, Grafik „Was Wasser im Haar macht“ (zwei Leitern, trocken/nass): Bewegung rein. Die Wassermoleküle in der nassen Leiter sollen sich bewegen (z. B. leicht schweben/wackeln, gelöste Sprossen-Enden zittern), damit auch hier etwas Bewegung ist.
 2. Wissen „Nasses Haar“, „Auf einen Blick“: Mein Vorschlag „Nasses Haar ist weich und dehnbar, weil sich im Inneren viele kleine Verbindungen lösen. Dadurch reißt es leichter.“ statt „Im nassen Haar lösen sich innere Bindungen …“. Laura noch nicht ausdrücklich bestätigt → beim Go nachfragen.
 3. Karte „Kämmen unter der Dusche“: Laura überlegte, in „unter der Dusche“ und „nach der Wäsche“ zu trennen, hat dann aber entschieden: bleibt so.
+4. „Nasses Haar“: nach den Änderungen freigeben (Lauras Nachricht endet mit „wäre das dann …“, vermutlich „freigegeben“; beim Go kurz bestätigen lassen).
