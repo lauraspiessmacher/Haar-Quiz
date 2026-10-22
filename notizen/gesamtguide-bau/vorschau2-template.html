@@ -305,8 +305,9 @@ html,body{overflow-x:clip}
 .nadel{position:absolute;z-index:2;top:-29px;left:calc(50% - 17px);width:74px;height:auto;pointer-events:none;filter:drop-shadow(5px 9px 5px rgba(40,30,28,.32))}
 @media (max-width:759px){ .nadel{width:56px;top:-14px;left:calc(50% - 13px)} }
 /* Silbernes Healthy-Hair-Club-Siegel statt Nadel (Laura 22.10.): halb auf dem Foto, halb auf der Seite */
-.nadel.siegel{width:150px;top:-54px;left:calc(50% - 75px);transform:rotate(-7deg);filter:none}
-@media (max-width:759px){ .nadel.siegel{width:100px;top:-34px;left:calc(50% - 50px)} }
+.nadel.siegel{width:112px;top:-42px;left:calc(50% - 56px);transform:rotate(-7deg);filter:none}
+.hero:has(.nadel.siegel){padding-top:58px}
+@media (max-width:759px){ .nadel.siegel{width:78px;top:-29px;left:calc(50% - 39px)} .hero:has(.nadel.siegel){padding-top:44px} }
 .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
 .hero h1{font-size:clamp(38px,6vw,64px);line-height:1}
 .hero p.lead{font-size:16px;margin:18px 0 0;max-width:52ch}
