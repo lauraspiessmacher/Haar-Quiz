@@ -119,8 +119,7 @@
     "titel": "Der Splissschnitt",
     "teaser": "Spliss loswerden, ohne Länge zu verlieren, und wie ich ihn mir selbst schneide.",
     "datei": "splissschnitt.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "scheren",
@@ -171,8 +170,7 @@
     "titel": "Nasses Haar",
     "teaser": "Warum Haare nass so empfindlich sind und wo die meisten Schäden entstehen.",
     "datei": "nasses-haar.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "hormone",

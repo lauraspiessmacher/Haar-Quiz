@@ -534,3 +534,4 @@
 - v331: Produkte → Shampoo: Banner-Hintergrund jetzt Lauras Schaum-Video (quer zugeschnitten 720×380 aus der Mitte, MP4 110 KB + WebM 78 KB, Poster), stumm in Schleife hinter dem Schriftzug; Standbild bleibt als Rückfall und bei 'Bewegung reduzieren'.
 - v332: Produkte → Haaröl: Pipetten-Video rechts im Banner (Pipette kommt von rechts, links weich ausgeblendet, 300 px; Handy 46 % breit, 180 px hoch oben rechts, Text liegt davor). Eigener Ausschnitt oel-banner.mp4/.webm/.jpg.
 - v333: Haaröl-Banner: altes Öl-Foto (TEX.oel) entfernt, Hintergrund jetzt heller Verlauf ins Video-Grau, nur noch das Pipetten-Video.
+- v334: Runde 2: Nasses Haar (Wassermoleküle schweben animiert in der nassen Leiter, einfacherer Blick-Satz, freigegeben), Splissschnitt (zwei Methoden nebeneinander: Eindrehen + Lauras Finger-Methode mit neuer Zeichnung, freigegeben), Hitze (Keratin-Klammer, Absatz „Erst föhnen, dann glätten“ mit erneutem Hitzeschutz).

@@ -41,3 +41,5 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
    - Danach Kapitel freigeben (Nachricht endet mit „Sonst wäre das Kapitel dann …“, vermutlich „freigegeben“).
 6. Wissen „Hitze verstehen“, Abschnitt „Was Hitze im Haar macht“: „die Eiweiße im Inneren“ ergänzen zu „die Eiweiße im Inneren (Proteine, vor allem Keratin)“. Fachlich richtig.
 7. Wissen „Hitze verstehen“: neuer Punkt „Erst föhnen, dann glätten: noch einmal Hitzeschutz?“ Lauras Empfehlung: ja, auf jeden Fall. Ergänzungen: ein Hitzeschutz für trockenes Haar, nur ein feiner Sprühnebel vor allem auf Längen und Spitzen, vollständig trocknen lassen, bevor das Glätteisen kommt (nie zischen lassen).
+
+**Runde 2 umgesetzt am 22.10. nach Lauras Go (v334):** Punkte 1–7. „Auf einen Blick“-Satz bei Nasses Haar ebenfalls übernommen. Nasses Haar und Splissschnitt freigegeben. Splissschnitt-Zeichnung nach Lauras Beschreibung (Handhaltung nicht extra bestätigt).

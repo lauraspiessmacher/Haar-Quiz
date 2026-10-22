@@ -594,6 +594,18 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-check h3.wb-zt{margin:0 0 4px}
 .wart .wb-bild{margin:18px 0 22px;text-align:center}
 .wart .wb-bild svg{display:block;width:100%;max-width:440px;height:auto;margin:0 auto}
+/* Splissschnitt: zwei Methoden nebeneinander (Laura 22.10.) */
+.wart .wb-methoden{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:6px 0 18px}
+@media (max-width:620px){ .wart .wb-methoden{grid-template-columns:1fr} }
+.wart .wb-methode{margin:0;background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:18px;padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px}
+.wart .wb-methode svg{display:block;width:100%;max-width:260px;height:auto;margin:0 auto}
+.wart .wb-methode .wb-straehne{max-width:230px;margin:18px auto}
+.wart .wb-methode figcaption{font-size:15px;line-height:1.5;color:#382F2E;text-align:left}
+.wart .wb-methode figcaption .wb-kick{display:block;margin:0 0 2px}
+.wart .wb-methode figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:4px}
+.wart .wb-finger .spl{animation:wbspl 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+@keyframes wbspl{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+@media (prefers-reduced-motion:reduce){ .wart .wb-finger .spl{animation:none} }
 .wart .wb-bild figcaption{font-size:13.5px;color:var(--muted);margin-top:6px}
 .wart .note .wb-bild{margin:14px 0 4px}
 .wart .wb-bild.wb-gross{background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:16px;padding:12px 10px 8px}
@@ -714,9 +726,16 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 @keyframes wbfrizz{0%,100%{transform:rotate(0)}50%{transform:rotate(2.5deg) scaleX(1.05)}}
 .wart .wb-leiter .lose{animation:wblose 2.8s ease-in-out infinite}
 @keyframes wblose{0%,100%{opacity:1}50%{opacity:.25}}
+/* Wassermoleküle in der nassen Leiter schweben (Laura 22.10.) */
+.wart .wb-leiter .mol > *{animation:wbmol 3.6s ease-in-out infinite}
+.wart .wb-leiter .mol.m2 > *{animation-duration:4.4s;animation-delay:-1.1s}
+.wart .wb-leiter .mol.m3 > *{animation-duration:3.1s;animation-delay:-2s;animation-direction:reverse}
+.wart .wb-leiter .mol.m4 > *{animation-duration:5s;animation-delay:-.6s}
+@keyframes wbmol{0%,100%{transform:translate(0,0) rotate(0)}25%{transform:translate(2.5px,-3px)}50%{transform:translate(-1.5px,-5px)}75%{transform:translate(-3px,-1.5px)}}
+.wart .wb-leiter .lose{transform-box:fill-box;transform-origin:center}
 .wart .wb-mizelle > g:first-of-type{transform-box:view-box;transform-origin:160px 75px;animation:wbdreh 14s linear infinite}
 @keyframes wbdreh{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){ .wart .wb-frizz .fz,.wart .wb-leiter .lose,.wart .wb-mizelle > g:first-of-type{animation:none} }
+@media (prefers-reduced-motion:reduce){ .wart .wb-leiter .mol > *,.wart .wb-frizz .fz,.wart .wb-leiter .lose,.wart .wb-mizelle > g:first-of-type{animation:none} }
 .wart .wb-dreier .wb-neu{transform-box:fill-box;transform-origin:top;animation:wbwachs 4.5s ease-in-out infinite}
 @keyframes wbwachs{0%{transform:scaleY(.15)}70%,100%{transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){ .wart .wb-dreier .wb-neu{animation:none} }
