@@ -162,8 +162,7 @@
     "titel": "Frizz",
     "teaser": "Warum eure Haare bei Regen aufplustern, was die Luftfeuchtigkeit macht und was wirklich hilft.",
     "datei": "frizz.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "nasses-haar",
