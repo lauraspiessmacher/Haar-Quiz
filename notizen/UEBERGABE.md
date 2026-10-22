@@ -550,3 +550,4 @@
   - danach Seite neu bauen (dump.js + build-vorschau.py). Zwischenversion mit grauem Hintergrund und aufklappender Klappe: brief-umschlag-v1.html (braucht umschlag.py-Ebenen, nicht mehr im Einbauskript).
 - v343: Startseite: Stecknadel am Foto ersetzt durch Lauras silbernes Healthy-Hair-Club-Siegel (freigestellt, Schatten im Bild, leicht gedreht), halb auf dem Foto, halb auf der Seite (150 px, Handy 100 px). Nadel-Bild bleibt im Ordner. ACHTUNG: Auf Lauras Siegelbild steht „Healthy Cair Club“ (C statt H), Laura informiert.
 - v344: Siegel war auf dem Handy unter der Kopfzeile abgeschnitten: kleiner (112 px, Handy 78 px), Startseiten-Kopf etwas mehr Abstand oben; geprüft 390/768/1280 px: Siegel komplett unter der Kopfzeile.
+- v345: Siegel glitzert: alle 5 s läuft ein Lichtstreif über das Silber (Maske = Siegelform), dazu nacheinander 3 kleine Funken am Rand. Siegel jetzt als span mit Hintergrundbild (--s), bei 'Bewegung reduzieren' still.
