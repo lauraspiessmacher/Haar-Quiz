@@ -280,7 +280,7 @@ const CAUSE = {
    f.rubbeln ? "Nasse Haare nicht rubbeln, sondern mit einem weichen Handtuch oder Mikrofasertuch sanft ausdrücken." : "",
    f.nass ? "Nasse Haare sind am empfindlichsten. Gib erst ein Leave-in hinein und entwirre sie dann vorsichtig von unten nach oben, am besten mit einer Entwirrbürste." : "Entwirre deine Haare immer von unten nach oben, Stück für Stück.",
    f.kragen ? "Trag die Haare bei Rucksack, Schal oder hohem Kragen lieber nach vorne gelegt oder locker zusammengebunden." : "",
-   f.sport ? "Beim Sport die Haare locker zusammenbinden, zum Beispiel zu einem lockeren Zopf mit Scrunchie." : "",
+   f.sport ? "Beim Sport die Haare locker zusammenbinden, zum Beispiel zu einem lockeren Zopf mit einem Seiden- oder Satin-Scrunchie." : "",
    f.spiel ? "Versuch, weniger an den Spitzen zu spielen und zu zwirbeln, genau dort entsteht sonst Spliss." : ""]],
  hz:["Hitze","Hitze nimmt den Haaren Feuchtigkeit und raut die Schuppenschicht auf. Zu heiß oder ohne Schutz entstehen sogar kleine Bläschen im Haar, an denen es bricht. Sehr viel Hitze schädigt das Haar mit der Zeit bis in die Struktur.", f => [
    "Vor jeder Hitze ein Hitzeschutz, ohne Ausnahme.",
@@ -297,7 +297,7 @@ const CAUSE = {
    "Mit meiner LL-Methode bleiben deine Haare auch zwischen den Wäschen geschmeidig, mehr dazu unten."]],
  zug:["Zug und Spannung","Wenn Haare am Oberkopf oder Ansatz mit stumpfem Ende abbrechen, liegt das oft an Zug: straffe Zöpfe, Gummis oder immer die gleiche Frisur.", f => [
    "Binde deine Haare locker zusammen und wechsle die Stelle des Zopfes.",
-   "Nimm Scrunchies oder Spiralgummis statt Gummis mit Metall.",
+   "Nimm Seiden- oder Satin-Scrunchies statt normaler Haargummis (mit oder ohne Metall).",
    "Nie nasse Haare straff zusammenbinden, nass dehnen sie sich und brechen leichter."]],
  um:["Sonne, Chlor und Salzwasser","UV-Strahlen, Chlor und Salz trocknen die Haare aus und bleichen sie aus, vor allem an den Spitzen.", f => [
    "Mach die Haare vor dem Schwimmen mit klarem Wasser nass und gib ein Leave-in hinein, dann saugen sie weniger Chlor und Salz auf.",
@@ -340,7 +340,7 @@ function result(){
   const nr = splHtml ? 3 : 2;
   const nacht = `<div class="block"><h3><span class="mark">${nr+1}</span>Schutz in der Nacht</h3>
     <p>Nachts bewegst du dich viel, und deine Haare reiben die ganze Zeit am Kissen. Das ist einer der größten Gründe für Spliss und Haarbruch.</p>
-    <ul><li><strong>Schlaffrisur:</strong> Trag die Haare nachts locker geflochten oder als lockeren Dutt, mit einem Scrunchie statt einem engen Gummi.</li>
+    <ul><li><strong>Schlaffrisur:</strong> Trag die Haare nachts locker geflochten oder als lockeren Dutt, mit einem Seiden- oder Satin-Scrunchie statt einem normalen Haargummi.</li>
     <li><strong>Kissenbezug:</strong> Ein Seidenkissenbezug ist am glattesten und reibt am wenigsten. Eine günstigere Alternative ist ein Bezug aus Bambusviskose.</li>
     <li>Geh nie mit nassen Haaren ins Bett. Nass sind sie am empfindlichsten.</li></ul></div>`;
   const ll = `<div class="block"><h3><span class="mark">${nr+2}</span>Meine LL-Methode</h3>

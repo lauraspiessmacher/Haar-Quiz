@@ -399,7 +399,7 @@ function plan(a){
     const items = [], sp = sportDays.includes(d), isWash = wash.includes(d);
     let label;
     if(sp && a.sport === "viel") items.push("Beim Sport: Haare zu einem Zopf flechten");
-    else if(sp) items.push("Beim Sport: lockerer Zopf oder Dutt mit einem Satin-Scrunchie");
+    else if(sp) items.push("Beim Sport: lockerer Zopf oder Dutt mit einem Seiden- oder Satin-Scrunchie");
     if(isWash){
       label = sp ? "Waschtag nach dem Sport" : "Waschtag";
       if(d === prewashDay) items.push(`Vorher Pre-Wash-Pflege mit der ${PREWASH[dk]}`);
@@ -511,7 +511,7 @@ function plan(a){
 
   let np;
   if(S.includes("haube")) np = "Mit deiner Seidenhaube sind deine Haare rundum geschützt, das ist die Pro-Variante. Ein Kissenbezug aus Seide ist dann nur noch ein Plus für deine Haut, weil Seide zum Beispiel als antibakteriell gilt.";
-  else if(S.includes("flecht") || S.includes("zopf")) np = `Gut, dass du deine Haare nachts schon schützt. ${S.includes("kissen") ? "Mit deinem Kissenbezug aus Seide oder Bambusviskose bist du auf der sicheren Seite." : "Um auf der sicheren Seite zu sein, nimm trotzdem einen Kissenbezug aus Seide oder alternativ aus Bambusviskose."}${S.includes("flecht") ? "" : " Locker geflochten ist noch etwas schonender als Dutt oder Pferdeschwanz, und ein Satin-Scrunchie drückt weniger als ein normales Haargummi."} Wenn du noch mehr willst: Eine Seidenhaube schützt rundum.`;
+  else if(S.includes("flecht") || S.includes("zopf")) np = `Gut, dass du deine Haare nachts schon schützt. ${S.includes("kissen") ? "Mit deinem Kissenbezug aus Seide oder Bambusviskose bist du auf der sicheren Seite." : "Um auf der sicheren Seite zu sein, nimm trotzdem einen Kissenbezug aus Seide oder alternativ aus Bambusviskose."}${S.includes("flecht") ? "" : " Locker geflochten ist noch etwas schonender als Dutt oder Pferdeschwanz, und ein Seiden- oder Satin-Scrunchie drückt weniger als ein normales Haargummi (mit oder ohne Metall)."} Wenn du noch mehr willst: Eine Seidenhaube schützt rundum.`;
   else np = `Offen reiben deine Haare die ganze Nacht am Kissen. Das kannst du Schritt für Schritt ändern: Eine lockere Schlaffrisur, zum Beispiel locker geflochten, schützt schon viel. ${S.includes("kissen") ? "Deinen Kissenbezug aus Seide oder Bambusviskose hast du schon, super." : "Dazu ein Kissenbezug aus Seide oder alternativ aus Bambusviskose."} Die Pro-Variante ist eine Seidenhaube mit Rundumschutz.`;
   T.push({h:"Nachts", p:[np]});
 
@@ -526,7 +526,7 @@ function plan(a){
       intro + " Wichtig ist, dass du dabei immer die Balance mit Feuchtigkeit hältst.",
       "Unter „Repair“ verstehen viele gleich Bond-Produkte. Dabei gibt es ganz unterschiedliche Stufen, und welche zu dir passt, hängt davon ab, was deine Haare gerade brauchen:"],
       li:[
-      "**Feuchtigkeit:** Die Basis für alle Haare und das Wichtigste, wenn deine Haare trocken, rau oder frizzig sind. Auch trockene Haare können brechen, ganz ohne Färben, Blondieren oder Hitze, meistens durch Reibung, zum Beispiel beim Bürsten, nachts auf dem Kissen oder durch Zopfgummis. Dann ist Feuchtigkeit oft der erste Schritt, denn geschmeidige, flexible Haare halten Reibung viel besser aus. Wann Feuchtigkeit reicht und wann Proteine dazukommen sollten, ist aber sehr individuell.",
+      "**Feuchtigkeit:** Die Basis für alle Haare und das Wichtigste, wenn deine Haare trocken, rau oder frizzig sind. Auch trockene Haare können brechen, ganz ohne Färben, Blondieren oder Hitze, meistens durch Reibung, zum Beispiel beim Bürsten, nachts auf dem Kissen oder durch normale Haargummis. Dann ist Feuchtigkeit oft der erste Schritt, denn geschmeidige, flexible Haare halten Reibung viel besser aus. Wann Feuchtigkeit reicht und wann Proteine dazukommen sollten, ist aber sehr individuell.",
       "**Repair mit Proteinen:** Wenn deine Haare trotz guter Feuchtigkeitspflege weiter brechen oder durch Färben oder viel Hitze beansprucht sind. Proteine wie Keratin oder Weizenprotein lagern sich von außen an brüchige und poröse Stellen an, ein bisschen wie ein Pflaster. Das Haar fühlt sich fester an und bricht weniger. Dauerhaft ist das nicht, mit der Zeit wäscht es sich wieder heraus, deshalb gehört es regelmäßig in deine Routine.",
       "**Bond Repair:** Wenn deine Haare strukturell geschädigt sind, also blondiert, chemisch behandelt, sehr oft komplett gefärbt oder nass wie Gummi. Nach Bedarf auch bei sehr viel Hitze oder häufigem Färben. Bond-Produkte stabilisieren die Struktur im Inneren des Haares. Bond-Produkt ist aber nicht gleich Bond-Produkt: Je nach Marke stecken ganz unterschiedliche Wirkstoffe dahinter. Manche Bond-Systeme sind eigentlich für den Friseur gedacht: Sie werden direkt ins Blondiermittel gemischt und schützen beim Blondieren. Die Pflege für zu Hause aus derselben Marke kann ganz andere Wirkstoffe haben.",
       "**Kurz gesagt:** Gesund oder nur trocken: Feuchtigkeit, bei dicken Haaren auch Nährendes. Beansprucht durch Färben, viel Hitze oder Haarbruch: Feuchtigkeit und Proteine. Strukturgeschädigt durch Blondieren, Dauerwelle oder andere Chemie, häufiges Färben der ganzen Längen oder nass wie Gummi: Feuchtigkeit, Bond Repair und Proteine.",
