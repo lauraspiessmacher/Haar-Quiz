@@ -538,3 +538,4 @@
 - v335: „Hitze verstehen“ freigegeben.
 - v336: „Frizz“ freigegeben.
 - v337: Flackernde Ränder (Laura): Tablett, Leave-in-Klecks, Healthy-Hair-Club-Patch neu exportiert: Randpixel ohne alte Hintergrundfarbe (nur an der Außenkante), Rand minimal enger, Schatten fest ins Bild gerechnet statt CSS-Filter (der beim Scrollen neu berechnet wird), translateZ/backface-visibility für ruhiges Rendern. Größen/Positionen angepasst (Bilder haben jetzt Rand für den Schatten).
+- Schreibregel (Laura 22.10.): nie „Zopfgummi“ im negativen Sinn, sondern „normale Haargummis (mit oder ohne Metall)“; positiv: „Seiden- oder Satin-Scrunchies“.
