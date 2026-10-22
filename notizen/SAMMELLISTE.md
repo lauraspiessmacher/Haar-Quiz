@@ -39,3 +39,5 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
      Bei sehr viel Spliss: an der Wölbung einmal alle abstehenden Haare abschneiden, auch wenn gesunde dabei sind. Man verliert kaum Länge und spart viel Zeit.
    - Neue Zeichnung für Methode 2 neben die (verkleinerte) Illustration von Methode 1.
    - Danach Kapitel freigeben (Nachricht endet mit „Sonst wäre das Kapitel dann …“, vermutlich „freigegeben“).
+6. Wissen „Hitze verstehen“, Abschnitt „Was Hitze im Haar macht“: „die Eiweiße im Inneren“ ergänzen zu „die Eiweiße im Inneren (Proteine, vor allem Keratin)“. Fachlich richtig.
+7. Wissen „Hitze verstehen“: neuer Punkt „Erst föhnen, dann glätten: noch einmal Hitzeschutz?“ Lauras Empfehlung: ja, auf jeden Fall. Ergänzungen: ein Hitzeschutz für trockenes Haar, nur ein feiner Sprühnebel vor allem auf Längen und Spitzen, vollständig trocknen lassen, bevor das Glätteisen kommt (nie zischen lassen).
