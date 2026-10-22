@@ -1,0 +1,64 @@
+<!-- BRIEF START: Brief-Animation vor dem Quiz-Ergebnis (Quelle: notizen/brief/brief.html, eingebaut mit notizen/brief/einbauen.py) -->
+<style>
+/* Spitzen-Umschlag aus Lauras Fotos (22.10.): Hand mit geschlossenem Umschlag kommt von unten, die Klappe geht auf,
+   die Karte „Dein Ergebnis“ kommt ein Stück heraus, dann Überblendung zum Ergebnis. Ebenen aus notizen/brief/umschlag.py */
+.brf{position:fixed;inset:0;z-index:9999;cursor:pointer;background:rgb(230,230,230);overflow:hidden;animation:brfIn .3s ease both}
+.brf.weg{animation:brfOut .7s ease both}
+.brf .buehne{position:absolute;left:50%;bottom:0;height:min(100%,160vw,940px);aspect-ratio:900/1440;transform:translateX(-50%);container-type:inline-size;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 3%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 3%);mask-composite:intersect;
+  animation:brfHoch .75s cubic-bezier(.2,.75,.25,1) both}
+.brf .eb{position:absolute;display:block;pointer-events:none;user-select:none}
+.brf .voll{left:0;top:0;width:100%;height:100%}
+.brf .zu{z-index:3;animation:brfAus .22s ease .95s both}
+.brf .kzu{left:__M_klappezu_l__%;top:__M_klappezu_t__%;width:__M_klappezu_w__%;z-index:4;transform-origin:50% 0;animation:brfKlappeZu .42s cubic-bezier(.55,0,.8,.4) .9s both}
+.brf .kauf{left:__M_klappeauf_l__%;top:__M_klappeauf_t__%;width:__M_klappeauf_w__%;z-index:1;transform-origin:50% 100%;animation:brfKlappeAuf .4s cubic-bezier(.2,.6,.3,1) 1.3s both}
+.brf .karte{position:absolute;left:__M_karte_l__%;top:__M_karte_t__%;width:__M_karte_w__%;z-index:1;animation:brfKarte 1.15s cubic-bezier(.3,.1,.2,1) 1.72s both}
+.brf .karte img{display:block;width:100%;height:auto}
+.brf .karte .txt{position:absolute;left:0;right:0;top:9%;text-align:center;color:#2f2827;font-family:var(--serif,"Iowan Old Style",Palatino,Georgia,serif);font-weight:400;font-size:7.4cqw;line-height:1.05;letter-spacing:.01em}
+.brf .karte .txt em{font-style:italic;font-size:1.1em}
+.brf .karte .txt::after{content:"";display:block;width:26%;height:1px;margin:.55em auto 0;background:rgba(56,47,46,.25)}
+.brf .vorne{left:__M_vorne_l__%;top:__M_vorne_t__%;width:__M_vorne_w__%;z-index:2}
+.brf .tipp{position:absolute;bottom:max(14px,env(safe-area-inset-bottom));right:16px;font:13px/1.4 var(--sans,sans-serif);color:rgba(56,47,46,.55);letter-spacing:.04em;z-index:5}
+.brf.zoom .buehne{animation:brfZoom .75s cubic-bezier(.4,0,.2,1) both}
+@keyframes brfIn{from{opacity:0}to{opacity:1}}
+@keyframes brfOut{from{opacity:1}to{opacity:0}}
+@keyframes brfAus{to{opacity:0}}
+@keyframes brfHoch{from{transform:translate(-50%,58%)}to{transform:translate(-50%,0)}}
+@keyframes brfKlappeZu{0%{transform:scaleY(1);filter:brightness(1)}100%{transform:scaleY(0);filter:brightness(.6)}}
+@keyframes brfKlappeAuf{0%{transform:scaleY(0);filter:brightness(.6)}100%{transform:scaleY(1);filter:brightness(1)}}
+@keyframes brfKarte{from{transform:translateY(45%)}to{transform:translateY(-12%)}}
+@keyframes brfZoom{from{transform:translate(-50%,0)}to{transform:translate(-50%,6%) scale(1.18);opacity:0}}
+@media (prefers-reduced-motion:reduce){ .brf{display:none} }
+</style>
+<script>
+/* Brief öffnen: Umschlag kommt, Klappe geht auf, Karte kommt heraus, dann Überblendung zum Ergebnis.
+   fertig() baut das Ergebnis darunter. Tippen überspringt. */
+window.briefOeffnen = function(fertig){
+  if(document.querySelector(".brf")) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){ fertig(); return; }
+  const o = document.createElement("div");
+  o.className = "brf"; o.setAttribute("role","status"); o.setAttribute("aria-label","Dein Ergebnis wird geöffnet");
+  o.innerHTML = `<div class="buehne">
+      <img class="eb voll" src="__U_HINTEN__" alt="">
+      <img class="eb kauf" src="__U_KLAPPEAUF__" alt="">
+      <div class="karte"><img src="__U_KARTE__" alt=""><div class="txt"><em>Dein</em> Ergebnis</div></div>
+      <img class="eb vorne" src="__U_VORNE__" alt="">
+      <img class="eb voll zu" src="__U_ZU__" alt="">
+      <img class="eb kzu" src="__U_KLAPPEZU__" alt="">
+    </div>
+    <div class="tipp">Tippen zum Überspringen</div>`;
+  document.body.appendChild(o);
+  let done = false;
+  const ende = () => {
+    if(done) return; done = true;
+    fertig();
+    o.classList.add("zoom");
+    setTimeout(() => o.classList.add("weg"), 120);
+    setTimeout(() => o.remove(), 850);
+  };
+  const t = setTimeout(ende, 3300);
+  o.addEventListener("click", () => { clearTimeout(t); ende(); });
+};
+</script>
+<!-- BRIEF END -->
