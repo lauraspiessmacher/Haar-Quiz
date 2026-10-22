@@ -33,3 +33,9 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
 2. Wissen „Nasses Haar“, „Auf einen Blick“: Mein Vorschlag „Nasses Haar ist weich und dehnbar, weil sich im Inneren viele kleine Verbindungen lösen. Dadurch reißt es leichter.“ statt „Im nassen Haar lösen sich innere Bindungen …“. Laura noch nicht ausdrücklich bestätigt → beim Go nachfragen.
 3. Karte „Kämmen unter der Dusche“: Laura überlegte, in „unter der Dusche“ und „nach der Wäsche“ zu trennen, hat dann aber entschieden: bleibt so.
 4. „Nasses Haar“: nach den Änderungen freigeben (Lauras Nachricht endet mit „wäre das dann …“, vermutlich „freigegeben“; beim Go kurz bestätigen lassen).
+5. Wissen „Der Splissschnitt“, Abschnitt „So geht ihr vor“: zwei Methoden zeigen, falls man mit einer nicht klarkommt.
+   - Methode 1 (bisher): Strähne eindrehen, herausstehende Enden abschneiden. Bleibt, Illustration bleibt, aber etwas kleiner.
+   - Methode 2 (Lauras Methode aus dem Video): dünne Strähne über den Mittelfinger legen, mit Zeigefinger und Ringfinger dagegen festklemmen. Über dem Mittelfinger entsteht eine Wölbung, dort stehen die Haare ab, und man schneidet gezielt die Haare mit Spliss ab.
+     Bei sehr viel Spliss: an der Wölbung einmal alle abstehenden Haare abschneiden, auch wenn gesunde dabei sind. Man verliert kaum Länge und spart viel Zeit.
+   - Neue Zeichnung für Methode 2 neben die (verkleinerte) Illustration von Methode 1.
+   - Danach Kapitel freigeben (Nachricht endet mit „Sonst wäre das Kapitel dann …“, vermutlich „freigegeben“).
