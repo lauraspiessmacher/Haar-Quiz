@@ -544,3 +544,7 @@
 - v340: Umschlag nach Lauras Feedback: Hintergrund wieder braun, nur noch das offene Foto (freigestellt mit umschlag_offen.py, graue Ränder entfernt), Hand mit Umschlag schiebt sich von unten rein, Karte kommt ein Stück heraus. Kartentext wie die Überschriften: Instrument Serif (Teilmenge eingebettet), ERGEBNIS in Großbuchstaben, *Dein* kursiv 1,2-fach. Vorversion: brief-umschlag-v1.html.
 - v341: Umschlag: Karte nicht mehr herausgezogen (steht fest etwas höher), Hand+Umschlag deutlich größer (Bühne bis 118 % Höhe, oben 2 % Abstand, Hand unten angeschnitten; Handy fast volle Breite), Schrift zweizeilig größer (*Dein* / ERGEBNIS), Strich entfernt.
 - v342: Kartenschrift größer und tiefer (11,6cqw, Dein 1,4em, top 6,5 %), weniger freie Papierfläche.
+- Quiz-Umschlag: Laura lässt die Spitzen-Version erstmal, will vielleicht am Ende das alte Design zurück. BEIDE gespeichert:
+  - Spitze (aktiv): notizen/brief/brief.html = brief-spitze.html → `python3 notizen/brief/einbauen.py`
+  - Siegel (alt): notizen/brief/brief-siegel-alt.html → `python3 notizen/brief/einbauen.py --siegel`
+  - danach Seite neu bauen (dump.js + build-vorschau.py). Zwischenversion mit grauem Hintergrund und aufklappender Klappe: brief-umschlag-v1.html (braucht umschlag.py-Ebenen, nicht mehr im Einbauskript).

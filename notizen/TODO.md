@@ -51,3 +51,4 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 Passend sind schon: Haarausfall (Mengen 50–200), Kopfhaut (Serum am Scheitel, Massage, Schuppen), Leave-in (4 Konsistenzen, leicht/cremig), LL-Methode (Creme zwischen den Fingern), Porosität (Wasser perlt ab), Reparatur (Maske in den Längen), Genetik (wellig + lockig, glatt fehlt noch), Haaröle (Öl-Pipette), Silikone (Glanz). Produktseite Maske: Tiegel-Foto.
 Spliss & Haarbruch hat jetzt „kaputte Spitzen“ (21.10.).
 Noch kein passendes Foto: Genetik glatt (für die Reihe glatt/wellig/lockig), Repair, Pre-Wash, Haarbürsten, Splissschnitt, Haarfarbe, Farbstiche, (Haarmythen optional).
+- [ ] Am Ende mit Laura klären: Quiz-Umschlag Spitze (aktiv) oder altes Siegel-Design? Umschalten: python3 notizen/brief/einbauen.py [--siegel], dann Seite neu bauen.
