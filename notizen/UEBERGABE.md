@@ -537,3 +537,4 @@
 - v334: Runde 2: Nasses Haar (Wassermoleküle schweben animiert in der nassen Leiter, einfacherer Blick-Satz, freigegeben), Splissschnitt (zwei Methoden nebeneinander: Eindrehen + Lauras Finger-Methode mit neuer Zeichnung, freigegeben), Hitze (Keratin-Klammer, Absatz „Erst föhnen, dann glätten“ mit erneutem Hitzeschutz).
 - v335: „Hitze verstehen“ freigegeben.
 - v336: „Frizz“ freigegeben.
+- v337: Flackernde Ränder (Laura): Tablett, Leave-in-Klecks, Healthy-Hair-Club-Patch neu exportiert: Randpixel ohne alte Hintergrundfarbe (nur an der Außenkante), Rand minimal enger, Schatten fest ins Bild gerechnet statt CSS-Filter (der beim Scrollen neu berechnet wird), translateZ/backface-visibility für ruhiges Rendern. Größen/Positionen angepasst (Bilder haben jetzt Rand für den Schatten).
