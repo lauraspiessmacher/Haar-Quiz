@@ -585,3 +585,4 @@
 - v375: Shampoo: Sulfat-Karten „Haar“ (Alltag statt Labor: lauwarm, wenig Shampoo, nur Kopfhaut, Längen pflegen) und „Haarfarbe“ (sanft/selten/kühl waschen hilft, muss aber zur Kopfhaut passen) umgeschrieben.
 - v376: Shampoo verstehen freigegeben (entwurf raus).
 - v377: Protein-Overload: Abschnitt „Protein auf der Liste? Kein Grund zur Panik“ (Sortierung nach Menge, unter 1 % beliebige Reihenfolge, spürbar ab ca. 0,5–2 % laut Rohstoff-Herstellern; Faustregel vor/hinter Parfum und Konservierern; Summe aller Produkte zählt) mit animierter Beispiel-Inhaltsstoffliste (.wb-inci, 1-%-Linie) und Vergleichskästen; Checklisten-Punkt angepasst. Bleibt Entwurf.
+- v378: Protein-Overload: Summen-Satz präzisiert (spürbar = vor Parfum/Konservierern; überall dahinter = so gut wie sicher kein Overload) + Hinweis Aminosäuren sind keine Proteine.
