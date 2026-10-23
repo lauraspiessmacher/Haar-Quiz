@@ -1483,13 +1483,26 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 #v-quiz .akte-b .zbadge{top:1.5%;right:3%;z-index:4}
 #v-quiz .akte-b:hover .qgo{background:#fff}
 /* Laura 23.10.: Text auf den Basis-Ordnern so groß wie bei den Extra-Checks, Reiter-Schrift größer und kräftiger */
-#v-quiz .akte-a .leder{padding-top:20cqw;gap:2.6cqw}
-#v-quiz .akte-a .leder p{font-size:max(15px,4.85cqw);line-height:1.42}
-#v-quiz .akte-a .leder .qmeta{font-size:max(13px,4.1cqw)}
-#v-quiz .akte-a .leder .qgo{font-size:max(13px,4.1cqw);padding:2.8cqw 5cqw}
+#v-quiz .akte-a .leder{padding-top:20cqw;gap:2.8cqw;justify-content:center}
+#v-quiz .akte-a .leder p{font-size:max(16px,5.3cqw);line-height:1.4}
+#v-quiz .akte-a .leder .qmeta{font-size:max(13.5px,4.3cqw)}
+#v-quiz .akte-a .leder .qgo{font-size:max(13px,4.1cqw);padding:2.8cqw 5cqw;margin-top:4cqw}
 #v-quiz .akte-b .reiter{top:1.6%;font-size:max(12px,3.4cqw);font-weight:600;letter-spacing:.2em;color:#F6EAD3;text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 6px rgba(0,0,0,.6)}
 @media (max-width:900px){ #v-quiz .quizgrid:not(.vier){max-width:380px;margin-left:auto;margin-right:auto;gap:0;row-gap:max(84px,20vw)} }
 @media (max-width:640px){ #v-quiz .quizgrid.vier:has(.akte){grid-template-columns:minmax(0,1fr);max-width:380px;margin-left:auto;margin-right:auto;gap:24px} }
+/* Handy: Ordner kleiner, damit man weniger scrollt (Laura 23.10.) */
+@media (max-width:640px){
+  #v-quiz .quizgrid:not(.vier),#v-quiz .quizgrid.vier:has(.akte){max-width:310px}
+  #v-quiz .quizgrid:not(.vier){row-gap:72px}
+  #v-quiz .quizgrid:has(.akte-a){padding-top:62px}
+  #v-quiz .quizgrid.vier:has(.akte){gap:18px}
+  #v-quiz .akte p,#v-quiz .akte-a .leder p{font-size:14.5px;line-height:1.38}
+  #v-quiz .akte .qmeta,#v-quiz .akte-a .leder .qmeta{font-size:12px}
+  #v-quiz .akte .qgo,#v-quiz .akte-a .leder .qgo{font-size:12px;padding:8px 13px}
+  #v-quiz .akte-b .qfor,#v-quiz .akte-a .qfor{font-size:10px}
+  #v-quiz .akte-b .reiter{font-size:11px}
+  #v-quiz .akte .leder,#v-quiz .akte-b .paper{gap:7px;padding-bottom:6cqw}
+}
 /* LL-Seite: Gel aus Lauras Foto hängt an der Linie unter der Kopfzeile und dehnt sich ganz langsam nach unten, ohne zu tropfen; läuft leicht hinter den Text (Laura 21.10.) */
 .llhero{position:relative}
 .llhero .lltext,.llhero > :not(.llgel):not(.lltext){position:relative;z-index:1}
