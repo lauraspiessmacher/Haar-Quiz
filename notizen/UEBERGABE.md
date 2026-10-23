@@ -582,3 +582,4 @@
 - v372: Shampoo-Kapitel luftiger (Absätze, Studien als Karten, neue Mythos-Karte .wb-mythos mit animiertem Durchstreichen, Schaum-Grafik besser platziert), Hinweis „nur einmal waschen → gründlich massieren“. Neue Bausteine: .wb-mythos/.wb-my-a/.wb-my-b, .wb-stempel.hell.
 - v373: Silikone freigegeben + überarbeitet (Foto untere Längen, Mythos-Karte, Silikonfilm-Animation, „Für wen“ als wb-zwei, Schicht-Grafik bei Ablagerungen).
 - v374: Shampoo: SLS-Haut-Karte entschärft + Kasten „Nicht nur auf ein Wort schauen“ (Partner-Tenside federn SLS ab, Gesamtrezeptur zählt).
+- v375: Shampoo: Sulfat-Karten „Haar“ (Alltag statt Labor: lauwarm, wenig Shampoo, nur Kopfhaut, Längen pflegen) und „Haarfarbe“ (sanft/selten/kühl waschen hilft, muss aber zur Kopfhaut passen) umgeschrieben.
