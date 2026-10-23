@@ -243,6 +243,8 @@ h3.sec{font-size:24px;margin:24px 0 12px}
 /* Kopfhauttyp bei Shampoo und Kopfhautpflege dunkelbraun umrandet, damit der Blick darauf fällt (Laura 21.10.) */
 .also.kopftyp{border:1.5px solid #382F2E;background:#382F2E;color:#FFFDFA}
 .also.kopftyp b{font-weight:600}
+.haarpills{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 4px}
+.haarpills .also{margin-top:4px}
 .hint{font-size:13px;color:var(--muted);margin-top:6px;font-style:italic}
 .empty{color:var(--muted);padding:28px 0}
 .liste h3{font-size:22px;margin:22px 0 6px}
@@ -2805,8 +2807,9 @@ function itemHtml(p, badge, extra){
     if(p.anw) body += `<div class="tip"><b>Anwendung:</b> ${esc(p.anw)}</div>`;
     if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
   } else {
-    const dt = dickeText(p); if(dt) body += `<div class="line"><b>Haardicke:</b> ${esc(dt)}</div>`;
-    const z = Array.isArray(p.hair) ? p.hair[1] : ""; if(z) body += `<div class="line"><b>Haarzustand:</b> ${esc(z)}</div>`;
+    /* Haardicke und Haarzustand dunkel hervorgehoben wie der Kopfhauttyp beim Shampoo (Laura 23.10.) */
+    const dt = dickeText(p), z = Array.isArray(p.hair) ? p.hair[1] : "";
+    if(dt || z) body += `<div class="haarpills">${dt ? `<span class="also kopftyp${dt.length>34?" long":""}"><b>Haardicke:</b> ${esc(dt)}</span>` : ""}${z ? `<span class="also kopftyp${z.length>34?" long":""}"><b>Haarzustand:</b> ${esc(z)}</span>` : ""}</div>`;
     if(p.haartyp) body += `<div class="line"><b>Haartyp:</b> ${esc(p.haartyp)}</div>`;
     if(p.sil) body += `<div class="line"><b>Silikone:</b> ${p.sil.length ? "enthält "+esc(p.sil.join(", ")) : "silikonfrei"}</div>`;
     else if(p.type!=="shampoo") body += `<div class="line"><b>Silikone:</b> silikonfrei</div>`;
