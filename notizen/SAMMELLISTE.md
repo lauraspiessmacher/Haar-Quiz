@@ -58,3 +58,11 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
 13. Wissen „Kann man Haare überpflegen?“: keine Studien erwähnen (eindeutiges Problem bzw. Unwissenheit, kein Forschungsthema). Absatz „In Laborversuchen … (Gruber und Kollegen, 2001). Studien, die „überpflegtes Haar“ direkt messen, gibt es allerdings nicht. …“ ersatzlos streichen. Der Absatz davor (Build-up-Erklärung) bleibt.
 
 **Runde 3 (Punkte 11–13) umgesetzt am 23.10. nach Lauras Go (v369):** Tiefenreinigung statt Klärwäsche/klärendes Shampoo (auch Quiz-Antwort „erst tiefenreinigen“), Einleitung ohne „zu“ mit den zwei Ursachen, Studien-Absatz gestrichen. Überpflegt-Kapitel freigegeben (entwurf raus).
+
+## Runde 4 (23.10., Shampoo verstehen, WARTET AUF LAURAS GO)
+14. Doppelt shampoonieren deutlicher erklären: Warum die erste Wäsche nie so stark schäumt und reinigt wie die zweite. Wer nur einmal wäscht: (a) wenig Schaum wirkt negativ, (b) schlechtere Reinigung, obwohl das Shampoo beim zweiten Mal stärker schäumen würde. Hinweis: Doppelreinigung passt nicht für jeden Kopfhauttyp.
+    - Bisher nur in der „Was glaubt ihr?“-Frage und in den Schritten („Zweimal shampoonieren“).
+    - Vorschlag: neuer Abschnitt direkt NACH der Quizfrage (sonst wäre die Antwort verraten), vor „So shampooniert ihr richtig“:
+      „Warum die zweite Wäsche mehr bringt“ — Viele shampoonieren nur einmal. Beim ersten Mal schäumt das Shampoo aber oft kaum. Das liegt nicht am Shampoo: Talg, Stylingreste und Schmutz binden die Tenside und bremsen den Schaum. Die erste Wäsche löst also vor allem das Fett. Erst bei der zweiten Wäsche schäumt das Shampoo richtig und reinigt die Kopfhaut gründlich. Wer nur einmal wäscht, hat deshalb doppelt Pech: Das Shampoo wirkt schwächer, als es ist, und die Kopfhaut wird nicht richtig sauber.
+      + Hinweiskasten: Nicht für jede Kopfhaut ist doppeltes Waschen das Richtige. Ist eure Kopfhaut sehr trocken oder empfindlich, reicht oft eine Wäsche, oder ihr nehmt beim zweiten Mal nur ganz wenig Shampoo.
+      + evtl. kleine Animation: zwei Schaumhäufchen, „1. Wäsche“ wenig Schaum, „2. Wäsche“ viel Schaum.
