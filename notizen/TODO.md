@@ -52,4 +52,4 @@ Passend sind schon: Haarausfall (Mengen 50–200), Kopfhaut (Serum am Scheitel, 
 Spliss & Haarbruch hat jetzt „kaputte Spitzen“ (21.10.).
 Noch kein passendes Foto: Genetik glatt (für die Reihe glatt/wellig/lockig), Repair, Pre-Wash, Haarbürsten, Splissschnitt, Haarfarbe, Farbstiche, (Haarmythen optional).
 - [ ] Am Ende mit Laura klären: Quiz-Umschlag Spitze (aktiv) oder altes Siegel-Design? Umschalten: python3 notizen/brief/einbauen.py [--siegel], dann Seite neu bauen.
-- [ ] Laura prüft die neuen Entwurfs-Kapitel: Überpflegt, Protein-Overload, DHT, Haarwurzeln (dann entwurf raus in wissen.json)
+- [ ] Laura prüft die neuen Entwurfs-Kapitel: Überpflegt, Protein-Overload, Haarwurzeln (DHT ist freigegeben) (dann entwurf raus in wissen.json)
