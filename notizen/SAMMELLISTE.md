@@ -68,3 +68,6 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
       + evtl. kleine Animation: zwei Schaumhäufchen, „1. Wäsche“ wenig Schaum, „2. Wäsche“ viel Schaum.
 15. Shampoo, Abschnitt „Der pH-Wert“: keine weitere Studie erwähnen (oben gibt es schon Studien), alltagstauglich umschreiben, Kernbotschaft: Conditioner danach ist wichtig.
     - Vorschlag: „Die meisten Shampoos liegen zwischen pH 5 und 7. Ist ein Shampoo etwas basischer, kann es die Haaroberfläche leicht aufrauen. Die Haare reiben dann stärker aneinander und werden schneller frizzig. Bei normalen Shampoos ist dieser Effekt aber klein, und ihr müsst den pH-Wert nicht nachmessen. Viel wichtiger ist: Nach jedem Shampoo gehört ein Conditioner oder eine Maske in die Längen. Der glättet die Oberfläche wieder und gleicht das aus.“
+16. Shampoo: „In den Händen oder auf der Kopfhaut aufschäumen?“ als Vergleich (Laura fand die Wissensfrage spannend).
+
+**Runde 4 (Punkte 14–16) umgesetzt am 23.10. nach Lauras „Änder mal die paar Sachen ab“ (v371):** Abschnitt „Warum die zweite Wäsche mehr bringt“ + Schaum-Animation + Hinweis Kopfhauttyp; pH-Absatz ohne Studie mit Conditioner-Botschaft; Schritt 2 offen formuliert + Vergleich Hände/Kopfhaut (wb-zwei) mit Mittelweg Auftragsflasche. Shampoo bleibt Entwurf bis Lauras Freigabe.

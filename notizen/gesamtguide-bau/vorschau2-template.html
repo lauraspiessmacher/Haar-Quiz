@@ -827,7 +827,12 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-nerv .blitz{opacity:0}
 .wb-bewegt .wb-an .wb-nerv .blitz{animation:wbblitz 3.4s ease-in-out infinite}
 @keyframes wbblitz{0%,38%{opacity:0}46%,60%{opacity:1}72%,100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){ .wb-bewegt .wb-an :is(.wb-rep,.wb-schicht,.wb-dehnen,.wb-mini,.wb-nerv) *{animation:none!important} }
+/* Shampoo: bei der zweiten Wäsche baut sich viel mehr Schaum auf */
+.wart .wb-schaum .bl{transform-box:fill-box;transform-origin:center}
+.wb-bewegt .wb-an .wb-schaum .bl{animation:wbblase 5s ease-out infinite}
+.wb-bewegt .wb-an .wb-schaum .b2{animation-delay:.25s}.wb-bewegt .wb-an .wb-schaum .b3{animation-delay:.5s}.wb-bewegt .wb-an .wb-schaum .b4{animation-delay:.75s}
+@keyframes wbblase{0%{transform:scale(0);opacity:0}20%{transform:scale(1.08);opacity:1}28%,85%{transform:scale(1);opacity:1}100%{transform:scale(.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){ .wb-bewegt .wb-an :is(.wb-rep,.wb-schicht,.wb-dehnen,.wb-mini,.wb-nerv,.wb-schaum) *{animation:none!important} }
 .wart .wb-dreier .wb-neu{transform-box:fill-box;transform-origin:top;animation:wbwachs 4.5s ease-in-out infinite}
 @keyframes wbwachs{0%{transform:scaleY(.15)}70%,100%{transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){ .wart .wb-dreier .wb-neu{animation:none} }
