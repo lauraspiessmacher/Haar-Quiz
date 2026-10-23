@@ -202,8 +202,7 @@
     "titel": "Protein-Overload",
     "teaser": "Gibt es zu viel Repair? Was dran ist, woran ihr es merkt und wie ihr die Balance findet.",
     "datei": "protein-overload.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "dht",
