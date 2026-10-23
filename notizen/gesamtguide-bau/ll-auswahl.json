@@ -27,12 +27,6 @@
      "anwendung": "Feucht, nach der Wäsche: zwei bis drei Sprühstöße in die Längen oder direkt in die Entwirrbürste, dann durchkämmen, damit sich alles gut verteilt. Zwischen den Haarwäschen auch ins trockene Haar."
     },
     {
-     "brand": "L'Oréal Elvital",
-     "name": "Leave-In Serum Glycolic Gloss Spiegelglanz",
-     "fuerwen": "Für dünnes bis normales Haar, das trocken und glanzlos wirkt. Ein silikonfreies Leave-in-Spray mit viel Kokosöl, das weich macht und Glanz und Geschmeidigkeit gibt.",
-     "anwendung": "Feucht, vor dem Föhnen: ein paar Sprühstöße in Längen und Spitzen. Zwischen den Haarwäschen auch ins trockene Haar."
-    },
-    {
      "brand": "Wella Professionals",
      "name": "Ultimate Smooth 24/7 Silky Milk",
      "fuerwen": "Für dünnes bis normales Haar mit Frizz. Ein leichtes Leave-in-Spray mit Silikon, das glättet. Bei sehr feinem Haar sparsam nehmen.",
@@ -43,6 +37,12 @@
      "name": "Sprüh-Conditioner Express-Repair Total Repair",
      "fuerwen": "Für dünnes bis normales Haar, das trocken und strapaziert ist. Ein leichtes Zwei-Phasen-Spray: Silikone entwirren und glätten, Aprikosenkernöl macht geschmeidig, und Keratin steht schon vor dem Parfum und stärkt von außen.",
      "anwendung": "Feucht und trocken: vor Gebrauch schütteln, ins handtuchtrockene Haar sprühen und durchkämmen, schützt beim Föhnen bis 230 °C. Im trockenen Haar ein bis zwei Sprühstöße für Längen und Spitzen."
+    },
+    {
+     "brand": "L'Oréal Elvital",
+     "name": "Leave-In Serum Glycolic Gloss Spiegelglanz",
+     "fuerwen": "Für dünnes bis normales Haar, das trocken und glanzlos wirkt. Ein silikonfreies Leave-in-Spray mit viel Kokosöl, das weich macht und Glanz und Geschmeidigkeit gibt.",
+     "anwendung": "Feucht, vor dem Föhnen: ein paar Sprühstöße in Längen und Spitzen. Zwischen den Haarwäschen auch ins trockene Haar."
     }
    ]
   },
