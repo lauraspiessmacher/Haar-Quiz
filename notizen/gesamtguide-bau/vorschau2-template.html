@@ -850,6 +850,23 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 @keyframes wbkamm{0%,42%{transform:translateX(0)}78%{transform:translateX(262px)}86%,100%{transform:translateX(262px);opacity:0}}
 .wb-bewegt .wb-an .wb-film .funk{animation:wbfunk 1.2s steps(2) infinite}
 @keyframes wbfunk{0%{opacity:1}100%{opacity:.15}}
+/* Protein-Overload: Beispiel-Inhaltsstoffliste mit 1-%-Grenze (Laura 23.10.) */
+.wart .wb-inci{background:#E9E2D8;border-radius:20px;padding:22px 22px 16px;margin:20px 0 14px}
+.wart .wb-inci ol{list-style:none;padding:0;margin:10px 0 0;counter-reset:inci}
+.wart .wb-inci li{counter-increment:inci;display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0;padding:7px 10px;border-radius:10px;font-size:15px;line-height:1.3}
+.wart .wb-inci li::before{content:counter(inci);flex:none;width:22px;font-size:12px;color:var(--muted);position:static;background:none;border:0;height:auto}
+.wart .wb-inci li em{font-style:normal;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;margin-left:auto}
+.wart .wb-inci li.wb-prot{background:#D6B98F;font-weight:500}
+.wart .wb-inci li.wb-prot.klein{background:transparent;border:1.5px dashed #B8915E;font-weight:400}
+.wart .wb-inci li.wb-grenze{position:relative;margin-top:30px}
+.wart .wb-inci li.wb-grenze::after{content:"ungefähr ab hier: unter 1 %";position:absolute;left:0;right:0;top:-24px;border-top:1.5px dashed #382F2E;padding-top:3px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#382F2E;text-align:right}
+.wb-bewegt .wb-inci li{opacity:0;transform:translateX(-12px);transition:opacity .45s ease,transform .45s ease}
+.wb-bewegt .wb-inci.wb-an li{opacity:1;transform:none}
+.wb-bewegt .wb-inci.wb-an li:nth-child(1){transition-delay:0.00s}.wb-bewegt .wb-inci.wb-an li:nth-child(2){transition-delay:0.12s}.wb-bewegt .wb-inci.wb-an li:nth-child(3){transition-delay:0.24s}.wb-bewegt .wb-inci.wb-an li:nth-child(4){transition-delay:0.36s}.wb-bewegt .wb-inci.wb-an li:nth-child(5){transition-delay:0.48s}.wb-bewegt .wb-inci.wb-an li:nth-child(6){transition-delay:0.60s}.wb-bewegt .wb-inci.wb-an li:nth-child(7){transition-delay:0.72s}.wb-bewegt .wb-inci.wb-an li:nth-child(8){transition-delay:0.84s}.wb-bewegt .wb-inci.wb-an li:nth-child(9){transition-delay:0.96s}.wb-bewegt .wb-inci.wb-an li:nth-child(10){transition-delay:1.08s}
+.wb-bewegt .wb-inci li.wb-grenze::after{transform:scaleX(0);transform-origin:left;transition:transform .8s ease 1.3s}
+.wb-bewegt .wb-inci.wb-an li.wb-grenze::after{transform:none}
+.wb-bewegt .wb-inci.wb-an li.wb-prot:not(.klein){animation:wbprot 2.4s ease-in-out 1.8s 2}
+@keyframes wbprot{0%,100%{box-shadow:0 0 0 0 rgba(214,185,143,0)}50%{box-shadow:0 0 0 6px rgba(214,185,143,.45)}}
 /* Shampoo: bei der zweiten Wäsche baut sich viel mehr Schaum auf */
 @media (max-width:520px){ .wart .wb-schaum .wb-kl{font-size:13px} .wart .wb-schaum .wb-kl2{font-size:14.5px} }
 .wart .wb-schaum .bl{transform-box:fill-box;transform-origin:center}
@@ -2649,7 +2666,7 @@ function wbBewegung(art, w){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
   art.classList.add("wb-bewegt");
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("wb-an"); io.unobserve(e.target); } }), {threshold: .25});
-  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen,.wb-wisch,.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala,.wb-mythos").forEach(el => io.observe(el));
+  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen,.wb-wisch,.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala,.wb-mythos,.wb-inci").forEach(el => io.observe(el));
   /* Punkte nacheinander füllen */
   art.querySelectorAll(".wb-meter").forEach((m, i) => m.querySelectorAll(".wb-punkte i").forEach((p, j) => p.style.transitionDelay = (i * 120 + j * 140) + "ms"));
   /* große Zahl zählt hoch */
