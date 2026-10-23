@@ -48,3 +48,8 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
 10. Wissen „Repair“, „Was glaubt ihr?“-Antwort + Absatz zu Proteinen: Recherche Protein-Overload eingearbeitet (Vorschlag siehe Chat 22.10.): keine Studie, die „Overload“ direkt belegt; Erklärung über Proteinfilme/Ablagerungen auf der Oberfläche + fehlende Feuchtigkeit. Bond Repair ist kein Protein.
 
 **Punkte 8–10 umgesetzt am 22.10. nach Lauras „top ändere gerne“ (v338):** Haargummi-Regel in Wissen (Repair, Nasses Haar, Neue Haare, Leave-in), FAQ, Haarplan-Text und Quizzen (Pflege-, Spliss-, Routine-Check). Repair: Protein-Absatz + „Was glaubt ihr?“ neu, Bond-Repair-Leave-in als Empfehlung. Repair bleibt Entwurf bis Lauras Freigabe.
+
+## Runde 3 (23.10., WARTET AUF LAURAS GO)
+11. NEUE SCHREIBREGEL (gilt überall, für immer): Nie „Klärwäsche“ oder „klärendes Shampoo“. Stattdessen „Tiefenreinigung“ bzw. „Tiefenreinigungsshampoo“. Überbegriff „Tiefenreinigungsroutine“ = alles zusammen: Kopfhautpeeling, Tiefenreinigungsshampoo auf der Kopfhaut und in den Längen (z. B. bei Stylingprodukten).
+    - Betroffen: wissen/ueberpflegt.html (Auf einen Blick: „…mit einer Klärwäsche schnell beheben“ → „…mit einer Tiefenreinigung schnell beheben“; Checkliste „klärenden Shampoo (Tiefenreinigung)“, „Klärendes Shampoo ab jetzt regelmäßig einplanen“; Hinweiskasten „Ein klärendes Shampoo …“).
+    - Nicht betroffen: Produktname „Schwarzkopf Gliss Haarserum scalp balance klärend“ (so heißt das Produkt).
