@@ -867,6 +867,10 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wb-bewegt .wb-inci.wb-an li.wb-grenze::after{transform:none}
 .wb-bewegt .wb-inci.wb-an li.wb-prot:not(.klein){animation:wbprot 2.4s ease-in-out 1.8s 2}
 @keyframes wbprot{0%,100%{box-shadow:0 0 0 0 rgba(214,185,143,0)}50%{box-shadow:0 0 0 6px rgba(214,185,143,.45)}}
+/* Produktkarten einheitlich (Laura 23.10.): Textspalte immer volle Breite, Drogerie/High-End rechts oben, Werbelink + Kaufen immer unten rechts in der Ecke */
+html[data-stil] .grid .item .txt{align-self:stretch}
+html[data-stil] .grid .item:has(> .txt > .buyrow:not(.sm)){padding-bottom:62px}
+html[data-stil] .grid .item > .txt > .buyrow:not(.sm){position:absolute;right:16px;bottom:14px;margin:0}
 /* Alkohol-Kapitel: Übersicht Produkt × Kopfhaut (Laura 23.10.) */
 .wart .wb-ampel{margin:16px 0 22px;border-top:1px solid var(--line-soft)}
 .wart .wb-ampel-kopf,.wart .wb-ampel-z{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:10px;align-items:center}

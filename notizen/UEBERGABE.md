@@ -593,3 +593,4 @@
 - v383: Alkohol in Haarpflege freigegeben (entwurf raus). Einziger Entwurf: Neue Haare, Haarbruch oder Frizz?
 - v384: Neue Haare, Haarbruch oder Frizz? freigegeben. ALLE Wissen-Kapitel freigegeben (23.10.).
 - Entscheidung 23.10.: keine eigene Plan-Auswahl, Einkaufsliste bleibt automatisch (Favorites zuerst). Offen für ganz am Ende: Name „Haarplan“, Quiz-Umschlag Spitze vs. altes Siegel.
+- v385: Produktkarten einheitlich: Textspalte immer volle Kartenbreite (Ursache: Rouje-Stil column + align-items:flex-start ließ .txt schrumpfen), Drogerie/High-End-Schild immer rechts oben, Werbelink + Jetzt kaufen immer unten rechts in der Ecke (absolut, Karte unten 62px Platz).
