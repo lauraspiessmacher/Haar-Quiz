@@ -827,7 +827,20 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-nerv .blitz{opacity:0}
 .wb-bewegt .wb-an .wb-nerv .blitz{animation:wbblitz 3.4s ease-in-out infinite}
 @keyframes wbblitz{0%,38%{opacity:0}46%,60%{opacity:1}72%,100%{opacity:0}}
+/* Mythos-Karte (Shampoo, Laura 23.10.): Mythos wird durchgestrichen, darunter erscheint, was stimmt */
+.wart .wb-mythos{display:grid;gap:10px;margin:30px 0 14px}
+.wart .wb-my-a{background:#382F2E;color:#F3ECE2;border-radius:20px;padding:22px 22px 24px}
+.wart .wb-my-q{font-family:var(--serif);font-weight:400;font-size:clamp(25px,4.6vw,34px);line-height:1.2;margin:14px 0 0}
+.wart .wb-my-q span{background:linear-gradient(#D6B98F,#D6B98F) no-repeat 0 60%/100% 2.5px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.wart .wb-my-b{background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:20px;padding:20px 22px 8px}
+.wart .wb-my-b ul{margin:12px 0 0}
+.wart .wb-stempel.hell{background:#E9E2D8}
+.wb-bewegt .wb-mythos .wb-my-q span{background-size:0% 2.5px;transition:background-size .9s cubic-bezier(.2,.7,.2,1) .5s}
+.wb-bewegt .wb-mythos.wb-an .wb-my-q span{background-size:100% 2.5px}
+.wb-bewegt .wb-mythos .wb-my-b{opacity:0;transform:translateY(14px);transition:opacity .6s ease 1.2s,transform .6s ease 1.2s}
+.wb-bewegt .wb-mythos.wb-an .wb-my-b{opacity:1;transform:none}
 /* Shampoo: bei der zweiten Wäsche baut sich viel mehr Schaum auf */
+@media (max-width:520px){ .wart .wb-schaum .wb-kl{font-size:13px} .wart .wb-schaum .wb-kl2{font-size:14.5px} }
 .wart .wb-schaum .bl{transform-box:fill-box;transform-origin:center}
 .wb-bewegt .wb-an .wb-schaum .bl{animation:wbblase 5s ease-out infinite}
 .wb-bewegt .wb-an .wb-schaum .b2{animation-delay:.25s}.wb-bewegt .wb-an .wb-schaum .b3{animation-delay:.5s}.wb-bewegt .wb-an .wb-schaum .b4{animation-delay:.75s}
@@ -2625,7 +2638,7 @@ function wbBewegung(art, w){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
   art.classList.add("wb-bewegt");
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("wb-an"); io.unobserve(e.target); } }), {threshold: .25});
-  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen,.wb-wisch,.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala").forEach(el => io.observe(el));
+  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen,.wb-wisch,.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala,.wb-mythos").forEach(el => io.observe(el));
   /* Punkte nacheinander füllen */
   art.querySelectorAll(".wb-meter").forEach((m, i) => m.querySelectorAll(".wb-punkte i").forEach((p, j) => p.style.transitionDelay = (i * 120 + j * 140) + "ms"));
   /* große Zahl zählt hoch */
