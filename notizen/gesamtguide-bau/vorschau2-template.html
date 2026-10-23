@@ -187,6 +187,15 @@ main{padding-bottom:60px}
 .gintro .box{background:none;padding:0;margin:0;border:0}
 
 .controls{position:sticky;top:calc(var(--hh,73px) + env(safe-area-inset-top,0px));z-index:10;background:var(--bg);padding:12px 0 10px;margin-top:14px;border-bottom:1px solid var(--line-soft)}
+/* Handy (Laura 23.10.): Regler kleiner; beim Runterscrollen weg, beim Hochscrollen wieder da */
+@media (max-width:759px){
+  .controls{padding:8px 0 6px;transition:transform .28s ease,opacity .2s ease}
+  .controls .switch button{font-size:12.5px;padding:4px 10px}
+  .controls .chips{gap:6px;padding-top:7px}
+  .controls .chip{font-size:12.5px;padding:5px 11px}
+  .controls .fit{font-size:12.5px}
+  html.ctl-weg .controls{transform:translateY(-105%);opacity:0;pointer-events:none}
+}
 .crow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--paper)}
 .switch button{font-size:14px;background:transparent;border:0;border-radius:999px;padding:6px 13px;cursor:pointer}
@@ -343,6 +352,18 @@ html,body{overflow-x:clip}
 .rrow figcaption{font-size:14.5px;margin-top:10px;line-height:1.35}
 .rrow figcaption span{display:block;font-family:var(--serif);font-size:22px;margin-bottom:2px}
 .routine .fine2{color:var(--muted);font-size:13.5px;margin:22px auto 0;max-width:60ch}
+/* Handy-Feinschliff (Laura 23.10.): Bilder/Kästen mittig, Illustrationen kleiner */
+@media (max-width:759px){
+  .journey .jcover{margin:0 auto;width:100%}
+  .journey .klecks{width:60px;right:4px;top:-104px}
+  .rrow{max-width:300px;margin:0 auto;gap:16px 18px}
+  .rrow svg{max-width:112px}
+  .rrow figcaption{font-size:13.5px;margin-top:6px}
+  .rrow figcaption span{font-size:19px}
+  .llpage .splissarten figure:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 7px)}
+  .llpage .llschritte{max-width:240px;margin-left:auto;margin-right:auto}
+  .llschritte figcaption{font-size:13.5px}
+}
 
 /* ---------- Serie „Haarpflege 1×1“ (laufende Leiste) ---------- */
 .serie{margin:56px 0 0}
@@ -1384,7 +1405,8 @@ html.zg-abo .swtag{display:none}
 .swliste h3{font-size:24px;line-height:1.1;margin:0}
 /* Silbernes Telefon sitzt auf Karte 3, das Kabel hängt ein Stück in die Karte (Laura 23.10.) */
 .swliste li .swtelefon{position:absolute;z-index:2;right:18px;bottom:calc(100% - 36px);width:min(220px,64%);height:auto;pointer-events:none}
-@media (max-width:900px){ .swliste li.sw3{margin-top:72px} .swliste li .swtelefon{width:160px;bottom:calc(100% - 27px)} }
+.swliste li .swtelefon.handy{display:none}
+@media (max-width:900px){ .swliste li .swtelefon.gross{display:none} .swliste li .swtelefon.handy{display:block} .swliste li.sw1{margin-top:66px} .swliste li .swtelefon{width:160px;bottom:calc(100% - 27px)} }
 .swliste p{margin:0;color:var(--muted);font-size:15px}
 .swliste .linkbtn{margin-top:auto;align-self:flex-start;padding-top:6px}
 .swn{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid currentColor;font-size:15px;opacity:.8}
@@ -1457,45 +1479,45 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
 /* Quiz-Seite: Krokoleder-Ordner statt Papierstapel (Laura 23.10.). Basis-Checks: Blatt mit Titel steckt im Ordner,
    Beschreibung auf dem Leder. Extra-Checks: alles auf dem Leder, Reiter beschriftet. Bild: notizen/bilder/deko/ordner/ */
-#v-quiz .akte .sheet,#v-quiz .akte .qclip{display:none}
+:is(#v-quiz,#v-ll) .akte .sheet,:is(#v-quiz,#v-ll) .akte .qclip{display:none}
 #v-quiz .quizgrid:has(.akte){grid-template-columns:repeat(3,minmax(0,1fr))}
 #v-quiz .quizgrid.vier:has(.akte){grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:900px){ #v-quiz .quizgrid:has(.akte-a){grid-template-columns:minmax(0,1fr)} }
-#v-quiz .akte{position:relative;min-width:0;display:flex;flex-direction:column;aspect-ratio:523/524;container-type:inline-size;color:#F3ECE2;transition:none}
-#v-quiz .akte .o-hinten,#v-quiz .akte .o-vorne{position:absolute;inset:0;background:url(__ORDNER_HINTEN__) 0 0/100% 100% no-repeat;pointer-events:none}
-#v-quiz .akte .o-hinten{filter:drop-shadow(0 18px 22px rgba(56,47,46,.32))}
-#v-quiz .akte .o-vorne{z-index:2;background-image:url(__ORDNER_VORNE__)}
-#v-quiz .akte::after{content:"";position:absolute;z-index:2;left:1%;right:1%;top:15%;bottom:1%;border-radius:3.5%;pointer-events:none;background:linear-gradient(180deg,rgba(20,12,8,.52) 0%,rgba(20,12,8,.34) 50%,rgba(20,12,8,.1) 100%)}
-#v-quiz .akte .leder,#v-quiz .akte-b .paper{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;gap:2.4cqw;padding:21cqw 7cqw 7cqw;font-weight:500;text-shadow:0 1px 3px rgba(0,0,0,.6)}
-#v-quiz .akte p{margin:0;max-width:none;color:#F3ECE2;font-size:max(13.5px,4.1cqw);line-height:1.45}
-#v-quiz .akte .qmeta{color:#E9DFD2;font-size:max(12px,3.5cqw)}
-#v-quiz .akte .qgo{align-self:flex-start;margin-top:auto;background:#F3ECE2;color:#382F2E;text-shadow:none;border-radius:2px;padding:2.4cqw 4.4cqw;font-size:max(12.5px,3.6cqw)}
-#v-quiz .akte h3{text-transform:uppercase;font-weight:400;line-height:1;margin:0;padding:0}
-#v-quiz .akte h3 em{font-style:italic;text-transform:none;font-size:1.15em}
+:is(#v-quiz,#v-ll) .akte{position:relative;min-width:0;display:flex;flex-direction:column;aspect-ratio:523/524;container-type:inline-size;color:#F3ECE2;transition:none}
+:is(#v-quiz,#v-ll) .akte .o-hinten,:is(#v-quiz,#v-ll) .akte .o-vorne{position:absolute;inset:0;background:url(__ORDNER_HINTEN__) 0 0/100% 100% no-repeat;pointer-events:none}
+:is(#v-quiz,#v-ll) .akte .o-hinten{filter:drop-shadow(0 18px 22px rgba(56,47,46,.32))}
+:is(#v-quiz,#v-ll) .akte .o-vorne{z-index:2;background-image:url(__ORDNER_VORNE__)}
+:is(#v-quiz,#v-ll) .akte::after{content:"";position:absolute;z-index:2;left:1%;right:1%;top:15%;bottom:1%;border-radius:3.5%;pointer-events:none;background:linear-gradient(180deg,rgba(20,12,8,.52) 0%,rgba(20,12,8,.34) 50%,rgba(20,12,8,.1) 100%)}
+:is(#v-quiz,#v-ll) .akte .leder,:is(#v-quiz,#v-ll) .akte-b .paper{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;gap:2.4cqw;padding:21cqw 7cqw 7cqw;font-weight:500;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+:is(#v-quiz,#v-ll) .akte p{margin:0;max-width:none;color:#F3ECE2;font-size:max(13.5px,4.1cqw);line-height:1.45}
+:is(#v-quiz,#v-ll) .akte .qmeta{color:#E9DFD2;font-size:max(12px,3.5cqw)}
+:is(#v-quiz,#v-ll) .akte .qgo{align-self:flex-start;margin-top:auto;background:#F3ECE2;color:#382F2E;text-shadow:none;border-radius:2px;padding:2.4cqw 4.4cqw;font-size:max(12.5px,3.6cqw)}
+:is(#v-quiz,#v-ll) .akte h3{text-transform:uppercase;font-weight:400;line-height:1;margin:0;padding:0}
+:is(#v-quiz,#v-ll) .akte h3 em{font-style:italic;text-transform:none;font-size:1.15em}
 /* Basis: Blatt */
-#v-quiz .akte-a{margin-top:0}
+:is(#v-quiz,#v-ll) .akte-a{margin-top:0}
 #v-quiz .quizgrid:has(.akte-a){padding-top:clamp(56px,6vw,74px)}
 @media (max-width:900px){ #v-quiz .quizgrid:has(.akte-a){padding-top:max(70px,18vw)} }
-#v-quiz .akte-a .paper{position:absolute;z-index:1;left:12%;right:8%;top:-17%;height:36%;min-height:0;display:block;padding:4.4cqw 5.5cqw;transform:rotate(1.1deg);transition:transform .45s cubic-bezier(.3,.1,.2,1);color:#382F2E;text-shadow:none}
-#v-quiz .akte-a .paper::before{background:#FBF8F2;clip-path:none;box-shadow:0 1px 2px rgba(0,0,0,.15)}
-#v-quiz .akte-a .paper{filter:drop-shadow(0 -2px 6px rgba(56,47,46,.12))}
-#v-quiz .akte-a .qfor{display:block;font-size:max(10.5px,3cqw);color:#7A6A65}
-#v-quiz .akte-a h3{font-size:9.6cqw;color:#382F2E;margin-top:1.6cqw}
-#v-quiz .akte-a:hover .paper,#v-quiz .akte-a:focus-visible .paper{transform:translateY(-3.5cqw) rotate(1.1deg);filter:drop-shadow(0 -2px 6px rgba(56,47,46,.12))}
+:is(#v-quiz,#v-ll) .akte-a .paper{position:absolute;z-index:1;left:12%;right:8%;top:-17%;height:36%;min-height:0;display:block;padding:4.4cqw 5.5cqw;transform:rotate(1.1deg);transition:transform .45s cubic-bezier(.3,.1,.2,1);color:#382F2E;text-shadow:none}
+:is(#v-quiz,#v-ll) .akte-a .paper::before{background:#FBF8F2;clip-path:none;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+:is(#v-quiz,#v-ll) .akte-a .paper{filter:drop-shadow(0 -2px 6px rgba(56,47,46,.12))}
+:is(#v-quiz,#v-ll) .akte-a .qfor{display:block;font-size:max(10.5px,3cqw);color:#7A6A65}
+:is(#v-quiz,#v-ll) .akte-a h3{font-size:9.6cqw;color:#382F2E;margin-top:1.6cqw}
+:is(#v-quiz,#v-ll) .akte-a:hover .paper,:is(#v-quiz,#v-ll) .akte-a:focus-visible .paper{transform:translateY(-3.5cqw) rotate(1.1deg);filter:drop-shadow(0 -2px 6px rgba(56,47,46,.12))}
 /* Extra: alles auf dem Leder */
-#v-quiz .akte-b .paper{min-height:0;transform:none;filter:none;padding-top:20cqw}
-#v-quiz .akte-b .paper::before{display:none}
-#v-quiz .akte-b .qfor{font-size:max(10.5px,2.8cqw);color:#D8C6A8}
-#v-quiz .akte-b h3{font-size:8.6cqw;color:#F1E4CC;text-shadow:0 -1px 0 rgba(0,0,0,.7),0 1px 0 rgba(255,230,190,.18)}
-#v-quiz .akte-b .reiter{position:absolute;z-index:3;left:4.5%;top:2.4%;width:33%;text-align:center;font-size:max(10px,2.6cqw);letter-spacing:.22em;text-transform:uppercase;color:#E9D9BE;text-shadow:0 -1px 0 rgba(0,0,0,.6)}
-#v-quiz .akte-b .zbadge{top:1.5%;right:3%;z-index:4}
-#v-quiz .akte-b:hover .qgo{background:#fff}
+:is(#v-quiz,#v-ll) .akte-b .paper{min-height:0;transform:none;filter:none;padding-top:20cqw}
+:is(#v-quiz,#v-ll) .akte-b .paper::before{display:none}
+:is(#v-quiz,#v-ll) .akte-b .qfor{font-size:max(10.5px,2.8cqw);color:#D8C6A8}
+:is(#v-quiz,#v-ll) .akte-b h3{font-size:8.6cqw;color:#F1E4CC;text-shadow:0 -1px 0 rgba(0,0,0,.7),0 1px 0 rgba(255,230,190,.18)}
+:is(#v-quiz,#v-ll) .akte-b .reiter{position:absolute;z-index:3;left:4.5%;top:2.4%;width:33%;text-align:center;font-size:max(10px,2.6cqw);letter-spacing:.22em;text-transform:uppercase;color:#E9D9BE;text-shadow:0 -1px 0 rgba(0,0,0,.6)}
+:is(#v-quiz,#v-ll) .akte-b .zbadge{top:1.5%;right:3%;z-index:4}
+:is(#v-quiz,#v-ll) .akte-b:hover .qgo{background:#fff}
 /* Laura 23.10.: Text auf den Basis-Ordnern so groß wie bei den Extra-Checks, Reiter-Schrift größer und kräftiger */
-#v-quiz .akte-a .leder{padding-top:20cqw;gap:2.8cqw;justify-content:center}
-#v-quiz .akte-a .leder p{font-size:max(16px,5.3cqw);line-height:1.4}
-#v-quiz .akte-a .leder .qmeta{font-size:max(13.5px,4.3cqw)}
-#v-quiz .akte-a .leder .qgo{font-size:max(13px,4.1cqw);padding:2.8cqw 5cqw;margin-top:4cqw}
-#v-quiz .akte-b .reiter{top:1.6%;font-size:max(12px,3.4cqw);font-weight:600;letter-spacing:.2em;color:#F6EAD3;text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 6px rgba(0,0,0,.6)}
+:is(#v-quiz,#v-ll) .akte-a .leder{padding-top:20cqw;gap:2.8cqw;justify-content:center}
+:is(#v-quiz,#v-ll) .akte-a .leder p{font-size:max(16px,5.3cqw);line-height:1.4}
+:is(#v-quiz,#v-ll) .akte-a .leder .qmeta{font-size:max(13.5px,4.3cqw)}
+:is(#v-quiz,#v-ll) .akte-a .leder .qgo{font-size:max(13px,4.1cqw);padding:2.8cqw 5cqw;margin-top:4cqw}
+:is(#v-quiz,#v-ll) .akte-b .reiter{top:1.6%;font-size:max(12px,3.4cqw);font-weight:600;letter-spacing:.2em;color:#F6EAD3;text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 6px rgba(0,0,0,.6)}
 @media (max-width:900px){ #v-quiz .quizgrid:not(.vier){max-width:380px;margin-left:auto;margin-right:auto;gap:0;row-gap:max(84px,20vw)} }
 @media (max-width:640px){ #v-quiz .quizgrid.vier:has(.akte){grid-template-columns:minmax(0,1fr);max-width:380px;margin-left:auto;margin-right:auto;gap:24px} }
 /* Handy: Ordner kleiner, damit man weniger scrollt (Laura 23.10.) */
@@ -1504,12 +1526,12 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
   #v-quiz .quizgrid:not(.vier){row-gap:72px}
   #v-quiz .quizgrid:has(.akte-a){padding-top:62px}
   #v-quiz .quizgrid.vier:has(.akte){gap:18px}
-  #v-quiz .akte p,#v-quiz .akte-a .leder p{font-size:14.5px;line-height:1.38}
-  #v-quiz .akte .qmeta,#v-quiz .akte-a .leder .qmeta{font-size:12px}
-  #v-quiz .akte .qgo,#v-quiz .akte-a .leder .qgo{font-size:12px;padding:8px 13px}
-  #v-quiz .akte-b .qfor,#v-quiz .akte-a .qfor{font-size:10px}
-  #v-quiz .akte-b .reiter{font-size:11px}
-  #v-quiz .akte .leder,#v-quiz .akte-b .paper{gap:7px;padding-bottom:6cqw}
+  :is(#v-quiz,#v-ll) .akte p,:is(#v-quiz,#v-ll) .akte-a .leder p{font-size:14.5px;line-height:1.38}
+  :is(#v-quiz,#v-ll) .akte .qmeta,:is(#v-quiz,#v-ll) .akte-a .leder .qmeta{font-size:12px}
+  :is(#v-quiz,#v-ll) .akte .qgo,:is(#v-quiz,#v-ll) .akte-a .leder .qgo{font-size:12px;padding:8px 13px}
+  :is(#v-quiz,#v-ll) .akte-b .qfor,:is(#v-quiz,#v-ll) .akte-a .qfor{font-size:10px}
+  :is(#v-quiz,#v-ll) .akte-b .reiter{font-size:11px}
+  :is(#v-quiz,#v-ll) .akte .leder,:is(#v-quiz,#v-ll) .akte-b .paper{gap:7px;padding-bottom:6cqw}
 }
 /* LL-Seite: Gel aus Lauras Foto hängt an der Linie unter der Kopfzeile und dehnt sich ganz langsam nach unten, ohne zu tropfen; läuft leicht hinter den Text (Laura 21.10.) */
 .llhero{position:relative}
@@ -1620,6 +1642,8 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
 @media (max-width:600px){ .llbox-oel.mitfilm{grid-template-columns:minmax(0,1fr) 92px;gap:14px} }
 .llbox ul{padding-left:18px;margin:0 0 10px}
 .llquiz{grid-template-columns:minmax(0,760px)}
+.llquiz:has(.akte){grid-template-columns:minmax(0,420px)}
+@media (max-width:640px){ .llquiz:has(.akte){grid-template-columns:minmax(0,310px);justify-content:center} }
 /* Quiz-Karte auf der LL-Seite: quer und flach statt hoch (Laura) */
 .llquiz .qcard .paper{min-height:0;padding:24px 30px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:28px;row-gap:6px;align-items:end}
 .llquiz .qcard .qfor{grid-column:1/-1}
@@ -1628,6 +1652,10 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
 .llquiz .qcard .qmeta{grid-column:1}
 .llquiz .qcard .qgo{grid-column:2;grid-row:2/5;align-self:end;white-space:nowrap}
 @media (max-width:640px){ .llquiz .qcard .paper{grid-template-columns:1fr} .llquiz .qcard .qgo{grid-column:1;grid-row:auto;justify-self:start} }
+#v-ll .llquiz .akte .paper{display:flex;align-items:stretch;padding:20cqw 7cqw 7cqw;row-gap:0;gap:2.4cqw}
+#v-ll .llquiz .akte .paper > *{grid-column:auto;grid-row:auto;justify-self:auto}
+#v-ll .llquiz .akte .qgo{align-self:flex-start;white-space:normal;margin-top:auto}
+#v-ll .llquiz .akte h3{padding-top:0}
 .llgruppe{margin:30px 0 0}
 .llgruppe h3.sec{margin:0 0 4px}
 .llband{position:relative;display:flex;align-items:flex-end;min-height:150px;border-radius:16px;background-size:cover;background-position:center;overflow:hidden;padding:18px 22px;margin:0 0 12px}
@@ -1721,9 +1749,9 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
     <div class="startweg" id="startweg">
       <div class="head"><p class="kicker">Neu hier?</p><h2>So <em class="hk">startet</em> ihr</h2></div>
       <ol class="swliste">
-        <li class="sw1"><span class="swtag frei">Kostenlos</span><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
+        <li class="sw1"><img class="swtelefon handy" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag frei">Kostenlos</span><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
         <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">2</span><h3>Bekommt euren Haarplan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Haarplan →</button></li>
-        <li class="sw3"><img class="swtelefon" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
+        <li class="sw3"><img class="swtelefon gross" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
       </ol>
     </div>
     <div class="serie neuband" id="neuband">
@@ -1828,13 +1856,7 @@ __ROUTINE__
       <div>
         <h2>Welches Leave-in passt zu <em class="hk">dir</em>?</h2>
         <div class="quizgrid llquiz">
-          <a class="qcard" data-abo="check" href="__QUIZ_LEAVEIN__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-            <span class="qfor">Für deine LL-Methode</span>
-            <h3>Leave-in-Check</h3>
-            <p>Spray, Milch, Serum oder Creme? Du erfährst, welche Textur und welche Wirkstoffe zu deinen Haaren passen, wie viel du nimmst und wie du es mit meiner LL-Methode benutzt.</p>
-            <span class="qmeta">7 Fragen · ca. 2 Minuten</span>
-            <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-          </span></a>
+          <a class="qcard akte akte-b" data-abo="check" href="__QUIZ_LEAVEIN__"><span class="o-hinten" aria-hidden="true"></span><span class="o-vorne" aria-hidden="true"></span><span class="reiter" aria-hidden="true">Extra</span><span class="paper"><span class="qfor">Für deine LL-Methode</span><h3>Leave-in-<em>Check</em></h3><p>Spray, Milch, Serum oder Creme? Du erfährst, welche Textur und welche Wirkstoffe zu deinen Haaren passen, wie viel du nimmst und wie du es mit meiner LL-Methode benutzt.</p><span class="qmeta">7 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
         </div>
       </div>
     </div>
@@ -3457,6 +3479,18 @@ readHash(); q.value = state.q; render();
 })();
 /* LL-Seite: Öl-Video bei „Bewegung reduzieren“ anhalten */
 document.querySelectorAll("video.oelfilm").forEach(v => { v.muted = true; if (matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); } });
+/* Produkte auf dem Handy: Regler beim Runterscrollen ausblenden, beim Hochscrollen zeigen */
+(function(){
+  let lastY = scrollY, sum = 0;
+  addEventListener("scroll", () => {
+    const y = scrollY, d = y - lastY; lastY = y;
+    const c = document.querySelector("#v-produkte:not([hidden]) .controls, .controls");
+    if(!c || innerWidth > 759){ document.documentElement.classList.remove("ctl-weg"); return; }
+    sum = (Math.sign(d) === Math.sign(sum)) ? sum + d : d;
+    if(y < 260 || sum < -24) document.documentElement.classList.remove("ctl-weg");
+    else if(sum > 24) document.documentElement.classList.add("ctl-weg");
+  }, {passive:true});
+})();
 </script>
 </body>
 </html>
