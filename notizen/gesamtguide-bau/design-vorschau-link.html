@@ -114,6 +114,7 @@ main{padding-bottom:60px}
 .shophead p{color:#E3D8CC;margin:8px 0 0;font-size:15px}
 .shophead p{text-wrap:pretty}
 .shophead p.tipp{font-size:13.5px;color:#C9BCAE;margin-top:8px;text-wrap:balance}
+@media (max-width:759px){ .shophead{padding:14px 16px 14px;gap:10px;margin-top:16px} .shophead h2{font-size:21px} .shophead p{font-size:13.5px;line-height:1.45;margin-top:6px} .shophead p.tipp{font-size:12px;margin-top:5px} .shophead .search{padding-top:9px;padding-bottom:9px;font-size:14px} }
 .wsearch{margin:16px 0 4px}
 .wres{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px;max-width:760px}
 .wres li{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:14px 16px}
@@ -3713,7 +3714,11 @@ document.querySelectorAll("video.oelfilm").forEach(v => { v.muted = true; if (ma
     const c = document.querySelector("#v-produkte:not([hidden]) .controls, .controls");
     if(!c || innerWidth > 759){ document.documentElement.classList.remove("ctl-weg"); return; }
     sum = (Math.sign(d) === Math.sign(sum)) ? sum + d : d;
-    if(y < 260 || sum < -24) document.documentElement.classList.remove("ctl-weg");
+    /* erst ausblenden, wenn das erste Produkt ganz unter den Reglern durchgescrollt ist (Laura 23.10.) */
+    const erstes = document.querySelector("#v-produkte:not([hidden]) .guide .item");
+    const unterKante = c.getBoundingClientRect().bottom;
+    const vorbei = erstes ? erstes.getBoundingClientRect().bottom < unterKante : y > 600;
+    if(!vorbei || sum < -24) document.documentElement.classList.remove("ctl-weg");
     else if(sum > 24) document.documentElement.classList.add("ctl-weg");
   }, {passive:true});
 })();
