@@ -1277,8 +1277,18 @@ html.zg-abo .zbadge{display:none}
 .pkap li.pkhin svg{width:15px;height:15px}
 .qplanhint{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;background:#382F2E;color:#F3ECE2;border-radius:20px;padding:26px 28px;margin-top:48px}
 .qplanhint .kicker{color:#C9BCAE;margin:0 0 6px}
+/* Sperre: Plan erst nach den drei Basis-Checks (Laura 23.10.) */
+.sperredlg h2{font-size:clamp(28px,4vw,38px);margin:4px 0 10px}
+.sperreliste{list-style:none;padding:0;margin:14px 0 18px;display:flex;flex-direction:column;gap:8px}
+.sperreliste li{display:flex;align-items:center;gap:10px;font-size:15px}
+.sperreliste li .bhk{flex:none}
+.sperreliste li.ok span:last-child{color:var(--muted);text-decoration:line-through}
+.qcard.plan-zu .qgo{opacity:.55}
+.psperre{display:block;margin-top:6px;font-size:13.5px;color:#E3D8CB;font-style:italic}
 .qplanhint .qph{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.25;margin:0;max-width:34ch}
 .qplanhint .btn{background:#F3ECE2;color:#29261F;border-color:#F3ECE2}
+.qplanhint .qph2{margin:10px 0 0;max-width:62ch;font-size:15px;line-height:1.5;color:#E3D8CB}
+.qplanhint > div{flex:1 1 420px}
 .bplanbtns{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
 .bplan .linkbtn{color:#F3ECE2}
 /* ---------- Mein Bereich ---------- */
@@ -1931,7 +1941,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
       <a class="qcard qwide qhero" data-abo="plan" data-check="routine" href="quiz-routine.html"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg><span class="qstamp">Schritt 4</span><span class="qhl">
         <span class="qfor">Zum Schluss: alles zusammen</span>
         <h3>Plan erstellen</h3>
-        <p>Wann wäschst du am besten, wie oft ist eine Maske dran und was tust du beim Sport und nachts für deine Haare? Aus diesen Antworten und deinen drei Checks entsteht dein Plan, mit deinem eigenen Wochenplan. Am genauesten wird er, wenn du vorher die drei Checks darüber machst.</p>
+        <p>Wann wäschst du am besten, wie oft ist eine Maske dran und was tust du beim Sport und nachts für deine Haare? Aus diesen Antworten und deinen drei Checks entsteht dein Plan, mit deinem eigenen Wochenplan. Erstellen kannst du ihn, sobald du die drei Checks darüber gemacht hast. Jeder Extra-Check, den du dazu machst, erweitert ihn.</p><span class="psperre" hidden></span>
         <span class="qmeta">Bis zu 14 Fragen · ca. 3 Minuten</span>
         <span class="qgo">Meinen Plan erstellen <span aria-hidden="true">→</span></span>
       </span><span class="qweek" aria-hidden="true"><span class="qwk-t">So kann dein Plan aussehen</span><span class="qwk-g">
@@ -1952,13 +1962,13 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
   </section>
 
   <section class="view" id="v-quiz" hidden>
-    <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1><em class="hkurs">Dein</em> Haar-Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es sechs Extra-Checks: welches Leave-in zu dir passt, welche Kopfhautpflege und welches Peeling du brauchst, wie kaputt deine Haare sind, ob dein Haarverlust normal ist, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
+    <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1><em class="hkurs">Dein</em> Haar-Quiz</h1><p>Hier lernst du deine Haare kennen. Starte mit den drei Basis-Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Erst wenn du alle drei gemacht hast, kann daraus dein Haarplan entstehen, denn jeder Check liefert einen Teil, ohne den dein Plan nicht stimmt.</p><p>Die sechs Extra-Checks darunter sind freiwillig. Jeder, den du zusätzlich machst, erweitert deinen Haarplan und macht ihn noch ausführlicher: welches Leave-in zu dir passt, welche Kopfhautpflege und welches Peeling du brauchst, wie kaputt deine Haare sind, ob dein Haarverlust normal ist, welches Hitze-Tool passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
       <a class="qcard akte akte-a" data-check="kopfhaut" href="quiz-kopfhaut.html"><span class="o-hinten" aria-hidden="true"></span><span class="paper"><span class="qfor">Für dein Shampoo</span><h3>Kopfhaut-<em>Check</em></h3></span><span class="o-vorne" aria-hidden="true"></span><span class="leder"><p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast und worauf du vor dem Shampoo-Regal achtest.</p><span class="qmeta">9 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
       <a class="qcard akte akte-a" data-check="pflege" href="quiz-pflege.html"><span class="o-hinten" aria-hidden="true"></span><span class="paper"><span class="qfor">Für deine Pflege</span><h3>Pflege-<em>Check</em></h3></span><span class="o-vorne" aria-hidden="true"></span><span class="leder"><p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf und wie viel Repair sie braucht.</p><span class="qmeta">10 Fragen · ca. 3 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
       <a class="qcard akte akte-a" data-check="haar" href="quiz-haar.html"><span class="o-hinten" aria-hidden="true"></span><span class="paper"><span class="qfor">Für dein Styling</span><h3>Haar-<em>Check</em></h3></span><span class="o-vorne" aria-hidden="true"></span><span class="leder"><p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p><span class="qmeta">8 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
     </div>
-    <div class="qplanhint"><div><p class="kicker">Aus deinen Ergebnissen</p><p class="qph">Wenn du die drei Checks gemacht hast, entsteht daraus dein Haarplan.</p></div><button type="button" class="btn" id="zumPlan">Zum Haarplan <span aria-hidden="true">→</span></button></div>
+    <div class="qplanhint"><div><p class="kicker">Aus deinen Ergebnissen</p><p class="qph">Wenn du die drei Checks gemacht hast, entsteht daraus dein Haarplan.</p><p class="qph2">Alle drei sind nötig, damit dein Plan wirklich zu dir passt: ohne Kopfhaut-Check kein passendes Shampoo, ohne Pflege-Check keine passende Pflege, ohne Haar-Check kein Styling. Die Extra-Checks unten kannst du danach machen, um deinen Plan noch zu erweitern.</p></div><button type="button" class="btn" id="zumPlan">Zum Haarplan <span aria-hidden="true">→</span></button></div>
     <p class="qclosing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
     <h2 class="qsub"><em class="hk">Extra</em>-Checks</h2>
     <div class="quizgrid vier">
@@ -2050,6 +2060,13 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
 </dialog>
 <div class="toast" id="toast" role="status"></div>
 <!-- Gespeichertes Check-Ergebnis zum Nachlesen -->
+<dialog id="sperreDlg" aria-labelledby="sperreTitel"><div class="abodlg sperredlg">
+  <button type="button" class="aboclose" aria-label="Schließen">×</button>
+  <p class="kicker">Dein Haarplan</p><h2 id="sperreTitel">Erst die drei <em class="hk">Basis</em>-Checks</h2>
+  <p class="lead">Dein Haarplan braucht die Ergebnisse aus allen drei Basis-Checks. Jeder liefert einen wichtigen Teil: deine Kopfhaut für das Shampoo, Dicke und Zustand deiner Haare für die Pflege und deine Struktur fürs Styling. Fehlt einer, passt dein Plan nicht richtig zu dir.</p>
+  <ul class="sperreliste" id="sperreListe"></ul>
+  <button type="button" class="btn dark" id="sperreGo">Weiter</button>
+</div></dialog>
 <dialog id="ergDlg" aria-labelledby="ergTitel"><div class="abodlg ergdlg">
   <button type="button" class="aboclose" aria-label="Schließen">×</button>
   <p class="kicker" id="ergKicker"></p><div class="ergtext" id="ergBox"></div>
@@ -3150,7 +3167,20 @@ document.getElementById("merkClear").onclick = () => { if(confirm("Alle Produkte
 const CHECKS = [["kopfhaut","Kopfhaut-Check"],["pflege","Pflege-Check"],["haar","Haar-Check"]];
 const EXTRAS = [["leavein","Leave-in-Check"],["kopfpflege","Kopfhautpflege-Check"],["spliss","Spliss- & Haarbruch-Check"],["ausfall","Haarausfall-Check"],["tools","Hitze-Tool-Check"],["schnitt","Haarschnitt-Check"]];
 function quizStand(){ try { return JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; } catch(e){ return {}; } }
+/* Plan erst, wenn alle drei Basis-Checks gemacht sind (Laura 23.10.) */
+function basisFertig(){ const st = quizStand(); return CHECKS.every(([k]) => st[k]); }
+function zeigeSperre(){
+  const st = quizStand(), d = document.getElementById("sperreDlg"), offen = CHECKS.find(([k]) => !st[k]);
+  document.getElementById("sperreListe").innerHTML = CHECKS.map(([k,l]) => `<li class="${st[k]?"ok":""}"><span class="bhk${st[k]?" ok":""}" aria-hidden="true">${st[k]?"✓":""}</span><span>${l}</span></li>`).join("");
+  const go = document.getElementById("sperreGo");
+  go.innerHTML = `Weiter mit dem ${offen[1]} <span aria-hidden="true">→</span>`;
+  go.onclick = () => { if(d.close) d.close(); else d.removeAttribute("open"); oeffneCheck(offen[0]); };
+  if(d.showModal) d.showModal(); else d.setAttribute("open","");
+}
+(function(){ const d = document.getElementById("sperreDlg"); const zu = () => { if(d.close) d.close(); else d.removeAttribute("open"); };
+  d.querySelector(".aboclose").onclick = zu; d.addEventListener("click", e => { if(e.target === d) zu(); }); })();
 function oeffneCheck(key){
+  if(key === "routine" && !basisFertig()){ zeigeSperre(); return; }
   const a = document.querySelector(`.qcard[data-check="${key}"]`) || [...document.querySelectorAll(".qcard")].find(x => (x.getAttribute("href")||"").includes(key));
   if(!a){ state.view = "quiz"; render(); window.scrollTo({top:0}); return; }
   if(a.dataset.abo && !istAbo()){ zPaywall(a.dataset.abo); return; }
@@ -3244,6 +3274,9 @@ function renderPlan(){
   ex.querySelectorAll("[data-pextra]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.pextra));
   document.getElementById("planKap").innerHTML = PLANKAP.map(([t,l], i) => `<li><span class="pknr">${String(i+1).padStart(2,"0")}</span><h3>${t}</h3><p>${l}</p></li>`).join("")
     + `<li class="pkhin"><p>${istAbo() ? "Sobald du Schritt 4 gemacht hast, steht hier dein fertiger Plan." : `${ZSCHLOSS} Dein fertiger Plan ist im Abo.`}</p></li>`;
+  const rk = document.querySelector('#v-plan .qcard[data-check="routine"]');
+  if(rk){ const zu = !basisFertig(); rk.classList.toggle("plan-zu", zu);
+    const h = rk.querySelector(".psperre"); if(h){ h.hidden = !zu; h.textContent = zu ? `Noch ${CHECKS.filter(([k]) => !st[k]).length} von 3 Basis-Checks offen, dann kannst du deinen Plan erstellen.` : ""; } }
   renderPlanFertig();
 }
 
@@ -3451,6 +3484,7 @@ document.querySelectorAll(".fuss [data-platz]").forEach(b => b.onclick = () => t
 })();
 /* ---------- Quiz-Blatt wächst zum Quiz ---------- */
 document.querySelectorAll(".qcard").forEach(a => a.addEventListener("click", e => {
+  if(a.dataset.check === "routine" && !basisFertig()){ e.preventDefault(); e.stopPropagation(); zeigeSperre(); return; }
   if(a.dataset.abo && !istAbo()){ e.preventDefault(); e.stopPropagation(); zPaywall(a.dataset.abo); return; }
   const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   const href = a.getAttribute("href");
