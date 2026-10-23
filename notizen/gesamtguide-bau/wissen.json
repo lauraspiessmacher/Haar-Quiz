@@ -152,8 +152,7 @@
     "titel": "Shampoo verstehen",
     "teaser": "Tenside, Sulfate und der Mythos „sulfatfrei“: Was in eurem Shampoo arbeitet und was Studien dazu sagen.",
     "datei": "shampoo.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "frizz",
