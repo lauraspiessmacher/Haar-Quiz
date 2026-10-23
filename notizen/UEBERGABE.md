@@ -561,3 +561,4 @@
 - v352: Haarsträhne auf Lauras Wunsch verschoben: jetzt zwischen Abschnitt 03 (Leave-in-Check) und 04 (Meine Leave-in-Auswahl), vom rechten Rand neben der Check-Karte bis in Abschnitt 04 hinein; etwas größer (200–260 px). Tipps-Text wieder volle Breite.
 - v353: Haarsträhne: ganzes Bild ohne Zuschnitt (nur Ober- und rechte Kante im Foto abgeschnitten): rechts am Bildschirmrand, nur oben weich ausgeblendet, unten natürliche Spitzen; 190–240 px breit, von der Leave-in-Check-Karte bis in Abschnitt 04.
 - v354: Startseite „So startet ihr“, Karte 3 „Findet eure Produkte“: silbernes Telefon (Lauras Bild, freigestellt inkl. Kabelschlaufen, Bodenspiegelung entfernt, Schatten im Bild) sitzt oben rechts auf der Karte, Kabel hängt ein Stück in die Karte. 220 px, Handy 160 px (Karte 3 dort mit Abstand nach oben).
+- v355: Telefon: Kabel unten war abgeschnitten (gerade Linie) → neu freigestellt, Spiegelung erst unterhalb des Kabels weich entfernt; Position angepasst.
