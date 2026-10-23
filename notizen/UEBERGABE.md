@@ -553,3 +553,4 @@
 - v345: Siegel glitzert: alle 5 s läuft ein Lichtstreif über das Silber (Maske = Siegelform), dazu nacheinander 3 kleine Funken am Rand. Siegel jetzt als span mit Hintergrundbild (--s), bei 'Bewegung reduzieren' still.
 - v346: Siegel: Lichtstreif raus, stattdessen 9 Funken (größer, heller, dunkler Hauch als Kontur), überlappend alle 0,33 s, Zyklus 3 s. Vorschau-Video notizen/bilder/deko/siegel-glitzer-vorschau.mp4.
 - v347: Siegel-Glitzern auf Lauras Wunsch komplett entfernt (Siegel bleibt, ohne Effekt).
+- Quiz-Seite Highlight (Laura 23.10.): Beispiel Krokoleder-Ordner statt Papierstapel gebaut, NICHT eingebaut. Dateien: notizen/bilder/deko/ordner/ (ordner-hinten/-vorne.webp aus Lauras Bild mit sauberer gezeichneter Kontur, vorschau.html, vorschau-computer/handy.png). Variante A Blatt mit Titel steckt hinter dem Ordner, Variante B nur Leder mit geprägtem Titel + Reiter „Check 1–3“. Wartet auf Lauras Wahl.

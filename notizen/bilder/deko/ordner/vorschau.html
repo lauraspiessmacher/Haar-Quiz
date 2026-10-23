@@ -1,0 +1,58 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@font-face{font-family:IS;src:url(file:///home/user/Haar-Quiz/notizen/gesamtguide-bau/schriften/Instrument_Serif_normal_400.woff2)}
+@font-face{font-family:IS;font-style:italic;src:url(file:///home/user/Haar-Quiz/notizen/gesamtguide-bau/schriften/Instrument_Serif_italic_400.woff2)}
+@font-face{font-family:ISans;src:url(file:///home/user/Haar-Quiz/notizen/gesamtguide-bau/schriften/Instrument_Sans_normal_400-600.woff2)}
+body{margin:0;background:#F3ECE2;color:#382F2E;font-family:ISans,sans-serif}
+.in{max-width:1180px;margin:0 auto;padding:30px 32px 60px}
+h1{font-family:IS;font-weight:400;font-size:64px;text-transform:uppercase;margin:0 0 6px;line-height:1}
+h1 em{text-transform:none;font-size:1.2em}
+.kick{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#6E615C;margin:0 0 10px}
+.vlabel{font-family:IS;font-size:28px;margin:40px 0 4px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;margin-top:150px}
+@media (max-width:900px){.grid{grid-template-columns:1fr;gap:150px;max-width:360px;margin-inline:auto}}
+.akte{position:relative;aspect-ratio:523/524;text-decoration:none;color:inherit;display:block;cursor:pointer}
+.akte .hinten,.akte .vorne{position:absolute;inset:0;width:100%;height:100%;display:block}
+.akte .hinten{filter:drop-shadow(0 18px 24px rgba(56,47,46,.35))}
+.akte .vorne{z-index:2}
+.akte::after{content:"";position:absolute;z-index:2;left:2.5%;right:2.5%;top:16%;bottom:2%;border-radius:4%;pointer-events:none;background:linear-gradient(180deg,rgba(20,12,8,.5) 0%,rgba(20,12,8,.32) 45%,rgba(20,12,8,.1) 100%)}
+.akte .blatt{position:absolute;z-index:1;left:8%;right:5%;background:#FBF8F2;box-shadow:0 1px 2px rgba(0,0,0,.15),0 -2px 10px rgba(0,0,0,.08);transition:transform .45s cubic-bezier(.3,.1,.2,1)}
+.akte:hover .blatt{transform:translateY(-14px) rotate(1.2deg)}
+.akte .leder{position:absolute;z-index:3;font-weight:500;left:6%;right:6%;color:#F3ECE2;text-shadow:0 1px 3px rgba(0,0,0,.65)}
+.qfor{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#7A6A65}
+.akte h3{font-family:IS;font-weight:400;font-size:34px;line-height:1;text-transform:uppercase;margin:6px 0 0}
+.akte h3 em{text-transform:none;font-size:1.15em}
+.go{display:inline-block;background:#F3ECE2;color:#382F2E;padding:9px 16px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-shadow:none;border-radius:2px}
+.meta{font-size:13px;opacity:.9}
+/* Variante A: Titel auf dem Blatt, Text auf dem Leder */
+.a .blatt{top:-34%;height:50%;left:14%;right:9%;z-index:0;padding:16px 20px;transform:rotate(1.2deg)}
+.a .hinten{z-index:1}
+.a .vorne{z-index:2}
+.a .leder{top:22%;bottom:8%;left:7%;right:7%;display:flex;flex-direction:column;gap:10px}
+.a .leder p{margin:0;font-size:15px;line-height:1.45}
+.a .leder .go{align-self:flex-start;margin-top:auto}
+/* Variante B: ganzes Blatt mit Text, Leder nur Prägeschild + Knopf */
+.b .blatt{display:none}
+.b .blatt p{margin:10px 0 0;font-size:14.5px;line-height:1.45;color:#5E524D}
+.b .leder{top:21%;bottom:8%;left:8%;right:8%;display:flex;flex-direction:column;gap:10px}
+.b .reiter{position:absolute;z-index:3;left:5.5%;top:2.2%;width:34%;text-align:center;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#E9D9BE;text-shadow:0 -1px 0 rgba(0,0,0,.6)}
+.b .leder .qfor{color:#D8C6A8}
+.b .leder h3{color:#F1E4CC;font-size:38px;text-shadow:0 -1px 0 rgba(0,0,0,.7),0 1px 0 rgba(255,230,190,.18)}
+.b .leder p{margin:0;font-size:14.5px;line-height:1.45}
+.b .leder .go{align-self:flex-start;margin-top:auto}
+.b .schild{font-family:IS;font-style:italic;font-size:30px;color:#E9D9BE;text-shadow:0 -1px 0 rgba(0,0,0,.6),0 1px 0 rgba(255,235,200,.25);letter-spacing:.02em}
+.b .schild small{display:block;font-family:ISans;font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:4px;color:#D8C6A8}
+</style></head><body><div class="in">
+<p class="kick">Lerne deine Haare kennen</p><h1><em>Dein</em> Haar-Quiz</h1>
+<div class="vlabel">Variante A: Blatt steckt hinter dem Ordner, Reiter bleibt sichtbar</div>
+<div class="grid a">
+<a class="akte"><img class="hinten" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-hinten.webp" alt=""><img class="vorne" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-vorne.webp" alt=""><div class="blatt"><div class="qfor">Für dein Shampoo</div><h3>Kopfhaut-<em>Check</em></h3></div><div class="leder"><p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast.</p><span class="meta">9 Fragen · ca. 2 Minuten</span><span class="go">Quiz starten →</span></div></a>
+<a class="akte"><img class="hinten" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-hinten.webp" alt=""><img class="vorne" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-vorne.webp" alt=""><div class="blatt"><div class="qfor">Für deine Pflege</div><h3>Pflege-<em>Check</em></h3></div><div class="leder"><p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf.</p><span class="meta">10 Fragen · ca. 3 Minuten</span><span class="go">Quiz starten →</span></div></a>
+<a class="akte"><img class="hinten" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-hinten.webp" alt=""><img class="vorne" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-vorne.webp" alt=""><div class="blatt"><div class="qfor">Für dein Styling</div><h3>Haar-<em>Check</em></h3></div><div class="leder"><p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst.</p><span class="meta">8 Fragen · ca. 2 Minuten</span><span class="go">Quiz starten →</span></div></a>
+</div>
+<div class="vlabel" style="margin-top:80px">Variante B: nur Leder, Titel wie geprägt, Reiter beschriftet</div>
+<div class="grid b" style="margin-top:40px">
+<a class="akte"><img class="hinten" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-hinten.webp" alt=""><img class="vorne" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-vorne.webp" alt=""><span class="reiter">Check 1</span><div class="leder"><div class="qfor">Für dein Shampoo</div><h3>Kopfhaut-<em>Check</em></h3><p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast.</p><span class="meta">9 Fragen · ca. 2 Minuten</span><span class="go">Quiz starten →</span></div></a>
+<a class="akte"><img class="hinten" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-hinten.webp" alt=""><img class="vorne" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-vorne.webp" alt=""><span class="reiter">Check 2</span><div class="leder"><div class="qfor">Für deine Pflege</div><h3>Pflege-<em>Check</em></h3><p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf.</p><span class="meta">10 Fragen · ca. 3 Minuten</span><span class="go">Quiz starten →</span></div></a>
+<a class="akte"><img class="hinten" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-hinten.webp" alt=""><img class="vorne" src="file:///home/user/Haar-Quiz/notizen/bilder/deko/ordner/ordner-vorne.webp" alt=""><span class="reiter">Check 3</span><div class="leder"><div class="qfor">Für dein Styling</div><h3>Haar-<em>Check</em></h3><p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst.</p><span class="meta">8 Fragen · ca. 2 Minuten</span><span class="go">Quiz starten →</span></div></a>
+</div></div></body></html>
