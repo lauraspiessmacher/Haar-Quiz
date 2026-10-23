@@ -891,15 +891,16 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .rtnadel circle:first-child{animation:rtpuls 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes rtpuls{0%,100%{transform:scale(.8);opacity:.7}50%{transform:scale(1.25);opacity:1}}
 .rtphase{position:relative;display:grid;grid-template-columns:1fr 70px 1fr;align-items:start;margin:0 0 54px;z-index:1}
-.rtknoten{grid-column:2;justify-self:center;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#FFFDFA;border:1px solid #A7ACB2;box-shadow:0 0 0 4px #F3ECE2,0 0 0 5px rgba(158,163,169,.45);color:#382F2E;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1;transform:scale(.85);opacity:0;transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .5s,background .6s,color .6s}
-.rtknoten.klein{width:30px;height:30px;font-size:16px;margin-top:5px;border-style:dashed}
+.rtknoten{grid-column:2;justify-self:center;display:grid;place-items:center;background:var(--bg,#F3ECE2);padding:6px 4px;color:#382F2E;font-family:var(--serif);font-style:italic;font-weight:400;font-size:64px;line-height:.9;letter-spacing:-.02em;transform:translateY(10px);opacity:0;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .6s}
+.rtknoten span{background:linear-gradient(180deg,#5E5653 0%,#382F2E 55%,#8E9399 130%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rtknoten.klein{font-size:40px;margin-top:8px}
 .rtknoten.ziel{margin:0 auto 14px}
 .rtphase.an .rtknoten,.rtende.an .rtknoten{transform:none;opacity:1}
 .rtkarte{background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:22px;padding:22px 22px 18px;box-shadow:0 18px 40px -30px rgba(56,47,46,.5);opacity:0;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
 .rtphase[data-side="l"] .rtkarte{grid-column:1;grid-row:1;transform:translateX(-30px)}
 .rtphase[data-side="r"] .rtkarte{grid-column:3;grid-row:1;transform:translateX(30px)}
 .rtphase.an .rtkarte{opacity:1;transform:none}
-.rtphase::before{content:"";position:absolute;top:20px;height:1px;width:35px;background:linear-gradient(90deg,#D5D8DC,#A7ACB2);transform:scaleX(0);transition:transform .4s ease .2s}
+.rtphase::before{content:"";position:absolute;top:36px;height:1px;width:35px;background:linear-gradient(90deg,#D5D8DC,#A7ACB2);transform:scaleX(0);transition:transform .4s ease .2s}
 .rtphase[data-side="l"]::before{right:50%;transform-origin:right}
 .rtphase[data-side="r"]::before{left:50%;transform-origin:left}
 .rtphase.an::before{transform:scaleX(1)}
@@ -928,14 +929,16 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .rtende.an{opacity:1;transform:none}
 .rtende h2{font-family:var(--serif);font-weight:400;font-size:30px;margin:0 0 8px}
 .rtende p{margin:0 0 16px;font-size:15px;line-height:1.5;color:#E9E2D8}
-.rtende .rtknoten.ziel{margin-top:-50px}
+.rtende .rtknoten.ziel{margin-top:-62px;font-size:44px;background:transparent}
+.rtende .rtknoten.ziel span{visibility:hidden}
 .rtcta{appearance:none;border:0;border-radius:999px;background:#F3ECE2;color:#382F2E;font:inherit;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:12px 22px;cursor:pointer}
 @media (max-width:759px){
   .rthero{margin-top:22px}
   .rtfaden{padding-top:20px}
   .rtphase{display:block;margin:0 0 40px}
   .rtphase::before{display:none}
-  .rtknoten{margin:0 auto 12px}
+  .rtknoten{margin:0 auto 6px;font-size:52px}
+  .rtknoten.klein{font-size:34px}
   .rtphase[data-side] .rtkarte{transform:translateY(18px)}
   .rtphase.an .rtkarte{transform:none}
   .rtkarte{padding:18px 16px 14px}
@@ -2029,7 +2032,7 @@ __ROUTINE__
         <g class="rtnadel" id="rtnadelg"><circle r="9" fill="url(#rtpunkt)"/><circle r="2.4" fill="#FFFFFF" stroke="#A7ACB2" stroke-width=".8"/></g>
       </svg>
 
-      <div class="rtphase" data-side="l"><div class="rtknoten"><span>1</span></div><div class="rtkarte">
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>01</span></div><div class="rtkarte">
         <p class="rtkick">Vor der Wäsche · Kopfhaut</p><h2>Pre-Wash für die Kopfhaut</h2>
         <p class="rtwann"><b>Wann:</b> vor dem Waschen, wenn deine Kopfhaut mehr braucht als Shampoo.</p>
         <ul class="rtsteps">
@@ -2038,13 +2041,13 @@ __ROUTINE__
           <li><p><b>Hair Oiling für die Kopfhaut</b><span class="rtb extra">Extra</span></p><small>Für Geschmeidigkeit: Öl sanft einmassieren und einwirken lassen. Bei Schuppen lieber vorsichtig sein.</small><button type="button" data-go="wissen:prewash">Mehr zu Pre-Wash →</button></li>
         </ul></div></div>
 
-      <div class="rtphase" data-side="r"><div class="rtknoten"><span>2</span></div><div class="rtkarte">
+      <div class="rtphase" data-side="r"><div class="rtknoten"><span>02</span></div><div class="rtkarte">
         <p class="rtkick">Vor der Wäsche · Längen</p><h2>Pre-Wash für die Längen</h2>
         <p class="rtwann"><b>Wann:</b> vor dem Shampoo, damit die Längen beim Waschen nicht austrocknen.</p>
         <div class="rtchips"><span><b>ÖWC</b>Öl · Waschen · Conditioner</span><span><b>MWC</b>Maske · Waschen · Conditioner</span><span><b>LWC</b>Leave-in · Waschen · Conditioner</span><span><b>CWC</b>Conditioner · Waschen · Conditioner</span></div>
         <p class="rtfuss"><span class="rtb extra">Extra</span><button type="button" data-go="wissen:prewash">Welche passt zu dir? →</button></p></div></div>
 
-      <div class="rtphase" data-side="l"><div class="rtknoten"><span>3</span></div><div class="rtkarte">
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>03</span></div><div class="rtkarte">
         <p class="rtkick">Waschen</p><h2>Shampoonieren</h2>
         <p class="rtwann"><b>Wann:</b> bei jeder Wäsche. Das Shampoo gehört auf die Kopfhaut, die Längen reinigt der Schaum beim Ausspülen.</p>
         <ul class="rtsteps">
@@ -2058,7 +2061,7 @@ __ROUTINE__
         <p class="rtwann"><b>Wann:</b> je nach Styling und Kopfhaut ein- bis dreimal im Monat, oder wenn sich deine Haare schwer und belegt anfühlen.</p>
         <ul class="rtsteps"><li><p><b>Tiefenreinigungsshampoo</b><span class="rtb extra">Extra</span></p><small>Auf die Kopfhaut, in die Längen nur, wenn nötig, zum Beispiel bei viel Styling.</small><button type="button" data-go="produkte:shampoo.tief">Tiefenreinigung ansehen →</button></li></ul></div></div>
 
-      <div class="rtphase" data-side="l"><div class="rtknoten"><span>4</span></div><div class="rtkarte">
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>04</span></div><div class="rtkarte">
         <p class="rtkick">Pflegen</p><h2>Zusatzpflege</h2>
         <p class="rtwann"><b>Wann:</b> nach dem Shampoo, je nachdem, was deine Haare gerade brauchen.</p>
         <div class="rtziele">
@@ -2068,7 +2071,7 @@ __ROUTINE__
         </div>
         <p class="rtfuss"><span class="rtb extra">Extra</span><small>Nicht alles auf einmal: wechsel ab und beobachte deine Haare.</small></p></div></div>
 
-      <div class="rtphase" data-side="r"><div class="rtknoten"><span>5</span></div><div class="rtkarte">
+      <div class="rtphase" data-side="r"><div class="rtknoten"><span>05</span></div><div class="rtkarte">
         <p class="rtkick">Abschluss</p><h2>Conditioner</h2>
         <p class="rtwann"><b>Wann:</b> nach jedem Shampoo, als letzter Schritt in der Dusche.</p>
         <ul class="rtsteps">
@@ -2076,7 +2079,7 @@ __ROUTINE__
           <li><p><b>Wonder Water</b><span class="rtb extra">Extra</span></p><small>Für feine, dünne Haare ein leichter Abschluss, der nicht beschwert.</small></li>
         </ul></div></div>
 
-      <div class="rtphase" data-side="l"><div class="rtknoten"><span>6</span></div><div class="rtkarte">
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>06</span></div><div class="rtkarte">
         <p class="rtkick">Nach der Wäsche</p><h2>Post-Wash</h2>
         <p class="rtwann"><b>Wann:</b> ins handtuchtrockene Haar, bevor du föhnst oder lufttrocknen lässt.</p>
         <ul class="rtsteps">
@@ -2084,7 +2087,7 @@ __ROUTINE__
           <li><p><b>Hitzeschutz</b><span class="rtb basis">Basis bei Hitze</span></p><small>Immer, bevor Föhn, Glätteisen oder Lockenstab ins Spiel kommen.</small><button type="button" data-go="produkte:hitze.alle">Hitzeschutz ansehen →</button></li>
         </ul></div></div>
 
-      <div class="rtphase" data-side="r"><div class="rtknoten"><span>7</span></div><div class="rtkarte">
+      <div class="rtphase" data-side="r"><div class="rtknoten"><span>07</span></div><div class="rtkarte">
         <p class="rtkick">Nach dem Föhnen</p><h2>Versiegeln</h2>
         <p class="rtwann"><b>Wann:</b> im trockenen Haar, und zwischen den Wäschen ein- bis zweimal am Tag.</p>
         <ul class="rtsteps">
