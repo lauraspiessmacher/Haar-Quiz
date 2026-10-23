@@ -581,3 +581,4 @@
 - v371: Shampoo verstehen (Runde 4): zweite Wäsche erklärt (+ animierte Schaumhäufchen), pH-Wert alltagstauglich ohne Studie, Vergleich „In den Händen oder auf der Kopfhaut aufschäumen?“.
 - v372: Shampoo-Kapitel luftiger (Absätze, Studien als Karten, neue Mythos-Karte .wb-mythos mit animiertem Durchstreichen, Schaum-Grafik besser platziert), Hinweis „nur einmal waschen → gründlich massieren“. Neue Bausteine: .wb-mythos/.wb-my-a/.wb-my-b, .wb-stempel.hell.
 - v373: Silikone freigegeben + überarbeitet (Foto untere Längen, Mythos-Karte, Silikonfilm-Animation, „Für wen“ als wb-zwei, Schicht-Grafik bei Ablagerungen).
+- v374: Shampoo: SLS-Haut-Karte entschärft + Kasten „Nicht nur auf ein Wort schauen“ (Partner-Tenside federn SLS ab, Gesamtrezeptur zählt).
