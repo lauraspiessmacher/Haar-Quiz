@@ -53,3 +53,4 @@ Spliss & Haarbruch hat jetzt „kaputte Spitzen“ (21.10.).
 Noch kein passendes Foto: Genetik glatt (für die Reihe glatt/wellig/lockig), Repair, Pre-Wash, Haarbürsten, Splissschnitt, Haarfarbe, Farbstiche, (Haarmythen optional).
 - [ ] Am Ende mit Laura klären: Quiz-Umschlag Spitze (aktiv) oder altes Siegel-Design? Umschalten: python3 notizen/brief/einbauen.py [--siegel], dann Seite neu bauen.
 - [x] Neue Kapitel DHT, Haarwurzeln, Überpflegt, Protein-Overload freigegeben (23.10.) (dann entwurf raus in wissen.json)
+- [ ] Laura prüft neues Entwurfs-Kapitel „Alkohol in Haarpflege“

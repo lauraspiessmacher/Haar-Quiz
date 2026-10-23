@@ -867,6 +867,23 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wb-bewegt .wb-inci.wb-an li.wb-grenze::after{transform:none}
 .wb-bewegt .wb-inci.wb-an li.wb-prot:not(.klein){animation:wbprot 2.4s ease-in-out 1.8s 2}
 @keyframes wbprot{0%,100%{box-shadow:0 0 0 0 rgba(214,185,143,0)}50%{box-shadow:0 0 0 6px rgba(214,185,143,.45)}}
+/* Alkohol-Kapitel: Übersicht Produkt × Kopfhaut (Laura 23.10.) */
+.wart .wb-ampel{margin:16px 0 22px;border-top:1px solid var(--line-soft)}
+.wart .wb-ampel-kopf,.wart .wb-ampel-z{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:10px;align-items:center}
+.wart .wb-ampel-kopf{padding:10px 0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center}
+.wart .wb-ampel-z{border-top:1px solid var(--line-soft);padding:12px 0}
+.wart .wb-ampel-z p{margin:0;font-size:15px;line-height:1.35}
+.wart .wb-ampel-z small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.wart .wb-ampel-z > span{font-size:12.5px;line-height:1.25;text-align:center;border-radius:12px;padding:7px 8px}
+.wart .wb-ampel .ok{background:#E9E2D8;color:#382F2E}
+.wart .wb-ampel .halb{background:#FFFDFA;border:1.5px dashed #B8915E;color:#382F2E}
+.wart .wb-ampel .nein{background:#382F2E;color:#F3ECE2}
+@media (max-width:620px){ .wart .wb-ampel-kopf{display:none} .wart .wb-ampel-z{grid-template-columns:1fr 1fr} .wart .wb-ampel-z p{grid-column:1/-1}
+  .wart .wb-ampel-z > span::before{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:2px}
+  .wart .wb-ampel-z > span:nth-of-type(1)::before{content:"Unempfindlich"} .wart .wb-ampel-z > span:nth-of-type(2)::before{content:"Empfindlich"} }
+.wb-bewegt .wb-ampel .wb-ampel-z{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+.wb-bewegt .wb-ampel.wb-an .wb-ampel-z{opacity:1;transform:none}
+.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(2){transition-delay:0.00s}.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(3){transition-delay:0.12s}.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(4){transition-delay:0.24s}.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(5){transition-delay:0.36s}.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(6){transition-delay:0.48s}.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(7){transition-delay:0.60s}.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(8){transition-delay:0.72s}.wb-bewegt .wb-ampel.wb-an .wb-ampel-z:nth-child(9){transition-delay:0.84s}
 /* Shampoo: bei der zweiten Wäsche baut sich viel mehr Schaum auf */
 @media (max-width:520px){ .wart .wb-schaum .wb-kl{font-size:13px} .wart .wb-schaum .wb-kl2{font-size:14.5px} }
 .wart .wb-schaum .bl{transform-box:fill-box;transform-origin:center}
@@ -2180,7 +2197,7 @@ const WREGALE = [
   {id:"grund", titel:"Grundlagen", text:"Was eure Haare mitbringen und was wirklich stimmt", kap:["genetik","haarzyklus","porositaet","mythen"]},
   {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall","dht","haarwurzeln","hormone","graue-haare"]},
   {id:"bruch", titel:"Haarbruch, Spliss & Repair", text:"Mein Herzensthema: vorbeugen statt reparieren", kap:["unterschied","nasses-haar","leavein","llmethode","reparatur","repair","hitze","splissschnitt"]},
-  {id:"pflege", titel:"Pflege verstehen", text:"Shampoo, Öle, Silikone und Frizz", kap:["shampoo","prewash","haaroele","silikone","ueberpflegt","protein-overload","frizz","babyhaare"]},
+  {id:"pflege", titel:"Pflege verstehen", text:"Shampoo, Öle, Silikone und Frizz", kap:["shampoo","prewash","haaroele","silikone","alkohol","ueberpflegt","protein-overload","frizz","babyhaare"]},
   {id:"werkzeug", titel:"Werkzeuge", text:"Bürste, Schere, Kissen: was eure Haare jeden Tag berührt", kap:["buersten","seide","scheren"]},
   {id:"farbe", titel:"Haarfarbe", text:"Färben, Tönen und Farbstiche verstehen", kap:["haarfarbe","farbstiche"]}
 ];
@@ -2440,6 +2457,7 @@ const PRAEGUNG = {
   haarwurzeln: '<path d="M3 13c4-1.5 14-1.5 18 0"/><path d="M9 13V4M15 13V5"/><path d="M9 16v2M15 16v2M6 20l1.5-1.5M18 20l-1.5-1.5"/>',
   ueberpflegt: '<path d="M7 3c0 7 1 13 5 18M17 3c0 7-1 13-5 18"/><path d="M5 9h14M6 14h12"/>',
   "protein-overload": '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12v9M12 12l8-4.5M12 12L4 7.5"/>',
+  alkohol: '<path d="M9 2h6M10 2v6L5 19a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3L14 8V2"/><path d="M7.5 14h9"/>',
   buch: '<path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/>'
 };
 (function(){
@@ -2666,7 +2684,7 @@ function wbBewegung(art, w){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
   art.classList.add("wb-bewegt");
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("wb-an"); io.unobserve(e.target); } }), {threshold: .25});
-  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen,.wb-wisch,.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala,.wb-mythos,.wb-inci").forEach(el => io.observe(el));
+  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen,.wb-wisch,.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala,.wb-mythos,.wb-inci,.wb-ampel").forEach(el => io.observe(el));
   /* Punkte nacheinander füllen */
   art.querySelectorAll(".wb-meter").forEach((m, i) => m.querySelectorAll(".wb-punkte i").forEach((p, j) => p.style.transitionDelay = (i * 120 + j * 140) + "ms"));
   /* große Zahl zählt hoch */
