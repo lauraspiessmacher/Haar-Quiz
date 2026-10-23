@@ -71,3 +71,7 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
 16. Shampoo: „In den Händen oder auf der Kopfhaut aufschäumen?“ als Vergleich (Laura fand die Wissensfrage spannend).
 
 **Runde 4 (Punkte 14–16) umgesetzt am 23.10. nach Lauras „Änder mal die paar Sachen ab“ (v371):** Abschnitt „Warum die zweite Wäsche mehr bringt“ + Schaum-Animation + Hinweis Kopfhauttyp; pH-Absatz ohne Studie mit Conditioner-Botschaft; Schritt 2 offen formuliert + Vergleich Hände/Kopfhaut (wb-zwei) mit Mittelweg Auftragsflasche. Shampoo bleibt Entwurf bis Lauras Freigabe.
+
+## Runde 5 (23.10., Shampoo, WARTET AUF LAURAS GO)
+17. Hinweiskasten „Nicht für jede Kopfhaut ist doppeltes Waschen das Richtige“: Alternative ergänzen. Lauras Idee: Shampoo länger einwirken lassen. Geprüft: gründlicher massieren ja; lange einwirken lassen bei normalem Shampoo eher nicht, weil längerer Tensidkontakt eine trockene/empfindliche Kopfhaut stärker reizen kann (genau die Gruppe, für die eine Wäsche gedacht ist). Ausnahme: Wirkstoffshampoos (Schuppen, Ketoconazol) sollen einwirken.
+    - Vorschlag: „… Wenn ihr nur einmal wascht, nehmt euch dafür mehr Zeit: Massiert das Shampoo gründlich mit den Fingerkuppen ein, nicht nur zehn Sekunden, sondern ein bis zwei Minuten, Stück für Stück über die ganze Kopfhaut. Lange einwirken lassen müsst ihr ein normales Shampoo dagegen nicht, gerade bei empfindlicher Kopfhaut kann das eher reizen. Ausnahme: Shampoos mit Wirkstoff, zum Beispiel gegen Schuppen, dürfen ein paar Minuten einwirken.“
