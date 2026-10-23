@@ -568,3 +568,4 @@
 - v359: Produkte Maske/Conditioner/Leave-in/Hitzeschutz/Haaröl: Haardicke und Haarzustand als dunkle Pillen (wie Kopfhauttyp beim Shampoo), .haarpills. Styling-Sprays (2-in-1) haben kein Dicke/Zustand-Feld → unverändert.
 - v360: Haarsträhne auf der LL-Seite auf Lauras Wunsch entfernt (Bild + CSS bleiben im Projekt, nur nicht eingebunden).
 - v360b: Haarplan erst nach den 3 Basis-Checks (Laura 23.10.): Klick auf „Plan erstellen“ (Haarplan-Seite, Mein Bereich, oeffneCheck('routine')) zeigt sonst Fenster „Erst die drei Basis-Checks“ mit Haken-Liste und Knopf zum nächsten offenen Check; Karte zeigt „Noch X von 3 Basis-Checks offen“. Texte neu: Quiz-Seite Einleitung (Basis Pflicht, Extra erweitert den Plan), brauner Kasten mit zweitem Satz, Schritt-4-Karte. Getestet: gesperrt ohne Checks, öffnet mit allen drei.
+- v362: Quiz-Seite: Absatz zu den Extra-Checks aus der Einleitung unter die Überschrift „Extra-Checks“ verschoben (.qsubtxt).
