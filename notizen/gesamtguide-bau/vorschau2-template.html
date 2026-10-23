@@ -1382,6 +1382,9 @@ html.zg-abo .swtag{display:none}
 .swliste li.sw1 h3{color:#F3ECE2}
 .swliste li.sw1 p{color:#E3D8CB}
 .swliste h3{font-size:24px;line-height:1.1;margin:0}
+/* Silbernes Telefon sitzt auf Karte 3, das Kabel hängt ein Stück in die Karte (Laura 23.10.) */
+.swliste li .swtelefon{position:absolute;z-index:2;right:18px;bottom:calc(100% - 31px);width:min(220px,64%);height:auto;pointer-events:none}
+@media (max-width:900px){ .swliste li.sw3{margin-top:72px} .swliste li .swtelefon{width:160px;bottom:calc(100% - 23px)} }
 .swliste p{margin:0;color:var(--muted);font-size:15px}
 .swliste .linkbtn{margin-top:auto;align-self:flex-start;padding-top:6px}
 .swn{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid currentColor;font-size:15px;opacity:.8}
@@ -1720,7 +1723,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
       <ol class="swliste">
         <li class="sw1"><span class="swtag frei">Kostenlos</span><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
         <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">2</span><h3>Bekommt euren Haarplan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Haarplan →</button></li>
-        <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
+        <li class="sw3"><img class="swtelefon" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
       </ol>
     </div>
     <div class="serie neuband" id="neuband">
