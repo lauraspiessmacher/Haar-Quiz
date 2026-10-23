@@ -2974,5 +2974,15 @@
 "g": 0.6,
 "r": "",
 "p": false
+},
+"leavein|Schwarzkopf Gliss|Sprüh-Conditioner Express-Repair Total Repair": {
+"t": [
+"glaettend"
+],
+"h": 0.3,
+"e": 0.5,
+"g": 1.2,
+"r": "protein",
+"p": false
 }
 }
