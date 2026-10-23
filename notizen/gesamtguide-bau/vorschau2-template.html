@@ -768,6 +768,66 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wart .wb-mizelle > g:first-of-type{transform-box:view-box;transform-origin:160px 75px;animation:wbdreh 14s linear infinite}
 @keyframes wbdreh{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){ .wart .wb-leiter .mol > *,.wart .wb-frizz .fz,.wart .wb-leiter .lose,.wart .wb-mizelle > g:first-of-type{animation:none} }
+/* Mehr Bewegung in allen Kapiteln (Laura 23.10.): Karten, Kästen, Checklisten und Fragen gleiten beim Hinscrollen herein */
+.wb-bewegt :is(.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala){opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.wb-bewegt :is(.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala).wb-an{opacity:1;transform:none}
+.wb-bewegt .wb-wisch .wb-karte{opacity:0;transform:translateX(34px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.wb-bewegt .wb-wisch.wb-an .wb-karte{opacity:1;transform:none}
+.wb-bewegt .wb-wisch.wb-an .wb-karte:nth-child(2){transition-delay:.15s}.wb-bewegt .wb-wisch.wb-an .wb-karte:nth-child(3){transition-delay:.3s}
+.wb-bewegt .wb-wisch.wb-an .wb-karte:nth-child(4){transition-delay:.45s}.wb-bewegt .wb-wisch.wb-an .wb-karte:nth-child(n+5){transition-delay:.6s}
+/* Repair: drei Wege (Feuchtigkeit zieht ein, Proteine legen sich wie Pflaster auf, Bond Repair verbindet innen) */
+.wart .wb-rep .tr,.wart .wb-rep .pfl,.wart .wb-rep .neu{transform-box:fill-box;transform-origin:center}
+.wb-bewegt .wb-an .wb-rep .tr{animation:wbtropf 2.8s ease-in infinite}
+.wb-bewegt .wb-an .wb-rep .tr.t2{animation-delay:.9s}.wb-bewegt .wb-an .wb-rep .tr.t3{animation-delay:1.8s}
+@keyframes wbtropf{0%{transform:translateX(-22px);opacity:0}25%{opacity:1}75%{transform:translateX(0);opacity:1}100%{transform:translateX(4px);opacity:0}}
+.wb-bewegt .wb-an .wb-rep .pfl{animation:wbpfl 4.2s ease-in-out infinite}
+.wb-bewegt .wb-an .wb-rep .pfl.p2{animation-delay:.35s}.wb-bewegt .wb-an .wb-rep .pfl.p3{animation-delay:.7s}
+@keyframes wbpfl{0%,12%{transform:scale(0);opacity:0}30%,82%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
+.wb-bewegt .wb-an .wb-rep .neu{animation:wbneu 4.2s ease-in-out infinite}
+.wb-bewegt .wb-an .wb-rep .neu.n2{animation-delay:.4s}.wb-bewegt .wb-an .wb-rep .neu.n3{animation-delay:.8s}
+@keyframes wbneu{0%,15%{transform:scaleX(0);opacity:0}35%,82%{transform:scaleX(1);opacity:1}100%{transform:scaleX(0);opacity:0}}
+/* Überpflegt: Schicht um Schicht legt sich ums Haar, die Tiefenreinigung wäscht alles ab */
+.wb-bewegt .wb-an .wb-schicht .s{animation:wbschicht 7s ease-in-out infinite}
+.wb-bewegt .wb-an .wb-schicht .s2{animation-delay:.6s}.wb-bewegt .wb-an .wb-schicht .s3{animation-delay:1.2s}.wb-bewegt .wb-an .wb-schicht .s4{animation-delay:1.8s}
+@keyframes wbschicht{0%,6%{opacity:0}16%,68%{opacity:1}80%,100%{opacity:0}}
+.wb-bewegt .wb-an .wb-schicht .z{opacity:0;animation:wbzahl 7s ease-in-out infinite}
+.wb-bewegt .wb-an .wb-schicht .z2{animation-delay:.6s}.wb-bewegt .wb-an .wb-schicht .z3{animation-delay:1.2s}.wb-bewegt .wb-an .wb-schicht .z4{animation-delay:1.8s}
+@keyframes wbzahl{0%,6%{opacity:0}16%,68%{opacity:1}80%,100%{opacity:0}}
+.wb-bewegt .wb-an .wb-schicht .wisch{animation:wbwisch 7s ease-in-out infinite;transform-box:fill-box}
+@keyframes wbwisch{0%,66%{transform:translateX(-40px);opacity:0}70%{opacity:1}84%{transform:translateX(250px);opacity:1}88%,100%{transform:translateX(250px);opacity:0}}
+.wb-bewegt .wb-an .wb-schicht .glanz{animation:wbglanz 7s ease-in-out infinite}
+@keyframes wbglanz{0%,80%{opacity:0}88%,96%{opacity:1}100%{opacity:0}}
+.wart .wb-schicht .glanz,.wart .wb-schicht .wisch{opacity:0}
+/* Protein-Overload: Dehnungstest, drei Haare werden gezogen */
+.wart .wb-dehnen .h,.wart .wb-dehnen .r{transform-box:fill-box}
+.wart .wb-dehnen .h{transform-origin:left center}
+.wart .wb-dehnen .bruch{opacity:0}
+.wb-bewegt .wb-an .wb-dehnen .d1 .h{animation:wbd1h 4s ease-in-out infinite}.wb-bewegt .wb-an .wb-dehnen .d1 .r{animation:wbd1r 4s ease-in-out infinite}
+@keyframes wbd1h{0%,10%{transform:scaleX(1)}40%,60%{transform:scaleX(1.16)}90%,100%{transform:scaleX(1)}}
+@keyframes wbd1r{0%,10%{transform:translateX(0)}40%,60%{transform:translateX(18px)}90%,100%{transform:translateX(0)}}
+.wb-bewegt .wb-an .wb-dehnen .d2 .h{animation:wbd2h 4s ease-in infinite}.wb-bewegt .wb-an .wb-dehnen .d2 .r{animation:wbd2r 4s ease-in-out infinite}.wb-bewegt .wb-an .wb-dehnen .d2 .bruch{animation:wbbruch2 4s ease-in-out infinite}
+@keyframes wbd2h{0%,10%{transform:scaleX(1);opacity:1}26%{transform:scaleX(1.03);opacity:1}27%,85%{opacity:0}92%,100%{transform:scaleX(1);opacity:1}}
+@keyframes wbd2r{0%,10%{transform:translateX(0)}26%,85%{transform:translateX(4px)}92%,100%{transform:translateX(0)}}
+@keyframes wbbruch2{0%,26%{opacity:0}27%,85%{opacity:1}92%,100%{opacity:0}}
+.wb-bewegt .wb-an .wb-dehnen .d3 .h{animation:wbd3h 4s ease-in infinite}.wb-bewegt .wb-an .wb-dehnen .d3 .r{animation:wbd3r 4s ease-in-out infinite}.wb-bewegt .wb-an .wb-dehnen .d3 .bruch{animation:wbbruch3 4s ease-in-out infinite}
+@keyframes wbd3h{0%,8%{transform:scaleX(1);stroke-width:2.4;opacity:1}55%{transform:scaleX(1.42);stroke-width:1.1;opacity:1}56%,85%{opacity:0}92%,100%{transform:scaleX(1);stroke-width:2.4;opacity:1}}
+@keyframes wbd3r{0%,8%{transform:translateX(0)}55%,85%{transform:translateX(46px)}92%,100%{transform:translateX(0)}}
+@keyframes wbbruch3{0%,55%{opacity:0}56%,85%{opacity:1}92%,100%{opacity:0}}
+/* DHT: Haare wachsen von Zyklus zu Zyklus feiner, kürzer und heller nach */
+.wart .wb-mini .w{transform-box:fill-box;transform-origin:bottom}
+.wb-bewegt .wb-an .wb-mini .w{animation:wbwachs 6s ease-out infinite}
+.wb-bewegt .wb-an .wb-mini .w2{animation-delay:.5s}.wb-bewegt .wb-an .wb-mini .w3{animation-delay:1s}.wb-bewegt .wb-an .wb-mini .w4{animation-delay:1.5s}
+@keyframes wbwachs{0%{transform:scaleY(0)}25%,85%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+/* Haarwurzeln: am Haar wird gezogen, die Nerven rund um die Wurzel melden sich */
+.wart .wb-nerv .zug{transform-box:view-box}
+.wb-bewegt .wb-an .wb-nerv .zug{animation:wbzug 3.4s ease-in-out infinite}
+@keyframes wbzug{0%,20%{transform:translate(0,0)}45%,62%{transform:translate(5px,-7px)}85%,100%{transform:translate(0,0)}}
+.wb-bewegt .wb-an .wb-nerv .nv{animation:wbnerv 3.4s ease-in-out infinite}
+@keyframes wbnerv{0%,30%{stroke:#B5A79D}45%,62%{stroke:#B8664A}85%,100%{stroke:#B5A79D}}
+.wart .wb-nerv .blitz{opacity:0}
+.wb-bewegt .wb-an .wb-nerv .blitz{animation:wbblitz 3.4s ease-in-out infinite}
+@keyframes wbblitz{0%,38%{opacity:0}46%,60%{opacity:1}72%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){ .wb-bewegt .wb-an :is(.wb-rep,.wb-schicht,.wb-dehnen,.wb-mini,.wb-nerv) *{animation:none!important} }
 .wart .wb-dreier .wb-neu{transform-box:fill-box;transform-origin:top;animation:wbwachs 4.5s ease-in-out infinite}
 @keyframes wbwachs{0%{transform:scaleY(.15)}70%,100%{transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){ .wart .wb-dreier .wb-neu{animation:none} }
@@ -2560,15 +2620,15 @@ function wbBewegung(art, w){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
   art.classList.add("wb-bewegt");
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("wb-an"); io.unobserve(e.target); } }), {threshold: .25});
-  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen").forEach(el => io.observe(el));
+  art.querySelectorAll(".wb-bild,.wb-zwei,.wb-blick,.wb-zeit,.wb-balken,.wb-meters,.wb-mengen,.wb-tage,.wb-schritte,ol.wb-nummern,.wb-rf,.wb-zahl,.wb-wofuer,.wb-stufen,.wb-wisch,.note,.wb-tipp,.wb-frage,.wb-check,.wb-weiter,.wb-skala").forEach(el => io.observe(el));
   /* Punkte nacheinander füllen */
   art.querySelectorAll(".wb-meter").forEach((m, i) => m.querySelectorAll(".wb-punkte i").forEach((p, j) => p.style.transitionDelay = (i * 120 + j * 140) + "ms"));
   /* große Zahl zählt hoch */
-  art.querySelectorAll(".wb-zahl b").forEach(b => { if(!/^[\d.]+$/.test(b.textContent.trim())) return; const ziel = parseInt(b.textContent.replace(/\D/g, ""), 10); if(!ziel) return;
-    const fmt = n => n.toLocaleString("de-DE"); b.textContent = fmt(0);
+  art.querySelectorAll(".wb-zahl b,.wb-balken b").forEach(b => { const m = b.textContent.trim().match(/^([^\d]*?)(\d[\d.]*)([^\d]*)$/); if(!m) return; const ziel = parseInt(m[2].replace(/\./g, ""), 10); if(!ziel) return;
+    const schritt = ziel >= 1000 ? 100 : 1, fmt = n => m[1] + n.toLocaleString("de-DE") + m[3]; b.textContent = fmt(0);
     const o = new IntersectionObserver(es => { if(!es[0].isIntersecting) return; o.disconnect(); let t0 = null;
       const go = t => { if(t0 === null) t0 = t; const p = Math.min((t - t0) / 1400, 1), e = 1 - Math.pow(1 - p, 3);
-        b.textContent = fmt(Math.round(ziel * e / 100) * 100 || 0); if(p < 1) requestAnimationFrame(go); else b.textContent = fmt(ziel); };
+        b.textContent = fmt(Math.round(ziel * e / schritt) * schritt || 0); if(p < 1) requestAnimationFrame(go); else b.textContent = fmt(ziel); };
       requestAnimationFrame(go); }, {threshold: .6}); o.observe(b); });
   /* Haarzyklus: ein Lichtstreifen läuft im Uhrzeigersinn durch Lauras Kreis, die Phase, die er erreicht, leuchtet auf */
   const fig = art.querySelector(".wb-grafik"); if(fig && w.id === "haarzyklus") wbZyklus(fig);

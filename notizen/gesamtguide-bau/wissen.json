@@ -60,8 +60,7 @@
     "titel": "Was bedeutet „Repair“ eigentlich?",
     "teaser": "Feuchtigkeit, Proteine oder Bond Repair? Warum trockene Haare nicht automatisch kaputt sind.",
     "datei": "repair.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "leavein",
