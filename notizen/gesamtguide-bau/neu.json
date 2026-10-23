@@ -38,6 +38,36 @@
       "typ": "leavein",
       "brand": "Schwarzkopf Gliss",
       "name": "Sprüh-Conditioner Express-Repair Total Repair"
+    },
+    {
+      "typ": "leavein",
+      "brand": "syoss",
+      "name": "Leave-In Serum Intense Keratin"
+    },
+    {
+      "typ": "leavein",
+      "brand": "Neboa",
+      "name": "Overnight Hair Care Strengthening Serum"
+    },
+    {
+      "typ": "maske",
+      "brand": "Neboa",
+      "name": "Glossy Hair Smoothing Hair Mask"
+    },
+    {
+      "typ": "kopfhaut",
+      "brand": "Neboa",
+      "name": "Overnight Hair Care Strengthening Scalp Lotion"
+    },
+    {
+      "typ": "kopfhaut",
+      "brand": "Neboa",
+      "name": "Strong Scalp Natural Enzyme Scalp Peeling"
+    },
+    {
+      "typ": "kopfhaut",
+      "brand": "Typebea",
+      "name": "G•1 Overnight Boosting Peptide Scalp Serum"
     }
   ]
 }
