@@ -133,6 +133,8 @@ t = t.replace('__GEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}
 # Schnitt-Animation auf der Startseite (Lauras Scheren-Fotos, freigestellt)
 for _k in ('offen', 'zu'):
     t = t.replace('__SCHERE_' + _k.upper() + '__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/schere-' + _k + '.webp','rb').read()).decode())
+t = t.replace('__ORDNER_HINTEN__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner/ordner-hinten.webp','rb').read()).decode())
+t = t.replace('__ORDNER_VORNE__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/ordner/ordner-vorne.webp','rb').read()).decode())
 t = t.replace('__SIEGEL_HHC__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/siegel-hhc.webp','rb').read()).decode())
 t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())
 t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())

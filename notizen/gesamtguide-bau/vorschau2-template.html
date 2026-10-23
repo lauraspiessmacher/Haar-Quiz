@@ -1452,6 +1452,43 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 .llwas strong{color:#F3ECE2;font-weight:600}
 @media (max-width:600px){ .llkarte{padding:22px 16px 18px} .llkarte h2{font-size:24px;margin-bottom:14px} .llkurz{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px} .llkurz li{grid-template-columns:1fr;text-align:center;justify-items:center;background:rgba(243,236,226,.07);border-radius:14px;padding:12px 8px} .llkurz li::before{grid-row:auto;width:28px;height:28px;font-size:15px;margin-bottom:4px} .llkurz b{font-size:13px} .llkurz span{font-size:12.5px;line-height:1.35} }
 .llhero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:0 0 18px}
+/* Quiz-Seite: Krokoleder-Ordner statt Papierstapel (Laura 23.10.). Basis-Checks: Blatt mit Titel steckt im Ordner,
+   Beschreibung auf dem Leder. Extra-Checks: alles auf dem Leder, Reiter beschriftet. Bild: notizen/bilder/deko/ordner/ */
+#v-quiz .akte .sheet,#v-quiz .akte .qclip{display:none}
+#v-quiz .quizgrid:has(.akte){grid-template-columns:repeat(3,minmax(0,1fr))}
+#v-quiz .quizgrid.vier:has(.akte){grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){ #v-quiz .quizgrid:has(.akte-a){grid-template-columns:minmax(0,1fr)} }
+#v-quiz .akte{position:relative;min-width:0;display:flex;flex-direction:column;aspect-ratio:523/524;container-type:inline-size;color:#F3ECE2;transition:none}
+#v-quiz .akte .o-hinten,#v-quiz .akte .o-vorne{position:absolute;inset:0;background:url(__ORDNER_HINTEN__) 0 0/100% 100% no-repeat;pointer-events:none}
+#v-quiz .akte .o-hinten{filter:drop-shadow(0 18px 22px rgba(56,47,46,.32))}
+#v-quiz .akte .o-vorne{z-index:2;background-image:url(__ORDNER_VORNE__)}
+#v-quiz .akte::after{content:"";position:absolute;z-index:2;left:1%;right:1%;top:15%;bottom:1%;border-radius:3.5%;pointer-events:none;background:linear-gradient(180deg,rgba(20,12,8,.52) 0%,rgba(20,12,8,.34) 50%,rgba(20,12,8,.1) 100%)}
+#v-quiz .akte .leder,#v-quiz .akte-b .paper{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;gap:2.4cqw;padding:21cqw 7cqw 7cqw;font-weight:500;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+#v-quiz .akte p{margin:0;max-width:none;color:#F3ECE2;font-size:max(13.5px,4.1cqw);line-height:1.45}
+#v-quiz .akte .qmeta{color:#E9DFD2;font-size:max(12px,3.5cqw)}
+#v-quiz .akte .qgo{align-self:flex-start;margin-top:auto;background:#F3ECE2;color:#382F2E;text-shadow:none;border-radius:2px;padding:2.4cqw 4.4cqw;font-size:max(12.5px,3.6cqw)}
+#v-quiz .akte h3{text-transform:uppercase;font-weight:400;line-height:1;margin:0;padding:0}
+#v-quiz .akte h3 em{font-style:italic;text-transform:none;font-size:1.15em}
+/* Basis: Blatt */
+#v-quiz .akte-a{margin-top:0}
+#v-quiz .quizgrid:has(.akte-a){padding-top:clamp(56px,6vw,74px)}
+@media (max-width:900px){ #v-quiz .quizgrid:has(.akte-a){padding-top:max(70px,18vw)} }
+#v-quiz .akte-a .paper{position:absolute;z-index:1;left:12%;right:8%;top:-17%;height:36%;min-height:0;display:block;padding:4.4cqw 5.5cqw;transform:rotate(1.1deg);transition:transform .45s cubic-bezier(.3,.1,.2,1);color:#382F2E;text-shadow:none}
+#v-quiz .akte-a .paper::before{background:#FBF8F2;clip-path:none;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+#v-quiz .akte-a .paper{filter:drop-shadow(0 -2px 6px rgba(56,47,46,.12))}
+#v-quiz .akte-a .qfor{display:block;font-size:max(10.5px,3cqw);color:#7A6A65}
+#v-quiz .akte-a h3{font-size:9.6cqw;color:#382F2E;margin-top:1.6cqw}
+#v-quiz .akte-a:hover .paper,#v-quiz .akte-a:focus-visible .paper{transform:translateY(-3.5cqw) rotate(1.1deg);filter:drop-shadow(0 -2px 6px rgba(56,47,46,.12))}
+/* Extra: alles auf dem Leder */
+#v-quiz .akte-b .paper{min-height:0;transform:none;filter:none;padding-top:20cqw}
+#v-quiz .akte-b .paper::before{display:none}
+#v-quiz .akte-b .qfor{font-size:max(10.5px,2.8cqw);color:#D8C6A8}
+#v-quiz .akte-b h3{font-size:8.6cqw;color:#F1E4CC;text-shadow:0 -1px 0 rgba(0,0,0,.7),0 1px 0 rgba(255,230,190,.18)}
+#v-quiz .akte-b .reiter{position:absolute;z-index:3;left:4.5%;top:2.4%;width:33%;text-align:center;font-size:max(10px,2.6cqw);letter-spacing:.22em;text-transform:uppercase;color:#E9D9BE;text-shadow:0 -1px 0 rgba(0,0,0,.6)}
+#v-quiz .akte-b .zbadge{top:1.5%;right:3%;z-index:4}
+#v-quiz .akte-b:hover .qgo{background:#fff}
+@media (max-width:900px){ #v-quiz .quizgrid:not(.vier){max-width:380px;margin-left:auto;margin-right:auto;gap:0;row-gap:max(84px,20vw)} }
+@media (max-width:640px){ #v-quiz .quizgrid.vier:has(.akte){grid-template-columns:minmax(0,1fr);max-width:380px;margin-left:auto;margin-right:auto;gap:24px} }
 /* LL-Seite: Gel aus Lauras Foto hängt an der Linie unter der Kopfzeile und dehnt sich ganz langsam nach unten, ohne zu tropfen; läuft leicht hinter den Text (Laura 21.10.) */
 .llhero{position:relative}
 .llhero .lltext,.llhero > :not(.llgel):not(.lltext){position:relative;z-index:1}
@@ -1491,23 +1528,6 @@ html[data-stil="rouje"] .fmarke b{text-transform:uppercase}
 .handyrahmen iframe{display:block;width:390px;height:100%;border:0;border-radius:36px;background:#F7F2EA}
 .handyleiste{display:flex;align-items:center;gap:14px;color:#F3ECE2;font-size:13px}
 .handyzu{font:inherit;font-size:13px;border:1px solid rgba(243,236,226,.5);background:transparent;color:#F3ECE2;border-radius:999px;padding:7px 14px;cursor:pointer}
-/* Quiz auf dem Handy kompakter (Laura 21.10.): weniger scrollen, Extra-Checks untereinander statt schmal nebeneinander */
-@media (max-width:640px){
-  #v-quiz .quizgrid{gap:24px;margin-top:22px}
-  #v-quiz .qcard .paper{min-height:0;padding:22px 20px 18px;gap:7px}
-  #v-quiz .qcard h3{font-size:27px;padding-top:12px}
-  #v-quiz .qcard p{font-size:14px;line-height:1.45}
-  #v-quiz .qcard .qmeta{font-size:12px}
-  #v-quiz .qcard .qgo{padding:8px 14px;font-size:13px}
-  #v-quiz .quizgrid.vier{grid-template-columns:1fr;gap:20px}
-  #v-quiz .vier .qcard .paper{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;row-gap:5px;align-items:end;padding:50px 18px 16px}
-  html.zg-abo #v-quiz .vier .qcard .paper{padding-top:22px}
-  #v-quiz .vier .qcard .qfor,#v-quiz .vier .qcard h3,#v-quiz .vier .qcard p{grid-column:1/-1}
-  #v-quiz .vier .qcard h3{font-size:23px;padding-top:4px}
-  #v-quiz .vier .qcard .qmeta{grid-column:1}
-  #v-quiz .vier .qcard .qgo{grid-column:2;margin-top:0;white-space:nowrap}
-  #v-quiz .vier .zbadge{top:14px;left:18px;right:auto}
-}
 /* LL-Zeichnungen: Hand mit fünf Fingern (Laura 21.10.) */
 /* „Meine“ / „Dein“ im großen Seitentitel: größer, kursiv, nicht in Großbuchstaben (Laura 21.10.) */
 .whero .intro h1,html[data-stil] .whero .intro h1{font-size:clamp(40px,6.2vw,80px)}
@@ -1836,74 +1856,20 @@ __ROUTINE__
   <section class="view" id="v-quiz" hidden>
     <div class="intro seitenkopf"><p class="kicker">Lerne deine Haare kennen</p><h1><em class="hkurs">Dein</em> Haar-Quiz</h1><p>Starte mit den drei Checks: Sie zeigen dir, was deine Kopfhaut, deine Pflege und deine Struktur brauchen. Aus deinen Ergebnissen entsteht danach dein Haarplan. Dazu gibt es sechs Extra-Checks: welches Leave-in zu dir passt, welche Kopfhautpflege und welches Peeling du brauchst, wie kaputt deine Haare sind, ob dein Haarverlust normal ist, welches Hitze-Tool zu deinen Haaren passt und welcher Haarschnitt dir steht.</p></div>
     <div class="quizgrid">
-      <a class="qcard" data-check="kopfhaut" href="__QUIZ_KOPF__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für dein Shampoo</span>
-        <h3>Kopfhaut-Check</h3>
-        <p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast und worauf du vor dem Shampoo-Regal achtest.</p>
-        <span class="qmeta">9 Fragen · ca. 2 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
-      <a class="qcard" data-check="pflege" href="__QUIZ_PFLEGE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für deine Pflege</span>
-        <h3>Pflege-Check</h3>
-        <p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf und wie viel Repair sie braucht.</p>
-        <span class="qmeta">10 Fragen · ca. 3 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
-      <a class="qcard" data-check="haar" href="__QUIZ_HAAR__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für dein Styling</span>
-        <h3>Haar-Check</h3>
-        <p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p>
-        <span class="qmeta">8 Fragen · ca. 2 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
+      <a class="qcard akte akte-a" data-check="kopfhaut" href="__QUIZ_KOPF__"><span class="o-hinten" aria-hidden="true"></span><span class="paper"><span class="qfor">Für dein Shampoo</span><h3>Kopfhaut-<em>Check</em></h3></span><span class="o-vorne" aria-hidden="true"></span><span class="leder"><p>Normal, trocken, fettig, sensibel oder schuppig? Du erfährst, welche Kopfhaut du gerade hast und worauf du vor dem Shampoo-Regal achtest.</p><span class="qmeta">9 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
+      <a class="qcard akte akte-a" data-check="pflege" href="__QUIZ_PFLEGE__"><span class="o-hinten" aria-hidden="true"></span><span class="paper"><span class="qfor">Für deine Pflege</span><h3>Pflege-<em>Check</em></h3></span><span class="o-vorne" aria-hidden="true"></span><span class="leder"><p>Wie dick sind deine Haare und wie geht es ihnen? Du erfährst, wie reichhaltig deine Pflege sein darf und wie viel Repair sie braucht.</p><span class="qmeta">10 Fragen · ca. 3 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
+      <a class="qcard akte akte-a" data-check="haar" href="__QUIZ_HAAR__"><span class="o-hinten" aria-hidden="true"></span><span class="paper"><span class="qfor">Für dein Styling</span><h3>Haar-<em>Check</em></h3></span><span class="o-vorne" aria-hidden="true"></span><span class="leder"><p>Glatt, wellig oder lockig, und welcher Typ genau? Du erfährst, wie du deine Struktur pflegst und was beim Styling realistisch ist.</p><span class="qmeta">8 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
     </div>
     <div class="qplanhint"><div><p class="kicker">Aus deinen Ergebnissen</p><p class="qph">Wenn du die drei Checks gemacht hast, entsteht daraus dein Haarplan.</p></div><button type="button" class="btn" id="zumPlan">Zum Haarplan <span aria-hidden="true">→</span></button></div>
     <p class="qclosing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
     <h2 class="qsub"><em class="hk">Extra</em>-Checks</h2>
     <div class="quizgrid vier">
-      <a class="qcard" data-abo="check" href="__QUIZ_LEAVEIN__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für deine LL-Methode</span>
-        <h3>Leave-in-Check</h3>
-        <p>Spray, Milch, Serum oder Creme? Du erfährst, welches Leave-in zu deinen Haaren passt und wie du es mit meiner LL-Methode benutzt.</p>
-        <span class="qmeta">7 Fragen · ca. 2 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
-      <a class="qcard" data-abo="check" href="__QUIZ_KOPFPFLEGE__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für deine Kopfhaut</span>
-        <h3>Kopfhautpflege-Check</h3>
-        <p>Feuchtigkeitsserum, etwas gegen Schuppen oder Wirkstoffe für die Haarwurzel? Du erfährst, welche Kopfhautpflege und welches Peeling zu dir passen und wie du sie richtig aufträgst.</p>
-        <span class="qmeta">9 Fragen · ca. 2 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
-      <a class="qcard" data-abo="check" href="__QUIZ_SPLISS__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für deine Längen und Spitzen</span>
-        <h3>Spliss- &amp; Bruch-Check</h3>
-        <p>Wie kaputt sind deine Haare wirklich, welchen Spliss hast du und woher kommt der Haarbruch? Du erfährst, wie du damit umgehst und wann nur noch die Schere hilft.</p>
-        <span class="qmeta">Bis zu 15 Fragen · ca. 3 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
-      <a class="qcard" data-abo="check" href="__QUIZ_AUSFALL__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für deine Ruhe</span>
-        <h3>Haarausfall-Check</h3>
-        <p>Ausfall oder Bruch? Mit dem Bürsten-Test und dem Zupftest findest du heraus, ob dein Haarverlust normal ist, vorübergeht oder ob du ihn abklären lassen solltest.</p>
-        <span class="qmeta">8 Fragen · ca. 3 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
-      <a class="qcard" data-abo="check" href="__QUIZ_TOOLS__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für dein Styling-Gerät</span>
-        <h3>Hitze-Tool-Check</h3>
-        <p>Multistyler, Lockenstab, Glätteisen oder ein guter Föhn? Du erfährst, welches Gerät für dein Wunschergebnis bei deinem Haar wirklich hält, bevor du Geld ausgibst.</p>
-        <span class="qmeta">8 Fragen · ca. 2 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
-      <a class="qcard" data-abo="check" href="__QUIZ_SCHNITT__"><span class="sheet s1" aria-hidden="true"></span><span class="sheet s2" aria-hidden="true"></span><span class="paper"><svg class="qclip" viewBox="0 0 24 60" fill="none" aria-hidden="true"><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#9A948E" stroke-width="2" stroke-linecap="round"/><path d="M8 50V12a6 6 0 0 1 12 0v34a9 9 0 0 1-18 0V18" stroke="#E6E2DD" stroke-width=".7" stroke-linecap="round" style="stroke:#E6E2DD"/></svg>
-        <span class="qfor">Für deinen nächsten Friseurtermin</span>
-        <h3>Haarschnitt-Check</h3>
-        <p>Stufen oder gerade Spitzen, kurz oder lang? Du bekommst eine Orientierung aus deiner Gesichtsform, deinen Haaren und deinem Wunsch, die du mit zum Friseur nehmen kannst.</p>
-        <span class="qmeta">13 bis 16 Fragen · ca. 3 Minuten</span>
-        <span class="qgo">Quiz starten <span aria-hidden="true">→</span></span>
-      </span></a>
+      <a class="qcard akte akte-b" data-abo="check" href="__QUIZ_LEAVEIN__"><span class="o-hinten" aria-hidden="true"></span><span class="o-vorne" aria-hidden="true"></span><span class="reiter" aria-hidden="true">Extra</span><span class="paper"><span class="qfor">Für deine LL-Methode</span><h3>Leave-in-<em>Check</em></h3><p>Spray, Milch, Serum oder Creme? Du erfährst, welches Leave-in zu deinen Haaren passt und wie du es mit meiner LL-Methode benutzt.</p><span class="qmeta">7 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
+      <a class="qcard akte akte-b" data-abo="check" href="__QUIZ_KOPFPFLEGE__"><span class="o-hinten" aria-hidden="true"></span><span class="o-vorne" aria-hidden="true"></span><span class="reiter" aria-hidden="true">Extra</span><span class="paper"><span class="qfor">Für deine Kopfhaut</span><h3>Kopfhautpflege-<em>Check</em></h3><p>Feuchtigkeitsserum, etwas gegen Schuppen oder Wirkstoffe für die Haarwurzel? Du erfährst, welche Kopfhautpflege und welches Peeling zu dir passen und wie du sie richtig aufträgst.</p><span class="qmeta">9 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
+      <a class="qcard akte akte-b" data-abo="check" href="__QUIZ_SPLISS__"><span class="o-hinten" aria-hidden="true"></span><span class="o-vorne" aria-hidden="true"></span><span class="reiter" aria-hidden="true">Extra</span><span class="paper"><span class="qfor">Für deine Längen und Spitzen</span><h3>Spliss- &amp; Bruch-<em>Check</em></h3><p>Wie kaputt sind deine Haare wirklich, welchen Spliss hast du und woher kommt der Haarbruch? Du erfährst, wie du damit umgehst und wann nur noch die Schere hilft.</p><span class="qmeta">Bis zu 15 Fragen · ca. 3 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
+      <a class="qcard akte akte-b" data-abo="check" href="__QUIZ_AUSFALL__"><span class="o-hinten" aria-hidden="true"></span><span class="o-vorne" aria-hidden="true"></span><span class="reiter" aria-hidden="true">Extra</span><span class="paper"><span class="qfor">Für deine Ruhe</span><h3>Haarausfall-<em>Check</em></h3><p>Ausfall oder Bruch? Mit dem Bürsten-Test und dem Zupftest findest du heraus, ob dein Haarverlust normal ist, vorübergeht oder ob du ihn abklären lassen solltest.</p><span class="qmeta">8 Fragen · ca. 3 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
+      <a class="qcard akte akte-b" data-abo="check" href="__QUIZ_TOOLS__"><span class="o-hinten" aria-hidden="true"></span><span class="o-vorne" aria-hidden="true"></span><span class="reiter" aria-hidden="true">Extra</span><span class="paper"><span class="qfor">Für dein Styling-Gerät</span><h3>Hitze-Tool-<em>Check</em></h3><p>Multistyler, Lockenstab, Glätteisen oder ein guter Föhn? Du erfährst, welches Gerät für dein Wunschergebnis bei deinem Haar wirklich hält, bevor du Geld ausgibst.</p><span class="qmeta">8 Fragen · ca. 2 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
+      <a class="qcard akte akte-b" data-abo="check" href="__QUIZ_SCHNITT__"><span class="o-hinten" aria-hidden="true"></span><span class="o-vorne" aria-hidden="true"></span><span class="reiter" aria-hidden="true">Extra</span><span class="paper"><span class="qfor">Für deinen nächsten Friseurtermin</span><h3>Haarschnitt-<em>Check</em></h3><p>Stufen oder gerade Spitzen, kurz oder lang? Du bekommst eine Orientierung aus deiner Gesichtsform, deinen Haaren und deinem Wunsch, die du mit zum Friseur nehmen kannst.</p><span class="qmeta">13 bis 16 Fragen · ca. 3 Minuten</span><span class="qgo">Quiz starten <span aria-hidden="true">→</span></span></span></a>
     </div>
   </section>
 
