@@ -95,8 +95,7 @@
     "titel": "Silikone",
     "teaser": "Nicht gut, nicht schlecht: Für wen Silikone total Sinn machen und für wen eher nicht.",
     "datei": "silikone.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "seide",

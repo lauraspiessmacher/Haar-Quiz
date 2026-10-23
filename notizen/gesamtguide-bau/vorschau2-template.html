@@ -839,13 +839,24 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wb-bewegt .wb-mythos.wb-an .wb-my-q span{background-size:100% 2.5px}
 .wb-bewegt .wb-mythos .wb-my-b{opacity:0;transform:translateY(14px);transition:opacity .6s ease 1.2s,transform .6s ease 1.2s}
 .wb-bewegt .wb-mythos.wb-an .wb-my-b{opacity:1;transform:none}
+/* Silikone (Laura 23.10.): Foto zeigt die unteren Längen, Silikonfilm legt sich ums Haar, Kamm gleitet */
+.wart .wb-foto.wb-unten img{object-position:center bottom}
+.wart .wb-film .schicht,.wart .wb-film .glanzl{transform-box:fill-box;transform-origin:left center}
+.wb-bewegt .wb-an .wb-film .schicht{animation:wbfilm 6s ease-in-out infinite}
+@keyframes wbfilm{0%,8%{transform:scaleX(0);opacity:0}12%{opacity:1}38%,88%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+.wb-bewegt .wb-an .wb-film .glanzl{animation:wbglanzl 6s ease-in-out infinite}
+@keyframes wbglanzl{0%,40%{opacity:0}50%,88%{opacity:1}100%{opacity:0}}
+.wb-bewegt .wb-an .wb-film .kamm{animation:wbkamm 6s ease-in-out infinite}
+@keyframes wbkamm{0%,42%{transform:translateX(0)}78%{transform:translateX(262px)}86%,100%{transform:translateX(262px);opacity:0}}
+.wb-bewegt .wb-an .wb-film .funk{animation:wbfunk 1.2s steps(2) infinite}
+@keyframes wbfunk{0%{opacity:1}100%{opacity:.15}}
 /* Shampoo: bei der zweiten Wäsche baut sich viel mehr Schaum auf */
 @media (max-width:520px){ .wart .wb-schaum .wb-kl{font-size:13px} .wart .wb-schaum .wb-kl2{font-size:14.5px} }
 .wart .wb-schaum .bl{transform-box:fill-box;transform-origin:center}
 .wb-bewegt .wb-an .wb-schaum .bl{animation:wbblase 5s ease-out infinite}
 .wb-bewegt .wb-an .wb-schaum .b2{animation-delay:.25s}.wb-bewegt .wb-an .wb-schaum .b3{animation-delay:.5s}.wb-bewegt .wb-an .wb-schaum .b4{animation-delay:.75s}
 @keyframes wbblase{0%{transform:scale(0);opacity:0}20%{transform:scale(1.08);opacity:1}28%,85%{transform:scale(1);opacity:1}100%{transform:scale(.6);opacity:0}}
-@media (prefers-reduced-motion:reduce){ .wb-bewegt .wb-an :is(.wb-rep,.wb-schicht,.wb-dehnen,.wb-mini,.wb-nerv,.wb-schaum) *{animation:none!important} }
+@media (prefers-reduced-motion:reduce){ .wb-bewegt .wb-an :is(.wb-rep,.wb-schicht,.wb-dehnen,.wb-mini,.wb-nerv,.wb-schaum,.wb-film) *{animation:none!important} }
 .wart .wb-dreier .wb-neu{transform-box:fill-box;transform-origin:top;animation:wbwachs 4.5s ease-in-out infinite}
 @keyframes wbwachs{0%{transform:scaleY(.15)}70%,100%{transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){ .wart .wb-dreier .wb-neu{animation:none} }
