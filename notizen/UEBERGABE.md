@@ -592,3 +592,4 @@
 - v382: Seide oder Satin? freigegeben (entwurf raus).
 - v383: Alkohol in Haarpflege freigegeben (entwurf raus). Einziger Entwurf: Neue Haare, Haarbruch oder Frizz?
 - v384: Neue Haare, Haarbruch oder Frizz? freigegeben. ALLE Wissen-Kapitel freigegeben (23.10.).
+- Entscheidung 23.10.: keine eigene Plan-Auswahl, Einkaufsliste bleibt automatisch (Favorites zuerst). Offen für ganz am Ende: Name „Haarplan“, Quiz-Umschlag Spitze vs. altes Siegel.
