@@ -445,7 +445,9 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 #merkBox h3.sec{margin-top:30px}
 #merkBox .cnt{font-family:var(--sans);font-size:14px;color:var(--muted)}
 @media (max-width:759px){
-  nav.main{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr) minmax(0,1fr) minmax(0,.72fr) minmax(0,.9fr) minmax(0,1.2fr)}
+  nav.main{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr) minmax(0,.95fr) minmax(0,1fr) minmax(0,.7fr) minmax(0,.85fr) minmax(0,1.15fr)}
+  /* 7 Menüpunkte (Routine dazu, Laura 23.10.): LL-Methode darf umbrechen */
+  html[data-stil] nav.main button span:not(.melbl){white-space:normal;line-height:1.05;text-align:center;letter-spacing:0;font-size:9px}
   /* Mein Bereich auf dem Handy mit Symbol und Wort, bleibt hervorgehoben */
   nav.main button.me .melbl{display:block}
   nav.main button.me{justify-content:center}
@@ -862,6 +864,80 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .wb-bewegt .wb-inci.wb-an li.wb-grenze::after{transform:none}
 .wb-bewegt .wb-inci.wb-an li.wb-prot:not(.klein){animation:wbprot 2.4s ease-in-out 1.8s 2}
 @keyframes wbprot{0%,100%{box-shadow:0 0 0 0 rgba(214,185,143,0)}50%{box-shadow:0 0 0 6px rgba(214,185,143,.45)}}
+.rtstart{text-align:center;margin:26px 0 0}
+.rtcta2{appearance:none;border:1px solid #382F2E;background:transparent;color:#382F2E;border-radius:999px;padding:12px 24px;font:inherit;font-size:13px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.rtcta2:hover{background:#382F2E;color:#F3ECE2}
+@media (max-width:370px){ nav.main button.me .melbl{font-size:7.5px} }
+/* ---------- Routine-Seite (Laura 23.10.): silberner Faden durch die Mitte ---------- */
+.routpage{padding-bottom:40px}
+.rthero{text-align:center;max-width:680px;margin:34px auto 10px;padding:0 6px}
+.rtkick0{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.rthero h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,6vw,60px);line-height:1.05;margin:0 0 14px}
+.rtlead{font-size:16.5px;line-height:1.55;margin:0 auto 16px;max-width:560px}
+.rtlegende{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:6px 10px;align-items:center;font-size:13.5px;color:var(--muted)}
+.rtb{display:inline-block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:3px 9px;white-space:nowrap;vertical-align:middle}
+.rtb.basis{background:#382F2E;color:#F3ECE2}
+.rtb.extra{background:transparent;border:1px solid #9EA3A9;color:#5E6368}
+.rtfaden{position:relative;max-width:1060px;margin:26px auto 0;padding:30px 0 10px}
+.rtthread{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:0}
+.rtglanz{animation:rtglanz 3.2s linear infinite}
+@keyframes rtglanz{from{stroke-dashoffset:960}to{stroke-dashoffset:0}}
+.rtphase{position:relative;display:grid;grid-template-columns:1fr 70px 1fr;align-items:start;margin:0 0 54px;z-index:1}
+.rtknoten{grid-column:2;justify-self:center;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#FFFFFF 0,#E3E5E8 30%,#A7ACB2 75%,#8E9399 100%);box-shadow:0 4px 14px -6px rgba(56,47,46,.55),inset 0 -2px 4px rgba(0,0,0,.15);color:#382F2E;font-family:var(--serif);font-size:21px;transform:scale(.4);opacity:0;transition:transform .5s cubic-bezier(.3,1.6,.5,1),opacity .3s}
+.rtknoten.klein{width:34px;height:34px;font-size:18px;margin-top:6px}
+.rtknoten.ziel{margin:0 auto 14px}
+.rtphase.an .rtknoten,.rtende.an .rtknoten{transform:none;opacity:1}
+.rtkarte{background:#FFFDFA;border:1px solid rgba(56,47,46,.14);border-radius:22px;padding:22px 22px 18px;box-shadow:0 18px 40px -30px rgba(56,47,46,.5);opacity:0;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.rtphase[data-side="l"] .rtkarte{grid-column:1;grid-row:1;transform:translateX(-30px)}
+.rtphase[data-side="r"] .rtkarte{grid-column:3;grid-row:1;transform:translateX(30px)}
+.rtphase.an .rtkarte{opacity:1;transform:none}
+.rtphase::before{content:"";position:absolute;top:23px;height:2px;width:35px;background:linear-gradient(90deg,#C9CDD2,#9EA3A9);transform:scaleX(0);transition:transform .4s ease .2s}
+.rtphase[data-side="l"]::before{right:50%;transform-origin:right}
+.rtphase[data-side="r"]::before{left:50%;transform-origin:left}
+.rtphase.an::before{transform:scaleX(1)}
+.rtast .rtkarte{background:#F6F2EC;border-style:dashed}
+.rtkick{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.rtkarte h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;margin:0 0 8px}
+.rtwann{font-size:14.5px;line-height:1.45;margin:0 0 12px;color:#4A403E}
+.rtsteps{list-style:none;margin:0;padding:0}
+.rtsteps li{border-top:1px solid var(--line-soft);padding:11px 0 10px;margin:0}
+.rtsteps li p{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 3px;font-size:15.5px}
+.rtsteps li small{display:block;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.rtkarte button{appearance:none;background:none;border:0;padding:0;margin-top:6px;font:inherit;font-size:13px;letter-spacing:.06em;color:#382F2E;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.rtkarte button.rtmehr{margin-top:10px;font-weight:500}
+.rtchips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 12px}
+.rtchips span{background:#F3ECE2;border-radius:14px;padding:10px 12px;font-size:12.5px;line-height:1.35;color:var(--muted)}
+.rtchips b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:#382F2E;letter-spacing:.04em}
+.rtziele{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 12px}
+.rtziele div{background:#F3ECE2;border-radius:14px;padding:12px 10px;text-align:center}
+.rtziele em{display:block;font-style:normal;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rtziele b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;margin:4px 0 0}
+.rtziele button{font-size:12px}
+.rtfuss{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0}
+.rtfuss button{margin-top:0}
+.rtfuss small{font-size:13px;color:var(--muted)}
+.rtende{position:relative;z-index:1;text-align:center;max-width:520px;margin:10px auto 0;background:#382F2E;color:#F3ECE2;border-radius:24px;padding:26px 24px 28px;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.rtende.an{opacity:1;transform:none}
+.rtende h2{font-family:var(--serif);font-weight:400;font-size:30px;margin:0 0 8px}
+.rtende p{margin:0 0 16px;font-size:15px;line-height:1.5;color:#E9E2D8}
+.rtende .rtknoten.ziel{margin-top:-50px}
+.rtcta{appearance:none;border:0;border-radius:999px;background:#F3ECE2;color:#382F2E;font:inherit;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:12px 22px;cursor:pointer}
+@media (max-width:759px){
+  .rthero{margin-top:22px}
+  .rtfaden{padding-top:20px}
+  .rtphase{display:block;margin:0 0 40px}
+  .rtphase::before{display:none}
+  .rtknoten{margin:0 auto 12px}
+  .rtphase[data-side] .rtkarte{transform:translateY(18px)}
+  .rtphase.an .rtkarte{transform:none}
+  .rtkarte{padding:18px 16px 14px}
+  .rtkarte h2{font-size:25px}
+  .rtziele{grid-template-columns:1fr}
+  .rtziele div{display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:left}
+  .rtziele em{order:-1;min-width:70px}
+  .rtziele b{margin:0;font-size:17px;flex:1}
+}
+@media (prefers-reduced-motion:reduce){ .rtknoten,.rtkarte,.rtende{opacity:1!important;transform:none!important;transition:none} .rtglanz{animation:none;opacity:0} }
 /* Produktkarten einheitlich (Laura 23.10.): Textspalte immer volle Breite, Drogerie/High-End rechts oben, Werbelink + Kaufen immer unten rechts in der Ecke */
 html[data-stil] .grid .item .txt{align-self:stretch}
 html[data-stil] .grid .item:has(> .txt > .buyrow:not(.sm)){padding-bottom:62px}
@@ -1828,6 +1904,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
     <button class="logo" id="home" type="button"><b>Haarpflege <em class="lk">einfach</em> erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span></button>
     <nav class="main" aria-label="Hauptnavigation">
       <button type="button" data-view="produkte" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 12h8"/></svg>Produkte</button>
+      <button type="button" data-view="routine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c-3 3 3 5 0 8s3 5 0 8-1 3 0 4"/><circle cx="12" cy="6" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.6" fill="currentColor" stroke="none"/><path d="M15.5 8.5h4M15.5 16.5h4M4.5 10.5h4"/></svg><span>Routine</span></button>
       <button type="button" data-view="ll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8c3.4 4.3 5.8 7.4 5.8 10.6a5.8 5.8 0 0 1-11.6 0c0-3.2 2.4-6.3 5.8-10.6z"/><path d="M9.4 14.2a2.7 2.7 0 0 0 2.4 2.6"/></svg><span>LL-Methode</span></button>
       <button type="button" data-view="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10l1.5 1.5 3-3"/><path d="M8.5 16l1.5 1.5 3-3"/><path d="M15 10.5h1.5M15 16.5h1.5"/></svg>Haarplan</button>
       <button type="button" data-view="quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.3-2.7 4"/><circle cx="12" cy="17.4" r=".6" fill="currentColor"/></svg>Quiz</button>
@@ -1956,6 +2033,100 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
 <path d="M118 104 Q125 116 125 122 A7 7 0 0 1 111 122 Q111 116 118 104 Z"/><path class="t" d="M115 121 q0 3 3 4"/>
 <path class="t" d="M106 100 l-4 -4 M130 100 l4 -4 M118 94 v-5"/></g><path class="fr" d="M10 196 V82 A70 70 0 0 1 150 82 V196 Q150 206 140 206 H20 Q10 206 10 196 Z"/></svg><figcaption><span>6</span>Haaröl</figcaption></figure></div>
 
+      <p class="rtstart"><button type="button" class="rtcta2" onclick="window.showRoutine()">Die ganze Routine ansehen <span aria-hidden="true">→</span></button></p>
+    </div>
+  </section>
+
+  <!-- ===================== ROUTINE (Laura 23.10.): silberner Faden von oben nach unten ===================== -->
+  <section class="view routpage" id="v-routine" hidden>
+    <div class="rthero">
+      <p class="rtkick0">Deine Routine</p>
+      <h1>Was kommt <em class="hk">wann?</em></h1>
+      <p class="rtlead">Von der Kopfhaut bis in die Spitzen: Folge dem silbernen Faden und du siehst, in welcher Reihenfolge deine Pflege Sinn macht. Du musst nicht alles machen.</p>
+      <div class="rtlegende"><span class="rtb basis">Basis</span> gehört in jede Routine <span class="rtb extra">Extra</span> nur, wenn deine Haare es brauchen</div>
+    </div>
+    <div class="rtfaden" id="rtfaden">
+      <svg class="rtthread" id="rtthread" aria-hidden="true"><defs>
+        <mask id="rtmask" maskUnits="userSpaceOnUse"><path class="rtmp" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/></mask>
+        <linearGradient id="rtnadel" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8E9399"/><stop offset=".45" stop-color="#F4F5F7"/><stop offset="1" stop-color="#8E9399"/></linearGradient>
+      </defs>
+        <g mask="url(#rtmask)">
+          <path class="rtp rtp1" fill="none" stroke="#9EA3A9" stroke-width="7" stroke-linecap="round"/>
+          <path class="rtp rtp2" fill="none" stroke="#C9CDD2" stroke-width="5" stroke-linecap="round"/>
+          <path class="rtp rtp3" fill="none" stroke="#7D838A" stroke-width="5" stroke-dasharray="1.6 5" stroke-linecap="round"/>
+          <path class="rtp rtp4" fill="none" stroke="#FBFBFC" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+          <path class="rtp rtglanz" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-dasharray="60 900"/>
+        </g>
+        <g class="rtnadel" id="rtnadelg"><path d="M0 -26 C2.4 -18 2.6 6 0 22 C-2.6 6 -2.4 -18 0 -26Z" fill="url(#rtnadel)" stroke="#7D838A" stroke-width=".8"/><ellipse cx="0" cy="-17" rx=".9" ry="3.2" fill="#F3ECE2" stroke="#7D838A" stroke-width=".5"/></g>
+      </svg>
+
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>1</span></div><div class="rtkarte">
+        <p class="rtkick">Vor der Wäsche · Kopfhaut</p><h2>Pre-Wash für die Kopfhaut</h2>
+        <p class="rtwann"><b>Wann:</b> vor dem Waschen, wenn deine Kopfhaut mehr braucht als Shampoo.</p>
+        <ul class="rtsteps">
+          <li><p><b>Kopfhautpeeling</b><span class="rtb extra">Extra</span></p><small>Löst Schuppen, Talg und Produktreste. Nicht öfter als einmal pro Woche.</small><button type="button" data-go="produkte:kopfhaut.peeling">Peelings ansehen →</button></li>
+          <li><p><b>Kopfhautpflege mit Wirkstoff</b><span class="rtb extra">Extra</span></p><small>Seren, Tonika oder Lotionen mit Wirkstoffen, zum Beispiel bei trockener Kopfhaut, Schuppen oder Haarausfall.</small><button type="button" data-go="produkte:kopfhaut.alle">Kopfhautpflege ansehen →</button></li>
+          <li><p><b>Hair Oiling für die Kopfhaut</b><span class="rtb extra">Extra</span></p><small>Für Geschmeidigkeit: Öl sanft einmassieren und einwirken lassen. Bei Schuppen lieber vorsichtig sein.</small><button type="button" data-go="wissen:prewash">Mehr zu Pre-Wash →</button></li>
+        </ul></div></div>
+
+      <div class="rtphase" data-side="r"><div class="rtknoten"><span>2</span></div><div class="rtkarte">
+        <p class="rtkick">Vor der Wäsche · Längen</p><h2>Pre-Wash für die Längen</h2>
+        <p class="rtwann"><b>Wann:</b> vor dem Shampoo, damit die Längen beim Waschen nicht austrocknen.</p>
+        <div class="rtchips"><span><b>ÖWC</b>Öl · Waschen · Conditioner</span><span><b>MWC</b>Maske · Waschen · Conditioner</span><span><b>LWC</b>Leave-in · Waschen · Conditioner</span><span><b>CWC</b>Conditioner · Waschen · Conditioner</span></div>
+        <p class="rtfuss"><span class="rtb extra">Extra</span><button type="button" data-go="wissen:prewash">Welche passt zu dir? →</button></p></div></div>
+
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>3</span></div><div class="rtkarte">
+        <p class="rtkick">Waschen</p><h2>Shampoonieren</h2>
+        <p class="rtwann"><b>Wann:</b> bei jeder Wäsche. Das Shampoo gehört auf die Kopfhaut, die Längen reinigt der Schaum beim Ausspülen.</p>
+        <ul class="rtsteps">
+          <li><p><b>2× shampoonieren</b><span class="rtb basis">Basis</span></p><small>Für die meisten Kopfhauttypen: Beim ersten Mal löst das Shampoo das Fett, beim zweiten Mal reinigt es richtig.</small></li>
+          <li><p><b>1× shampoonieren, dafür gründlich</b><span class="rtb basis">Basis</span></p><small>Bei sensibler oder sehr trockener Kopfhaut: ein bis zwei Minuten mit den Fingerkuppen einmassieren.</small></li>
+          <li><p><b>Wirkstoffshampoo</b><span class="rtb extra">Extra</span></p><small>Bei Schuppen, Juckreiz oder für die Kopfhautgesundheit. Ein paar Minuten einwirken lassen.</small><button type="button" data-go="produkte:shampoo.schuppen">Shampoos ansehen →</button></li>
+        </ul><button type="button" class="rtmehr" data-go="wissen:shampoo">Shampoo verstehen →</button></div></div>
+
+      <div class="rtphase rtast" data-side="r"><div class="rtknoten klein"><span>+</span></div><div class="rtkarte">
+        <p class="rtkick">Ab und zu, statt dem normalen Shampoo</p><h2>Tiefenreinigung</h2>
+        <p class="rtwann"><b>Wann:</b> je nach Styling und Kopfhaut ein- bis dreimal im Monat, oder wenn sich deine Haare schwer und belegt anfühlen.</p>
+        <ul class="rtsteps"><li><p><b>Tiefenreinigungsshampoo</b><span class="rtb extra">Extra</span></p><small>Auf die Kopfhaut, in die Längen nur, wenn nötig, zum Beispiel bei viel Styling.</small><button type="button" data-go="produkte:shampoo.tief">Tiefenreinigung ansehen →</button></li></ul></div></div>
+
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>4</span></div><div class="rtkarte">
+        <p class="rtkick">Pflegen</p><h2>Zusatzpflege</h2>
+        <p class="rtwann"><b>Wann:</b> nach dem Shampoo, je nachdem, was deine Haare gerade brauchen.</p>
+        <div class="rtziele">
+          <div><em>Nähren</em><b>Maske</b><button type="button" data-go="produkte:maske.alle">Masken →</button></div>
+          <div><em>Mehr Glanz</em><b>Wonder Water</b><button type="button" data-go="produkte:conditioner.alle">Ansehen →</button></div>
+          <div><em>Repair</em><b>Bond Treatment</b><button type="button" data-go="wissen:repair">Mehr zu Repair →</button></div>
+        </div>
+        <p class="rtfuss"><span class="rtb extra">Extra</span><small>Nicht alles auf einmal: wechsel ab und beobachte deine Haare.</small></p></div></div>
+
+      <div class="rtphase" data-side="r"><div class="rtknoten"><span>5</span></div><div class="rtkarte">
+        <p class="rtkick">Abschluss</p><h2>Conditioner</h2>
+        <p class="rtwann"><b>Wann:</b> nach jedem Shampoo, als letzter Schritt in der Dusche.</p>
+        <ul class="rtsteps">
+          <li><p><b>Conditioner</b><span class="rtb basis">Basis</span></p><small>Glättet die Oberfläche wieder, macht kämmbar und schützt vor Reibung.</small><button type="button" data-go="produkte:conditioner.alle">Conditioner ansehen →</button></li>
+          <li><p><b>Wonder Water</b><span class="rtb extra">Extra</span></p><small>Für feine, dünne Haare ein leichter Abschluss, der nicht beschwert.</small></li>
+        </ul></div></div>
+
+      <div class="rtphase" data-side="l"><div class="rtknoten"><span>6</span></div><div class="rtkarte">
+        <p class="rtkick">Nach der Wäsche</p><h2>Post-Wash</h2>
+        <p class="rtwann"><b>Wann:</b> ins handtuchtrockene Haar, bevor du föhnst oder lufttrocknen lässt.</p>
+        <ul class="rtsteps">
+          <li><p><b>Leave-in mit Wirkstoff</b><span class="rtb basis">Basis</span></p><small>Ins nasse Haar, hier können die Pflegestoffe am besten wirken. Der erste Schritt der LL-Methode.</small><button type="button" data-go="ll">Zur LL-Methode →</button></li>
+          <li><p><b>Hitzeschutz</b><span class="rtb basis">Basis bei Hitze</span></p><small>Immer, bevor Föhn, Glätteisen oder Lockenstab ins Spiel kommen.</small><button type="button" data-go="produkte:hitze.alle">Hitzeschutz ansehen →</button></li>
+        </ul></div></div>
+
+      <div class="rtphase" data-side="r"><div class="rtknoten"><span>7</span></div><div class="rtkarte">
+        <p class="rtkick">Nach dem Föhnen</p><h2>Versiegeln</h2>
+        <p class="rtwann"><b>Wann:</b> im trockenen Haar, und zwischen den Wäschen ein- bis zweimal am Tag.</p>
+        <ul class="rtsteps">
+          <li><p><b>Leave-in, versiegelnd</b><span class="rtb basis">Basis</span></p><small>Hält die Feuchtigkeit im Haar, schützt vor Reibung und Frizz. Der zweite Schritt der LL-Methode.</small><button type="button" data-go="ll">Meine Leave-ins →</button></li>
+          <li><p><b>Haaröl als Add-on</b><span class="rtb extra">Extra</span></p><small>Versiegelt zusätzlich und sorgt für Glanz, vor allem in den Spitzen.</small><button type="button" data-go="produkte:oel.alle">Haaröle ansehen →</button></li>
+        </ul></div></div>
+
+      <div class="rtende"><div class="rtknoten ziel"><span>✓</span></div>
+        <h2>Und was davon brauchst <em class="hk">du?</em></h2>
+        <p>Dein Haarplan sagt dir, welche Schritte für deine Haare und deine Kopfhaut wirklich Sinn machen.</p>
+        <button type="button" class="rtcta" data-go="plan">Zu meinem Haarplan →</button></div>
     </div>
   </section>
 
@@ -2335,7 +2506,7 @@ window.showProducts = (type, cat) => { if(!T[type]) return; state.view = "produk
 function readHash(){
   const h = HASH0.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
-  if(a==="quiz"||a==="plan"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || b==="fraglaura" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
+  if(a==="quiz"||a==="plan"||a==="routine"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || b==="fraglaura" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
   if(T[a] || a === "neu"){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
@@ -3085,10 +3256,56 @@ function renderSearch(){
 
 /* Filterleiste klebt direkt unter der Kopfzeile, egal wie hoch sie ist */
 function setHH(){ document.documentElement.style.setProperty("--hh", document.querySelector("header.top").offsetHeight + "px"); }
+/* ---------- Routine-Seite: silberner Faden zeichnet sich beim Scrollen nach unten (Laura 23.10.) ---------- */
+let rtBereit = false;
+function renderRoutine(){
+  const box = document.getElementById("rtfaden"), svg = document.getElementById("rtthread");
+  if(!box || !svg) return;
+  const ruhig = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const knoten = [...box.querySelectorAll(".rtknoten")], stationen = [...box.querySelectorAll(".rtphase,.rtende")];
+  let len = 0, proben = [];
+  const bauen = () => {
+    const W = box.clientWidth, H = box.scrollHeight, cx = W / 2, schmal = W < 600, A = schmal ? 9 : 22;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    const br = box.getBoundingClientRect();
+    const pts = [[cx, 0], ...knoten.map(k => { const r = k.getBoundingClientRect(); return [cx, r.top - br.top + r.height / 2]; }), [cx, H - 10]];
+    let d = `M${cx} 0`;
+    for(let i = 1; i < pts.length; i++){ const [, y0] = pts[i-1], [, y1] = pts[i], s = i % 2 ? 1 : -1, m = (y1 - y0) / 3;
+      d += ` C${cx + s*A} ${y0 + m} ${cx - s*A} ${y1 - m} ${cx} ${y1}`; }
+    svg.querySelectorAll(".rtp,.rtmp").forEach(p => p.setAttribute("d", d));
+    const p = svg.querySelector(".rtp1"); len = p.getTotalLength(); proben = [];
+    for(let l = 0; l <= len; l += 6){ const q = p.getPointAtLength(l); proben.push([l, q.y]); }
+    const m = svg.querySelector(".rtmp"); m.style.strokeDasharray = `${len} ${len}`;
+    zeichnen();
+  };
+  const zeichnen = () => {
+    const br = box.getBoundingClientRect(), ziel = ruhig ? 1e9 : innerHeight * 0.62 - br.top;
+    let l = 0; for(const [pl, py] of proben){ if(py <= ziel) l = pl; else break; }
+    if(ziel >= box.scrollHeight) l = len;
+    const m = svg.querySelector(".rtmp"); m.style.strokeDashoffset = len - l;
+    const p = svg.querySelector(".rtp1"), a = p.getPointAtLength(Math.max(0, l)), b = p.getPointAtLength(Math.max(0, l - 4));
+    const winkel = Math.atan2(a.y - b.y, a.x - b.x) * 180 / Math.PI - 90;
+    const n = document.getElementById("rtnadelg"); n.setAttribute("transform", `translate(${a.x} ${a.y + 10}) rotate(${winkel})`); n.style.opacity = l >= len - 2 ? 0 : 1;
+    const yEnde = a.y + 30;
+    stationen.forEach(s => { const k = s.querySelector(".rtknoten"); const r = k.getBoundingClientRect(); if(ruhig || r.top - br.top <= yEnde) s.classList.add("an"); });
+  };
+  if(!rtBereit){ rtBereit = true;
+    addEventListener("scroll", () => { if(state.view === "routine") requestAnimationFrame(zeichnen); }, {passive:true});
+    addEventListener("resize", () => { if(state.view === "routine") bauen(); });
+    box.addEventListener("click", e => { const b = e.target.closest("[data-go]"); if(!b) return; const [art, ziel] = b.dataset.go.split(":");
+      if(art === "produkte"){ const [t, c] = ziel.split("."); window.showProducts(t, c); }
+      else if(art === "wissen") window.showWissen(ziel);
+      else if(art === "ll") window.showLL();
+      else if(art === "plan"){ state.view = "plan"; render(); window.scrollTo({top:0}); } });
+  }
+  requestAnimationFrame(() => requestAnimationFrame(bauen));
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if(state.view === "routine") bauen(); });
+}
+window.showRoutine = () => { state.view = "routine"; state.wissen = null; render(); window.scrollTo({top:0}); };
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
 function render(){
-  for(const v of ["start","produkte","ll","plan","quiz","wissen","merkliste","favoriten","bereich"]) document.getElementById("v-"+v).hidden = state.view!==v;
+  for(const v of ["start","produkte","routine","ll","plan","quiz","wissen","merkliste","favoriten","bereich"]) document.getElementById("v-"+v).hidden = state.view!==v;
   navBtns.forEach(b => b.setAttribute("aria-current", (b.dataset.view===state.view || (b.dataset.view==="bereich" && state.view==="merkliste")) ? "page" : "false"));
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
@@ -3098,6 +3315,7 @@ function render(){
   if(state.view==="wissen") renderWissen();
   if(state.view==="favoriten") renderFav();
   if(state.view==="ll") renderLL();
+  if(state.view==="routine") renderRoutine();
   if(state.view==="bereich") renderBereich();
   if(state.view==="plan") renderPlan();
   if(state.view==="start") renderStartweg();
