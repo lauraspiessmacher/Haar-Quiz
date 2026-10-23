@@ -2884,6 +2884,7 @@ function marketingCheck(p){
 function itemHtml(p, badge, extra){
   const tags = p.segment ? [`<span class="tag">${p.segment}</span>`] : [];
   if(p.art) tags.push(`<span class="pill">${esc(p.art)}</span>`);
+  if(p.type==="leavein" && /^Am besten ins trockene Haar/.test(p.tip||"")) tags.push(`<span class="pill">Am besten ins trockene Haar</span>`); /* reine Versiegler (Laura 23.10.) */
   if(p.dry) tags.push(`<span class="pill">Trockenes Öl</span>`);
   if(p.zwei) tags.push(`<span class="pill">2-in-1: Styling + Hitzeschutz</span>`);
   if(p.heat && !(p.zwei && p.heat==="ja")) tags.push(p.heat==="ja" ? `<span class="pill">Mit Hitzeschutz</span>` : `<span class="pill">Hitzeschutz bis ${p.heat}&nbsp;°C</span>`);
