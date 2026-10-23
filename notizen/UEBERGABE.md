@@ -566,3 +566,4 @@
 - v357: Handy: „So startet ihr“ näher an Karte 1 (Abstand 22 px statt 66 px, Telefon steht rechts neben der Überschrift); Leave-in-Klecks auf dem Handy nicht mehr am Hair-Journey-Buch, sondern rechts am Kasten „Frage des Monats“ auf Höhe „Alle Fragen ansehen“, ragt Richtung „Haarpflege 1x1“ (Anker .klecks-anker nach #fdm). Computer unverändert.
 - v358: Produkte Handy: „Schluss mit Fehlkäufen“-Kasten kompakter (331→247 px). Regler verschwinden erst, wenn das erste Produkt komplett unter ihnen durchgescrollt ist; beim Hochscrollen sofort wieder da.
 - v359: Produkte Maske/Conditioner/Leave-in/Hitzeschutz/Haaröl: Haardicke und Haarzustand als dunkle Pillen (wie Kopfhauttyp beim Shampoo), .haarpills. Styling-Sprays (2-in-1) haben kein Dicke/Zustand-Feld → unverändert.
+- v360: Haarsträhne auf der LL-Seite auf Lauras Wunsch entfernt (Bild + CSS bleiben im Projekt, nur nicht eingebunden).
