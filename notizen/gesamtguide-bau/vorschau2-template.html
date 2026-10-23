@@ -355,7 +355,9 @@ html,body{overflow-x:clip}
 /* Handy-Feinschliff (Laura 23.10.): Bilder/Kästen mittig, Illustrationen kleiner */
 @media (max-width:759px){
   .journey .jcover{margin:0 auto;width:100%}
-  .journey .klecks{width:60px;right:4px;top:-104px}
+  .journey .klecks{display:none!important}
+  html .klecks-anker{display:block;position:relative;height:0}
+  .klecks-handy{position:absolute;right:-6px;bottom:-62px;width:88px;transform:rotate(-6deg);pointer-events:none;z-index:2}
   .rrow{max-width:300px;margin:0 auto;gap:16px 18px}
   .rrow svg{max-width:112px}
   .rrow figcaption{font-size:13.5px;margin-top:6px}
@@ -1406,7 +1408,8 @@ html.zg-abo .swtag{display:none}
 /* Silbernes Telefon sitzt auf Karte 3, das Kabel hängt ein Stück in die Karte (Laura 23.10.) */
 .swliste li .swtelefon{position:absolute;z-index:2;right:18px;bottom:calc(100% - 36px);width:min(220px,64%);height:auto;pointer-events:none}
 .swliste li .swtelefon.handy{display:none}
-@media (max-width:900px){ .swliste li .swtelefon.gross{display:none} .swliste li .swtelefon.handy{display:block} .swliste li.sw1{margin-top:66px} .swliste li .swtelefon{width:160px;bottom:calc(100% - 27px)} }
+.klecks-anker{display:none}
+@media (max-width:900px){ .swliste li .swtelefon.gross{display:none} .swliste li .swtelefon.handy{display:block} .swliste li.sw1{margin-top:22px} .swliste li .swtelefon{width:160px;bottom:calc(100% - 27px)} }
 .swliste p{margin:0;color:var(--muted);font-size:15px}
 .swliste .linkbtn{margin-top:auto;align-self:flex-start;padding-top:6px}
 .swn{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid currentColor;font-size:15px;opacity:.8}
@@ -1765,6 +1768,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
       <div class="reelwrap" id="favwrap"><div class="reeltrack" id="favtrack"></div></div>
     </div>
     <div class="fdm" id="fdm"></div>
+    <div class="klecks-anker" aria-hidden="true"><img class="klecks-handy" src="__KLECKS__" alt=""></div>
     <div class="serie">
       <div class="head"><div><h2>Haarpflege <em class="hk">1x1</em></h2><p class="sub">meine Serie auf Instagram und TikTok</p></div>
         <div class="links"><a class="btn" id="serieAlle" href="https://www.instagram.com/lauraspiessmacher/" target="_blank" rel="noopener">Alle Folgen ansehen <span aria-hidden="true">→</span></a></div></div>
