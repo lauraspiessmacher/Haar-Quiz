@@ -192,5 +192,37 @@
     "datei": "babyhaare.html",
     "arzt": false,
     "entwurf": true
+  },
+  {
+    "id": "ueberpflegt",
+    "titel": "Kann man Haare überpflegen?",
+    "teaser": "Schlaff, schwer, schnell fettig: Woran ihr überpflegte Haare erkennt und wie sie wieder leicht werden.",
+    "datei": "ueberpflegt.html",
+    "arzt": false,
+    "entwurf": true
+  },
+  {
+    "id": "protein-overload",
+    "titel": "Protein-Overload",
+    "teaser": "Gibt es zu viel Repair? Was dran ist, woran ihr es merkt und wie ihr die Balance findet.",
+    "datei": "protein-overload.html",
+    "arzt": false,
+    "entwurf": true
+  },
+  {
+    "id": "dht",
+    "titel": "DHT und DHT-Blocker",
+    "teaser": "Was das Hormon mit euren Haarwurzeln macht und was DHT-Blocker in Pflegeprodukten wirklich können.",
+    "datei": "dht.html",
+    "arzt": true,
+    "entwurf": true
+  },
+  {
+    "id": "haarwurzeln",
+    "titel": "Warum tun die Haarwurzeln weh?",
+    "teaser": "Zopf, Scheitel, Stress oder Haarausfall: Woher Haarschmerz kommt und was dagegen hilft.",
+    "datei": "haarwurzeln.html",
+    "arzt": true,
+    "entwurf": true
   }
 ]

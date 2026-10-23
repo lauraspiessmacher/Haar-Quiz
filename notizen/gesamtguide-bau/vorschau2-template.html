@@ -2072,9 +2072,9 @@ const WISSEN = __WISSEN__;
 /* Wissen nach Themen (Test 16.10.): jedes Regal hat einen Registerreiter und eine eigene Buchfarbe */
 const WREGALE = [
   {id:"grund", titel:"Grundlagen", text:"Was eure Haare mitbringen und was wirklich stimmt", kap:["genetik","haarzyklus","porositaet","mythen"]},
-  {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall","hormone","graue-haare"]},
+  {id:"kopf", titel:"Kopfhaut & Haarausfall", text:"Gesunde Haare fangen auf der Kopfhaut an", kap:["kopfhaut","haarausfall","dht","haarwurzeln","hormone","graue-haare"]},
   {id:"bruch", titel:"Haarbruch, Spliss & Repair", text:"Mein Herzensthema: vorbeugen statt reparieren", kap:["unterschied","nasses-haar","leavein","llmethode","reparatur","repair","hitze","splissschnitt"]},
-  {id:"pflege", titel:"Pflege verstehen", text:"Shampoo, Öle, Silikone und Frizz", kap:["shampoo","prewash","haaroele","silikone","frizz","babyhaare"]},
+  {id:"pflege", titel:"Pflege verstehen", text:"Shampoo, Öle, Silikone und Frizz", kap:["shampoo","prewash","haaroele","silikone","ueberpflegt","protein-overload","frizz","babyhaare"]},
   {id:"werkzeug", titel:"Werkzeuge", text:"Bürste, Schere, Kissen: was eure Haare jeden Tag berührt", kap:["buersten","seide","scheren"]},
   {id:"farbe", titel:"Haarfarbe", text:"Färben, Tönen und Farbstiche verstehen", kap:["haarfarbe","farbstiche"]}
 ];
@@ -2330,6 +2330,10 @@ const PRAEGUNG = {
   haarfarbe: '<path d="M3 12h13l-1.4 5.6a3 3 0 0 1-2.9 2.4H7.3a3 3 0 0 1-2.9-2.4z"/><path d="M12.5 10.5L20.5 2.5M10 9.5l2.5-2.5 2 2-2.5 2.5z"/>',
   farbstiche: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V3M15 10.3l4.8-2.8M15 13.8l4.8 2.7M12 15.5V21M9 13.8l-4.8 2.7M9 10.3L4.2 7.5"/>',
   mythen: '<circle cx="10" cy="10" r="7"/><path d="M15 15l6 6"/><path d="M8.3 8.3a1.8 1.8 0 1 1 2.5 1.7c-.5.3-.8.7-.8 1.3M10 13.6h.01"/>',
+  dht: '<circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M10 12h4M7 9V4M17 15v5"/>',
+  haarwurzeln: '<path d="M3 13c4-1.5 14-1.5 18 0"/><path d="M9 13V4M15 13V5"/><path d="M9 16v2M15 16v2M6 20l1.5-1.5M18 20l-1.5-1.5"/>',
+  ueberpflegt: '<path d="M7 3c0 7 1 13 5 18M17 3c0 7-1 13-5 18"/><path d="M5 9h14M6 14h12"/>',
+  "protein-overload": '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12v9M12 12l8-4.5M12 12L4 7.5"/>',
   buch: '<path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/>'
 };
 (function(){
