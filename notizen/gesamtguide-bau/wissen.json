@@ -198,8 +198,7 @@
     "titel": "Kann man Haare überpflegen?",
     "teaser": "Schlaff, schwer, schnell fettig: Woran ihr überpflegte Haare erkennt und wie sie wieder leicht werden.",
     "datei": "ueberpflegt.html",
-    "arzt": false,
-    "entwurf": true
+    "arzt": false
   },
   {
     "id": "protein-overload",
