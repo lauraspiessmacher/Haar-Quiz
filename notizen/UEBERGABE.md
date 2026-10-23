@@ -591,3 +591,4 @@
 - v381: Seide oder Satin? (Entwurf) ergänzt: „Seide oder Polyester? So findet ihr es heraus“ (5 Test-Karten: Etikett, Anfassen, Glanz, Wassertropfen, Brennprobe mit Vorsicht), „Die glatte Seite gehört nach innen“ (Lauras Beobachtung, animierte Hauben-Grafik .wb-haube, Zurückschicken oder auf links drehen), „Seide oder Bambusviskose?“ (Vergleich wb-zwei, kaum Studien, Laura empfiehlt meist Seide).
 - v382: Seide oder Satin? freigegeben (entwurf raus).
 - v383: Alkohol in Haarpflege freigegeben (entwurf raus). Einziger Entwurf: Neue Haare, Haarbruch oder Frizz?
+- v384: Neue Haare, Haarbruch oder Frizz? freigegeben. ALLE Wissen-Kapitel freigegeben (23.10.).
