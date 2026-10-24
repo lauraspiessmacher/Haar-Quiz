@@ -611,3 +611,4 @@
 - v400: Routine-Seite: Styling als eigene Extrapunkte (gestrichelte Abzweigungen mit „+“): „Styling vor dem Föhnen“ nach 06 (Glättungssprays, Volumenprodukte) und „Styling nach dem Föhnen“ nach 07 (trockener Hitzeschutz, Glanzspray, Haarspray). Tiefenreinigung ebenfalls als „Extrapunkt“ beschriftet. 07 wechselt auf die linke Seite.
 - v401: Routine 06: Repair- oder Bond-Repair-Leave-in (Extra) ins feuchte Haar, im Wechsel mit Feuchtigkeits-Leave-in, 1–2×/Woche, Link Wissen Repair.
 - v402: Routine: Extrapunkte nummeriert als 3,5 (Tiefenreinigung), 6,5 (Styling vor dem Föhnen), 7,5 (Styling nach dem Föhnen) statt „+“.
+- v402: Routine-Seite: Kacheln (ÖWC/MWC/LWC/CWC und Nähren/Glanz/Repair) braun statt beige
