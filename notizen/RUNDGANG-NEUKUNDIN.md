@@ -53,4 +53,4 @@ Alles Persönliche (Quiz/Checks und Ergebnisse, Haarplan, Mein Bereich, Produkte
 - Wissen: Leseprobe. Abo-Kapitel öffnen für Gäste mit Überschrift + „Auf einen Blick“, Rest verschwommen mit Abo-Knopf. Bücher zeigen „Leseprobe“
 - Schuppig-trocken: Stufenmodell. Meine Haare hat jetzt „Schuppig, feine trockene Flocken“ und „Schuppig, fettige Schuppen“. Produktseite zeigt Schritt 1 (mild/feucht), 2 (mild gegen Schuppen), 3 (Ketoconazol/Selendisulfid). Einkaufsliste: 2× Schritt 1 + 1× „Wenn die Flocken bleiben“, kein Apotheken-Shampoo
 - PROBEANSICHT Routine-Seite mit Haarplan: oben Karte mit Pflicht-Checks (Kopfhaut, Pflege, Haar, Plan) und „macht sie genauer“ (Leave-in, Kopfhautpflege, Spliss). Mit fertigem Plan + Abo: „In deinem Plan“ + „Bei dir: …“ (wie oft, welcher Tag, welches Produkt), Rest blass, Schalter „Meine Routine / Alle Schritte“
-  → Laura entscheidet: Sollen Leave-in- und Kopfhautpflege-Check Pflicht sein?
+  → ENTSCHIEDEN (Laura 1.11.): Leave-in-, Kopfhautpflege- und Spliss-Check bleiben freiwillig (machen die Routine nur genauer)
