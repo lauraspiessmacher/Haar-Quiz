@@ -928,22 +928,25 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .rtpkarte{background:#FDFBF7;border:1px solid var(--line);border-radius:24px;padding:24px 22px 22px;text-align:center}
 .rtpkarte.dein{background:#382F2E;color:#F3ECE2;border-color:#382F2E}
 .rtpkick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#B8915E;margin:0 0 4px}
-.rtpkarte.dein .rtpkick{color:#D6B98F}
+.rtpkarte.dein .rtpkick{color:#C9CDD2}
 .rtpkarte h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;margin:0 0 8px}
 .rtpkarte .rtpchips,.rtpkarte .rtpschalter{justify-content:center}
 .rtpweg{list-style:none;padding:0;margin:18px 0 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
 .rtpweg::before{content:"";position:absolute;left:12.5%;right:12.5%;top:15px;height:1.6px;background:linear-gradient(90deg,#B9BDC3,#E9EBEE,#8E9399,#D5D8DC)}
 .rtpweg li{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px}
 .rtpweg li>span{width:30px;height:30px;border-radius:50%;background:#382F2E;border:1.6px solid #B9BDC3;display:grid;place-items:center;font-size:14px;color:#382F2E}
-.rtpweg li.ok>span{background:#D6B98F;border-color:#D6B98F}
+.rtpweg li.ok>span{background:#F3ECE2;border-color:#F3ECE2}
 .rtpweg li.jetzt>span{border-color:#F3ECE2;box-shadow:0 0 0 4px rgba(243,236,226,.15);animation:rtpPuls 2.2s ease-in-out infinite}
 @keyframes rtpPuls{50%{box-shadow:0 0 0 8px rgba(243,236,226,0)}}
 .rtpweg b{font-family:var(--serif);font-weight:400;font-size:17px;margin-top:4px}
 .rtpweg small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#B5A79D}
-.rtpklein i{font-style:normal;display:inline-block;border:1px dashed rgba(243,236,226,.35);border-radius:999px;padding:2px 9px;margin:4px 3px 0;font-size:12px}
-.rtpklein i.ok{border-style:solid;border-color:#D6B98F;color:#D6B98F}
-.rtpextra{appearance:none;background:none;font:inherit;color:#F3ECE2;cursor:pointer;border:1px dashed rgba(243,236,226,.45);border-radius:999px;padding:3px 10px;margin:6px 3px 0;font-size:12px}
-.rtpextra:hover{border-style:solid}
+.rtpext{border-top:1px solid rgba(243,236,226,.18);margin:6px 0 16px;padding-top:14px}
+.rtpexth{font-size:11px!important;letter-spacing:.14em;text-transform:uppercase;color:#C9CDD2;margin:0 0 4px!important}
+.rtpextt{font-size:13.5px!important;color:#D9CFC4!important;margin:0 auto 8px!important;max-width:440px}
+.rtpext>div{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.rtpextra{appearance:none;background:none;font:inherit;color:#F3ECE2;cursor:pointer;border:1px solid rgba(243,236,226,.4);border-radius:999px;padding:5px 12px;font-size:12.5px}
+.rtpextra:hover{background:rgba(243,236,226,.1)}
+.rtpextra.ok{background:#F3ECE2;color:#382F2E;border-color:#F3ECE2}
 @media (prefers-reduced-motion:reduce){ .rtpweg li.jetzt>span{animation:none} }
 .rtpkarte p{margin:0 0 12px;font-size:14.5px;line-height:1.5}
 .rtpkarte.dein p{color:#E9E2D8}
@@ -3368,10 +3371,11 @@ function rtPersoenlich(){
     box.innerHTML = `<div class="rtpkarte dein rtpbald"><p class="rtpkick">Bald deine Routine</p><h2>So wird das <em class="hk">deine</em> Routine</h2>
       <p>Sobald dein Haarplan fertig ist, siehst du hier, welche Schritte zu dir gehören, wie oft und mit welchem Produkt.</p>
       <ol class="rtpweg">${RT_PFLICHT.map(([k]) => `<li class="${st[k] ? "ok" : ""}${offen && offen[0] === k ? " jetzt" : ""}"><span aria-hidden="true">${st[k] ? "✓" : ""}</span><b>${kurz[k]}</b><small>${k === "routine" ? "Schritt 4" : "Check"}</small></li>`).join("")}</ol>
-      <p class="rtpklein">Freiwillig, macht sie noch genauer: ${RT_GENAUER.map(([k, l]) => `<i class="${st[k] ? "ok" : ""}">${st[k] ? "✓ " : ""}${esc(l)}</i>`).join("")}</p>
+      <div class="rtpext"><p class="rtpexth">Extra-Checks, freiwillig</p><p class="rtpextt">Brauchst du nicht. Jeder Extra-Check macht deine Routine aber noch genauer, zum Beispiel mit deinem passenden Leave-in.</p><div>${RT_GENAUER.map(([k, l]) => `<button type="button" class="rtpextra${st[k] ? " ok" : ""}" data-rtc="${k}">${st[k] ? "✓ " : ""}${esc(l)}${st[k] ? "" : " →"}</button>`).join("")}</div></div>
       ${istAbo() ? (offen ? `<button type="button" class="rtcta" id="rtpWeiter">Weiter mit: ${esc(offen[1])} <span aria-hidden="true">→</span></button>` : "") : `<p class="rtpklein">Die drei Checks sind kostenlos, dein Plan und diese persönliche Ansicht sind im Abo.</p><button type="button" class="rtcta" id="rtpWeiter">${offen && offen[0] !== "routine" ? "Weiter mit: " + esc(offen[1]) : "Abo ansehen"} <span aria-hidden="true">→</span></button>`}</div>`;
     const w = document.getElementById("rtpWeiter");
     if(w) w.onclick = () => offen && (istAbo() || offen[0] !== "routine") ? oeffneCheck(offen[0]) : zPaywall("plan");
+    box.querySelectorAll("[data-rtc]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.rtc));
     return;
   }
   const D = planDaten(), r = D.r, a = D.a, KPD = st.kopfpflege, rep = r.rep || me.kaputt;
@@ -3429,7 +3433,7 @@ function rtPersoenlich(){
     <p>Alles mit „In deinem Plan“ gehört zu dir, darunter steht, wie oft und womit. Was blass ist, brauchst du gerade nicht. Nachlesen, warum, kannst du jederzeit in deinem Haarplan.</p>
     ${(r.chips || []).length ? `<div class="rtpchips">${r.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>` : ""}
     <div class="rtpschalter" role="group" aria-label="Ansicht"><button type="button" data-rta="0" aria-pressed="${!rtAlle}">Meine Routine</button><button type="button" data-rta="1" aria-pressed="${rtAlle}">Alle Schritte</button></div>
-    ${RT_GENAUER.some(([k]) => !st[k]) ? `<p class="rtpklein">Freiwillig, macht sie noch genauer:<br>${RT_GENAUER.filter(([k]) => !st[k]).map(([k, l]) => `<button type="button" class="rtpextra" data-rtc="${k}">${esc(l)} →</button>`).join("")}</p>` : ""}
+    ${RT_GENAUER.some(([k]) => !st[k]) ? `<div class="rtpext"><p class="rtpexth">Extra-Checks, freiwillig</p><p class="rtpextt">Brauchst du nicht. Jeder Extra-Check macht deine Routine aber noch genauer, zum Beispiel mit deinem passenden Leave-in oder deiner Kopfhautpflege.</p><div>${RT_GENAUER.map(([k, l]) => `<button type="button" class="rtpextra${st[k] ? " ok" : ""}" data-rtc="${k}">${st[k] ? "✓ " : ""}${esc(l)}${st[k] ? "" : " →"}</button>`).join("")}</div></div>` : ""}
     <button type="button" class="linkbtn" id="rtpPlan">Zu meinem Haarplan →</button></div>`;
   box.querySelectorAll("[data-rta]").forEach(b => b.onclick = () => { rtAlle = b.dataset.rta === "1"; try { localStorage.setItem("rtAlle", rtAlle ? "1" : "0"); } catch(e){} rtPersoenlich(); });
   box.querySelectorAll("[data-rtc]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.rtc));

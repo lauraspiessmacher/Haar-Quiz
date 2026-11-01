@@ -618,3 +618,4 @@
 - v406: Probeansicht Routine-Seite persönlich (Haarplan-Verknüpfung), Leseprobe, Stufenmodell, Problem-Einstieg
 - Entscheidung: Extra-Checks für die persönliche Routine-Seite bleiben freiwillig
 - v407: Routine-Seite: Kasten oben dunkelbraun, Checks als Schritt-Kreise am silbernen Faden, Extra-Checks als Pillen
+- v408: Routine-Kasten: kein Gold/Beige mehr (Silber/Creme), Extra-Checks eigener Abschnitt mit Erklärung und klickbaren Knöpfen
