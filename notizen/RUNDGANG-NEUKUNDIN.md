@@ -24,3 +24,26 @@ Abo
 12. Einkaufsliste: Favoriten rutschen auch dann nach oben, wenn sie nicht ideal passen (z. B. John Frieda Volume Lift Conditioner bei mittelstarkem, stark strapaziertem Haar mit Wunsch „glatt“). Etiketten prüfen: K18 Leave-In Molecular Repair Mask als „nährend“, The Ordinary/Eucerin als „High-End“.
 13. Pflege-Check-Ergebnis: Pre-Wash-Absatz (ÖWC/MWC/LWC/CWC) ist eine Textwand → kürzer + Link zur Routine-Seite.
 14. Anrede gemischt (ihr/du) auf Startseite, LL-Seite, „Macht deinen Plan noch genauer“ in Mein Bereich, „Ich weiß, ihr wollt …“ im Plan.
+
+## Umgesetzt am 1.11. (nach Lauras Antwort)
+- LL-Bedeutung auf der LL-Seite (Leave-in, Leave-in · Lauras Leave-in-Methode · Leave-in & Laura) → Laura soll Text gegenlesen
+- Produktseite: Hinweis ist jetzt Knopf „Meine Haare einstellen →“ (öffnet das Fenster direkt)
+- Mein Bereich: Rechnungen/Zahlungsart/Kündigen nur mit Abo; Gäste sehen „Schon dabei? Anmelden“ + Support
+- Abo-Fenster „Kostenlos“: + Routine-Seite, LL-Methode, Neu im Regal
+- Fußzeile: „Routine“ ergänzt
+- Wonder Water überall mit „flüssiger Conditioner“ erklärt (nicht „Haarwasser“: klingt nach Kopfhaut-Tonikum)
+- Einkaufsliste: Favorit nur, wenn er unter den besten vier passenden Produkten ist und eine Rolle erfüllt
+- K18 Leave-In Molecular Repair Mask: nicht mehr „nährend“
+- Pflege-Check: Pre-Wash-Absatz gekürzt + Knopf zur Routine-Seite
+- Anrede: Startseite „Frag Laura“ auf ihr; Mein Bereich „Mach deinen Plan…“; Plan „Ich weiß, du willst…“
+
+## REGEL Anrede (Laura 1.11.)
+Allgemeine Seiten für die Community (Startseite, Wissen, LL-Seite, Routine-Übersicht) = „ihr“.
+Alles Persönliche (Quiz/Checks und Ergebnisse, Haarplan, Mein Bereich, Produkte/Merkliste) = „du“.
+
+## Offen / wartet auf Laura
+- Punkt 2 Einstieg nach Problem („Was stört dich gerade?“-Kacheln) → Go?
+- Punkt 3 Leseprobe: „Auf einen Blick“ jedes Abo-Kapitels frei, Rest gesperrt → Go?
+- Punkt 5 Name: Startseite „Willkommen im Healthy Hair Club“ statt „…Community“ → Go?
+- Punkt 8 Schuppig-trocken: Stufenmodell (erst mild/feucht, dann mildes Anti-Schuppen, Apotheke zuletzt). Achtung: Einkaufsliste zeigt aktuell Ketozolin als erste Wahl → gemeinsam besprechen
+- Idee: Routine-Seite markiert mit fertigem Haarplan „In deinem Plan“

@@ -71,7 +71,7 @@
    "name": "Dünnes Haar",
    "satz": "Deine einzelnen Haare haben einen kleinen Durchmesser und werden schnell beschwert.",
    "punkte": [
-    "Du nimmst leichte Pflege: Leave-in-Spray, leichtes Serum, leichten Conditioner oder Wonder Water.",
+    "Du nimmst leichte Pflege: Leave-in-Spray, leichtes Serum, leichten Conditioner oder Wonder Water (flüssiger Conditioner).",
     "Du nimmst lieber wenig Produkt und legst bei Bedarf nach.",
     "Reichhaltiges kommt nie an den Ansatz.",
     "Es gibt auch noch feineres Haar, umgangssprachlich Feenhaar. Ist dir selbst das hier noch zu schwer, gehörst du wahrscheinlich dazu. Dann achtest du noch genauer auf ganz leichte Texturen und nimmst noch weniger Produkt."
@@ -332,7 +332,7 @@
   "shampoo1": "Shampoo nur auf die Kopfhaut, bei sehr trockener oder sehr sensibler Kopfhaut einmal und kurz einwirken lassen, sonst zweimal"
  },
  "erwartet": {
-  "intro": "Ich weiß, ihr wollt schnell Ergebnisse sehen. Aber Haare brauchen Zeit, und das können wir nicht ändern. Damit du weißt, worauf du dich einstellen kannst:",
+  "intro": "Ich weiß, du willst schnell Ergebnisse sehen. Aber Haare brauchen Zeit, und daran können wir nichts ändern. Damit du weißt, worauf du dich einstellen kannst:",
   "zeit": [
    [
     "Ab der ersten Wäsche",

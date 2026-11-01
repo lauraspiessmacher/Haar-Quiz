@@ -119,6 +119,7 @@ main{padding-bottom:60px}
 .shophead p{color:#E3D8CC;margin:8px 0 0;font-size:15px}
 .shophead p{text-wrap:pretty}
 .shophead p.tipp{font-size:13.5px;color:#C9BCAE;margin-top:8px;text-wrap:balance}
+.shophead .tippbtn{display:inline-block;background:none;border:0;padding:4px 0 0;font:inherit;font-weight:600;color:#F3ECE2;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 @media (max-width:759px){ .shophead{padding:14px 16px 14px;gap:10px;margin-top:16px} .shophead h2{font-size:21px} .shophead p{font-size:13.5px;line-height:1.45;margin-top:6px} .shophead p.tipp{font-size:12px;margin-top:5px} .shophead .search{padding-top:9px;padding-bottom:9px;font-size:14px} }
 .wsearch{margin:16px 0 4px}
 .wres{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px;max-width:760px}
@@ -921,6 +922,7 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .rtziele div{background:#382F2E;color:#F3ECE2;border-radius:14px;padding:12px 10px;text-align:center}
 .rtziele em{display:block;font-style:normal;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#D6B98F}
 .rtziele b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;margin:4px 0 0}
+.rtziele .rtzk{display:block;font-family:var(--sans,system-ui,sans-serif);font-size:11.5px;color:#D9CFC4;margin:2px 0 4px}
 .rtziele button{font-size:12px;color:#F3ECE2}
 .rtfuss{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0}
 .rtfuss button{margin-top:0}
@@ -1817,6 +1819,17 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
 .llhero .lead{font-size:17px;max-width:62ch;margin:0 0 12px}
 .llhero .lead strong{font-weight:600}
 .llhero .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.llbed{margin:22px 0 4px;max-width:62ch;border-top:1px solid var(--line-soft);padding-top:16px}
+.llbed .kicker{margin:0 0 4px}
+.llbedin{margin:0 0 10px;font-size:15px;color:var(--muted)}
+.llbed dl{margin:0;display:grid;gap:0}
+.llbed dl>div{padding:12px 0;border-bottom:1px solid var(--line-soft);opacity:0;transform:translateY(8px);animation:llbedIn .6s ease forwards}
+.llbed dl>div:nth-child(2){animation-delay:.15s}.llbed dl>div:nth-child(3){animation-delay:.3s}
+@keyframes llbedIn{to{opacity:1;transform:none}}
+.llbed dt{font-family:var(--serif);font-size:22px;line-height:1.15;margin:0 0 3px}
+.llbed dt span{font-style:italic;color:#B8915E;font-size:1.15em}
+.llbed dd{margin:0;font-size:15px;line-height:1.5}
+@media (prefers-reduced-motion:reduce){ .llbed dl>div{animation:none;opacity:1;transform:none} }
 .llsec{display:grid;grid-template-columns:90px minmax(0,1fr);gap:24px;border-top:1px solid var(--line);padding:38px 0 30px;margin-top:30px}
 @media (max-width:759px){ .llsec{grid-template-columns:1fr;gap:4px;padding-top:26px;margin-top:22px} }
 .llnr{font-family:var(--serif);font-size:44px;line-height:1;color:var(--taupe);margin:0}
@@ -2066,7 +2079,7 @@ __ROUTINE__
         <p class="rtwann"><b>Wann:</b> nach dem Shampoo, je nachdem, was deine Haare gerade brauchen.</p>
         <div class="rtziele">
           <div><em>Nähren</em><b>Maske</b><button type="button" data-go="produkte:maske.alle">Masken →</button></div>
-          <div><em>Mehr Glanz</em><b>Wonder Water</b><button type="button" data-go="produkte:conditioner.alle">Ansehen →</button></div>
+          <div><em>Mehr Glanz</em><b>Wonder Water<small class="rtzk">flüssiger Conditioner</small></b><button type="button" data-go="produkte:conditioner.alle">Ansehen →</button></div>
           <div><em>Repair</em><b>Bond Treatment</b><button type="button" data-go="wissen:repair">Mehr zu Repair →</button></div>
         </div>
         <p class="rtfuss"><span class="rtb extra">Extra</span><small>Nicht alles auf einmal: wechsel ab und beobachte deine Haare.</small></p></div></div>
@@ -2076,7 +2089,7 @@ __ROUTINE__
         <p class="rtwann"><b>Wann:</b> nach jedem Shampoo, als letzter Schritt in der Dusche.</p>
         <ul class="rtsteps">
           <li><p><b>Conditioner</b><span class="rtb basis">Basis</span></p><small>Glättet die Oberfläche wieder, macht kämmbar und schützt vor Reibung.</small><button type="button" data-go="produkte:conditioner.alle">Conditioner ansehen →</button></li>
-          <li><p><b>Wonder Water</b><span class="rtb extra">Extra</span></p><small>Für feine, dünne Haare ein leichter Abschluss, der nicht beschwert.</small></li>
+          <li><p><b>Wonder Water</b><span class="rtb extra">Extra</span></p><small>Ein flüssiger Conditioner. Für feine, dünne Haare ein leichter Abschluss, der nicht beschwert.</small></li>
         </ul></div></div>
 
       <div class="rtphase" data-side="l"><div class="rtknoten"><span>06</span></div><div class="rtkarte">
@@ -2119,7 +2132,7 @@ __ROUTINE__
 
   <!-- ===================== PRODUKTE ===================== -->
   <section class="view" id="v-produkte" hidden>
-    <div class="shophead"><div class="shoptxt"><h2>Schluss mit <em class="hk">Fehlkäufen</em></h2><p>Jeder hat schon mal einen Fehlkauf gemacht, weil man nicht wusste, welchen Haartyp und welche Haardicke man hat und was die eigenen Haare brauchen. Hier shoppst du individuell nach deinen Haaren und deinem Kopfhauttyp.</p><p class="tipp">Stell oben unter „Meine Haare“ deine Haarbedürfnisse ein, dann siehst du direkt,&nbsp;was&nbsp;zu&nbsp;dir&nbsp;passt.</p></div>
+    <div class="shophead"><div class="shoptxt"><h2>Schluss mit <em class="hk">Fehlkäufen</em></h2><p>Jeder hat schon mal einen Fehlkauf gemacht, weil man nicht wusste, welchen Haartyp und welche Haardicke man hat und was die eigenen Haare brauchen. Hier shoppst du individuell nach deinen Haaren und deinem Kopfhauttyp.</p><p class="tipp">Stell unter „Meine Haare“ ein, welche Kopfhaut und welche Haare du hast, dann siehst du direkt,&nbsp;was&nbsp;zu&nbsp;dir&nbsp;passt. <button type="button" class="tippbtn" id="shopMe">Meine Haare einstellen&nbsp;→</button></p></div>
     <div class="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="q" type="search" placeholder="Suchen: Marke, Produkt oder „feine Haare fettig“" aria-label="Produkte durchsuchen">
@@ -2141,6 +2154,10 @@ __ROUTINE__
       <h1><em class="hkurs">Meine</em> LL-Methode</h1>
       <p class="lead">Die LL-Methode ist meine Signature-Methode. Als meine Haare selbst stark geschädigt waren und ich ständig mit Haarbruch und Spliss zu kämpfen hatte, war Leave-in-Pflege mein Holy-Grail-Produkt. Natürlich nicht das einzige, aber es hat mir am schnellsten geholfen, echte Erfolge zu sehen.</p>
       <p class="lead">Haarbruch und Spliss sind auch die Themen, zu denen ihr mir am meisten schreibt. Meine Antwort darauf ist fast immer dieselbe: Leave-in-Pflege, und zwar jeden Tag, mit meiner LL-Methode.</p>
+      <div class="llbed"><p class="kicker">Was bedeutet eigentlich LL?</p><p class="llbedin">Für mich gleich mehreres, und alles davon stimmt:</p>
+        <dl><div><dt><span>L</span>eave-in, <span>L</span>eave-in</dt><dd>Ich benutze zweimal am Tag Leave-in, morgens und abends. Genau diese Wiederholung macht den Unterschied.</dd></div>
+        <div><dt><span>L</span>auras <span>L</span>eave-in-Methode</dt><dd>So habe ich meine eigenen Haare gepflegt, als sie stark geschädigt waren, und so mache ich es bis heute.</dd></div>
+        <div><dt><span>L</span>eave-in &amp; <span>L</span>aura</dt><dd>Euer Leave-in macht jeden Tag die Arbeit, und ich zeige euch, welches zu euch passt und wie ihr es benutzt.</dd></div></dl></div>
       <div class="btns"><button type="button" class="btn dark" id="llQuizBtn">Welches Leave-in passt zu mir? <span aria-hidden="true">→</span></button><button type="button" class="btn" id="llZurAuswahl">Meine Leave-in-Auswahl</button></div>
       </div>
       <!-- Platzhalter bis zum Foto: die Methode auf einen Blick (20.10.) -->
@@ -2313,7 +2330,7 @@ __ROUTINE__
       <div class="fmarke"><b>Haarpflege <em class="lk">einfach</em> erklärt</b><span>Von Laura, deiner Haarpflege-Bestie</span>
         <p>Meine Einschätzung, nicht die der Marken. Mit „Werbelink“ gekennzeichnete Links sind Affiliate-Links: Kauft ihr darüber, bekomme ich eine kleine Provision, für euch ändert sich am Preis nichts.</p></div>
       <nav aria-label="Seiten"><h4>Seiten</h4><ul>
-        <li><button type="button" data-fgo="produkte">Produkte</button></li><li><button type="button" data-fgo="ll">LL-Methode</button></li><li><button type="button" data-fgo="plan">Haarplan</button></li><li><button type="button" data-fgo="quiz">Quiz</button></li><li><button type="button" data-fgo="wissen">Wissen</button></li><li><button type="button" data-fgo="bereich">Mein Bereich</button></li></ul></nav>
+        <li><button type="button" data-fgo="produkte">Produkte</button></li><li><button type="button" data-fgo="routine">Routine</button></li><li><button type="button" data-fgo="ll">LL-Methode</button></li><li><button type="button" data-fgo="plan">Haarplan</button></li><li><button type="button" data-fgo="quiz">Quiz</button></li><li><button type="button" data-fgo="wissen">Wissen</button></li><li><button type="button" data-fgo="bereich">Mein Bereich</button></li></ul></nav>
       <nav aria-label="Rechtliches"><h4>Rechtliches</h4><ul>
         <li><button type="button" data-platz="Impressum">Impressum</button></li><li><button type="button" data-platz="Datenschutz">Datenschutz</button></li><li><button type="button" data-platz="AGB">AGB</button></li><li><button type="button" data-platz="Widerrufsbelehrung">Widerrufsbelehrung</button></li><li><button type="button" data-platz="Cookie-Einstellungen">Cookie-Einstellungen</button></li><li><button type="button" data-platz="Verträge hier kündigen" class="fkuend">Verträge hier kündigen</button></li></ul></nav>
       <nav aria-label="Kontakt"><h4>Kontakt</h4><ul>
@@ -2363,7 +2380,7 @@ __ROUTINE__
     <p class="lead" id="aboLead">Mit dem Abo schaltest du alles frei und sparst dir das Zusammensuchen.</p></div>
   <div class="abostufen">
     <div class="stufe"><h3>Kostenlos</h3><ul>
-      <li>Startseite und meine Favorites</li><li>Kopfhaut-Check, Pflege-Check und Haar-Check</li><li>Wissen: die Grundlagen und Mythos oder Fakt</li></ul>
+      <li>Startseite, meine Favorites und Neu im Regal</li><li>Die Routine-Seite: alle Schritte der Haarpflege im Überblick</li><li>Die LL-Methode: wie sie funktioniert und warum sie wirkt</li><li>Kopfhaut-Check, Pflege-Check und Haar-Check</li><li>Wissen: die Grundlagen und Mythos oder Fakt</li></ul>
       <p class="hast">Hast du schon</p></div>
     <div class="stufe abo"><span class="tag">Alles drin</span><h3>Abo</h3><ul>
       <li><b>Dein Haarplan</b> mit Wochenplan</li><li>Alle Produkte mit meiner Einschätzung</li><li>Meine Leave-in-Auswahl für die LL-Methode</li>
@@ -3332,6 +3349,7 @@ function reloadMe(){ try { const s = JSON.parse(localStorage.getItem("meineHaare
 window.addEventListener("storage", e => { if(e.key === "meineHaare"){ reloadMe(); render(); } });
 window.zeigeProdukte = type => { reloadMe(); onlyMine = true; state.view = "produkte"; state.type = type || "leavein"; state.cat = "alle"; if(window.closeQuiz) window.closeQuiz(); render(); window.scrollTo({top:0}); };
 function openMe(){ drawOpts(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); }
+{ const sm = document.getElementById("shopMe"); if(sm) sm.onclick = openMe; }
 document.getElementById("zumTest").onclick = () => { favTab = "test"; state.view = "favoriten"; state.wissen = null; render(); window.scrollTo({top:0}); };
 document.getElementById("merkBack").onclick = () => { state.view = "bereich"; render(); window.scrollTo({top:0}); };
 document.getElementById("meForm").addEventListener("submit", () => { saveMe(); onlyMine = true; if(state.view!=="produkte") state.view="produkte"; render(); toast(meSet()?"Meine Haare gespeichert":"Meine Haare zurückgesetzt"); });
@@ -3454,8 +3472,8 @@ function neuBild(p){ const r = p.ir || 1; let w = Math.sqrt(0.32 * r), h = w / r
   const box = document.getElementById("fdm"); if(!box || !FRAGL.fragen.length) return;
   const f = FRAGL.fragen[0];
   box.innerHTML = `<div class="fdml"><p class="kicker">Frag Laura · ${esc(f.monat)}</p><h2>Frage des <em class="hk">Monats</em></h2><p class="fdmq">„${esc(f.frage)}“</p></div>
-    <div class="fdmr"><p class="fdma">${esc(f.antwort)}</p><p class="fdmzu">Was möchtest du mich fragen? Jeden Monat beantworte ich drei bis fünf eurer Fragen.</p>
-      <div class="btns"><button type="button" class="btn dark" id="fdmStellen">Stell mir deine Frage <span aria-hidden="true">→</span></button><button type="button" class="btn" id="fdmAlle">Alle Fragen ansehen</button></div></div>`;
+    <div class="fdmr"><p class="fdma">${esc(f.antwort)}</p><p class="fdmzu">Was möchtet ihr mich fragen? Jeden Monat beantworte ich drei bis fünf eurer Fragen.</p>
+      <div class="btns"><button type="button" class="btn dark" id="fdmStellen">Stellt mir eure Frage <span aria-hidden="true">→</span></button><button type="button" class="btn" id="fdmAlle">Alle Fragen ansehen</button></div></div>`;
   document.getElementById("fdmStellen").onclick = frageStellen;
   document.getElementById("fdmAlle").onclick = () => window.zeigeFragen();
 })();
@@ -3557,7 +3575,7 @@ function renderBereich(){
     <p>Alles, was du für deine Haare wissen und tun musst, zusammengefasst und Schritt für Schritt: was deine Ergebnisse bedeuten, deine Grundregeln, dein Wochenplan, deine Einkaufsliste.</p>
     <div class="bprog" role="img" aria-label="${anz} von 4 Schritten erledigt"><span style="width:${anz*25}%"></span></div><p class="bprogt">${anz} von 4 Schritten erledigt</p>
     <ol class="bschritte">${schritte}</ol>
-    <div class="bextras"><p>Macht deinen Plan noch genauer</p><div>${EXTRAS.filter(([k]) => k==="leavein" || k==="kopfpflege" || k==="spliss").map(([k,l]) => `<button type="button" class="bextra" data-extra="${k}">${haken(st[k])}<span>${l}</span>${istAbo() ? "" : ZSCHLOSS}</button>`).join("")}</div></div>
+    <div class="bextras"><p>Mach deinen Plan noch genauer</p><div>${EXTRAS.filter(([k]) => k==="leavein" || k==="kopfpflege" || k==="spliss").map(([k,l]) => `<button type="button" class="bextra" data-extra="${k}">${haken(st[k])}<span>${l}</span>${istAbo() ? "" : ZSCHLOSS}</button>`).join("")}</div></div>
     <div class="bplanbtns"><button type="button" class="btn" id="bPlanGo">${offen ? `Weiter mit dem ${offen[1]}` : istAbo() ? "Plan erstellen" : "Plan freischalten"} <span aria-hidden="true">→</span></button><button type="button" class="linkbtn" id="bZumPlan">Zur Haarplan-Seite →</button></div></article>
   <article class="bkarte"><h3>Meine Haare</h3>
     ${meSet() || me.wunsch ? `<dl class="bme">${meZeilen.filter(([,v]) => v).map(([l,v]) => `<dt>${l}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : `<p class="bleer">Noch nichts eingestellt. Mach die Checks oder stell deine Haare selbst ein, dann siehst du überall zuerst, was zu dir passt.</p>`}
@@ -3583,7 +3601,7 @@ function renderBereich(){
   <article class="bkarte bkonto"><h3>Abo &amp; Konto</h3>
     <p class="bstatus">${istAbo() ? `<b>Abo aktiv</b> · Vorschau` : `<b>Kostenlos</b> · du siehst die Grundlagen`}</p>
     ${istAbo() ? "" : `<button type="button" class="btn dark" id="bAbo">Abo ansehen</button>`}
-    <ul class="blinks"><li><button type="button" data-v="Rechnungen">Meine Rechnungen</button></li><li><button type="button" data-v="Zahlungsart">Zahlungsart ändern</button></li><li><button type="button" data-v="Kündigen">Abo kündigen</button></li><li><button type="button" data-v="Support">Support: Hilfe bei Zahlung und Konto</button></li><li><button type="button" data-v="Abmelden">Abmelden</button></li></ul>
+    ${istAbo() ? `<ul class="blinks"><li><button type="button" data-v="Rechnungen">Meine Rechnungen</button></li><li><button type="button" data-v="Zahlungsart">Zahlungsart ändern</button></li><li><button type="button" data-v="Kündigen">Abo kündigen</button></li><li><button type="button" data-v="Support">Support: Hilfe bei Zahlung und Konto</button></li><li><button type="button" data-v="Abmelden">Abmelden</button></li></ul>` : `<ul class="blinks"><li><button type="button" id="bLogin">Schon dabei? Anmelden</button></li><li><button type="button" data-v="Support">Support: Fragen zum Abo</button></li></ul>`}
     <p class="bklein">Vorschau: Konto, Zahlung und Kündigung kommen mit der echten Version.</p></article>`;
   document.getElementById("bPlanGo").onclick = () => offen ? oeffneCheck(offen[0]) : oeffneCheck("routine");
   document.getElementById("bZumPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
@@ -3594,7 +3612,8 @@ function renderBereich(){
   const bmk = document.getElementById("bMerk"); if(bmk) bmk.onclick = () => { if(!istAbo()){ zPaywall("merkliste"); return; } state.view = "merkliste"; render(); window.scrollTo({top:0}); };
   const bfg = document.getElementById("bFrageGo"); if(bfg) bfg.onclick = () => { if(!istAbo()){ zPaywall("frage"); return; } const t = document.getElementById("bFrage"); if(!t.value.trim()){ t.focus(); return; } t.value = ""; toast("Vorschau: Deine Frage ist angekommen"); };
   const ab = document.getElementById("bAbo"); if(ab) ab.onclick = () => zPaywall("bereich");
-  box.querySelectorAll(".blinks button").forEach(b => b.onclick = () => toast(`Vorschau: „${b.dataset.v}“ kommt mit der echten Version`));
+  box.querySelectorAll(".blinks button[data-v]").forEach(b => b.onclick = () => toast(`Vorschau: „${b.dataset.v}“ kommt mit der echten Version`));
+  { const bl = document.getElementById("bLogin"); if(bl) bl.onclick = () => document.getElementById("aboLogin").click(); }
 }
 
 /* ---------- Haarplan-Seite (Arbeitstitel, Vorschau 19.10.): Schritte 1–3 kostenlos, Schritt 4 Plan erstellen, Extra-Checks freiwillig ---------- */
@@ -3682,8 +3701,10 @@ function planEinkauf(){
     const rolle = l => /Glätt/.test(l) ? p => has(p, "glaettend") : /Feucht/.test(l) ? p => has(p, "feucht") : /Nähr/.test(l) ? p => has(p, "naehrend") : /Repair/.test(l) ? p => p.cats.includes("kaputt") : () => true;
     const recRollen = [...new Set([lbl.get(kand[0]), ...rec.map(([, l]) => l)].filter(Boolean))].map(l => [l, rolle(l)]);
     let rollen = z.rollen || (recRollen.length ? recRollen : [[null, p => !z.erstOk || z.erstOk(p)]]).concat([[null, () => true], [null, () => true]]).slice(0, 3);
-    /* Passt einer von Lauras Favorites, steht er ganz oben und übernimmt die Rolle, die er erfüllt */
-    const fav = kand.find(p => FAVSET.has(p.mk) && (!z.erstOk || z.erstOk(p)) && frei(p, 1)) || kand.find(p => FAVSET.has(p.mk) && (!z.erstOk || z.erstOk(p)) && frei(p, 2));
+    /* Passt einer von Lauras Favorites, steht er ganz oben und übernimmt die Rolle, die er erfüllt.
+       Aber nur, wenn er auch ohne Favoriten-Bonus vorne mitspielt (unter den besten vier) und eine der Rollen erfüllt (Laura 1.11.) */
+    const favOk = p => FAVSET.has(p.mk) && kand.indexOf(p) < 4 && (!z.erstOk || z.erstOk(p)) && (!recRollen.length || recRollen.some(([, ok]) => ok(p)));
+    const fav = kand.find(p => favOk(p) && frei(p, 1)) || kand.find(p => favOk(p) && frei(p, 2));
     if(fav){ const ri = rollen.findIndex(([n, ok]) => n && ok(fav)), r = ri >= 0 ? rollen[ri] : null;
       gew.push(fav); nimm(fav.brand); if(r && r[0]) lbl.set(fav, r[0]); else lbl.delete(fav);
       rollen = rollen.filter((x, i) => i !== (ri >= 0 ? ri : rollen.length - 1)); }

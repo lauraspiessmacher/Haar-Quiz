@@ -576,10 +576,7 @@
 "p": false
 },
 "maske|K18|Leave-In Molecular Repair Hair Mask": {
-"t": [
-"feucht",
-"naehrend"
-],
+"t": [],
 "h": 0.59,
 "e": 0.78,
 "g": 0.0,
@@ -2647,10 +2644,7 @@
 "p": false
 },
 "leavein|K18|Leave-In Molecular Repair Hair Mask": {
-"t": [
-"feucht",
-"naehrend"
-],
+"t": [],
 "h": 0.59,
 "e": 0.78,
 "g": 0.0,
