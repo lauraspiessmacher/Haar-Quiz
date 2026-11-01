@@ -151,8 +151,8 @@ const PRE = {};
 if(PREV.kopfhaut) PRE.kopf = [{N:"normal",F:"fettend",T:"trocken",S:"sensibel",ST:"schuppen",SF:"schuppen"}[PREV.kopfhaut.key], "deinem Kopfhaut-Check"];
 else if(ME.kopf) PRE.kopf = [ME.kopf === "juckend" ? "sensibel" : ME.kopf, "„Meine Haare“"];
 if(ME.dicke) PRE.dicke = [ME.dicke, "„Meine Haare“"];
-if(ME.wunsch) PRE.wunsch = [ME.wunsch, "„Meine Haare“"];
 else if(PREV.pflege) PRE.dicke = [["duenn","normal","dick"][PREV.pflege.th], "deinem Pflege-Check"];
+if(ME.wunsch) PRE.wunsch = [ME.wunsch, "„Meine Haare“"];
 if(PREV.haar) PRE.struktur = [{G1:"glatt",GT:"glatt",W:"wellig",L:"lockig",E:"lockig"}[PREV.haar.key], "deinem Haar-Check"];
 if(PREV.pflege){
   const P = PREV.pflege, src = "deinem Pflege-Check";
@@ -451,7 +451,7 @@ function plan(a){
   let mp = `**Maske: ${m}× pro Woche.** Lass sie mindestens 10 bis 15 Minuten einwirken, gerade bei Bond-Repair-Masken. Ich bin ein großer Fan davon, öfter eine Maske zu benutzen, nicht nur alle zwei Wochen. Wie oft genau, hängt davon ab, wie oft du wäschst, und von der Maske selbst. Eine Feuchtigkeitsmaske, die nährt, geschmeidig macht und Glanz schenkt, kannst du ruhig öfter nehmen. Bei Repair- und Bond-Repair-Masken kommt es total auf das Produkt an, hier gilt: immer die Balance mit Feuchtigkeit halten.${repair && m > 1 ? ` Deshalb wechseln sich in deinem Plan ${repName}- und Feuchtigkeitsmaske ab.` : ""}`;
   if(thick) mp += " Bei deinen dicken Haaren sorgt eine nährende Maske dafür, dass sich krause Haare legen und nichts fuzzy aussieht.";
   if(fine) mp += " Bei feinen Haaren reicht eine leichte Maske nur in Längen und Spitzen, damit nichts beschwert.";
-  if(effort === "wenig" && Math.max(byDk, bySt) > m) mp += ` Eigentlich könnten deine Haare sogar ${Math.min(n, Math.max(byDk, bySt))} Masken pro Woche vertragen. Wenn du mal mehr Zeit hast, lohnt sich das.`;
+  { const mv = Math.min(n, Math.max(byDk, bySt)); if(effort === "wenig" && mv > m) mp += ` Eigentlich könnten deine Haare sogar ${mv} Masken pro Woche vertragen. Wenn du mal mehr Zeit hast, lohnt sich das.`; }
   wp.push(mp);
   if(prewashDay != null) wp.push(`**Pre-Wash-Pflege:** Ein- bis zweimal pro Woche, nach Bedarf, schützt du deine Längen vor dem Shampoo. Theoretisch geht das vor jeder Wäsche, ein Muss ist es aber nicht. Für dich passt die ${PREWASH[dk]}. ${dk <= 2 ? "Bei der CWC-Methode machst du die Haare nass, gibst Conditioner in die Längen und shampoonierst direkt danach den Ansatz, da musst du nichts lange einwirken lassen. " : ""}Bei der ${dk <= 1 ? "LWC-Methode" : dk === 2 ? "MWC-Methode" : "ÖWC- und MWC-Methode"} gibst du ${dk <= 1 ? "ein Leave-in" : dk === 2 ? "eine Maske" : "Öl oder Maske"} in die trockenen Längen und lässt ${dk === 2 ? "sie" : "es"} 10 bis 60 Minuten einwirken.${dk >= 3 ? " Machst du die ÖWC-Methode nur in Längen und Spitzen, darf das Öl auch über Nacht einwirken, wenn du Lust hast. Ein Muss ist das nicht." : ""}`);
   T.push({h:"Deine Waschtage", p:wp});
