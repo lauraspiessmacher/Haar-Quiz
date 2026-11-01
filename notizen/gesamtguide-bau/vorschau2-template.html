@@ -925,23 +925,32 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 
 /* Routine persönlich */
 .rtpers{max-width:680px;margin:6px auto 18px;padding:0 4px;position:relative;z-index:2}
-.rtpkarte{background:#FDFBF7;border:1px solid var(--line);border-radius:22px;padding:20px 20px 18px;text-align:left}
+.rtpkarte{background:#FDFBF7;border:1px solid var(--line);border-radius:24px;padding:24px 22px 22px;text-align:center}
 .rtpkarte.dein{background:#382F2E;color:#F3ECE2;border-color:#382F2E}
 .rtpkick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#B8915E;margin:0 0 4px}
 .rtpkarte.dein .rtpkick{color:#D6B98F}
-.rtpkarte h2{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1;margin:0 0 8px}
+.rtpkarte h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;margin:0 0 8px}
+.rtpkarte .rtpchips,.rtpkarte .rtpschalter{justify-content:center}
+.rtpweg{list-style:none;padding:0;margin:18px 0 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
+.rtpweg::before{content:"";position:absolute;left:12.5%;right:12.5%;top:15px;height:1.6px;background:linear-gradient(90deg,#B9BDC3,#E9EBEE,#8E9399,#D5D8DC)}
+.rtpweg li{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px}
+.rtpweg li>span{width:30px;height:30px;border-radius:50%;background:#382F2E;border:1.6px solid #B9BDC3;display:grid;place-items:center;font-size:14px;color:#382F2E}
+.rtpweg li.ok>span{background:#D6B98F;border-color:#D6B98F}
+.rtpweg li.jetzt>span{border-color:#F3ECE2;box-shadow:0 0 0 4px rgba(243,236,226,.15);animation:rtpPuls 2.2s ease-in-out infinite}
+@keyframes rtpPuls{50%{box-shadow:0 0 0 8px rgba(243,236,226,0)}}
+.rtpweg b{font-family:var(--serif);font-weight:400;font-size:17px;margin-top:4px}
+.rtpweg small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#B5A79D}
+.rtpklein i{font-style:normal;display:inline-block;border:1px dashed rgba(243,236,226,.35);border-radius:999px;padding:2px 9px;margin:4px 3px 0;font-size:12px}
+.rtpklein i.ok{border-style:solid;border-color:#D6B98F;color:#D6B98F}
+.rtpextra{appearance:none;background:none;font:inherit;color:#F3ECE2;cursor:pointer;border:1px dashed rgba(243,236,226,.45);border-radius:999px;padding:3px 10px;margin:6px 3px 0;font-size:12px}
+.rtpextra:hover{border-style:solid}
+@media (prefers-reduced-motion:reduce){ .rtpweg li.jetzt>span{animation:none} }
 .rtpkarte p{margin:0 0 12px;font-size:14.5px;line-height:1.5}
 .rtpkarte.dein p{color:#E9E2D8}
-.rtpspalten{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 14px}
-.rtplab{font-size:11px!important;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 6px!important}
-.rtphaken{list-style:none;padding:0;margin:0;display:grid;gap:6px}
-.rtphaken li{display:flex;gap:8px;align-items:center;font-size:14px}
-.rtphaken li>span{width:20px;height:20px;border-radius:50%;border:1.4px solid #382F2E;display:grid;place-items:center;font-size:12px;flex:none}
-.rtphaken li.ok>span{background:#382F2E;color:#F3ECE2}
-.rtphaken.leicht li{color:var(--muted)} .rtphaken.leicht li>span{border-style:dashed}
 .rtpklein{font-size:13px!important;color:var(--muted)}
 .rtpkarte.dein .rtpklein{color:#D9CFC4}
 .rtpkarte.dein .linkbtn{color:#F3ECE2}
+.rtpkarte .rtcta{margin-top:4px}
 .rtpchips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
 .rtpchips span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(243,236,226,.35);border-radius:999px;padding:4px 10px}
 .rtpschalter{display:inline-flex;background:rgba(243,236,226,.1);border-radius:999px;padding:3px;margin:0 0 12px}
@@ -957,7 +966,7 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .rt-pers .rtziele .rtbei{border:0;background:none;padding:0;margin:4px 0 0;color:#D6B98F;font-size:12px}
 .rt-pers .rtchips span.rt-dein{outline:2px solid #D6B98F;outline-offset:2px}
 .rt-pers .rtsteps li.rt-dein{box-shadow:inset 3px 0 0 #D6B98F;padding-left:10px}
-@media (max-width:600px){ .rtpspalten{grid-template-columns:1fr} .rtpkarte h2{font-size:23px} .rt-pers .rtziele div{flex-wrap:wrap} .rt-pers .rtziele .rtbei{flex-basis:100%;text-align:left;margin:2px 0 0} }
+@media (max-width:600px){ .rtpkarte h2{font-size:24px} .rtpkarte{padding:22px 16px 20px} .rt-pers .rtziele div{flex-wrap:wrap} .rt-pers .rtziele .rtbei{flex-basis:100%;text-align:left;margin:2px 0 0} }
 .rtsteps li{border-top:1px solid var(--line-soft);padding:11px 0 10px;margin:0}
 .rtsteps li p{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 3px;font-size:15.5px}
 .rtsteps li small{display:block;font-size:13.5px;line-height:1.45;color:var(--muted)}
@@ -3355,11 +3364,12 @@ function rtPersoenlich(){
   const haken = ([k, l]) => `<li class="${st[k] ? "ok" : ""}"><span aria-hidden="true">${st[k] ? "✓" : ""}</span>${esc(l)}</li>`;
   if(!fertig){
     const offen = RT_PFLICHT.find(([k]) => !st[k]);
-    box.innerHTML = `<div class="rtpkarte"><p class="rtpkick">Bald deine Routine</p><h2>So passt sich diese Seite an <em class="hk">dich</em> an</h2>
-      <p>Sobald dein Haarplan fertig ist, siehst du hier auf einen Blick, welche Schritte zu dir gehören, wie oft und mit welchem Produkt. Alles andere wird blass.</p>
-      <div class="rtpspalten"><div><p class="rtplab">Dafür brauchst du</p><ul class="rtphaken">${RT_PFLICHT.map(haken).join("")}</ul></div>
-      <div><p class="rtplab">Macht sie noch genauer</p><ul class="rtphaken leicht">${RT_GENAUER.map(haken).join("")}</ul></div></div>
-      ${istAbo() ? (offen ? `<button type="button" class="btn dark" id="rtpWeiter">Weiter mit: ${esc(offen[1])} <span aria-hidden="true">→</span></button>` : "") : `<p class="rtpklein">Die drei Checks sind kostenlos, dein Plan und diese persönliche Ansicht sind im Abo.</p><button type="button" class="btn dark" id="rtpWeiter">${offen && offen[0] !== "routine" ? "Weiter mit: " + esc(offen[1]) : "Abo ansehen"} <span aria-hidden="true">→</span></button>`}</div>`;
+    const kurz = {kopfhaut:"Kopfhaut", pflege:"Pflege", haar:"Haar", routine:"Dein Plan"};
+    box.innerHTML = `<div class="rtpkarte dein rtpbald"><p class="rtpkick">Bald deine Routine</p><h2>So wird das <em class="hk">deine</em> Routine</h2>
+      <p>Sobald dein Haarplan fertig ist, siehst du hier, welche Schritte zu dir gehören, wie oft und mit welchem Produkt.</p>
+      <ol class="rtpweg">${RT_PFLICHT.map(([k]) => `<li class="${st[k] ? "ok" : ""}${offen && offen[0] === k ? " jetzt" : ""}"><span aria-hidden="true">${st[k] ? "✓" : ""}</span><b>${kurz[k]}</b><small>${k === "routine" ? "Schritt 4" : "Check"}</small></li>`).join("")}</ol>
+      <p class="rtpklein">Freiwillig, macht sie noch genauer: ${RT_GENAUER.map(([k, l]) => `<i class="${st[k] ? "ok" : ""}">${st[k] ? "✓ " : ""}${esc(l)}</i>`).join("")}</p>
+      ${istAbo() ? (offen ? `<button type="button" class="rtcta" id="rtpWeiter">Weiter mit: ${esc(offen[1])} <span aria-hidden="true">→</span></button>` : "") : `<p class="rtpklein">Die drei Checks sind kostenlos, dein Plan und diese persönliche Ansicht sind im Abo.</p><button type="button" class="rtcta" id="rtpWeiter">${offen && offen[0] !== "routine" ? "Weiter mit: " + esc(offen[1]) : "Abo ansehen"} <span aria-hidden="true">→</span></button>`}</div>`;
     const w = document.getElementById("rtpWeiter");
     if(w) w.onclick = () => offen && (istAbo() || offen[0] !== "routine") ? oeffneCheck(offen[0]) : zPaywall("plan");
     return;
@@ -3419,7 +3429,7 @@ function rtPersoenlich(){
     <p>Alles mit „In deinem Plan“ gehört zu dir, darunter steht, wie oft und womit. Was blass ist, brauchst du gerade nicht. Nachlesen, warum, kannst du jederzeit in deinem Haarplan.</p>
     ${(r.chips || []).length ? `<div class="rtpchips">${r.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>` : ""}
     <div class="rtpschalter" role="group" aria-label="Ansicht"><button type="button" data-rta="0" aria-pressed="${!rtAlle}">Meine Routine</button><button type="button" data-rta="1" aria-pressed="${rtAlle}">Alle Schritte</button></div>
-    ${RT_GENAUER.some(([k]) => !st[k]) ? `<p class="rtpklein">Noch genauer wird sie mit: ${RT_GENAUER.filter(([k]) => !st[k]).map(([k, l]) => `<button type="button" class="linkbtn" data-rtc="${k}">${esc(l)}</button>`).join(", ")}</p>` : ""}
+    ${RT_GENAUER.some(([k]) => !st[k]) ? `<p class="rtpklein">Freiwillig, macht sie noch genauer:<br>${RT_GENAUER.filter(([k]) => !st[k]).map(([k, l]) => `<button type="button" class="rtpextra" data-rtc="${k}">${esc(l)} →</button>`).join("")}</p>` : ""}
     <button type="button" class="linkbtn" id="rtpPlan">Zu meinem Haarplan →</button></div>`;
   box.querySelectorAll("[data-rta]").forEach(b => b.onclick = () => { rtAlle = b.dataset.rta === "1"; try { localStorage.setItem("rtAlle", rtAlle ? "1" : "0"); } catch(e){} rtPersoenlich(); });
   box.querySelectorAll("[data-rtc]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.rtc));

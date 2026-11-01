@@ -617,3 +617,4 @@
 - v405: Startseite 'Was stört euch gerade?' + 'Willkommen im Healthy Hair Club', Wissen-Leseprobe (Auf einen Blick frei), Schuppig-trocken Stufenmodell (Produktseite + Einkaufsliste, Meine Haare: 'Schuppig, feine trockene Flocken')
 - v406: Probeansicht Routine-Seite persönlich (Haarplan-Verknüpfung), Leseprobe, Stufenmodell, Problem-Einstieg
 - Entscheidung: Extra-Checks für die persönliche Routine-Seite bleiben freiwillig
+- v407: Routine-Seite: Kasten oben dunkelbraun, Checks als Schritt-Kreise am silbernen Faden, Extra-Checks als Pillen
