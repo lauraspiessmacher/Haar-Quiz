@@ -615,3 +615,4 @@
 - v403: Rundgang als Neukundin (notizen/RUNDGANG-NEUKUNDIN.md), Plan-Check: Masken-Satz und Übernahme der Haardicke korrigiert
 - v404: Feedback Rundgang umgesetzt (LL-Bedeutung, Meine-Haare-Knopf, Konto nur mit Abo, Abo-Fenster, Fußzeile Routine, Wonder Water = flüssiger Conditioner, Favoriten nur wenn passend, K18, Pre-Wash kürzer, Anrede)
 - v405: Startseite 'Was stört euch gerade?' + 'Willkommen im Healthy Hair Club', Wissen-Leseprobe (Auf einen Blick frei), Schuppig-trocken Stufenmodell (Produktseite + Einkaufsliste, Meine Haare: 'Schuppig, feine trockene Flocken')
+- v406: Probeansicht Routine-Seite persönlich (Haarplan-Verknüpfung), Leseprobe, Stufenmodell, Problem-Einstieg

@@ -38,7 +38,7 @@ Abo
 - Anrede: Startseite „Frag Laura“ auf ihr; Mein Bereich „Mach deinen Plan…“; Plan „Ich weiß, du willst…“
 
 ## REGEL Anrede (Laura 1.11.)
-Allgemeine Seiten für die Community (Startseite, Wissen, LL-Seite, Routine-Übersicht) = „ihr“.
+Allgemeine Seiten für die Community (Startseite, Wissen, LL-Seite) = „ihr“. Routine-Seite bleibt „du“ (wird mit Haarplan persönlich).
 Alles Persönliche (Quiz/Checks und Ergebnisse, Haarplan, Mein Bereich, Produkte/Merkliste) = „du“.
 
 ## Offen / wartet auf Laura
@@ -47,3 +47,10 @@ Alles Persönliche (Quiz/Checks und Ergebnisse, Haarplan, Mein Bereich, Produkte
 - Punkt 5 Name: Startseite „Willkommen im Healthy Hair Club“ statt „…Community“ → Go?
 - Punkt 8 Schuppig-trocken: Stufenmodell (erst mild/feucht, dann mildes Anti-Schuppen, Apotheke zuletzt). Achtung: Einkaufsliste zeigt aktuell Ketozolin als erste Wahl → gemeinsam besprechen
 - Idee: Routine-Seite markiert mit fertigem Haarplan „In deinem Plan“
+
+## Umgesetzt (2. Runde, 1.11.)
+- Startseite: „Was stört euch gerade?“ (6 Kacheln → LL-Seite, Pflege-Check, Kopfhaut-Check ×2, Haar-Check, Kapitel Haarzyklus); Kicker „Willkommen im Healthy Hair Club“
+- Wissen: Leseprobe. Abo-Kapitel öffnen für Gäste mit Überschrift + „Auf einen Blick“, Rest verschwommen mit Abo-Knopf. Bücher zeigen „Leseprobe“
+- Schuppig-trocken: Stufenmodell. Meine Haare hat jetzt „Schuppig, feine trockene Flocken“ und „Schuppig, fettige Schuppen“. Produktseite zeigt Schritt 1 (mild/feucht), 2 (mild gegen Schuppen), 3 (Ketoconazol/Selendisulfid). Einkaufsliste: 2× Schritt 1 + 1× „Wenn die Flocken bleiben“, kein Apotheken-Shampoo
+- PROBEANSICHT Routine-Seite mit Haarplan: oben Karte mit Pflicht-Checks (Kopfhaut, Pflege, Haar, Plan) und „macht sie genauer“ (Leave-in, Kopfhautpflege, Spliss). Mit fertigem Plan + Abo: „In deinem Plan“ + „Bei dir: …“ (wie oft, welcher Tag, welches Produkt), Rest blass, Schalter „Meine Routine / Alle Schritte“
+  → Laura entscheidet: Sollen Leave-in- und Kopfhautpflege-Check Pflicht sein?

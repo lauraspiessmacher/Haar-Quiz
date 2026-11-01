@@ -917,6 +917,42 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .rtkarte h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;margin:0 0 8px}
 .rtwann{font-size:14.5px;line-height:1.45;margin:0 0 12px;color:#4A403E}
 .rtsteps{list-style:none;margin:0;padding:0}
+
+/* Routine persönlich */
+.rtpers{max-width:680px;margin:6px auto 18px;padding:0 4px;position:relative;z-index:2}
+.rtpkarte{background:#FDFBF7;border:1px solid var(--line);border-radius:22px;padding:20px 20px 18px;text-align:left}
+.rtpkarte.dein{background:#382F2E;color:#F3ECE2;border-color:#382F2E}
+.rtpkick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#B8915E;margin:0 0 4px}
+.rtpkarte.dein .rtpkick{color:#D6B98F}
+.rtpkarte h2{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1;margin:0 0 8px}
+.rtpkarte p{margin:0 0 12px;font-size:14.5px;line-height:1.5}
+.rtpkarte.dein p{color:#E9E2D8}
+.rtpspalten{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 14px}
+.rtplab{font-size:11px!important;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 6px!important}
+.rtphaken{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.rtphaken li{display:flex;gap:8px;align-items:center;font-size:14px}
+.rtphaken li>span{width:20px;height:20px;border-radius:50%;border:1.4px solid #382F2E;display:grid;place-items:center;font-size:12px;flex:none}
+.rtphaken li.ok>span{background:#382F2E;color:#F3ECE2}
+.rtphaken.leicht li{color:var(--muted)} .rtphaken.leicht li>span{border-style:dashed}
+.rtpklein{font-size:13px!important;color:var(--muted)}
+.rtpkarte.dein .rtpklein{color:#D9CFC4}
+.rtpkarte.dein .linkbtn{color:#F3ECE2}
+.rtpchips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.rtpchips span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(243,236,226,.35);border-radius:999px;padding:4px 10px}
+.rtpschalter{display:inline-flex;background:rgba(243,236,226,.1);border-radius:999px;padding:3px;margin:0 0 12px}
+.rtpschalter button{border:0;background:none;color:#E9E2D8;font:inherit;font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer}
+.rtpschalter button[aria-pressed="true"]{background:#F3ECE2;color:#382F2E}
+.rt-pers .rt-nein{opacity:.38;filter:grayscale(.4);transition:opacity .4s}
+.rt-pers .rtphase.rt-nein .rtkarte{opacity:.5}
+.rt-pers .rtphase.rt-nein .rt-nein{opacity:1;filter:none}
+.rtdeinb{display:none}
+.rt-pers .rtdeinb{display:inline-block;margin:2px 0 4px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8A6A3E;background:rgba(214,185,143,.25);border-radius:999px;padding:3px 9px}
+.rtbei{display:none}
+.rt-pers .rtbei{display:block;font-style:normal;font-size:13.5px;line-height:1.45;margin:6px 0 2px;padding:8px 10px;border-left:2px solid #D6B98F;background:rgba(214,185,143,.12);border-radius:0 10px 10px 0;color:var(--ink)}
+.rt-pers .rtziele .rtbei{border:0;background:none;padding:0;margin:4px 0 0;color:#D6B98F;font-size:12px}
+.rt-pers .rtchips span.rt-dein{outline:2px solid #D6B98F;outline-offset:2px}
+.rt-pers .rtsteps li.rt-dein{box-shadow:inset 3px 0 0 #D6B98F;padding-left:10px}
+@media (max-width:600px){ .rtpspalten{grid-template-columns:1fr} .rtpkarte h2{font-size:23px} .rt-pers .rtziele div{flex-wrap:wrap} .rt-pers .rtziele .rtbei{flex-basis:100%;text-align:left;margin:2px 0 0} }
 .rtsteps li{border-top:1px solid var(--line-soft);padding:11px 0 10px;margin:0}
 .rtsteps li p{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 3px;font-size:15.5px}
 .rtsteps li small{display:block;font-size:13.5px;line-height:1.45;color:var(--muted)}
@@ -2254,6 +2290,7 @@ html[data-stil="rouje"] .serie h2{text-transform:uppercase;font-size:clamp(40px,
       <p class="rtlead">Von der Kopfhaut bis in die Spitzen: Folge dem silbernen Faden und du siehst, in welcher Reihenfolge deine Pflege Sinn macht. Du musst nicht alles machen.</p>
       <div class="rtlegende"><span class="rtb basis">Basis</span> gehört in jede Routine <span class="rtb extra">Extra</span> nur, wenn deine Haare es brauchen</div>
     </div>
+    <div class="rtpers" id="rtpers"></div>
     <div class="rtfaden" id="rtfaden">
       <svg class="rtthread" id="rtthread" aria-hidden="true"><defs>
         <mask id="rtmask" maskUnits="userSpaceOnUse"><path class="rtmp" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/></mask>
@@ -3526,9 +3563,95 @@ function renderSearch(){
 function setHH(){ document.documentElement.style.setProperty("--hh", document.querySelector("header.top").offsetHeight + "px"); }
 /* ---------- Routine-Seite: silberner Faden zeichnet sich beim Scrollen nach unten (Laura 23.10.) ---------- */
 let rtBereit = false;
+
+/* ---------- Routine-Seite persönlich (Probeansicht 1.11.): mit fertigem Haarplan wird markiert, was zu dir gehört ---------- */
+const RT_PFLICHT = [["kopfhaut","Kopfhaut-Check"],["pflege","Pflege-Check"],["haar","Haar-Check"],["routine","Plan erstellen (Schritt 4)"]];
+const RT_GENAUER = [["leavein","Leave-in-Check"],["kopfpflege","Kopfhautpflege-Check"],["spliss","Spliss- & Haarbruch-Check"]];
+let rtAlle = false; try { rtAlle = localStorage.getItem("rtAlle") === "1"; } catch(e){}
+function rtPersoenlich(){
+  const page = document.getElementById("v-routine"), box = document.getElementById("rtpers"); if(!page || !box) return;
+  const st = quizStand(), fertig = istAbo() && basisFertig() && !!st.routine;
+  page.classList.toggle("rt-pers", fertig && !rtAlle);
+  page.querySelectorAll(".rt-dein,.rt-nein").forEach(x => x.classList.remove("rt-dein","rt-nein"));
+  page.querySelectorAll(".rtbei,.rtdeinb").forEach(x => x.remove());
+  const haken = ([k, l]) => `<li class="${st[k] ? "ok" : ""}"><span aria-hidden="true">${st[k] ? "✓" : ""}</span>${esc(l)}</li>`;
+  if(!fertig){
+    const offen = RT_PFLICHT.find(([k]) => !st[k]);
+    box.innerHTML = `<div class="rtpkarte"><p class="rtpkick">Bald deine Routine</p><h2>So passt sich diese Seite an <em class="hk">dich</em> an</h2>
+      <p>Sobald dein Haarplan fertig ist, siehst du hier auf einen Blick, welche Schritte zu dir gehören, wie oft und mit welchem Produkt. Alles andere wird blass.</p>
+      <div class="rtpspalten"><div><p class="rtplab">Dafür brauchst du</p><ul class="rtphaken">${RT_PFLICHT.map(haken).join("")}</ul></div>
+      <div><p class="rtplab">Macht sie noch genauer</p><ul class="rtphaken leicht">${RT_GENAUER.map(haken).join("")}</ul></div></div>
+      ${istAbo() ? (offen ? `<button type="button" class="btn dark" id="rtpWeiter">Weiter mit: ${esc(offen[1])} <span aria-hidden="true">→</span></button>` : "") : `<p class="rtpklein">Die drei Checks sind kostenlos, dein Plan und diese persönliche Ansicht sind im Abo.</p><button type="button" class="btn dark" id="rtpWeiter">${offen && offen[0] !== "routine" ? "Weiter mit: " + esc(offen[1]) : "Abo ansehen"} <span aria-hidden="true">→</span></button>`}</div>`;
+    const w = document.getElementById("rtpWeiter");
+    if(w) w.onclick = () => offen && (istAbo() || offen[0] !== "routine") ? oeffneCheck(offen[0]) : zPaywall("plan");
+    return;
+  }
+  const D = planDaten(), r = D.r, a = D.a, KPD = st.kopfpflege, rep = r.rep || me.kaputt;
+  const woche = (r.week || []), wtxt = woche.flatMap(x => x.items || []).join(" ") + " " + JSON.stringify(r.regel || "");
+  const heat = D.hitze === "manchmal" || D.hitze === "taeglich";
+  let eink = []; try { eink = planEinkauf(); } catch(e){}
+  const prod = t => { const z = eink.find(e => e.type === t); return z ? `${z.erste.brand} ${z.erste.name}` : ""; };
+  const tage = re => woche.filter(x => (x.items || []).some(i => re.test(i))).map(x => x.tag);
+  const chip = re => ((r.chips || []).find(c => re.test(c)) || "");
+  const fine = D.dIdx === 0, pwMeth = [["LWC","CWC"],["CWC","MWC"],["ÖWC","MWC"]][D.dIdx == null ? 1 : D.dIdx];
+  const pwTage = tage(/pre-wash/i), maskeTage = tage(/maske/i), waschTage = woche.filter(x => x.wash).map(x => x.tag);
+  const regel = (re) => { const g = (r.regel || []).find(x => re.test(JSON.stringify(x))); return g ? (Array.isArray(g) ? g[1] : g.t || g.text || "") : ""; };
+  /* je Schritt: dein? und eine Zeile „Bei dir“ */
+  const S = {
+    "Kopfhautpeeling": [/peeling/i.test(wtxt) || !!(KPD && KPD.peelOft), KPD && KPD.peelOft ? KPD.peelOft : "Nach einer Woche mit Trockenshampoo, vor der nächsten Wäsche."],
+    "Kopfhautpflege mit Wirkstoff": [false],
+    "Hair Oiling für die Kopfhaut": [false],
+    "2× shampoonieren": [D.kopf !== "S", `${waschTage.length ? "An deinen Waschtagen (" + waschTage.join(", ") + ")" : "Bei jeder Wäsche"}${prod("shampoo") ? ". Dein Shampoo: " + prod("shampoo") : ""}`],
+    "1× shampoonieren, dafür gründlich": [D.kopf === "S", prod("shampoo") ? "Dein Shampoo: " + prod("shampoo") : ""],
+    "Wirkstoffshampoo": [D.kopf === "ST" || D.kopf === "SF", D.kopf === "ST" ? "Erst, wenn die Flocken nach zwei bis drei Wochen mildem Shampoo noch da sind." : "Gegen deine Schuppen, ein paar Minuten einwirken lassen."],
+    "Tiefenreinigungsshampoo": [/tiefenreinigung/i.test(wtxt), "Einmal im Monat statt deines normalen Shampoos."],
+    "Conditioner": [true, `Nach jeder Wäsche, 3 bis 5 Minuten einwirken lassen${prod("conditioner") ? ". Dein Conditioner: " + prod("conditioner") : ""}`],
+    "Wonder Water": [fine, "Bei deinen feinen Haaren als leichter Abschluss statt oder zusätzlich zum Conditioner."],
+    "Leave-in mit Wirkstoff": [true, `Nach jeder Wäsche ins feuchte Haar${prod("leavein") ? ". Dein Leave-in: " + prod("leavein") : ""}`],
+    "Repair- oder Bond-Repair-Leave-in": [rep === "bond" || rep === "protein", rep === "bond" ? "Mit Bond Repair, im Wechsel mit Feuchtigkeit." : "Mit Proteinen, im Wechsel mit Feuchtigkeit."],
+    "Kopfhautpflege": [!!KPD, KPD ? (KPD.wurzel ? "Jeden Tag dein Serum für die Haarwurzel, Scheitel für Scheitel." : "Dein Kopfhautserum, am besten jeden Tag.") : ""],
+    "Hitzeschutz": [/hitzeschutz/i.test(wtxt) || heat, `Vor jedem Föhnen${prod("hitze") ? ". Dein Hitzeschutz: " + prod("hitze") : ""}`],
+    "Glättungssprays": [D.wunsch === "glatt", "Für deinen Wunsch glatt und glänzend."],
+    "Volumenprodukte": [D.wunsch === "volumen", "Für deinen Wunsch nach mehr Volumen, nur an den Ansatz."],
+    "Leave-in, versiegelnd": [true, "Jeden Tag ein- bis zweimal in die trockenen Längen und Spitzen. Das ist die LL-Methode."],
+    "Haaröl als Add-on": [true, fine ? "Ein trockenes, leichtes Öl, nur in die Spitzen." : "Etwas Öl in Längen und Spitzen, über deinem Leave-in."],
+    "Trockener Hitzeschutz": [heat, D.hitze === "taeglich" ? "Du stylst fast täglich mit Hitze, deshalb gehört er bei dir immer dazu." : "An den Tagen, an denen du glättest oder lockst."],
+    "Glanzspray": [false],
+    "Haarspray": [a.styling === "viel", "Du stylst fast täglich, nimm eins mit Hitzeschutz."]
+  };
+  page.querySelectorAll(".rtsteps li").forEach(li => {
+    const b = li.querySelector("p b"), k = b && b.textContent.trim(), e = S[k]; if(!e) return;
+    li.classList.add(e[0] ? "rt-dein" : "rt-nein");
+    if(e[0]){ b.parentElement.insertAdjacentHTML("afterend", `<span class="rtdeinb">In deinem Plan</span>`); if(e[1]) li.querySelector("small").insertAdjacentHTML("afterend", `<em class="rtbei"><b>Bei dir:</b> ${esc(e[1])}</em>`); }
+  });
+  /* Pre-Wash Längen: passende Methoden markieren */
+  const pw = page.querySelector(".rtchips"); if(pw){ const kar = pw.closest(".rtkarte"), dein = pwTage.length > 0;
+    pw.querySelectorAll("span").forEach(sp => sp.classList.toggle("rt-dein", dein && pwMeth.includes(sp.querySelector("b").textContent.trim())));
+    if(dein) pw.insertAdjacentHTML("afterend", `<em class="rtbei"><b>Bei dir:</b> ${esc(pwTage.join(", "))}, am besten mit der ${pwMeth.join("- oder ")}-Methode.</em>`); else kar.classList.add("rt-nein"); }
+  /* Zusatzpflege-Kacheln */
+  page.querySelectorAll(".rtziele > div").forEach(d => { const n = d.querySelector("b").firstChild.textContent.trim();
+    const dein = n === "Maske" ? true : n === "Wonder Water" ? fine : n === "Bond Treatment" ? !!rep : false;
+    d.classList.add(dein ? "rt-dein" : "rt-nein");
+    if(dein && n === "Bond Treatment") d.insertAdjacentHTML("beforeend", `<small class="rtbei">${rep === "bond" ? "Bei dir mit Bond Repair" : "Bei dir mit Proteinen"}, im Wechsel mit Feuchtigkeit</small>`);
+    if(dein && n === "Wonder Water") d.insertAdjacentHTML("beforeend", `<small class="rtbei">Bei dir als leichter Abschluss</small>`);
+    if(dein && n === "Maske") d.insertAdjacentHTML("beforeend", `<small class="rtbei">${esc(chip(/Maske/) || "Maske")}${maskeTage.length ? " · " + esc(maskeTage.join(", ")) : ""}</small>`); });
+  /* ganze Stationen ohne eigenen Schritt werden blass */
+  page.querySelectorAll(".rtphase").forEach(ph => { if(!ph.querySelector(".rt-dein")) ph.classList.add("rt-nein"); });
+  box.innerHTML = `<div class="rtpkarte dein"><p class="rtpkick">Aus deinem Haarplan</p><h2>Das ist <em class="hk">deine</em> Routine</h2>
+    <p>Alles mit „In deinem Plan“ gehört zu dir, darunter steht, wie oft und womit. Was blass ist, brauchst du gerade nicht. Nachlesen, warum, kannst du jederzeit in deinem Haarplan.</p>
+    ${(r.chips || []).length ? `<div class="rtpchips">${r.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>` : ""}
+    <div class="rtpschalter" role="group" aria-label="Ansicht"><button type="button" data-rta="0" aria-pressed="${!rtAlle}">Meine Routine</button><button type="button" data-rta="1" aria-pressed="${rtAlle}">Alle Schritte</button></div>
+    ${RT_GENAUER.some(([k]) => !st[k]) ? `<p class="rtpklein">Noch genauer wird sie mit: ${RT_GENAUER.filter(([k]) => !st[k]).map(([k, l]) => `<button type="button" class="linkbtn" data-rtc="${k}">${esc(l)}</button>`).join(", ")}</p>` : ""}
+    <button type="button" class="linkbtn" id="rtpPlan">Zu meinem Haarplan →</button></div>`;
+  box.querySelectorAll("[data-rta]").forEach(b => b.onclick = () => { rtAlle = b.dataset.rta === "1"; try { localStorage.setItem("rtAlle", rtAlle ? "1" : "0"); } catch(e){} rtPersoenlich(); });
+  box.querySelectorAll("[data-rtc]").forEach(b => b.onclick = () => oeffneCheck(b.dataset.rtc));
+  document.getElementById("rtpPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
+}
+addEventListener("quizzu", () => { if(state.view === "routine") renderRoutine(); });
 function renderRoutine(){
   const box = document.getElementById("rtfaden"), svg = document.getElementById("rtthread");
   if(!box || !svg) return;
+  try { rtPersoenlich(); } catch(e){ console.error(e); }
   const ruhig = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const knoten = [...box.querySelectorAll(".rtknoten")], stationen = [...box.querySelectorAll(".rtphase,.rtende")];
   let len = 0, proben = [];
