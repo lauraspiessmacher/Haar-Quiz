@@ -1324,6 +1324,19 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .zcta h3{font-size:24px;line-height:1.15;margin:0 0 8px}
 .zcta p{color:var(--muted);font-size:15px;margin:0 0 16px}
 .zprod{margin-top:6px}
+.zprodw{min-height:760px}
+.zprodw .zgesperrt{max-height:none}
+.zcta.zcta-prod{top:24px;width:min(560px,calc(100% - 16px));padding:24px 22px 20px}
+.zcta-prod .zpk{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:8px 0 2px}
+.zcta-prod .zpzahl{color:var(--ink);font-size:15px;margin:0 0 12px}
+.zcta-prod .zpzahl b{font-family:var(--serif);font-weight:400;font-size:30px;margin-right:4px;vertical-align:-3px}
+.zparten{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0 0 14px}
+.zparten span{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.zparten b{font-weight:600}
+.zpliste{list-style:none;text-align:left;margin:0 0 16px;padding:0;display:grid;gap:7px}
+.zpliste li{position:relative;padding-left:22px;font-size:14px;line-height:1.45;color:var(--ink)}
+.zpliste li::before{content:"✓";position:absolute;left:0;top:0;color:#8A6A3E;font-weight:600}
+.zcta-prod .zpklein{font-size:12.5px;margin:10px 0 0}
 html.zg-abo .zzu,html.zg-abo .wabo{display:none}
 html.zg-gast #wissenCards .wcard[data-abo] .zfrei{display:none}
 html.zg-gast #wissenCards .wcard:not([data-abo]) .zzu,html:not(.zg-gast) .zzu{display:none}
@@ -3323,8 +3336,22 @@ function zProdukte(){ if(istAbo()) return; const g = document.querySelector("#gu
   if(head) g.appendChild(head); g.appendChild(box);
   box.querySelectorAll("ul.grid").forEach((u,n) => [...u.children].forEach((li,i) => { if(n > 0 || i >= 6) li.remove(); }));
   box.querySelectorAll("ul.grid").forEach((u,n) => { if(n > 0) u.remove(); });
-  const n = head ? (head.querySelector(".count")||{}).textContent : "";
-  zSperre(box, "produkte", n ? `${n} Produkte mit meiner Einschätzung, passend zu deiner Kopfhaut und deinen Haaren.` : "");
+  zSperre(box, "produkte", "");
+  /* Gast: Überblick über alle Produkte statt nur über die aktuelle Produktart (Laura 1.11.) */
+  const cta = box.querySelector(".zcta"); if(!cta) return;
+  box.classList.add("zprodw");
+  const gesamt = new Set(ALL.map(p => p.brand + "|" + p.name)).size;
+  cta.classList.add("zcta-prod");
+  cta.innerHTML = `<span class="zschloss">${ZSCHLOSS}</span><p class="zpk">Im Abo</p><h3>Meine Einschätzung zu allen Produkten</h3>
+    <p class="zpzahl"><b>${gesamt}</b> Produkte aus Drogerie und High-End, alle von mir eingeordnet</p>
+    <div class="zparten">${TYPES.map(t => `<span><b>${DATA[t.id].items.length}</b> ${esc(PLURAL[t.id] || t.label)}</span>`).join("")}</div>
+    <ul class="zpliste"><li>Zu jedem Produkt meine ehrliche Einschätzung nach den Inhaltsstoffen, nicht nach dem, was auf der Verpackung steht</li>
+      <li>Für welche Haardicke, welchen Haarzustand und welche Kopfhaut es passt, und für wen nicht</li>
+      <li>Mit deinen Check-Ergebnissen siehst du zuerst, was wirklich zu dir passt</li>
+      <li>Deine Merkliste, damit du im Laden alles griffbereit hast</li></ul>
+    <button type="button" class="btn dark">Mit dem Abo freischalten</button>
+    <p class="zpklein">Die Produktnamen siehst du schon, meine Einschätzung dazu steht im Abo.</p>`;
+  cta.querySelector(".btn").onclick = () => zPaywall("produkte");
 }
 function renderNeu(){
   let items = neuItems().filter(segOk);
