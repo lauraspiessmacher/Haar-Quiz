@@ -149,7 +149,7 @@ const PREV = load("quizErgebnisse") || {};
 const ME = load("meineHaare") || {};
 const PRE = {};
 if(PREV.kopfhaut) PRE.kopf = [{N:"normal",F:"fettend",T:"trocken",S:"sensibel",ST:"schuppen",SF:"schuppen"}[PREV.kopfhaut.key], "deinem Kopfhaut-Check"];
-else if(ME.kopf) PRE.kopf = [ME.kopf === "juckend" ? "sensibel" : ME.kopf, "„Meine Haare“"];
+else if(ME.kopf) PRE.kopf = [ME.kopf === "juckend" ? "sensibel" : ME.kopf === "schuppentrocken" ? "schuppen" : ME.kopf, "„Meine Haare“"];
 if(ME.dicke) PRE.dicke = [ME.dicke, "„Meine Haare“"];
 else if(PREV.pflege) PRE.dicke = [["duenn","normal","dick"][PREV.pflege.th], "deinem Pflege-Check"];
 if(ME.wunsch) PRE.wunsch = [ME.wunsch, "„Meine Haare“"];
@@ -570,7 +570,7 @@ function result(){
     const all = load("quizErgebnisse") || {}; all.routine = {datum: new Date().toISOString().slice(0,10), a, week: R.week, regel: R.regel, chips: R.chips, st: R.st, rep: R.repStufe}; /* der Haarplan baut daraus Kapitel 2 und mehr */ localStorage.setItem("quizErgebnisse", JSON.stringify(all));
     const me = load("meineHaare") || {};
     me.dicke = a.dicke || me.dicke || null;
-    me.kopf = (a.kopf === "sensibel" && me.kopf === "juckend") ? "juckend" : (a.kopf || me.kopf || null);
+    me.kopf = (a.kopf === "sensibel" && me.kopf === "juckend") ? "juckend" : (a.kopf === "schuppen" && PREV.kopfhaut && PREV.kopfhaut.key === "ST") ? "schuppentrocken" : (a.kopf || me.kopf || null);
     me.kaputt = R.repStufe; /* Repair-Stufe für die Produktempfehlung: bond, protein oder keine */
     me.wunsch = a.wunsch && a.wunsch !== "gesund" ? a.wunsch : null;
     localStorage.setItem("meineHaare", JSON.stringify(me));
