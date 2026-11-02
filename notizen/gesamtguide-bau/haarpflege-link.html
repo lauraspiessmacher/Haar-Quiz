@@ -998,13 +998,19 @@ nav.main button[aria-current="page"] .merkn{background:#F3ECE2;color:#382F2E}
 .rtcta{appearance:none;border:0;border-radius:999px;background:#F3ECE2;color:#382F2E;font:inherit;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:12px 22px;cursor:pointer}
 @media (max-width:759px){
   .rthero{margin-top:22px}
-  .rtfaden{padding-top:20px}
-  .rtphase{display:block;margin:0 0 40px}
-  .rtphase::before{display:none}
-  .rtknoten{margin:0 auto 6px;font-size:52px}
-  .rtknoten.klein{font-size:34px}
-  .rtphase[data-side] .rtkarte{transform:translateY(18px)}
+  /* Handy (Laura 2.11.): der Faden läuft links als Leiste neben den Karten und schlängelt sich sichtbar */
+  .rtfaden{padding:20px 0 10px 50px}
+  .rtphase{display:block;margin:0 0 30px}
+  .rtphase[data-side]::before{display:block;left:-23px;right:auto;top:31px;width:23px;transform-origin:left}
+  .rtknoten{position:absolute;left:-50px;top:4px;width:50px;margin:0;padding:4px 0;font-size:34px;transform:scale(.4) rotate(-14deg);transition:transform .6s cubic-bezier(.3,1.6,.5,1),opacity .4s}
+  .rtphase.an .rtknoten{transform:none}
+  .rtknoten.klein{font-size:22px;top:12px}
+  .rtphase[data-side] .rtkarte{transform:translateX(46px) rotate(2deg);transform-origin:left top}
   .rtphase.an .rtkarte{transform:none}
+  .rtphase .rtsteps li,.rtphase .rtchips span,.rtphase .rtziele>div{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease;transition-delay:calc(.25s + var(--rti,0) * .09s)}
+  .rtphase.an .rtsteps li,.rtphase.an .rtchips span,.rtphase.an .rtziele>div{opacity:1;transform:none}
+  .rtende{margin-left:-50px}
+  .rtende .rtknoten.ziel{position:relative;left:auto;top:auto;width:auto;margin:-62px auto 0;transform:none}
   .rtkarte{padding:18px 16px 14px}
   .rtkarte h2{font-size:25px}
   .rtziele{grid-template-columns:1fr}
@@ -3513,13 +3519,19 @@ function renderRoutine(){
   try { rtPersoenlich(); } catch(e){ console.error(e); }
   const ruhig = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const knoten = [...box.querySelectorAll(".rtknoten")], stationen = [...box.querySelectorAll(".rtphase,.rtende")];
+  box.querySelectorAll(".rtphase").forEach(ph => ph.querySelectorAll(".rtsteps li,.rtchips span,.rtziele>div").forEach((x, i) => x.style.setProperty("--rti", i)));
   let len = 0, proben = [];
   const bauen = () => {
-    const W = box.clientWidth, H = box.scrollHeight, cx = W / 2, schmal = W < 600, A = schmal ? 4 : 12;
+    const W = box.clientWidth, H = box.scrollHeight, schmal = innerWidth < 760, cx = schmal ? 25 : W / 2, A = schmal ? 13 : 12;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
     const br = box.getBoundingClientRect();
     const pts = [[cx, 0], ...knoten.map(k => { const r = k.getBoundingClientRect(); return [cx, r.top - br.top + r.height / 2]; }), [cx, H - 10]];
     let d = `M${cx} 0`;
+    if(schmal){ /* Handy: wie eine Haarsträhne, alle ~130 px ein Schwung nach links und rechts */
+      let s = 1;
+      for(let i = 1; i < pts.length; i++){ const y0 = pts[i-1][1], y1 = pts[i][1], n = Math.max(1, Math.round((y1 - y0) / 130)), h = (y1 - y0) / n;
+        for(let k = 0; k < n; k++){ const a = y0 + k * h, m = h / 3; d += ` C${cx + s*A} ${a + m} ${cx - s*A} ${a + h - m} ${cx} ${a + h}`; s = -s; } }
+    } else
     for(let i = 1; i < pts.length; i++){ const [, y0] = pts[i-1], [, y1] = pts[i], s = i % 2 ? 1 : -1, m = (y1 - y0) / 3;
       d += ` C${cx + s*A} ${y0 + m} ${cx - s*A} ${y1 - m} ${cx} ${y1}`; }
     svg.querySelectorAll(".rtp,.rtmp").forEach(p => p.setAttribute("d", d));

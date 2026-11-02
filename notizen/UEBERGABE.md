@@ -625,3 +625,4 @@
 - v412: Wörterbuch zum Antippen (40 Wörter), Kachel 'Meine Haare werden nicht länger', ehrlicher Satz unter Startseiten-Titel, Haar-Check Code-Hinweis, Kopfhaut-Check Inhaltsstoff-Hinweis
 - v413: Startseite: Satz unter Titel wieder raus, Kachel Frizz raus (6 Kacheln)
 - v414: Startseite: jede Problem-Kachel hat einen Check + ein Kapitel (Gast sieht kostenlos/im Abo/Leseprobe)
+- v415: Routine-Seite Handy: silberner Faden als Strähne links neben den Karten (schlängelt sich alle ~130px), Zahlen sitzen auf dem Faden und ploppen auf, Karten gleiten von rechts mit leichter Drehung rein, Schritte erscheinen nacheinander
