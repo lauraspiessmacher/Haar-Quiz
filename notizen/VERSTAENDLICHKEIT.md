@@ -34,8 +34,8 @@ G. Haarzyklus: Absatz zum „Kenogen“ (fünfte Phase) streichen, macht es nur 
 
 ## Umgesetzt am 2.11. (Go für A, B, C, E, F)
 - A Wörterbuch zum Antippen: Fachwörter fein gepunktet unterstrichen, Antippen zeigt Erklärung. Jedes Wort einmal pro Seite/Kapitel/Ergebnis. Funktioniert auch in den Checks (dort helle Blase).
-- B Kachel „Meine Haare werden nicht länger“ → Kapitel Haarzyklus + LL-Methode. Haarausfall-Kachel jetzt über die volle Breite.
-- C Satz unter dem Titel der Startseite.
+- B Kachel „Meine Haare werden nicht länger“ → Kapitel Haarzyklus + LL-Methode. Dafür Kachel „Frizz & keine Form“ entfernt (6 gleichmäßige Kacheln).
+- C Satz unter dem Titel: wieder entfernt (Laura 2.11.: sieht nicht gut aus)
 - E Haar-Check: „1C ist der Fachbegriff für deinen Haartyp. Merken musst du ihn dir nicht.“
 - F Kopfhaut-Check: Hinweis „hinten auf der Flasche bei den Inhaltsstoffen“.
 

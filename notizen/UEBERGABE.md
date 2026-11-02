@@ -623,3 +623,4 @@
 - v410: Produktseite Gast: Abo-Kasten mit Gesamtzahl (599 Produkte), Anzahl je Produktart und was man freischaltet
 - v411: Basis-Checks: Knopf führt zum nächsten offenen Check bzw. zum Plan (Gast: Abo-Fenster); Bericht notizen/VERSTAENDLICHKEIT.md
 - v412: Wörterbuch zum Antippen (40 Wörter), Kachel 'Meine Haare werden nicht länger', ehrlicher Satz unter Startseiten-Titel, Haar-Check Code-Hinweis, Kopfhaut-Check Inhaltsstoff-Hinweis
+- v413: Startseite: Satz unter Titel wieder raus, Kachel Frizz raus (6 Kacheln)
