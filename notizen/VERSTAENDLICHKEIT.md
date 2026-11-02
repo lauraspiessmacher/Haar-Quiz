@@ -30,3 +30,52 @@ D. Englische Wörter in deinem Ton: „Holy-Grail-Produkt“, „Must-have“, �
 E. Haar-Check-Ergebnis zeigt den Code (z. B. „1C“) ohne Erklärung → kleiner Zusatz „Fachbegriff für deinen Haartyp, merken musst du ihn dir nicht“.
 F. Kopfhaut-Ergebnis: „mit Piroctone Olamine oder Climbazol“ → Zusatz „(steht hinten auf der Flasche bei den Inhaltsstoffen)“.
 G. Haarzyklus: Absatz zum „Kenogen“ (fünfte Phase) streichen, macht es nur schwerer. Phasen-Namen (Anagen …) klein lassen.
+
+
+## Umgesetzt am 2.11. (Go für A, B, C, E, F)
+- A Wörterbuch zum Antippen: Fachwörter fein gepunktet unterstrichen, Antippen zeigt Erklärung. Jedes Wort einmal pro Seite/Kapitel/Ergebnis. Funktioniert auch in den Checks (dort helle Blase).
+- B Kachel „Meine Haare werden nicht länger“ → Kapitel Haarzyklus + LL-Methode. Haarausfall-Kachel jetzt über die volle Breite.
+- C Satz unter dem Titel der Startseite.
+- E Haar-Check: „1C ist der Fachbegriff für deinen Haartyp. Merken musst du ihn dir nicht.“
+- F Kopfhaut-Check: Hinweis „hinten auf der Flasche bei den Inhaltsstoffen“.
+
+### Wörterbuch-Texte (bitte gegenlesen)
+- **Silikone**: Pflegestoffe, die sich wie ein dünner Film um das Haar legen. Sie machen es glatt, glänzend und schützen vor Reibung und Hitze.
+- **Silikonfrei**: Ohne Silikone. Das ist nicht automatisch besser, sondern einfach eine andere Art von Pflege.
+- **Amodimethicone**: Ein Silikon, das sich vor allem an kaputte Stellen im Haar setzt. Es beschwert wenig.
+- **Dimethicone**: Das bekannteste Silikon. Es macht das Haar glatt, glänzend und leichter kämmbar.
+- **Quaternium-80**: Ein Silikon, das das Haar weich und glatt macht.
+- **Polymere**: Pflegestoffe, die sich als feiner Film um das Haar legen, ähnlich wie Silikone.
+- **Keratin**: Das Eiweiß, aus dem Haare bestehen. In Pflegeprodukten soll es kaputte Stellen auffüllen.
+- **Proteine**: Eiweiße. In Repair-Pflege lagern sie sich an kaputten Stellen an und machen das Haar fester. Zu viel davon kann Haare aber steif machen.
+- **Bond Repair**: Pflege, die an den Verbindungen im Inneren des Haares ansetzt. Gedacht für Haare, die durch Blondieren, Färben oder Hitze stark geschädigt sind.
+- **Peptide**: Kleine Eiweiß-Bausteine. In Kopfhautpflege werden sie zur Pflege rund um die Haarwurzel eingesetzt.
+- **Aminexil**: Ein Wirkstoff in Kopfhautseren, der bei Haarausfall eingesetzt wird.
+- **Panthenol**: Provitamin B5. Bindet Feuchtigkeit und beruhigt die Haut.
+- **Glycerin**: Zieht Feuchtigkeit an und hält sie in Haar und Haut.
+- **Urea**: Harnstoff. Bindet Feuchtigkeit und hilft bei trockener, schuppiger Haut.
+- **Niacinamid**: Vitamin B3. Beruhigt die Haut und stärkt ihre Schutzschicht.
+- **Hyaluron**: Bindet besonders viel Feuchtigkeit.
+- **Sulfate**: Starke Waschstoffe im Shampoo, die gründlich reinigen. Nicht automatisch schlecht, für empfindliche Kopfhaut aber oft zu kräftig.
+- **Sulfatfrei**: Ohne die starken Waschstoffe Sulfate. Heißt nicht automatisch, dass das Shampoo mild ist.
+- **Tenside**: Die Waschstoffe im Shampoo, die Fett und Schmutz lösen. Es gibt starke und milde.
+- **Piroctone Olamine**: Ein Wirkstoff gegen Schuppen. Er steht hinten auf der Flasche bei den Inhaltsstoffen.
+- **Climbazol**: Ein Wirkstoff gegen Schuppen. Er steht hinten auf der Flasche bei den Inhaltsstoffen.
+- **Ketoconazol**: Ein starker Wirkstoff gegen Schuppen und Hefepilze. Als Shampoo gibt es ihn in der Apotheke.
+- **Selendisulfid**: Ein starker Wirkstoff gegen hartnäckige Schuppen.
+- **Salicylsäure**: Löst Schuppen und abgestorbene Hautschüppchen von der Kopfhaut.
+- **Talg**: Das natürliche Fett, das die Kopfhaut bildet. Zu viel davon macht den Ansatz schnell fettig.
+- **Schuppenschicht**: Die äußerste Schicht des Haares, aus kleinen Plättchen wie Dachziegel. Liegt sie glatt an, glänzt das Haar und bricht weniger.
+- **Porosität**: Wie offen die Schuppenschicht des Haares ist. Poröses Haar nimmt Feuchtigkeit schnell auf, verliert sie aber auch schnell wieder.
+- **Frizz**: Kleine, abstehende, krause Härchen, vor allem bei feuchter Luft.
+- **Pre-Wash**: Pflege, die vor der Haarwäsche in die Längen kommt, damit das Shampoo sie nicht austrocknet.
+- **Wonder Water**: Ein flüssiger Conditioner. Er ist sehr leicht und beschwert kaum.
+- **Leave-in**: Pflege, die im Haar bleibt und nicht ausgespült wird, zum Beispiel ein Spray, ein Serum oder eine Creme.
+- **Tiefenreinigung**: Ein Shampoo, das besonders gründlich reinigt und Rückstände von Pflege, Styling und Kalk entfernt. Nur ab und zu, nicht als Alltagsshampoo.
+- **DHT**: Ein Hormon, das bei erblich bedingtem Haarausfall die Haarwurzeln mit der Zeit schrumpfen lässt.
+- **Glossing**: Eine Tönung ohne Aufhellen, die vor allem Glanz gibt.
+- **Multistyler**: Ein Gerät mit mehreren Aufsätzen zum Föhnen, Locken und Glätten.
+- **Diffusor**: Ein Aufsatz für den Föhn, der die Luft sanft verteilt. Gut für Locken und Wellen.
+- **Blowout**: Eine geföhnte Frisur mit viel Schwung und Volumen.
+- **Scrunchie**: Ein Haargummi mit Stoff drumherum. Aus Seide oder Satin schont er die Haare.
+- **High-End**: Marken, die es nicht in der Drogerie gibt, zum Beispiel beim Friseur, in der Parfümerie, in der Apotheke oder online. Meist teurer.

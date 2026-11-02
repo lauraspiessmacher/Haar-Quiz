@@ -100,6 +100,7 @@ li{margin-bottom:8px}
 .res-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
 .res-art{flex:0 0 60px;width:60px;height:100px;margin-top:4px}
 .subtype{color:var(--muted);font-size:16px;margin:-8px 0 24px}
+.codehint{font-size:13px;opacity:.7;margin:-4px 0 12px}
 .code{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 10px;margin-right:8px;color:var(--cream);font-size:14px}
 .steps{padding-left:22px;margin:0 0 22px}
 .steps li{margin-bottom:10px}
@@ -394,6 +395,7 @@ function result(){
         <p class="res-kicker">Deine Haarstruktur ist am ehesten</p>
         <h1>${r.name}</h1>
         <p class="subtype"><span class="code">${code}</span>${SUB[code]}</p>
+        <p class="codehint">${code} ist der Fachbegriff für deinen Haartyp. Merken musst du ihn dir nicht.</p>
       </div>
       ${strandSVG(code,"res-art")}
     </div>
