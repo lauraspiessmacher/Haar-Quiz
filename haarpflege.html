@@ -3555,6 +3555,9 @@ function renderRoutine(){
   requestAnimationFrame(() => requestAnimationFrame(bauen));
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if(state.view === "routine") bauen(); });
 }
+/* Nach einem Basis-Check: nächster offener Check, sonst der Plan (mit Abo-Sperre für Gäste) */
+window.naechsterSchritt = () => { if(window.closeQuiz) window.closeQuiz();
+  setTimeout(() => { const st = quizStand(), n = CHECKS.find(([k]) => !st[k]); oeffneCheck(n ? n[0] : "routine"); }, 80); };
 window.showRoutine = () => { state.view = "routine"; state.wissen = null; render(); window.scrollTo({top:0}); };
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");

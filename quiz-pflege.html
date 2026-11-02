@@ -363,14 +363,14 @@ function result(){
 
     <p class="closing">Dein Shampoo wählst du nach der Kopfhaut, deine Pflege nach Dicke und Zustand und dein Styling nach deiner Struktur.</p>
     <div class="actions"><button class="secondary" id="copyRes">Ergebnis kopieren</button><span class="copied" id="copied" role="status"></span>
-      <button class="primary" id="toRoutine">Weiter zu deiner Routine</button>
+      <button class="primary" id="toRoutine">${(() => { try { const s = JSON.parse(localStorage.getItem("quizErgebnisse")||"null") || {}; const n = [["kopfhaut","Kopfhaut-Check"],["pflege","Pflege-Check"],["haar","Haar-Check"]].find(([k]) => !s[k]); return n ? "Weiter mit dem " + n[1] : "Weiter zu deinem Haarplan"; } catch(e){ return "Weiter zu deinem Haarplan"; } })()}</button>
       <button class="ghost" id="again">Quiz neu starten</button></div>
     <p class="fine">${FINE}</p>
   </section>`;
   document.getElementById("back").onclick = () => { idx = Q.length-1; render(); };
   document.getElementById("again").onclick = start;
   document.getElementById("copyRes").onclick = copyResult;
-  document.getElementById("toRoutine").onclick = () => { try { if(window.parent !== window && window.parent.openQuiz && window.parent.openQuiz("quiz-routine.html")) return; } catch(e){} location.href = "quiz-routine.html"; };
+  document.getElementById("toRoutine").onclick = () => { try { if(window.parent !== window && window.parent.naechsterSchritt){ window.parent.naechsterSchritt(); return; } } catch(e){} location.href = "quiz-routine.html"; };
   window.scrollTo(0,0);
 }
 

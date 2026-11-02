@@ -621,3 +621,4 @@
 - v408: Routine-Kasten: kein Gold/Beige mehr (Silber/Creme), Extra-Checks eigener Abschnitt mit Erklärung und klickbaren Knöpfen
 - v409: Startseite Kachel Haarausfall: Haarausfall-Check (im Abo) + Kapitel Haarzyklus (kostenlos)
 - v410: Produktseite Gast: Abo-Kasten mit Gesamtzahl (599 Produkte), Anzahl je Produktart und was man freischaltet
+- v411: Basis-Checks: Knopf führt zum nächsten offenen Check bzw. zum Plan (Gast: Abo-Fenster); Bericht notizen/VERSTAENDLICHKEIT.md
