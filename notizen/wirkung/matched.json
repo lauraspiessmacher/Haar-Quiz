@@ -1916,5 +1916,65 @@
   "hdr": "von Hand ergänzt 09.10. (Lauras Favorites)",
   "inci": "Aqua/Water, Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, Cetyl Esters, Isopropyl Myristate, Isopropyl Alcohol, Phenoxyethanol, Parfum/Fragrance, Lauryl PEG/PPG-18/18 Methicone, Cetyl Alcohol, Behentrimonium Methosulfate, Citric Acid, Chlorhexidine Digluconate, Quaternium-33, Dodecene, Poloxamer 407, Benzyl Benzoate, Arginine, 2-Oleamido-1,3-Octadecanediol, Hydrolyzed Soy Protein, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Sodium Chloride, Tetrasodium EDTA, Potassium Sorbate",
   "src": "dm / lookfantastic"
+ },
+ "conditioner|Pantene Pro-V|Volumen Pur Conditioner": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### Pantene Pro-V – Volumen Pur Conditioner (dm 1561793)",
+  "inci": "Ingredients: Aqua, Stearyl Alcohol, Stearamidopropyl Dimethylamine, Cetyl Alcohol, Oleic Acid, Glutamic Acid, Parfum, Benzyl Alcohol, Sodium Benzoate, Citric Acid, Disodium EDTA, Panthenol, Polysorbate 20, Hexamethylindanopyran, Dimethyl Phenethyl Acetate, Histidine, Hexyl Cinnamal"
+ },
+ "conditioner|John Frieda|PROFiller+ Kräftigender Conditioner": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### John Frieda – PROFiller+ Kräftigender Conditioner (dm 3123429)",
+  "inci": "INGREDIENTS: AQUA, CETEARYL ALCOHOL, ISODECYL NEOPENTANOATE, TAPIOCA STARCH, PARFUM, HELIANTHUS ANNUUS SEED OIL, PVP, POLYQUATERNIUM-37, BEHENAMIDOPROPYL DIMETHYLAMINE, CETYL ESTERS, BEHENTRIMONIUM CHLORIDE, BENZYL ALCOHOL, HYDROXYPROPYL METHYLCELLULOSE, DIPROPYLENE GLYCOL, POLYIMIDE-1, GLYCINE, GLYCERIN, ALCOHOL, LECITHIN, PANTHENOL, TETRASODIUM EDTA, CAFFEINE, HYALURONIC ACID, TOCOPHERYL ACETATE, BIOTIN, TOCOPHEROL, BENZOIC ACID, PHENOXYETHANOL, HEXYL CINNAMAL, LIMONENE, LINALOOL, TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES."
+ },
+ "conditioner|L'Oréal Paris Elvital|Full Resist Conditioner": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### L'Oréal Paris Elvital – Full Resist Conditioner (dm 3041976)",
+  "inci": "INGREDIENTS: AQUA / WATER • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • ISOPROPYL MYRISTATE • CETYL ESTERS • PARFUM / FRAGRANCE • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • DIAMINOPYRIMIDINE OXIDE • LACTIC ACID • SODIUM CHLORIDE • ARGININE • DIMETHYL PHENETHYL ACETATE • LIMONENE • BENZOIC ACID • BIOTIN • CAPRYLYL GLYCOL • TARTARIC ACID • CARVONE • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • CITRUS AURANTIUM PEEL OIL"
+ },
+ "conditioner|Balea|Seidenglanz Conditioner": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### Balea – Seidenglanz Conditioner (dm 1679747)",
+  "inci": "Ingredients: Aqua, Cetearyl Alcohol, Panthenol, Niacinamide, Parfum, C12-15 Alkyl Benzoate, Dicaprylyl Ether, Isopropyl Palmitate, Distearoylethyl Hydroxyethylmonium Methosulfate, Behentrimonium Chloride, Cetrimonium Chloride, Isopropyl Alcohol, Sodium Benzoate, Dimethyl Phenethyl Acetate, Citric Acid"
+ },
+ "maske|L'Oréal Elvital|Full Resist Haarmaske": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### L'Oréal Elvital – Full Resist Haarmaske (dm 3122677)",
+  "inci": "INGREDIENTS: AQUA / WATER • CETEARYL ALCOHOL • GLYCERIN • ISOPROPYL MYRISTATE • STEARAMIDOPROPYL DIMETHYLAMINE • GLYCINE SOJA OIL / SOYBEAN OIL • PARFUM / FRAGRANCE • DIAMINOPYRIMIDINE OXIDE • COCO-CAPRYLATE/CAPRATE • HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • ARGININE • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • DIMETHYL PHENETHYL ACETATE • LIMONENE • BENZOIC ACID • BIOTIN • CAPRYLYL GLYCOL • TARTARIC ACID • CARVONE • CETYL ESTERS • CITRIC ACID • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • CITRUS AURANTIUM PEEL OIL"
+ },
+ "maske|head&shoulders|Derma x Pro Density Kopfhaut- und Haarmaske": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### head&shoulders – Derma x Pro Density Kopfhaut- und Haarmaske (dm 3160030)",
+  "inci": "Ingredients: Aqua, Stearyl Alcohol, Behentrimonium Chloride, Cetyl Alcohol, Isopropyl Alcohol, Bis-Aminopropyl Dimethicone, Citric Acid, Parfum, Benzyl Alcohol, Phenoxyethanol, Piroctone Olamine, Oleic Acid, Sodium Benzoate, Butylene Glycol, Tetramethyl Acetyloctahydronaphthalenes, Hexyl Cinnamal, Polysorbate 20, Linalool, Limonene, Citrus Limon Peel Oil, Geranyl Acetate, Oryza Sativa Bran Extract, Menthol, Mentha Arvensis Leaf/Stem Oil, Mentha Piperita Oil, Rosmarinus Officinalis Leaf Extract, CI 42090, CI 19140"
+ },
+ "maske|Balea|Haarkur Feuchtigkeit": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### Balea – Haarkur Feuchtigkeit (dm 1679500)",
+  "inci": "AQUA, GLYCERIN, CETEARYL ALCOHOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, CETRIMONIUM CHLORIDE, PANTHENOL, PARFUM, DICAPRYLYL ETHER, SODIUM BENZOATE, LAURYL ALCOHOL, SODIUM STEAROYL GLUTAMATE, NIACINAMIDE, POTASSIUM SORBATE, CITRIC ACID, SODIUM CHLORIDE, TOCOPHEROL, BENZYL ALCOHOL, TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES."
+ },
+ "maske|Balea Professional|Aqua Hyaluron Haarmaske": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### Balea Professional – Aqua Hyaluron Haarmaske (dm 3162205)",
+  "inci": "INGREDIENTS: AQUA, CETEARYL ALCOHOL, ISOPROPYL PALMITATE, DIVINYLDIMETHICONE/DIMETHICONE COPOLYMER, LACTIC ACID, BEHENAMIDOPROPYL DIMETHYLAMINE, PANTHENOL, STEARAMIDOPROPYL DIMETHYLAMINE, BEHENTRIMONIUM CHLORIDE, PHENOXYETHANOL, STEARTRIMONIUM CHLORIDE, PARFUM, SODIUM BENZOATE, AMODIMETHICONE, DIPROPYLENE GLYCOL, ALOE BARBADENSIS LEAF JUICE POWDER, ISOPROPYL ALCOHOL, STEARYL ALCOHOL, C12-13 ALKETH-23, C12-13 ALKETH-3, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, SODIUM CHLORIDE, CI 42090"
+ },
+ "maske|Garnier Wahre Schätze|1-Minute Haarkur Traube": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### Garnier Wahre Schätze – 1-Minute Haarkur Traube (dm 3115711)",
+  "inci": "INGREDIENTS: AQUA / WATER • GLYCERIN • CETEARYL ALCOHOL • STEARAMIDOPROPYL DIMETHYLAMINE • SORBITAN ISOSTEARATE • PARFUM / FRAGRANCE • MYRISTYL ALCOHOL • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • VITIS VINIFERA FRUIT WATER / GRAPE FRUIT WATER • VITIS VINIFERA SEED OIL / GRAPE SEED OIL • ROSMARINUS OFFICINALIS EXTRACT / ROSEMARY EXTRACT • AMODIMETHICONE • SODIUM CHLORIDE • SODIUM HYDROXIDE • COCO-BETAINE • CITRIC ACID • LACTIC ACID • TARTARIC ACID • CETYL ESTERS • TOCOPHEROL • PHENOXYETHANOL • BENZOIC ACID • CI 17200 / RED 33 • LINALOOL • LINALYL ACETATE • TRIMETHYLCYCLOPENTENYL METHYLISOPENTENOL • LIMONENE • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • CARVONE • HEXYL CINNAMAL"
+ },
+ "leavein|Pantene Pro-V|Hydration SOS Hair Shake": {
+  "score": 1.0,
+  "nameov": 1.0,
+  "hdr": "### Pantene Pro-V – Hydration SOS Hair Shake (dm 1631800)",
+  "inci": "Ingredients: Aqua, Isododecane, Isopropyl Alcohol, Panthenol, Parfum, Phenoxyethanol, Ethylhexyl Methoxycinnamate, Cetrimonium Chloride, Polyquaternium-6, Tocopheryl Acetate, Sodium Cocoamphoacetate, Polysorbate 20, Linalool, Propylene Glycol, PEG-20 Glyceryl Laurate, Coumarin, Limonene, Citric Acid, Tocopherol, Linoleic Acid, CI 61565, Retinyl Palmitate, Zea Mays Silk Extract, Cocos Nucifera Fruit Extract"
  }
 }

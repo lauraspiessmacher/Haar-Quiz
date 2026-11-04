@@ -3021,5 +3021,108 @@
 "g": 0.0,
 "r": "",
 "p": false
+},
+"maske|L'Oréal Elvital|Full Resist Haarmaske": {
+"t": [
+"feucht",
+"naehrend"
+],
+"h": 0.59,
+"e": 0.97,
+"g": 0.0,
+"r": "",
+"p": false
+},
+"maske|head&shoulders|Derma x Pro Density Kopfhaut- und Haarmaske": {
+"t": [
+"glaettend"
+],
+"h": 0.04,
+"e": 0,
+"g": 0.36,
+"r": "",
+"p": false
+},
+"maske|Balea|Haarkur Feuchtigkeit": {
+"t": [
+"feucht"
+],
+"h": 1.1,
+"e": 0.53,
+"g": 0.0,
+"r": "",
+"p": false
+},
+"maske|Balea Professional|Aqua Hyaluron Haarmaske": {
+"t": [
+"feucht",
+"naehrend",
+"glaettend"
+],
+"h": 0.44,
+"e": 0.59,
+"g": 0.53,
+"r": "",
+"p": false
+},
+"maske|Garnier Wahre Schätze|1-Minute Haarkur Traube": {
+"t": [
+"feucht"
+],
+"h": 0.74,
+"e": 0.12,
+"g": 0.04,
+"r": "",
+"p": false
+},
+"conditioner|Pantene Pro-V|Volumen Pur Conditioner": {
+"t": [
+"feucht"
+],
+"h": 0.04,
+"e": 0,
+"g": 0.0,
+"r": "",
+"p": false
+},
+"conditioner|John Frieda|PROFiller+ Kräftigender Conditioner": {
+"t": [
+"feucht"
+],
+"h": 0.16,
+"e": 0.08,
+"g": 0.0,
+"r": "",
+"p": false
+},
+"conditioner|L'Oréal Paris Elvital|Full Resist Conditioner": {
+"t": [
+"naehrend"
+],
+"h": 0,
+"e": 0.94,
+"g": 0.0,
+"r": "",
+"p": false
+},
+"conditioner|Balea|Seidenglanz Conditioner": {
+"t": [
+"feucht"
+],
+"h": 0.59,
+"e": 0.12,
+"g": 0.0,
+"r": "",
+"p": false
+},
+"leavein|Pantene Pro-V|Hydration SOS Hair Shake": {
+"t": [
+"feucht"
+],
+"h": 0.53,
+"e": 0,
+"g": 0.0,
+"r": "",
+"p": false
 }
 }

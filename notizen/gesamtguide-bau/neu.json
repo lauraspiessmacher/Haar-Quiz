@@ -5,6 +5,56 @@
   "text": "Hier findet ihr alle Produkte, die ich neu in meine Einschätzungen aufgenommen habe: frische Neuheiten aus Drogerie und Parfümerie, aber auch Produkte, die schon länger im Regal stehen und die ich mir jetzt angeschaut habe. Fehlt ein Produkt, kommt es entweder noch, oder ich finde andere spannender. Das heißt nicht, dass es schlecht ist.",
   "produkte": [
     {
+      "typ": "conditioner",
+      "brand": "Pantene Pro-V",
+      "name": "Volumen Pur Conditioner"
+    },
+    {
+      "typ": "conditioner",
+      "brand": "John Frieda",
+      "name": "PROFiller+ Kräftigender Conditioner"
+    },
+    {
+      "typ": "conditioner",
+      "brand": "L'Oréal Paris Elvital",
+      "name": "Full Resist Conditioner"
+    },
+    {
+      "typ": "conditioner",
+      "brand": "Balea",
+      "name": "Seidenglanz Conditioner"
+    },
+    {
+      "typ": "maske",
+      "brand": "L'Oréal Elvital",
+      "name": "Full Resist Haarmaske"
+    },
+    {
+      "typ": "maske",
+      "brand": "head&shoulders",
+      "name": "Derma x Pro Density Kopfhaut- und Haarmaske"
+    },
+    {
+      "typ": "maske",
+      "brand": "Balea",
+      "name": "Haarkur Feuchtigkeit"
+    },
+    {
+      "typ": "maske",
+      "brand": "Balea Professional",
+      "name": "Aqua Hyaluron Haarmaske"
+    },
+    {
+      "typ": "maske",
+      "brand": "Garnier Wahre Schätze",
+      "name": "1-Minute Haarkur Traube"
+    },
+    {
+      "typ": "leavein",
+      "brand": "Pantene Pro-V",
+      "name": "Hydration SOS Hair Shake"
+    },
+    {
       "typ": "hitze",
       "brand": "Schwarzkopf taft",
       "name": "Hitzeschutzspray Aloe Boost"
