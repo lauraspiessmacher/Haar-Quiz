@@ -626,3 +626,4 @@
 - v413: Startseite: Satz unter Titel wieder raus, Kachel Frizz raus (6 Kacheln)
 - v414: Startseite: jede Problem-Kachel hat einen Check + ein Kapitel (Gast sieht kostenlos/im Abo/Leseprobe)
 - v415: Routine-Seite Handy: silberner Faden als Strähne links neben den Karten (schlängelt sich alle ~130px), Zahlen sitzen auf dem Faden und ploppen auf, Karten gleiten von rechts mit leichter Drehung rein, Schritte erscheinen nacheinander
+- v416: 8 neue Shampoos (Balea med Ultra Sensitive, alverde Ultra Sensitiv, Balea Sensitive, Balea Professional Kopfhaut Sensitive, sebamed Anti-Juckreiz Akut Urea 5%, GUHL Kopfhaut Sensitiv, h&s Derma x Pro Pflegende Feuchtigkeit + Beruhigende Pflege), Bilder aus dm-Alpha, Neu im Regal

@@ -5,6 +5,46 @@
   "text": "Hier findet ihr alle Produkte, die ich neu in meine Einschätzungen aufgenommen habe: frische Neuheiten aus Drogerie und Parfümerie, aber auch Produkte, die schon länger im Regal stehen und die ich mir jetzt angeschaut habe. Fehlt ein Produkt, kommt es entweder noch, oder ich finde andere spannender. Das heißt nicht, dass es schlecht ist.",
   "produkte": [
     {
+      "typ": "shampoo",
+      "brand": "Balea med",
+      "name": "Ultra Sensitive"
+    },
+    {
+      "typ": "shampoo",
+      "brand": "alverde",
+      "name": "Ultra Sensitiv"
+    },
+    {
+      "typ": "shampoo",
+      "brand": "Balea",
+      "name": "Sensitive"
+    },
+    {
+      "typ": "shampoo",
+      "brand": "Balea Professional",
+      "name": "Kopfhaut Sensitive"
+    },
+    {
+      "typ": "shampoo",
+      "brand": "sebamed",
+      "name": "Anti-Juckreiz Akut Urea 5%"
+    },
+    {
+      "typ": "shampoo",
+      "brand": "GUHL",
+      "name": "Kopfhaut Sensitiv"
+    },
+    {
+      "typ": "shampoo",
+      "brand": "head&shoulders",
+      "name": "Derma x Pro Pflegende Feuchtigkeit"
+    },
+    {
+      "typ": "shampoo",
+      "brand": "head&shoulders",
+      "name": "Derma x Pro Beruhigende Pflege"
+    },
+    {
       "typ": "maske",
       "brand": "Redken",
       "name": "All Soft All-in Mask"

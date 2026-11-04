@@ -86,7 +86,7 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
 
 **Punkt 18 umgesetzt am 23.10. nach Lauras Go (v374):** Haut-Karte entschärft („SLS ist das kräftigste Sulfat“, Pflaster-Test vs. verdünnt und abgespült, passt bei sehr fettender Kopfhaut), neuer Kasten „Nicht nur auf ein Wort schauen“ vor dem Mythos.
 
-## Neue Shampoos sensible/trockene Kopfhaut (dm, 4.11.) — wartet auf Lauras Auswahl
+## Neue Shampoos sensible/trockene Kopfhaut (dm, 4.11.) — ERLEDIGT: Laura hat 1,2,3,4,5,9,11,12 genommen (lavera, Weleda, alverde Sensitiv, h&s sensitive nicht)
 Rohdaten (INCI): /tmp/claude-0/-home-user-Haar-Quiz/b2957dbd-186f-557a-863a-1d4494782f14/scratchpad/dm/inci.txt (dm-dan in Klammern)
 Sensibel, klare Empfehlung: Balea med Ultra Sensitive (1569035), alverde Ultra Sensitiv (1332317), Balea Sensitive (1617519), Balea Professional Kopfhaut Sensitive (1701109)
 Trocken/juckend: sebamed Anti-Juckreiz Akut Urea 5% (1277186), lavera Basis Sensitive Hydrate & Care (3133400), WELEDA Hydro Shine (3090592), alverde Sensitiv (1704279)
