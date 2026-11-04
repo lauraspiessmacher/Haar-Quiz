@@ -247,6 +247,27 @@
    "brand": "Redken",
    "name": "naked gloss lightweight shine oil",
    "form": "oel"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Balea",
+   "name": "Sprühpflege Seidenglanz 5in1",
+   "form": "spray",
+   "heat": "230"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "Balea",
+   "name": "Sprühpflege Feuchtigkeit 5in1",
+   "form": "spray",
+   "heat": "230"
+  },
+  {
+   "quelle": "leavein",
+   "brand": "L'Oréal Elvital",
+   "name": "Leave-In Serum Glycolic Gloss Spiegelglanz",
+   "form": "spray",
+   "heat": "230"
   }
  ],
  "eigene": [
@@ -514,6 +535,115 @@
    "tip": "Anders als der normale Dream Coat braucht dieses Spray keine Hitze. Der Hitzeschutz wirkt beim Föhnen mit Diffusor. Ohne Alkohol, enthält Keratin.",
    "note": "Anti-Frizz Locken Spray Curly Wellen Diffusor, Leave-in, Colorwow",
    "ord": 4
+  },
+  {
+   "segment": "Drogerie",
+   "brand": "Schwarzkopf taft",
+   "name": "Hitzeschutzspray taft x Gliss Lovely Long",
+   "cats": [
+    "spray"
+   ],
+   "dk": [
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "230",
+   "sil": [
+    "Trisiloxane",
+    "Dimethicone",
+    "Phenyl Trimethicone",
+    "Dimethiconol",
+    "Cetyl PEG/PPG-10/1 Dimethicone"
+   ],
+   "note": "Spray mit mehreren Silikonen, Aprikosenkernöl und etwas Sojaprotein. Ein Polymer gibt leichten Halt.",
+   "hair": [
+    "dünn bis sehr dick",
+    "lang, trocken, frizzig"
+   ],
+   "tip": "Gut zu wissen: Viele Silikone und Öl. Bei feinem Haar sparsam sprühen, vor allem in die Längen.",
+   "img": "data:image/webp;base64,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"
+  },
+  {
+   "segment": "Drogerie",
+   "brand": "Balea Professional",
+   "name": "Hitzeschutzspray Glow & Shine Perfect Shine Coat",
+   "cats": [
+    "spray"
+   ],
+   "dk": [
+    "fein",
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "220",
+   "sil": [
+    "Silicone Quaternium-22"
+   ],
+   "note": "Ohne Parfum, mit Glycerin, Keratin und einem pflegenden Silikon. Glykolsäure glättet die Oberfläche für mehr Glanz.",
+   "hair": [
+    "alle Haardicken",
+    "glanzlos, strapaziert"
+   ],
+   "tip": "Anwendung: Ins handtuchtrockene Haar sprühen, durchkämmen und föhnen. Vor Glätteisen oder Lockenstab ganz trocknen lassen.",
+   "img": "data:image/webp;base64,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"
+  },
+  {
+   "segment": "Drogerie",
+   "brand": "L'Oréal Elvital",
+   "name": "Hitzeschutzspray Dream Length",
+   "cats": [
+    "styling"
+   ],
+   "zwei": 1,
+   "dk": [
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "ja",
+   "sil": [
+    "Dimethicone",
+    "Amodimethicone"
+   ],
+   "wirkung": "Silikone und ein Fettalkohol glätten und schützen, dazu Niacinamid, Rizinusöl und Pflanzenproteine. Hält Frizz laut Hersteller bis zu drei Tage fern.",
+   "fuer": "langes, glattes Haar, das glatt geföhnt oder geglättet werden soll",
+   "anw": "Ins handtuchtrockene Haar sprühen, durchkämmen und Strähne für Strähne mit Bürste glatt föhnen. Danach bei Bedarf glätten.",
+   "tip": "Fast die gleiche Basis wie das Elnett Stylingspray 3 Tage Glatt. Enthält viele Duftstoffe.",
+   "note": "Anti-Frizz Hitzeschutzspray Defeat the Heat, langes glattes Haar, Leave-in, Dimethicone, Amodimethicone, Niacinamid, dm",
+   "ord": 5,
+   "img": "data:image/webp;base64,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"
+  },
+  {
+   "segment": "Drogerie",
+   "brand": "L'Oréal Elnett",
+   "name": "Stylingspray Hitzeschutz 3 Tage Glatt",
+   "cats": [
+    "styling"
+   ],
+   "zwei": 1,
+   "dk": [
+    "duenn",
+    "normal",
+    "dick",
+    "sehrdick"
+   ],
+   "heat": "230",
+   "sil": [
+    "Dimethicone",
+    "Amodimethicone"
+   ],
+   "wirkung": "Silikone und ein Fettalkohol glätten und schützen, dazu ein Protein aus Perlmutt. Hält Frizz laut Hersteller bis zu drei Tage fern.",
+   "fuer": "glattes bis leicht welliges Haar, das geglättet werden soll",
+   "anw": "Ins handtuchtrockene Haar sprühen, durchkämmen, glatt föhnen und bei Bedarf glätten.",
+   "tip": "Gut zu wissen: Trotz des Namens Elnett ist es kein Haarspray, sondern ein glättendes Spray. Enthält viele Duftstoffe.",
+   "note": "Anti-Frizz Glättungsspray, 3 Tage glatt, Leave-in, Dimethicone, Amodimethicone, dm",
+   "ord": 6,
+   "img": "data:image/webp;base64,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"
   }
  ]
 }

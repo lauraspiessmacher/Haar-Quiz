@@ -5,6 +5,31 @@
   "text": "Hier findet ihr alle Produkte, die ich neu in meine Einschätzungen aufgenommen habe: frische Neuheiten aus Drogerie und Parfümerie, aber auch Produkte, die schon länger im Regal stehen und die ich mir jetzt angeschaut habe. Fehlt ein Produkt, kommt es entweder noch, oder ich finde andere spannender. Das heißt nicht, dass es schlecht ist.",
   "produkte": [
     {
+      "typ": "hitze",
+      "brand": "Schwarzkopf taft",
+      "name": "Hitzeschutzspray taft x Gliss Lovely Long"
+    },
+    {
+      "typ": "hitze",
+      "brand": "Balea Professional",
+      "name": "Hitzeschutzspray Glow & Shine Perfect Shine Coat"
+    },
+    {
+      "typ": "hitze",
+      "brand": "L'Oréal Elvital",
+      "name": "Hitzeschutzspray Dream Length"
+    },
+    {
+      "typ": "hitze",
+      "brand": "L'Oréal Elnett",
+      "name": "Stylingspray Hitzeschutz 3 Tage Glatt"
+    },
+    {
+      "typ": "leavein",
+      "brand": "Balea",
+      "name": "Sprühpflege Feuchtigkeit 5in1"
+    },
+    {
       "typ": "shampoo",
       "brand": "Balea med",
       "name": "Ultra Sensitive"

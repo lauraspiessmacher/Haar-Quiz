@@ -3011,5 +3011,15 @@
 "g": 0.7,
 "r": "protein",
 "p": false
+},
+"leavein|Balea|Sprühpflege Feuchtigkeit 5in1": {
+"t": [
+"feucht"
+],
+"h": 1.23,
+"e": 0.59,
+"g": 0.0,
+"r": "",
+"p": false
 }
 }
