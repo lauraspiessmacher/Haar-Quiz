@@ -3225,12 +3225,12 @@ function itemHtml(p, badge, extra){
     if(p.gewicht) body += `<div class="line"><b>Gewicht:</b> ${esc(p.gewicht)}</div>`;
     if(p.leistung || p.luft) body += `<div class="line"><b>Leistung:</b> ${esc([p.leistung, p.luft && "Luftstrom " + p.luft].filter(Boolean).join(" · "))}</div>`;
     if(p.temp) body += `<div class="line"><b>Temperatur:</b> ${esc(p.temp)}</div>`;
-    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
+    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip.replace(/^Gut zu wissen:\s*/, ""))}</div>`;
   } else if(p.type==="buerste"){
     if(p.hair) body += `<div class="line"><b>Für dein Haar:</b> ${esc(p.hair)}</div>`;
     if(p.wofuer) body += `<div class="line"><b>Wofür:</b> ${esc(p.wofuer)}</div>`;
     if(p.nass) body += `<div class="line"><b>Nass oder trocken:</b> ${esc(p.nass)}</div>`;
-    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
+    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip.replace(/^Gut zu wissen:\s*/, ""))}</div>`;
   } else if(p.type==="kopfhaut"){
     if(p.wirk) body += `<div class="line"><b>Wichtige Inhaltsstoffe:</b> ${esc(p.wirk)}</div>`;
     if(p.duft) body += `<div class="line"><b>Duft und Alkohol:</b> ${esc(p.duft)}</div>`;
@@ -3243,7 +3243,7 @@ function itemHtml(p, badge, extra){
     if(p.fuer) body += `<div class="line"><b>Für dein Haar:</b> ${esc(p.fuer)}</div>`;
     if(p.sil) body += `<div class="line"><b>Silikone:</b> ${p.sil.length ? "enthält "+esc(p.sil.join(", ")) : "silikonfrei"}</div>`;
     if(p.anw) body += `<div class="tip"><b>Anwendung:</b> ${esc(p.anw)}</div>`;
-    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`;
+    if(p.tip) body += `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip.replace(/^Gut zu wissen:\s*/, ""))}</div>`;
   } else {
     /* Haardicke und Haarzustand dunkel hervorgehoben wie der Kopfhauttyp beim Shampoo (Laura 23.10.) */
     const dt = dickeText(p), z = Array.isArray(p.hair) ? p.hair[1] : "";
@@ -3255,7 +3255,7 @@ function itemHtml(p, badge, extra){
       if(Array.isArray(p.rep)) body += `<div class="rep"><b>Repair-Wirkstoffe</b><ul>${p.rep.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>`;
       else body += `<div class="rep"><b>Repair-Wirkstoffe</b><div>${esc(p.rep.art)}</div><ul>${p.rep.list.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>`;
     }
-    if(p.tip){ body += p.tip.startsWith("Anwendung: ") ? `<div class="tip"><b>Anwendung:</b> ${esc(p.tip.slice(11))}</div>` : `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip)}</div>`; }
+    if(p.tip){ body += p.tip.startsWith("Anwendung: ") ? `<div class="tip"><b>Anwendung:</b> ${esc(p.tip.slice(11))}</div>` : `<div class="tip"><b>Gut zu wissen:</b> ${esc(p.tip.replace(/^Gut zu wissen:\s*/, ""))}</div>`; }
   }
   body = marketingCheck(p) + body + altHtml(p);
   return `<li class="item${p.type==="tools"?" tool":""}">${saveBtn(p)}${p.img?`<img class="pic" src="${p.img}" alt="" loading="lazy">`:""}<div class="txt">

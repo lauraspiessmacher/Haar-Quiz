@@ -6,6 +6,11 @@
   "produkte": [
     {
       "typ": "hitze",
+      "brand": "Schwarzkopf taft",
+      "name": "Hitzeschutzspray Aloe Boost"
+    },
+    {
+      "typ": "hitze",
       "brand": "ISANA",
       "name": "OMG Glattspray"
     },
