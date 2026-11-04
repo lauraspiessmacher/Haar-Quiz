@@ -631,3 +631,4 @@
 - v418: Hitzeschutz: Kérastase Nutritive Lotion Thermique, MONDAY Smooth Heat Protectant (Spray); ISANA OMG Glattspray, John Frieda 3-Tage-Glatt (Styling); Balea Pro Glow & Shine -> Styling; Kérastase Genesis -> Spray. Nicht aufgenommen: ISANA Glowspray Oh My Gosh + OGX Argan Dry Oil (kein Hitzeschutz ausgewiesen). ISANA OMG ohne Bild (Rossmann nicht abrufbar)
 - v419: ISANA OMG Glattspray: Bild von Laura, Hinweis 'Oh my Gosh' (statt Glaze) korrigiert
 - v420: John Frieda 3-Tage-Glatt: neues Bild (960px, Flasche über Farbton freigestellt); taft Hitzeschutzspray Aloe Boost (dm 3121122) ergänzt; 'Gut zu wissen' nie mehr doppelt
+- v421: John Frieda 3-Tage-Glatt mit Lauras offiziellem Bild (96.webp); Haardicke laut Etikett auf normal bis sehr dick, „für“-Text angepasst.
