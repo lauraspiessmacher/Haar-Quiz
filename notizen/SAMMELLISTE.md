@@ -85,3 +85,10 @@ Erst umsetzen, wenn Laura schriftlich „Go“ gibt.
     - Vorschlag (falls gewünscht): kurzer Kasten unter den Sulfat-Karten „Nicht nur auf ein Wort schauen“: „Steht SLS ganz vorn, heißt das noch nicht, dass ein Shampoo eure Kopfhaut reizt. Steht direkt danach ein mildes Partner-Tensid wie Cocamidopropyl Betaine oder ein Glucosid, federt es SLS deutlich ab. Dazu kommen Pflegestoffe, die Menge und wie lange das Shampoo auf der Kopfhaut bleibt. Schaut deshalb auf die ganze Rezeptur und darauf, wie eure Kopfhaut reagiert, statt Shampoos nur wegen eines Wortes auszusortieren. Für eine sehr schnell fettende Kopfhaut oder als Tiefenreinigung kann ein Shampoo mit SLS sogar genau richtig sein.“
 
 **Punkt 18 umgesetzt am 23.10. nach Lauras Go (v374):** Haut-Karte entschärft („SLS ist das kräftigste Sulfat“, Pflaster-Test vs. verdünnt und abgespült, passt bei sehr fettender Kopfhaut), neuer Kasten „Nicht nur auf ein Wort schauen“ vor dem Mythos.
+
+## Neue Shampoos sensible/trockene Kopfhaut (dm, 4.11.) — wartet auf Lauras Auswahl
+Rohdaten (INCI): /tmp/claude-0/-home-user-Haar-Quiz/b2957dbd-186f-557a-863a-1d4494782f14/scratchpad/dm/inci.txt (dm-dan in Klammern)
+Sensibel, klare Empfehlung: Balea med Ultra Sensitive (1569035), alverde Ultra Sensitiv (1332317), Balea Sensitive (1617519), Balea Professional Kopfhaut Sensitive (1701109)
+Trocken/juckend: sebamed Anti-Juckreiz Akut Urea 5% (1277186), lavera Basis Sensitive Hydrate & Care (3133400), WELEDA Hydro Shine (3090592), alverde Sensitiv (1704279)
+Sensibel + leicht gegen Schuppen: GUHL Kopfhaut Sensitiv (1446989), head&shoulders Anti-Schuppen sensitive Kopfhaut (3115868), h&s Derma x Pro Pflegende Feuchtigkeit (1343251), h&s Derma x Pro Beruhigende Pflege (1343250)
+Nicht empfohlen trotz Namen: Balea MEN Sensitive (viele Duftstoffe), Balea Professional Aqua Hyaluron (Parfum weit vorne, kaum Pflege)
