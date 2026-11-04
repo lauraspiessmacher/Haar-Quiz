@@ -6,6 +6,26 @@
   "produkte": [
     {
       "typ": "hitze",
+      "brand": "ISANA",
+      "name": "OMG Glattspray"
+    },
+    {
+      "typ": "hitze",
+      "brand": "John Frieda",
+      "name": "Frizz Ease 3-Tage-Glatt Styling Spray"
+    },
+    {
+      "typ": "hitze",
+      "brand": "MONDAY",
+      "name": "Smooth Heat Protectant"
+    },
+    {
+      "typ": "hitze",
+      "brand": "Kérastase",
+      "name": "Nutritive Lotion Thermique Sublimatrice"
+    },
+    {
+      "typ": "hitze",
       "brand": "Schwarzkopf taft",
       "name": "Hitzeschutzspray taft x Gliss Lovely Long"
     },
