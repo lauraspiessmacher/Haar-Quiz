@@ -14,7 +14,11 @@
   "inci": "Aqua (Water), Sodium Laureth Sulfate,Cocamidopropyl Betaine, Coco-Glucoside,PEG-200 Hydrogenated Glyceryl Palmate,Glyceryl Oleate, Glyceryl Laurate, GlycolDistearate, Parfum (Fragrance), PEG-40Hydrogenated Castor Oil, SodiumChloride, Sodium Benzoate, Panthenol,Polyquaternium-10, Methoxy PEG/PPG-7/3Aminopropyl Dimethicone, PEG-7 GlycerylCocoate, Silicone Quaternium-22, CitricAcid, Dipropylene Glycol, Glycerin,Hydrolyzed Vegetable Protein, PropyleneGlycol, Polyglyceryl-3 Caprate, C10-40IsoalkylamidopropylethyldimoniumEthosulfate, PalmitamidopropyltrimoniumChloride, Spathodea Campanulata FlowerExtract, Potassium Sorbate, Sorbic Acid,Alpha-Isomethyl Ionone, Citrus AurantiumPeel Oil, Hexyl Cinnamal, Limonene,Linalool, Linalyl Acetate, TetramethylAcetyloctahydronaphthalenes."
  },
  "shampoo|Redken|All Soft Shampoo": {
-  "treffer": null
+  "quelle": "codecheck",
+  "titel": "REDKEN Nature+Science - All Soft Shampoo (300ml  Shampoo)",
+  "url": "https://www.codecheck.info/p/kosmetik/haarpflege/shampoo/redken-nature-science-all-soft-shampoo-300ml-shampoo.html",
+  "score": 1.0,
+  "inci": "AQUA / WATER / EAU, CETEARYL ALCOHOL, BRASSICAMIDOPROPYL DIMETHYLAMINE, GLYCERIN, COCOS NUCIFERA OIL / COCONUT OIL"
  },
  "shampoo|Kérastase|Discipline Bain Fluidealiste": {
   "quelle": "hagel",
@@ -24,10 +28,18 @@
   "inci": "Aqua / Water - Sodium Laureth Sulfate - Coco-Betaine - Glycerin - Glycol Distearate - Sodium Chloride - Amodimethicone - Ppg-5-Ceteth-20 - Dimethicone - Sodium Benzoate - Polyquaternium-6 - Salicylic Acid - Carbomer - Arginine - Glutamic Acid - Benzyl Salicylate - Trideceth-6 - Serine - Benzyl Alcohol - Hydroxypropyltrimonium Hydrolyzed Wheat Protein - 2-Oleamido-1,3-Octadecanediol - Cetrimonium Chloride - Linalool - Alpha-Isomethyl Ionone - Sodium Hydroxide - Citric Acid - Parfum / Fragrance"
  },
  "shampoo|Redken|Extreme Shampoo": {
-  "treffer": null
+  "quelle": "codecheck",
+  "titel": "Redken Extreme Length Shampoo",
+  "url": "https://www.codecheck.info/p/kosmetik/haarstyling/hitzeschutz/2842325047.html",
+  "score": 1.0,
+  "inci": "sodium chloride, limonene, benzyl alcohol, linalool"
  },
  "shampoo|Redken|Extreme Length Shampoo": {
-  "treffer": null
+  "quelle": "codecheck",
+  "titel": "Redken Extreme Length Shampoo",
+  "url": "https://www.codecheck.info/p/kosmetik/haarstyling/hitzeschutz/2842325047.html",
+  "score": 1.0,
+  "inci": "sodium chloride, limonene, benzyl alcohol, linalool"
  },
  "shampoo|Goldwell|Just Smooth Shampoo": {
   "treffer": null
@@ -126,13 +138,6 @@
   "score": 1.0,
   "inci": "Value3:  AQUA / WATER • SODIUM C14-16 OLEFIN SULFONATE • COCAMIDOPROPYL BETAINE • LAURETH-5 CARBOXYLIC ACID • SODIUM CHLORIDE • GLYCERIN • CAPRYLYL/CAPRYL GLUCOSIDE • PARFUM / FRAGRANCE • SODIUM HYDROXIDE • CITRIC ACID • HEXYLENE GLYCOL • SODIUM BENZOATE • PEG-55 PROPYLENE GLYCOL OLEATE • PROPYLENE GLYCOL • ALOE BARBADENSIS LEAF JUICE POWDER • SALICYLIC ACID • POLYQUATERNIUM-67 • BENZOIC ACID • BENZYL ALCOHOL • COUMARIN • LINALOOL • BENZYL BENZOATE • HEXYL CINNAMAL • LIMONENE"
  },
- "shampoo|Kérastase|Gloss Absolu Bain Crème Hydra-Glaze": {
-  "quelle": "hagel",
-  "titel": "Kérastase Gloss Absolu Bain Hydra-Glaze Shampoo",
-  "url": "https://www.hagel-shop.de/products/kerastase-gloss-absolu-bain-hydra-glaze-shampoo",
-  "score": 0.83,
-  "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • LACTIC ACID • ARGININE • SALICYLIC ACID • SODIUM HYDROXIDE • TRIETHYL CITRATE • PARFUM / FRAGRANCE • COCAMIDOPROPYL HYDROXYSULTAINE • DECYL GLUCOSIDE • SODIUM CHLORIDE • SODIUM BENZOATE • LIMONENE • HYDROXYPROPYL GUAR\r\nHYDROXYPROPYLTRIMONIUM CHLORIDE • BRASSICAMIDOPROPYL DIMETHYLAMINE • GLYCERYL OLEATE • CITRIC ACID • LINALOOL • CITRONELLOL • HEXYL CINNAMAL • ALPHA-ISOMETHYL IONONE • CITRAL • GLYCOLIC ACID • SODIUM HYALURONATE • CAPRYLIC/CAPRIC TRIGLYCERIDE • LECITHIN • TOCOPHEROL • ASCORBYL PALMITATE\r\n• HYDROGENATED PALM GLYCERIDES CITRATE • ROSA CANINA FLOWER EXTRACT (F.I.L. N70053407/1)"
- },
  "shampoo|Kérastase|Elixir Ultime Le Bain": {
   "treffer": null
  },
@@ -142,13 +147,6 @@
   "url": "https://www.hagel-shop.de/products/amika-hydro-rush-intense-moist-shampoo-275-ml",
   "score": 1.0,
   "inci": "Water/Eau/Aqua, Sodium Cocoyl Isethionate, Cocamidopropyl Hydroxysultaine, Coco-Glucoside, Glycol Distearate, Squalane, Hippophae Rhamnoides (Sea Buckthorn/Argousier) Fruit/Seed Oil, Brassica Campestris (Rapeseed/Colza) Seed Oil, Sesamum Indicum (Sesame/Sésame) Seed Oil, Cocos Nucifera (Coconut/Nuix de Coco) Oil, Sodium Hyaluronate, Polyglutamic Acid, Spirulina Platensis (Blue Green Algae/Algues Bleu-Verte) Extract, Cocos Nucifera (Coconut/Nuix de Coco) Water, Emblica Officinalis (Gooseberry/Groseille à Maquereau) Fruit Extract, Curcuma Longa (Turmeric) Root Extract, Leuconostoc/Radish Root Ferment Filtrate, Cocamide MIPA, Coconut Acid, Polyester-11, Guar Hydroxypropyltrimonium Chloride, Polyquaternium-7, Polyquaternium-73, Sodium Methyl Cocoyl Taurate, Tetrasodium Glutamate Diacetate, Sodium Benzoate, Sodium Isethionate, Sodium Hydroxide, Sodium Chloride, Citric Acid, Potassium Sorbate, Phenoxyethanol, Fragrance/Parfum, Benzyl Benzoate, Hydroxycitronellal, Limonene"
- },
- "shampoo|Coco & Eve|Like a Virgin Shampoo": {
-  "quelle": "hagel",
-  "titel": "Coco & Eve Like A Virgin Bond Building Pre-Shampoo Treatment 150 ml",
-  "url": "https://www.hagel-shop.de/products/coco-eve-like-a-virgin-bond-building-pre-shampoo-treatment-150-ml",
-  "score": 1.0,
-  "inci": "Aqua/Water/Eau, Cetearyl Alcohol, Cetrimonium Chloride, Butylene Glycol, Stearamidopropyl Dimethylamine, Cocos Nucifera (Coconut) Oil/Cocos Nucifera Oil, Persea Gratissima (Avocado) Oil/Persea Gratissima Oil, Prunus Armeniaca (Apricot) Kernel Oil/Prunus Armeniaca Kernel Oil, Punica Granatum Seed Oil, Passiflora Edulis Seed Oil, Dinatrium PEG-12 Dimethicone Sulfosuccinate, 4-PCA Dimethicone, Aminomethyl Propanol, Glycerin, Behentrimonium Chloride, Cetrimonium Methosulfate, Ethylhexyl Palmitate, Quaternium-91, Tetrasodium Glutamate Diacetate, Sodium Benzoate, Parfum/Duft, Kaliumsorbat, Milchsäure."
  },
  "shampoo|Oribe|Eternal Curls Shampoo": {
   "quelle": "hagel",
@@ -1521,10 +1519,11 @@
   "inci": "INGREDIENTS: AQUA / WATER • GLYCERIN • DIPROPYLENE GLYCOL • PEG-60 HYDROGENATED CASTOR OIL • LAURETH-4 • ARGANIA SPINOSA KERNEL OIL • STEARAMIDOPROPYL DIMETHYLAMINE • SODIUM HYDROXIDE • ISONONYL ISONONANOATE • HYDROLYZED CORN PROTEIN • HYDROLYZED SOY PROTEIN • HYDROLYZED WHEAT PROTEIN • CAPRYLYL GLYCOL • LACTIC ACID • POLYSILICONE-29 • HEXYL LAURATE • PHENOXYETHANOL • PARFUM / FRAGRANCE"
  },
  "hitze|Color Wow|Dream Coat Supernatural Spray": {
-  "treffer": null
- },
- "hitze|Color Wow|Dream Coat for Curly Hair": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "COLOR WOW Dream Coat Supernatural Spray",
+  "url": "https://www.hagel-shop.de/products/k-12114604-color-wow-dream-coat-supernatural-spray",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Dipropylene Glycol, Polysilicone-29, DMDM Hydantoin, Propylene Glycol, Glycerin, Silicone Quaternium-18, Butylene Glycol, Iodopropynyl butylcarbamate, Trideceth-7, Trideceth-12, Phenoxyethanol, Chamomilla Recutita (Matricaria) Flower Extract , Calendula Officinalis Flower Extract, Potassium Sorbate, Potassium Benzoate, Citric Acid"
  },
  "hitze|Schwarzkopf taft|Hitzeschutzspray taft x Gliss Lovely Long": {
   "dan": 1681631,
@@ -1563,7 +1562,11 @@
   "treffer": null
  },
  "hitze|Kérastase|Nutritive Lotion Thermique Sublimatrice": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Nutritive Lotion Thermique 150 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-nutritive-lotion-thermique-universelle-150-ml",
+  "score": 0.75,
+  "inci": "AQUA / WATER / EAU ●NIACINAMIDE ●POLYQUATERNIUM-37 ●PROPYLENE GLYCOL DICAPRYLATE/DICAPRATE ●CITRIC ACID ●POLYSORBATE 20 ●QUATERNIUM-87 ●\r\nSTEARYL ALCOHOL ●GLYCINE SOJA OIL / SOYBEAN OIL ●SODIUM BENZOATE ●CAPRYLYL GLYCOL ●BEHENTRIMONIUM CHLORIDE ●PPG-1 TRIDECETH-6 ●PANTHENOL ●ASCORBYL GLUCOSIDE ●BUTYLENE GLYCOL ●CANDELILLA CERA / CANDELILLA WAX / CIRE DE CANDELILLA ●PROPYLENE GLYCOL ●LINALOOL ●HYDROXYCITRONELLAL ●ISOPROPYL ALCOHOL ●SORBITAN OLEATE ●BENZYL SALICYLATE ●BENZYL ALCOHOL ●HEXYL CINNAMAL ●POLYQUATERNIUM-11 ●CITRONELLOL ●HYDROLYZED WHEAT PROTEIN ●ALPHA-ISOMETHYL IONONE ●COUMARIN ●HYDROLYZED CORN PROTEIN ●HYDROLYZED SOY PROTEIN ●LIMONENE ●IRIS FLORENTINA ROOT EXTRACT ●PHENOXYETHANOL ●PARFUM / FRAGRANCE ●"
  },
  "hitze|Schwarzkopf taft|Hitzeschutzspray Aloe Boost": {
   "treffer": null
@@ -1595,13 +1598,6 @@
   "url": "https://www.hagel-shop.de/products/sebastian-dark-oil-conditioner-k-12134032",
   "score": 0.6,
   "inci": "Aqua/Water/Eau, Behentrimonium Chloride, Cetearyl Alcohol, Hydroxypropyl Starch Phosphate, Isopropyl Alcohol, Amodimethicone, Parfum/Fragrance, Panthenol, Propylene Glycol, Quaternium-80, Sodium Benzoate, Phenoxyethanol, Citric Acid, Tetramethyl Acetyloctahydronaphthalenes, Disodium EDTA, Hexyl Cinnamal, Trideceth-12, Hexamethylindanopyran, Acetyl Cedrene, Linalyl Acetate, Coumarin, Cetrimonium Chloride, Citronellol, Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil."
- },
- "leavein|Dejan Garz|Leave-In Cream The Sensitive": {
-  "quelle": "hagel",
-  "titel": "DEJAN GARZ The Foundation Leave-In Cream 100 ml",
-  "url": "https://www.hagel-shop.de/products/dejan-garz-the-foundation-leave-in-cream-100-ml",
-  "score": 0.75,
-  "inci": "AQUA, CETEARYL ALCOHOL, GLYCERIN, AMODIMETHICONE, BEHENTRIMONIUM CHLORIDE, CETRIMONIUM CHLORIDE, PANTHENOL, ARGANIA SPINOSA KERNEL OIL, SIMMONDSIA CHINENSIS SEED OIL, RICINUS COMMUNIS SEED OIL, MYRISTYL MYRISTATE, PHENYL TRIMETHICONE, LACTIC ACID, PROPYLENE GLYCOL, QUATERNIUM-80, SODIUM HYALURONATE, TRIDECETH-15, TRIDECETH-3, PHENOXYETHANOL, PARFUM, SODIUM BENZOATE, ETHYLHEXYLGLYCERIN, ISOPROPYL ALCOHOL, HEXYL CINNAMAL, LINALOOL, ALPHA-ISOMETHYL IONONE, LIMONENE, CITRIC ACID, ACETIC ACID"
  },
  "leavein|Sebastian Professional|No Breaker Bonding & Styling Leave-in Cream": {
   "quelle": "hagel",
