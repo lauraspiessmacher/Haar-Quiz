@@ -3,14 +3,13 @@
 Stand 05.11.2026. Der Inhaltsstoff-Check erkennt diese Produkte nur, wenn der Produktname mit eingegeben wird.
 Quellen bisher: dm, Hagel, Lookfantastic (DE + UK), Markenseiten (Vichy, Redken, OUAI, Coco & Eve), Lauras Fotos aus den Notizen, Lauras Rossmann-Listen. Douglas, Sephora, Notino, Flaconi und kerastase.de blocken automatische Abfragen. Codecheck verworfen (Gegentest mit dm-Listen: meist andere oder alte Rezepturen).
 
-## Shampoo (12 von 174)
+## Shampoo (11 von 174)
 **Drogerie**
 - Garnier Fructis – Ananas Hair Food
 - NIVEA – Hairmilk Shine
 - OGX – Strength & Length Keratin Oil
 - Pantene Pro-V – LOVE Edition Repair & Care
 - Schwarzkopf Gliss – Sealing Miracle
-- babylove – Babyshampoo mild (Rossmann)
 
 **High-End**
 - Gisou – Honey Gloss Shampoo
