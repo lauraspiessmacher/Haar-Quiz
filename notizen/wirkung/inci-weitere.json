@@ -277,7 +277,9 @@
   "inci": "Aqua/Water/Eau, Sodium Lauryl Sulfate, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Glycol Distearate, Dimethicone, Cocamide MEA, Parfum/Fragrance, Panthenol, Sodium Benzoate, Malic Acid, Guar Hydroxypropyltrimonium Chloride, Sodium Chloride, Salicylic Acid, Tocopheryl Acetate, Citric Acid, Sodium Hydroxide, Tetrasodium EDTA, Trisodium Ethylenediamine Disuccinate, Glycerin, Methylparaben, Histidine, Linalool, Citronellol, Hydrochloric Acid, Oleic Acid, Squalane, Glyceryl Oleate, Magnesium Nitrate, Methylchloroisothiazolinone, Magnesium Chloride, Sodium Citrate, Methylisothiazolinone, Sodium Xylenesulfonate, Lecithin, Ascorbyl Palmitate, Tocopherol, Hydrogenated Palm Glycerides Citrate."
  },
  "shampoo|Vichy|Dercos Ultra Apaisant": {
-  "treffer": null
+  "quelle": "Laura (05.11.)",
+  "score": 1.0,
+  "inci": "AQUA / WATER, SODIUM METHYL COCOYL TAURATE, LAURETH-5 CARBOXYLIC ACID, COCAMIDOPROPYL BETAINE, GLYCERIN, SODIUM CHLORIDE, ASCORBYL GLUCOSIDE, COCONUT ACID, HEXYLENE GLYCOL, ISOPROPYL ALCOHOL, LACTIC ACID, PANTHENOL, PEG-150 DISTEARATE, PEG-55 PROPYLENE GLYCOL OLEATE, PIROCTONE OLAMINE, POLYQUATERNIUM-10, POLYSORBATE-21, PROPYLENE GLYCOL, SALICYLIC ACID, SODIUM ACETATE, SODIUM BENZOATE, SODIUM HYDROXIDE, SODIUM LAUROYL GLUTAMATE, PARFUM / FRAGRANCE"
  },
  "shampoo|Oribe|Serene Scalp Balancing Shampoo": {
   "quelle": "hagel",

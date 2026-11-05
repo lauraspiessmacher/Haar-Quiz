@@ -650,3 +650,4 @@
 - Garnier Fructis Ananas Hair Food Shampoo: Liste von Laura. Nur noch Vichy K + Ultra Apaisant ohne Liste (vermutlich nicht mehr erhältlich).
 - Vichy Dercos Anti-Schuppen K: Apotheken-Liste von Laura (Wirk-/Hilfsstoffe, deutsche Namen, nicht INCI-Reihenfolge) gespeichert; enthält Piroctone, Salicylsäure, Aprikosenkern-Pulver (Peeling), Levomenthol, Parfum. Laura gefragt, ob es das K ist.
 - Redken Extreme Length Shampoo: Text geändert (Lauras Go): „Normale Reinigung, leicht pflegend, ohne Öle und Silikone. Das Biotin steht ganz am Ende“.
+- Vichy Dercos Ultra Apaisant: Liste von Laura. ALLE 591 Produkte haben jetzt eine Inhaltsstoffliste.
