@@ -1446,6 +1446,20 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
   .icbhandy{position:absolute;right:-30px;top:-16px;width:140px;opacity:.22}
   .ptab.ptcheck span{display:inline}
 }
+
+/* ---------- Startseite in Bewegung (Laura 05.11.) ---------- */
+#v-start{position:relative}
+.sv-r{transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--svi, 0) * 140ms)}
+.sv-an .sv-r:not(.sv-da){opacity:0;transform:translateY(30px)}
+.svstrich{position:relative;display:inline-block}
+.svstrich::after{content:"";position:absolute;left:-3%;right:-3%;bottom:.04em;height:.07em;min-height:2px;border-radius:2px;background:linear-gradient(90deg,#B9BDC3,#E9EBEE 45%,#8E9399);transform:rotate(-1.5deg) scaleX(1);transform-origin:left center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1) .35s}
+.sv-an .promise:not(.sv-da) .svstrich::after{transform:rotate(-1.5deg) scaleX(0)}
+.swzahl{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.svfaden{position:absolute;top:0;left:-30px;width:24px;pointer-events:none;z-index:0;overflow:visible}
+.svf-pfad{transition:stroke-dashoffset .25s linear}
+.svf-knoten circle{fill:var(--bg);stroke:#A3A8AE;stroke-width:1.4;transform-box:fill-box;transform-origin:center;transform:scale(.4);opacity:0;transition:transform .5s cubic-bezier(.3,1.6,.5,1), opacity .4s, fill .4s}
+.svf-knoten circle.an{transform:scale(1);opacity:1;fill:#E9EBEE}
+@media (max-width:759px){ .svfaden{left:-20px} }
 /* Gast: alle Produkte sichtbar, Einschätzung verschwommen */
 .zcta.zinline{position:relative;left:auto;top:auto;transform:none;margin:10px auto 26px;width:min(560px,100%)}
 .zkwrap{position:relative;margin-top:6px}
@@ -2174,7 +2188,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
     <section class="probleme" aria-labelledby="probT"><p class="kicker">Hier anfangen</p><h2 id="probT">Was stört <em class="hk">euch</em> gerade?</h2><p class="probin">Tippt auf euer Thema, dann kommt ihr direkt zum passenden Check oder Kapitel.</p>
       <div class="pgrid"><div class="ptile pzwei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v7M12 10l-4 9M12 10l4 9M12 10v10"/></svg><b>Spliss &amp; Haarbruch</b><span>Woher Spliss und Haarbruch kommen, wie kaputt eure Haare wirklich sind und was am meisten dagegen hilft.</span><button type="button" data-pgo="check" data-pziel="spliss"><em><span class="plab">Spliss- &amp; Bruch-Check <span aria-hidden="true">→</span></span><span class="zzu">im Abo</span></em></button><button type="button" data-pgo="wissen" data-pziel="unterschied"><em><span class="plab">Kapitel Spliss &amp; Haarbruch <span aria-hidden="true">→</span></span><span class="zzu">Leseprobe</span></em></button></div><div class="ptile pzwei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v13M12 3v16M16 3v11"/><path d="M6 16l2 2 2-2M14 14l2 2 2-2"/></svg><b>Meine Haare werden nicht länger</b><span>Oft wachsen sie ganz normal, brechen aber unten schneller ab, als sie nachwachsen.</span><button type="button" data-pgo="quiz" data-pziel="quiz-pflege.html"><em><span class="plab">Pflege-Check <span aria-hidden="true">→</span></span><span class="zzu">kostenlos</span></em></button><button type="button" data-pgo="wissen" data-pziel="haarzyklus"><em><span class="plab">Kapitel Haarzyklus <span aria-hidden="true">→</span></span><span class="zzu">kostenlos</span></em></button></div><div class="ptile pzwei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3c0 7 2 12 7 18M12 3c0 6 1 11 4 18M16 3c-1 6-1 11 1 18"/><path d="M5 20l3-2M18 20l2-2"/></svg><b>Trockene, strohige Längen</b><span>Findet heraus, wie reichhaltig eure Pflege sein darf und warum manche Haare so schnell austrocknen.</span><button type="button" data-pgo="quiz" data-pziel="quiz-pflege.html"><em><span class="plab">Pflege-Check <span aria-hidden="true">→</span></span><span class="zzu">kostenlos</span></em></button><button type="button" data-pgo="wissen" data-pziel="porositaet"><em><span class="plab">Kapitel Porosität <span aria-hidden="true">→</span></span><span class="zzu">kostenlos</span></em></button></div><div class="ptile pzwei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15c3-6 13-6 16 0"/><circle cx="8" cy="18" r=".9"/><circle cx="12" cy="19.5" r=".9"/><circle cx="16" cy="18" r=".9"/></svg><b>Schuppen oder Juckreiz</b><span>Erst klären, welche Kopfhaut ihr gerade habt, dann findet ihr das passende Shampoo.</span><button type="button" data-pgo="quiz" data-pziel="quiz-kopfhaut.html"><em><span class="plab">Kopfhaut-Check <span aria-hidden="true">→</span></span><span class="zzu">kostenlos</span></em></button><button type="button" data-pgo="wissen" data-pziel="kopfhaut"><em><span class="plab">Kapitel Kopfhautgesundheit <span aria-hidden="true">→</span></span><span class="zzu">Leseprobe</span></em></button></div><div class="ptile pzwei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c3.5 4.5 5.5 7.6 5.5 10.6a5.5 5.5 0 0 1-11 0C6.5 11.6 8.5 8.5 12 4z"/></svg><b>Schnell fettiger Ansatz</b><span>Euer Shampoo wählt ihr nach der Kopfhaut. Und wie ihr wascht, macht einen großen Unterschied.</span><button type="button" data-pgo="quiz" data-pziel="quiz-kopfhaut.html"><em><span class="plab">Kopfhaut-Check <span aria-hidden="true">→</span></span><span class="zzu">kostenlos</span></em></button><button type="button" data-pgo="wissen" data-pziel="shampoo"><em><span class="plab">Kapitel Shampoo verstehen <span aria-hidden="true">→</span></span><span class="zzu">Leseprobe</span></em></button></div><div class="ptile pzwei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-1 5 1 9 0 13"/><path d="M8 21h8"/><path d="M15 9c2 1 3 3 2 5"/></svg><b>Haarausfall</b><span>Erst mal durchatmen: Ein paar Haare am Tag zu verlieren ist normal. Ob es bei euch mehr ist und woran es liegen kann, zeigt euch der Check.</span><button type="button" data-pgo="check" data-pziel="ausfall"><em><span class="plab">Haarausfall-Check <span aria-hidden="true">→</span></span><span class="zzu">im Abo</span></em></button><button type="button" data-pgo="wissen" data-pziel="haarzyklus"><em><span class="plab">Kapitel Haarzyklus <span aria-hidden="true">→</span></span><span class="zzu">kostenlos</span></em></button></div></div></section>
     <div class="promise">
-      <figure class="pquote"><span class="bigq" aria-hidden="true">“</span><blockquote><h2>„<em class="hk">Meine</em> Einschätzung, nicht die der Marken.“</h2></blockquote><figcaption>Laura</figcaption></figure>
+      <figure class="pquote"><span class="bigq" aria-hidden="true">“</span><blockquote><h2>„<em class="hk svstrich">Meine</em> Einschätzung, nicht die der Marken.“</h2></blockquote><figcaption>Laura</figcaption></figure>
       <div>
         <p>Jedes Produkt auf dieser Seite habe ich selbst ausgesucht und eingeordnet, und zwar nach seinen Inhaltsstoffen, nicht nach dem, was auf der Verpackung steht.</p>
         <p>Ich sage euch auch, wo ein Produkt an seine Grenzen kommt und für wen es nicht passt. So findet ihr heraus, was zu euren Haaren und eurer Kopfhaut passt.</p>
@@ -2195,7 +2209,7 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
       <ol class="swliste">
         <li class="sw1"><img class="swtelefon handy" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag frei">Kostenlos</span><span class="swn">1</span><h3>Macht die drei kostenlosen Checks</h3><p>In ein paar Minuten wisst ihr, welche Kopfhaut ihr habt, wie dick eure Haare sind und welche Struktur sie haben.</p><div class="swchecks" id="swChecks"></div></li>
         <li><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">2</span><h3>Bekommt euren Haarplan</h3><p>Aus euren Ergebnissen entsteht euer Plan: was sie bedeuten, eure Grundregeln, euer Wochenplan und eure Einkaufsliste. Schritt für Schritt.</p><button type="button" class="linkbtn" id="swPlan">Zum Haarplan →</button></li>
-        <li class="sw3"><img class="swtelefon gross" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
+        <li class="sw3"><img class="swtelefon gross" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei <span class="swzahl" id="swZahl">über 500</span> Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
       </ol>
     </div>
     <div class="icband" id="icband"><div class="icbtext"><span class="icpill">Neu · für alle kostenlos</span><h2>Steht ihr im Laden <em class="hk">vor dem Regal?</em></h2>
@@ -4567,6 +4581,67 @@ function renderStartweg(){
 }
 document.getElementById("swPlan").onclick = () => { state.view = "plan"; render(); window.scrollTo({top:0}); };
 
+
+/* ---------- Startseite: mehr Bewegung beim Scrollen (Laura 05.11.) ----------
+   1) Abschnitte gleiten beim Scrollen herein, die drei Schritte nacheinander
+   2) silberner Faden links am Rand, zeichnet sich beim Scrollen und verbindet die Abschnitte (wie auf der Routine-Seite)
+   3) Produktzahl zählt hoch  4) silberne Linie unter „Meine“ */
+(function(){
+  const v = document.getElementById("v-start"); if(!v) return;
+  const ziel = new Set(ALL.map(p => p.brand + "|" + p.name)).size;
+  const z = document.getElementById("swZahl");
+  const ruhig = matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window);
+  if(z) z.textContent = ziel;
+  if(ruhig) return;
+  v.classList.add("sv-an");
+  const bloecke = [...v.querySelectorAll(".promise, .journey, .startweg .head, .startweg li, .icband, .neuband, .serie, .routine, .fdm")];
+  let i = 0; bloecke.forEach(b => { b.classList.add("sv-r"); if(b.matches(".startweg li")) b.style.setProperty("--svi", i++); });
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("sv-da"); io.unobserve(e.target); } }), {threshold: .12, rootMargin: "0px 0px -6% 0px"});
+  bloecke.forEach(b => io.observe(b));
+  /* Zahl zählt hoch, sobald sie zu sehen ist */
+  if(z){ z.textContent = "0";
+    const zo = new IntersectionObserver(es => { if(!es[0].isIntersecting) return; zo.disconnect(); let t0 = null;
+      const lauf = ts => { if(t0 == null) t0 = ts; const f = Math.min(1, (ts - t0) / 1500), e = 1 - Math.pow(1 - f, 3); z.textContent = Math.round(ziel * e); if(f < 1) requestAnimationFrame(lauf); };
+      requestAnimationFrame(lauf); }, {threshold: .6});
+    zo.observe(z); }
+  /* silberner Faden */
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg"); svg.setAttribute("class", "svfaden"); svg.setAttribute("aria-hidden", "true");
+  svg.innerHTML = `<defs><linearGradient id="svsilber" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1000"></linearGradient></defs><path class="svf-pfad" fill="none" stroke="url(#svsilber)" stroke-width="1.6" stroke-linecap="round"/><g class="svf-knoten"></g>`;
+  v.prepend(svg);
+  const pfad = svg.querySelector(".svf-pfad"), knoten = svg.querySelector(".svf-knoten"), verlauf = svg.querySelector("#svsilber");
+  let y0 = 0, y1 = 0, L = 1, marken = [];
+  const farben = ["#B9BDC3","#8E9399","#E9EBEE","#A3A8AE","#D5D8DC"];
+  function bauen(){
+    if(v.hidden || !v.offsetHeight) return;
+    const top = v.getBoundingClientRect().top + scrollY;
+    const start = v.querySelector(".probleme"), ende = v.querySelector(".routine") || v.lastElementChild;
+    if(!start) return;
+    y0 = start.getBoundingClientRect().top + scrollY - top + 10;
+    y1 = ende.getBoundingClientRect().bottom + scrollY - top - 10;
+    const H = v.offsetHeight; svg.setAttribute("viewBox", `0 0 24 ${H}`); svg.style.height = H + "px";
+    let d = `M12 ${y0.toFixed(0)}`, y = y0, s = 1;
+    while(y < y1){ const ny = Math.min(y1, y + 130); d += ` Q${12 + 6 * s} ${((y + ny) / 2).toFixed(0)} 12 ${ny.toFixed(0)}`; y = ny; s = -s; }
+    pfad.setAttribute("d", d); L = pfad.getTotalLength(); pfad.style.strokeDasharray = L;
+    verlauf.setAttribute("y2", H); { const n = Math.max(6, Math.round(H / 260)); verlauf.innerHTML = Array.from({length: n}, (_, k) => `<stop offset="${(k / (n - 1)).toFixed(3)}" stop-color="${farben[k % farben.length]}"/>`).join(""); }
+    marken = [v.querySelector(".probleme")].concat(bloecke.filter(b => !b.matches(".startweg li, .startweg .head"))).filter(Boolean)
+      .map(b => b.getBoundingClientRect().top + scrollY - top + 6).filter(m => m > y0 && m < y1).sort((a, b) => a - b);
+    knoten.innerHTML = marken.map(m => `<circle cx="12" cy="${m.toFixed(0)}" r="3.6"/>`).join("");
+    zeichnen();
+  }
+  function zeichnen(){
+    if(v.hidden || !L) return;
+    const top = v.getBoundingClientRect().top;
+    const bis = innerHeight * 0.72 - top;
+    const f = Math.max(0, Math.min(1, (bis - y0) / (y1 - y0)));
+    pfad.style.strokeDashoffset = L * (1 - f);
+    [...knoten.children].forEach((c, k) => c.classList.toggle("an", marken[k] <= bis));
+  }
+  let rq = false; addEventListener("scroll", () => { if(rq) return; rq = true; requestAnimationFrame(() => { rq = false; zeichnen(); }); }, {passive: true});
+  addEventListener("resize", bauen);
+  if("ResizeObserver" in window) new ResizeObserver(() => bauen()).observe(v);
+  setTimeout(bauen, 300);
+})();
 /* ---------- Fußzeile ---------- */
 document.querySelectorAll(".fuss [data-fgo]").forEach(b => b.onclick = () => { state.view = b.dataset.fgo; state.wissen = null; render(); window.scrollTo({top:0}); });
 document.querySelectorAll(".fuss [data-platz]").forEach(b => b.onclick = () => toast(`Platzhalter: „${b.dataset.platz}“ kommt mit der echten Seite`));
