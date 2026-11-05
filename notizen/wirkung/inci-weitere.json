@@ -49,7 +49,10 @@
   "inci": "Water/Eau/Aqua, Cetearyl Alcohol, Behentrimonium Chloride, Polyricinoleic Acid, Polyglyceryl-3 Betainate Acetate, C13-15 Alkane, Jojoba \r\nEsters, Hydrogenated Castor Oil/Sebacic Acid Copolymer, Linoleamidopropyl Dimethylamine Dimer Dilinoleate, Polyglycerin-3, Helianthus \r\nAnnuus (Sunflower) Seed Wax, Polyglyceryl-3 Methylglucose Distearate, Isopentyldiol, Guar Hydroxypropyltrimonium Chloride, Glycerin, \r\nSodium PCA, Caesalpinia Spinosa Gum, Hydroxyethylcellulose, Hydroxypropyl Methylcellulose, Fragrance/Parfum, Citric Acid, \r\nHydroxyacetophenone, Caprylyl Glycol, Ethyl Lauroyl Arginate HCl, Limonene, Hexyl Cinnamal, Linalool, Citronellol"
  },
  "shampoo|OUAI|Medium Hair Shampoo": {
-  "treffer": null
+  "quelle": "theouai.com",
+  "url": "https://theouai.com/products/medium-hair-shampoo",
+  "score": 1.0,
+  "inci": "Aqua (Water, Eau), Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Betaine, Sodium Methyl Cocoyl Taurate, Cocamide Mipa, Glycol Distearate, Parfum (Fragrance), Amodimethicone, Hydroxypropyl Guar Hydroxypropyltrimonium Chloride, Glycerin, Citrus Japonica Fruit Extract, Panthenol, Hydrolyzed Keratin, Polyquaternium-7, Orbignya Oleifera Seed Oil, Cocos Nucifera (Coconut) Oil, Peg-150 Distearate, Sodium Lauroyl Glycinate, Cetrimonium Chloride (Anti-Static Agent/Agent Antistatique), C11-15 Pareth-7, Laureth-9, Trideceth-12, Cocoglucosides Hydroxypropyltrimonium Chloride, Acrylates Copolymer, Tocopherol, Peg-200 Hydrogenated Glyceryl Palmate, Peg-7 Glyceryl Cocoate, Disodium Edta, Citric Acid, Sodium Chloride, Sodium Hydroxide, Tetrasodium Edta, Phenoxyethanol, Sodium Benzoate, Potassium Sorbate, Benzyl Alcohol, Benzyl Salicylate, Limonene, Hexyl Cinnamal, Ci 15985 (Yellow 6)"
  },
  "shampoo|Kérastase|Genesis Bain Hydra-Fortifiant": {
   "quelle": "hagel",
@@ -209,7 +212,11 @@
   "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • CITRIC ACID • COCO-BETAINE • SODIUM CHLORIDE • AMMONIUM HYDROXIDE • HEXYLENE GLYCOL • SODIUM BENZOATE • SODIUM HYDROXIDE • SALICYLIC ACID • POLYQUATERNIUM-10 • LINALOOL • COUMARIN • LIMONENE • PARFUM / FRAGRANCE"
  },
  "shampoo|Goldwell|Ultra Volume Bodifying Shampoo": {
-  "treffer": null
+  "quelle": "lookfantastic.com",
+  "titel": "goldwell-dualsenses-ultra-volume-bodifying-shampoo-250ml",
+  "url": "https://www.lookfantastic.com/p/goldwell-dualsenses-ultra-volume-bodifying-shampoo-250ml/17923202/",
+  "score": 1.0,
+  "inci": "Water/Aqua/Eau, Sodium Laureth Sulfate, Coco-Glucoside, Cocamidopropyl Betaine, Sodium Chloride, Lactic Acid, Glyceryl Oleate, Sorbitan Caprylate, Polyquaternium- 10, Panthenol, Tetrasodium Glutamate Diacetate, Octyldodecyl PCA, Sodium PCA, Glycerin, Hydrolyzed Rice Protein, Sodium Benzoate, Fragrance/Parfum, Linalool, Linalyl Acetate, Ext. Violet 2/CI 60730, Green 3/CI 42053, Yellow 5/CI 19140. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
  },
  "shampoo|Oribe|Shampoo for Magnificent Volume": {
   "quelle": "hagel",
@@ -302,10 +309,16 @@
   "treffer": null
  },
  "shampoo|Vichy|Dercos Anti-Schuppen DS für trockene Kopfhaut": {
-  "treffer": null
+  "quelle": "www.vichy.de",
+  "url": "https://www.vichy.de/alle-produkte/haarpflege/shampoos/schuppen/dercos-anti-schuppen-shampoo-fuer-normales-bis-trockenes-haar",
+  "score": 1.0,
+  "inci": "AQUA / WATER, SODIUM LAURETH SULFATE, GLYCOL DISTEARATE, DIMETHICONE, COCO-BETAINE, GLYCERIN, SELENIUM SULFIDE, CARBOMER, CI 47005 / ACID YELLOW 3, CITRIC ACID, MENTHOL, 2-OLEAMIDO-1,3-OCTADECANEDIOL, PPG-5-CETETH-20, SALICYLIC ACID, SODIUM BENZOATE, SODIUM CHLORIDE, SODIUM HYDROXIDE, TOCOPHERYL ACETATE, PARFUM / FRAGRANCEBei"
  },
  "shampoo|Vichy|Dercos Anti-Schuppen DS für normale bis fettige Kopfhaut": {
-  "treffer": null
+  "quelle": "www.vichy.de",
+  "url": "https://www.vichy.de/alle-produkte/haarpflege/shampoos/schuppen/dercos-anti-schuppen-shampoo-fuer-normale-bis-fettige-kopfhaut",
+  "score": 1.0,
+  "inci": "AQUA / WATER, SODIUM LAURETH SULFATE, GLYCOL DISTEARATE, COCO-BETAINE, GLYCERIN, DIMETHICONE, CARBOMER, CI 19140 / YELLOW 5, CITRIC ACID, MENTHOL, 2-OLEAMIDO-1,3-OCTADECANEDIOL, PARFUM / FRAGRANCE, PPG-5-CETETH-20, SALICYLIC ACID, SELENIUM SULFIDE, SODIUM BENZOATE, SODIUM CHLORIDE, SODIUM HYDROXIDE, TOCOPHERYL ACETATEBei"
  },
  "shampoo|Ketozolin|2% Shampoo": {
   "treffer": null
@@ -353,7 +366,11 @@
   "inci": "Water/Aqua/Eau, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Glycerin, Decyl Glucoside, Disodium Capryloyl Glutamate, Sodium Gluconate, Tetrasodium Glutamate Diacetate, Phytic Acid, Hibiscus Sabdariffa Flower Extract, Acetum/Vinegar/Vinaigre, Cocos Nucifera (Coconut) Fruit Water/Cocos Nucifera Fruit Water, Leuconostoc/Radish Root Ferment Filtrate, Citric Acid, Sorbitan Caprylate, 1,2-Hexanediol, Potassium Sorbate, Propylene Glycol, Sodium Chloride, Sodium Benzoate, Benzyl Alcohol, Citrus Limon (Lemon) Peel Extract/Citrus Limon Peel Extract, Parfum/Fragrance, Limonene, Linalool. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
  },
  "shampoo|Sebastian Professional|Dark Oil Silky Shine Shampoo": {
-  "treffer": null
+  "quelle": "lookfantastic.com",
+  "titel": "sebastian-professional-dark-oil-silky-shine-shampoo-for-dry-frizzy-hair-280ml",
+  "url": "https://www.lookfantastic.com/p/sebastian-professional-dark-oil-silky-shine-shampoo-for-dry-frizzy-hair-280ml/17525168/",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Cocamidopropyl Betaine, Parfum/Fragrance, Panthenol, Sodium Chloride, Cocamide MEA, Sodium Benzoate, Citric Acid, Salicylic Acid, Tetramethyl Acetyloctahydronaphthalenes, Disodium EDTA, Hexyl Cinnamal, Glycerin, Hexamethylindanopyran, Acetyl Cedrene, Linalyl Acetate, Coumarin, Citronellol, Linalool, Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Sodium Citrate, Sodium Xylenesulfonate. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
  },
  "shampoo|Garnier Wahre Schätze|Sanfte Hafermilch": {
   "dan": 1670304,
@@ -1735,5 +1752,51 @@
   "url": "https://www.lookfantastic.de/p/color-wow-dream-coat-for-curly-hair-200ml/11870460/",
   "score": 1.0,
   "inci": "Water/Aqua, VP/Methacrylamide/Vinyl Imidazole Copolymer, PEG-40/PPG-8 Methylaminopropyl/Hydroxypropyl Dimethicone Copolymer, Glycerin, Dipropylene Glycol, Polyimide-1, Phenoxyethanol, Hydrolyzed Keratin, Ethylhexylglycerin, Potassium Sorbate, Potassium Benzoate, Propylene Glycol, Disodium EDTA,Citric Acid. F#305-2a. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
+ },
+ "shampoo|Goldwell|Just Smooth Shampoo": {
+  "quelle": "lookfantastic.com",
+  "titel": "goldwell-dualsenses-just-smooth-taming-shampoo-250ml",
+  "url": "https://www.lookfantastic.com/p/goldwell-dualsenses-just-smooth-taming-shampoo-250ml/17923197/",
+  "score": 1.0,
+  "inci": "Water/Aqua/Eau, Sodium Laureth Sulfate, Coco-Glucoside, Cocamidopropyl Betaine, Glycol Distearate, Sodium Chloride, Glyceryl Oleate, Polyquaternium-10, Dicaprylyl Ether, Sorbitan Caprylate, Decyl Glucoside, Citric Acid, Glycerin, Panthenol, Tetrasodium Glutamate Diacetate, Lactic Acid, Aleurites Moluccanus Seed Oil, Octyldodecyl PCA, Sodium PCA, Sodium Benzoate, Benzoic Acid, Fragrance/Parfum, Benzyl Alcohol, Citronellol. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
+ },
+ "shampoo|Eucerin|DermoCapillaire Urea Shampoo": {
+  "quelle": "lookfantastic.com",
+  "titel": "eucerin-dermocapillaire-calming-urea-shampoo-5-urea-250ml",
+  "url": "https://www.lookfantastic.com/p/eucerin-dermocapillaire-calming-urea-shampoo-5-urea-250ml/12510278/",
+  "score": 1.0,
+  "inci": "Aqua, Sodium Myreth Sulfate, Urea, Decyl Glucoside, Sodium Lactate, Sodium Cocoamphoacetate, Coco Glucoside, Laureth-9, PEG-200 Hydrogenated Glyceryl Palmate, Glyceryl Oleate, Panthenol, Lactic Acid, Polyquaternium-10, Sodium Benzoate, Sodium Salicylate. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
+ },
+ "maske|Redken|All Soft All-in Mask": {
+  "quelle": "lookfantastic.com",
+  "titel": "redken-all-soft-all-in-mask-deep-conditioning-argan-oil-glycerin-hair-mask-for-dry-brittle-hair-250ml",
+  "url": "https://www.lookfantastic.com/p/redken-all-soft-all-in-mask-deep-conditioning-argan-oil-glycerin-hair-mask-for-dry-brittle-hair-250ml/17905698/",
+  "score": 1.0,
+  "inci": "Aqua / Water / Eau, Cetearyl Alcohol, Glycerin, Quaternium-87, Hydrogenated Polyisobutene, Behentrimonium Chloride, Cetyl Esters, Parfum / Fragrance, Propylene Glycol, Phenoxyethanol, Hydroxyethylcellulose, Isopropyl Alcohol, Caprylyl Glycol, Argania Spinosa Kernel Oil, Geranyl Acetate, Benzyl Alcohol, Linalool, Carvone, Coumarin, Limonene, Hexyl Cinnamal, Disodium Phosphate, Polysorbate 60, Sodium Phosphate, Tocopherol. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
+ },
+ "leavein|Sebastian Professional|Dark Oil Taming Elixir Serum": {
+  "quelle": "lookfantastic.com",
+  "titel": "sebastian-professional-dark-oil-taming-elixir-serum-for-dry-frizzy-hair-140ml",
+  "url": "https://www.lookfantastic.com/p/sebastian-professional-dark-oil-taming-elixir-serum-for-dry-frizzy-hair-140ml/17525170/",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Propylene Glycol, Cetearyl Alcohol, Perse Gratissima (Avocado) Oil, Phenoxyethanol, Panthenol, Cetrimonium Chloride, Quaternium-80, Behentrimonium Chloride, Isopropyl Alcohol, Methylparaben, Parfum/Fragrance, Tocopheryl Acetate, Disodium EDTA, Propylparaben, Tetramethyl Acetyloctahydronaphthalenes, Hexyl Cinnamal, Hexamethylindanopyran, Acetyl Cedrene, Linalyl Acetate, Coumarin, Citric Acid, Citronellol, Linalool, Limonene, Citrus Limon Peel Oil. \n  For the latest information, it is recommended to review the ingredient list printed on the packaging of the product prior to usage or consumption."
+ },
+ "shampoo|Redken|Extreme Shampoo": {
+  "quelle": "redken.de",
+  "url": "https://redken.de/produkte/haarpflege/extreme/extreme-shampoo",
+  "score": 1.0,
+  "inci": "AQUA / WATER • SODIUM LAURETH SULFATE • COCO-BETAINE • GLYCOL DISTEARATE • SODIUM CHLORIDE • DIMETHICONE • PARFUM / FRAGRANCE • COCAMIDE MIPA • SODIUM BENZOATE • HEXYLENE GLYCOL • SALICYLIC ACID • GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • CARBOMER • CETYL ALCOHOL • SODIUM COCOYL AMINO ACIDS • BEHENTRIMONIUM METHOSULFATE • QUATERNIUM-33 • POTASSIUM DIMETHICONE PEG-7 PANTHENYL PHOSPHATE • BENZYL BENZOATE • SODIUM SARCOSINATE • PROPYLENE GLYCOL • LIMONENE • BENZYL ALCOHOL • ARGININE • 2-OLEAMIDO-1,3-OCTADECANEDIOL • HYDROLYZED SOY PROTEIN • LINALOOL • FUMARIC ACID • HYDROLYZED VEGETABLE PROTEIN PG-PROPYL SILANETRIOL • PHENOXYETHANOL • TETRASODIUM EDTA • POTASSIUM SORBATE • SODIUM HYDROXIDE • CITRIC ACID"
+ },
+ "shampoo|Redken|All Soft Shampoo": {
+  "quelle": "redken.de",
+  "url": "https://redken.de/produkte/haarpflege/all-soft/all-soft-argan-oil-shampoo",
+  "score": 1.0,
+  "inci": "AQUA / WATER • SODIUM LAURETH SULFATE • DIMETHICONE • COCO-BETAINE • GLYCOL DISTEARATE • SODIUM CHLORIDE • HEXYLENE GLYCOL • CITRIC ACID • COCAMIDE MIPA • PARFUM / FRAGRANCE • SODIUM HYDROXIDE • SODIUM PCA • BENZOIC ACID • SALICYLIC ACID • GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • CARBOMER • PROPYLENE GLYCOL • SODIUM CITRATE • DISODIUM EDTA • SODIUM COCOYL AMINO ACIDS • POTASSIUM DIMETHICONE PEG-7 PANTHENYL PHOSPHATE • SODIUM SARCOSINATE • BENZYL ALCOHOL • ARGANIA SPINOSA KERNEL OIL • ARGININE • HYDROLYZED SOY PROTEIN • COUMARIN • LINALOOL • LIMONENE • HEXYL CINNAMAL • FUMARIC ACID • HYDROLYZED VEGETABLE PROTEIN PG-PROPYL SILANETRIOL • CI 15510 / ORANGE 4 • PHENOXYETHANOL • CI 17200 / RED 33 • TETRASODIUM EDTA • POTASSIUM SORBATE"
+ },
+ "shampoo|Coco & Eve|Like a Virgin Shampoo": {
+  "quelle": "www.cocoandeve.com",
+  "url": "https://www.cocoandeve.com/products/super-hydrating-shampoo",
+  "score": 1.0,
+  "inci": "Aqua, Sodium Lauroyl Methyl Isethionate, Glycerin, Sodium Methyl Cocoyl Taurate, Cocamidopropyl Betaine, Decyl Glucoside, Sodium Chloride, Parfum, Sodium Cocoyl Isethionate, Coco-Glucoside, Benzyl Alcohol, PEG-120 Methyl Glucose Dioleate, Sodium Lauroyl Lactylate, Disodium Cocoamphodiacetate, Glycol Distearate, Phenethyl Benzoate, Carbomer, Coco-Betaine, Lauroyl/Myristoyl Methyl Glucamide, Coconut Acid, Dicocoylethyl Hydroxyethylmonium Methosulfate, Ceteareth-60 Myristyl Glycol, Sodium Benzoate, Polyquaternium-10, Coconut Oil Polyglyceryl-6 Esters, Polyquaternium-7, Pseudozyma Epicola/Argania Spinosa Kernel Oil/Camellia Japonica Seed Oil/Camellia Sinensis Seed Oil/Sunflower Seed Oil/Sweet Almond Oil Ferment Extract Filtrate, Trisodium Ethylenediamine Disuccinate, Guar Hydroxypropyltrimonium Chloride, Sodium Methyltaurate, Citric Acid, Panthenol, Propylene Glycol, Hydrolyzed Hyaluronic Acid, Sodium Hydroxide, Phenoxyethanol"
  }
 }
