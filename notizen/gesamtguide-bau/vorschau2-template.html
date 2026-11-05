@@ -3704,7 +3704,7 @@ function icAnalyse(text, type){
   const spuren = [];
   L.forEach((x,i) => { if(i <= cut) return; const n = IC_NAMEN.find(([re]) => re.test(x)); if(n && !spuren.includes(n[1])) spuren.push(n[1]); });
   const r = {L, cut, H, E, G, tags, rep: bond.length ? "bond" : prot.length ? "protein" : "", prot, bond, sil, parf, allerg, menth, dry, fat, butter, spuren, type};
-  r.dandr = find(IC.DANDR); r.chel = find(IC.CHEL); r.poly = find(IC.POLY);
+  r.dandr = find(IC.DANDR).filter(([x,i]) => x !== "salicylic acid" || i < 10); r.chel = find(IC.CHEL); r.poly = find(IC.POLY);
   r.vol = find(IC.VOL).filter(([,i]) => i < 4); r.film = find(IC.FILM).filter(([,i]) => i < (type === "hitze" ? 15 : cut)); r.hold = find(IC.HOLD).filter(([,i]) => i < cut);
   r.heavy = find(IC.HEAVY).filter(([x,i]) => i < cut && !IC.ESS.test(x)); r.light = find(IC.LIGHT).filter(([x,i]) => i < cut && !IC.ESS.test(x));
   r.hum = find(IC.HUM).filter(([,i]) => i < cut); r.dryTop = dry.filter(([,i]) => i < 3);
@@ -3716,7 +3716,6 @@ function icAnalyse(text, type){
   if(type === "shampoo"){
     const t = find(IC.SULF).concat(find(IC.MILD)).sort((a,b) => a[1]-b[1]);
     r.tenside = t; r.sulf = find(IC.SULF); r.mild = find(IC.MILD);
-    r.dandr = find(IC.DANDR); r.chel = find(IC.CHEL); r.poly = find(IC.POLY);
     const erst = t[0];
     r.staerke = !t.length ? "unklar" : IC.SULF.test(erst[0]) ? (r.mild.length && r.mild[0][1] < erst[1] + 3 ? "mittel" : "kraeftig") : (r.sulf.length && r.sulf[0][1] < 4 ? "mittel" : "mild");
     if(r.staerke === "mittel" && IC.MILD.test(erst ? erst[0] : "") && H >= 0.3) r.staerke = "mild";
