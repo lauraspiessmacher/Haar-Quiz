@@ -1406,21 +1406,44 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .icsuch{margin:26px 0 8px;padding:16px 18px;border:1px dashed var(--line);border-radius:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
 .icsuch p{margin:0;font-size:15px}
 .icband{position:relative;z-index:3;margin:44px 0 0;background:#382F2E;color:#F3ECE2;border-radius:24px;padding:30px 32px;display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:24px;align-items:center;overflow:hidden}
-.icband .kicker{color:#D6B98F}
 .icband h2{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.08;margin:4px 0 10px;text-transform:uppercase;color:#F3ECE2}
 .icband h2 .hk{text-transform:none}
 .icband p{color:#E9E2D8;font-size:15.5px;line-height:1.55;margin:0 0 16px;max-width:560px}
 .icband .btn.dark{background:#F3ECE2;color:#382F2E;border-color:#F3ECE2}
-.icbhandy{width:190px;height:auto;color:#E7E3D7}
+.icbhandy{width:200px;color:#E7E3D7}
+.icbhandy svg,.ich-handy svg{display:block;width:100%;height:auto}
+.icpill{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#EEF0F2;border:1px solid rgba(214,218,223,.55);background:linear-gradient(100deg,rgba(185,189,195,.26),rgba(233,235,238,.06) 55%,rgba(142,147,153,.22));border-radius:999px;padding:6px 13px 6px 11px;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.icpill::before{content:"";width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#E9EBEE,#8E9399)}
+.shophead[hidden]{display:none}
+.ichero2{position:relative;margin:22px 0 18px;background:radial-gradient(120% 140% at 85% 10%,#4A403E 0%,#382F2E 55%,#2E2625 100%);color:#F3ECE2;border-radius:26px;padding:36px 36px 28px;display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:10px 30px;overflow:hidden}
+.ichero2::after{content:"";position:absolute;inset:0;border-radius:26px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(214,218,223,.18)}
+.ich-txt h2{font-family:var(--serif);font-weight:400;font-size:58px;line-height:.95;margin:16px 0 10px;text-transform:uppercase;color:#F3ECE2}
+.ich-txt h2 .hk{text-transform:none}
+.ich-sub{font-family:var(--serif);font-style:italic;font-size:19px;color:#D5D8DC;margin:0 0 14px}
+.ich-lead{font-size:15.5px;line-height:1.6;color:#E9E2D8;margin:0;max-width:600px}
+.ich-handy{color:#E7E3D7;align-self:center;width:230px}
+.icsteps2{grid-column:1 / -1;list-style:none;margin:18px 0 0;padding:20px 0 0;border-top:1px solid rgba(214,218,223,.22);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;position:relative}
+.icsteps2 li{display:grid;grid-template-columns:32px 1fr;column-gap:12px;align-items:start}
+.icsteps2 span{grid-row:span 2;width:32px;height:32px;border-radius:50%;border:1.6px solid #B9BDC3;display:grid;place-items:center;font-family:var(--serif);font-size:16px;color:#EEF0F2;background:rgba(233,235,238,.06)}
+.icsteps2 b{font-weight:600;font-size:15px;color:#F3ECE2}
+.icsteps2 i{font-style:normal;font-size:13.5px;line-height:1.45;color:#D9CFC4;margin-top:2px}
+.icpage .icform{position:relative;box-shadow:0 22px 50px -34px rgba(56,47,46,.6)}
+.icpage .icform::before{content:"";position:absolute;left:22px;right:22px;top:-1px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,#B9BDC3,#E9EBEE,#8E9399,transparent)}
+.icres{position:relative}
+.icres::before{content:"";position:absolute;left:22px;right:22px;top:-1px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,#B9BDC3,#E9EBEE,#8E9399,transparent)}
 @media (max-width:760px){
   .icsteps{grid-template-columns:1fr}
+  .ichero2{grid-template-columns:1fr;padding:26px 20px 22px}
+  .ich-txt h2{font-size:42px}
+  .ich-handy{position:absolute;right:-30px;top:-10px;width:150px;opacity:.2}
+  .icsteps2{grid-template-columns:1fr;gap:14px}
   .ptab.ptcheck{flex-direction:row;gap:6px;align-self:center;padding:7px 12px;margin:6px 6px 6px 2px;font-size:12.5px;letter-spacing:.04em}
   .ptab.ptcheck svg{width:17px;height:17px}
   .zcta.zinline .zparten,.zcta.zinline .zpliste{display:none}
   .zcta.zinline{padding:20px 18px 16px}
   .icband{grid-template-columns:1fr;padding:24px 20px}
   .icband h2{font-size:28px}
-  .icbhandy{position:absolute;right:-26px;top:-14px;width:120px;opacity:.22}
+  .icbhandy{position:absolute;right:-30px;top:-16px;width:140px;opacity:.22}
   .ptab.ptcheck span{display:inline}
 }
 /* Gast: alle Produkte sichtbar, Einschätzung verschwommen */
@@ -2175,16 +2198,10 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
         <li class="sw3"><img class="swtelefon gross" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
       </ol>
     </div>
-    <div class="icband" id="icband"><div class="icbtext"><p class="kicker">Neu · für alle kostenlos</p><h2>Steht ihr im Laden <em class="hk">vor dem Regal?</em></h2>
+    <div class="icband" id="icband"><div class="icbtext"><span class="icpill">Neu · für alle kostenlos</span><h2>Steht ihr im Laden <em class="hk">vor dem Regal?</em></h2>
       <p>Fotografiert die Rückseite, kopiert die Inhaltsstoffe und fügt sie ein. Ich lese die ganze Liste, nicht nur einzelne Stoffe, und sage euch, was das Produkt wirklich macht.</p>
       <button type="button" class="btn dark" onclick="showCheck()">Inhaltsstoffe prüfen <span aria-hidden="true">→</span></button></div>
-      <svg class="icbhandy" viewBox="0 0 200 220" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="40" y="8" width="104" height="200" rx="18"/><path d="M80 20h24"/>
-        <rect x="54" y="40" width="76" height="92" rx="6" stroke-dasharray="3 4"/>
-        <path d="M62 54h56M62 64h48M62 74h58M62 84h40M62 94h52M62 104h46M62 114h30"/>
-        <rect x="58" y="60" width="62" height="28" rx="4" fill="currentColor" fill-opacity=".1" stroke="none"/>
-        <path d="M60 150h64M60 162h44"/><rect x="60" y="178" width="64" height="16" rx="8"/>
-        <circle cx="150" cy="96" r="22"/><path d="M166 112l18 18"/><path d="M141 92h18M141 100h12"/></svg></div>
+      <div class="icbhandy" aria-hidden="true"></div></div>
     <div class="serie neuband" id="neuband">
       <div class="head"><div><p class="kicker" id="neuMonat"></p><h2><em class="hk">Neu</em> im Regal</h2><p class="sub">Diese Produkte habe ich neu für euch eingeordnet</p></div>
         <div class="links"><button type="button" class="btn dark" id="neuAlle">Alle Neuheiten ansehen <span aria-hidden="true">→</span></button></div></div>
@@ -3959,11 +3976,13 @@ function icAlternativen(r){
 function renderCheck(){
   const r = icState.res, abo = istAbo();
   const typeBtns = IC_TYPEN.map(([id,l]) => `<button type="button" class="chip" data-ictype="${id}" aria-pressed="${icState.type===id}">${l}</button>`).join("");
-  let html = `<div class="guide icpage"><div class="ghero ichero"><div class="ghead"><div><p class="ickick">Für alle kostenlos</p><h2>Inhaltsstoff-Check</h2><div class="sub">Die ganze Liste lesen, nicht einzelne Stoffe</div></div></div>
-    <div class="gintro"><p>Andere Apps bewerten jeden Inhaltsstoff einzeln. Ich schaue auf die ganze Liste: Was steht vorne, was nur in Spuren, und was gleicht sich gegenseitig aus. Ein Sulfat neben milden Tensiden und viel Glycerin ist zum Beispiel etwas ganz anderes als ein Sulfat allein.</p></div></div>
-    <ol class="icsteps"><li><span>1</span><p><b>Foto machen</b>Fotografiere die Rückseite mit der Inhaltsstoffliste.</p></li>
-      <li><span>2</span><p><b>Text kopieren</b>iPhone: Im Foto lange auf den Text tippen. Android: Foto mit Google Lens öffnen.</p></li>
-      <li><span>3</span><p><b>Hier einfügen</b>Produktart wählen und prüfen lassen.</p></li></ol>
+  let html = `<div class="guide icpage"><section class="ichero2"><div class="ich-txt"><span class="icpill">Für alle kostenlos</span><h2>Inhaltsstoff-<br><em class="hk">Check</em></h2>
+      <p class="ich-sub">Die ganze Liste lesen, nicht einzelne Stoffe</p>
+      <p class="ich-lead">Andere Apps bewerten jeden Inhaltsstoff einzeln. Ich schaue auf die ganze Liste: Was steht vorne, was nur in Spuren, und was gleicht sich gegenseitig aus. Ein Sulfat neben milden Tensiden und viel Glycerin ist zum Beispiel etwas ganz anderes als ein Sulfat allein.</p></div>
+      <div class="ich-handy" aria-hidden="true">${IC_HANDY}</div>
+      <ol class="icsteps2"><li><span>1</span><b>Foto machen</b><i>Fotografiere die Rückseite mit der Inhaltsstoffliste.</i></li>
+        <li><span>2</span><b>Text kopieren</b><i>iPhone: im Foto lange auf den Text tippen. Android: Foto mit Google Lens öffnen.</i></li>
+        <li><span>3</span><b>Hier einfügen</b><i>Produktart wählen und prüfen lassen.</i></li></ol></section>
     <form class="icform" id="icForm"><div class="icrow"><span class="iclab">Produktart</span><div class="icchips" role="group" aria-label="Produktart">${typeBtns}</div></div>
       <label class="iclab" for="icText">Inhaltsstoffe</label><textarea id="icText" rows="5" placeholder="Zum Beispiel: Aqua, Cetearyl Alcohol, Glycerin, …">${esc(icState.text)}</textarea>
       <label class="iclab" for="icName">Produktname <i>(freiwillig, dann sehe ich nach, ob es in meiner Liste steht)</i></label><input id="icName" type="text" value="${esc(icState.name)}" placeholder="Zum Beispiel: Balea med Ultra Sensitive Shampoo">
@@ -3990,6 +4009,7 @@ function renderCheck(){
   }
   guide.innerHTML = html + `</div>`;
   if(!abo) guide.querySelectorAll(".iczu").forEach(z => { z.setAttribute("aria-hidden","true"); z.querySelectorAll("*").forEach(n => { if(n.childNodes.length === 1 && n.firstChild.nodeType === 3) n.textContent = n.textContent.replace(/[A-Za-zÄÖÜäöüß]/g, "x"); }); });
+  icLupeStart(guide.querySelector(".ich-handy"));
   const form = document.getElementById("icForm");
   guide.querySelectorAll("[data-ictype]").forEach(b => b.onclick = () => { icState.type = b.dataset.ictype; icState.text = document.getElementById("icText").value; icState.name = document.getElementById("icName").value; guide.querySelectorAll("[data-ictype]").forEach(x => x.setAttribute("aria-pressed", x === b)); });
   form.onsubmit = e => { e.preventDefault(); icState.text = document.getElementById("icText").value; icState.name = document.getElementById("icName").value;
@@ -3998,6 +4018,29 @@ function renderCheck(){
   const vor = document.getElementById("icVor"); if(vor) vor.onclick = () => { vor.disabled = true; vor.textContent = "Danke, ich schaue es mir an"; };
   const ab = document.getElementById("icAbo"); if(ab) ab.onclick = () => zPaywall("check-inci");
 }
+
+/* Handy mit Lupe (Startseite + Check-Seite, Laura 05.11.): die Lupe wandert im Rechteck am Handyrand entlang */
+const IC_HANDY = `<svg viewBox="-14 -14 228 252" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="40" y="8" width="104" height="200" rx="18"/><path d="M80 20h24"/>
+  <rect x="54" y="40" width="76" height="92" rx="6" stroke-dasharray="3 4"/>
+  <path d="M62 54h56M62 64h48M62 74h58M62 84h40M62 94h52M62 104h46M62 114h30"/>
+  <rect class="icbmark" x="58" y="60" width="62" height="28" rx="4" fill="currentColor" fill-opacity=".12" stroke="none"/>
+  <path d="M60 150h64M60 162h44"/><rect x="60" y="178" width="64" height="16" rx="8"/>
+  <g class="icblupe" transform="translate(144,96)"><circle r="22" fill="#382F2E" fill-opacity=".55"/><circle r="22"/><path d="M16 16l18 18" stroke-width="2.4"/><path d="M-9 -4h18M-9 4h12"/></g></svg>`;
+function icLupeStart(root){
+  if(!root) return; const g = root.querySelector(".icblupe"); if(!g) return;
+  const P = [[40,26],[144,26],[144,190],[40,190]], seg = [104,164,104,164], L = 536;
+  const setPos = t => { let d = (((t % 1) + 1) % 1) * L, i = 0; while(d > seg[i]){ d -= seg[i]; i++; }
+    const a = P[i], b = P[(i+1) % 4], f = d / seg[i]; g.setAttribute("transform", `translate(${(a[0]+(b[0]-a[0])*f).toFixed(1)},${(a[1]+(b[1]-a[1])*f).toFixed(1)})`); };
+  setPos(0.32);
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+  let sicht = false, last = null, acc = 0.32;
+  const io = new IntersectionObserver(es => { sicht = es[0].isIntersecting; if(sicht){ last = null; requestAnimationFrame(schritt); } }, {threshold: .15});
+  function schritt(ts){ if(!root.isConnected){ io.disconnect(); return; } if(!sicht) return;
+    if(last != null) acc += (ts - last) / 11000; last = ts; setPos(acc); requestAnimationFrame(schritt); }
+  io.observe(root);
+}
+{ const hb = document.querySelector("#icband .icbhandy"); if(hb){ hb.innerHTML = IC_HANDY; icLupeStart(hb); } }
 window.showCheck = () => { state.view = "produkte"; state.type = "check"; state.q = ""; if(typeof q !== "undefined") q.value = ""; render(); window.scrollTo({top:0}); };
 
 function render(){
@@ -4007,6 +4050,7 @@ function render(){
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
   document.getElementById("subnav").hidden = state.view!=="produkte"; setHH();
+  { const sh = document.querySelector("#v-produkte .shophead"); if(sh) sh.hidden = state.view === "produkte" && state.type === "check" && !state.q.trim(); }
   if(state.view==="produkte"){ state.q.trim() ? renderSearch() : state.type === "check" ? renderCheck() : state.type === "neu" ? renderNeu() : renderGuide(); zProdukte(); }
   if(state.view==="merkliste") renderMerk();
   if(state.view==="wissen") renderWissen();

@@ -652,3 +652,4 @@
 - Redken Extreme Length Shampoo: Text geändert (Lauras Go): „Normale Reinigung, leicht pflegend, ohne Öle und Silikone. Das Biotin steht ganz am Ende“.
 - Vichy Dercos Ultra Apaisant: Liste von Laura. ALLE 591 Produkte haben jetzt eine Inhaltsstoffliste.
 - Vichy (Lauras Go): Ultra Apaisant + „Enthält Parfum“; Anti-Schuppen K + „dazu feine Peeling-Körnchen. Enthält Menthol und Parfum“ (Laura bestätigt: es ist das K).
+- v439 (05.11., Laura): Startseiten-Band: silberne Pille „Neu · für alle kostenlos“ statt beige; Handy-Zeichnung als gemeinsame Vorlage IC_HANDY, Lupe wandert per rAF im Rechteck am Handyrand (11 s pro Runde, nur sichtbar, reduced-motion = still). Check-Seite: „Schluss mit Fehlkäufen“ (.shophead) ausgeblendet; neuer dunkler Kopf .ichero2 (große Überschrift, silberne Pille, Handy mit Lupe, Schritte 1–3 mit silbernen Kreisen), silberne Linie über Formular und Ergebnis. OFFEN: Ideen für mehr Bewegung auf der Startseite an Laura.
