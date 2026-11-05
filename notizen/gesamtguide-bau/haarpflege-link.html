@@ -4145,7 +4145,7 @@ function render(){
   if(state.view==="routine") renderRoutine();
   if(state.view==="bereich") renderBereich();
   if(state.view==="plan") renderPlan();
-  if(state.view==="start") renderStartweg();
+  if(state.view==="start"){ renderStartweg(); if(window.svZuruecksetzen) requestAnimationFrame(() => window.svZuruecksetzen()); }
   merkCount();
   writeHash();
 }
@@ -4668,19 +4668,29 @@ document.getElementById("swPlan").onclick = () => { state.view = "plan"; render(
   v.classList.add("sv-an");
   const bloecke = [...v.querySelectorAll(".probleme .ptile, .promise, .journey, .startweg .head, .startweg li, .icband, .neuband .head, .routine, .fdm")];
   let i = 0, j = 0; bloecke.forEach(b => { b.classList.add("sv-r"); if(b.matches(".startweg li")) b.style.setProperty("--svi", i++); if(b.matches(".ptile")) b.style.setProperty("--svi", (j++ % (innerWidth < 760 ? 2 : 3)) * .75); });
-  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("sv-da"); io.unobserve(e.target); } }), {threshold: .12, rootMargin: "0px 0px -6% 0px"});
+  /* Beobachter bleiben aktiv: Wer wieder ganz oben ist und erneut herunterscrollt, sieht alles noch einmal hereinkommen (Laura 05.11.) */
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add("sv-da"); }), {threshold: .12, rootMargin: "0px 0px -6% 0px"});
   bloecke.forEach(b => io.observe(b));
-  /* Neu im Regal: Karten fahren einmal von rechts nach links herein (Laura 05.11.) */
+  /* Neu im Regal: Karten fahren von rechts nach links herein */
   const ng = document.getElementById("neugrid");
   if(ng){ ng.classList.add("sv-x");
-    const nio = new IntersectionObserver(es => { if(es[0].isIntersecting){ [...ng.children].forEach((li, k) => li.style.setProperty("--svk", k)); ng.classList.add("sv-da"); nio.disconnect(); } }, {threshold: .2});
-    nio.observe(ng); }
+    new IntersectionObserver(es => { if(es[0].isIntersecting && !ng.classList.contains("sv-da")){ [...ng.children].forEach((li, k) => li.style.setProperty("--svk", k)); ng.classList.add("sv-da"); } }, {threshold: .2}).observe(ng); }
   /* Zahl zählt hoch, sobald sie zu sehen ist */
+  let gezaehlt = false;
   if(z){ z.textContent = "0";
-    const zo = new IntersectionObserver(es => { if(!es[0].isIntersecting) return; zo.disconnect(); let t0 = null;
+    new IntersectionObserver(es => { if(!es[0].isIntersecting || gezaehlt) return; gezaehlt = true; let t0 = null;
       const lauf = ts => { if(t0 == null) t0 = ts; const f = Math.min(1, (ts - t0) / 1500), e = 1 - Math.pow(1 - f, 3); z.textContent = Math.round(ziel * e); if(f < 1) requestAnimationFrame(lauf); };
-      requestAnimationFrame(lauf); }, {threshold: .6});
-    zo.observe(z); }
+      requestAnimationFrame(lauf); }, {threshold: .6}).observe(z); }
+  /* Zurück ganz oben: alles, was unterhalb des Bildschirms liegt, wird wieder zurückgesetzt */
+  const unten = el => el.getBoundingClientRect().top > innerHeight;
+  function zuruecksetzen(){
+    if(v.hidden || scrollY > 80) return;
+    bloecke.forEach(b => { if(unten(b)) b.classList.remove("sv-da"); });
+    if(ng && unten(ng)) ng.classList.remove("sv-da");
+    if(z && unten(z) && gezaehlt){ gezaehlt = false; z.textContent = "0"; }
+  }
+  let rq = false; addEventListener("scroll", () => { if(rq) return; rq = true; requestAnimationFrame(() => { rq = false; zuruecksetzen(); }); }, {passive: true});
+  window.svZuruecksetzen = zuruecksetzen;
 })();
 /* ---------- Fußzeile ---------- */
 document.querySelectorAll(".fuss [data-fgo]").forEach(b => b.onclick = () => { state.view = b.dataset.fgo; state.wissen = null; render(); window.scrollTo({top:0}); });
