@@ -1359,14 +1359,17 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .icsteps span{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#F3ECE2;display:grid;place-items:center;font-family:var(--serif);font-size:15px}
 .icsteps p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
 .icsteps b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
-.icform{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:18px;display:grid;gap:8px}
+.icform{background:#FFFDFA;border:1.6px solid #382F2E;border-radius:20px;padding:22px 22px 20px;display:grid;gap:10px}
 .icrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
-.iclab{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.iclab{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:700}
 .iclab i{text-transform:none;letter-spacing:0;font-style:normal;font-size:12.5px}
-.icform textarea,.icform input{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;resize:vertical}
+.icform textarea,.icform input{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1.3px solid rgba(56,47,46,.45);border-radius:12px;padding:12px 14px;resize:vertical}
 .icform textarea:focus,.icform input:focus{outline:2px solid var(--ink);outline-offset:1px}
 .icbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
 .icchips{display:flex;flex-wrap:wrap;gap:6px}
+.icform .icchips .chip{font-weight:600;border:1.4px solid #382F2E !important;color:#382F2E;padding:8px 15px;background:#FFFDFA}
+.icform .icchips .chip[aria-pressed="true"]{color:#F3ECE2;background:#382F2E}
+.iclab i{font-weight:400;color:var(--muted)}
 .ictreffer{display:flex;gap:14px;align-items:center;padding:12px 16px}
 .ictreffer img{flex:none;width:64px;height:84px;object-fit:contain;background:#F8F3EC;border-radius:10px;padding:6px}
 .ictreffer>div{display:grid;gap:1px}
@@ -1406,7 +1409,10 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .icsuch{margin:26px 0 8px;padding:16px 18px;border:1px dashed var(--line);border-radius:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
 .icsuch p{margin:0;font-size:15px}
 .icband{position:relative;z-index:3;margin:52px 0 0;background:radial-gradient(120% 170% at 88% 0%,#34312F 0%,#1A1817 42%,#0F0E0E 100%);color:#F3ECE2;border-radius:26px;padding:38px 40px;display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:24px;align-items:center;overflow:hidden;box-shadow:0 34px 70px -34px rgba(0,0,0,.6)}
-.icband::before{content:"";position:absolute;inset:0;border-radius:26px;padding:1.2px;background:linear-gradient(120deg,rgba(233,235,238,.75),rgba(142,147,153,.12) 38%,rgba(185,189,195,.08) 62%,rgba(233,235,238,.6));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+@property --icw{syntax:"<angle>";inherits:false;initial-value:0deg}
+.icband::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--icw),#8E9399 0deg,#E9EBEE 40deg,#FFFFFF 60deg,#B9BDC3 95deg,#6F7479 170deg,#A3A8AE 230deg,#F2F3F5 300deg,#8E9399 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;animation:icGlanz 9s linear infinite}
+@keyframes icGlanz{to{--icw:360deg}}
+@media (prefers-reduced-motion: reduce){ .icband::before{animation:none} }
 .icband::after{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-200px;border-radius:50%;background:radial-gradient(closest-side,rgba(233,235,238,.13),transparent);pointer-events:none}
 .icband h2{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.08;margin:4px 0 10px;text-transform:uppercase;color:#F3ECE2}
 .icband h2 .hk{text-transform:none}
