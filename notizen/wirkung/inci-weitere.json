@@ -85,52 +85,108 @@
   "inci": "Aqua, Water, Eau, Sodium Cocoyl Isethionate, Sodium Lauroyl Methyl Isethionate, Cocamide MIPA, Dimethicone, Propanediol, Polyglyceryl-3 Laurate, Sodium Lauroyl Sarcosinate, Pentylene Glycol, Glycerin, Acrylates, Beheneth-25 Methacrylate Copolymer, Parfum, Fragrance, Glycol Distearate, Sodium Lauroamphoacetate, Amodimethicone, Sodium PCA, Guar Hydroxypropyltrimonium Chloride, Sorbeth-230 Tetraoleate, Divinyldimethicone, Dimethicone Copolymer, Caprylyl Glycol, Sodium Benzoate, Chlorphenesin, Polyquaternium-113, Trisodium Ethylenediamine Disuccinate, Ethylhexylglycerin, Polyquaternium-7, Sodium Phytate, Quaternium-95, Decyl Glucoside, Panthenol, Vaccinium Macrocarpon (Cranberry) Fruit Extract, Simmondsia Chinensis (Jojoba) Seed Oil, Laureth-23, Laureth-4, Cetrimonium Chloride, Dimethiconol, Trideceth-15, Trideceth-3, Sorbitan Laurate, Hydrolyzed Vegetable Protein, Lauryl Glucoside, Phenoxyethanol, Fumaric Acid, Rosmarinus Officinalis (Rosemary) Leaf Extract, C12-13 Alketh-23, C12-13 Alketh-3, Salicylic Acid, Citrullus Lanatus (Watermelon) Seed Oil, Litchi Chinensis Fruit Extract, Vaccinium Macrocarpon (Cranberry) Seed Oil, Stearic Acid, Leontopodium Alpinum Flower, Leaf Extract, Acetic Acid, Glyceryl Caprylate, Sodium Metabisulfite, Citric Acid, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Potassium Hydroxide, Hexyl Cinnamal, Limonene, Linalool."
  },
  "shampoo|Amika|Mirrorball Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "amika: Mirrorball Shine Antioxidant Shampoo 275 ml",
+  "url": "https://www.hagel-shop.de/products/amika-mirrorball-shine-antioxidant-shampoo-275-ml",
+  "score": 1.0,
+  "inci": "Water/Aqua/Eau, Sodium Cocoyl Isethionate, Cocamidopropyl Hydroxysultaine, Cocamidopropyl Betaine, Glycerin, Cocamide MIPA, Hippophae Rhamnoides (Sea Buckthorn/Argousier) Fruit/Seed Oil, Pentaclethra Macroloba Seed Oil, Rubus Idaeus (Red Raspberry/Framboise Rouge) Leaf Extract, Magnolia Officinalis (Magnolia) Bark Extract, Zingiber Officinale (Ginger/Gingembre) Root Extract, Vitis Vinifera (Grape/Raisin) Leaf Extract, Wine Extract, Lactobacillus Ferment, Caprylic/Capric Triglyceride, Glycol Distearate, Polyquaternium-7, Guar Hydroxypropyltrimonium Chloride, Tetrasodium Glutamate Diacetate, Citric Acid, Propylene Glycol, Phenoxyethanol, Ethylhexylglycerin, Sodium Chloride, Sodium Benzoate, Fragrance/Parfum, Benzyl Benzoate, Hydroxycitronellal, Limonene, Tetramethyl Acetyloctahydronaphthalenes"
  },
  "shampoo|Kérastase|Gloss Absolu Bain Hydra-Glaze": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Gloss Absolu Bain Hydra-Glaze Shampoo",
+  "url": "https://www.hagel-shop.de/products/kerastase-gloss-absolu-bain-hydra-glaze-shampoo",
+  "score": 1.0,
+  "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • LACTIC ACID • ARGININE • SALICYLIC ACID • SODIUM HYDROXIDE • TRIETHYL CITRATE • PARFUM / FRAGRANCE • COCAMIDOPROPYL HYDROXYSULTAINE • DECYL GLUCOSIDE • SODIUM CHLORIDE • SODIUM BENZOATE • LIMONENE • HYDROXYPROPYL GUAR\r\nHYDROXYPROPYLTRIMONIUM CHLORIDE • BRASSICAMIDOPROPYL DIMETHYLAMINE • GLYCERYL OLEATE • CITRIC ACID • LINALOOL • CITRONELLOL • HEXYL CINNAMAL • ALPHA-ISOMETHYL IONONE • CITRAL • GLYCOLIC ACID • SODIUM HYALURONATE • CAPRYLIC/CAPRIC TRIGLYCERIDE • LECITHIN • TOCOPHEROL • ASCORBYL PALMITATE\r\n• HYDROGENATED PALM GLYCERIDES CITRATE • ROSA CANINA FLOWER EXTRACT (F.I.L. N70053407/1)"
  },
  "shampoo|Redken|Acidic Color Gloss Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken Acidic Color Gloss Shampoo",
+  "url": "https://www.hagel-shop.de/products/redken-acidic-color-gloss-shampoo",
+  "score": 1.0,
+  "inci": "Value1: AQUA / WATER • SODIUM C14-16 OLEFIN SULFONATE • GLYCERIN • COCAMIDOPROPYL BETAINE • GLYCOL DISTEARATE • PEG-150 DISTEARATE • SODIUM LAUROYL SARCOSINATE • PROPYLENE GLYCOL • COCAMIDE MIPA • HEXYLENE GLYCOL • PARFUM / FRAGRANCE • CITRIC ACID • SODIUM HYDROXIDE • SODIUM CHLORIDE • SODIUM BENZOATE • PEG-55 PROPYLENE GLYCOL OLEATE • COCO-BETAINE • HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • PEG/PPG-4/12 DIMETHICONE • SALICYLIC ACID • CARBOMER • AMODIMETHICONE • LIMONENE • BENZOIC ACID • POLYQUATERNIUM-7 • TOCOPHEROL • LINALOOL • BENZYL SALICYLATE • BENZYL ALCOHOL • ALPHA-ISOMETHYL IONONE • TRIDECETH-6 • GLYCINE SOJA OIL / SOYBEAN OIL • ARGININE • SERINE • GLUTAMIC ACID • CETRIMONIUM CHLORIDE • PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE"
  },
  "shampoo|L'Oréal Professionnel|Keratin Alpha Sleek Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "L'Oréal Professionnel Paris Keratin Alpha Sleek Shampoo",
+  "url": "https://www.hagel-shop.de/products/l-oreal-professionnel-paris-keratin-alpha-sleek-shampoo",
+  "score": 1.0,
+  "inci": "1261080 B - INGREDIENTS:  AQUA / WATER / EAU • SODIUM COCOYL ISETHIONATE • DISODIUM LAURETH SULFOSUCCINATE • GLYCOL DISTEARATE • SODIUM LAURYL SULFOACETATE • SODIUM LAUROYL SARCOSINATE • GLYCERIN • PARFUM / FRAGRANCE • DECYL GLUCOSIDE • COCAMIDOPROPYL BETAINE • COCO-BETAINE • PPG-5-CETETH-20 • DIVINYLDIMETHICONE/DIMETHICONE COPOLYMER • AMODIMETHICONE • SODIUM HYDROXIDE • CITRIC ACID • POLYQUATERNIUM-7 • CARBOMER • POLYQUATERNIUM-10 • SODIUM BENZOATE • SODIUM CHLORIDE • PEG-55 PROPYLENE GLYCOL OLEATE • PROPYLENE GLYCOL • SALICYLIC ACID • BENZOIC ACID • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • POLYSORBATE 21 • LINALYL ACETATE • CARVONE • CITRUS LIMON PEEL OIL • TRIDECETH-6 • LIMONENE • COUMARIN • LINALOOL • CITRUS AURANTIUM BERGAMIA PEEL OIL • BUTYLENE GLYCOL • C12-13 ALKETH-23 • C12-13 ALKETH-3 • PINENE • CETRIMONIUM CHLORIDE • JUNIPERUS VIRGINIANA OIL • PHENOXYETHANOL • SODIUM LACTATE • TAURINE • POLYSORBATE 20 • PALMITOYL TRIPEPTIDE-1 • PALMITOYL TETRAPEPTIDE-7 (F.I.L. N70058541/2)."
  },
  "shampoo|Keune|Radiant Gloss Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Keune Care Radiant Gloss Shampoo 300 ml",
+  "url": "https://www.hagel-shop.de/products/keune-care-radiant-gloss-shampoo-300-ml",
+  "score": 1.0,
+  "inci": "Aqua (Water), Sodium Laureth Sulfate,Cocamidopropyl Betaine, PropyleneGlycol, Coco-Glucoside, Glycerin, DecylGlucoside, Glycol Distearate, PEG-40Hydrogenated Castor Oil, Citric Acid,Glyceryl Laurate, Cetrimonium Chloride,Sodium Chloride, Sodium Benzoate,Parfum (Fragrance), Glyceryl Oleate,Polyquaternium-10, Panthenol, Laureth-2, Polyquaternium-7, Triolein,Dipropylene Glycol, SiliconeQuaternium-18, Helianthus Annuus(Sunflower) Seed Extract, HydrolyzedRice Protein, Trideceth-12, Trideceth-6,Phenoxyethanol, Adansonia DigitataSeed Oil, Dendrobium PhalaenopsisFlower Extract, Tocopherol, Citrus Limon(Lemon) Peel Oil, Hexyl Cinnamal,Limonene, Linalool, TetramethylAcetyloctahydronaphthalenes.​"
  },
  "shampoo|Redken|All Soft Mega Curls Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken All Soft Mega Curls Shampoo",
+  "url": "https://www.hagel-shop.de/products/redken-all-soft-mega-curls-shampoo",
+  "score": 1.0,
+  "inci": "Value3:  AQUA / WATER • SODIUM C14-16 OLEFIN SULFONATE • COCAMIDOPROPYL BETAINE • LAURETH-5 CARBOXYLIC ACID • SODIUM CHLORIDE • GLYCERIN • CAPRYLYL/CAPRYL GLUCOSIDE • PARFUM / FRAGRANCE • SODIUM HYDROXIDE • CITRIC ACID • HEXYLENE GLYCOL • SODIUM BENZOATE • PEG-55 PROPYLENE GLYCOL OLEATE • PROPYLENE GLYCOL • ALOE BARBADENSIS LEAF JUICE POWDER • SALICYLIC ACID • POLYQUATERNIUM-67 • BENZOIC ACID • BENZYL ALCOHOL • COUMARIN • LINALOOL • BENZYL BENZOATE • HEXYL CINNAMAL • LIMONENE"
  },
  "shampoo|Kérastase|Gloss Absolu Bain Crème Hydra-Glaze": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Gloss Absolu Bain Hydra-Glaze Shampoo",
+  "url": "https://www.hagel-shop.de/products/kerastase-gloss-absolu-bain-hydra-glaze-shampoo",
+  "score": 0.83,
+  "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • LACTIC ACID • ARGININE • SALICYLIC ACID • SODIUM HYDROXIDE • TRIETHYL CITRATE • PARFUM / FRAGRANCE • COCAMIDOPROPYL HYDROXYSULTAINE • DECYL GLUCOSIDE • SODIUM CHLORIDE • SODIUM BENZOATE • LIMONENE • HYDROXYPROPYL GUAR\r\nHYDROXYPROPYLTRIMONIUM CHLORIDE • BRASSICAMIDOPROPYL DIMETHYLAMINE • GLYCERYL OLEATE • CITRIC ACID • LINALOOL • CITRONELLOL • HEXYL CINNAMAL • ALPHA-ISOMETHYL IONONE • CITRAL • GLYCOLIC ACID • SODIUM HYALURONATE • CAPRYLIC/CAPRIC TRIGLYCERIDE • LECITHIN • TOCOPHEROL • ASCORBYL PALMITATE\r\n• HYDROGENATED PALM GLYCERIDES CITRATE • ROSA CANINA FLOWER EXTRACT (F.I.L. N70053407/1)"
  },
  "shampoo|Kérastase|Elixir Ultime Le Bain": {
   "treffer": null
  },
  "shampoo|Amika|Hydro Rush Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "amika: Hydro Rush Intense Moist Shampoo 275 ml",
+  "url": "https://www.hagel-shop.de/products/amika-hydro-rush-intense-moist-shampoo-275-ml",
+  "score": 1.0,
+  "inci": "Water/Eau/Aqua, Sodium Cocoyl Isethionate, Cocamidopropyl Hydroxysultaine, Coco-Glucoside, Glycol Distearate, Squalane, Hippophae Rhamnoides (Sea Buckthorn/Argousier) Fruit/Seed Oil, Brassica Campestris (Rapeseed/Colza) Seed Oil, Sesamum Indicum (Sesame/Sésame) Seed Oil, Cocos Nucifera (Coconut/Nuix de Coco) Oil, Sodium Hyaluronate, Polyglutamic Acid, Spirulina Platensis (Blue Green Algae/Algues Bleu-Verte) Extract, Cocos Nucifera (Coconut/Nuix de Coco) Water, Emblica Officinalis (Gooseberry/Groseille à Maquereau) Fruit Extract, Curcuma Longa (Turmeric) Root Extract, Leuconostoc/Radish Root Ferment Filtrate, Cocamide MIPA, Coconut Acid, Polyester-11, Guar Hydroxypropyltrimonium Chloride, Polyquaternium-7, Polyquaternium-73, Sodium Methyl Cocoyl Taurate, Tetrasodium Glutamate Diacetate, Sodium Benzoate, Sodium Isethionate, Sodium Hydroxide, Sodium Chloride, Citric Acid, Potassium Sorbate, Phenoxyethanol, Fragrance/Parfum, Benzyl Benzoate, Hydroxycitronellal, Limonene"
  },
  "shampoo|Coco & Eve|Like a Virgin Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Coco & Eve Like A Virgin Bond Building Pre-Shampoo Treatment 150 ml",
+  "url": "https://www.hagel-shop.de/products/coco-eve-like-a-virgin-bond-building-pre-shampoo-treatment-150-ml",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Cetearyl Alcohol, Cetrimonium Chloride, Butylene Glycol, Stearamidopropyl Dimethylamine, Cocos Nucifera (Coconut) Oil/Cocos Nucifera Oil, Persea Gratissima (Avocado) Oil/Persea Gratissima Oil, Prunus Armeniaca (Apricot) Kernel Oil/Prunus Armeniaca Kernel Oil, Punica Granatum Seed Oil, Passiflora Edulis Seed Oil, Dinatrium PEG-12 Dimethicone Sulfosuccinate, 4-PCA Dimethicone, Aminomethyl Propanol, Glycerin, Behentrimonium Chloride, Cetrimonium Methosulfate, Ethylhexyl Palmitate, Quaternium-91, Tetrasodium Glutamate Diacetate, Sodium Benzoate, Parfum/Duft, Kaliumsorbat, Milchsäure."
  },
  "shampoo|Oribe|Eternal Curls Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Oribe Eternal Curls Moisturizing Shampoo 250 ml",
+  "url": "https://www.hagel-shop.de/products/oribe-eternal-curls-moisturizing-shampoo-250-ml",
+  "score": 1.0,
+  "inci": "\"Vitis Vinifera (Grape) Seed Oil, Olea Europaea (Olive) Fruit Oil, Ricinus Communis (Castor) Seed Oil, Helianthus\r\nAnnuus (Sunflower) Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Carthamus Tinctorius (Safflower) Seed Oil, Cocos\r\nNucifera (Coconut) Oil, Limnanthes Alba (Meadowfoam) Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Argania Spinosa\r\nKernel Oil, Prunus Armeniaca (Apricot) Kernel Oil, Persea Gratissima (Avocado) Oil, Parfum/Fragrance, Citrus Limon (Lemon)\r\nPeel Oil, Citrus Aurantium Bergamia (Bergamot) Peel Oil, Tocopherol, Citrullus Lanatus (Watermelon) Seed Oil, Ribes Nigrum\r\n(Black Currant) Seed Oil, Aqua/Water/Eau, Jasminum Officinale (Jasmine) Oil, Citric Acid, Hexamethylindanopyran, Tetramethyl\r\nAcetyloctahydronaphthalenes, Limonene, Hexyl Cinnamal, Juniperus Virginiana Oil, Pinene, Linalyl Acetate, Citral, Linalool,\r\nGeranyl Acetate, Rose Ketones.\""
  },
  "shampoo|Oribe|Hair Alchemy Resilience Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Oribe Hair Alchemy Resilience Shampoo",
+  "url": "https://www.hagel-shop.de/products/oribe-hair-alchemy-resilience-shampoo",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Sodium Cocoyl Isethionate, Sodium Lauroyl Methyl Isethionate, Caprylyl/Capryl Glucoside, Sodium C14-16 Olefin Sulfonate, Sodium Cocoyl Glycinate, Parfum/Fragrance, Disodium Cocoamphodipropionate, Lauramidopropyl Betaine, Acrylates Crosspolymer-4, Coconut Acid, Sorbeth-230 Tetraoleate, Citric Acid, Phenoxyethanol, Polyquaternium-73, Hydroxyacetophenone, Sodium Isethionate, Linoleamidopropyl PG-Dimonium Chloride Phosphate, Silicone Quaternium-22, Chlorphenesin, Sodium Methyl Isethionate, Sodium Cocoyl Glutamate, Glycol Stearate, Polyquaternium-67, Decyl Glucoside, Lauric Acid, Propylene Glycol, Potassium Hydroxide, Panthenol, Sodium Sulfate, Dipropylene Glycol, Polyglyceryl-3 Caprate, Tetrasodium Glutamate Diacetate, Glyceryl Caprylate, Polyglyceryl-6 Oleate, Sorbitan Laurate, Oryza Sativa (Rice) Bran Extract, Glycerin, Glycol Distearate, Salvia Hispanica Seed Extract, Sodium Laurate, Cocamidopropyl Betaine, Quaternium-95, Cinnamidopropyltrimonium Chloride, Sodium Benzoate, Sodium Surfactin, Helianthus Annuus (Sunflower) Extract, Sodium PCA, Propanediol, Sodium Lactate, Lactobacillus/Arundinaria Gigantea Leaf Ferment Filtrate, Litchi Chinensis Fruit Extract , Palmitamidopropyltrimonium Chloride, Sodium Hydroxide, Arginine, Butylene Glycol, Hydrolyzed Rice Protein, Galactoarabinan, Tocopheryl Acetate, Aspartic Acid, Rosmarinus Officinalis (Rosemary) Leaf Extract, Tocopherol, Sodium Acetate, PCA, Trehalose, Xylitol, Leontopodium Alpinum Extract, Panthenyl Hydroxypropyl Steardimonium Chloride, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Camellia Sinensis Leaf Extract, Leuconostoc/Radish Root Ferment Filtrate, Arctium Lappa Root Extract, Hedera Helix (Ivy) Extract, Trigonella Foenum-Graecum Seed Extract, Glycine, Sodium Phosphate, Alanine, Citrullus Lanatus (Watermelon) Seed Oil, Dimethiconol Meadowfoamate, Isopropyl Alcohol, Pentylene Glycol, Serine, Valine, Isoleucine, Proline, Threonine, Potassium Sorbate, Eclipta Prostrata Extract, Lonicera Japonica (Honeysuckle) Flower Extract, Sodium Acetylated Hyaluronate, Caprylyl Glycol, Sodium Hyaluronate, Histidine, Phenylalanine, Ethylhexylglycerin, Disodium EDTA, Sodium Hyaluronate Crosspolymer, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Hydrolyzed Sodium Hyaluronate, Limonene, Hexyl Cinnamal."
  },
  "shampoo|Gisou|Honey Gloss Shampoo": {
   "treffer": null
  },
  "shampoo|Redken|Acidic Bonding Concentrate Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken Acidic Bonding Concentrate Shampoo 300 ml",
+  "url": "https://www.hagel-shop.de/products/redken-acidic-bonding-concentrate-shampoo-300-ml",
+  "score": 1.0,
+  "inci": "AQUA / WATER / EAU DECYL GLUCOSIDE SODIUM COCOYL ISETHIONATE COCAMIDOPROPYL BETAINE CITRIC ACID SODIUM HYDROXIDE PANTHENOL GLYCERIN DIMETHICONE PEG-150 DISTEARATE PPG-5-CETETH-20 SODIUM BENZOATE SODIUM CHLORIDE PEG-55 PROPYLENE GLYCOL OLEATE PROPYLENE GLYCOL CARBOMER PARFUM / FRAGRANCE COCO-CAPRYLATE/CAPRATE POLYQUATERNIUM-67 SALICYLIC ACID AMODIMETHICONE SODIUM PHYTATE GLYCOL DISTEARATE COCO-BETAINE ACRYLATES/BEHENETH-25 METHACRYLATE COPOLYMER LIMONENE TRIDECETH-6"
  },
  "shampoo|Maria Nila|True Soft Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Maria Nila True Soft Shampoo",
+  "url": "https://www.hagel-shop.de/products/maria-nila-true-soft-shampoo",
+  "score": 1.0,
+  "inci": "Oryza Sativa (Rice) Starch, Aluminum Starch Octenylsuccinate, Distarch Phosphate, Silica, Cetrimonium Chloride, Parfum, Fragrance"
  },
  "shampoo|Olaplex|No.4 Bond Maintenance Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Olaplex No. 4 Bond Maintenance Shampoo",
+  "url": "https://www.hagel-shop.de/products/olaplex-no-4-bond-maintenance-shampoo",
+  "score": 1.0,
+  "inci": "Water, Aqua, Eau, Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Hydroxysultaine, Potassium Cocoyl Glycinate, Disodium Cocoyl Glutamate, Potassium Cocoate, Sodium Lauroyl Sarcosinate, Decyl Glucoside, Glycereth-26, Bis-Aminopropyl Diglycol Dimaleate, Cocamidopropylamine Oxide, Sodium Chloride, Glycol Distearate, Sodium Cocoyl Glutamate, Methyl Gluceth-20, Acrylates Copolymer, Disodium Laureth Sulfosuccinate, PEG-120 Methyl Glucose Dioleate, Amodimethicone, Citric Acid, Polyquaternium-10, Sodium Lauryl Sulfoacetate, Ethylhexylglycerin, Divinyldimethicone, Dimethicone Copolymer, Polyquaternium-11, Guar Hydroxypropyltrimonium Chloride, Trisodium Ethylenediamine Disuccinate, C11-15 Alketh-7, Glycerin, Laureth-9, Trideceth-12, Tetrasodium Iminodisuccinate, Panthenol, C12-13 Alketh-23, C12-13 Alketh-3, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Sodium Hydroxide, Helianthus Annuus (Sunflower) Seed Oil, Disodium EDTA, Tocopherol, Prunus Armeniaca (Apricot) Kernel Oil, Pseudozyma Epicola, Camellia Sinensis Seed Oil Ferment Extract Filtrate, Argania Spinosa Kernel Oil, Quaternium-95, Helianthus Annuus (Sunflower) Seed Extract, Propanediol, PEG-8, Origanum Vulgare Leaf Extract, Euterpe Oleracea Fruit Extract, Candida Bombicola, Glucose, Methyl Rapeseedate Ferment, Morinda Citrifolia Fruit Extract, PEG-8, SMDI Copolymer, Sodium Hyaluronate, Palmitoyl Myristyl Serinate, Sodium Polyacrylate, Arctium Lappa Root Extract, Musa Sapientum (Banana) Fruit Extract, Punica Granatum Fruit Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Potassium Sorbate, Chlorphenesin, Sodium Benzoate, Phenoxyethanol, Fragrance (Parfum), Citral, Hexyl Cinnamal, Limonene"
  },
  "shampoo|OUAI|Thick Hair Shampoo": {
   "treffer": null
@@ -142,13 +198,25 @@
   "treffer": null
  },
  "shampoo|Kérastase|Specifique Bain Divalent": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Specifique Bain Divalent 250 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-specifique-bain-divalent-250-ml-5819851",
+  "score": 1.0,
+  "inci": "Sodium Laureth Sulfate \r\n Tea-Lauryl Sulfate \r\n Cocamide Mipda \r\n Disodium Cocoamphodiacetate \r\n Glycol Distearate \r\n Hexylene Glycol \r\n Sodium Chloride \r\n Citric Acide \r\n Sodium Benzoate \r\n Sodium Hydroxide \r\n Capryloyl Glycine \r\n Polyquaternium-11 \r\n Salicylic Acid \r\n Carbomer \r\n Pyridoxine HCI \r\n Menthoxypropanediol \r\n Guar Hydroxypropyltrimonium Chloride \r\n Hexyl Cinnamal \r\n Linalool \r\n Hydroxycitronellal \r\n Citronellol \r\n Benzyl Alcohol \r\n Fumaric Acid \r\n Parfum / Fragrance"
  },
  "shampoo|Redken|Amino-Mint Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken Amino Mint Shampoo 300 ml",
+  "url": "https://www.hagel-shop.de/products/redken-amino-mint-shampoo-300-ml",
+  "score": 1.0,
+  "inci": "AQUA / WATER / EAU, SODIUM LAURETH SULFATE, CITRIC ACID, COCAMIDOPROPYL BETAINE, SODIUM HYDROXIDE, SODIUM CHLORIDE, GLYCINE, PROPYLENE GLYCOL, PARFUM / FRAGRANCE, SODIUM BENZOATE, HEXYLENE GLYCOL, POLYQUATERNIUM-10, SALICYLIC ACID, MENTHOL, LIMONENE, LINALOOL, PENTYLENE GLYCOL, MENTHA PIPERITA EXTRACT / PEPPERMINT EXTRACT"
  },
  "shampoo|L'Oréal Professionnel|Scalp Advanced Anti-Oiliness": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "L'Oréal Professionnel Paris Série Expert Scalp Advanced Anti-Oiliness Dermo-Purifier Shampoo 300 ml",
+  "url": "https://www.hagel-shop.de/products/l-oreal-professionnel-paris-serie-expert-scalp-advanced-anti-oiliness-dermo-purifier-shampoo-300-ml",
+  "score": 1.0,
+  "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • CITRIC ACID • COCO-BETAINE • SODIUM CHLORIDE • AMMONIUM HYDROXIDE • HEXYLENE GLYCOL • SODIUM BENZOATE • SODIUM HYDROXIDE • SALICYLIC ACID • POLYQUATERNIUM-10 • LINALOOL • COUMARIN • LIMONENE • PARFUM / FRAGRANCE"
  },
  "shampoo|Redken|Volume Injection Shampoo": {
   "treffer": null
@@ -160,46 +228,86 @@
   "treffer": null
  },
  "shampoo|Oribe|Shampoo for Magnificent Volume": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Oribe Shampoo For Magnificent Volume 250 ml",
+  "url": "https://www.hagel-shop.de/products/oribe-shampoo-for-magnificent-volume-250-ml",
+  "score": 1.0,
+  "inci": "Aqua, Water, Eau, Sodium Lauroyl Methyl Isethionate, Sodium Lauroyl Sarcosinate, Sodium Cocoyl Isethionate, Lauroyl, Myristoyl Methyl Glucamide, Acrylates Crosspolymer-4, Polyglyceryl-3 Laurate, Polysorbate 20, Sorbeth-230 Tetraoleate, Parfum, Fragrance, Capryloyl, Caproyl Methyl Glucamide, Sodium Lauroamphoacetate, Pentylene Glycol, Propanediol, Silicone Quaternium-8, Coconut Acid, Trideceth-10, Cocamide MIPA, Caprylyl Glycol, Propylene Glycol, Hydroxyacetophenone, Decyl Glucoside, Sodium Benzoate, Sodium Isethionate, Trisodium Ethylenediamine Disuccinate, Panthenol, Ethylhexylglycerin, Sorbitan Laurate, Sodium Phytate, BHT, Rice Oil Glycereth-8 Esters, Quaternium-95, Cinnamidopropyltrimonium Chloride, Glycerin, Citric Acid, Sorbic Acid, Sorbitol, Maltodextrin, Galactoarabinan, Hydrolyzed Vegetable Protein, Salvia Hispanica Seed Extract, Trehalose, Xylitol, Camellia Sinensis Leaf Extract, Alcohol, Oryza Sativa (Rice) Seed Protein, Sodium Phosphate, Citrullus Lanatus (Watermelon) Seed Oil, Phytic Acid, Oryza Sativa (Rice) Extract, Gluconolactone, Caesalpinia Spinosa Fruit Extract, Serenoa Serrulata Fruit Extract, Butylene Glycol, Helianthus Annuus (Sunflower) Sprout Extract, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Hydrolyzed Lupine Protein, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Disteareth-75 IPDI, Leontopodium Alpinum Extract, Phenoxyethanol, Calcium Gluconate, Sodium Hydroxide, Potassium Sorbate, Disodium EDTA, Litchi Chinensis Pericarp Extract, Moringa Oleifera Seed Extract, Disodium Phosphate, Limonene, Hexyl Cinnamal."
  },
  "shampoo|OUAI|Fine Hair Shampoo": {
   "treffer": null
  },
  "shampoo|Maria Nila|Pure Volume Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Maria Nila Pure Volume Shampoo",
+  "url": "https://www.hagel-shop.de/products/maria-nila-pure-volume-shampoo",
+  "score": 1.0,
+  "inci": "Aqua, Water, Eau, Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Betaine, Disodium Laureth Sulfosuccinate, Sodium Lauryl Sulfoacetate, Glycerin, Panthenol, Helianthus Annuus (Sunflower) Seed Oil, Ethyltrimonium Chloride Methacrylate, Hydrolyzed Wheat Protein Copolymer, Phyllostachys Nigra Leaf Extract, Hydrolyzed Wheat Protein, Amodimethicone, Morpholinomethyl Silsesquioxane Copolymer, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Trideceth-5, PEG-150 Pentaerythrityl Tetrastearate, Quaternium-95, PPG-2 Hydroxyethyl Cocamide, Guar Hydroxypropyltrimonium Chloride, Propanediol, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Sorbate, Disodium EDTA, Sodium Chloride, Lactic Acid, Ethylhexylglycerin, Citric Acid, Benzyl Alcohol, Linalool, Hexyl Cinnamal, Benzyl Salicylate, Citronellol, Phenoxyethanol, Parfum, Fragrance, CI 16035, Red 40, CI 42090, Blue 1"
  },
  "shampoo|Olaplex|No.4 FINE Bond Maintenance Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Olaplex No. 4 FINE Bond Maintenance Shampoo",
+  "url": "https://www.hagel-shop.de/products/olaplex-no-4-fine-bond-maintenance-shampoo",
+  "score": 1.0,
+  "inci": "Aqua, Water, Eau, Sodium Cocoyl Alaninate, Sodium Cocoyl Isethionate, Coco-Glucoside, Lauryl Glucoside, Propanediol, Cocamidopropyl Hydroxysultaine, Glycerin, Acrylates Copolymer, Polyquaternium-80, Bis-Aminopropyl Diglycol Dimaleate, Phenoxyethanol, Sodium Chloride, Parfum, Fragrance, Coconut Acid, Cocamide MIPA, Guar Hydroxypropyltrimonium Chloride, Polyglyceryl-4 Caprate, Polyglyceryl-6 Caprylate, Polyimide-1, Chlorphenesin, Panthenol, Xanthan Gum, Polyquaternium-7, Cetrimonium Chloride, Ethylhexylglycerin, Oryza Sativa (Rice) Bran Extract, Hydrolyzed Quinoa, Trisodium Ethylenediamine Disuccinate, Sarcosine, Pisum Sativum (Pea) Seed Extract, Helianthus Annuus (Sunflower) Extract, Propylene Glycol, Sclerotium Gum, 1, 2-Hexanediol, Rosmarinus Officinalis (Rosemary) Leaf Extract, Tocopherol, Sodium Hydroxide, Algin, Sodium Hyaluronate, Sodium Benzoate, Benzyl Alcohol, Tetrasodium Glutamate Diacetate, Potassium Sorbate, Caesalpinia Spinosa Fruit Extract, Helianthus Annuus (Sunflower) Sprout Extract, Citric Acid, Hexyl Cinnamal, Limonene, Citral, Yellow 5 (CI 19140), Yellow 6 (CI 15985)."
  },
  "shampoo|Coco & Eve|Boost Therapy Shampoo": {
   "treffer": null
  },
  "shampoo|Redken|Acidic Grow Full Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken Acidic Grow Full System Shampoo 300 ml",
+  "url": "https://www.hagel-shop.de/products/redken-acidic-grow-full-system-shampoo-300-ml",
+  "score": 1.0,
+  "inci": "1400508RK14 - INGREDIENTS:  AQUA / WATER / EAU • SODIUM LAURETH SULFATE • COCAMIDOPROPYL BETAINE • SODIUM CHLORIDE • PROPYLENE GLYCOL • PARFUM / FRAGRANCE • CITRIC ACID • COCAMIDE MEA • SODIUM BENZOATE • SODIUM HYDROXIDE • HEXYLENE GLYCOL • BIFIDA FERMENT LYSATE • SACCHAROMYCES/RICE FERMENT FILTRATE • SODIUM LAURYL SULFATE • HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE • CAFFEINE • AZELAIC ACID • LINALYL ACETATE • CARVONE • PENTYLENE GLYCOL • LINALOOL • LIMONENE • CITRUS LIMON PEEL OIL • CITRUS AURANTIUM BERGAMIA PEEL OIL • CITRAL • CITRUS AURANTIUM PEEL OIL • PINENE • PHENOXYETHANOL • SALICYLIC ACID (F.I.L. N70058502/3)."
  },
  "shampoo|Kérastase|Nutritive Bain Satin": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Nutritive Bain Satin 250 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-nutritive-bain-satin-250-ml",
+  "score": 1.0,
+  "inci": "AQUA / WATER ●SODIUM LAURETH SULFATE ●SODIUM LAURYL SULFATE●DIMETHICONE●COCAMIDOPROPYLBETAINE ●SODIUM CHLORIDE ●GLYCOL DISTEARATE ●GLYCERIN ●CITRIC ACID ●PPG-5-CETETH-20 ●SODIUM BENZOATE ●SODIUM HYDROXIDE ●ISOSTEARYL NEOPENTANOATE ●CARBOMER ●COCO-BETAINE ●SALICYLIC ACID ●PANTHENOL ●NIACINAMIDE ●ASCORBYL GLUCOSIDE ●BUTYLENE GLYCOL ●GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE ●LINALOOL ●LIMONENE ●HYDROLYZED WHEAT PROTEIN ●HYDROLYZED CORN PROTEIN ●HYDROLYZED SOY PROTEIN ●\r\nIRIS FLORENTINA ROOT EXTRACT ●FUMARIC ACID ●PHENOXYETHANOL ●PARFUM / FRAGRANCE ●"
  },
  "shampoo|Wella Professionals|Ultimate Repair Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Wella Professionals Ultimate Repair Shampoo",
+  "url": "https://www.hagel-shop.de/products/k-12110281-wella-professionals-ultimate-repair-shampoo",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Sodium Lauryl Sulfate, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Glycol Distearate, Dimethicone, Cocamide MEA, Parfum/Fragrance, Panthenol, Sodium Benzoate, Malic Acid, Guar Hydroxypropyltrimonium Chloride, Sodium Chloride, Salicylic Acid, Tocopheryl Acetate, Citric Acid, Sodium Hydroxide, Tetrasodium EDTA, Trisodium Ethylenediamine Disuccinate, Glycerin, Methylparaben, Histidine, Linalool, Citronellol, Hydrochloric Acid, Oleic Acid, Squalane, Glyceryl Oleate, Magnesium Nitrate, Methylchloroisothiazolinone, Magnesium Chloride, Sodium Citrate, Methylisothiazolinone, Sodium Xylenesulfonate, Lecithin, Ascorbyl Palmitate, Tocopherol, Hydrogenated Palm Glycerides Citrate."
  },
  "shampoo|Vichy|Dercos Ultra Apaisant": {
   "treffer": null
  },
  "shampoo|Oribe|Serene Scalp Balancing Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Oribe Serene Scalp Balancing Shampoo 250 ml",
+  "url": "https://www.hagel-shop.de/products/oribe-serene-scalp-balancing-shampoo-250-ml",
+  "score": 1.0,
+  "inci": "Aqua, Water, Eau, Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Betaine, Glycerin, Salicylic Acid, Acrylates Copolymer, Disodium Laureth Sulfosuccinate, Sodium Lauroyl Sarcosinate, Citrullus Lanatus (Watermelon) Fruit Extract, Litchi Chinensis Fruit Extract, Leontopodium Alpinum Extract, Biotin, Niacinamide, Panthenol, Tocopheryl Acetate, Vaccinium Myrtillus Fruit Extract, Saccharum Officinarum (Sugarcane) Extract, Citrus Aurantium Dulcis (Orange) Fruit Extract, Citrus Limon (Lemon) Fruit Extract, Acer Saccharum (Sugar Maple) Extract, Acacia Seyal Gum Extract, Pisum Sativum (Pea) Sprout Extract, Hydrolyzed Quinoa, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Ascorbic Acid, Aspartic Acid, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Sodium PCA, PCA, Capryloyl, Caproyl Methyl Glucamide, Polysorbate 20, PEG-8 Laurate, Potassium Hydroxide, Guar Hydroxypropyltrimonium Chloride, Bis-Cetearyl Amodimethicone, Linoleamidopropyl PG-Dimonium Chloride Phosphate, Silicone Quaternium-22, Cetyl Triethylmonium Dimethicone PEG-8 Succinate, Laureth-4, Polyglyceryl-3 Caprate, Quaternium-95, PEG, PPG-18, 18 Dimethicone, Ceteareth-25, Ceteareth-7, Sodium Lactate, Dipropylene Glycol, Propanediol, Tetrasodium EDTA, Synthetic Fluorphlogopite, Tin Oxide, Citric Acid, Potassium Sorbate, Sodium Benzoate, Chlorphenesin, Phenoxyethanol, Parfum, Fragrance, Hexyl Cinnamal, Limonene, Linalool, CI 77891 (Titanium Dioxide)"
  },
  "shampoo|Eucerin|DermoCapillaire Urea Shampoo": {
   "treffer": null
  },
  "shampoo|Maria Nila|Head & Hair Heal Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Maria Nila Head & Hair Heal Shampoo",
+  "url": "https://www.hagel-shop.de/products/maria-nila-head-hair-heal-shampoo",
+  "score": 1.0,
+  "inci": "Aqua, Water, Eau, Cocamidopropyl Betaine, Sodium Lauroyl Methyl Isethionate, Disodium Laureth Sulfosuccinate, Sodium Lauryl Sulfoacetate, Glycol Distearate, Biotinoyl Tripeptide-1, Oleanolic Acid, Apigenin, Acetyl Tetrapeptide-3, Trifolium Pratense (Clover) Flower Extract, Piroctone Olamine, Tocopheryl Acetate, Aloe Barbadensis Leaf Extract, Helianthus Annuus (Sunflower) Seed Oil, Guar Hydroxypropyltrimonium Chloride, Glycerin, Amodimethicone, Morpholinomethyl Silsesquioxane Copolymer, PPG-2 Hydroxyethyl Cocamide, Trideceth-5, Benzoic Acid, Dehydroacetic Acid, Dextran, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, PEG-150 Pentaerythrityl Tetrastearate, Quaternium-95, PPG-26-Buteth-26, PEG-40 Hydrogenated Castor Oil, Sodium Chloride, Propanediol, Sodium Benzoate, Butylene Glycol, Citric Acid, Potassium Sorbate, Lactic Acid, Phenoxyethanol, Parfum, Fragrance, CI 16035, Red 40, CI 19140, Yellow 5"
  },
  "shampoo|Kérastase|Symbiose Bain Crème Anti-Pelliculaire": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Symbiose Bain Crème Anti-Pelliculaire 250 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-symbiose-bain-creme-anti-pelliculaire-250-ml",
+  "score": 1.0,
+  "inci": "AQUA/ WATER / EAU • SODIUM COCOYL ISETHIONATE\r\n• DISODIUM LAURETH SULFOSUCCINATE • GLYCOL DISTEARATE • SODIUM LAURYL\r\nSULFOACETATE • SODIUM LAUROYL SARCOSINATE • GLYCERIN • PARFUM /\r\nFRAGRANCE • DECYL GLUCOSIDE • COCAMIDOPROPYL BETAINE •\r\nPPG-5-CETETH-20 • COCO-BETAINE • CITRIC ACID • SODIUM HYDROXIDE •\r\nPIROCTONE OLAMINE • SODIUM BENZOATE • SODIUM CHLORIDE • CARBOMER\r\n• PEG-55 PROPYLENE GLYCOL OLEATE • PROPYLENE GLYCOL • LIMONENE •\r\nPOLYQUATERNIUM-7 • SALICYLIC ACID • POLYQUATERNIUM-10 • BENZOIC ACID\r\n• SQUALANE • POLYSORBATE 21 • BENZYL SALICYLATE • BENZYL ALCOHOL •\r\nLINALOOL • CITRONELLOL • CITRAL • GERANIOL • ARTEMISIA UMBELLIFORMIS\r\nFLOWER EXTRACT • POTASSIUM SORBATE."
  },
  "shampoo|L'Oréal Professionnel|Scalp Advanced Anti-Discomfort": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "L'Oréal Professionnel Paris Série Expert Scalp Advanced Anti-Discomfort Dermo-Regulator Shampoo",
+  "url": "https://www.hagel-shop.de/products/l-oreal-professionnel-paris-serie-expert-scalp-advanced-anti-discomfort-dermo-regulator-shampoo",
+  "score": 1.0,
+  "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • CITRIC ACID • COCAMIDOPROPYL BETAINE • SODIUM HYDROXIDE • PROPYLENE GLYCOL • SODIUM CHLORIDE • SODIUM BENZOATE • HEXYLENE GLYCOL • POLYQUATERNIUM-10 • SALICYLIC ACID • LIMONENE • NIACINAMIDE • HYDROGENATED STARCH HYDROLYSATE • LINALOOL • HEXYL CINNAMAL • ALPHA-ISOMETHYL IONONE • BENZYL ALCOHOL • APHANIZOMENON FLOS-AQUAE EXTRACT • PHENOXYETHANOL • POTASSIUM SORBATE • PARFUM / FRAGRANCE"
  },
  "shampoo|Vichy|Dercos Anti-Schuppen K": {
   "treffer": null
@@ -214,19 +322,35 @@
   "treffer": null
  },
  "shampoo|K18|Peptide Prep Detox Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "K18 Peptide Prep Detox  Shampoo 250 ml",
+  "url": "https://www.hagel-shop.de/products/k18-peptide-prep-detox-shampoo-250ml",
+  "score": 1.0,
+  "inci": "Butane, Alcohol Denat., Isobutane, Propane, Water (Aqua) (Eau), Diisopropyl Adipate, Cetearyl Alcohol, Panthenol, Tocopheryl Acetate, Helianthus Annuus (Sunflower) Seed Extract, Helichrysum Italicum Extract, Adansonia Digitata Seed Oil, Citrus Reticulata (Tangerine) Leaf Oil, Citrus Aurantium Dulcis (Orange) Peel Oil, Citrus Limon (Lemon) Peel Oil, Orbignya Oleifera Seed Oil, Caprylyl Glycol, Hexylene Glycol, Butylene Glycol, Behentrimonium Chloride, Cetrimonium Chloride, Quaternium-91, PEG-12 Dimethicone, Myristyl Myristate, Phenoxyethanol, Ethylhexylglycerin, Citric Acid, Fragrance (Parfum), Linalool, Limonene, Geraniol"
  },
  "shampoo|OUAI|Detox Shampoo": {
   "treffer": null
  },
  "shampoo|Living Proof|Clarifying Detox Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Living proof Clarifying Detox Shampoo 236 ml",
+  "url": "https://www.hagel-shop.de/products/living-proof-clarifying-detox-shampoo-236-ml",
+  "score": 1.0,
+  "inci": "\"Water/Eau/Aqua, Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Hydroxysultaine, Sodium Methyl Cocoyl Taurate, Decyl Glucoside, Cetearyl Alcohol, Glyceryl Caprylate/Caprate, Cetyl Alcohol, Cetyl Stearate, Charcoal Powder, Betaine, Sodium Cocoyl Alaninate, Tetrasodium Glutamate Diacetate, Hydroxyphenyl Propamidobenzoic Acid,Sodium Polystyrene Sulfonate, PEG-5 Ethylhexanoate, Glyceryl Stearate, Isostearyl Isostearate, Stearic Acid, Potassium Cetyl Phosphate, Glycerin, Steareth-20, PEG-75 Stearate, Trideceth-9, Ceteth-20, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance/Parfum, Sodium Hydroxide, Propanediol, Ethylhexylglycerin, Hydroxyacetophenone, Linalool, Hexyl Cinnamal, Citronellol, Limonene\r\n\""
  },
  "shampoo|Olaplex|No.4C Clarifying Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Olaplex No.4C Bond Maintenance Clarifying Shampoo",
+  "url": "https://www.hagel-shop.de/products/olaplex-no-4c-bond-maintenance-clarifying-shampoo",
+  "score": 1.0,
+  "inci": "Water (Aqua / Eau), Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Hydroxysultaine, Sodium Lauroyl Glutamate, Coco-Betaine, Disodium Laureth Sulfosuccinate, Acrylates Copolymer, Cocamidopropyl Betaine, Cocamidopropylamine Oxide, Sodium Methyl Oleoyl Taurate, Decyl Glucoside, Bis-Aminopropyl Diglycol Dimaleate, Sodium Lauryl Sulfoacetate, Phenoxyethanol, Coco-Glucoside, Lauryl Glucoside, Chlorphenesin, Panthenol, Trisodium Ethylenediamine, Disuccinate Ethylhexylglycerin, Sodium Benzoate, Polyquaternium-11, Benzoic Acid, Sodium PCA, Pentasodium Triphosphate, Sodium Lactate, Arginine, Aspartic Acid, PCA, Citric Acid, Glycine, Alanine, Serine, Valine, Isoleucine, Proline, Threonine, Histidine, Phenylalanine, Fragrance (Parfum), Citral, Hexyl Cinnamal, Limonene"
  },
  "shampoo|Keune|Perfect Clarity Shampoo": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Keune Care Perfect Clarity Shampoo 300 ml",
+  "url": "https://www.hagel-shop.de/products/keune-care-perfect-clarity-shampoo-300-ml",
+  "score": 1.0,
+  "inci": "Aqua (Water), Sodium Laureth Sulfate, Decyl Glucoside, Cocamidopropyl Betaine, PEG-200 Hydrogenated Glyceryl Palmate, Sodium Chloride, Sodium Benzoate, Glyceryl Laurate, Lauryl Pyrrolidone, PEG-7 Glyceryl Cocoate, Propylene Glycol, Parfum (Fragrance), Glycerin, Dipropylene Glycol, Citric Acid, Sorbitol, Bambusa Vulgaris Shoot Extract, Dryopteris Filix-Mas Leaf Extract, Acetum (Vinegar), Pyrus Malus (Apple) Fruit Extract, Phenoxyethanol, Tropaeolum Majus Flower Extrac, Potassium Sorbate, Ethylhexylglycerin."
  },
  "shampoo|Coco & Eve|Clarifying Detox Shampoo": {
   "treffer": null
@@ -511,7 +635,11 @@
   "inci": "Ingredients: Aqua (Water), Cocamidopropyl Betaine, Disodium Laureth Sulfosuccinate, Sodium Cocoyl Isethionate, Sodium Chloride, Acrylates Copolymer, Cocamide MIPA, Phenoxyethanol, Sodium Citrate, Sodium Lauroyl Sarcosinate, Sodium Benzoate, Cocos Nucifera (Coconut) Oil, Parfum (Fragrance), Hydroxypropyl Guar Hydroxypropyltrimonium Chloride, Polyquaternium-10, Coco-Glucoside, Glyceryl Oleate, Citric Acid, Benzyl Alcohol, Polyquaternium-11, Butyrospermum Parkii (Shea) Butter, Ethylhexylglycerin, Polyquaternium-7, Styrene/Acrylates Copolymer, Hexyl Cinnamal, Tocopheryl Acetate, Linalool, Butylene Glycol, Sodium Acetate, Isopropyl Alcohol, Tocopherol."
  },
  "shampoo|OGX|Renewing+ Argan Oil of Morocco": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "OGX Renewing Argan Oil of Morocco Shampoo 385 ml",
+  "url": "https://www.hagel-shop.de/products/ogx-renewing-argan-oil-of-morocco-shampoo-385-ml",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Hydroxysultaine, PPG-2 Hydroxyethyl Coco/Isostearamide, Sodium Chloride, Argania Spinosa (Argan) Kernel Oil, Panthenol, Dimethicone, Amodimethicone, Glycol Distearate, PEG-120 Methyl Glucose Dioleate, Guar Hydroxypropyltrimonium Chloride, Polyquaternium-6, Polyquaternium-10, Laureth-4, Laureth-23, Cocamidopropyl Betaine, Cetrimonium Chloride, Trideceth-12, Citric Acid, Sorbitan Laurate, Sodium Hydroxide, Tetrasodium EDTA, Propylene Glycol, Diazoldinyl Urea, Iodopropynyl Butylcarbamate, Phenoxyethanol, Parfum/Fragrance, Hexyl Cinnamal, Benzyl Salicylate, Butylphenyl Methylpropional, Linalool, D-Limonene, Alpha-Isomethyl Ionone, Benzyl Benzoate, CI 19140/Yellow 5, CI 16035/Red 40."
  },
  "shampoo|IDA WARG|Beauty Repair Shampoo": {
   "treffer": null
@@ -520,7 +648,11 @@
   "treffer": null
  },
  "shampoo|Jean&Len|Ölpflege Monoiöl & Maracuja": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Jean & Len Shampoo Monoiöl/Maracuja 300 ml",
+  "url": "https://www.hagel-shop.de/products/jean-len-shampoo-monoioel-maracuja-300ml-12146014",
+  "score": 0.67,
+  "inci": "aqua, sucrose, glycerin, propanediol, maltooligosyl glucoside, hydrogenated starch hydrolysate, phenoxyethanol, xylitylglucoside, xanthan gum, anhydroxylitol, xylitol, hydrolyzed jojoba esters, sodium hyaluronate, ethylhexylglycerin, caprylyl glycol, citric acid, glucose, tocopherol."
  },
  "shampoo|L'Oréal Elvital|Glycolic Gloss (200 ml)": {
   "dan": 1346429,
@@ -850,13 +982,21 @@
   "treffer": null
  },
  "kopfhaut|Living Proof|Scalp Care Exfoliator": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Living proof Scalp Care Exfoliator 100 ml",
+  "url": "https://www.hagel-shop.de/products/living-proof-scalp-care-exfoliator-100-ml-12128780",
+  "score": 1.0,
+  "inci": "Water/Eau/Aqua, Propanediol, Mandelic Acid, Glycolic Acid, Gluconolactone, Isopentyldiol, PPG-24-Glycereth-24, Saccharide Isomerate, Methyl Diisopropyl Propionamide, Gaultheria Procumbens (Wintergreen) Leaf Extract, Agave Tequilana Leaf Extract, Beta Vulgaris (Beet) Root Extract, Pentylene Glycol, PPG-26-Buteth-26, Betaine, Gluconic Acid, Lysolecithin, Sclerotium Gum, Citric Acid, Pullulan, Cellulose Gum, Xanthan Gum, Hydroxyacetophenone, PEG-40 Hydrogenated Castor Oil, Sodium Citrate, Sodium Benzoate, Sodium Hydroxide, Fragrance/Parfum, Limonene."
  },
  "kopfhaut|Maria Nila|Purifying Cleanse Exfoliating Serum": {
   "treffer": null
  },
  "kopfhaut|Aromatica|Rosemary Scalp Scrub": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "AROMATICA Rosemary Scalp Scrup",
+  "url": "https://www.hagel-shop.de/products/aromatica-rosemary-scalp-scrup",
+  "score": 0.67,
+  "inci": "Sea Salt, Sodium Chloride, Rosmarinus Officinalis Leaf Extract, Aqua, Pinus Densiflora Leaf Extract, Sodium Methyl Cocoyl Taurate, Glycerin, Coco-Betaine, Lauryl Betaine, Zingiber Officinale Root Extract, Xanthan Gum, Propanediol, Ethylhexylglycerin, Rosmarinus Officinalis Leaf Oil, Ocimum Basilicum Leaf Extract, Ocimum Sanctum Leaf Extract, Origanum Vulgare Leaf Extract, Bifida Ferment Lysate, Lactobacillus Ferment Lysate, Caffeine, Panthenol, Moringa Oleifera Seed Oil, Menthol, Salicylic Acid, Cedrus Atlantica Bark Oil, Abies Sibirica Oil, Cupressus Sempervirens Oil, Niacinamide, Chamomilla Recutita Flower Extract, Verbena Officinalis Extract, Styrax Benzoin Resin Extract, Dipropylene Glycol, *Limonene, Guar Hydroxypropyltrimonium Chloride, Melia Azadirachta Leaf Extract, Melia Azadirachta Flower Extract, Coccinia Indica Fruit Extract, Amber Powder, Solanum Melongena Fruit Extract, Curcuma Longa Root Extract, Corallina Officinalis Extract, Disodium EDTA, 1,2-Hexanediol"
  },
  "kopfhaut|Moroccanoil|Purifying Pre-Wash Scalp Scrub": {
   "treffer": null
@@ -865,7 +1005,11 @@
   "treffer": null
  },
  "kopfhaut|Kérastase|Symbiose Micro-Peeling Cellulaire": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Symbiose Micro-Peeling Cellulaire 200 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-symbiose-micro-peeling-cellulaire-200-ml",
+  "score": 1.0,
+  "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • SODIUM\r\nLAURYL SULFATE • GLYCERIN • COCAMIDE MEA • SALICYLIC ACID • COCO-BETAINE •\r\nLAURETH-5 CARBOXYLIC ACID • ACRYLATES COPOLYMER • COCAMIDE MIPA • SODIUM\r\nHYDROXIDE • CITRIC ACID • SODIUM BENZOATE • ARGANIA SPINOSA SHELL POWDER •\r\nPRUNUS ARMENIACA SEED POWDER / APRICOT SEED POWDER • HEXYLENE GLYCOL •\r\nSODIUM CHLORIDE • MENTHOL • POLYQUATERNIUM-10 • ISOPROPYL MYRISTATE • PEG-55 PROPYLENE GLYCOL\r\nOLEATE • PROPYLENE GLYCOL • LIMONENE • SQUALANE • CAPRYLOYL SALICYLIC ACID • BENZYL SALICYLATE •\r\nBENZYL ALCOHOL • LINALOOL • CITRONELLOL • CITRAL • G E R A N I O L • A R T E M I S I A\r\nUMBELLIFORMIS FLOWER EXTRACT • POTASSIUM SORBATE • PARFUM /FRAGRANCE."
  },
  "kopfhaut|Balea Professional|Kopfhautpflege Serum Sensitive": {
   "dan": 1459196,
@@ -952,7 +1096,11 @@
   "inci": "Ingredients: Alcohol Denat., Aqua, Niacinamide, Hydroxypropyl Methylcellulose, Piroctone Olamine, PVP, Menthol, Parfum, Panthenol, Citric Acid, Hexamethylindanopyran, Citrus Aurantium Peel Oil, Coumarin, Hexyl Cinnamal, Benzyl Salicylate, Tetramethyl Acetyloctahydronaphthalenes, Linalool, Linalyl Acetate, Limonene, Glyoxal, Citronellol, CI 19140, CI 17200"
  },
  "kopfhaut|OGX|ProGrowth + Peptide Scalp Serum": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "OGX ProGrowth + Peptide Scalp Serum 10 ml",
+  "url": "https://www.hagel-shop.de/products/ogx-progrowth-peptide-scalp-serum-10-ml",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, Pentylene Glycol, Panthenol, Pisum Sativum Peptide, Niacinamide, Caffeine, Hydrolyzed Rice Protein, Chrysanthemum Parthenium Flower/Leaf/Stem Juice, Mangifera Indica Leaf Extract, Leuconostoc/Radish Root Ferment Filtrate, Isochrysis Galbana Extract, Propanediol, Hydroxyethylcellulose, Polysorbate 60, Disodium EDTA, Sodium Benzoate, Potassium Sorbate, Sodium Metabisulte, Sodium Methylparaben, Disodium Phosphate, Sodium Phosphate, Citric Acid, Sodium Hydroxide"
  },
  "kopfhaut|Salt House Totes Meer|Anti-Haarverlust Kopfhaut-Fluid Aktiv": {
   "treffer": null
@@ -973,7 +1121,11 @@
   "treffer": null
  },
  "kopfhaut|NEQI x the.beautiful.people|Scalp Care Treatment Stylist Edition": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "NEQI x TBP Scalp Care Treatment 120 ml",
+  "url": "https://www.hagel-shop.de/products/neqi-x-tbp-scalp-care-treatment-120-ml",
+  "score": 0.6,
+  "inci": "Water [Aqua], PEG-7 glyceryl cocoate, Sodium cocoamphoacetate, Glycerin, Saccharomyces ferment lysate filtrate, Tocopheryl acetate, Bisabolol, PPG-26-buteth-26, PEG-40 hydrogenated castor oil, C13-15 alkane, Propylene glycol, 1,2-Hexanediol, Caprylyl glycol, Sodium carboxymethyl beta-glucan, Lactic acid, Citric Acid, Centella asiatica leaf extract, Oryza sativa (Rice) extract, Gardenia taitensis flower extract, Lycium barbarum fruit extract, Malva sylvestris (Mallow) leaf extract, Avena sativa (Oat) peptide, Ethylhexylglycerin, Phenoxyethanol, FRAGRANCE [PARFUM], Juniperus virginiana oil, Citrus aurantium peel oil, Tetramethyl acetyloctahydronaphthalenes, Hexyl cinnamal, Limonene, Linalool, Linalyl acetate."
  },
  "kopfhaut|Alterra|Kopfhaut-Elixier Bio-Hafer": {
   "treffer": null
@@ -991,10 +1143,18 @@
   "inci": "Ingredients: Glycine Soja Oil, Ricinus Communis Seed Oil, Pouteria Sapota Seed Oil, Cocos Nucifera Oil, Simmondsia Chinensis Seed Oil, Rosmarinus Officinalis Leaf Oil, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Oil, Prunus Amygdalus Dulcis Oil, Vitis Vinifera Seed Oil, Isopropyl Myristate, Helianthus Annuus Hybrid Oil, Pinene, Tocopherol, Camphor, Nannochloropsis Oceanica Extract,  Menthol, Rosmarinus Officinalis Leaf Extract, Beta-Caryophyllene, Helianthus Annuus Seed Oil, Limonene, Terpineol, Linalool, Alpha- Terpinene, Terpinolene, Equisetum Arvense Extract, Aloe Barbadensis Leaf Extract"
  },
  "kopfhaut|Dr. Scheller|Jojobaöl": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "DR.SCHELLER Reines Jojobaöl 30 ml",
+  "url": "https://www.hagel-shop.de/products/dr-scheller-reines-jojobaol-30-ml",
+  "score": 1.0,
+  "inci": "SIMMONDSIA CHINENSIS (JOJOBA) SEED OIL* *aus kontrolliert biologischem Anbau / *from certified organic agriculture"
  },
  "kopfhaut|Dr. Scheller|Arganöl": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "DR.SCHELLER Reines Arganöl 30 ml",
+  "url": "https://www.hagel-shop.de/products/dr-scheller-reines-arganoel-30-ml",
+  "score": 1.0,
+  "inci": "ARGANIA SPINOSA KERNEL OIL*   *aus kontrolliert biologischem Anbau / *from certified organic agriculture"
  },
  "kopfhaut|Eucerin|DermoCapillaire Urea Intensiv-Tonikum": {
   "treffer": null
@@ -1024,13 +1184,25 @@
   "treffer": null
  },
  "kopfhaut|Kérastase|Genesis Sérum Anti-Chute Fortifiant": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Genesis Sérum Anti-Chute Fortifiant 90 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-genesis-serum-anti-chute-fortifiant-90-ml",
+  "score": 1.0,
+  "inci": "AQUA / WATER • ALCOHOL DENAT. • DIAMINOPYRIMIDINE OXIDE • AMMONIUM POLYACRYLOYLDIMETHYL TAURATE • AMINOMETHYL PROPANOL • CITRIC ACID • PEG-40 HYDROGENATED CASTOR OIL • PIROCTONE OLAMINE • CAFFEINE • ARGININE • LIMONENE • NIACINAMIDE • PYRIDOXINE HCl • LINALOOL • SAFFLOWER GLUCOSIDE • BENZYL SALICYLATE • COUMARIN • CITRAL • BENZYL ALCOHOL • XYLITYLGLUCOSIDE • CITRONELLOL • BENZYL BENZOATE • ANHYDROXYLITOL • XYLITOL • ZINGIBER OFFICINALE ROOT EXTRACT / GINGER ROOT EXTRACT • RESVERATROL • TOCOPHEROL • BHT • SODIUM CITRATE • PARFUM / FRAGRANCE"
  },
  "kopfhaut|Kérastase|Symbiose Sérum Cellulaire Nuit": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Symbiose Sérum Cellulaire Nuit 90 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-symbiose-serum-cellulaire-nuit-90-ml",
+  "score": 1.0,
+  "inci": "AQUA /WATER / EAU • ALCOHOL DENAT. •AMMONIUM POLYACRYLOYLDIMETHYL\r\nTAURATE • CITRIC ACID • PEG-40 HYDROGENATED CASTOR OIL •AMINOMETHYL PROPANOL •\r\nPIROCTONE OLAMINE • SQUALANE •SALICYLIC ACID • BIFIDA FERMENT\r\nLYSATE • LIMONENE • GLYCERIN •BENZYL SALICYLATE • BENZYL ALCOHOL\r\n• LINALOOL • CITRONELLOL • CITRAL •GERANIOL • ARTEMISIA UMBELLIFORMIS\r\nFLOWER EXTRACT • COUMARIN •PHENOXYETHANOL • SODIUM BENZOATE\r\n• POTASSIUM SORBATE • PARFUM /FRAGRANCE."
  },
  "kopfhaut|Nioxin|Night Density Rescue Serum": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Nioxin Night Density Rescue Serum 70 ml",
+  "url": "https://www.hagel-shop.de/products/nioxin-night-density-rescue-serum-70-ml",
+  "score": 1.0,
+  "inci": "Alcohol Denat., Aqua/Water/Eau,\r\nCaffeine, Panthenol, Parfum/Fragrance, Menthol, Lauric Acid,\r\nPEG-40 Hydrogenated Castor Oil, Tocopheryl Acetate, PEG-35\r\nCastor Oil, Butylene Glycol, Propylene Glycol, Linalool,\r\nPolysorbate 20, Zingiber O\\cinale (Ginger) Root Extract,\r\nHexyl Cinnamal, Limonene, Citronellol, Passiflora Edulis Fruit\r\nExtract, Geraniol, Potassium Sorbate, Sodium Benzoate,\r\nCitral, Sorbic Acid, BHT, Farneso"
  },
  "kopfhaut|Living Proof|Scalp Care Density Serum": {
   "treffer": null
@@ -1045,13 +1217,21 @@
   "treffer": null
  },
  "kopfhaut|Redken|Acidic Grow Full Serum": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken Acidic Grow Full System Serum 100 ml",
+  "url": "https://www.hagel-shop.de/products/redken-acidic-grow-full-system-serum-100-ml",
+  "score": 1.0,
+  "inci": "1400547RK5 - INGREDIENTS:  AQUA / WATER / EAU • GLYCERIN • HYDROXYETHYLPIPERAZINE ETHANE SULFONIC ACID • CAFFEINE • PEG-40 HYDROGENATED CASTOR OIL • SODIUM HYALURONATE • PHENOXYETHANOL • CITRIC ACID • BIFIDA FERMENT LYSATE • SACCHAROMYCES/RICE FERMENT FILTRATE • CHLORPHENESIN • PROPYLENE GLYCOL • PARFUM / FRAGRANCE • TETRASODIUM GLUTAMATE DIACETATE • PENTYLENE GLYCOL • AZELAIC ACID • LINALYL ACETATE • CARVONE • LINALOOL • LIMONENE • CITRUS LIMON PEEL OIL • CITRUS AURANTIUM BERGAMIA PEEL OIL • SODIUM BENZOATE • CITRAL • CITRUS AURANTIUM PEEL OIL • PINENE (F.I.L. N70058696/3)."
  },
  "kopfhaut|Kérastase|Spécifique Potentialiste": {
   "treffer": null
  },
  "oel|amika|superfruit star lightweight hair styling oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "amika: Superfruit Star Heat Defense Oil 50 ml",
+  "url": "https://www.hagel-shop.de/products/amika-superfruit-star-heat-defense-oil-50-ml",
+  "score": 0.6,
+  "inci": "Isododecane, Trisiloxane, Dimethicone, Hippophae Rhamnoides (Sea Buckthorn/Argousier) Fruit/Seed Oil, Fragrance/Parfum, Benzyl Benzoate, Hydroxycitronellal, Limonene, Citronellol, Coumarin"
  },
  "oel|Aussie|Curls Öl Lightweight Oil": {
   "treffer": null
@@ -1123,10 +1303,18 @@
   "treffer": null
  },
  "oel|Kérastase|Gloss Absolu Glaze Drops": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase Gloss Absolu Glaze Drops 45 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-gloss-absolu-glaze-drops-45ml-12127385",
+  "score": 1.0,
+  "inci": "ISODODECANE • DIMETHICONE • C11-13 ISOALKANE • CAPRYLIC/CAPRIC TRIGLYCERIDE • DIMETHICONOL • AMODIMETHICONE • PARFUM / FRAGRANCE • LIMONENE • HEXYL CINNAMAL • LINALOOL • CITRONELLOL • ALPHA-ISOMETHYL IONONE • COUMARIN • \r\nCITRAL • ROSA CANINA FLOWER EXTRACT (F.I.L. N70051841/1)"
  },
  "oel|Kérastase|Première Huile Gloss Réparatrice": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Kérastase PREMIÈRE Haaröl Huile Gloss Réparatrice 30 ml",
+  "url": "https://www.hagel-shop.de/products/kerastase-premiere-huile-gloss-reparatrice-30-ml",
+  "score": 1.0,
+  "inci": "ISODODECANE • DIMETHICONE • C11-13 ISOALKANE • CAPRYLIC/CAPRIC TRIGLYCERIDE • DIMETHICONOL • AMODIMETHICONE • PARFUM / FRAGRANCE • LIMONENE • LINALOOL • CITRAL • COUMARIN • BENZYL SALICYLATE • BENZYL ALCOHOL • CITRONELLOL • ALPHA-ISOMETHYL IONONE • GERANIOL (F.I.L. N70029916/1)"
  },
  "oel|L'Oréal Paris Elvital|Öl Magique": {
   "dan": 3122669,
@@ -1141,16 +1329,28 @@
   "inci": "INGREDIENTS: ISODODECANE • DIMETHICONE • DIMETHICONOL • COCOS NUCIFERA OIL / COCONUT OIL • HYDROGENATED JOJOBA OIL • ANISE ALCOHOL • LIMONENE • SIMMONDSIA CHINENSIS SEED OIL / JOJOBA SEED OIL • LINALOOL • COUMARIN • HEXYL CINNAMAL • PARFUM / FRAGRANCE"
  },
  "oel|L'Oréal Professionnel|Serie Expert Absolut Repair Molecular Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "L'Oréal Professionnel Paris Serie Expert Absolut Repair Molecular Bi-Phase Oil",
+  "url": "https://www.hagel-shop.de/products/l-oreal-professionnel-paris-serie-expert-absolut-repair-molecular-bi-phase-oil",
+  "score": 1.0,
+  "inci": "ISODODECANE • DIMETHICONE • AQUA / WATER / EAU • GLYCERIN • DIMETHICONOL • CITRIC ACID • SODIUM HYDROXIDE • POLYQUATERNIUM-6 • PHENOXYETHANOL • TETRAMETHYL ACETYLOCTAHYDRONAPHTHALENES • JUNIPERUS VIRGINIANA OIL • LINALOOL • ACETYL CEDRENE • GLYCINE • ARGININE • SERINE • GLUTAMIC ACID • TRIMETHYLCYCLOPENTENYL METHYLISOPENTENOL • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • BENZYL BENZOATE • TYROSINE • ALPHA-ISOMETHYL IONONE • BENZYL ALCOHOL • COUMARIN • CI 40800 / BETA-CAROTENE • TETRASODIUM EDTA • CI 60725 / VIOLET 2 • PARFUM / FRAGRANCE"
  },
  "oel|L'Oréal Professionnel|Serie Expert Absolut Repair Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "L'Oréal Professionnel Paris Serie Expert Absolut Repair 10-in-1 Oil 90 ml",
+  "url": "https://www.hagel-shop.de/products/l-oreal-professionnel-paris-serie-expert-absolut-repair-10-in-1-oil-90-ml",
+  "score": 1.0,
+  "inci": "CYCLOPENTASILOXANE, DIMETHICONOL, LINALOOL, TRITICUM VULGARE GERM OIL / WHEAT GERM OIL, ORYZA SATIVA BRAN OIL / RICE BRAN OIL, HEXYL CINNAMAL, LIMONENE, CITRAL, PARFUM / FRAGRANCE"
  },
  "oel|L'Oréal Professionnel|Serie Expert Metal DX Professional Concentrated Oil": {
   "treffer": null
  },
  "oel|Living Proof|No Frizz Vanishing Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Living Proof No Frizz Vanishing Oil 50 ml",
+  "url": "https://www.hagel-shop.de/products/living-proof-no-frizz-vanishing-oil-50-ml",
+  "score": 1.0,
+  "inci": "C13-15 Alkane, Isohexadecane, Isododecane, Isoamyl Laurate, Ethylene, Propylene, Styrene Copolymer, C9-12 Alkane, Hippophae Rhamnoides Fruit Oil, Helianthus Annuus (Sunflower) Seed Oil, Coco-Caprylate, Caprate, Brassica Campestris, Aleurites Fordi Oil Copolymer, Citrullus Lanatus (Watermelon) Seed Oil, Moringa Oleifera Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Orbignya Oleifera Seed Oil, Phytosteryl, Octyldodecyl Lauroyl Glutamate, Butylene, Ethylene, Styrene Copolymer, Amaranthus Caudatus Seed Extract, Diisostearyl Malate, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Fragrance, Parfum, Citronellol, Limonene, Citral, Linalool"
  },
  "oel|MONDAY|Repair Argan Haaröl": {
   "treffer": null
@@ -1162,10 +1362,18 @@
   "inci": "Ingredients: Caprylic/capric triglyceride, Disiloxane, C13-14 isoparaffin, Parfum [Fragrance], Juniperus virginiana oil, Hippophae rhamnoides oil, C13-15 alkane, Citrus aurantium peel oil, Tetramethyl acetyloctahydronaphthalenes, Tocopheryl acetate, Linalyl acetate, Hexyl cinnamal, Geranyl acetate, Pinene, Limonene, Linalool, Geraniol."
  },
  "oel|OGX|Argan Oil of Morocco Weightless Reviving Dry Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "OGX Renewing Argan Oil of Morocco Oil Weightless Reviving Dry Oil 118 ml",
+  "url": "https://www.hagel-shop.de/products/ogx-renewing-argan-oil-of-morocco-oil-weightless-reviving-dry-oil-118-ml",
+  "score": 1.0,
+  "inci": "Cyclotetrasiloxane, Cyclopentasiloxane, C12-15 Alkyl Benzoate, Argania Spinosa (Argan) Kernel Oil, Theobroma Cacao (Cocoa) Seed Butter, Cocos Nucifera (Coconut) Oil, Persea Gratissima (Avocado) Oil, Phenyl Trimethicone, Parfum (Fragrance), Hexyl Cinnamal, Benzyl Salicylate, Butylphenyl Methylpropional, Linalool, Limonene, Alpha-Isomethyl Ionone, Benzyl Benzoate, CI 47000 (Yellow 11), CI 26100 (Red 17)."
  },
  "oel|OGX|Bond Protein Repair 3-in-1 Oil Mist": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "OGX Bond Protein Repair 3-in-1 Oil 50 ml",
+  "url": "https://www.hagel-shop.de/products/ogx-bond-protein-repair-3-in-1-oil-50-ml",
+  "score": 0.83,
+  "inci": "Aqua/Water/Eau, Caprylic/Capric Triglyceride, Propanediol, Glycerin, Parfum/Fragrance, 1, 2-Hexanediol, Triticum Vulgare Protein, Hydroxypropylgluconamide (and) Hydroxypropylammonium Gluconate, Cocos Nucifera Seed Butter, Triticum Vulgare Germ Oil, Triticum Vulgare Bran Extract, Argania Spinosa Kernel Oil, Cocos Nucifera Oil, Hydrogenated Jojoba Oil, Triticum Vulgare Germ Extract, Camelia Oleifera Seed Oil, Adansonia Digitata Seed Oil, Butyrospermum Parkii Butter, Calophyllum Inophyllum Seed Oil, Moringa Oleifera Seed Oil, Nigella Sativa Seed Oil, Opuntia Ficus-Indica Seed Oil, Propanediol Dicaprylate/Caprate, Caprylyl Glycol, Hydroxyacetophenone, Cetearyl Nonanoate, Linoleic Acid, Citric Acid, Tocopherol, Benzoic Acid, Tocopheryl Acetate, Tartaric Acid, Sodium Benzoate, Potassium Sorbate, Alpha-Isomethyl Ionone"
  },
  "oel|OGX|Coconut Miracle Oil": {
   "dan": 2170211,
@@ -1180,10 +1388,18 @@
   "inci": "Ingredients: Dimethicone, Isopropyl Myristate, Dimethiconol, C12-15 Alkyl Benzoate, Argania Spinosa Kernel Oil, Parfum/Fragrance, Alpha-Isomethyl Ionone, Limonene"
  },
  "oel|Olaplex|No.7 Bonding Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Olaplex No.7 Bonding Oil",
+  "url": "https://www.hagel-shop.de/products/olaplex-no-7-bonding-oil",
+  "score": 1.0,
+  "inci": "Dimethicone, Isohexadecane, C13-14 Isoparaffin, Coco-Cprylate, Phenyl Trimethicone, Bis-Aminopropyl Diglycol Dimaleate, Propanediol, Zea Mays (Corn) Oil, Beta-Carotene, Helianthus Annuus (Sunflower) Seed Oil, Moringa Citrifolia Fruit Powder, Fragrance (Parfum), Hexyl Cinnamal, Eclipta Prostrata Extract, Ethylhexyl Methoxycinnamate, Limonene, Tocopherol, Citral, Linalool, Melia Azadirachta LEaf Extract, Citronellol, Pseudozyma Epicola, Camellia Sinensis Seed Oil Ferment Extract Filtrate"
  },
  "oel|Olaplex|No.7 Shine Serum Oil Mist": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Olaplex No. 7 Shine Serum Oil Mist 80 ml",
+  "url": "https://www.hagel-shop.de/products/olaplex-no-7-shine-serum-oil-mist-80-ml",
+  "score": 1.0,
+  "inci": "Isododecane, Aqua (Water, Eau), Propylene Glycol, Isohexadecane, Phenyl Trimethicone, Trisiloxane, Lactic Acid, Bis-Aminopropyl Diglycol Dimaleate, Citrullus Lanatus (Watermelon) Seed Oil, Aleurites Moluccanus Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Rosa Canina Fruit Extract, PCA, Arginine, Glycine, Alanine, Serine, Valine, Threonine, Histidine, Phenylalanine, Isoleucine, Proline, Aspartic Acid, Tocopherol, Zea Mays (Corn) Oil, Octyldodecanol, Sodium PCA, Octyldodecyl Xyloside, Sodium Lactate, Sodium Benzoate, Potassium Sorbate, Phenoxyethanol, Parfum (Fragrance), Carvone, Citrus Aurantium Peel Oil, Geranyl Acetate, Linalyl Acetate, Citral, Linalool, Citronellol, Hexyl Cinnamal, Limonene, Camphor, Menthol, Mentha Piperita Oil, Mentha Viridis Leaf Oil, Eucalyptus Oil, Acetyl Cedrene,  CI 75130 (Beta Carotene), CI 15985 (Yellow 6), CI 19140 (Yellow 5)"
  },
  "oel|OUAI|Hair Oil": {
   "treffer": null
@@ -1216,10 +1432,18 @@
   "inci": "Ingredients: Cyclopentasiloxane, Dimethiconol, Alcohol Denat., Parfum, Tocopheryl Acetate, Panthenol, Panthenyl Ethyl Ether, Geranyl Acetate, Hexamethylindanopyran, Benzyl Salicylate, Hexyl Cinnamal, Alpha-Isomethyl Ionone, Aqua, Linalool, Tetramethyl Acetyloctahydronaphthalenes, Citrus Aurantium Peel Oil, Dimethyl Phenethyl Acetate, Isoeugenyl Acetate, Terpineol, Citronellol, Limonene, Rose Ketones"
  },
  "oel|Redken|All Soft Argan-6 Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken All Soft Argan-6 Oil 100 ml",
+  "url": "https://www.hagel-shop.de/products/redken-all-soft-argan-6-oil-100ml-12132851",
+  "score": 1.0,
+  "inci": "1082652RK18 - INGREDIENTS:  ISODODECANE • DIMETHICONE • DIMETHICONOL • ALCOHOL DENAT. • PARFUM / FRAGRANCE • ARGANIA SPINOSA KERNEL OIL • BENZYL ALCOHOL • LINALOOL • COUMARIN • LIMONENE • HEXYL CINNAMAL • CITRONELLOL • BENZYL BENZOATE • AMYL CINNAMAL • CITRAL • GERANIOL • ALPHA-ISOMETHYL IONONE (F.I.L. Z70027432/1)."
  },
  "oel|Redken|naked gloss lightweight shine oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Redken Acidic Color Gloss Naked Gloss Lightweight Shine Oil 100 ml",
+  "url": "https://www.hagel-shop.de/products/redken-acidic-color-gloss-naked-gloss-lightweight-shine-oil-100-ml",
+  "score": 1.0,
+  "inci": "ISODODECANE • DIMETHICONE • C11-13 ISOALKANE • CAPRYLIC/CAPRIC TRIGLYCERIDE • DIMETHICONOL • AMODIMETHICONE • PARFUM / FRAGRANCE • PRUNUS ARMENIACA KERNEL OIL / APRICOT KERNEL OIL • LIMONENE • LINALOOL • BENZYL SALICYLATE • BENZYL ALCOHOL • ALPHA-ISOMETHYL IONONE • COUMARIN (F.I.L. Y70050160/1)."
  },
  "oel|Schwarzkopf Gliss|Tägliches Öl Elixier": {
   "dan": 1534910,
@@ -1228,13 +1452,25 @@
   "inci": "Ingredients: Dimethicone, Dimethiconol, Undecane, Dicaprylyl Ether, Tridecane, Helianthus Annuus (Sunflower) Seed Oil, Hydroxyoctanone, Argania Spinosa Kernel Oil, Parfum (Fragrance), Tetramethyl Acetyloctahydronaphthalenes, Benzyl Alcohol, Geraniol, Hexyl Cinnamal, Citronellol, Limonene, Benzyl Salicylate, Alpha-Isomethyl Ionone, Linalool, Terpineol, Citrus Aurantium Peel Oil, Coumarin, Pinene, Citral, Citrus Limon (Lemon) Peel Oil, CI 40800 (Beta-Carotene)"
  },
  "oel|Sebastian Professional|Dark Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Sebastian Dark Oil Hairoil",
+  "url": "https://www.hagel-shop.de/products/sebastian-dark-oil-hairoil",
+  "score": 1.0,
+  "inci": "Cyclopentasiloxane, Dimethiconol, Isododecane, Parfum/Fragrance, Argania Spinosa Kernel Oil, Ethylhexyl Methoxycinnamate, Tetramethyl Acetyloctahydronaphthalenes, Hexyl Cinnamal, Hexamethylindanopyran, Acetyl Cedrene, Vanillin, Linalyl Acetate, Coumarin, Citronellol, Linalool, Limonene, Fusanus Spicatus Wood Oil, Citrus Limon Peel Oil, Pinene, Santalol, Cinnamomum Zeylanicum Bark Oil, Lavandula Oil/Extract, Eugenol, Farnesol, Geraniol."
  },
  "oel|Wella Professionals|Oil Reflections Luminous Smoothening Oil": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Wella Professionals Care Oil Reflections Smoothening Oil",
+  "url": "https://www.hagel-shop.de/products/k-12049734-wella-professionals-care-oil-reflections-smoothening-oil",
+  "score": 0.8,
+  "inci": "Cyclopentasiloxane, Dimethiconol, Alcohol Denat., Parfum, Fragrance, Tocopheryl Acetate, Hexyl Cinnamal, Linalool, Limonene, Cocos Nucifera (Coconut) Oil, Macadamia Ternifolia Seed Oil, Persea Gratissima (Avocado) Oil, Alpha-Isomethyl Ionone."
  },
  "oel|Wella Professionals|SP Luxe Oil Reconstructive Elixir": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Wella SP Luxe Oil Elixir",
+  "url": "https://www.hagel-shop.de/products/wella-sp-luxe-oil-elixir",
+  "score": 0.8,
+  "inci": "Cyclopentasiloxane, Dimethiconol, Alcohol Denat., Parfum, Tocopheryl Acetate, Amyl Cinnamal, Hexyl Cinnamal, Linalool, Argania Spinosa Kernel Oil, Geraniol, Aqua, Simmondsia Chinensis Seed Oil, Prunus Amygdalus Dulcis Oil, Camellia Oleifera Seed Oil, Limonene"
  },
  "hitze|Balea|Hitzeschutzspray Ultralight": {
   "dan": 3101587,
@@ -1243,16 +1479,28 @@
   "inci": "INGREDIENTS/SASTOJCI/СЪСТАВКИ: BUTANE, ALCOHOL DENAT., PROPANE, PROPYLENE GLYCOL, AQUA, PANTHENOL, CAESALPINIA SPINOSA FRUIT EXTRACT, HELIANTHUS ANNUUS SPROUT EXTRACT, SODIUM BENZOATE, PHENOXYETHANOL, NEOPENTYL GLYCOL DICAPRYLATE/ DICAPRATE, PARFUM, CITRONELLOL, GERANYL ACETATE, HEXYL CINNAMAL, LINALOOL, LINALYL ACETATE."
  },
  "hitze|Oribe|Gold Lust Dry Heat Protection Spray": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Oribe Gold Lust Dry Heat Protection Spray 250 ml",
+  "url": "https://www.hagel-shop.de/products/oribe-gold-lust-dry-heat-protection-spray-250-ml",
+  "score": 1.0,
+  "inci": "Isobutane, SD Alcohol 40-B (Alcohol Denat.), Butane, Diisopropyl Adipate, Parfum, Fragrance, Ethyl Macadamiate, Silicone Quaternium-3, Glycereth-26, Panthenyl Ethyl Ether, Aqua, Water, Eau, Trideceth-12, Quaternium-91, Cetrimonium Methosulfate, Cetrimonium Chloride, Cetearyl Alcohol, Panthenol, Phytantriol, Quaternium-95, Propanediol, Caffeine, Biotin, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Niacinamide, Macadamia Ternifolia Seed Oil, Argania Spinosa Kernel Oil, Citrullus Lanatus (Watermelon) Seed Oil, Brassica Campestris, Aleurites Fordi Oil Copolymer, Glycerin, Carthamus Tinctorius (Safflower) Seed Oil, Oryza Sativa (Rice) Bran Extract, Cocos Nucifera (Coconut) Liquid Endosperm, Hypnea Musciformis Extract, Tocopherol, Vitis Vinifera (Grape) Seed Extract, Litchi Chinensis Fruit Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Helianthus Annuus (Sunflower) Extract, Malic Acid, Camellia Sinensis Leaf Extract, Gelidiella Acerosa Extract, Leontopodium Alpinum Flower, Leaf Extract, Hydrolyzed Rice Protein, Vegetable Amino Acids, Sodium Carrageenan, Phenoxyethanol, Leuconostoc, Radish Root Ferment Filtrate, Galactoarabinan, Salvia Hispanica Seed Extract, Xylitol, Trehalose, Sodium Benzoate, Potassium Sorbate, Citric Acid, Caprylyl Glycol, Benzyl Alcohol, Sodium Phosphate, Ethylhexylglycerin, Sorbic Acid, Caprylyl, Capryl Glucoside, Ethyl Linoleate, Ethyl Oleate, Sorbitan Oleate, Polyquaternium-37, Caprylic Acid, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Hexyl Cinnamal, Limonene, Linalool."
  },
  "hitze|Moroccanoil|Perfect Defense": {
   "treffer": null
  },
  "hitze|Wella Professionals|EIMI Thermal Image": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Wella EIMI Thermal Image 150 ml",
+  "url": "https://www.hagel-shop.de/products/wella-eimi-thermal-image-150-ml",
+  "score": 1.0,
+  "inci": "Alcohol Denat., Aqua, Isododecane, Disiloxane, Glycerin, VP, VA Copolymer, Panthenol, Polyquaternium-16, Dimethicone, Parfum, LacticAcid, Ethylhexyl Methoxycinnamate, Dimethiconol, Sodium Hydroxide, Limonene, Linalool, BenzylSalicylate, Citronellol, Hydroxycitronellal, CI 60725"
  },
  "hitze|Maria Nila|Shaping Heat Spray": {
-  "treffer": null
+  "quelle": "hagel",
+  "titel": "Maria Nila Shaping Heat Spray",
+  "url": "https://www.hagel-shop.de/products/maria-nila-shaping-heat-spray",
+  "score": 1.0,
+  "inci": "Alcohol Denat., Butane, Isobutane, Propane, Aqua/Water/Eau, Polyurethane-14, Octylacrylamide/Acrylates/Butylaminoethyl Methacrylate Copolymer, AMP-Acrylates Copolymer, Squalane, Aminomethyl Propanol, Glycerin, Parfum/Fragrance"
  },
  "hitze|NEQI|Diamond Glass Styling Spray": {
   "dan": 1455212,
@@ -1319,5 +1567,47 @@
  },
  "hitze|Schwarzkopf taft|Hitzeschutzspray Aloe Boost": {
   "treffer": null
+ },
+ "maske|Olaplex|Rich Hydration Mask": {
+  "quelle": "hagel",
+  "titel": "Olaplex Rich Hydration Mask",
+  "url": "https://www.hagel-shop.de/products/olaplex-rich-hydration-mask",
+  "score": 1.0,
+  "inci": "Water/Aqua/Eau, Cetearyl Alcohol, Dodecane, C10-18 Triglycerides, Behentrimonium Methosulfate, Propanediol, Behentrimonium Chloride, Helianthus Annuus (Sunflower) Seed Oil, Persea Gratissima (Avocado) Oil, Brassicamidopropyl Dimethylamine, Glycerin, Hydrogenated Rapeseed Oil, Myristyl Myristate, Carthamus Tinctorius (Safflower) Seed Oil, Brassica Glycerides, Butyrospermum Parkii (Shea) Butter, Cocos Nucifera (Coconut) Oil, Crambe Abyssinica Seed Oil, Dioctyldodecyl Dodecanedioate, Hydrogenated Castor Oil/Sebacic Acid Copolymer, Propylheptyl Caprylate, Ethyl Oleate, Fragrance (Parfum), Styrene/Butadiene Copolymer, Phenoxyethanol, Quaternium-87, Isopropyl Alcohol, Lactic Acid, Guar Hydroxypropyltrimonium Chloride, Caprylic/Capric Triglyceride, Ceratonia Siliqua (Carob) Gum, Propylene Glycol, Maltodextrin, Chlorphenesin, Ethylhexylglycerin, Bis-Aminopropyl Diglycol Dimaleate, Sclerotium Gum, Arginine, Silybum Marianum Seed Extract, Succinic Acid, Trisodium Ethylenediamine Disuccinate, Hexyl Cinnamal, Limonene, Citral, Olea Europaea (Olive) Leaf Extract, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Tocopherol, CI 15985 (Yellow 6), CI 19140 (Yellow 5), Sodium Benzoate, TBHQ, Sodium Hydroxide"
+ },
+ "maske|Olaplex|Weightless Nourishing Mask": {
+  "quelle": "hagel",
+  "titel": "Olaplex Weightless Nourishing Mask",
+  "url": "https://www.hagel-shop.de/products/olaplex-weightless-nourishing-mask",
+  "score": 1.0,
+  "inci": "Water/Aqua/Eau, Cetyl Alcohol, Polyquaternium-37, Cetearyl Alcohol, Behentrimonium Chloride, Propanediol, Hydrogenated Castor Oil/Sebacic Acid Copolymer, Stearamidopropyl Dimethylamine, Hydrogenated Ethylhexyl Olivate, Polyelyceryl-2 Stearate, Glycerin, Amodimethicone, Fragrance (Parfum), Glyceryl Stearate, Phenoxyethanol, Caprylic/Capric Triglyceride, Stearyl Alcohol, Isopropyl Alcohol, Polyquaternium-6, Quaternium-22, Guar,, Hydroxypropyltrimonium Chloride, Butyrospermum Parkii (Shea) Butter, C15-19 Alkane, Dimethicone, Panthenol, PPG-3 Benzyl Ether Myristate, Glucomannan, Hydrogenated Olive Oil Unsaponifiables, Polyimide-1, Cetyl Esters, Cocos Nucifera (Coconut) Oil, Pentylene Glycol, Chlorphenesin, Ethylhexylglycerin, Oryza Sativa (Rice) Bran Extract, Bis-Aminopropy Diglycol Dimaleate, Rosa Canina Fruit Oll, Arginine, Lactic Acid, Sodium Lactate,, Sorbitol, Citric Acid, Helianthus Annuus (Sunflower) Extract, Trisodium Ethylenediamine Disuccinate, Hexyl Cinnamal*, Limonene, Momordica, Cochinchinensis Seed Extract, Rosmarinus Officinalis (Rosemary) Leaf, Extract, Tocopherol, Citral, Polyglutamic Acid, 1,2-Hexanediol, Capryly. Glyco., Silica, Dimethyl Silylate, CI 15985 (Yellow 6), CI 19140 (Yellow 5), Sodium Benzoate, Lactobacillus Ferment, Sodium Hyaluronate, Pentaerythrityl Tetra-di-t-butyL Hydroxyhydrocinnamate, Sodium Hydroxide"
+ },
+ "maske|Sebastian Professional|Dark Oil Smooth & Shine Mask": {
+  "quelle": "hagel",
+  "titel": "Sebastian Dark Oil Mask",
+  "url": "https://www.hagel-shop.de/products/sebastian-dark-oil-mask",
+  "score": 0.6,
+  "inci": "Aqua/Water/Eau, Stearyl Alcohol, Behentrimonium Chloride, Cetyl Alcohol, Parfum/Fragrance, Panthenol, Isopropyl Alcohol, Benzyl Alcohol, Phenoxyethanol, PEG-2M, Methylparaben, Propylene Glycol, Quaternium-80, Propylparaben, Tetramethyl Acetyloctahydronaphthalenes, Disodium EDTA, Hexyl Cinnamal, Hexamethylindanopyran, Acetyl Cedrene, Linalyl Acetate, Coumarin, Citronellol, Silica, Citric Acid, Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, BHT."
+ },
+ "conditioner|Sebastian Professional|Dark Oil Smooth & Shine Conditioner": {
+  "quelle": "hagel",
+  "titel": "Sebastian Dark Oil Conditioner",
+  "url": "https://www.hagel-shop.de/products/sebastian-dark-oil-conditioner-k-12134032",
+  "score": 0.6,
+  "inci": "Aqua/Water/Eau, Behentrimonium Chloride, Cetearyl Alcohol, Hydroxypropyl Starch Phosphate, Isopropyl Alcohol, Amodimethicone, Parfum/Fragrance, Panthenol, Propylene Glycol, Quaternium-80, Sodium Benzoate, Phenoxyethanol, Citric Acid, Tetramethyl Acetyloctahydronaphthalenes, Disodium EDTA, Hexyl Cinnamal, Trideceth-12, Hexamethylindanopyran, Acetyl Cedrene, Linalyl Acetate, Coumarin, Cetrimonium Chloride, Citronellol, Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil."
+ },
+ "leavein|Dejan Garz|Leave-In Cream The Sensitive": {
+  "quelle": "hagel",
+  "titel": "DEJAN GARZ The Foundation Leave-In Cream 100 ml",
+  "url": "https://www.hagel-shop.de/products/dejan-garz-the-foundation-leave-in-cream-100-ml",
+  "score": 0.75,
+  "inci": "AQUA, CETEARYL ALCOHOL, GLYCERIN, AMODIMETHICONE, BEHENTRIMONIUM CHLORIDE, CETRIMONIUM CHLORIDE, PANTHENOL, ARGANIA SPINOSA KERNEL OIL, SIMMONDSIA CHINENSIS SEED OIL, RICINUS COMMUNIS SEED OIL, MYRISTYL MYRISTATE, PHENYL TRIMETHICONE, LACTIC ACID, PROPYLENE GLYCOL, QUATERNIUM-80, SODIUM HYALURONATE, TRIDECETH-15, TRIDECETH-3, PHENOXYETHANOL, PARFUM, SODIUM BENZOATE, ETHYLHEXYLGLYCERIN, ISOPROPYL ALCOHOL, HEXYL CINNAMAL, LINALOOL, ALPHA-ISOMETHYL IONONE, LIMONENE, CITRIC ACID, ACETIC ACID"
+ },
+ "leavein|Sebastian Professional|No Breaker Bonding & Styling Leave-in Cream": {
+  "quelle": "hagel",
+  "titel": "Sebastian No Breaker Bonding & Styling Leave-In Cream 145 ml",
+  "url": "https://www.hagel-shop.de/products/sebastian-no-breaker-bonding-styling-leave-in-cream-145-ml-12134061",
+  "score": 1.0,
+  "inci": "Aqua/Water/Eau, PVP, Polyquaternium-37, Propylene Glycol Dicaprylate/Dicaprate, Behentrimonium Chloride, Guar Hydroxypropyltrimonium Chloride, Polyquaternium-4, Sodium Benzoate, Cetearyl Alcohol, Parfum/Fragrance, Phenoxyethanol, Panthenol, Malic Acid, Aminomethyl Propanol, PPG-1 Trideceth-6, Isopropyl Alcohol, Disodium EDTA, Cetyl Alcohol, PEG-20 Stearate, Acrylates/Stearyl Methacrylate Copolymer, Sorbitan Oleate, Hexyl Cinnamal, Citric Acid, Hexamethylindanopyran, Benzyl Salicylate, Terpineol, Linalool, Linalyl Acetate, Citronellol, Hydroxycitronellal, Alpha-Isomethyl Ionone, Tetramethyl Acetyloctahydronaphthalenes, Amyl Cinnamal, EDTA, Geraniol, Citrus Limon Peel Oil, Rose Ketones, Dimethyl Phenethyl Acetate, Limonene."
  }
 }
