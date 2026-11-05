@@ -4,7 +4,7 @@
   --bg:#F3ECE2; --card:#EBE2D6; --paper:#F8F3EC; --ink:#382F2E; --muted:#6E615C; --taupe:#9E8C80;
   --line:rgba(56,47,46,.22); --line-soft:rgba(56,47,46,.12);
   /* Zweite Signature-Farbe (Laura, Bar-Noire-Prägung): kühles Dunkelbraun mit Khaki */
-  --khaki:#29261F; --khaki-hell:#E7E3D7; --khaki-linie:rgba(41,38,31,.45); --khaki-button:#4A4A39;
+  --khaki:#3A3730; --khaki-hell:#E8E5E0; --khaki-linie:rgba(58,55,48,.4); --khaki-button:#3A3730; /* 05.11. Laura: Khaki-Grün ersetzt durch #3A3730 */
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Noto Serif",Georgia,serif;
   --sans:"Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   color-scheme: light;
@@ -1279,7 +1279,7 @@ body{overflow-x:clip}
 .mbtns{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:auto}
 .mbtn{font:inherit;font-size:clamp(11px,3.7cqw,13px);letter-spacing:.14em;text-transform:uppercase;padding:.75em 1.25em;white-space:nowrap;border-radius:999px;border:1px solid #29261F;background:transparent;color:#29261F;cursor:pointer;transition:background .2s,color .2s}
 .mbtn:hover,.mbtn.dark{background:#29261F;color:#F6F1E8}
-.mbtn.dark:hover{background:var(--khaki-button,#4A4A39);border-color:var(--khaki-button,#4A4A39)}
+.mbtn.dark:hover{background:#47433B;border-color:#47433B}
 .mlink{font:inherit;font-size:13px;background:none;border:0;padding:0;color:#29261F;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}
 .mfeed{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7D7462;margin:0 0 2cqw}
 .murteil{font-family:var(--serif);font-size:clamp(28px,12cqw,48px);line-height:1;margin:0 0 4cqw;color:#29261F}
@@ -1315,7 +1315,7 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .bookfly.hell .bf-cover .front h3{color:#382F2E}
 
 /* ---------- Abo-Vorschau: Schlösser, verschwommene Bereiche, Abo-Fenster ---------- */
-.zschloss{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--khaki-button,#4A4A39);color:#F3ECE2;margin:0 auto 10px}
+.zschloss{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--khaki-button,#3A3730);color:#F3ECE2;margin:0 auto 10px}
 .zschloss svg{width:22px;height:22px}
 .zwrap{position:relative}
 .stufe-kopf{margin:22px 0 12px;padding:14px 16px;border-radius:16px;background:#382F2E;color:#F3ECE2}
@@ -1508,13 +1508,13 @@ html.zg-gast #wissenCards .wcard:not([data-abo]) .zzu,html:not(.zg-gast) .zzu{di
 .zzu svg,.wabo svg,.zfaq svg,.zsuchgo svg,.wres .go svg{width:14px;height:14px;flex:none}
 .wfrei,.wabo{display:inline-flex;align-items:center;gap:5px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:0 0 8px;color:var(--muted)}
 html.zg-abo .wfrei{display:none}
-.wfrei{color:#5E5848}
+.wfrei{color:#3A3730}
 .zfaq{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;text-align:left;background:none;border:0;border-bottom:1px solid var(--line-soft);padding:14px 2px;font:inherit;color:var(--muted);cursor:pointer}
 .zfaq svg{width:16px;height:16px}
 .zsuch{color:var(--muted);font-style:italic}
 .wres .go{display:inline-flex;align-items:center;gap:6px}
 /* Quizkarten im Abo: Schloss-Etikett */
-.zbadge{position:absolute;top:16px;right:52px;z-index:3;display:inline-flex;align-items:center;gap:6px;background:var(--khaki-button,#4A4A39);color:#F3ECE2;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.zbadge{position:absolute;top:16px;right:52px;z-index:3;display:inline-flex;align-items:center;gap:6px;background:var(--khaki-button,#3A3730);color:#F3ECE2;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
 .zbadge svg{width:13px;height:13px}
 html.zg-abo .zbadge{display:none}
 .zmerk{max-width:460px;margin:30px auto;text-align:center;background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:28px 24px}
@@ -1564,7 +1564,7 @@ html.zg-abo .zbadge{display:none}
 .stufe .hast{margin:auto 0 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .stufe.abo{background:var(--ink);color:#F3ECE2;border-color:var(--ink)}
 .stufe.abo h3{color:#F3ECE2}
-.stufe.abo .tag{position:absolute;top:-11px;right:18px;background:var(--khaki-button,#4A4A39);color:#F3ECE2;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.stufe.abo .tag{position:absolute;top:-11px;right:18px;background:var(--khaki-button,#3A3730);color:#F3ECE2;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
 .stufe .preis{margin:auto 0 10px;font-family:var(--serif);font-size:22px;color:#E9DFD2}
 .stufe.abo .btn{background:#F3ECE2;color:#29261F;border-color:#F3ECE2;align-self:flex-start}
 .abofuss{text-align:center;margin:18px 0 4px;font-size:15px}
@@ -1593,12 +1593,12 @@ html.zg-abo .zbadge{display:none}
 .neutile .name{font-family:var(--serif);font-size:19px;line-height:1.15;margin-top:2px}
 .neuband .kicker{margin:0 0 4px}
 .ptab.ptneu{color:var(--ink)}
-.ptab.ptneu svg{color:var(--khaki-button,#4A4A39)}
+.ptab.ptneu svg{color:var(--khaki-button,#3A3730)}
 .ghero.neuhero{background:#EDE6DC}
 
 /* Marketing-Check am Produkt */
-.mcheck{background:#EFEBE1;border-left:2px solid var(--khaki-button,#4A4A39);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
-.mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#4A4A39);margin-bottom:3px}
+.mcheck{background:#ECE9E4;border-left:2px solid var(--khaki-button,#3A3730);border-radius:0 10px 10px 0;padding:10px 12px;margin:10px 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
+.mcheck b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--khaki-button,#3A3730);margin-bottom:3px}
 
 /* ---------- Einheitliche Seitenköpfe: kleine Zeile, Überschrift, ein Satz ---------- */
 .seitenkopf .kicker{margin:0 0 8px}
@@ -1707,7 +1707,7 @@ html.zg-abo .zbadge{display:none}
 .ptx p{margin:0;color:#5E524D;font-size:15px;max-width:52ch}
 .pst{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .pst .bhk{border-color:rgba(56,47,46,.35);width:22px;height:22px}
-.pst .bhk.ok{background:var(--khaki-button,#4A4A39);color:#F3ECE2;border-color:var(--khaki-button,#4A4A39)}
+.pst .bhk.ok{background:var(--khaki-button,#3A3730);color:#F3ECE2;border-color:var(--khaki-button,#3A3730)}
 .pweg .btn{white-space:nowrap}
 @media (max-width:759px){
   .pweg li{grid-template-columns:auto minmax(0,1fr);padding:16px}
@@ -1724,7 +1724,7 @@ html.zg-abo .zbadge{display:none}
 .pextra b{font-weight:500;font-size:16px}
 .pextra i{font-style:normal;font-size:14px;color:var(--muted)}
 .pextra .bhk{border-color:rgba(56,47,46,.35);flex:0 0 auto}
-.pextra .bhk.ok{background:var(--khaki-button,#4A4A39);color:#F3ECE2;border-color:var(--khaki-button,#4A4A39)}
+.pextra .bhk.ok{background:var(--khaki-button,#3A3730);color:#F3ECE2;border-color:var(--khaki-button,#3A3730)}
 .pzu2 svg{width:15px;height:15px;opacity:.7}
 .pkap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 @media (max-width:759px){ .pkap{grid-template-columns:repeat(2,minmax(0,1fr))} }
@@ -1814,7 +1814,7 @@ html[data-stil="rouje"] .favtabs button{font-size:12px;letter-spacing:.14em;text
 .testitem .brand{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 .testitem .name{display:block;font-family:var(--serif);font-size:19px;line-height:1.15;margin:2px 0 8px}
 .testkopf{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
-.teststatus{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--khaki-button,#4A4A39);color:#F3ECE2}
+.teststatus{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--khaki-button,#3A3730);color:#F3ECE2}
 .teststatus.s-bleibt{background:var(--ink)}
 .teststatus.s-raus{background:#B5A79D}
 .testseit{font-size:12px;color:var(--muted)}
@@ -1875,7 +1875,7 @@ html[data-stil="rouje"] .startweg h2,html[data-stil="rouje"] .startweg h2,html[d
 .swtag{position:absolute;top:22px;right:20px;display:inline-flex;align-items:center;gap:5px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
 .swtag svg{width:12px;height:12px}
 .swtag.frei{background:#F3ECE2;color:#29261F}
-.swtag.abo{background:var(--khaki-button,#4A4A39);color:#F3ECE2}
+.swtag.abo{background:var(--khaki-button,#3A3730);color:#F3ECE2}
 html.zg-abo .swtag{display:none}
 .swliste li.sw1 h3{color:#F3ECE2}
 .swliste li.sw1 p{color:#E3D8CB}
@@ -1892,13 +1892,13 @@ html.zg-abo .swtag{display:none}
 .swcheck{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;color:#29261F;background:#F3ECE2;border:0;border-radius:999px;padding:6px 14px 6px 6px;cursor:pointer}
 .swcheck:hover{background:#FFFDFA}
 .swcheck .bhk{border-color:rgba(41,38,31,.4);width:22px;height:22px}
-.swcheck .bhk.ok{background:var(--khaki-button,#4A4A39);color:#F3ECE2;border-color:var(--khaki-button,#4A4A39)}
+.swcheck .bhk.ok{background:var(--khaki-button,#3A3730);color:#F3ECE2;border-color:var(--khaki-button,#3A3730)}
 /* Kacheln kurz mit Symbol */
 .offer.kurz{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}
 .offer.kurz li{grid-column:auto !important}
 @media (max-width:959px){ .offer.kurz{grid-template-columns:repeat(2,minmax(0,1fr))} .offer.kurz li:last-child{grid-column:1/-1 !important} }
 .offer.kurz button{position:relative;padding:16px 16px 14px;gap:4px}
-.offer.kurz .oico{display:block;width:28px;height:28px;margin-bottom:6px;color:var(--khaki-button,#4A4A39)}
+.offer.kurz .oico{display:block;width:28px;height:28px;margin-bottom:6px;color:var(--khaki-button,#3A3730)}
 .offer.kurz .oico svg{width:100%;height:100%}
 .offer.kurz h3{font-size:20px}
 html[data-stil="rouje"] .offer.kurz h3{font-size:20px}
