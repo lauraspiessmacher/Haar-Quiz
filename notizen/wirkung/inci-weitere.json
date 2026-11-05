@@ -790,7 +790,9 @@
   "inci": "Ingredients: Aqua, Sodium Laureth Sulfate, Laureth-9, Sodium Chloride, Cocamidopropyl Betaine, Urea, Hydroxypropyl Guar Hydroxypropyltrimonium Chloride, Sodium Benzoate, Glycerin, Maris Sal (Dead Sea Salt), Citric Acid, Menthol, Potassium Sorbate, Panthenol, Lactic Acid, Mentha Arvensis Leaf Oil."
  },
  "shampoo|Garnier Fructis|Ananas Hair Food": {
-  "treffer": null
+  "quelle": "Laura (05.11.)",
+  "score": 1.0,
+  "inci": "AQUA / WATER, SODIUM LAURYL SULFATE, COCO-GLUCOSIDE, COCO-BETAINE, PHYLLANTHUS EMBLICA FRUIT EXTRACT, ANANAS SATIVUS FRUIT EXTRACT / PINEAPPLE FRUIT EXTRACT, COCOS NUCIFERA OIL / COCONUT OIL, GLYCERIN, GLYCERYL OLEATE, TRIETHYL CITRATE, LECITHIN, SODIUM CHLORIDE, SODIUM HYDROXIDE, HYDROGENATED PALM GLYCERIDES CITRATE, HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, CAPRYLIC/CAPRIC TRIGLYCERIDE, CITRIC ACID, TOCOPHEROL, ASCORBYL PALMITATE, POTASSIUM SORBATE, SODIUM BENZOATE, SALICYLIC ACID, CARAMEL, LINALOOL, LIMONENE, CITRONELLOL, BENZYL ALCOHOL, BENZYL SALICYLATE, PARFUM / FRAGRANCE"
  },
  "shampoo|Santé|Simply Sensitive": {
   "dan": 3159176,
