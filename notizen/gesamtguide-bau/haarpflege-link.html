@@ -1444,17 +1444,13 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 
 /* ---------- Startseite in Bewegung (Laura 05.11.) ---------- */
 #v-start{position:relative}
-.sv-r{transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--svi, 0) * 140ms)}
-.sv-an .sv-r:not(.sv-da){opacity:0;transform:translateY(30px)}
+@keyframes svRein{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+.sv-an .sv-r:not(.sv-da){opacity:0 !important}
+.sv-an .sv-r.sv-da{animation:svRein 1s cubic-bezier(.16,.8,.24,1) both;animation-delay:calc(var(--svi, 0) * 160ms)}
 .svstrich{position:relative;display:inline-block}
 .svstrich::after{content:"";position:absolute;left:-3%;right:-3%;bottom:.04em;height:.07em;min-height:2px;border-radius:2px;background:linear-gradient(90deg,#B9BDC3,#E9EBEE 45%,#8E9399);transform:rotate(-1.5deg) scaleX(1);transform-origin:left center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1) .35s}
 .sv-an .promise:not(.sv-da) .svstrich::after{transform:rotate(-1.5deg) scaleX(0)}
 .swzahl{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
-.svfaden{position:absolute;top:0;left:-30px;width:24px;pointer-events:none;z-index:0;overflow:visible}
-.svf-pfad{transition:stroke-dashoffset .25s linear}
-.svf-knoten circle{fill:var(--bg);stroke:#A3A8AE;stroke-width:1.4;transform-box:fill-box;transform-origin:center;transform:scale(.4);opacity:0;transition:transform .5s cubic-bezier(.3,1.6,.5,1), opacity .4s, fill .4s}
-.svf-knoten circle.an{transform:scale(1);opacity:1;fill:#E9EBEE}
-@media (max-width:759px){ .svfaden{left:-20px} }
 /* Gast: alle Produkte sichtbar, Einschätzung verschwommen */
 .zcta.zinline{position:relative;left:auto;top:auto;transform:none;margin:10px auto 26px;width:min(560px,100%)}
 .zkwrap{position:relative;margin-top:6px}
@@ -4617,7 +4613,7 @@ document.getElementById("swPlan").onclick = () => { state.view = "plan"; render(
 
 /* ---------- Startseite: mehr Bewegung beim Scrollen (Laura 05.11.) ----------
    1) Abschnitte gleiten beim Scrollen herein, die drei Schritte nacheinander
-   2) silberner Faden links am Rand, zeichnet sich beim Scrollen und verbindet die Abschnitte (wie auf der Routine-Seite)
+   (silberner Faden wieder raus, Laura 05.11.)
    3) Produktzahl zählt hoch  4) silberne Linie unter „Meine“ */
 (function(){
   const v = document.getElementById("v-start"); if(!v) return;
@@ -4637,43 +4633,6 @@ document.getElementById("swPlan").onclick = () => { state.view = "plan"; render(
       const lauf = ts => { if(t0 == null) t0 = ts; const f = Math.min(1, (ts - t0) / 1500), e = 1 - Math.pow(1 - f, 3); z.textContent = Math.round(ziel * e); if(f < 1) requestAnimationFrame(lauf); };
       requestAnimationFrame(lauf); }, {threshold: .6});
     zo.observe(z); }
-  /* silberner Faden */
-  const NS = "http://www.w3.org/2000/svg";
-  const svg = document.createElementNS(NS, "svg"); svg.setAttribute("class", "svfaden"); svg.setAttribute("aria-hidden", "true");
-  svg.innerHTML = `<defs><linearGradient id="svsilber" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1000"></linearGradient></defs><path class="svf-pfad" fill="none" stroke="url(#svsilber)" stroke-width="1.6" stroke-linecap="round"/><g class="svf-knoten"></g>`;
-  v.prepend(svg);
-  const pfad = svg.querySelector(".svf-pfad"), knoten = svg.querySelector(".svf-knoten"), verlauf = svg.querySelector("#svsilber");
-  let y0 = 0, y1 = 0, L = 1, marken = [];
-  const farben = ["#B9BDC3","#8E9399","#E9EBEE","#A3A8AE","#D5D8DC"];
-  function bauen(){
-    if(v.hidden || !v.offsetHeight) return;
-    const top = v.getBoundingClientRect().top + scrollY;
-    const start = v.querySelector(".probleme"), ende = v.querySelector(".routine") || v.lastElementChild;
-    if(!start) return;
-    y0 = start.getBoundingClientRect().top + scrollY - top + 10;
-    y1 = ende.getBoundingClientRect().bottom + scrollY - top - 10;
-    const H = v.offsetHeight; svg.setAttribute("viewBox", `0 0 24 ${H}`); svg.style.height = H + "px";
-    let d = `M12 ${y0.toFixed(0)}`, y = y0, s = 1;
-    while(y < y1){ const ny = Math.min(y1, y + 130); d += ` Q${12 + 6 * s} ${((y + ny) / 2).toFixed(0)} 12 ${ny.toFixed(0)}`; y = ny; s = -s; }
-    pfad.setAttribute("d", d); L = pfad.getTotalLength(); pfad.style.strokeDasharray = L;
-    verlauf.setAttribute("y2", H); { const n = Math.max(6, Math.round(H / 260)); verlauf.innerHTML = Array.from({length: n}, (_, k) => `<stop offset="${(k / (n - 1)).toFixed(3)}" stop-color="${farben[k % farben.length]}"/>`).join(""); }
-    marken = [v.querySelector(".probleme")].concat(bloecke.filter(b => !b.matches(".startweg li, .startweg .head"))).filter(Boolean)
-      .map(b => b.getBoundingClientRect().top + scrollY - top + 6).filter(m => m > y0 && m < y1).sort((a, b) => a - b);
-    knoten.innerHTML = marken.map(m => `<circle cx="12" cy="${m.toFixed(0)}" r="3.6"/>`).join("");
-    zeichnen();
-  }
-  function zeichnen(){
-    if(v.hidden || !L) return;
-    const top = v.getBoundingClientRect().top;
-    const bis = innerHeight * 0.72 - top;
-    const f = Math.max(0, Math.min(1, (bis - y0) / (y1 - y0)));
-    pfad.style.strokeDashoffset = L * (1 - f);
-    [...knoten.children].forEach((c, k) => c.classList.toggle("an", marken[k] <= bis));
-  }
-  let rq = false; addEventListener("scroll", () => { if(rq) return; rq = true; requestAnimationFrame(() => { rq = false; zeichnen(); }); }, {passive: true});
-  addEventListener("resize", bauen);
-  if("ResizeObserver" in window) new ResizeObserver(() => bauen()).observe(v);
-  setTimeout(bauen, 300);
 })();
 /* ---------- Fußzeile ---------- */
 document.querySelectorAll(".fuss [data-fgo]").forEach(b => b.onclick = () => { state.view = b.dataset.fgo; state.wissen = null; render(); window.scrollTo({top:0}); });
