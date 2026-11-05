@@ -398,10 +398,17 @@ html.zg-gast .ptile em .zzu{display:block;text-decoration:none;font-size:10px;le
 .serie .links{display:flex;gap:10px;flex-wrap:wrap}
 .reelwrap{overflow:hidden;margin:0 -16px;padding:4px 0 10px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
 @media (min-width:760px){ .reelwrap{margin:0 -32px} }
-.reeltrack{display:flex;gap:14px;width:max-content;padding:0 16px;animation:reelrun 45s linear infinite}
-.reelwrap:hover .reeltrack,.reelwrap:focus-within .reeltrack,.reelwrap.stop .reeltrack{animation-play-state:paused}
-@keyframes reelrun{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){ .reelwrap{overflow-x:auto} .reeltrack{animation:none} }
+.reeltrack{display:flex;gap:14px;width:max-content;padding:0 16px;will-change:transform}
+/* Laufband (05.11., Laura): läuft von selbst; mit Finger, Maus oder Trackpad selbst schieben, danach läuft es weiter */
+.reelwrap{position:relative;touch-action:pan-y;cursor:grab;-webkit-user-select:none;user-select:none}
+.reelwrap.zieht{cursor:grabbing}
+.reelwrap img,.reelwrap a{-webkit-user-drag:none;user-drag:none}
+.lbpfeil{position:absolute;top:50%;z-index:4;width:44px;height:44px;margin-top:-22px;border-radius:50%;border:0;background:rgba(56,47,46,.82);color:#F3ECE2;display:grid;place-items:center;cursor:pointer;opacity:0;transition:opacity .25s,background .2s;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.lbpfeil:hover{background:#382F2E}
+.lbpfeil.l{left:calc(4% + 6px)}.lbpfeil.r{right:calc(4% + 6px)}
+.lbpfeil svg{width:18px;height:18px}
+@media (hover:hover){ .reelwrap:hover .lbpfeil,.reelwrap:focus-within .lbpfeil{opacity:1} }
+@media (hover:none){ .lbpfeil{display:none} }
 .reel{position:relative;flex:0 0 auto;width:178px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#382F2E;color:#F3ECE2;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:14px;background-size:cover;background-position:center;transition:transform .2s ease}
 .reel:nth-child(even){background-color:#7A6A65}
 .reel:hover{transform:translateY(-3px)}
@@ -4152,6 +4159,64 @@ document.getElementById("toQuiz").onclick = () => { dlg.close(); state.view="qui
 function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("on"); setTimeout(()=>el.classList.remove("on"),1600); }
 
 
+/* ---------- Laufband (05.11., Laura): läuft von selbst im gewohnten Tempo. Sobald jemand mit Finger, Maus (ziehen),
+   Trackpad oder den Pfeilen eingreift, steuert er selbst; nach kurzer Pause läuft es von dort weiter. Endlos in beide Richtungen ---------- */
+function laufband(wrap, track, tempo){
+  if(!wrap || !track) return;
+  const still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let x = 0, L = 0, v = 0, ziel = null, zug = null, maus = false, ruheBis = 0, sichtbar = true, last = performance.now(), klickSperre = false;
+  const messen = () => { const k = track.querySelector(':scope > [aria-hidden="true"]'), a = track.firstElementChild;
+    L = k && a ? k.offsetLeft - a.offsetLeft : track.scrollWidth / 2; };
+  const tempoPx = () => typeof tempo === "function" ? tempo(L) : tempo;
+  const norm = () => { if(L <= 0) return; const n = ((x % L) + L) % L; if(ziel != null) ziel += n - x; x = n; };
+  const setzen = () => { norm(); track.style.transform = `translate3d(${-x}px,0,0)`; };
+  const ruhe = ms => { ruheBis = performance.now() + (ms || 2500); };
+  function tick(now){
+    const dt = Math.min(now - last, 50); last = now;
+    if(sichtbar){
+      if(L <= 0) messen();
+      if(zug && zug.aktiv){ /* Finger/Maus führt */ }
+      else if(ziel != null){ const d = ziel - x; x += d * Math.min(1, dt / 90); if(Math.abs(d) < .5){ x = ziel; ziel = null; } }
+      else if(Math.abs(v) > .01){ x += v * dt; v *= Math.pow(.94, dt / 16); }
+      else if(!still && !maus && now > ruheBis && L > 0) x += tempoPx() * dt / 1000;
+      setzen();
+    }
+    requestAnimationFrame(tick);
+  }
+  wrap.addEventListener("pointerdown", e => {
+    if(e.button > 0 || e.target.closest(".lbpfeil")) return;
+    zug = {id:e.pointerId, sx:e.clientX, sy:e.clientY, x0:x, aktiv:false, px:e.clientX, pt:e.timeStamp, vx:0, typ:e.pointerType};
+    v = 0; ziel = null; klickSperre = false;
+  });
+  wrap.addEventListener("pointermove", e => {
+    if(!zug || e.pointerId !== zug.id) return;
+    const dx = e.clientX - zug.sx, dy = e.clientY - zug.sy;
+    if(!zug.aktiv){ if(Math.abs(dx) > 6 && Math.abs(dx) > Math.abs(dy)){ zug.aktiv = true; wrap.classList.add("zieht"); try { wrap.setPointerCapture(e.pointerId); } catch(_){} } else return; }
+    const dtp = Math.max(e.timeStamp - zug.pt, 1); zug.vx = .8 * ((zug.px - e.clientX) / dtp) + .2 * zug.vx; zug.px = e.clientX; zug.pt = e.timeStamp;
+    x = zug.x0 - dx; ruhe();
+  });
+  const los = e => { if(!zug || (e && e.pointerId !== zug.id)) return;
+    if(zug.aktiv){ klickSperre = true; v = Math.max(-3, Math.min(3, zug.vx)); ruhe(zug.typ === "mouse" ? 1800 : 2500); }
+    zug = null; wrap.classList.remove("zieht"); };
+  wrap.addEventListener("pointerup", los); wrap.addEventListener("pointercancel", los);
+  wrap.addEventListener("click", e => { if(klickSperre){ e.preventDefault(); e.stopPropagation(); klickSperre = false; } }, true);
+  wrap.addEventListener("dragstart", e => e.preventDefault());
+  wrap.addEventListener("wheel", e => { /* Trackpad seitwärts (oder Shift + Mausrad) schiebt das Band, normales Scrollen bleibt Seiten-Scrollen */
+    const dx = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+    if(!dx) return; e.preventDefault(); v = 0; ziel = null; x += dx; ruhe(); }, {passive:false});
+  wrap.addEventListener("pointerenter", e => { if(e.pointerType === "mouse") maus = true; });
+  wrap.addEventListener("pointerleave", e => { if(e.pointerType === "mouse"){ maus = false; ruhe(600); } });
+  wrap.addEventListener("focusin", () => { maus = true; }); wrap.addEventListener("focusout", () => { maus = false; });
+  /* Pfeile (nur mit Maus sichtbar): eine Kachel vor oder zurück */
+  const pf = (cls, lab, d) => { const b = document.createElement("button"); b.type = "button"; b.className = "lbpfeil " + cls; b.setAttribute("aria-label", lab); b.tabIndex = -1;
+    b.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`; wrap.appendChild(b); return b; };
+  const schritt = r => { const a = track.firstElementChild; const w = a ? a.getBoundingClientRect().width + 14 : 200; v = 0; ziel = (ziel != null ? ziel : x) + r * w; ruhe(3500); };
+  pf("l", "Zurück", "M15 5l-7 7 7 7").onclick = () => schritt(-1);
+  pf("r", "Weiter", "M9 5l7 7-7 7").onclick = () => schritt(1);
+  if("ResizeObserver" in window) new ResizeObserver(messen).observe(track); window.addEventListener("load", messen);
+  if("IntersectionObserver" in window) new IntersectionObserver(es => { sichtbar = es[0].isIntersecting; last = performance.now(); }).observe(wrap);
+  messen(); requestAnimationFrame(tick);
+}
 /* ---------- Serie „Haarpflege 1×1“: hier Links und Titelbilder eintragen ---------- */
 const SERIE = __SERIE__; /* kommt aus serie.json (Folge, Titel, Link, Titelbild) */
 const SERIE_PROFIL = "https://www.instagram.com/lauraspiessmacher/";
@@ -4165,9 +4230,7 @@ const SERIE_MAX = 10; /* so viele Folgen laufen durch, die neuesten zuerst */
   const many = list.length < 6 ? one + one : one;
   track.innerHTML = many + list.map(r => tile(r,true)).join("").repeat(list.length < 6 ? 2 : 1);
   track.querySelectorAll('a[href="#"]').forEach(a => a.onclick = e => e.preventDefault());
-  const wrap = document.getElementById("reelwrap");
-  wrap.addEventListener("touchstart", () => wrap.classList.add("stop"), {passive:true});
-  wrap.addEventListener("touchend", () => setTimeout(()=>wrap.classList.remove("stop"), 2500), {passive:true});
+  laufband(document.getElementById("reelwrap"), track, L => L / 45); /* gleiches Tempo wie vorher: einmal ganz durch in 45 s */
 })();
 /* ---------- Wehende Haarsträhnen (Test): Mähne = viele Strähnen wehen von rechts herein, Dezent = an den Rändern ---------- */
 (function(){
@@ -4281,15 +4344,11 @@ function neuBild(p){ const r = p.ir || 1; let w = Math.sqrt(0.32 * r), h = w / r
   const tile = (f, copy) => `<button type="button" class="favtile" data-favsec="${esc(f.sid)}" ${copy?'aria-hidden="true" tabindex="-1"':`aria-label="${esc(f.brand+" "+f.name)}, aus Lauras Favorites: ${esc(f.rub)}"`}><span class="rub">${esc(f.rub)}</span><span class="pic"><img src="${f.img}" alt="" loading="lazy"></span><span class="b">${esc(f.brand)}</span><span class="n">${esc(f.name)}</span></button>`;
   const one = copy => cover(copy) + mix.map(f => tile(f, copy)).join("");
   track.innerHTML = one(false) + one(true);
-  const speed = () => { const half = track.scrollWidth / 2; if(half > 0) track.style.animationDuration = Math.round(half / 42) + "s"; };
-  speed(); window.addEventListener("load", speed);
   track.querySelectorAll("[data-favsec]").forEach(b => b.onclick = () => {
     const sid = b.dataset.favsec; state.view = "favoriten"; state.wissen = null; render();
     const el = sid && document.getElementById("fav-" + sid);
     if(el) el.scrollIntoView({block:"start"}); else window.scrollTo({top:0}); });
-  const wrap = document.getElementById("favwrap");
-  wrap.addEventListener("touchstart", () => wrap.classList.add("stop"), {passive:true});
-  wrap.addEventListener("touchend", () => setTimeout(()=>wrap.classList.remove("stop"), 2500), {passive:true});
+  laufband(document.getElementById("favwrap"), track, 42); /* gleiches Tempo wie vorher: 42 Pixel pro Sekunde */
 })();
 document.getElementById("merkCopy").onclick = async () => {
   const t = merkText(); let ok = false;
