@@ -1347,6 +1347,80 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .zpliste li{position:relative;padding-left:22px;font-size:14px;line-height:1.45;color:var(--ink)}
 .zpliste li::before{content:"✓";position:absolute;left:0;top:0;color:#8A6A3E;font-weight:600}
 .zcta-prod .zpklein{font-size:12.5px;margin:10px 0 0}
+
+/* ---------- Inhaltsstoff-Check (Probeansicht 05.11.) ---------- */
+.ptab.ptcheck{background:var(--ink);color:#F3ECE2;border-radius:999px;border-bottom:0;margin:5px 10px 5px 2px;padding:8px 16px 8px 13px;font-size:15px}
+.ptab.ptcheck:hover{background:#4A403E;border-radius:999px}
+.ptab.ptcheck svg{width:20px;height:20px;color:#E7E3D7}
+.ptab.ptcheck[aria-current="true"]{font-weight:600;box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--ink)}
+.ichero .ickick,.icres .ickick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.icsteps{list-style:none;margin:18px 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.icsteps li{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;padding:14px}
+.icsteps span{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#F3ECE2;display:grid;place-items:center;font-family:var(--serif);font-size:15px}
+.icsteps p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
+.icsteps b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+.icform{background:#FFFDFA;border:1px solid var(--line-soft);border-radius:18px;padding:18px;display:grid;gap:8px}
+.icrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
+.iclab{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.iclab i{text-transform:none;letter-spacing:0;font-style:normal;font-size:12.5px}
+.icform textarea,.icform input{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;resize:vertical}
+.icform textarea:focus,.icform input:focus{outline:2px solid var(--ink);outline-offset:1px}
+.icbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.icfehler{margin:14px 0;padding:12px 14px;border-radius:12px;background:var(--card);font-size:14.5px}
+.icres{margin:22px 0 10px;background:#FFFDFA;border:1px solid var(--line-soft);border-radius:20px;padding:22px 20px 16px;scroll-margin-top:calc(var(--hh,180px) + 12px)}
+.icres h3{font-size:26px;margin:0 0 12px}
+.icliste{font-size:14.5px;line-height:1.5;background:var(--card);border-radius:12px;padding:11px 14px;margin:0 0 6px}
+.icliste.ok{background:#382F2E;color:#F3ECE2}
+.icvor{appearance:none;border:0;background:none;padding:0;font:inherit;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer;margin-left:4px}
+.icvor:disabled{text-decoration:none;color:var(--muted);cursor:default}
+.icsec{border-top:1px solid var(--line-soft);padding:14px 0 4px;margin-top:12px}
+.icsec h4{font-family:var(--serif);font-weight:500;font-size:20px;margin:0 0 8px}
+.icsec p{margin:0;font-size:15.5px;line-height:1.6}
+.icfakt{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.icfakt span{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.icpasst{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.icpasst li{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:15px}
+.icpasst b{flex:none;min-width:96px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.icwissen{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15px;line-height:1.55}
+.icsperre{position:relative}
+.icsperre.zu .iczu{filter:blur(5px);opacity:.7;user-select:none;pointer-events:none}
+.icsperre.zu .icpasst .iczu{display:inline-block}
+.iccta{margin:16px 0 4px;background:#382F2E;color:#F3ECE2;border-radius:16px;padding:16px 18px;display:grid;gap:10px;justify-items:start}
+.iccta p{margin:0;font-size:14.5px;line-height:1.5;color:#E9E2D8}
+.iccta b{color:#F3ECE2}
+.iccta .zschloss{color:#D6B98F}
+.iccta .zschloss svg{width:20px;height:20px}
+.iccta .btn.dark{background:#F3ECE2;color:#382F2E;border-color:#F3ECE2}
+.icdich p{font-size:15.5px}
+.icgrid{margin-top:6px}
+.icklein{font-size:12.5px;color:var(--muted);margin:14px 0 0}
+.icsuch{margin:26px 0 8px;padding:16px 18px;border:1px dashed var(--line);border-radius:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.icsuch p{margin:0;font-size:15px}
+.icband{position:relative;z-index:3;margin:44px 0 0;background:#382F2E;color:#F3ECE2;border-radius:24px;padding:30px 32px;display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:24px;align-items:center;overflow:hidden}
+.icband .kicker{color:#D6B98F}
+.icband h2{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.08;margin:4px 0 10px;text-transform:uppercase;color:#F3ECE2}
+.icband h2 .hk{text-transform:none}
+.icband p{color:#E9E2D8;font-size:15.5px;line-height:1.55;margin:0 0 16px;max-width:560px}
+.icband .btn.dark{background:#F3ECE2;color:#382F2E;border-color:#F3ECE2}
+.icbhandy{width:190px;height:auto;color:#E7E3D7}
+@media (max-width:760px){
+  .icsteps{grid-template-columns:1fr}
+  .ptab.ptcheck{flex-direction:row;gap:6px;align-self:center;padding:7px 12px;margin:6px 6px 6px 2px;font-size:12.5px;letter-spacing:.04em}
+  .ptab.ptcheck svg{width:17px;height:17px}
+  .zcta.zinline .zparten,.zcta.zinline .zpliste{display:none}
+  .zcta.zinline{padding:20px 18px 16px}
+  .icband{grid-template-columns:1fr;padding:24px 20px}
+  .icband h2{font-size:28px}
+  .icbhandy{position:absolute;right:-26px;top:-14px;width:120px;opacity:.22}
+  .ptab.ptcheck span{display:inline}
+}
+/* Gast: alle Produkte sichtbar, Einschätzung verschwommen */
+.zcta.zinline{position:relative;left:auto;top:auto;transform:none;margin:10px auto 26px;width:min(560px,100%)}
+.zkwrap{position:relative;margin-top:6px}
+.zkarte{filter:blur(4px);opacity:.6;user-select:none;pointer-events:none;max-height:150px;overflow:hidden;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.zkschloss{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:7px;white-space:nowrap;background:#FFFDFA;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px;cursor:pointer;box-shadow:0 10px 24px -14px rgba(56,47,46,.6)}
+.zkschloss svg{width:14px;height:14px}
+.zkschloss:hover{background:var(--card)}
 html.zg-abo .zzu,html.zg-abo .wabo{display:none}
 html.zg-gast #wissenCards .wcard[data-abo] .zfrei{display:none}
 html.zg-gast #wissenCards .wcard:not([data-abo]) .zzu,html:not(.zg-gast) .zzu{display:none}
@@ -2092,6 +2166,16 @@ b em.lk,html[data-look] .logo b em.lk,html[data-stil] .logo b em.lk{font-style:i
         <li class="sw3"><img class="swtelefon gross" src="__TELEFON__" alt="" aria-hidden="true"><span class="swtag abo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Im Abo</span><span class="swn">3</span><h3>Findet eure Produkte</h3><p>Mit euren Ergebnissen seht ihr bei über 500 Produkten zuerst, was wirklich zu euren Haaren und eurer Kopfhaut passt.</p><button type="button" class="linkbtn" data-go="produkte">Zu den Produkten →</button></li>
       </ol>
     </div>
+    <div class="icband" id="icband"><div class="icbtext"><p class="kicker">Neu · für alle kostenlos</p><h2>Steht ihr im Laden <em class="hk">vor dem Regal?</em></h2>
+      <p>Fotografiert die Rückseite, kopiert die Inhaltsstoffe und fügt sie ein. Ich lese die ganze Liste, nicht nur einzelne Stoffe, und sage euch, was das Produkt wirklich macht.</p>
+      <button type="button" class="btn dark" onclick="showCheck()">Inhaltsstoffe prüfen <span aria-hidden="true">→</span></button></div>
+      <svg class="icbhandy" viewBox="0 0 200 220" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="40" y="8" width="104" height="200" rx="18"/><path d="M80 20h24"/>
+        <rect x="54" y="40" width="76" height="92" rx="6" stroke-dasharray="3 4"/>
+        <path d="M62 54h56M62 64h48M62 74h58M62 84h40M62 94h52M62 104h46M62 114h30"/>
+        <rect x="58" y="60" width="62" height="28" rx="4" fill="currentColor" fill-opacity=".1" stroke="none"/>
+        <path d="M60 150h64M60 162h44"/><rect x="60" y="178" width="64" height="16" rx="8"/>
+        <circle cx="150" cy="96" r="22"/><path d="M166 112l18 18"/><path d="M141 92h18M141 100h12"/></svg></div>
     <div class="serie neuband" id="neuband">
       <div class="head"><div><p class="kicker" id="neuMonat"></p><h2><em class="hk">Neu</em> im Regal</h2><p class="sub">Diese Produkte habe ich neu für euch eingeordnet</p></div>
         <div class="links"><button type="button" class="btn dark" id="neuAlle">Alle Neuheiten ansehen <span aria-hidden="true">→</span></button></div></div>
@@ -2530,7 +2614,8 @@ const ZTEXT = {
   ll: ["Meine Leave-in-Auswahl", "Welche Leave-ins ich dir für die LL-Methode empfehle, für wen und wie du sie benutzt, steht im Abo."],
   merkliste: ["Deine Merkliste", "Mit dem Abo merkst du dir Produkte und hast sie im Laden sofort griffbereit."],
   frage: ["Frag Laura", "Im Abo kannst du mir deine Fragen schicken. Jeden Monat beantworte ich drei bis fünf davon ausführlich."],
-  bereich: ["Mein Abo", "Mit dem Abo schaltest du alles frei und sparst dir das Zusammensuchen."]
+  bereich: ["Mein Abo", "Mit dem Abo schaltest du alles frei und sparst dir das Zusammensuchen."],
+  "check-inci": ["Passt das Produkt zu dir?", "Mit dem Abo siehst du beim Inhaltsstoff-Check, für wen das Produkt passt, was du wissen solltest und ob es zu deinem Haar passt. Dazu meine Einschätzung und passende Alternativen."]
 };
 function zPaywall(art){ const [t, l] = ZTEXT[art] || ZTEXT.kapitel; const d = document.getElementById("aboDlg");
   document.getElementById("aboTitle").textContent = t; document.getElementById("aboLead").textContent = l;
@@ -2605,7 +2690,7 @@ function readHash(){
   const h = HASH0.replace(/^#/,""); if(!h) return;
   const [a,b] = h.split(".");
   if(a==="quiz"||a==="plan"||a==="routine"||a==="ll"||a==="wissen"||a==="start"||a==="merkliste"||a==="favoriten"||a==="bereich"){ state.view = a; if(a==="wissen" && b && (b==="faq" || b==="fraglaura" || WISSEN.some(w=>w.id===b))) state.wissen = b; return; }
-  if(T[a] || a === "neu"){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
+  if(T[a] || a === "neu" || a === "check"){ state.view = "produkte"; state.type = a; if(b) state.cat = b; }
 }
 function writeHash(){
   const h = state.view==="produkte" ? `#${state.type}.${state.cat}` : (state.view==="wissen" && state.wissen) ? `#wissen.${state.wissen}` : `#${state.view}`;
@@ -3266,7 +3351,7 @@ function itemHtml(p, badge, extra){
 /* ---------- Hauptreiter für die Produktarten (in der Kopfzeile) ---------- */
 const typesBox = document.getElementById("types");
 function drawTypes(){
-  typesBox.innerHTML = `<button type="button" class="ptab ptneu" data-type="neu" aria-current="${!state.q.trim() && state.view==="produkte" && state.type==="neu"}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${NEUICO}</svg><span>Neu</span><span class="n">${neuItems().length}</span></button>` + TYPES.map(t => `<button type="button" class="ptab" data-type="${t.id}" aria-current="${!state.q.trim() && state.view==="produkte" && state.type===t.id}">
+  typesBox.innerHTML = `<button type="button" class="ptab ptcheck" data-type="check" aria-current="${!state.q.trim() && state.view==="produkte" && state.type==="check"}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M7.5 9h6M7.5 12h4"/></svg><span>Inhaltsstoff-Check</span></button>` + `<button type="button" class="ptab ptneu" data-type="neu" aria-current="${!state.q.trim() && state.view==="produkte" && state.type==="neu"}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${NEUICO}</svg><span>Neu</span><span class="n">${neuItems().length}</span></button>` + TYPES.map(t => `<button type="button" class="ptab" data-type="${t.id}" aria-current="${!state.q.trim() && state.view==="produkte" && state.type===t.id}">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${t.icon}</svg>
     <span>${t.label}</span><span class="n">${DATA[t.id].items.length}</span></button>`).join("");
   typesBox.querySelectorAll(".ptab").forEach(b => b.onclick = () => {
@@ -3298,22 +3383,12 @@ function bindControls(){
 const segOk = p => state.seg==="alle" || !p.segment || p.segment===state.seg;
 
 /* Gast: Reiter, Filter und Anzahl bleiben, alles darunter verschwommen (nur die ersten Karten, kein endloses Scrollen) */
-function zProdukte(){ if(istAbo()) return; const g = document.querySelector("#guide .guide"); if(!g) return;
-  const kids = [...g.children]; const start = kids.findIndex(k => k.matches(".rec, .recset, h3.sec, .liste, ul.grid, .empty") || k.querySelector && k.querySelector("ul.grid"));
-  if(start < 0) return;
-  const head = kids.slice(start).find(k => k.matches("h3.sec"));
-  const box = document.createElement("div"); box.className = "zprod";
-  kids.slice(start).forEach(k => { if(k !== head) box.appendChild(k); });
-  if(head) g.appendChild(head); g.appendChild(box);
-  box.querySelectorAll("ul.grid").forEach((u,n) => [...u.children].forEach((li,i) => { if(n > 0 || i >= 6) li.remove(); }));
-  box.querySelectorAll("ul.grid").forEach((u,n) => { if(n > 0) u.remove(); });
-  zSperre(box, "produkte", "");
-  /* Gast: Überblick über alle Produkte statt nur über die aktuelle Produktart (Laura 1.11.) */
-  const cta = box.querySelector(".zcta"); if(!cta) return;
-  box.classList.add("zprodw");
+function zProdukte(){ if(istAbo() || (state.type === "check" && !state.q.trim())) return; const g = document.querySelector("#guide .guide"); if(!g) return;
+  /* Gast (Laura 05.11.): alle Produkte mit Bild, Marke und Name sichtbar, meine Einschätzung verschwommen, der Patch bleibt oben */
+  g.querySelectorAll(".rec, .recset").forEach(x => x.remove());
   const gesamt = new Set(ALL.map(p => p.brand + "|" + p.name)).size;
-  cta.classList.add("zcta-prod");
-  cta.innerHTML = `<span class="zschloss">${ZSCHLOSS}</span><p class="zpk">Im Abo</p><h3>Meine Einschätzung zu allen Produkten</h3>
+  const patch = document.createElement("div"); patch.className = "zcta zcta-prod zinline";
+  patch.innerHTML = `<span class="zschloss">${ZSCHLOSS}</span><p class="zpk">Im Abo</p><h3>Meine Einschätzung zu allen Produkten</h3>
     <p class="zpzahl"><b>${gesamt}</b> Produkte aus Drogerie und High-End, alle von mir eingeordnet</p>
     <div class="zparten">${TYPES.map(t => `<span><b>${DATA[t.id].items.length}</b> ${esc(PLURAL[t.id] || t.label)}</span>`).join("")}</div>
     <ul class="zpliste"><li>Zu jedem Produkt meine ehrliche Einschätzung nach den Inhaltsstoffen, nicht nach dem, was auf der Verpackung steht</li>
@@ -3321,8 +3396,23 @@ function zProdukte(){ if(istAbo()) return; const g = document.querySelector("#gu
       <li>Mit deinen Check-Ergebnissen siehst du zuerst, was wirklich zu dir passt</li>
       <li>Deine Merkliste, damit du im Laden alles griffbereit hast</li></ul>
     <button type="button" class="btn dark">Mit dem Abo freischalten</button>
-    <p class="zpklein">Die Produktnamen siehst du schon, meine Einschätzung dazu steht im Abo.</p>`;
-  cta.querySelector(".btn").onclick = () => zPaywall("produkte");
+    <p class="zpklein">Unten siehst du schon alle Produkte. Meine Einschätzung dazu steht im Abo.</p>`;
+  patch.querySelector(".btn").onclick = () => zPaywall("produkte");
+  const first = g.querySelector(".stufe-kopf, h3.sec, .liste, ul.grid, .empty");
+  if(first) first.before(patch); else g.appendChild(patch);
+  g.querySelectorAll("li.item").forEach(li => {
+    const txt = li.querySelector(".txt"), name = txt && txt.querySelector(".name"); if(!name) return;
+    txt.querySelectorAll(".tags .pill").forEach(x => x.remove());
+    const buy = txt.querySelector(".buyrow"), box = document.createElement("div"); box.className = "zkarte";
+    let n = name.nextSibling; while(n){ const nx = n.nextSibling; if(n !== buy) box.appendChild(n); n = nx; }
+    if(!box.textContent.trim()) return;
+    const tw = document.createTreeWalker(box, NodeFilter.SHOW_TEXT); let tn; while((tn = tw.nextNode())) tn.nodeValue = tn.nodeValue.replace(/[A-Za-zÄÖÜäöüß]/g, "x");
+    box.setAttribute("aria-hidden", "true"); box.inert = true;
+    const wrap = document.createElement("div"); wrap.className = "zkwrap"; wrap.appendChild(box);
+    wrap.insertAdjacentHTML("beforeend", `<button type="button" class="zkschloss">${ZSCHLOSS}<span>Lauras Einschätzung im Abo</span></button>`);
+    wrap.querySelector(".zkschloss").onclick = () => zPaywall("produkte");
+    if(buy) buy.before(wrap); else txt.appendChild(wrap);
+  });
 }
 function renderNeu(){
   let items = neuItems().filter(segOk);
@@ -3385,6 +3475,7 @@ function renderSearch(){
     <div class="controls"><div class="crow">${segSwitch()}${meSet()?`<div class="fit">Meine Haare<div class="switch" role="group"><button type="button" data-only="1" aria-pressed="${onlyMine}">Nur passende</button><button type="button" data-only="0" aria-pressed="${!onlyMine}">Alle</button></div></div>`:""}</div></div>`;
   html += total ? groups.map(([t,its]) => `<h3 class="sec">${t.label}<span class="count">${its.length}</span></h3><ul class="grid">${its.map(p => itemHtml(p)).join("")}</ul>`).join("")
                : `<p class="empty">Dazu habe ich noch nichts in meinen Guides.</p>`;
+  html += `<div class="icsuch"><p><b>${total ? "Dein Produkt ist nicht dabei?" : "Nicht gefunden?"}</b> Füg die Inhaltsstoffe ein, dann schaue ich sie mir an.</p><button type="button" class="btn dark" onclick="showCheck()">Zum Inhaltsstoff-Check <span aria-hidden="true">→</span></button></div>`;
   guide.innerHTML = html + `</div>`;
   bindControls();
 }
@@ -3538,6 +3629,267 @@ window.naechsterSchritt = () => { if(window.closeQuiz) window.closeQuiz();
 window.showRoutine = () => { state.view = "routine"; state.wissen = null; render(); window.scrollTo({top:0}); };
 /* ---------- Ansicht wechseln ---------- */
 const navBtns = document.querySelectorAll("nav.main button[data-view]");
+/* ---------- Inhaltsstoff-Check (Probeansicht 05.11.): Liste einfügen, ganze Liste wird zusammen gelesen ----------
+   Für alle: „Das macht es“ + Fakten-Schildchen. Gäste: „Passt zu“ und „Gut zu wissen“ verschwommen.
+   Abo: alles lesbar + „Für dein Haar“, Lauras Einschätzung (wenn in der Liste) und passende Alternativen.
+   Regeln wie notizen/wirkung/classify.py (Gewicht nach Position, alles hinter Parfum/Konservierer = Spuren). */
+const IC = {
+  CUT: /^(parfum|fragrance|perfume|aroma|phenoxyethanol|sodium benzoate|potassium sorbate|benzyl alcohol|methylparaben|ethylparaben|propylparaben|benzoic acid|sorbic acid|chlorphenesin|methylisothiazolinone|methylchloroisothiazolinone|dmdm hydantoin|ethylhexylglycerin|dehydroacetic acid|sodium dehydroacetate|caprylyl glycol|1,2-hexanediol)/,
+  HUM: /^(glycerin|glycerol|propylene glycol|butylene glycol|propanediol|dipropylene glycol|pentylene glycol|aloe|panthenol|sodium hyaluronate|hyaluronic acid|hydrolyzed hyaluronic acid|betaine|urea|hydroxyethyl urea|sodium pca|pca|honey|mel|sorbitol|glucose|fructose|sucrose|trehalose|inulin|sodium lactate|sodium polyglutamate|polyglutamic|xylitol|glycereth|isopentyldiol|saccharide|beta-glucan|niacinamide)/,
+  ESS: /(peel oil|flower oil|leaf oil|bark oil|herb oil|lavandula|pogostemon|juniperus|citrus|mentha|rosmarinus|eucalyptus|cananga|santalum|cedrus|pelargonium|cymbopogon|origanum|salvia)/,
+  EMO: /(oil\b|butter|squalane|squalene|isopropyl myristate|isopropyl palmitate|caprylic\/capric triglyceride|caprylic|coco-caprylate|ethylhexyl stearate|ethylhexyl palmitate|dicaprylyl|triethylhexanoin|octyldodecanol|hexyldecanol|cetyl esters|jojoba esters|lanolin|paraffinum|mineral oil|petrolatum|isodecyl oleate|oleyl alcohol|isocetyl|myristyl myristate|decyl oleate|glyceryl oleate|ceramide|phytosteryl|shea|cera alba|beeswax|isostearyl|ethylhexyl isononanoate|isononyl isononanoate|c12-15 alkyl benzoate|tridecyl|olive|argan|murumuru|macadamia|avocado|persea|isododecane|isodecyl neopentanoate)/,
+  BUTTER: /(butter|shea|cera alba|beeswax|lanolin|petrolatum)/,
+  PROT: /(hydrolyzed .*protein|hydrolyzed keratin|^keratin|hydrolyzed collagen|hydrolyzed silk|silk amino|amino acids|peptide|^arginine|^serine|^glycine$|silanetriol|hydrolyzed .*amino|protein\b|hydrolyzed pearl)/,
+  SIL: /(methicone|siloxane|dimethiconol|silicone quaternium|silsesquioxane|amodimethicone|bis-cetearyl)/,
+  ACID: /(acetum|acetic acid|vinegar|gluconolactone|glycolic acid)/,
+  POLY: /^(polyquaternium|quaternium-80|quaternium-91|quaternium-87|guar hydroxypropyltrimonium|hydroxypropyl guar hydroxypropyltrimonium)/,
+  BOND: /(bis-aminopropyl diglycol dimaleate|maleic acid|diethylhexyl maleate|hydroxypropylgluconamide|hydroxypropylammonium gluconate|oligopeptide-78|sh-oligopeptide)/,
+  SULF: /^(sodium lauryl sulfate|sodium laureth sulfate|ammonium lauryl sulfate|ammonium laureth sulfate|sodium coco-sulfate|sodium coco sulfate|tea-lauryl sulfate|magnesium laureth sulfate|sodium myreth sulfate|sodium c14-16 olefin sulfonate)/,
+  MILD: /^(coco-glucoside|decyl glucoside|lauryl glucoside|caprylyl\/capryl glucoside|sodium cocoamphoacetate|disodium cocoamphodiacetate|cocamidopropyl betaine|coco-betaine|lauryl betaine|disodium laureth sulfosuccinate|disodium lauryl sulfosuccinate|sodium lauroyl sarcosinate|sodium cocoyl isethionate|sodium lauroyl methyl isethionate|sodium methyl cocoyl taurate|sodium cocoyl glutamate|disodium cocoyl glutamate|sodium cocoyl glycinate|sodium lauroyl glutamate|potassium cocoyl glycinate|sodium lauryl glucose carboxylate)/,
+  DANDR: /^(piroctone olamine|climbazole|zinc pyrithione|ketoconazole|selenium disulfide|salicylic acid|ciclopirox)/,
+  CHEL: /^(disodium edta|tetrasodium edta|trisodium edta|tetrasodium glutamate diacetate|sodium phytate|phytic acid|trisodium ethylenediamine disuccinate|etidronic acid|tetrasodium etidronate|sodium gluconate|pentasodium pentetate|glda)/,
+  DRYALC: /^(alcohol|alcohol denat|sd alcohol|isopropyl alcohol|ethanol)$/,
+  FATALC: /(cetearyl alcohol|cetyl alcohol|stearyl alcohol|behenyl alcohol|myristyl alcohol|lauryl alcohol|brassica alcohol|arachidyl alcohol)/,
+  PARF: /^(parfum|fragrance|perfume|aroma)$/,
+  ALLERG: /^(limonene|linalool|citronellol|geraniol|hexyl cinnamal|coumarin|benzyl salicylate|benzyl benzoate|citral|eugenol|alpha-isomethyl ionone|amyl cinnamal|benzyl cinnamate|cinnamal|farnesol|hydroxycitronellal|isoeugenol|butylphenyl methylpropional)$/,
+  MENTH: /(menthol|mentha|peppermint)/
+};
+const IC_NAMEN = [[/^hydrolyzed keratin|^keratin/,"Keratin"],[/hydrolyzed .*protein/,"Proteine"],[/hyaluron/,"Hyaluron"],[/biotin/,"Biotin"],[/argania|argan/,"Arganöl"],[/cocos nucifera|coconut/,"Kokosöl"],[/macadamia/,"Macadamiaöl"],[/simmondsia|jojoba/,"Jojobaöl"],[/aloe/,"Aloe vera"],[/ceramide|octadecanediol/,"Ceramide"],[/caffeine/,"Koffein"],[/collagen/,"Kollagen"],[/panthenol/,"Panthenol"],[/niacinamide/,"Niacinamid"],[/glycolic/,"Glykolsäure"],[/rosmarinus|rosemary/,"Rosmarin"],[/peptide/,"Peptide"],[/oryza|rice/,"Reis"],[/avocado|persea/,"Avocadoöl"],[/shea|butyrospermum/,"Sheabutter"]];
+const IC_TYPEN = [["shampoo","Shampoo"],["maske","Maske"],["conditioner","Conditioner"],["leavein","Leave-in"]];
+const IC_BEISPIEL = {name:"Balea med Ultra Sensitive Shampoo", type:"shampoo", inci:"Ingredients: Aqua, Coco-Glucoside, Glycerin, Sodium Coco-Sulfate, Sodium Cocoamphoacetate, Citric Acid, Panthenol, Niacinamide, Tocopherol, Ascorbyl Palmitate, Glyceryl Oleate, Hydroxypropyl Guar Hydroxypropyltrimonium Chloride, Hydrogenated Palm Glycerides Citrate, Lecithin, Sodium Benzoate, Potassium Sorbate, Sodium Chloride, Sodium Hydroxide"};
+let icState = {type:"shampoo", text:"", name:"", res:null};
+
+function icListe(s){
+  s = String(s).replace(/\(.*?\)/g,"").replace(/^[\s\S]*?(ingredients|inhaltsstoffe|inci)\s*:?\s*/i,"").replace(/denat\./gi,"denat");
+  return s.split(/\s*[,•|\n;]\s*|\.\s+(?=[A-Za-z])/).map(p => p.trim().replace(/\.$/,"").split("/")[0].trim().toLowerCase().replace(/\*+$/,"").replace(/\s+/g," ").trim()).filter(p => p && p.length < 80);
+}
+const icNth = i => (i+1) + ".";
+function icAnalyse(text, type){
+  const L = icListe(text);
+  if(L.length < 4) return null;
+  let cut = L.findIndex(x => IC.CUT.test(x)); if(cut < 0) cut = L.length;
+  const w = i => i < cut ? 1/(1+0.35*i) : 0.04;
+  const sum = re => L.reduce((n,x,i) => n + (re.test(x) && !(re===IC.EMO && IC.ESS.test(x)) ? w(i) : 0), 0);
+  const H = sum(IC.HUM), E = sum(IC.EMO);
+  const G = sum(IC.SIL) + 1.5*L.reduce((n,x,i) => n + (i < Math.min(cut,10) && IC.ACID.test(x) ? w(i) : 0), 0) + 0.5*L.reduce((n,x,i) => n + (i < cut && IC.POLY.test(x) ? w(i) : 0), 0);
+  const find = re => L.map((x,i) => [x,i]).filter(([x]) => re.test(x));
+  const prot = find(IC.PROT).filter(([x,i]) => i < cut && !/oil/.test(x)), bond = find(IC.BOND).filter(([,i]) => i < cut);
+  const sil = find(IC.SIL), parf = find(IC.PARF), allerg = find(IC.ALLERG), menth = find(IC.MENTH);
+  const dry = find(IC.DRYALC), fat = find(IC.FATALC), butter = find(IC.BUTTER).filter(([,i]) => i < 6);
+  const tags = [];
+  if(H >= 0.18 && H >= 0.5*E) tags.push("feucht");
+  if((E >= 0.18 && E >= 0.5*H) || (E >= 0.12 && H < 0.18)) tags.push("naehrend");
+  if(G >= 0.45) tags.push("glaettend");
+  if(!tags.length) tags.push(G >= 0.1 ? "glaettend" : H >= E ? "feucht" : "naehrend");
+  /* Werbe-Wirkstoffe, die erst hinter Parfum/Konservierer stehen */
+  const spuren = [];
+  L.forEach((x,i) => { if(i <= cut) return; const n = IC_NAMEN.find(([re]) => re.test(x)); if(n && !spuren.includes(n[1])) spuren.push(n[1]); });
+  const r = {L, cut, H, E, G, tags, rep: bond.length ? "bond" : prot.length ? "protein" : "", prot, bond, sil, parf, allerg, menth, dry, fat, butter, spuren, type};
+  if(type === "shampoo"){
+    const t = find(IC.SULF).concat(find(IC.MILD)).sort((a,b) => a[1]-b[1]);
+    r.tenside = t; r.sulf = find(IC.SULF); r.mild = find(IC.MILD);
+    r.dandr = find(IC.DANDR); r.chel = find(IC.CHEL); r.poly = find(IC.POLY);
+    const erst = t[0];
+    r.staerke = !t.length ? "unklar" : IC.SULF.test(erst[0]) ? (r.mild.length && r.mild[0][1] < erst[1] + 3 ? "mittel" : "kraeftig") : (r.sulf.length && r.sulf[0][1] < 4 ? "mittel" : "mild");
+    if(r.staerke === "mittel" && IC.MILD.test(erst ? erst[0] : "") && H >= 0.3) r.staerke = "mild";
+  }
+  /* Haardicke abschätzen (kalibriert an den eingeordneten Produkten) */
+  const x = E + 0.6*G;
+  const T_ = {maske:[0.3,0.6,1.0,1.4], conditioner:[0.2,0.45,0.85,1.3], leavein:[0.3,0.8,1.3,1.8]}[type];
+  if(T_){ r.dicke = x < T_[0] ? [0,2] : x < T_[1] ? [1,2] : x < T_[2] ? [2,3] : x < T_[3] ? [2,4] : [3,4];
+    if(butter.length) r.dicke = [Math.max(r.dicke[0],2), 4]; }
+  else r.dicke = (sil.some(([,i]) => i < 8) || E > 0.5) ? [2,4] : [0,4];
+  r.parfumfrei = !parf.length && !allerg.length;
+  r.match = icTreffer(r);
+  return r;
+}
+/* Steht das Produkt bei uns? Produktname (optional) oder gleiche Inhaltsstoffliste */
+function icTreffer(r){
+  const n = plain(icState.name || "");
+  if(n.length >= 6){
+    const kand = ALL.filter(p => p.type === r.type || (r.type === "leavein" && p.type === "hitze"));
+    let best = null, bs = 0;
+    for(const p of kand){ const pb = plain(p.brand), pn = plain(p.name);
+      const s = (n.includes(pn) ? 2 : 0) + (n.includes(pb) ? 1 : 0) + (pn.includes(n) ? 2 : 0);
+      if(s > bs){ bs = s; best = p; } }
+    if(bs >= 2) return best;
+  }
+  const sig = r.L.slice(0, 8).join("|"), mk = icSig()[sig];
+  return mk ? ALL.find(p => p.mk === mk) || null : null;
+}
+/* Inhaltsstofflisten der eingeordneten Masken, Conditioner und Leave-ins (notizen/wirkung/matched.json): gleiche ersten 8 = gleiches Produkt */
+const INCI_RAW = __INCI__;
+let _icSig = null;
+function icSig(){ if(_icSig) return _icSig; _icSig = {};
+  for(const [mk, s] of Object.entries(INCI_RAW)){ const L = icListe(s); if(L.length >= 8) _icSig[L.slice(0,8).join("|")] = mk; }
+  return _icSig; }
+const IC_DICKE_TXT = d => d[0] === 0 && d[1] === 4 ? "alle Haardicken" : (d[0] === d[1] ? BIS[d[0]] : `${VON[d[0]].toLowerCase()} bis ${BIS[d[1]]}`) + " Haar";
+const icStelle = ([x,i]) => `${i+1}. Stelle`;
+const IC_DISP = [[/^mel$|^honey/,"Honig"],[/olea europaea/,"Olivenöl"],[/butyrospermum|shea butter/,"Sheabutter"],[/ricinus/,"Rizinusöl"],[/helianthus annuus seed oil/,"Sonnenblumenöl"],[/prunus amygdalus/,"Mandelöl"],[/cocos nucifera oil|coconut oil/,"Kokosöl"],[/argania spinosa/,"Arganöl"],[/simmondsia/,"Jojobaöl"],[/persea gratissima/,"Avocadoöl"],[/sodium hyaluronate|hyaluronic acid/,"Hyaluron"],[/^aloe/,"Aloe vera"],[/glycine soja oil/,"Sojaöl"],[/theobroma cacao/,"Kakaobutter"],[/macadamia/,"Macadamiaöl"],[/hydrolyzed wheat protein/,"Weizenprotein"],[/hydrolyzed keratin/,"Keratin"],[/hydrolyzed soy protein/,"Sojaprotein"],[/hydrolyzed rice protein/,"Reisprotein"],[/isopropyl myristate|isopropyl palmitate|dicaprylyl|cetyl esters|coco-caprylate|caprylic|ethylhexyl|isododecane|isodecyl|c12-15 alkyl benzoate|triethylhexanoin|octyldodecanol|hexyldecanol/,"leichter Ölersatz"]];
+const icN = x => { const d = IC_DISP.find(([re]) => re.test(x)); return d ? d[1] : icCap(x); };
+const icCap = s => s.replace(/(^|[\s\-\/])([a-z])/g, (m, a, b) => a + b.toUpperCase());
+
+function icMachtEs(r){
+  const s = [];
+  if(r.type === "shampoo"){
+    const erst = r.tenside[0];
+    if(!erst) s.push("Ein Shampoo, dessen Reinigungsstoffe ich in der Liste nicht sicher erkenne. Prüf am besten, ob die Liste vollständig eingefügt ist.");
+    else if(r.staerke === "mild") s.push(r.sulf.length
+      ? `Ein mildes Shampoo, das sanft reinigt. Vorne steht ein mildes Tensid (${icN(erst[0])}). Ein Sulfat ist auch drin, aber erst an ${r.sulf[0][1]+1}. Stelle${r.L.slice(0, r.sulf[0][1]).includes("glycerin") ? " hinter viel Glycerin" : ""} und zusammen mit ${r.mild.length > 1 ? "weiteren milden Tensiden" : "einem milden Tensid"}. Das federt es ab, darum reinigt es insgesamt sanft.`
+      : `Ein mildes Shampoo ohne Sulfate. Gereinigt wird mit milden Tensiden wie ${icN(erst[0])}.`);
+    else if(r.staerke === "mittel") s.push(`Ein Shampoo mit mittlerer Reinigungskraft. Ein Sulfat (${icN(r.sulf[0][0])}) steht weit vorne, ${r.mild.length ? "wird aber von milderen Tensiden begleitet, die es etwas abfedern" : "dazu kommen kaum mildere Tenside"}.`);
+    else s.push(`Ein gründlich reinigendes Shampoo. Vorne steht ein Sulfat (${icN(erst[0])}), das Fett und Rückstände gut entfernt.`);
+    if(r.dandr.length) s.push(`Mit ${r.dandr.map(([x]) => icN(x)).join(" und ")} gegen Schuppen.`);
+    const hum = r.L.filter((x,i) => i < r.cut && IC.HUM.test(x)).slice(0,3);
+    if(hum.length) s.push(`${hum.map(icN).join(", ").replace(/, ([^,]*)$/, " und $1")} ${hum.length > 1 ? "geben" : "gibt"} Feuchtigkeit.`);
+    if(r.poly.length && !r.sil.length) s.push("Ein leichter Pflegestoff macht das Haar etwas leichter kämmbar, ohne Silikon.");
+    else if(r.sil.length) s.push(`Silikon (${icN(r.sil[0][0])}) macht das Haar geschmeidig und leichter kämmbar.`);
+    if(r.chel.length && r.staerke !== "mild") s.push("Ein Komplexbildner hilft, Kalk und Rückstände zu lösen.");
+  } else {
+    const art = {maske:"eine Maske", conditioner:"eine Spülung", leavein:"ein Leave-in"}[r.type];
+    const [ar, nomen, en] = {maske:["Eine","Maske","e"], conditioner:["Eine","Spülung","e"], leavein:["Ein","Leave-in","es"]}[r.type];
+    const und = l => l.length < 2 ? l.join("") : l.slice(0,-1).join(", ") + (l[l.length-1].includes(" und ") ? " sowie " : " und ") + l[l.length-1];
+    if(r.H < 0.18 && r.E < 0.12 && r.G < 0.1){ s.push(`Sehr leichte Pflege: ${art.charAt(0).toUpperCase() + art.slice(1)}, die kaum beschwert, aber auch nur wenig pflegt. Weder Feuchtigkeitsspender noch Öle stehen weit vorne.`); s.push(r.sil.length ? "" : "Ohne Silikone."); return s.join(" ").trim(); }
+    const adj = r.dicke[0] <= 1 ? "leicht" : r.dicke[0] >= 3 ? "reichhaltig" : "pflegend";
+    const was = r.tags.map(t => ({feucht:"Feuchtigkeit", naehrend:"nährende Pflege", glaettend:"Glätte und Glanz"}[t]));
+    s.push(`${ar} ${adj}${en} ${nomen}, ${r.type === "leavein" ? "das" : "die"} vor allem ${und(was)} gibt.`);
+    const hum = r.L.filter((x,i) => i < r.cut && IC.HUM.test(x)).slice(0,2), emo = r.L.filter((x,i) => i < r.cut && IC.EMO.test(x) && !IC.ESS.test(x)).slice(0,2);
+    const hn = [...new Set(hum.map(icN))], en_ = [...new Set(emo.map(icN))];
+    if(hn.length) s.push(`Feuchtigkeit ${hn.length > 1 ? "bringen" : "bringt"} ${hn.join(" und ")}.`);
+    if(en_.length) s.push(`Geschmeidig ${en_.length > 1 ? "machen" : "macht"} ${en_.join(" und ")}${r.butter.length && !en_.some(x => /butter/i.test(x)) ? ", dazu Butter weit vorne" : ""}.`);
+    if(r.sil.length) s.push(`${r.sil.length > 1 ? `${r.sil.length} Silikone glätten` : `Ein Silikon (${icN(r.sil[0][0])}) glättet`} die Oberfläche.`);
+    else s.push("Ohne Silikone.");
+    if(r.rep === "bond") s.push("Enthält einen Bond-Wirkstoff, der gebrochene Bindungen im Haar wieder verbinden soll.");
+    else if(r.rep === "protein") s.push(`Proteine (${icN(r.prot[0][0])}) stärken das Haar von außen.`);
+  }
+  return s.join(" ");
+}
+function icFakten(r){
+  const f = [];
+  f.push(r.parf.length ? "mit Parfum" : r.allerg.length ? "mit Duftstoffen" : "ohne Parfum");
+  f.push(r.sil.length ? "mit Silikon" : "ohne Silikone");
+  if(r.type === "shampoo") f.push(r.sulf.length ? "mit Sulfat" : "ohne Sulfate");
+  if(r.dry.some(([,i]) => i < r.cut)) f.push("mit Alkohol");
+  if(r.menth.length) f.push("mit Menthol");
+  if(r.type === "shampoo" && r.dandr.length) f.push("gegen Schuppen");
+  return f;
+}
+/* „Passt zu“: Stichworte + Inhalt (der Inhalt ist für Gäste verschwommen) */
+function icPasstZu(r){
+  const z = [];
+  if(r.type === "shampoo"){
+    const kopf = [];
+    if(r.dandr.length) kopf.push("schuppig");
+    if(r.staerke === "mild"){ if(r.parfumfrei && !r.menth.length) kopf.push("sensibel"); if(r.H >= 0.3) kopf.push("trocken"); if(!kopf.length) kopf.push("normal"); }
+    else if(r.staerke === "mittel"){ kopf.push("normal"); if(!r.H || r.H < 0.3) kopf.push("schnell fettend"); }
+    else kopf.push("schnell fettend");
+    z.push(["Kopfhaut", kopf.join(", ")]);
+    z.push(["Haardicke", r.dicke[0] === 0 ? "alle, es beschwert nicht" : "normal bis dick, für feines Haar eher schwer"]);
+    z.push(["Wäsche", r.staerke === "kraeftig" ? (r.chel.length ? "als Tiefenreinigung alle 2 bis 4 Wochen" : "eher nicht täglich") : "auch täglich geeignet"]);
+  } else {
+    z.push(["Haardicke", IC_DICKE_TXT(r.dicke)]);
+    const zu = [];
+    if(r.tags.includes("feucht")) zu.push("trocken");
+    if(r.tags.includes("naehrend")) zu.push(r.dicke[1] >= 3 ? "widerspenstig, frizzig" : "spröde Spitzen");
+    if(r.tags.includes("glaettend")) zu.push("glanzlos");
+    if(r.rep === "protein") zu.push("strapaziert, brüchig");
+    if(r.rep === "bond") zu.push("blondiert, chemisch behandelt");
+    z.push(["Haarzustand", r.H < 0.18 && r.E < 0.12 && r.G < 0.1 ? "fein, platt, braucht wenig Pflege" : (zu.join(", ") || "normal")]);
+  }
+  return z;
+}
+function icGutZuWissen(r){
+  const g = [];
+  if(r.type === "shampoo"){
+    if(r.sulf.length && r.staerke === "mild") g.push("Das Sulfat allein macht ein Shampoo nicht aggressiv. Entscheidend ist, was es begleitet, und hier federn milde Tenside und Feuchtigkeitsspender es gut ab.");
+    if(r.staerke === "kraeftig") g.push("Reinigt gründlich. Bei trockenen Längen danach unbedingt Conditioner oder Maske in die Längen.");
+    if(!r.dandr.length) g.push("Ein Wirkstoff gegen Schuppen ist nicht drin.");
+    if(r.staerke === "mild") g.push("Für eine Tiefenreinigung ist es zu mild.");
+    if(r.L.some((x,i) => i < r.cut && /citric acid|lactic acid/.test(x))) g.push("Die Säure in der Liste macht das Shampoo leicht sauer, das ist hautfreundlich.");
+  }
+  if(r.dry.length){ const [x,i] = r.dry[0]; const hum = r.L.slice(0,i).filter(y => IC.HUM.test(y)).length;
+    g.push(i < 4 && !hum ? `Alkohol steht weit vorne (${icStelle(r.dry[0])}). Das kann bei trockenem Haar austrocknen.` : `Alkohol steht an ${i+1}. Stelle${hum ? ", hinter Feuchtigkeitsspendern" : ""}. In der Menge trocknet er nicht aus, er sorgt eher dafür, dass sich das Produkt leicht anfühlt.`); }
+  if(r.fat.length && r.type !== "shampoo") g.push(`${icN(r.fat[0][0])} ist ein Fettalkohol. Der trocknet nicht aus, sondern pflegt.`);
+  if(r.spuren.length) g.push(`${r.spuren.slice(0,3).join(", ").replace(/, ([^,]*)$/, " und $1")} ${r.spuren.length > 1 ? "stehen" : "steht"} hinter dem Parfum beziehungsweise dem Konservierungsstoff, also nur in Spuren.`);
+  if(r.parf.length && r.allerg.length >= 3) g.push(`Enthält Parfum und ${r.allerg.length} Duftstoffe, die Allergien auslösen können. Bei empfindlicher Kopfhaut lieber vorsichtig sein.`);
+  if(r.menth.length) g.push("Menthol kühlt, kann eine empfindliche Kopfhaut aber reizen.");
+  if(r.type !== "shampoo" && r.dicke[0] >= 2) g.push("Für feines Haar eher schwer. Nur in Längen und Spitzen geben.");
+  return g;
+}
+/* „Für dein Haar“ (Abo): Abgleich mit Meine Haare */
+function icFuerDich(r){
+  if(!meSet()) return `Füll „Meine Haare“ aus, dann siehst du hier, ob das Produkt zu deinem Haar passt.`;
+  const s = [];
+  if(r.type === "shampoo" && me.kopf){
+    const k = me.kopf;
+    if(k === "schuppentrocken") s.push(r.dandr.length ? "Für deine schuppige, trockene Kopfhaut ist das ein Shampoo für Schritt 2 in deinem Haarplan, wenn die Flocken mit einem milden Shampoo nicht weggehen." : r.staerke === "mild" ? "Für deine schuppige, trockene Kopfhaut ein guter Start, Schritt 1 in deinem Haarplan. Nutze es zwei bis drei Wochen. Werden die Flocken nicht weniger, wechsle zu einem milden Shampoo mit Piroctone." : "Für deine schuppige, trockene Kopfhaut reinigt es eher zu stark. Starte lieber mit einem milden Shampoo.");
+    else if(k === "fettend") s.push(r.staerke === "mild" ? "Für deinen schnell fettenden Ansatz eher zu mild. Wenn sich die Kopfhaut nach der Wäsche nicht richtig sauber anfühlt, nimm es im Wechsel mit einem klärenden Shampoo aus deinem Haarplan." : "Passt gut zu deiner schnell fettenden Kopfhaut, es reinigt gründlich genug.");
+    else if(k === "sensibel" || k === "juckend") s.push(r.parfumfrei && r.staerke === "mild" && !r.menth.length ? `Passt gut zu deiner ${KOPF_ADJ[k]} Kopfhaut: mild und ohne Duftstoffe.` : `Für deine ${KOPF_ADJ[k]} Kopfhaut nicht ideal${r.parf.length ? ", es enthält Parfum" : ""}${r.menth.length ? " und Menthol" : ""}${r.staerke === "kraeftig" ? " und reinigt kräftig" : ""}.`);
+    else if(k === "trocken") s.push(r.staerke === "kraeftig" ? "Für deine trockene Kopfhaut reinigt es zu stark." : "Passt zu deiner trockenen Kopfhaut, es reinigt sanft und gibt Feuchtigkeit.");
+    else if(k === "schuppen") s.push(r.dandr.length ? "Passt zu deiner schuppigen Kopfhaut, es enthält einen Wirkstoff gegen Schuppen." : "Gegen deine Schuppen fehlt ein Wirkstoff wie Piroctone oder Climbazol.");
+    else s.push("Passt zu deiner normalen Kopfhaut.");
+  }
+  if(r.type !== "shampoo" && me.dicke){
+    const d = D_ORDER.indexOf(me.dicke);
+    s.push(d < r.dicke[0] ? `Für dein ${DICKE_ADJ[me.dicke]} Haar eher zu schwer. Wenn du es nutzt, dann nur wenig in die Spitzen.` : d > r.dicke[1] ? `Für dein ${DICKE_ADJ[me.dicke]} Haar eher zu leicht, es wird kaum geschmeidig.` : `Passt von der Haardicke gut zu deinem ${DICKE_ADJ[me.dicke]} Haar.`);
+    if(me.kaputt && !r.rep) s.push("Für dein strapaziertes Haar fehlen Repair-Wirkstoffe. Kombinier es mit einem Produkt mit Proteinen aus deinem Haarplan.");
+    if(me.kaputt === "bond" && r.rep === "protein") s.push("Die Proteine stärken von außen. Einen Bond-Wirkstoff, wie er für blondiertes Haar sinnvoll ist, enthält es nicht.");
+  }
+  if(!s.length) s.push("Für diese Produktart fehlt in „Meine Haare“ noch eine Angabe.");
+  return s.join(" ");
+}
+function icAlternativen(r){
+  if(!meSet()) return [];
+  const items = DATA[r.type].items.filter(p => p !== r.match);
+  let list = items.filter(fitsMe);
+  if(r.type !== "shampoo") list = list.filter(p => (p.wt||[]).some(t => r.tags.includes(t)));
+  if(r.type === "shampoo" && me.kopf === "schuppentrocken"){ const st = r.dandr.length ? 2 : 1; list = list.filter(p => schuppStufe(p) === st); }
+  return list.sort(sorter(r.type, "alle")).slice(0, 3);
+}
+function renderCheck(){
+  const r = icState.res, abo = istAbo();
+  const typeBtns = IC_TYPEN.map(([id,l]) => `<button type="button" data-ictype="${id}" aria-pressed="${icState.type===id}">${l}</button>`).join("");
+  let html = `<div class="guide icpage"><div class="ghero ichero"><div class="ghead"><div><p class="ickick">Für alle kostenlos</p><h2>Inhaltsstoff-Check</h2><div class="sub">Die ganze Liste lesen, nicht einzelne Stoffe</div></div></div>
+    <div class="gintro"><p>Andere Apps bewerten jeden Inhaltsstoff einzeln. Ich schaue auf die ganze Liste: Was steht vorne, was nur in Spuren, und was gleicht sich gegenseitig aus. Ein Sulfat neben milden Tensiden und viel Glycerin ist zum Beispiel etwas ganz anderes als ein Sulfat allein.</p></div></div>
+    <ol class="icsteps"><li><span>1</span><p><b>Foto machen</b>Fotografiere die Rückseite mit der Inhaltsstoffliste.</p></li>
+      <li><span>2</span><p><b>Text kopieren</b>iPhone: Im Foto lange auf den Text tippen. Android: Foto mit Google Lens öffnen.</p></li>
+      <li><span>3</span><p><b>Hier einfügen</b>Produktart wählen und prüfen lassen.</p></li></ol>
+    <form class="icform" id="icForm"><div class="icrow"><span class="iclab">Produktart</span><div class="switch ictypes" role="group" aria-label="Produktart">${typeBtns}</div></div>
+      <label class="iclab" for="icText">Inhaltsstoffe</label><textarea id="icText" rows="5" placeholder="Zum Beispiel: Aqua, Cetearyl Alcohol, Glycerin, …">${esc(icState.text)}</textarea>
+      <label class="iclab" for="icName">Produktname <i>(freiwillig, dann sehe ich nach, ob es in meiner Liste steht)</i></label><input id="icName" type="text" value="${esc(icState.name)}" placeholder="Zum Beispiel: Balea med Ultra Sensitive Shampoo">
+      <div class="icbtns"><button type="submit" class="btn dark">Inhaltsstoffe prüfen <span aria-hidden="true">→</span></button><button type="button" class="btn" id="icBsp">Beispiel ausprobieren</button></div></form>`;
+  if(r === false) html += `<p class="icfehler">Ich erkenne darin keine Inhaltsstoffliste. Kopier am besten den ganzen Text ab „Ingredients“ und füg ihn noch einmal ein.</p>`;
+  if(r){
+    const name = icState.name.trim();
+    const sperr = inhalt => abo ? inhalt : `<div class="iczu">${inhalt}</div>`;
+    const kopf = r.match
+      ? `<div class="icliste ok"><b>Steht in meiner Liste:</b> ${esc(r.match.brand)} ${esc(r.match.name)}. ${abo ? "Meine Einschätzung siehst du unten." : "Meine persönliche Einschätzung dazu siehst du mit Abo."}</div>`
+      : `<div class="icliste"><b>Noch nicht in meiner Liste.</b> Das heißt nicht, dass das Produkt schlecht ist. Ich habe es nur noch nicht bewertet. <button type="button" class="icvor" id="icVor">Produkt vorschlagen</button></div>`;
+    const passt = icPasstZu(r), wissen = icGutZuWissen(r);
+    html += `<article class="icres" id="icRes"><header><p class="ickick">Ergebnis</p><h3>${esc(name || IC_TYPEN.find(t => t[0]===r.type)[1])}</h3></header>${kopf}
+      <section class="icsec"><h4>Das macht es</h4><p>${esc(icMachtEs(r))}</p><div class="icfakt">${icFakten(r).map(f => `<span>${esc(f)}</span>`).join("")}</div></section>
+      <div class="icsperre${abo ? "" : " zu"}">
+        <section class="icsec"><h4>Passt zu</h4><ul class="icpasst">${passt.map(([k,v]) => `<li><b>${esc(k)}</b>${sperr(`<span>${esc(v)}</span>`)}</li>`).join("")}</ul></section>
+        <section class="icsec"><h4>Gut zu wissen</h4>${sperr(`<ul class="icwissen">${wissen.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`)}</section>
+        <section class="icsec icdich"><h4>Für dein Haar</h4>${sperr(`<p>${esc(icFuerDich(r))}</p>`)}</section>
+        ${abo ? "" : `<div class="iccta"><span class="zschloss">${ZSCHLOSS}</span><p><b>Ob das Produkt zu deinem Haar passt, siehst du mit Abo.</b> Dazu meine Einschätzung zu über ${new Set(ALL.map(p => p.brand + "|" + p.name)).size} Produkten und passende Alternativen für dich.</p><button type="button" class="btn dark" id="icAbo">Mit dem Abo freischalten</button></div>`}
+      </div>
+      ${abo && r.match ? `<section class="icsec"><h4>Meine Einschätzung</h4><ul class="grid icgrid">${itemHtml(r.match)}</ul></section>` : ""}
+      ${abo ? (() => { const alt = icAlternativen(r); return alt.length ? `<section class="icsec"><h4>Passt besser zu dir</h4><ul class="grid icgrid">${alt.map(p => itemHtml(p)).join("")}</ul></section>` : ""; })() : ""}
+      <p class="icklein">Schnell-Check nach meinen Regeln. Er ersetzt nicht meine persönliche Einschätzung.</p></article>`;
+  }
+  guide.innerHTML = html + `</div>`;
+  if(!abo) guide.querySelectorAll(".iczu").forEach(z => { z.setAttribute("aria-hidden","true"); z.querySelectorAll("*").forEach(n => { if(n.childNodes.length === 1 && n.firstChild.nodeType === 3) n.textContent = n.textContent.replace(/[A-Za-zÄÖÜäöüß]/g, "x"); }); });
+  const form = document.getElementById("icForm");
+  guide.querySelectorAll("[data-ictype]").forEach(b => b.onclick = () => { icState.type = b.dataset.ictype; icState.text = document.getElementById("icText").value; icState.name = document.getElementById("icName").value; guide.querySelectorAll("[data-ictype]").forEach(x => x.setAttribute("aria-pressed", x === b)); });
+  form.onsubmit = e => { e.preventDefault(); icState.text = document.getElementById("icText").value; icState.name = document.getElementById("icName").value;
+    icState.res = icAnalyse(icState.text, icState.type) || false; renderCheck(); const res = document.getElementById("icRes"); if(res) res.scrollIntoView({behavior:"smooth", block:"start"}); };
+  document.getElementById("icBsp").onclick = () => { icState.type = IC_BEISPIEL.type; icState.text = IC_BEISPIEL.inci; icState.name = IC_BEISPIEL.name; icState.res = icAnalyse(icState.text, icState.type); renderCheck(); const res = document.getElementById("icRes"); if(res) res.scrollIntoView({behavior:"smooth", block:"start"}); };
+  const vor = document.getElementById("icVor"); if(vor) vor.onclick = () => { vor.disabled = true; vor.textContent = "Danke, ich schaue es mir an"; };
+  const ab = document.getElementById("icAbo"); if(ab) ab.onclick = () => zPaywall("check-inci");
+}
+window.showCheck = () => { state.view = "produkte"; state.type = "check"; state.q = ""; if(typeof q !== "undefined") q.value = ""; render(); window.scrollTo({top:0}); };
+
 function render(){
   { const wb = document.querySelector(".wblase"); if(wb) wb.remove(); }
   for(const v of ["start","produkte","routine","ll","plan","quiz","wissen","merkliste","favoriten","bereich"]) document.getElementById("v-"+v).hidden = state.view!==v;
@@ -3545,7 +3897,7 @@ function render(){
   document.getElementById("meBtn").dataset.set = meSet() ? "1" : "0";
   drawTypes();
   document.getElementById("subnav").hidden = state.view!=="produkte"; setHH();
-  if(state.view==="produkte"){ state.q.trim() ? renderSearch() : state.type === "neu" ? renderNeu() : renderGuide(); zProdukte(); }
+  if(state.view==="produkte"){ state.q.trim() ? renderSearch() : state.type === "check" ? renderCheck() : state.type === "neu" ? renderNeu() : renderGuide(); zProdukte(); }
   if(state.view==="merkliste") renderMerk();
   if(state.view==="wissen") renderWissen();
   if(state.view==="favoriten") renderFav();
