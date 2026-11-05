@@ -92,3 +92,8 @@ Sensibel, klare Empfehlung: Balea med Ultra Sensitive (1569035), alverde Ultra S
 Trocken/juckend: sebamed Anti-Juckreiz Akut Urea 5% (1277186), lavera Basis Sensitive Hydrate & Care (3133400), WELEDA Hydro Shine (3090592), alverde Sensitiv (1704279)
 Sensibel + leicht gegen Schuppen: GUHL Kopfhaut Sensitiv (1446989), head&shoulders Anti-Schuppen sensitive Kopfhaut (3115868), h&s Derma x Pro Pflegende Feuchtigkeit (1343251), h&s Derma x Pro Beruhigende Pflege (1343250)
 Nicht empfohlen trotz Namen: Balea MEN Sensitive (viele Duftstoffe), Balea Professional Aqua Hyaluron (Parfum weit vorne, kaum Pflege)
+
+## Ideen nach Blick auf trustyourroots.com (Roots, 05.11.)
+- Inhaltsstoff-Check: Stufe 1 Textfeld „Inhaltsstoffe einfügen“ (Handy kopiert Text aus Foto: iPhone Live Text, Android Google Lens) + Produktart wählen. Auswertung mit den classify-Regeln (feucht/nährend/glättend, Silikone, Protein/Bond, „steht hinter dem Parfum“, Alkohol, Menthol, Duftstoff-Allergene) und Abgleich mit Meine Haare. Kein 0–100-Score. Steht das Produkt im Guide → Lauras Einschätzung zeigen. Stufe 2 später: Kamera mit Texterkennung im Browser (Fehler bei runden Flaschen/kleiner Schrift). Abo-Funktion, Gäste evtl. 1× testen.
+- Hartes Wasser: Frage in Meine Haare/Routine-Check (weich/mittel/hart/weiß nicht, Tipp: Kalkflecken, Härtegrad beim Wasserversorger). Folgen im Haarplan: Tiefenreinigung mit „Löst auch Kalk“ alle 2–4 Wochen, saure Spülung/Glossing, Hinweis Gelbstich bei Blond, Locken. Ehrlich: Studienlage gemischt, Duschfilter entfernen meist Chlor, kaum Kalk. Dafür mehr Drogerie-Shampoos mit Komplexbildnern suchen (bisher 7 mit kalk, nur 2 Drogerie).
+- Nicht übernehmen: Zahlen-Score, Nutzerbewertungen.
