@@ -648,3 +648,4 @@
 - Pantene LOVE Edition: echte LOVE-Liste von Laura ersetzt die normale Edition (mit Dimethicone/Dimethiconol + SLS) → Guide-Text „Silikone gleichen aus“ stimmt, bleibt.
 - Redken Extreme Length: Liste von Laura (mit Biotin am Ende). 3 fehlen noch (Garnier Ananas, Vichy K, Vichy Ultra Apaisant).
 - Garnier Fructis Ananas Hair Food Shampoo: Liste von Laura. Nur noch Vichy K + Ultra Apaisant ohne Liste (vermutlich nicht mehr erhältlich).
+- Vichy Dercos Anti-Schuppen K: Apotheken-Liste von Laura (Wirk-/Hilfsstoffe, deutsche Namen, nicht INCI-Reihenfolge) gespeichert; enthält Piroctone, Salicylsäure, Aprikosenkern-Pulver (Peeling), Levomenthol, Parfum. Laura gefragt, ob es das K ist.

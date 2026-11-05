@@ -308,7 +308,9 @@
   "inci": "AQUA / WATER / EAU • SODIUM LAURETH SULFATE • CITRIC ACID • COCAMIDOPROPYL BETAINE • SODIUM HYDROXIDE • PROPYLENE GLYCOL • SODIUM CHLORIDE • SODIUM BENZOATE • HEXYLENE GLYCOL • POLYQUATERNIUM-10 • SALICYLIC ACID • LIMONENE • NIACINAMIDE • HYDROGENATED STARCH HYDROLYSATE • LINALOOL • HEXYL CINNAMAL • ALPHA-ISOMETHYL IONONE • BENZYL ALCOHOL • APHANIZOMENON FLOS-AQUAE EXTRACT • PHENOXYETHANOL • POTASSIUM SORBATE • PARFUM / FRAGRANCE"
  },
  "shampoo|Vichy|Dercos Anti-Schuppen K": {
-  "treffer": null
+  "quelle": "Laura (05.11.) – Apotheken-Liste (Wirk- und Hilfsstoffe, nicht INCI-Reihenfolge)",
+  "score": 1.0,
+  "inci": "Thermalwasser, Nicotinamid, Capryloyl-Salicylsäure, Pirocton olamin, Salicylsäure, Zuckercouleur, 2-Methylpentan-2,4-diol, Natrium laureth sulfat, Brillantblau FCF, Polyquaternium-10, N-(2-Hydroxyethyl)cocosfettsäureamid, PEG-55 propylen glycol oleat, Parfüm, Acrylat-Copolymer, Natriumbenzoat, N-(2-Hydroxypropyl)cocosfettsäureamid, Kokosnuss betain, Macrogol-5-laurylethercarbonsäure, Aprikosensamen-Pulver, Natriumhydroxid, Natriumchlorid, Isopropyl myristat, Citronensäure, Levomenthol, Propylenglycol, Glycerol"
  },
  "shampoo|Vichy|Dercos Anti-Schuppen DS für trockene Kopfhaut": {
   "quelle": "www.vichy.de",
