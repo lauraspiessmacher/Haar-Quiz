@@ -59,7 +59,10 @@ t = open(f'{S}/vorschau2-template.html').read().replace('__DATA__', data)
 # Regal im Wissen-Bereich entfernt (08.10.); Dateien liegen weiter in regal/
 t = t.replace('__ROUTINE__', open(f'{S}/routine-zeichnungen.html').read())
 _m = json.load(open(f'{S}/../wirkung/matched.json', encoding='utf-8'))
-t = t.replace('__INCI__', json.dumps({k: v['inci'] for k, v in _m.items() if v.get('inci') and v.get('nameov', 0) >= 0.6}, ensure_ascii=False).replace('</', '<\\/'))
+_iw = json.load(open(f'{S}/../wirkung/inci-weitere.json', encoding='utf-8')) if os.path.exists(f'{S}/../wirkung/inci-weitere.json') else {}
+_inci = {k: v['inci'] for k, v in _m.items() if v.get('inci') and v.get('nameov', 0) >= 0.6}
+_inci.update({k: v['inci'] for k, v in _iw.items() if v.get('inci')})
+t = t.replace('__INCI__', json.dumps(_inci, ensure_ascii=False).replace('</', '<\\/'))
 t = t.replace('__KAUF__', open(f'{S}/kauflinks.json').read().strip() or '{}')
 # Wissenstexte: Übersicht aus wissen.json, Inhalt aus wissen/<id>.html
 _w = json.load(open(f'{S}/wissen.json'))

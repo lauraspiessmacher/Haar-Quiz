@@ -3748,14 +3748,21 @@ function icTreffer(r){
     const m = such(ALL.filter(p => p.type === r.type)) || such(ALL.filter(p => nah.includes(p.type))) || such(ALL);
     if(m) return m;
   }
-  const sig = r.L.slice(0, 8).join("|"), mk = icSig()[sig];
-  return mk ? ALL.find(p => p.mk === mk) || null : null;
+  /* Inhaltsstoffe vergleichen: gleicher erster Stoff und fast dieselben ersten 12 (kleine Schreibunterschiede sind egal) */
+  const top = r.L.slice(0, 12); let bestMk = null, bs = 0;
+  for(const [mk, L] of icSig()){
+    if(L[0] !== top[0]) continue;
+    const set = new Set(L), gleich = top.filter(x => set.has(x)).length / Math.max(top.length, L.length);
+    const platz = top.filter((x, i) => L[i] === x).length / 12 * 0.1, typ = mk.startsWith(r.type + "|") ? 0.05 : 0;
+    if(gleich + platz + typ > bs){ bs = gleich + platz + typ; bestMk = gleich >= 0.8 ? mk : bestMk; }
+  }
+  return bestMk ? ALL.find(p => p.mk === bestMk) || null : null;
 }
-/* Inhaltsstofflisten der eingeordneten Masken, Conditioner und Leave-ins (notizen/wirkung/matched.json): gleiche ersten 8 = gleiches Produkt */
+/* Inhaltsstofflisten aller eingeordneten Produkte (notizen/wirkung/matched.json + inci-weitere.json von dm) */
 const INCI_RAW = __INCI__;
 let _icSig = null;
-function icSig(){ if(_icSig) return _icSig; _icSig = {};
-  for(const [mk, s] of Object.entries(INCI_RAW)){ const L = icListe(s); if(L.length >= 8) _icSig[L.slice(0,8).join("|")] = mk; }
+function icSig(){ if(_icSig) return _icSig;
+  _icSig = Object.entries(INCI_RAW).map(([mk, s]) => [mk, icListe(s).slice(0, 12)]).filter(([, L]) => L.length >= 6);
   return _icSig; }
 const IC_DICKE_TXT = d => d[0] === 0 && d[1] === 4 ? "alle Haardicken" : (d[0] === d[1] ? BIS[d[0]] : `${VON[d[0]].toLowerCase()} bis ${BIS[d[1]]}`) + " Haar";
 const icStelle = ([x,i]) => `${i+1}. Stelle`;
