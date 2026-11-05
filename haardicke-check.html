@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haardicke-Check</title>
+<style>
+:root{
+  --bg:#382F2E;
+  --surface:#433836;
+  --cream:#F3ECE2;
+  --muted:#C9BCAE;
+  --line:rgba(243,236,226,.5);
+  --line-soft:rgba(243,236,226,.18);
+  --taupe:#9E8C80;
+  --sand:#D6B98F;
+  --warn-bg:#4A3D35;
+  --serif:"Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Noto Serif", Georgia, serif;
+  --sans:"Avenir Next", Avenir, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#382F2E; --cream:#F3ECE2; } }
+:root[data-theme="dark"]{ --bg:#382F2E; --cream:#F3ECE2; }
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:28px 22px 48px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.1}
+p{margin:0 0 14px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+
+/* Start */
+.start{min-height:calc(100vh - 80px);display:flex;flex-direction:column;justify-content:center;position:relative}
+.strand{position:absolute;top:0;right:-22px;width:62%;max-width:300px;opacity:.55;pointer-events:none}
+.by{font-size:14px;color:var(--muted);margin-bottom:28px;letter-spacing:.02em}
+.start h1{font-size:clamp(46px,13vw,68px);letter-spacing:-.01em;margin-bottom:22px;max-width:9ch}
+.start .lead{font-size:18px;color:var(--cream);max-width:34ch}
+.start .how{color:var(--muted);font-size:15px;max-width:38ch;margin-bottom:30px}
+.primary{display:block;width:100%;padding:17px 20px;border:1px solid var(--cream);border-radius:999px;background:var(--cream);color:var(--bg);font-weight:500;font-size:17px;cursor:pointer}
+.primary:active{transform:scale(.99)}
+.ghost{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:8px 0;text-decoration:underline;text-underline-offset:4px}
+.fine{font-size:13px;color:var(--muted);line-height:1.5;margin-top:26px;border-top:1px solid var(--line-soft);padding-top:16px}
+
+/* Question */
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;min-height:40px}
+.count{font-size:14px;color:var(--muted)}
+.bar{height:2px;background:var(--line-soft);border-radius:2px;overflow:hidden;margin-bottom:38px}
+.bar span{display:block;height:100%;background:var(--cream);transition:width .35s ease}
+.q h2{font-size:clamp(30px,8vw,38px);margin-bottom:12px}
+.hint{color:var(--muted);font-size:15px;margin-bottom:22px}
+.answers{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.ans{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:transparent;cursor:pointer;font-size:16.5px;line-height:1.4;transition:background .15s,border-color .15s,color .15s}
+.ans .dot{flex:0 0 18px;height:18px;margin-top:2px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.ans.multi .dot{border-radius:5px}
+.ans[aria-pressed="true"]{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+.ans[aria-pressed="true"] .dot{border-color:var(--bg);background:var(--bg)}
+.ans[aria-pressed="true"] .dot::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--cream)}
+.ans.multi[aria-pressed="true"] .dot::after{border-radius:1px}
+@media (hover:hover){.ans:hover{border-color:var(--cream)}}
+.next{margin-top:26px}
+.next[disabled]{opacity:.35;cursor:default}
+
+/* Result */
+.res-kicker{font-size:15px;color:var(--muted);margin-bottom:8px}
+.res h1{font-size:clamp(44px,12vw,62px);margin-bottom:20px}
+.res .intro{font-size:18px;margin-bottom:28px}
+.block{border-top:1px solid var(--line-soft);padding:22px 0 8px}
+.block h3{font-size:25px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.mark{display:inline-grid;place-items:center;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;font-family:var(--sans);font-size:14px;font-weight:400}
+.box{border:1px solid var(--line);border-radius:16px;padding:18px 18px 6px;margin:0 0 18px}
+.box h3{font-size:22px;margin-bottom:8px}
+.warn{background:var(--warn-bg);border-color:var(--sand);margin-bottom:30px}
+.warn h3{color:var(--sand)}
+details{border-top:1px solid var(--line-soft);padding:18px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:24px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:24px;color:var(--muted)}
+details[open] summary::after{content:"–"}
+details .inner{padding-top:14px}
+.tbl{overflow-x:auto;margin:6px 0 18px;border:1px solid var(--line-soft);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;vertical-align:top;border-bottom:1px solid var(--line-soft)}
+th{font-weight:500;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+ul{padding-left:20px;margin:0 0 14px}
+li{margin-bottom:8px}
+.closing{font-family:var(--serif);font-size:23px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:24px;margin:10px 0 26px}
+.actions{display:flex;flex-direction:column;gap:6px;align-items:center}
+
+.fade{animation:in .3s ease both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.bar span{transition:none}}
+
+.ans.has-ico{align-items:center}
+.ans .ico{flex:0 0 28px;width:28px;height:46px}
+.ans[aria-pressed="true"] .ico path{stroke:#382F2E}
+.res-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.res-art{flex:0 0 60px;width:60px;height:100px;margin-top:4px}
+.subtype{color:var(--muted);font-size:16px;margin:-8px 0 24px}
+.code{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 10px;margin-right:8px;color:var(--cream);font-size:14px}
+.steps{padding-left:22px;margin:0 0 22px}
+.steps li{margin-bottom:10px}
+strong{font-weight:500}
+</style>
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--bg:#3A3730 !important;--surface:#45413A !important;--warn-bg:#4E4A42 !important;
+  --serif:"Instrument Serif","Iowan Old Style",Georgia,serif !important;
+  --sans:"Instrument Sans","Avenir Next",Avenir,"Segoe UI",Roboto,Arial,sans-serif !important}
+body{background:#3A3730 !important}
+.lh-back{display:inline-flex;align-items:center;gap:7px;margin:16px 0 0 max(18px,env(safe-area-inset-left,0px));
+  font:500 12px/1 "Instrument Sans",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F3ECE2;
+  text-decoration:none;border:1px solid rgba(243,236,226,.42);border-radius:999px;padding:9px 14px}
+.lh-back:hover{background:#45413A}
+.lh-back svg{width:14px;height:14px}
+</style>
+<style>
+/* Haardicke-Check: Reichhaltigkeits-Skala */
+.scale{margin:4px 0 26px}
+.scale .lab{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:8px}
+.scale .steps5{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.scale .steps5 span{height:10px;border-radius:999px;border:1px solid var(--line);background:transparent}
+.scale .steps5 span.on{background:var(--cream);border-color:var(--cream)}
+.scale .now{margin-top:12px;font-family:var(--serif);font-size:24px;line-height:1.15}
+.scale .now em{font-style:italic}
+.prod{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px;padding:0;list-style:none}
+.prod li{margin:0;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14.5px}
+.res .lead2{font-size:18px;margin-bottom:22px}
+.soon-note{font-family:var(--serif);font-size:22px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:22px;margin:14px 0 22px}
+</style>
+</head>
+<body>
+<a class="lh-back" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Zurück zu Laura</a>
+
+<main class="wrap" id="app" aria-live="polite"></main>
+
+<script>
+/* ---------- Fragen ----------
+   th = Hinweis auf die Dicke des einzelnen Haares (0 fein, 1 mittel, 2 dick), w = Gewicht der Frage
+   dry = Zustand der Längen */
+const Q = [
+ {t:"Nimm ein einzelnes Haar zwischen Daumen und Zeigefinger. Wie fühlt es sich an?", h:"Nimm ein sauberes, trockenes Haar ohne Produkt, zum Beispiel aus deiner Bürste. Am genauesten wird es, wenn du zwei, drei Haare von verschiedenen Stellen testest, denn im Nacken sind sie oft feiner.", a:[
+  ["Ich spüre es kaum",{th:0,w:2}],
+  ["Ich spüre es gut",{th:1,w:2}],
+  ["Ich spüre es deutlich, es wirkt fast drahtig",{th:2,w:2}]]},
+ {t:"Leg dein Haar direkt neben einen Nähfaden. Wie dick ist es im Vergleich?", h:"Ein ganz normaler Nähfaden aus dem Nähset reicht.", a:[
+  ["Dünner als der Faden",{th:0,w:2}],
+  ["Ungefähr gleich dick",{th:1,w:2}],
+  ["Dicker als der Faden",{th:2,w:2}],
+  ["Ich habe gerade keinen Faden da",{}]]},
+ {t:"Was passiert, wenn du reichhaltigere Haarpflege benutzt?", h:"Egal ob Conditioner, Maske, Leave-in oder Öl.", a:[
+  ["Meine Haare werden schnell platt und strähnig",{th:0,w:2}],
+  ["In Maßen geht es, zu viel macht sie platt",{th:1,w:2}],
+  ["Meine Haare schlucken viel und könnten sogar mehr vertragen",{th:2,w:2}]]},
+ {t:"Und wenn du nur leichte Pflege nutzt, zum Beispiel ein Leave-in-Spray oder einen leichten Conditioner?", a:[
+  ["Das reicht meinen Haaren völlig",{th:0,w:1}],
+  ["Das passt meistens, manchmal ist es etwas wenig",{th:1,w:1}],
+  ["Meine Haare bleiben trotzdem rau und widerspenstig",{th:2,w:1}]]},
+ {t:"Wie fühlen sich deine Längen gerade an?", a:[
+  ["Weich und geschmeidig",{dry:0}],
+  ["Etwas trocken, die Spitzen sind rau",{dry:1}],
+  ["Strohig, sie verknoten schnell",{dry:2}]]}
+];
+
+/* ---------- Texte ---------- */
+const TH = [
+ {name:"Feines Haar", text:"Deine einzelnen Haare haben einen kleinen Durchmesser. Sie sind leicht und werden schnell beschwert, wenn die Pflege zu reichhaltig ist."},
+ {name:"Fein bis mittelstark", text:"Deine Haare liegen zwischen fein und mittelstark. Sie vertragen etwas mehr als ganz feines Haar, werden mit zu reichhaltiger Pflege aber schnell schwer und platt."},
+ {name:"Mittelstarkes Haar", text:"Deine einzelnen Haare haben einen mittleren Durchmesser. Sie vertragen die meisten Produkte. Je trockener sich deine Längen anfühlen, desto reichhaltiger darf es sein."},
+ {name:"Mittelstark bis dick", text:"Deine Haare liegen zwischen mittelstark und dick. Mit sehr leichter Pflege fühlen sie sich schnell rau an. Gleichzeitig brauchen sie nicht immer das Reichhaltigste."},
+ {name:"Dickes Haar", text:"Deine einzelnen Haare haben einen großen Durchmesser. Sie schlucken viel Pflege, werden kaum beschwert und fühlen sich mit zu leichter Pflege schnell rau an."}
+];
+/* Reichhaltigkeit 1 bis 5: Zeile = Haardicke, Spalte = Längen weich / etwas trocken / strohig */
+const LEVEL = [[1,1,2],[2,2,3],[3,3,4],[3,4,5],[4,5,5]];
+const LV = [null,
+ {name:"leicht", leave:["leichtes Leave-in-Spray","leichtes Leave-in-Serum"], words:"leicht, light, Fluid, Spray oder Volumen"},
+ {name:"leicht bis mittel", leave:["Leave-in-Spray","Leave-in-Serum","leichte Leave-in-Lotion"], words:"leicht, light oder Feuchtigkeit"},
+ {name:"mittel", leave:["Leave-in-Serum","Leave-in-Lotion","leichte Leave-in-Creme"], words:"Feuchtigkeit, Hydration, Glanz oder Smooth"},
+ {name:"mittel bis reichhaltig", leave:["reichhaltiges Leave-in-Serum","Leave-in-Lotion","Leave-in-Creme"], words:"Feuchtigkeit, Nährend oder Intensiv"},
+ {name:"reichhaltig", leave:["mittlere bis reichhaltige Leave-in-Creme","reichhaltiges Leave-in-Serum"], words:"Nährend, Intensiv, Rich oder Butter"}
+];
+/* Haaröl als Add-on, nach Haardicke */
+const OIL = [
+ "Kein Muss. Wenn du eins möchtest, dann ein sehr leichtes Trockenöl, sparsam und nur in die Spitzen.",
+ "Kein Muss. Wenn du eins möchtest, dann ein leichtes Trockenöl in Längen und Spitzen.",
+ "Ein normales Haaröl oder ein Trockenöl.",
+ "Ein normales bis reichhaltiges Haaröl. Ein Trockenöl geht aber auch.",
+ "Ein normales bis reichhaltiges Haaröl. Ein Trockenöl geht aber auch."
+];
+const FINE = "Ich bin keine Ärztin und keine Friseurin, dieses Quiz ersetzt keine persönliche Beratung. Deine Haare verändern sich durch Pflege, Färben, Hitze, Hormone und Alter, dein Ergebnis ist deshalb eine Momentaufnahme. Nimm es als Hilfe und Orientierung, nicht als feste Regel.";
+
+/* ---------- Zeichnung ---------- */
+function hairSVG(th, cls){
+  const w = [1.1,1.6,2,2.6,3.2][th];
+  const base = (x,c) => `<g stroke="${c}" stroke-linecap="round" fill="none"><path d="M${x} 4 L${x} 96" stroke-width="${w}"/></g>`;
+  return `<svg class="${cls}" viewBox="0 0 60 100" aria-hidden="true">${base(22,"#F3ECE2")}${base(40,"#9E8C80")}</svg>`;
+}
+const startArt = `<svg class="strand" viewBox="0 0 300 420" fill="none" aria-hidden="true">
+  <path d="M230 0 C 200 140, 250 260, 205 420" stroke="#F3ECE2" stroke-width="0.8"/>
+  <path d="M258 0 C 228 140, 278 260, 233 420" stroke="#9E8C80" stroke-width="1.8"/>
+  <path d="M288 0 C 258 140, 308 260, 263 420" stroke="#F3ECE2" stroke-width="3"/></svg>`;
+
+/* ---------- Ablauf ---------- */
+const app = document.getElementById("app");
+let idx = -1, picks = [];
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const reduce = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function start(){
+  idx = -1; picks = [];
+  app.innerHTML = `<section class="start fade">${startArt}
+    <div class="by">Ein Quiz von Laura, deiner Haarpflege-Bestie</div>
+    <h1>Wie dick sind deine Haare?</h1>
+    <p class="lead">Die Dicke deiner einzelnen Haare entscheidet, wie reichhaltig deine Pflege sein darf. Hier findest du heraus, wo du stehst.</p>
+    <p class="how">Fünf kurze Fragen, ungefähr zwei Minuten. Leg dir am besten ein einzelnes Haar aus deiner Bürste und einen Nähfaden bereit.</p>
+    <button class="primary" id="go">Quiz starten</button>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("go").onclick = () => { idx = 0; render(); };
+}
+
+function render(){
+  const q = Q[idx];
+  const sel = picks[idx] ?? null;
+  app.innerHTML = `<section class="q fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Frage ${idx+1} von ${Q.length}</span></div>
+    <div class="bar"><span style="width:${(idx/Q.length)*100}%"></span></div>
+    <h2>${esc(q.t)}</h2>
+    ${q.h ? `<p class="hint">${esc(q.h)}</p>` : ""}
+    <div class="answers">${q.a.map((a,i)=>`<button class="ans" data-i="${i}" aria-pressed="${sel===i}"><span class="dot"></span><span>${esc(a[0])}</span></button>`).join("")}</div>
+  </section>`;
+  document.getElementById("back").onclick = () => { if(idx===0) start(); else { idx--; render(); } };
+  app.querySelectorAll(".ans").forEach(b => b.onclick = () => choose(+b.dataset.i));
+  window.scrollTo(0,0);
+}
+function choose(i){
+  picks[idx] = i;
+  app.querySelectorAll(".ans").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i===i));
+  setTimeout(advance, reduce()?0:260);
+}
+function advance(){ if(idx < Q.length-1){ idx++; render(); } else result(); }
+
+function result(){
+  let thS=0, thW=0, dry=0;
+  Q.forEach((q,qi)=>{
+    const p = picks[qi]; if(p==null) return;
+    const v = q.a[p][1];
+    if(v.th!=null){ thS += v.th*v.w; thW += v.w; }
+    if(v.dry!=null) dry = v.dry;
+  });
+  const score = thW ? thS/thW : 1;
+  const th = score < 0.5 ? 0 : score < 0.9 ? 1 : score <= 1.1 ? 2 : score <= 1.5 ? 3 : 4;
+  const lv = LEVEL[th][dry];
+  const T = TH[th], L = LV[lv];
+  const bar = [1,2,3,4,5].map(n=>`<span class="${n<=lv?"on":""}"></span>`).join("");
+
+  let dryText = "";
+  if(dry>0){
+    dryText = th<=1
+      ? "Deine Längen fühlen sich gerade trocken an. Bleib trotzdem bei eher leichten Texturen, nimm lieber öfter eine kleine Menge statt einmal viel und gib Reichhaltigeres nur in die Spitzen."
+      : "Deine Längen fühlen sich gerade trocken an. Deshalb darf deine Pflege im Moment reichhaltiger sein als bei gesunden Haaren deiner Dicke. Fühlen sie sich wieder weich an, kannst du eine Stufe leichter werden.";
+  } else if(th>=3){
+    dryText = "Deine Längen fühlen sich gut an. Reichhaltige Pflege ist bei dir möglich, aber kein Muss. Wenn sich deine Haare mit etwas leichteren Produkten wohlfühlen, bleib ruhig dabei.";
+  }
+
+  app.innerHTML = `<section class="res fade">
+    <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Dein Ergebnis</span></div>
+    <div class="res-head">
+      <div>
+        <p class="res-kicker">Deine Haardicke</p>
+        <h1>${T.name}</h1>
+      </div>
+      ${hairSVG(th, "res-art")}
+    </div>
+    <p class="lead2">${T.text}</p>
+
+    <div class="scale" role="img" aria-label="Reichhaltigkeit Stufe ${lv} von 5: ${L.name}">
+      <div class="lab"><span>leicht</span><span>reichhaltig</span></div>
+      <div class="steps5">${bar}</div>
+      <p class="now">Deine Pflege darf <em>${L.name}</em> sein.</p>
+    </div>
+
+    <div class="block"><h3>Zum Beispiel beim Leave-in</h3>
+      <ul class="prod">${L.leave.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>
+      <p>Dieselbe Stufe gilt auch für Conditioner und Masken. Achte auf der Flasche auf Begriffe wie <strong>${L.words}</strong>.</p>
+      ${dryText ? `<p>${dryText}</p>` : ""}
+    </div>
+
+    <div class="block"><h3>Als Add-on: Haaröl</h3>
+      <p>${OIL[th]} Öl ist dafür da, die Pflege zu versiegeln und Glanz und Geschmeidigkeit zu geben. Nutze es deshalb nie allein, sondern immer über deinem Leave-in.</p>
+    </div>
+
+    <div class="box"><h3>Grundtyp und aktueller Zustand</h3><p>Dein Ergebnis ist eine grobe Einschätzung. Die Dicke deiner Haare ist dein Grundtyp, der bleibt meist ziemlich gleich. Wie sich deine Längen anfühlen und wie viel Pflege sie gerade brauchen, ist dagegen dein aktueller Zustand. Der verändert sich durch Färben, Hitze, Reibung, Jahreszeit, Hormone oder Alter. Mach den Check deshalb ruhig ab und zu neu.</p></div>
+    <p class="soon-note">Bald kommt meine Webseite, der Healthy Hair Club. Dort findest du weitere Checks und welche Produkte genau zu dir passen.</p>
+    <div class="actions"><button class="primary" id="again">Quiz neu starten</button><a class="ghost" href="./">Zurück zu Laura</a></div>
+    <p class="fine">${FINE}</p>
+  </section>`;
+  document.getElementById("back").onclick = () => { idx = Q.length-1; render(); };
+  document.getElementById("again").onclick = start;
+  window.scrollTo(0,0);
+}
+
+start();
+</script>
+</body>
+</html>
