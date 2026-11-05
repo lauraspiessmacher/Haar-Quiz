@@ -1403,7 +1403,7 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .icklein{font-size:12.5px;color:var(--muted);margin:14px 0 0}
 .icsuch{margin:26px 0 8px;padding:16px 18px;border:1px dashed var(--line);border-radius:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
 .icsuch p{margin:0;font-size:15px}
-.icband{position:relative;z-index:3;margin:52px 0 0;background:radial-gradient(120% 170% at 88% 0%,#34312F 0%,#1A1817 42%,#0F0E0E 100%);color:#F3ECE2;border-radius:26px;padding:38px 40px;display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:24px;align-items:center;overflow:hidden;box-shadow:0 34px 70px -34px rgba(0,0,0,.6)}
+.icband{position:relative;z-index:3;margin:52px 0 0;background:radial-gradient(120% 170% at 88% 0%,#4B4840 0%,#3A3730 45%,#302D27 100%);color:#F3ECE2;border-radius:26px;padding:38px 40px;display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:24px;align-items:center;overflow:hidden;box-shadow:0 34px 70px -34px rgba(0,0,0,.6)}
 @property --icw{syntax:"<angle>";inherits:false;initial-value:0deg}
 .icband::before{content:"";position:absolute;inset:0;border-radius:26px;padding:2px;background:conic-gradient(from var(--icw),#8E9399 0deg,#E9EBEE 40deg,#FFFFFF 60deg,#B9BDC3 95deg,#6F7479 170deg,#A3A8AE 230deg,#F2F3F5 300deg,#8E9399 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;animation:icGlanz 9s linear infinite}
 @keyframes icGlanz{to{--icw:360deg}}
@@ -4112,7 +4112,7 @@ const IC_HANDY = `<svg viewBox="-14 -14 228 252" fill="none" stroke="currentColo
   <path d="M62 54h56M62 64h48M62 74h58M62 84h40M62 94h52M62 104h46M62 114h30"/>
   <rect class="icbmark" x="58" y="60" width="62" height="28" rx="4" fill="currentColor" fill-opacity=".12" stroke="none"/>
   <path d="M60 150h64M60 162h44"/><rect x="60" y="178" width="64" height="16" rx="8"/>
-  <g class="icblupe" transform="translate(144,96)"><circle r="22" fill="#1A1817" fill-opacity=".6"/><circle r="22"/><path d="M16 16l18 18" stroke-width="2.4"/><path d="M-9 -4h18M-9 4h12"/></g></svg>`;
+  <g class="icblupe" transform="translate(144,96)"><circle r="22" fill="#2F2C27" fill-opacity=".6"/><circle r="22"/><path d="M16 16l18 18" stroke-width="2.4"/><path d="M-9 -4h18M-9 4h12"/></g></svg>`;
 function icLupeStart(root){
   if(!root) return; const g = root.querySelector(".icblupe"); if(!g) return;
   const P = [[40,26],[144,26],[144,190],[40,190]], seg = [104,164,104,164], L = 536;
