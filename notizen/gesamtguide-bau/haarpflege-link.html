@@ -1361,6 +1361,15 @@ html[data-stil="rouje"] .murteil{text-transform:uppercase}
 .icform textarea,.icform input{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;resize:vertical}
 .icform textarea:focus,.icform input:focus{outline:2px solid var(--ink);outline-offset:1px}
 .icbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.icchips{display:flex;flex-wrap:wrap;gap:6px}
+.ictreffer{display:flex;gap:14px;align-items:center;padding:12px 16px}
+.ictreffer img{flex:none;width:64px;height:84px;object-fit:contain;background:#F8F3EC;border-radius:10px;padding:6px}
+.ictreffer>div{display:grid;gap:1px}
+.ictreffer .ictk{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#D6B98F}
+.ictreffer .ictb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#E9E2D8;margin-top:2px}
+.ictreffer .ictn{font-family:var(--serif);font-size:20px;line-height:1.2;color:#F3ECE2}
+.ictreffer .icth{font-size:13.5px;color:#E9E2D8;margin-top:4px;display:flex;gap:6px;align-items:center}
+.ictreffer .icth svg{width:14px;height:14px;flex:none;color:#D6B98F}
 .icfehler{margin:14px 0;padding:12px 14px;border-radius:12px;background:var(--card);font-size:14.5px}
 .icres{margin:22px 0 10px;background:#FFFDFA;border:1px solid var(--line-soft);border-radius:20px;padding:22px 20px 16px;scroll-margin-top:calc(var(--hh,180px) + 12px)}
 .icres h3{font-size:26px;margin:0 0 12px}
@@ -3685,10 +3694,20 @@ const IC = {
   FATALC: /(cetearyl alcohol|cetyl alcohol|stearyl alcohol|behenyl alcohol|myristyl alcohol|lauryl alcohol|brassica alcohol|arachidyl alcohol)/,
   PARF: /^(parfum|fragrance|perfume|aroma)$/,
   ALLERG: /^(limonene|linalool|citronellol|geraniol|hexyl cinnamal|coumarin|benzyl salicylate|benzyl benzoate|citral|eugenol|alpha-isomethyl ionone|amyl cinnamal|benzyl cinnamate|cinnamal|farnesol|hydroxycitronellal|isoeugenol|butylphenyl methylpropional)$/,
-  MENTH: /(menthol|mentha|peppermint)/
+  MENTH: /(menthol|mentha|peppermint)/,
+  VOL: /^(cyclopentasiloxane|cyclohexasiloxane|cyclomethicone|trisiloxane|isododecane|isohexadecane|undecane|tridecane|c13-15 alkane|c9-12 alkane|hemisqualane|dimethicone 0|alcohol denat|alcohol)$/,
+  FILM: /(polysilicone|silicone quaternium|quaternium-70|polyquaternium|^pvp$|vp\/va copolymer|vp\/|acrylates|polyurethane|methacrylamide|vinyl|polyimide|hydroxypropyl starch phosphate|chitosan)/,
+  HOLD: /(vp\/va copolymer|^pvp$|acrylates|octylacrylamide|polyurethane-|vinyl caprolactam|pvm\/ma|polyimide)/,
+  HEAVY: /(cocos nucifera|coconut|ricinus|castor|olea europaea|olive|persea|avocado|butyrospermum|shea|theobroma|mangifera|macadamia|sesamum)/,
+  LIGHT: /(argania|argan|simmondsia|jojoba|squalane|camellia|prunus amygdalus|almond|helianthus|vitis vinifera|grape seed|caprylic|coco-caprylate|isopropyl|dicaprylyl|c12-15|limnanthes|crambe|moringa|rosa canina|hippophae|oryza sativa bran oil|linum)/,
+  PEELA: /^(salicylic acid|glycolic acid|lactic acid|gluconolactone|mandelic acid)$/,
+  PEELK: /(maris sal|sea salt|^sodium chloride$|^sucrose$|sugar|^silica$|perlite|pumice|cellulose|jojoba esters|prunus amygdalus dulcis shell|juglans regia shell)/,
+  CALM: /^(panthenol|allantoin|bisabolol|urea|niacinamide|aloe|glycerin|betaine|centella|madecassoside|avena|ectoin|chamomilla|glycyrrhiza|dipotassium glycyrrhizate|sodium hyaluronate|squalane)/,
+  OILCTL: /^(zinc pca|salicylic acid|kaolin|bentonite|charcoal|melaleuca|tea tree|hamamelis|witch hazel|zinc gluconate)/,
+  GROW: /(caffeine|rosmarinus|rosemary|biotinoyl tripeptide|acetyl tetrapeptide-3|capixyl|trifolium|baicalensis|ginseng|panax|minoxidil|biotin$|adenosine)/
 };
 const IC_NAMEN = [[/^hydrolyzed keratin|^keratin/,"Keratin"],[/hydrolyzed .*protein/,"Proteine"],[/hyaluron/,"Hyaluron"],[/biotin/,"Biotin"],[/argania|argan/,"Arganöl"],[/cocos nucifera|coconut/,"Kokosöl"],[/macadamia/,"Macadamiaöl"],[/simmondsia|jojoba/,"Jojobaöl"],[/aloe/,"Aloe vera"],[/ceramide|octadecanediol/,"Ceramide"],[/caffeine/,"Koffein"],[/collagen/,"Kollagen"],[/panthenol/,"Panthenol"],[/niacinamide/,"Niacinamid"],[/glycolic/,"Glykolsäure"],[/rosmarinus|rosemary/,"Rosmarin"],[/peptide/,"Peptide"],[/oryza|rice/,"Reis"],[/avocado|persea/,"Avocadoöl"],[/shea|butyrospermum/,"Sheabutter"]];
-const IC_TYPEN = [["shampoo","Shampoo"],["maske","Maske"],["conditioner","Conditioner"],["leavein","Leave-in"]];
+const IC_TYPEN = [["shampoo","Shampoo"],["maske","Maske"],["conditioner","Conditioner"],["leavein","Leave-in"],["hitze","Hitzeschutz"],["oel","Haaröl"],["kopfhaut","Kopfhautpflege"]];
 const IC_BEISPIEL = {name:"Balea med Ultra Sensitive Shampoo", type:"shampoo", inci:"Ingredients: Aqua, Coco-Glucoside, Glycerin, Sodium Coco-Sulfate, Sodium Cocoamphoacetate, Citric Acid, Panthenol, Niacinamide, Tocopherol, Ascorbyl Palmitate, Glyceryl Oleate, Hydroxypropyl Guar Hydroxypropyltrimonium Chloride, Hydrogenated Palm Glycerides Citrate, Lecithin, Sodium Benzoate, Potassium Sorbate, Sodium Chloride, Sodium Hydroxide"};
 let icState = {type:"shampoo", text:"", name:"", res:null};
 
@@ -3704,7 +3723,7 @@ function icAnalyse(text, type){
   const w = i => i < cut ? 1/(1+0.35*i) : 0.04;
   const sum = re => L.reduce((n,x,i) => n + (re.test(x) && !(re===IC.EMO && IC.ESS.test(x)) ? w(i) : 0), 0);
   const H = sum(IC.HUM), E = sum(IC.EMO);
-  const G = sum(IC.SIL) + 1.5*L.reduce((n,x,i) => n + (i < Math.min(cut,10) && IC.ACID.test(x) ? w(i) : 0), 0) + 0.5*L.reduce((n,x,i) => n + (i < cut && IC.POLY.test(x) ? w(i) : 0), 0);
+  const G = (type === "hitze" || type === "oel" ? L.reduce((n,x,i) => n + (IC.SIL.test(x) && !IC.VOL.test(x) ? w(i) : 0), 0) : sum(IC.SIL)) + 1.5*L.reduce((n,x,i) => n + (i < Math.min(cut,10) && IC.ACID.test(x) ? w(i) : 0), 0) + 0.5*L.reduce((n,x,i) => n + (i < cut && IC.POLY.test(x) ? w(i) : 0), 0);
   const find = re => L.map((x,i) => [x,i]).filter(([x]) => re.test(x));
   const prot = find(IC.PROT).filter(([x,i]) => i < cut && !/oil/.test(x)), bond = find(IC.BOND).filter(([,i]) => i < cut);
   const sil = find(IC.SIL), parf = find(IC.PARF), allerg = find(IC.ALLERG), menth = find(IC.MENTH);
@@ -3718,6 +3737,15 @@ function icAnalyse(text, type){
   const spuren = [];
   L.forEach((x,i) => { if(i <= cut) return; const n = IC_NAMEN.find(([re]) => re.test(x)); if(n && !spuren.includes(n[1])) spuren.push(n[1]); });
   const r = {L, cut, H, E, G, tags, rep: bond.length ? "bond" : prot.length ? "protein" : "", prot, bond, sil, parf, allerg, menth, dry, fat, butter, spuren, type};
+  r.dandr = find(IC.DANDR); r.chel = find(IC.CHEL); r.poly = find(IC.POLY);
+  r.vol = find(IC.VOL).filter(([,i]) => i < 4); r.film = find(IC.FILM).filter(([,i]) => i < (type === "hitze" ? 15 : cut)); r.hold = find(IC.HOLD).filter(([,i]) => i < cut);
+  r.heavy = find(IC.HEAVY).filter(([x,i]) => i < cut && !IC.ESS.test(x)); r.light = find(IC.LIGHT).filter(([x,i]) => i < cut && !IC.ESS.test(x));
+  r.hum = find(IC.HUM).filter(([,i]) => i < cut); r.dryTop = dry.filter(([,i]) => i < 3);
+  if(type === "kopfhaut"){
+    r.peel = find(IC.PEELA).filter(([,i]) => i < 8).concat(find(IC.PEELK).filter(([,i]) => i < 3));
+    r.calm = find(IC.CALM).filter(([,i]) => i < cut); r.oilctl = find(IC.OILCTL).filter(([x,i]) => i < cut && !(x === "salicylic acid" && r.peel.some(([y]) => y === x))); r.grow = find(IC.GROW);
+    r.dandr = r.dandr.filter(([x]) => !(x === "salicylic acid" && r.peel.some(([y]) => y === x)));
+  }
   if(type === "shampoo"){
     const t = find(IC.SULF).concat(find(IC.MILD)).sort((a,b) => a[1]-b[1]);
     r.tenside = t; r.sulf = find(IC.SULF); r.mild = find(IC.MILD);
@@ -3728,9 +3756,13 @@ function icAnalyse(text, type){
   }
   /* Haardicke abschätzen (kalibriert an den eingeordneten Produkten) */
   const x = E + 0.6*G;
-  const T_ = {maske:[0.3,0.6,1.0,1.4], conditioner:[0.2,0.45,0.85,1.3], leavein:[0.3,0.8,1.3,1.8]}[type];
+  const T_ = {maske:[0.3,0.6,1.0,1.4], conditioner:[0.2,0.45,0.85,1.3], leavein:[0.3,0.8,1.3,1.8], hitze:[0.3,0.8,1.3,1.8]}[type];
   if(T_){ r.dicke = x < T_[0] ? [0,2] : x < T_[1] ? [1,2] : x < T_[2] ? [2,3] : x < T_[3] ? [2,4] : [3,4];
     if(butter.length) r.dicke = [Math.max(r.dicke[0],2), 4]; }
+  else if(type === "oel"){ const silTop = sil.some(([,i]) => i < 2) || r.vol.some(([x]) => IC.SIL.test(x) || /isododecane|alkane|undecane/.test(x));
+    const flStart = IC.VOL.test(L[0]) || /isoalkane|isododecane|alkane/.test(L[0]);
+    r.dicke = r.heavy.some(([,i]) => i < 3) ? [2,4] : flStart ? (r.heavy.some(([,i]) => i < 6) ? [0,3] : [0,2]) : silTop ? [2,4] : [1,3]; r.silbasis = silTop; }
+  else if(type === "kopfhaut") r.dicke = [0,4];
   else r.dicke = (sil.some(([,i]) => i < 8) || E > 0.5) ? [2,4] : [0,4];
   r.parfumfrei = !parf.length && !allerg.length;
   r.match = icTreffer(r);
@@ -3740,12 +3772,14 @@ function icAnalyse(text, type){
 function icTreffer(r){
   const n = plain(icState.name || "");
   if(n.length >= 6){
-    const kand = ALL.filter(p => p.type === r.type || (r.type === "leavein" && p.type === "hitze"));
-    let best = null, bs = 0;
-    for(const p of kand){ const pb = plain(p.brand), pn = plain(p.name);
-      const s = (n.includes(pn) ? 2 : 0) + (n.includes(pb) ? 1 : 0) + (pn.includes(n) ? 2 : 0);
-      if(s > bs){ bs = s; best = p; } }
-    if(bs >= 2) return best;
+    const such = kand => { let best = null, bs = 0;
+      for(const p of kand){ const pb = plain(p.brand), pn = plain(p.name);
+        const s = (n.includes(pn) ? 2 : 0) + (n.includes(pb) ? 1 : 0) + (pn.includes(n) ? 2 : 0);
+        if(s > bs){ bs = s; best = p; } }
+      return bs >= 2 ? best : null; };
+    const nah = {leavein:["hitze"], hitze:["leavein","oel"], oel:["hitze"], shampoo:["kopfhaut"], kopfhaut:["shampoo"]}[r.type] || [];
+    const m = such(ALL.filter(p => p.type === r.type)) || such(ALL.filter(p => nah.includes(p.type))) || such(ALL);
+    if(m) return m;
   }
   const sig = r.L.slice(0, 8).join("|"), mk = icSig()[sig];
   return mk ? ALL.find(p => p.mk === mk) || null : null;
@@ -3758,11 +3792,57 @@ function icSig(){ if(_icSig) return _icSig; _icSig = {};
   return _icSig; }
 const IC_DICKE_TXT = d => d[0] === 0 && d[1] === 4 ? "alle Haardicken" : (d[0] === d[1] ? BIS[d[0]] : `${VON[d[0]].toLowerCase()} bis ${BIS[d[1]]}`) + " Haar";
 const icStelle = ([x,i]) => `${i+1}. Stelle`;
-const IC_DISP = [[/^mel$|^honey/,"Honig"],[/olea europaea/,"Olivenöl"],[/butyrospermum|shea butter/,"Sheabutter"],[/ricinus/,"Rizinusöl"],[/helianthus annuus seed oil/,"Sonnenblumenöl"],[/prunus amygdalus/,"Mandelöl"],[/cocos nucifera oil|coconut oil/,"Kokosöl"],[/argania spinosa/,"Arganöl"],[/simmondsia/,"Jojobaöl"],[/persea gratissima/,"Avocadoöl"],[/sodium hyaluronate|hyaluronic acid/,"Hyaluron"],[/^aloe/,"Aloe vera"],[/glycine soja oil/,"Sojaöl"],[/theobroma cacao/,"Kakaobutter"],[/macadamia/,"Macadamiaöl"],[/hydrolyzed wheat protein/,"Weizenprotein"],[/hydrolyzed keratin/,"Keratin"],[/hydrolyzed soy protein/,"Sojaprotein"],[/hydrolyzed rice protein/,"Reisprotein"],[/isopropyl myristate|isopropyl palmitate|dicaprylyl|cetyl esters|coco-caprylate|caprylic|ethylhexyl|isododecane|isodecyl|c12-15 alkyl benzoate|triethylhexanoin|octyldodecanol|hexyldecanol/,"leichter Ölersatz"]];
+const IC_DISP = [[/^salicylic acid/,"Salicylsäure"],[/^glycolic acid/,"Glykolsäure"],[/^lactic acid/,"Milchsäure"],[/^mandelic acid/,"Mandelsäure"],[/rosmarinus|rosemary/,"Rosmarin"],[/^caffeine/,"Koffein"],[/^zinc pca/,"Zink-PCA"],[/maris sal|sea salt/,"Meersalz"],[/^sucrose|sugar/,"Zucker"],[/ginseng|panax/,"Ginseng"],[/melaleuca|tea tree/,"Teebaumöl"],[/hamamelis|witch hazel/,"Hamamelis"],[/kaolin|bentonite/,"Tonerde"],[/^allantoin/,"Allantoin"],[/^bisabolol/,"Bisabolol"],[/^mel$|^honey/,"Honig"],[/olea europaea/,"Olivenöl"],[/butyrospermum|shea butter/,"Sheabutter"],[/ricinus/,"Rizinusöl"],[/helianthus annuus seed oil/,"Sonnenblumenöl"],[/prunus amygdalus/,"Mandelöl"],[/cocos nucifera oil|coconut oil/,"Kokosöl"],[/argania spinosa/,"Arganöl"],[/simmondsia/,"Jojobaöl"],[/persea gratissima/,"Avocadoöl"],[/sodium hyaluronate|hyaluronic acid/,"Hyaluron"],[/^aloe/,"Aloe vera"],[/glycine soja oil/,"Sojaöl"],[/theobroma cacao/,"Kakaobutter"],[/macadamia/,"Macadamiaöl"],[/hydrolyzed wheat protein/,"Weizenprotein"],[/hydrolyzed keratin/,"Keratin"],[/hydrolyzed soy protein/,"Sojaprotein"],[/hydrolyzed rice protein/,"Reisprotein"],[/isopropyl myristate|isopropyl palmitate|dicaprylyl|cetyl esters|coco-caprylate|caprylic|ethylhexyl|isododecane|isodecyl|c12-15 alkyl benzoate|triethylhexanoin|octyldodecanol|hexyldecanol/,"leichter Ölersatz"]];
 const icN = x => { const d = IC_DISP.find(([re]) => re.test(x)); return d ? d[1] : icCap(x); };
 const icCap = s => s.replace(/(^|[\s\-\/])([a-z])/g, (m, a, b) => a + b.toUpperCase());
 
+const icUnd = l => l.length < 2 ? l.join("") : l.slice(0,-1).join(", ") + " und " + l[l.length-1];
+const icNamen = (l, n) => icUnd([...new Set(l.map(([x]) => icN(x)))].slice(0, n || 3));
+function icKopfCats(r){
+  const c = [];
+  if(r.peel.length) c.push("peeling");
+  if(r.dandr.length) c.push("schuppen");
+  if(r.oilctl.length || r.dryTop.length || (r.menth.length && !r.calm.length)) c.push("fettend");
+  if(r.calm.length && r.parfumfrei && !r.menth.length && !r.dryTop.length) c.push("sensibel");
+  if(r.calm.length >= 2 && !r.dryTop.length) c.push("trocken");
+  if(r.grow.length) c.push("haarausfall");
+  if(!c.length) c.push("normal");
+  return c;
+}
+const IC_KOPF_WORT = {peeling:"Peeling", schuppen:"schuppig", fettend:"schnell fettend", sensibel:"sensibel", trocken:"trocken, spannt", haarausfall:"bei dünner werdendem Haar", normal:"normal"};
+function icMachtEs2(r){
+  const s = [];
+  if(r.type === "hitze"){
+    const film = r.sil.concat(r.film);
+    s.push(film.length ? `Ein Hitzeschutz, der einen dünnen Schutzfilm ums Haar legt. Den Film bilden vor allem ${icNamen(film.sort((a,b) => a[1]-b[1]))}.`
+      : "In der Liste erkenne ich keinen typischen Filmbildner, wie er für Hitzeschutz üblich ist. Ob das Produkt vor Hitze schützt, steht nur auf der Flasche.");
+    if(r.vol.length) s.push(`${icN(r.vol[0][0])} verfliegt nach dem Auftragen, darum fühlt es sich leicht an.`);
+    if(r.hold.length) s.push("Ein Polymer gibt leichten Halt.");
+    if(r.E >= 0.3){ const pn = icNamen(r.heavy.concat(r.light).sort((a,b) => a[1]-b[1]), 2) || "Öle"; s.push(`Dazu ${pn.includes(" und ") || pn === "Öle" ? "pflegen" : "pflegt"} ${pn}.`); }
+    if(r.hum.length) s.push(`${icNamen(r.hum, 2)} ${r.hum.length > 1 ? "geben" : "gibt"} Feuchtigkeit.`);
+    if(r.rep === "protein") s.push("Proteine stärken zusätzlich von außen.");
+  } else if(r.type === "oel"){
+    const oele = r.heavy.concat(r.light).sort((a,b) => a[1]-b[1]);
+    if(r.silbasis) s.push(`Ein Haaröl auf Silikonbasis, ein sogenanntes trockenes Öl. Es glättet, gibt Glanz und fühlt sich nicht fettig an.${oele.length ? ` Dazu kommen ${icNamen(oele)}.` : ""}`);
+    else if(oele.length) s.push(`Ein Haaröl mit ${icNamen(oele)}. ${r.heavy.some(([,i]) => i < 3) ? `${icN(r.heavy[0][0])} ist reichhaltig und eignet sich vor allem für trockene, dicke Längen.` : "Die Öle sind eher leicht und ziehen schnell ein."}`);
+    else s.push("Ein Pflegeöl, dessen Öle ich in der Liste nicht sicher erkenne.");
+    if(r.heavy.some(([x,i]) => i < 3 && /cocos|coconut/.test(x))) s.push("Kokosöl kann ins Haar eindringen und eignet sich darum gut für ein Pre-Wash vor der Haarwäsche.");
+    if(r.sil.length && !r.silbasis) s.push(`Ein Silikon (${icN(r.sil[0][0])}) sorgt zusätzlich für Glätte.`);
+  } else {
+    const c = icKopfCats(r);
+    if(r.peel.length) s.push(`Ein Peeling für die Kopfhaut: ${icNamen(r.peel, 2)} ${r.peel.length > 1 ? "lösen" : "löst"} Schüppchen und Rückstände.`);
+    else s.push("Eine Pflege für die Kopfhaut.");
+    if(r.dandr.length) s.push(`Mit ${icNamen(r.dandr, 2)} gegen Schuppen.`);
+    if(r.calm.length) s.push(`${icNamen(r.calm)} ${r.calm.length > 1 ? "beruhigen" : "beruhigt"} und ${r.calm.length > 1 ? "geben" : "gibt"} Feuchtigkeit.`);
+    if(r.oilctl.length) s.push(`${icNamen(r.oilctl, 2)} ${r.oilctl.length > 1 ? "können" : "kann"} bei schnell fettender Kopfhaut helfen.`);
+    if(r.grow.length) s.push(`${icNamen(r.grow)} ${icNamen(r.grow).includes(" und ") ? "werden" : "wird"} oft mit Haarwachstum beworben.`);
+    if(r.dryTop.length) s.push("Alkohol steht weit vorne: Das erfrischt, kann die Kopfhaut aber austrocknen.");
+    if(c.length === 1 && c[0] === "normal" && !r.calm.length) s.push("Auffällige Wirkstoffe erkenne ich nicht.");
+  }
+  return s.join(" ");
+}
 function icMachtEs(r){
+  if(r.type === "hitze" || r.type === "oel" || r.type === "kopfhaut") return icMachtEs2(r);
   const s = [];
   if(r.type === "shampoo"){
     const erst = r.tenside[0];
@@ -3804,7 +3884,10 @@ function icFakten(r){
   if(r.type === "shampoo") f.push(r.sulf.length ? "mit Sulfat" : "ohne Sulfate");
   if(r.dry.some(([,i]) => i < r.cut)) f.push("mit Alkohol");
   if(r.menth.length) f.push("mit Menthol");
-  if(r.type === "shampoo" && r.dandr.length) f.push("gegen Schuppen");
+  if(r.dandr.length) f.push("gegen Schuppen");
+  if(r.type === "hitze" && r.hold.length) f.push("mit Halt");
+  if(r.type === "oel") f.unshift(r.silbasis ? "auf Silikonbasis" : "auf Ölbasis");
+  if(r.type === "kopfhaut" && r.peel.length) f.push("Peeling");
   return f;
 }
 /* „Passt zu“: Stichworte + Inhalt (der Inhalt ist für Gäste verschwommen) */
@@ -3819,6 +3902,13 @@ function icPasstZu(r){
     z.push(["Kopfhaut", kopf.join(", ")]);
     z.push(["Haardicke", r.dicke[0] === 0 ? "alle, es beschwert nicht" : "normal bis dick, für feines Haar eher schwer"]);
     z.push(["Wäsche", r.staerke === "kraeftig" ? (r.chel.length ? "als Tiefenreinigung alle 2 bis 4 Wochen" : "eher nicht täglich") : "auch täglich geeignet"]);
+  } else if(r.type === "kopfhaut"){
+    const c = icKopfCats(r);
+    z.push(["Kopfhaut", c.map(x => IC_KOPF_WORT[x]).join(", ")]);
+    if(r.menth.length || r.dryTop.length || (r.parf.length && r.allerg.length >= 3)) z.push(["Vorsicht bei", "empfindlicher, gereizter Kopfhaut"]);
+  } else if(r.type === "oel"){
+    z.push(["Haardicke", IC_DICKE_TXT(r.dicke)]);
+    z.push(["Wofür", r.silbasis ? "Glanz und gegen Frizz in Längen und Spitzen" : r.heavy.some(([,i]) => i < 3) ? "trockene Längen, Pre-Wash vor der Wäsche" : "Spitzen pflegen, Glanz"]);
   } else {
     z.push(["Haardicke", IC_DICKE_TXT(r.dicke)]);
     const zu = [];
@@ -3827,6 +3917,7 @@ function icPasstZu(r){
     if(r.tags.includes("glaettend")) zu.push("glanzlos");
     if(r.rep === "protein") zu.push("strapaziert, brüchig");
     if(r.rep === "bond") zu.push("blondiert, chemisch behandelt");
+    if(r.type === "hitze" && r.hold.length) z.push(["Styling", "gibt leichten Halt, gut vor Föhn und Rundbürste"]);
     z.push(["Haarzustand", r.H < 0.18 && r.E < 0.12 && r.G < 0.1 ? "fein, platt, braucht wenig Pflege" : (zu.join(", ") || "normal")]);
   }
   return z;
@@ -3842,11 +3933,17 @@ function icGutZuWissen(r){
   }
   if(r.dry.length){ const [x,i] = r.dry[0]; const hum = r.L.slice(0,i).filter(y => IC.HUM.test(y)).length;
     g.push(i < 4 && !hum ? `Alkohol steht weit vorne (${icStelle(r.dry[0])}). Das kann bei trockenem Haar austrocknen.` : `Alkohol steht an ${i+1}. Stelle${hum ? ", hinter Feuchtigkeitsspendern" : ""}. In der Menge trocknet er nicht aus, er sorgt eher dafür, dass sich das Produkt leicht anfühlt.`); }
-  if(r.fat.length && r.type !== "shampoo") g.push(`${icN(r.fat[0][0])} ist ein Fettalkohol. Der trocknet nicht aus, sondern pflegt.`);
+  if(r.type === "hitze"){ g.push("Bis wie viel Grad es schützt, kann man an den Inhaltsstoffen nicht ablesen. Das steht auf der Flasche."); g.push("Vor Glätteisen oder Lockenstab das Haar immer ganz trocknen lassen."); }
+  if(r.type === "oel"){ g.push("Nur wenige Tropfen in Längen und Spitzen, nicht an den Ansatz."); if(r.silbasis) g.push("Die Silikone lassen sich mit einem normalen Shampoo auswaschen."); if(r.dicke[0] >= 2) g.push("Für feines Haar eher als Pre-Wash vor der Wäsche als zum Stylen."); }
+  if(r.type === "kopfhaut"){
+    if(r.grow.length) g.push(`Ob ${icNamen(r.grow)} auf der Kopfhaut wirklich das Haarwachstum ${icNamen(r.grow).includes(" und ") ? "fördern" : "fördert"}, ist nicht sicher belegt. Bei auffälligem Haarausfall lieber ärztlich abklären lassen.`);
+    if(r.peel.length) g.push("Peelings höchstens ein- bis zweimal pro Woche. Ist die Kopfhaut gereizt, eine Pause machen.");
+  }
+  if(r.fat.length && r.type !== "shampoo" && r.type !== "kopfhaut") g.push(`${icN(r.fat[0][0])} ist ein Fettalkohol. Der trocknet nicht aus, sondern pflegt.`);
   if(r.spuren.length) g.push(`${r.spuren.slice(0,3).join(", ").replace(/, ([^,]*)$/, " und $1")} ${r.spuren.length > 1 ? "stehen" : "steht"} hinter dem Parfum beziehungsweise dem Konservierungsstoff, also nur in Spuren.`);
   if(r.parf.length && r.allerg.length >= 3) g.push(`Enthält Parfum und ${r.allerg.length} Duftstoffe, die Allergien auslösen können. Bei empfindlicher Kopfhaut lieber vorsichtig sein.`);
   if(r.menth.length) g.push("Menthol kühlt, kann eine empfindliche Kopfhaut aber reizen.");
-  if(r.type !== "shampoo" && r.dicke[0] >= 2) g.push("Für feines Haar eher schwer. Nur in Längen und Spitzen geben.");
+  if(["maske","conditioner","leavein","hitze"].includes(r.type) && r.dicke[0] >= 2) g.push("Für feines Haar eher schwer. Nur in Längen und Spitzen geben.");
   return g;
 }
 /* „Für dein Haar“ (Abo): Abgleich mit Meine Haare */
@@ -3857,16 +3954,23 @@ function icFuerDich(r){
     const k = me.kopf;
     if(k === "schuppentrocken") s.push(r.dandr.length ? "Für deine schuppige, trockene Kopfhaut ist das ein Shampoo für Schritt 2 in deinem Haarplan, wenn die Flocken mit einem milden Shampoo nicht weggehen." : r.staerke === "mild" ? "Für deine schuppige, trockene Kopfhaut ein guter Start, Schritt 1 in deinem Haarplan. Nutze es zwei bis drei Wochen. Werden die Flocken nicht weniger, wechsle zu einem milden Shampoo mit Piroctone." : "Für deine schuppige, trockene Kopfhaut reinigt es eher zu stark. Starte lieber mit einem milden Shampoo.");
     else if(k === "fettend") s.push(r.staerke === "mild" ? "Für deinen schnell fettenden Ansatz eher zu mild. Wenn sich die Kopfhaut nach der Wäsche nicht richtig sauber anfühlt, nimm es im Wechsel mit einem klärenden Shampoo aus deinem Haarplan." : "Passt gut zu deiner schnell fettenden Kopfhaut, es reinigt gründlich genug.");
-    else if(k === "sensibel" || k === "juckend") s.push(r.parfumfrei && r.staerke === "mild" && !r.menth.length ? `Passt gut zu deiner ${KOPF_ADJ[k]} Kopfhaut: mild und ohne Duftstoffe.` : `Für deine ${KOPF_ADJ[k]} Kopfhaut nicht ideal${r.parf.length ? ", es enthält Parfum" : ""}${r.menth.length ? " und Menthol" : ""}${r.staerke === "kraeftig" ? " und reinigt kräftig" : ""}.`);
+    else if(k === "sensibel" || k === "juckend") s.push(r.parfumfrei && r.staerke === "mild" && !r.menth.length ? `Passt gut zu deiner ${KOPF_ADJ[k].replace(/e(?=,|$)/g, "en")} Kopfhaut: mild und ohne Duftstoffe.` : `Für deine ${KOPF_ADJ[k]} Kopfhaut nicht ideal${r.parf.length ? ", es enthält Parfum" : ""}${r.menth.length ? " und Menthol" : ""}${r.staerke === "kraeftig" ? " und reinigt kräftig" : ""}.`);
     else if(k === "trocken") s.push(r.staerke === "kraeftig" ? "Für deine trockene Kopfhaut reinigt es zu stark." : "Passt zu deiner trockenen Kopfhaut, es reinigt sanft und gibt Feuchtigkeit.");
     else if(k === "schuppen") s.push(r.dandr.length ? "Passt zu deiner schuppigen Kopfhaut, es enthält einen Wirkstoff gegen Schuppen." : "Gegen deine Schuppen fehlt ein Wirkstoff wie Piroctone oder Climbazol.");
     else s.push("Passt zu deiner normalen Kopfhaut.");
   }
-  if(r.type !== "shampoo" && me.dicke){
+  if(r.type === "kopfhaut" && me.kopf){
+    const k = me.kopf, c = icKopfCats(r), ziel = KOPF2PFLEGE[k];
+    if((k === "sensibel" || k === "juckend") && (r.menth.length || r.dryTop.length || !r.parfumfrei)) s.push(`Für deine ${KOPF_ADJ[k]} Kopfhaut nicht ideal${r.menth.length ? ", es enthält Menthol" : r.dryTop.length ? ", es enthält viel Alkohol" : ", es enthält Duftstoffe"}.`);
+    else if(c.includes(ziel)) s.push(`Passt zu deiner ${KOPF_ADJ[k].replace(/e(?=,|$)/g, "en")} Kopfhaut.`);
+    else if(c.includes("peeling")) s.push(`Als Peeling ab und zu gut, für deine ${KOPF_ADJ[k]} Kopfhaut aber keine tägliche Pflege.`);
+    else s.push(`Für deine ${KOPF_ADJ[k]} Kopfhaut nicht die erste Wahl. Passende Kopfhautpflege findest du in deinem Haarplan.`);
+  }
+  if(r.type !== "shampoo" && r.type !== "kopfhaut" && me.dicke){
     const d = D_ORDER.indexOf(me.dicke);
     s.push(d < r.dicke[0] ? `Für dein ${DICKE_ADJ[me.dicke]} Haar eher zu schwer. Wenn du es nutzt, dann nur wenig in die Spitzen.` : d > r.dicke[1] ? `Für dein ${DICKE_ADJ[me.dicke]} Haar eher zu leicht, es wird kaum geschmeidig.` : `Passt von der Haardicke gut zu deinem ${DICKE_ADJ[me.dicke]} Haar.`);
-    if(me.kaputt && !r.rep) s.push("Für dein strapaziertes Haar fehlen Repair-Wirkstoffe. Kombinier es mit einem Produkt mit Proteinen aus deinem Haarplan.");
-    if(me.kaputt === "bond" && r.rep === "protein") s.push("Die Proteine stärken von außen. Einen Bond-Wirkstoff, wie er für blondiertes Haar sinnvoll ist, enthält es nicht.");
+    if(REC_TYPES.includes(r.type) && me.kaputt && !r.rep) s.push("Für dein strapaziertes Haar fehlen Repair-Wirkstoffe. Kombinier es mit einem Produkt mit Proteinen aus deinem Haarplan.");
+    if(REC_TYPES.includes(r.type) && me.kaputt === "bond" && r.rep === "protein") s.push("Die Proteine stärken von außen. Einen Bond-Wirkstoff, wie er für blondiertes Haar sinnvoll ist, enthält es nicht.");
   }
   if(!s.length) s.push("Für diese Produktart fehlt in „Meine Haare“ noch eine Angabe.");
   return s.join(" ");
@@ -3875,19 +3979,19 @@ function icAlternativen(r){
   if(!meSet()) return [];
   const items = DATA[r.type].items.filter(p => p !== r.match);
   let list = items.filter(fitsMe);
-  if(r.type !== "shampoo") list = list.filter(p => (p.wt||[]).some(t => r.tags.includes(t)));
+  if(REC_TYPES.includes(r.type)) list = list.filter(p => (p.wt||[]).some(t => r.tags.includes(t)));
   if(r.type === "shampoo" && me.kopf === "schuppentrocken"){ const st = r.dandr.length ? 2 : 1; list = list.filter(p => schuppStufe(p) === st); }
   return list.sort(sorter(r.type, "alle")).slice(0, 3);
 }
 function renderCheck(){
   const r = icState.res, abo = istAbo();
-  const typeBtns = IC_TYPEN.map(([id,l]) => `<button type="button" data-ictype="${id}" aria-pressed="${icState.type===id}">${l}</button>`).join("");
+  const typeBtns = IC_TYPEN.map(([id,l]) => `<button type="button" class="chip" data-ictype="${id}" aria-pressed="${icState.type===id}">${l}</button>`).join("");
   let html = `<div class="guide icpage"><div class="ghero ichero"><div class="ghead"><div><p class="ickick">Für alle kostenlos</p><h2>Inhaltsstoff-Check</h2><div class="sub">Die ganze Liste lesen, nicht einzelne Stoffe</div></div></div>
     <div class="gintro"><p>Andere Apps bewerten jeden Inhaltsstoff einzeln. Ich schaue auf die ganze Liste: Was steht vorne, was nur in Spuren, und was gleicht sich gegenseitig aus. Ein Sulfat neben milden Tensiden und viel Glycerin ist zum Beispiel etwas ganz anderes als ein Sulfat allein.</p></div></div>
     <ol class="icsteps"><li><span>1</span><p><b>Foto machen</b>Fotografiere die Rückseite mit der Inhaltsstoffliste.</p></li>
       <li><span>2</span><p><b>Text kopieren</b>iPhone: Im Foto lange auf den Text tippen. Android: Foto mit Google Lens öffnen.</p></li>
       <li><span>3</span><p><b>Hier einfügen</b>Produktart wählen und prüfen lassen.</p></li></ol>
-    <form class="icform" id="icForm"><div class="icrow"><span class="iclab">Produktart</span><div class="switch ictypes" role="group" aria-label="Produktart">${typeBtns}</div></div>
+    <form class="icform" id="icForm"><div class="icrow"><span class="iclab">Produktart</span><div class="icchips" role="group" aria-label="Produktart">${typeBtns}</div></div>
       <label class="iclab" for="icText">Inhaltsstoffe</label><textarea id="icText" rows="5" placeholder="Zum Beispiel: Aqua, Cetearyl Alcohol, Glycerin, …">${esc(icState.text)}</textarea>
       <label class="iclab" for="icName">Produktname <i>(freiwillig, dann sehe ich nach, ob es in meiner Liste steht)</i></label><input id="icName" type="text" value="${esc(icState.name)}" placeholder="Zum Beispiel: Balea med Ultra Sensitive Shampoo">
       <div class="icbtns"><button type="submit" class="btn dark">Inhaltsstoffe prüfen <span aria-hidden="true">→</span></button><button type="button" class="btn" id="icBsp">Beispiel ausprobieren</button></div></form>`;
@@ -3896,7 +4000,7 @@ function renderCheck(){
     const name = icState.name.trim();
     const sperr = inhalt => abo ? inhalt : `<div class="iczu">${inhalt}</div>`;
     const kopf = r.match
-      ? `<div class="icliste ok"><b>Steht in meiner Liste:</b> ${esc(r.match.brand)} ${esc(r.match.name)}. ${abo ? "Meine Einschätzung siehst du unten." : "Meine persönliche Einschätzung dazu siehst du mit Abo."}</div>`
+      ? `<div class="icliste ok ictreffer">${r.match.img ? `<img src="${r.match.img}" alt="">` : ""}<div><span class="ictk">Steht in meiner Liste</span><span class="ictb">${esc(r.match.brand)}</span><span class="ictn">${esc(r.match.name)}</span><span class="icth">${abo ? "Meine Einschätzung siehst du unten." : `${ZSCHLOSS} Meine persönliche Einschätzung dazu siehst du mit Abo.`}</span></div></div>`
       : `<div class="icliste"><b>Noch nicht in meiner Liste.</b> Das heißt nicht, dass das Produkt schlecht ist. Ich habe es nur noch nicht bewertet. <button type="button" class="icvor" id="icVor">Produkt vorschlagen</button></div>`;
     const passt = icPasstZu(r), wissen = icGutZuWissen(r);
     html += `<article class="icres" id="icRes"><header><p class="ickick">Ergebnis</p><h3>${esc(name || IC_TYPEN.find(t => t[0]===r.type)[1])}</h3></header>${kopf}
