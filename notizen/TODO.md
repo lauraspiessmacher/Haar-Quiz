@@ -19,9 +19,16 @@ Wenn Laura fragt „Haben wir noch To-Dos?“, diese Liste durchgehen. Erledigte
 - [ ] Kinderprodukte.
 - [ ] Shampoo-Rangliste noch einmal mit Laura durchgehen.
 
+## Rechtlich abklären (vor dem Livegang, Laura 06.11.)
+Am besten gesammelt mit einer Anwältin / einem Anwalt für Medien- und Wettbewerbsrecht durchgehen.
+- [ ] **Gesundheitskapitel im Wissen:** Wie weit dürfen wir erklären, ohne dass es als Beratung oder Werbung zählt (Heilmittelwerbegesetz)? Betrifft: Haarzyklus, Graue Haare, Kopfhautgesundheit, Haarausfall, Hormone und Haare, DHT und DHT-Blocker, Minoxidil, Warum tun die Haarwurzeln weh. Dazu prüfen lassen: der Hinweis „Wichtig vorab: Ich bin keine Ärztin …“ oben in diesen Kapiteln und der Hinweis unten.
+- [ ] **Minoxidil besonders:** Es ist ein Arzneimittel. Das Kapitel bleibt erst mal drin (Laura 06.11.). Keine Marken, keine Links, keine Empfehlung, Nebenwirkungen nur kurz mit Verweis auf Packungsbeilage, Arzt und Apotheke. Darf das so bleiben? Gleiche Frage für Ketoconazol im DHT-Kapitel.
+- [ ] **Produktbilder:** Die Bilder stammen aus verschiedenen Shops und von Herstellerseiten, vor allem dm (products.dm-static.com, rund 1.450 Treffer), außerdem Hagel, Lookfantastic und Marken-Shops. Dürfen wir sie benutzen (Urheberrecht, Nutzungsrechte)? Mögliche Wege: Bilder aus Partnerprogrammen (Affiliate-Programme erlauben das oft für verlinkte Produkte), Pressebilder der Marken anfragen, eigene Fotos.
+- [ ] **Vorschlag von Claude, gleich mitfragen:** Inhaltsstofflisten, die wir aus Shops übernommen haben (dürfen wir die als Sammlung zeigen?); ehrliche Einschätzungen zu Marken und Produkten (Meinung vs. Tatsachenbehauptung); Kennzeichnung von Werbe- und Partnerlinks; Rechtstexte (Impressum, Datenschutz, AGB, Widerruf, siehe FRAGEN-TECHNIK-UND-PREIS.md).
+
 ## Vor dem Livegang
 - [ ] Frage an Laura: Hinweise „Fast die gleiche Basis wie …“ behalten oder für live rausnehmen?
-- [ ] Link zu Folge 7 fehlt noch.
+- [x] Link zu Folge 7 (05.11. eingebaut, dazu Folge 8 und 9).
 - [ ] Endgültige Übertragung in das offizielle Artifact.
 - [ ] Spliss- & Bruch-Check: Laura testet Fragen/Ergebnistexte (14.10.)
 - [ ] LL-Methode-Seite: Leave-in-Auswahl mit Laura Schritt für Schritt abstimmen (ll-auswahl.json, Entwurf-Hinweis danach entfernen: "entwurf": false)
