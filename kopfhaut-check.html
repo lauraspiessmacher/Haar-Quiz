@@ -104,6 +104,7 @@ body{background:#3A3730 !important}
   font:500 12px/1 "Instrument Sans",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F3ECE2;
   text-decoration:none;border:1px solid rgba(243,236,226,.42);border-radius:999px;padding:9px 14px}
 .lh-back:hover{background:#45413A}
+.reflink{color:#F3ECE2;text-underline-offset:3px}
 .lh-legal{max-width:560px;margin:0 auto;padding:0 22px 36px;font-size:13px;color:#C9BCAE}
 .lh-legal a{color:#C9BCAE;text-underline-offset:3px}
 .soon-note{font-family:var(--serif);font-size:22px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:22px;margin:14px 0 22px}
@@ -169,18 +170,18 @@ const Q = [
 
 const R = {
  N:{name:"Normale Kopfhaut",
-  intro:"Deine Kopfhaut bildet ausgeglichen Talg und macht keine Probleme.",
+  intro:"Deine Kopfhaut bildet ausgeglichen Talg, also ihr natürliches Fett, und macht keine Probleme.",
   yes:"<p>Du hast beim Shampoo die größte Auswahl. Hier darfst du nach deinem Wunschergebnis gehen oder nach dem, was deine Haare gerade brauchen:</p><ul><li><strong>Als Basis</strong> passt ein Feuchtigkeitsshampoo oder eins, das mehr Glanz verspricht.</li><li><strong>Für mehr Grundvolumen</strong> nimmst du ein Volumenshampoo. Das passt besonders gut zu feinen Haaren, die schnell platt fallen.</li><li><strong>Ein Repair-Shampoo</strong> nimmst du nur, wenn deine Haare wirklich beansprucht sind, zum Beispiel durch Blondieren, häufiges Färben oder viel Hitze. Viel reparieren kann es allerdings nicht, weil es schnell wieder ausgespült wird. Die eigentliche Pflege kommt danach über Conditioner, Maske und Leave-in.</li></ul>",
   deep:"Ein- bis zweimal im Monat, je nachdem, wie viel Styling du nutzt.",
   no:"Ein Tiefenreinigungs- oder Anti-Schuppen-Shampoo als tägliches Shampoo, obwohl du keine Beschwerden hast."},
  F:{name:"Fettige Kopfhaut",
-  intro:"Deine Talgdrüsen arbeiten fleißig, der Ansatz wirkt schon nach einem Tag fettig. Ein Shampoo kann das nicht abstellen, es entfernt den Talg nur gründlich.",
-  yes:"Ein Shampoo mit kräftigerer Reinigung, auf der Flasche steht oft „für fettiges Haar“, „Frische“, „Detox“ oder „Volumen“. Massiere es nur auf der Kopfhaut ein und wasch bei Bedarf zweimal. Trockene Längen gleichst du mit Conditioner oder Maske aus.",
+  intro:"Deine Talgdrüsen, die das natürliche Fett der Kopfhaut bilden, arbeiten fleißig, der Ansatz wirkt schon nach einem Tag fettig. Ein Shampoo kann das nicht abstellen, es entfernt den Talg nur gründlich.",
+  yes:"Ein Shampoo mit kräftigerer Reinigung, auf der Flasche steht oft „für fettiges Haar“, „Frische“ oder „Volumen“. Massiere es nur auf der Kopfhaut ein und wasch bei Bedarf zweimal. Trockene Längen gleichst du mit Conditioner oder Maske aus.",
   deep:"Ein- bis zweimal im Monat, bei viel Styling oder Trockenshampoo auch einmal pro Woche.",
   no:"Sehr reichhaltige Shampoos, Conditioner oder Maske direkt am Ansatz und Öl auf der Kopfhaut."},
  T:{name:"Trockene Kopfhaut",
-  intro:"Deine Kopfhaut bildet wenig Talg oder ihre Schutzbarriere ist gerade geschwächt. Sie spannt, juckt manchmal und kann fein schuppen.",
-  yes:"Ein Shampoo mit sanfter bis normaler Reinigung, auf der Flasche steht oft „Sensitiv“, „mild“, „Balance“ oder „Feuchtigkeit“. Gut sind Glycerin, Panthenol oder Urea. Wasch lauwarm statt heiß.",
+  intro:"Deine Kopfhaut bildet wenig Talg, also wenig natürliches Fett, oder ihre Schutzbarriere ist gerade geschwächt. Sie spannt, juckt manchmal und kann fein schuppen.",
+  yes:"Ein Shampoo mit sanfter bis normaler Reinigung, auf der Flasche steht oft „Sensitiv“, „mild“, „Balance“ oder „Feuchtigkeit“. Gut sind Glycerin, Panthenol oder Urea, die findest du in der Liste der Inhaltsstoffe auf der Rückseite. Wasch lauwarm statt heiß.",
   deep:"Einmal im Monat reicht meistens.",
   no:"Ein Tiefenreinigungs-Shampoo als Alltagsshampoo, sehr heißes Wasser und Trockenshampoo an vielen Tagen hintereinander."},
  S:{name:"Sensible Kopfhaut",
@@ -190,12 +191,12 @@ const R = {
   no:"Stark parfümierte Shampoos und kühlende Zusätze wie Menthol, Pfefferminz- oder Teebaumöl."},
  ST:{name:"Schuppige Kopfhaut, trocken",
   intro:"Du hast feine, weiße, rieselnde Flocken. Das kann eine trockene Kopfhaut sein oder eine leichte Form echter Schuppen, beides sieht sich sehr ähnlich.",
-  yes:"Zuerst zwei bis drei Wochen ein Sensitiv- oder Feuchtigkeitsshampoo mit Glycerin, Panthenol oder Urea. Wird es nicht besser, wechselst du zu einem milden Anti-Schuppen-Shampoo mit Piroctone Olamine oder Climbazol.",
+  yes:"Zuerst zwei bis drei Wochen ein Sensitiv- oder Feuchtigkeitsshampoo mit Glycerin, Panthenol oder Urea. Wird es nicht besser, wechselst du zu einem milden Anti-Schuppen-Shampoo mit Piroctone Olamine oder Climbazol. Diese Wirkstoffe stehen in der Liste der Inhaltsstoffe auf der Rückseite.",
   deep:"Einmal im Monat. Manchmal sind es auch Ablagerungen, die man leicht mit Schuppen verwechselt.",
   no:"Kratzen, sehr heiß waschen und ein Tiefenreinigungs-Shampoo als Alltagsshampoo."},
  SF:{name:"Schuppige Kopfhaut, fettig",
-  intro:"Du hast größere, gelbliche Schuppen, die an der Kopfhaut haften, oft mit Juckreiz. Meist spielt ein Hefepilz eine Rolle, der auf jeder Kopfhaut lebt und sich von Talg ernährt.",
-  yes:"Ein Anti-Schuppen-Shampoo mit Piroctone Olamine, Climbazol oder Selendisulfid. Lass es so lange einwirken, wie es auf der Packung steht, und nutze es regelmäßig, nicht nur einmal.",
+  intro:"Du hast größere, gelbliche Schuppen, die an der Kopfhaut haften, oft mit Juckreiz. Meist spielt ein Hefepilz eine Rolle, der auf jeder Kopfhaut lebt und sich von Talg ernährt, dem natürlichen Fett der Kopfhaut.",
+  yes:"Ein Anti-Schuppen-Shampoo mit Piroctone Olamine, Climbazol oder Selendisulfid. Diese Wirkstoffe stehen in der Liste der Inhaltsstoffe auf der Rückseite. Lass es so lange einwirken, wie es auf der Packung steht, und nutze es regelmäßig, nicht nur einmal.",
   deep:"Ein- bis zweimal im Monat als Ergänzung. Dein Hauptshampoo bleibt das Anti-Schuppen-Shampoo.",
   no:"Öl auf die Kopfhaut geben, denn der Pilz mag Fett. In den Längen ist Öl kein Problem. Wird es nach etwa vier Wochen nicht besser, lass es ärztlich anschauen."}
 };
@@ -304,7 +305,7 @@ function result(){
     <p class="intro">${r.intro}</p>
     ${ftTie ? `<div class="box"><h3>Fettig und trotzdem gespannt?</h3><p>Deine Kopfhaut fettet und spannt gleichzeitig. Das passiert oft, wenn sie zu kräftig gereinigt wird. Probier deshalb zuerst ein Shampoo mit sanfter bis normaler Reinigung, bevor du zu einem kräftigeren greifst.</p></div>` : ""}
     <div class="block"><h3><span class="mark">✓</span>Darauf achtest du</h3>${r.yes.startsWith("<") ? r.yes : `<p>${r.yes}</p>`}</div>
-    <div class="block"><h3><span class="mark">↻</span>Tiefenreinigung</h3><p>${r.deep} Danach immer Conditioner oder Maske, weil sich die Längen rauer anfühlen können.</p></div>
+    <div class="block"><h3><span class="mark">↻</span>Tiefenreinigung</h3><p>Ein Tiefenreinigungsshampoo, oft „Clarifying“ genannt, entfernt Rückstände von Styling, Trockenshampoo und Pflege, die ein normales Shampoo nicht ganz schafft. ${r.deep} Danach immer Conditioner oder Maske, weil sich die Längen rauer anfühlen können.</p><p><a class="reflink" href="https://www.instagram.com/reel/Dd3VifTtQlE/" rel="noopener">Mehr dazu in meiner Folge „Tiefenreinigung für Haare &amp; Kopfhaut“ →</a></p></div>
     <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${r.no}</p></div>
     ${extraSens ? `<div class="box"><h3>Zusätzlich empfindlich</h3><p>Deine Kopfhaut zeigt auch Zeichen von Empfindlichkeit. Achte zusätzlich auf parfumarme Produkte und teste Neues erst an einer kleinen Stelle.</p></div>` : ""}
     ${residue ? `<div class="box"><h3>Vielleicht gar keine Schuppen</h3><p>Wahrscheinlich sind es Rückstände von Trockenshampoo oder Styling. Nach einer Tiefenreinigung siehst du, wie deine Kopfhaut wirklich ist.</p></div>` : ""}

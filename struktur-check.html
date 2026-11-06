@@ -115,6 +115,9 @@ body{background:#3A3730 !important}
   font:500 12px/1 "Instrument Sans",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F3ECE2;
   text-decoration:none;border:1px solid rgba(243,236,226,.42);border-radius:999px;padding:9px 14px}
 .lh-back:hover{background:#45413A}
+.code{display:inline-flex !important;align-items:center;gap:4px}
+.code .mini{width:12px;height:22px;flex:0 0 12px}
+.codehelp{font-size:13.5px;color:#C9BCAE;margin:-14px 0 22px;line-height:1.45}
 .llbox{background:#F3ECE2;color:#3A3730;border-radius:18px;padding:18px 18px 8px;margin:6px 0 20px}
 .llbox h3{font-size:23px;margin:0 0 8px;color:#3A3730}
 .llbox p{margin:0 0 10px;font-size:15.5px;color:#3A3730}
@@ -171,7 +174,7 @@ const Q0 = {t:"Kennst du die natürliche Struktur deiner Haare?", a:[
   ["Keine Ahnung","air"]]};
 
 const QS = {
- q1:{t:"Wie sehen deine Haare aus, wenn sie ohne Produkt getrocknet sind?", h:"Denk an deinen Strukturtest oder an einen Tag, an dem du nichts reingegeben hast.", a:[
+ q1:{t:"Wie sehen deine Haare aus, wenn sie ohne Produkt getrocknet sind?", h:"Denk an deinen Strukturtest oder an einen Tag, an dem du nichts reingegeben hast. Frizz sind abstehende, krause Härchen.", a:[
   ["Komplett glatt",{g:"G"},"1A"],
   ["Glatt, aber mit leichtem Schwung oder Frizz",{g:"G",tex:2},"1C"],
   ["Sanfte Wellen, vor allem in den Längen",{g:"W"},"2A"],
@@ -213,10 +216,10 @@ const QS = {
   ["Sie lockern sich und werden welliger",{s:0}],["Sie bekommen mehr Frizz",{s:1}],["Sie ziehen sich zusammen und werden voller",{s:2}]]},
 
  e1:{t:"Wie sieht deine Struktur aus der Nähe aus?", a:[
-  ["Kleine, klar erkennbare Spiralen",{s:0},"4A"],["Sehr enge Spiralen, die eher kantig als rund wirken",{s:1},"4B"],["Ein sehr enges Muster, das man kaum erkennt",{s:2},"4C"]]},
+  ["Kleine, klar erkennbare Spiralen",{s:0},"4A"],["Sehr enge Spiralen, die eher zickzackförmig als rund wirken",{s:1},"4B"],["Eine sehr enge Struktur, die man kaum erkennt",{s:2},"4C"]]},
  e2:{t:"Wie stark ziehen sich deine Haare beim Trocknen zusammen?", a:[
   ["Deutlich",{s:0}],["Sehr stark",{s:1}],["Extrem, trocken wirken sie weniger als halb so lang",{s:2}]]},
- e3:{t:"Wie definiert ist deine Struktur ohne Produkt?", a:[
+ e3:{t:"Wie klar sind deine Locken ohne Produkt zu erkennen?", a:[
   ["Gut definiert, die Spiralen sind klar zu sehen",{s:0}],["Teilweise definiert",{s:1}],["Kaum definiert, eher Volumen als einzelne Locken",{s:2}]]},
  e4:{t:"Wie fühlen sich deine Haare an?", a:[
   ["Weich, die Locken lassen sich gut auseinanderziehen",{s:0}],["Fester, mit spürbaren Biegungen",{s:1}],["Sehr dicht und kompakt",{s:2}]]},
@@ -232,7 +235,7 @@ const FU = {G:["g1","g2","g3","g4","g5"], W:["w1","w2","w3","w4","w5"], L:["l1",
 const SUB = {
  "1A":"Ganz glatt und glänzend, ohne Schwung.",
  "1B":"Glatt mit etwas Griff und leichtem Schwung in den Spitzen.",
- "1C":"Glatt, aber mit deutlicher Textur, leichtem Schwung und Neigung zu Frizz.",
+ "1C":"Glatt, aber mit deutlich mehr Griff, leichtem Schwung und Neigung zu Frizz.",
  "2A":"Sanfte, weite Wellen, meist erst in den Längen.",
  "2B":"Deutliche S-Wellen ab ungefähr Ohrhöhe.",
  "2C":"Ausgeprägte S-Wellen fast ab dem Ansatz, einzelne Strähnen drehen sich zu Locken.",
@@ -240,36 +243,36 @@ const SUB = {
  "3B":"Federnde Locken, ungefähr so breit wie ein Textmarker.",
  "3C":"Enge Locken, ungefähr so breit wie ein Bleistift, mit viel Volumen.",
  "4A":"Kleine, klar erkennbare Spiralen.",
- "4B":"Sehr enge Spiralen, die eher kantig als rund wirken.",
- "4C":"Sehr enges Muster mit wenig Definition, das sich stark zusammenzieht."
+ "4B":"Sehr enge Spiralen, die eher zickzackförmig als rund wirken.",
+ "4C":"Sehr enge Struktur, die kaum einzelne Locken bildet und sich stark zusammenzieht."
 };
 const HEAT = " Vor jeder Hitze kommen Leave-in und Hitzeschutz in die Haare.";
-const SIL = "Silikone sind auch für Locken okay. Sie mindern Frizz und schützen vor Luftfeuchtigkeit. Manche lagern sich aber an und machen Locken mit der Zeit schwerer, plane deshalb regelmäßig eine Tiefenreinigung ein.";
+const SIL = "Silikone sind auch für Locken okay. Sie mindern Frizz, also abstehende Härchen, und schützen vor Luftfeuchtigkeit. Manche lagern sich aber an und machen Locken mit der Zeit schwerer, plane deshalb regelmäßig eine Tiefenreinigung ein.";
 const R = {
  G1:{ll:"Gib es in Längen und Spitzen, nicht an den Ansatz, damit nichts strähnig wird.", name:"Glatt und seidig",
   intro:"Deine Haare fallen glatt und glänzen von Natur aus, weil ihre Oberfläche sehr gleichmäßig ist. Der Talg wandert leicht in die Längen, deshalb wirken sie oft schneller strähnig.",
-  care:"Pflege gehört in Längen und Spitzen, nicht an den Ansatz. Leichte Texturen passen meist besser als schwere Öle. Dein Leave-in kommt ins noch feuchte Haar.",
-  style:"Am besten hält der Lockenstab, lass die Locken vor dem Lösen auskühlen. Blowouts fallen bei dir oft schnell wieder. Das liegt an der Struktur und nicht an dir."+HEAT,
+  care:"Pflege gehört in Längen und Spitzen, nicht an den Ansatz. Leichte Produkte passen meist besser als schwere Öle. Dein Leave-in kommt ins noch feuchte Haar.",
+  style:"Am besten hält der Lockenstab, lass die Locken vor dem Lösen auskühlen. Föhnfrisuren mit Rundbürste oder Multistyler fallen bei dir oft schnell wieder. Das liegt an der Struktur und nicht an dir."+HEAT,
   no:"Öl oder reichhaltige Pflege am Ansatz und zu viel Produkt auf einmal, sonst fällt dein Haar schnell platt."},
  GT:{ll:"Es glättet die Oberfläche und mindert Frizz im Alltag.", name:"Glatt mit Textur",
-  intro:"Deine Haare sind glatt, haben aber mehr Griff, wirken etwas bauschiger und neigen zu Frizz. Weil ihre Oberfläche unruhiger ist, wirken sie schneller glanzlos.",
+  intro:"Deine Haare sind glatt, haben aber mehr Griff, wirken etwas bauschiger und neigen zu Frizz, also abstehenden, krausen Härchen. Weil ihre Oberfläche unruhiger ist, wirken sie schneller glanzlos.",
   care:"Glättende Pflege ist dein bester Freund. Gib nach jeder Wäsche ein Leave-in ins noch feuchte Haar. Produkte mit Silikonen bringen Glanz, mindern Frizz und schützen vor Luftfeuchtigkeit.",
-  style:"Blowouts und Locken vom Lockenstab halten bei dir meistens gut, weil dein Haar mehr Griff hat."+HEAT,
+  style:"Föhnfrisuren mit Rundbürste oder Multistyler und Locken vom Lockenstab halten bei dir meistens gut, weil dein Haar mehr Griff hat."+HEAT,
   no:"Mit einem normalen Handtuch rubbeln, nimm lieber ein Mikrofaserhandtuch. Und für einen glatten Look nicht ohne Pflege an der Luft trocknen lassen, das fördert Frizz."},
  W:{ll:"Nimm eher Sprays oder leichte Seren und knete sie in die Längen, statt durchzubürsten, damit die Wellen nicht platt werden.", name:"Wellig",
   intro:"Deine Haare bilden S-förmige Wellen. Wellen sind leicht und lassen sich schnell beschweren oder durch Bürsten auflösen.",
   care:"Entwirre in der Dusche, solange der Conditioner noch drin ist. Danach drückst du die Haare mit einem Mikrofaserhandtuch aus, statt zu rubbeln, und gibst dein Leave-in ins noch feuchte Haar. Leichte Leave-ins, Schaum oder Wellen-Sprays geben Halt, ohne die Wellen platt zu drücken.",
-  style:"Für betonte Wellen föhnst du mit dem Diffusor oder lässt sie lufttrocknen. Glatt werden Wellen nur mit Hitze, das schafft kein Produkt allein."+HEAT,
+  style:"Für betonte Wellen föhnst du mit dem Diffusor-Aufsatz am Föhn oder lässt sie lufttrocknen. Glatt werden Wellen nur mit Hitze, das schafft kein Produkt allein."+HEAT,
   no:"Trocken bürsten, schwere Produkte am Ansatz und die Haare nach dem Waschen rubbeln."},
  L:{ll:"Auf trockenem Haar ist das gleichzeitig dein Locken-Refresh. Knete oder sprüh das Leave-in in die Locken, statt sie durchzukämmen.", name:"Lockig",
   intro:"Deine Haare drehen sich zu Locken. Der Talg kommt über die vielen Biegungen schlechter in die Spitzen, deshalb sind lockige Längen oft trockener und empfindlicher gegenüber Reibung.",
-  care:"Leave-in gehört bei dir zur Basis. Entwirre in der Dusche mit Conditioner, von den Spitzen nach oben. Danach ausdrücken statt rubbeln und das Leave-in ins noch feuchte Haar. Lockencreme oder Gel geben Definition, nachts schützt ein Kissenbezug aus Seide oder Bambusviskose.",
-  style:"Für definierte Locken föhnst du mit dem Diffusor auf mittlerer Stufe oder lässt sie lufttrocknen. Glatt werden Locken nur mit Hitze, deshalb lieber gezielt glätten statt täglich."+HEAT,
+  care:"Leave-in gehört bei dir zur Basis. Entwirre in der Dusche mit Conditioner, von den Spitzen nach oben. Danach ausdrücken statt rubbeln und das Leave-in ins noch feuchte Haar. Lockencreme oder Gel helfen, dass sich die Locken klar formen, nachts schützt ein Kissenbezug aus Seide oder Bambusviskose.",
+  style:"Für klar geformte Locken föhnst du mit dem Diffusor-Aufsatz am Föhn auf mittlerer Stufe oder lässt sie lufttrocknen. Glatt werden Locken nur mit Hitze, deshalb lieber gezielt glätten statt täglich."+HEAT,
   no:"Trocken bürsten, mit einem normalen Frotteehandtuch rubbeln und sehr heiß föhnen.", sil:SIL},
  E:{ll:"Pflege in Abschnitten, damit wirklich jede Strähne etwas abbekommt.", name:"Eng gelockt",
   intro:"Deine Haare bilden sehr enge Spiralen. An den vielen Biegungen sind sie anfälliger für Bruch und ziehen sich beim Trocknen stark zusammen.",
   care:"Feuchtigkeit und Schutz vor Reibung stehen an erster Stelle. Entwirre in Abschnitten, solange viel Conditioner drin ist. Danach kommt das Leave-in ins feuchte Haar, ein Öl oder eine Creme darüber hält die Feuchtigkeit länger. Nachts schützen ein Kissenbezug aus Seide oder Bambusviskose und eine Seidenhaube.",
-  style:"Für Definition arbeitest du mit Creme oder Gel und lässt die Haare lufttrocknen oder nutzt den Diffusor. Hitze bedeutet für eng gelocktes Haar besonders viel Stress, deshalb lieber selten und gezielt."+HEAT,
+  style:"Damit sich deine Locken klar formen, arbeitest du mit Creme oder Gel und lässt die Haare lufttrocknen oder nutzt den Diffusor-Aufsatz am Föhn. Hitze bedeutet für eng gelocktes Haar besonders viel Stress, deshalb lieber selten und gezielt."+HEAT,
   no:"Trocken kämmen, häufige Hitze und sehr straffe Frisuren, die dauerhaft am Ansatz ziehen.", sil:SIL}
 };
 
@@ -296,7 +299,7 @@ function start(){
     <div class="by">Ein Quiz von Laura, deiner Haarpflege-Bestie</div>
     <h1>Welche Struktur haben deine Haare?</h1>
     <p class="lead">Glatt, wellig oder lockig, und welcher Typ genau? Wenn du deine Struktur kennst, weißt du, wie du deine Haare pflegst und was beim Styling realistisch ist.</p>
-    <p class="how">Acht kurze Fragen, ungefähr zwei Minuten.</p>
+    <p class="how">Sieben bis acht kurze Fragen, ungefähr zwei Minuten.</p>
     <button class="primary" id="go">Quiz starten</button>
     <p class="fine">${FINE}</p>
   </section>`;
@@ -320,11 +323,11 @@ function askKnown(){
 }
 
 function testPage(v){
-  const dry = "Lass sie an der Luft trocknen. Wenn du Wellen oder Locken vermutest, kannst du sie stattdessen einmal mit dem Diffusor auf mittlerer Stufe föhnen. Fass sie dabei nicht an.";
+  const dry = "Lass sie an der Luft trocknen. Wenn du Wellen oder Locken vermutest, kannst du sie stattdessen einmal mit dem Diffusor-Aufsatz am Föhn auf mittlerer Stufe föhnen. Fass sie dabei nicht an.";
   app.innerHTML = `<section class="res fade">
     <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Vorbereitung</span></div>
     <h1>Der Strukturtest</h1>
-    <p class="intro">Damit dein Ergebnis stimmt, sollten deine Haare ihr natürliches Muster zeigen. Das klappt am besten so:</p>
+    <p class="intro">Damit dein Ergebnis stimmt, sollten deine Haare ihre natürliche Struktur zeigen. Das klappt am besten so:</p>
     <ol class="steps">
       <li>Wasch deine Haare mit deinem normalen Shampoo.</li>
       <li>Danach benutzt du nichts mehr, also keinen Conditioner, keine Maske, kein Leave-in, keinen Hitzeschutz und kein Styling.</li>
@@ -411,14 +414,15 @@ function result(){
       <div>
         <p class="res-kicker">Deine Haarstruktur ist am ehesten</p>
         <h1>${r.name}</h1>
-        <p class="subtype"><span class="code">${code}</span>${SUB[code]}</p>
+        <p class="subtype"><span class="code">${strandSVG(code,"mini")}Typ ${code}</span>${SUB[code]}</p>
+        <p class="codehelp">Die Zahl steht für glatt (1), wellig (2), lockig (3) und eng gelockt (4), der Buchstabe dafür, wie ausgeprägt deine Struktur ist, von A wie sanft bis C wie stark.</p>
       </div>
       ${strandSVG(code,"res-art")}
     </div>
     <p class="intro">${r.intro}</p>
     ${untested ? `<div class="box"><h3>Erste Einschätzung</h3><p>Du hast das Quiz ohne Strukturtest gemacht. Mach den Test bei deiner nächsten Wäsche und starte das Quiz danach noch einmal, dann wird dein Ergebnis genauer.</p></div>` : ""}
-    ${flags.chem ? `<div class="box"><h3>Chemisch verändert</h3><p>Durch Dauerwelle oder Glättung ist dein Muster gerade nicht dein natürliches. Dein natürliches Muster siehst du am nachwachsenden Ansatz.</p></div>`
-      : (flags.bl||flags.heat||flags.earlier) ? `<div class="box"><h3>Dein Muster könnte verdeckt sein</h3><p>Blondieren und viel Hitze können Wellen und Locken schwächen, sodass die Haare glatter wirken, als sie sind. Dein natürliches Muster siehst du am nachwachsenden Ansatz.</p></div>` : ""}
+    ${flags.chem ? `<div class="box"><h3>Chemisch verändert</h3><p>Durch Dauerwelle oder Glättung ist deine Struktur gerade nicht deine natürliche. Deine natürliche Struktur siehst du am nachwachsenden Ansatz.</p></div>`
+      : (flags.bl||flags.heat||flags.earlier) ? `<div class="box"><h3>Deine Struktur könnte verdeckt sein</h3><p>Blondieren und viel Hitze können Wellen und Locken schwächen, sodass die Haare glatter wirken, als sie sind. Deine natürliche Struktur siehst du am nachwachsenden Ansatz.</p></div>` : ""}
     <div class="block"><h3><span class="mark">✓</span>Darauf achtest du in der Pflege</h3><p>${r.care}</p></div>
     <div class="llbox"><h3>Meine LL-Methode</h3>
       <p>Leave-in nach der Wäsche ins feuchte Haar, damit die Wirkstoffe einziehen, und zwischen den Wäschen aufs trockene Haar, morgens und abends.</p>
@@ -430,7 +434,7 @@ function result(){
     <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${r.no}</p></div>
     ${r.sil ? `<div class="box"><h3>Und Silikone?</h3><p>${r.sil}</p></div>` : ""}
     <div class="box"><h3>Grundtyp und aktueller Zustand</h3><p>Dein Ergebnis ist eine grobe Einschätzung. Deine Struktur ist dein Grundtyp. Wie deutlich sie sich gerade zeigt, ist dein aktueller Zustand. Der verändert sich durch Schäden, Länge, Gewicht, Pflege, Hormone oder Alter. Mach den Check deshalb ruhig ab und zu neu.</p></div>
-    <p class="soon-note">Muster ist nicht gleich Dicke: Wie reichhaltig deine Pflege sein darf, zeigt dir der Haardicke-Check. Bald kommt meine Webseite, der Healthy Hair Club. Dort findest du weitere Checks und welche Produkte genau zu dir passen.</p>
+    <p class="soon-note">Struktur ist nicht gleich Dicke: Wie reichhaltig deine Pflege sein darf, zeigt dir der Haardicke-Check. Bald kommt meine Webseite, der Healthy Hair Club. Dort findest du weitere Checks und welche Produkte genau zu dir passen.</p>
     <div class="actions"><button class="primary" id="again">Quiz neu starten</button><a class="ghost" href="./">Zurück zu Laura</a></div>
     <p class="fine">${FINE}</p>
   </section>`;

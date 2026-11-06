@@ -131,6 +131,7 @@ body{background:#3A3730 !important}
 .prod{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px;padding:0;list-style:none}
 .prod li{margin:0;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14.5px}
 .res .lead2{font-size:18px;margin-bottom:22px}
+.scalehelp{font-size:14px;color:var(--muted);margin:8px 0 0}
 .soon-note{font-family:var(--serif);font-size:22px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:22px;margin:14px 0 22px}
 </style>
 </head>
@@ -284,6 +285,7 @@ function result(){
       <div class="lab"><span>leicht</span><span>reichhaltig</span></div>
       <div class="steps5">${bar}</div>
       <p class="now">Deine Pflege darf <em>${L.name}</em> sein.</p>
+      <p class="scalehelp">Reichhaltig heißt: mehr pflegende Öle und Fette, die Pflege fühlt sich cremiger an. Leichte Pflege ist flüssiger und beschwert weniger.</p>
     </div>
 
     <div class="block"><h3>Zum Beispiel beim Leave-in</h3>
@@ -293,7 +295,7 @@ function result(){
     </div>
 
     <div class="block"><h3>Als Add-on: Haaröl</h3>
-      <p>${OIL[th]} Öl ist dafür da, die Pflege zu versiegeln und Glanz und Geschmeidigkeit zu geben. Nutze es deshalb nie allein, sondern immer über deinem Leave-in.</p>
+      <p>${OIL[th]} ${OIL[th].includes("Trockenöl") ? "Ein Trockenöl fühlt sich beim Verteilen fast trocken an und fettet nicht. " : ""}Öl ist dafür da, die Pflege zu versiegeln und Glanz und Geschmeidigkeit zu geben. Nutze es deshalb nie allein, sondern immer über deinem Leave-in.</p>
     </div>
 
     <div class="box"><h3>Grundtyp und aktueller Zustand</h3><p>Dein Ergebnis ist eine grobe Einschätzung. Die Dicke deiner Haare ist dein Grundtyp, der bleibt meist ziemlich gleich. Wie sich deine Längen anfühlen und wie viel Pflege sie gerade brauchen, ist dagegen dein aktueller Zustand. Der verändert sich durch Färben, Hitze, Reibung, Jahreszeit, Hormone oder Alter. Mach den Check deshalb ruhig ab und zu neu.</p></div>
