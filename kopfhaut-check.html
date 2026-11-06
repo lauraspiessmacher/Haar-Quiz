@@ -170,7 +170,7 @@ const Q = [
 const R = {
  N:{name:"Normale Kopfhaut",
   intro:"Deine Kopfhaut bildet ausgeglichen Talg und macht keine Probleme.",
-  yes:"Du hast beim Shampoo die größte Auswahl. Feuchtigkeits-, Glanz- oder Repair-Shampoos passen, hier darfst du nach deinem Haarwunsch gehen. Fallen feine Haare schnell platt, passt ein Volumenshampoo.",
+  yes:"<p>Du hast beim Shampoo die größte Auswahl. Hier darfst du nach deinem Wunschergebnis gehen oder nach dem, was deine Haare gerade brauchen:</p><ul><li><strong>Als Basis</strong> passt ein Feuchtigkeitsshampoo oder eins, das mehr Glanz verspricht.</li><li><strong>Für mehr Grundvolumen</strong> nimmst du ein Volumenshampoo. Das passt besonders gut zu feinen Haaren, die schnell platt fallen.</li><li><strong>Ein Repair-Shampoo</strong> nimmst du nur, wenn deine Haare wirklich beansprucht sind, zum Beispiel durch Blondieren, häufiges Färben oder viel Hitze. Viel reparieren kann es allerdings nicht, weil es schnell wieder ausgespült wird. Die eigentliche Pflege kommt danach über Conditioner, Maske und Leave-in.</li></ul>",
   deep:"Ein- bis zweimal im Monat, je nachdem, wie viel Styling du nutzt.",
   no:"Ein Tiefenreinigungs- oder Anti-Schuppen-Shampoo als tägliches Shampoo, obwohl du keine Beschwerden hast."},
  F:{name:"Fettige Kopfhaut",
@@ -303,7 +303,7 @@ function result(){
     <h1>${r.name}</h1>
     <p class="intro">${r.intro}</p>
     ${ftTie ? `<div class="box"><h3>Fettig und trotzdem gespannt?</h3><p>Deine Kopfhaut fettet und spannt gleichzeitig. Das passiert oft, wenn sie zu kräftig gereinigt wird. Probier deshalb zuerst ein Shampoo mit sanfter bis normaler Reinigung, bevor du zu einem kräftigeren greifst.</p></div>` : ""}
-    <div class="block"><h3><span class="mark">✓</span>Darauf achtest du</h3><p>${r.yes}</p></div>
+    <div class="block"><h3><span class="mark">✓</span>Darauf achtest du</h3>${r.yes.startsWith("<") ? r.yes : `<p>${r.yes}</p>`}</div>
     <div class="block"><h3><span class="mark">↻</span>Tiefenreinigung</h3><p>${r.deep} Danach immer Conditioner oder Maske, weil sich die Längen rauer anfühlen können.</p></div>
     <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${r.no}</p></div>
     ${extraSens ? `<div class="box"><h3>Zusätzlich empfindlich</h3><p>Deine Kopfhaut zeigt auch Zeichen von Empfindlichkeit. Achte zusätzlich auf parfumarme Produkte und teste Neues erst an einer kleinen Stelle.</p></div>` : ""}
