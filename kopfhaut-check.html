@@ -160,12 +160,10 @@ const Q = [
   ["Trocken, spannt",{T:1}],
   ["Empfindlich, reagiert schnell",{S:1}]]},
  {t:"Trifft eins davon auf dich zu?", h:"Du kannst mehreres auswählen.", multi:true, a:[
-  ["Nässende, verkrustete oder blutige Stellen auf der Kopfhaut",{w:1}],
-  ["Rötung oder Schuppung, die über den Haaransatz hinausgeht, zum Beispiel auf Stirn, Augenbrauen, hinter die Ohren oder an die Nasenfalten",{w:1}],
-  ["Kreisrunde kahle Stellen oder plötzlich deutlich mehr Haarausfall",{w:1}],
-  ["Schmerzen, Schwellungen oder eitrige Pickel",{w:1}],
-  ["Juckreiz, der dich nachts wach hält oder seit mehreren Wochen trotz passender Pflege bleibt",{w:1}],
-  ["Schuppen, die nach etwa vier Wochen Anti-Schuppen-Shampoo nicht besser geworden sind",{w:1}],
+  ["Nässende, verkrustete oder blutige Stellen, Schmerzen oder eitrige Pickel",{w:1}],
+  ["Rötung oder Schuppen, die über den Haaransatz hinausgehen, zum Beispiel auf Stirn, Augenbrauen oder hinter den Ohren",{w:1}],
+  ["Kahle Stellen oder plötzlich deutlich mehr Haarausfall",{w:1}],
+  ["Juckreiz oder Schuppen, die seit Wochen trotz passender Pflege nicht besser werden",{w:1}],
   ["Nichts davon",{none:1}]]}
 ];
 
@@ -288,9 +286,19 @@ function result(){
 
   app.innerHTML = `<section class="res fade">
     <div class="top"><button class="ghost" id="back">Zurück</button><span class="count">Dein Ergebnis</span></div>
-    ${warn ? `<div class="box warn"><h3>Bitte lass das ärztlich anschauen</h3>
-      <p>Was du angekreuzt hast, sollte sich ein Hautarzt oder eine Hautärztin anschauen. Dahinter können zum Beispiel ein Ekzem, Schuppenflechte oder eine Pilzinfektion stecken, und das kann nur eine Ärztin unterscheiden.</p>
-      <p>Bis dahin nutzt du am besten ein mildes, parfumfreies Shampoo und probierst nichts Neues aus.</p></div>` : ""}
+    ${warn ? `
+    <div class="box warn"><h3>Bitte lass das ärztlich anschauen</h3>
+      <p>Was du angekreuzt hast, sollte sich ein Hautarzt oder eine Hautärztin anschauen. Dahinter können zum Beispiel ein Ekzem, Schuppenflechte oder eine Pilzinfektion stecken, und das kann nur eine Ärztin unterscheiden.</p></div>
+    <div class="block"><h3>Bis zur Abklärung</h3>
+      <ul>
+        <li>Wasch mit einem milden, parfumfreien Shampoo.</li>
+        <li>Probier nichts Neues aus, auch keine Anti-Schuppen-Shampoos, Peelings oder Tiefenreinigung.</li>
+        <li>Nicht kratzen und lauwarm statt heiß waschen.</li>
+      </ul></div>
+    <p class="res-kicker">Deine Antworten deuten gerade am ehesten auf</p>
+    <p class="subtype"><span class="code">${r.name}</span></p>
+    <p>Das ist nur eine grobe Orientierung. Was zu deiner Kopfhaut passt, klärst du am besten nach dem Arzttermin. Sind deine Beschwerden abgeklungen, mach den Check noch einmal, dann siehst du, welchen Kopfhauttyp du im Normalzustand hast.</p>
+` : `
     <p class="res-kicker">Deine Kopfhaut ist gerade am ehesten</p>
     <h1>${r.name}</h1>
     <p class="intro">${r.intro}</p>
@@ -301,7 +309,8 @@ function result(){
     ${extraSens ? `<div class="box"><h3>Zusätzlich empfindlich</h3><p>Deine Kopfhaut zeigt auch Zeichen von Empfindlichkeit. Achte zusätzlich auf parfumarme Produkte und teste Neues erst an einer kleinen Stelle.</p></div>` : ""}
     ${residue ? `<div class="box"><h3>Vielleicht gar keine Schuppen</h3><p>Wahrscheinlich sind es Rückstände von Trockenshampoo oder Styling. Nach einer Tiefenreinigung siehst du, wie deine Kopfhaut wirklich ist.</p></div>` : ""}
 
-    <div class="box"><h3>Grundtyp und aktueller Zustand</h3><p>Dein Ergebnis ist eine grobe Einschätzung. Deine Kopfhaut hat einen Grundtyp, daneben gibt es ihren aktuellen Zustand. Der verändert sich durch Jahreszeit, Heizungsluft, Stress, Hormone, Ernährung oder neue Produkte. Mach den Check deshalb ruhig ab und zu neu.</p></div>
+`}
+    <div class="box"><h3>Grundtyp und aktueller Zustand</h3><p>Dein Ergebnis ist eine grobe Einschätzung. Deine Kopfhaut hat einen Grundtyp, daneben gibt es ihren aktuellen Zustand. Bei der Kopfhaut ändert sich der Zustand oft schneller als bei den Haaren, zum Beispiel durch Jahreszeit, Heizungsluft, Stress, Hormone, Ernährung oder neue Produkte. ${(dand && !warn) ? "Sind deine Schuppen weg, mach den Check noch einmal, dann siehst du deinen Kopfhauttyp im Normalzustand. " : ""}Mach den Check deshalb ruhig ab und zu neu.</p></div>
     <p class="soon-note">Dein Shampoo wählst du nach der Kopfhaut, alles danach nach deinen Haaren. Bald kommt meine Webseite, der Healthy Hair Club. Dort findest du weitere Checks und welche Produkte genau zu dir passen.</p>
     <div class="actions"><button class="primary" id="again">Quiz neu starten</button><a class="ghost" href="./">Zurück zu Laura</a></div>
     <p class="fine">${FINE}</p>

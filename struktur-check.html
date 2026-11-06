@@ -115,6 +115,10 @@ body{background:#3A3730 !important}
   font:500 12px/1 "Instrument Sans",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#F3ECE2;
   text-decoration:none;border:1px solid rgba(243,236,226,.42);border-radius:999px;padding:9px 14px}
 .lh-back:hover{background:#45413A}
+.llbox{background:#F3ECE2;color:#3A3730;border-radius:18px;padding:18px 18px 8px;margin:6px 0 20px}
+.llbox h3{font-size:23px;margin:0 0 8px;color:#3A3730}
+.llbox p{margin:0 0 10px;font-size:15.5px;color:#3A3730}
+.llbox .small{font-size:14px;color:#5E574D}
 .lh-legal{max-width:560px;margin:0 auto;padding:0 22px 36px;font-size:13px;color:#C9BCAE}
 .lh-legal a{color:#C9BCAE;text-underline-offset:3px}
 .soon-note{font-family:var(--serif);font-size:22px;line-height:1.3;border-top:1px solid var(--line-soft);padding-top:22px;margin:14px 0 22px}
@@ -242,29 +246,29 @@ const SUB = {
 const HEAT = " Vor jeder Hitze kommen Leave-in und Hitzeschutz in die Haare.";
 const SIL = "Silikone sind auch für Locken okay. Sie mindern Frizz und schützen vor Luftfeuchtigkeit. Manche lagern sich aber an und machen Locken mit der Zeit schwerer, plane deshalb regelmäßig eine Tiefenreinigung ein.";
 const R = {
- G1:{name:"Glatt und seidig",
+ G1:{ll:"Gib es in Längen und Spitzen, nicht an den Ansatz, damit nichts strähnig wird.", name:"Glatt und seidig",
   intro:"Deine Haare fallen glatt und glänzen von Natur aus, weil ihre Oberfläche sehr gleichmäßig ist. Der Talg wandert leicht in die Längen, deshalb wirken sie oft schneller strähnig.",
   care:"Pflege gehört in Längen und Spitzen, nicht an den Ansatz. Leichte Texturen passen meist besser als schwere Öle. Dein Leave-in kommt ins noch feuchte Haar.",
   style:"Am besten hält der Lockenstab, lass die Locken vor dem Lösen auskühlen. Blowouts fallen bei dir oft schnell wieder. Das liegt an der Struktur und nicht an dir."+HEAT,
   no:"Öl oder reichhaltige Pflege am Ansatz und zu viel Produkt auf einmal, sonst fällt dein Haar schnell platt."},
- GT:{name:"Glatt mit Textur",
+ GT:{ll:"Es glättet die Oberfläche und mindert Frizz im Alltag.", name:"Glatt mit Textur",
   intro:"Deine Haare sind glatt, haben aber mehr Griff, wirken etwas bauschiger und neigen zu Frizz. Weil ihre Oberfläche unruhiger ist, wirken sie schneller glanzlos.",
   care:"Glättende Pflege ist dein bester Freund. Gib nach jeder Wäsche ein Leave-in ins noch feuchte Haar. Produkte mit Silikonen bringen Glanz, mindern Frizz und schützen vor Luftfeuchtigkeit.",
   style:"Blowouts und Locken vom Lockenstab halten bei dir meistens gut, weil dein Haar mehr Griff hat."+HEAT,
   no:"Mit einem normalen Handtuch rubbeln, nimm lieber ein Mikrofaserhandtuch. Und für einen glatten Look nicht ohne Pflege an der Luft trocknen lassen, das fördert Frizz."},
- W:{name:"Wellig",
+ W:{ll:"Nimm eher Sprays oder leichte Seren und knete sie in die Längen, statt durchzubürsten, damit die Wellen nicht platt werden.", name:"Wellig",
   intro:"Deine Haare bilden S-förmige Wellen. Wellen sind leicht und lassen sich schnell beschweren oder durch Bürsten auflösen.",
   care:"Entwirre in der Dusche, solange der Conditioner noch drin ist. Danach drückst du die Haare mit einem Mikrofaserhandtuch aus, statt zu rubbeln, und gibst dein Leave-in ins noch feuchte Haar. Leichte Leave-ins, Schaum oder Wellen-Sprays geben Halt, ohne die Wellen platt zu drücken.",
   style:"Für betonte Wellen föhnst du mit dem Diffusor oder lässt sie lufttrocknen. Glatt werden Wellen nur mit Hitze, das schafft kein Produkt allein."+HEAT,
   no:"Trocken bürsten, schwere Produkte am Ansatz und die Haare nach dem Waschen rubbeln."},
- L:{name:"Lockig",
+ L:{ll:"Auf trockenem Haar ist das gleichzeitig dein Locken-Refresh. Knete oder sprüh das Leave-in in die Locken, statt sie durchzukämmen.", name:"Lockig",
   intro:"Deine Haare drehen sich zu Locken. Der Talg kommt über die vielen Biegungen schlechter in die Spitzen, deshalb sind lockige Längen oft trockener und empfindlicher gegenüber Reibung.",
-  care:"Leave-in gehört bei dir zur Basis. Entwirre in der Dusche mit Conditioner, von den Spitzen nach oben. Danach ausdrücken statt rubbeln und das Leave-in ins noch feuchte Haar. Lockencreme oder Gel geben Definition, nachts schützt ein Satin-Kissenbezug.",
+  care:"Leave-in gehört bei dir zur Basis. Entwirre in der Dusche mit Conditioner, von den Spitzen nach oben. Danach ausdrücken statt rubbeln und das Leave-in ins noch feuchte Haar. Lockencreme oder Gel geben Definition, nachts schützt ein Kissenbezug aus Seide oder Bambusviskose.",
   style:"Für definierte Locken föhnst du mit dem Diffusor auf mittlerer Stufe oder lässt sie lufttrocknen. Glatt werden Locken nur mit Hitze, deshalb lieber gezielt glätten statt täglich."+HEAT,
   no:"Trocken bürsten, mit einem normalen Frotteehandtuch rubbeln und sehr heiß föhnen.", sil:SIL},
- E:{name:"Eng gelockt",
+ E:{ll:"Pflege in Abschnitten, damit wirklich jede Strähne etwas abbekommt.", name:"Eng gelockt",
   intro:"Deine Haare bilden sehr enge Spiralen. An den vielen Biegungen sind sie anfälliger für Bruch und ziehen sich beim Trocknen stark zusammen.",
-  care:"Feuchtigkeit und Schutz vor Reibung stehen an erster Stelle. Entwirre in Abschnitten, solange viel Conditioner drin ist. Danach kommt das Leave-in ins feuchte Haar, ein Öl oder eine Creme darüber hält die Feuchtigkeit länger. Nachts schützt Satin.",
+  care:"Feuchtigkeit und Schutz vor Reibung stehen an erster Stelle. Entwirre in Abschnitten, solange viel Conditioner drin ist. Danach kommt das Leave-in ins feuchte Haar, ein Öl oder eine Creme darüber hält die Feuchtigkeit länger. Nachts schützen ein Kissenbezug aus Seide oder Bambusviskose und eine Seidenhaube.",
   style:"Für Definition arbeitest du mit Creme oder Gel und lässt die Haare lufttrocknen oder nutzt den Diffusor. Hitze bedeutet für eng gelocktes Haar besonders viel Stress, deshalb lieber selten und gezielt."+HEAT,
   no:"Trocken kämmen, häufige Hitze und sehr straffe Frisuren, die dauerhaft am Ansatz ziehen.", sil:SIL}
 };
@@ -416,6 +420,12 @@ function result(){
     ${flags.chem ? `<div class="box"><h3>Chemisch verändert</h3><p>Durch Dauerwelle oder Glättung ist dein Muster gerade nicht dein natürliches. Dein natürliches Muster siehst du am nachwachsenden Ansatz.</p></div>`
       : (flags.bl||flags.heat||flags.earlier) ? `<div class="box"><h3>Dein Muster könnte verdeckt sein</h3><p>Blondieren und viel Hitze können Wellen und Locken schwächen, sodass die Haare glatter wirken, als sie sind. Dein natürliches Muster siehst du am nachwachsenden Ansatz.</p></div>` : ""}
     <div class="block"><h3><span class="mark">✓</span>Darauf achtest du in der Pflege</h3><p>${r.care}</p></div>
+    <div class="llbox"><h3>Meine LL-Methode</h3>
+      <p>Leave-in nach der Wäsche ins feuchte Haar, damit die Wirkstoffe einziehen, und zwischen den Wäschen aufs trockene Haar, morgens und abends.</p>
+      <p>${r.ll}</p>
+      <p><strong>Starte mit wenig Produkt und nimm nach,</strong> wenn du das Gefühl hast, dass nicht jedes Haar etwas abbekommen hat oder es nicht reicht.</p>
+      <p class="small">Probier aus, was deinen Haaren guttut. Ist morgens und abends zu viel, mach es nur abends. Bei sehr feinen Haaren geht auch jeder zweite Tag. Fühlen sich deine Haare trotzdem beschwert an, ist dein Leave-in vielleicht noch zu reichhaltig. Mit der passenden Konsistenz verträgt eigentlich jede Haardicke einmal täglich Leave-in.</p>
+    </div>
     <div class="block"><h3><span class="mark">~</span>Styling: Was realistisch ist</h3><p>${r.style}</p></div>
     <div class="block"><h3><span class="mark">✕</span>Lieber nicht</h3><p>${r.no}</p></div>
     ${r.sil ? `<div class="box"><h3>Und Silikone?</h3><p>${r.sil}</p></div>` : ""}
