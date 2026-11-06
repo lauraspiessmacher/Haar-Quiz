@@ -15,6 +15,55 @@
   - Rossmann-Eigenmarken (ca. 22)
 - Kleinere Marken (z. B. Gisou, OUAI, Olaplex, Color Wow, Bali Curls, NEQI, Dejan Garz, Jean&Len) einzeln über die PR- oder Presse-Adresse.
 
+## Kontakte (recherchiert 06.11.2026, nur was auf offiziellen Seiten stand)
+✅ = ausdrücklich als Presse/PR angegeben · ⚪ = allgemeine Adresse, Anfrage wird meist weitergeleitet · 📝 = nur Formular/Portal
+
+**Drogerien (Eigenmarken)**
+| Wer | Kontakt | Quelle |
+|---|---|---|
+| dm (Balea, Balea Professional, Balea med, alverde, babylove, ebelin) | ✅ presse@dm.de, Tel. +49 721 5592 1195 | dm-Pressemitteilungen 2026 (newsroom.dm.de) |
+| Rossmann (ISANA, ISANA MED, Babydream, Alterra) | ✅ dialog@rossmann.de (Unternehmenskommunikation); ✅ marketing@rossmann.de (Produkt-PR-Newsletter, passt für Produktbilder am besten) | unternehmen.rossmann.de/kontakt/kontakt-zur-presseabteilung.html |
+
+**Konzerne**
+| Wer | Kontakt | Quelle |
+|---|---|---|
+| L'Oréal (Kérastase, Redken, Elvital, Elnett, Garnier, L'Oréal Professionnel, Vichy, Shu Uemura) | 📝 keine Presse-Adresse öffentlich; Mediaroom loreal.com/en/mediaroom; Vichy allgemein ⚪ info@vichy.de. **Am besten über Lauras eigene Kontakte** | loreal.com, vichy.de |
+| Procter & Gamble (Pantene, Herbal Essences, Aussie, head&shoulders, OUAI) | 📝 Pressesprecher stehen im Newsroom pgnewsroom.de; OUAI allgemein ⚪ team@theouai.com | de.pg.com/kontaktieren-sie-uns, theouai.com/pages/contact |
+| Henkel (Schwarzkopf Gliss, syoss, taft) | ✅ elke.schumacher@henkel.com, Tel. +49 211 797 8367 (Gliss-Pressemitteilung 08/2025; vor Nutzung prüfen) | henkel.de Presseinformation Gliss 14.08.2025 |
+| Beiersdorf (NIVEA, Eucerin) | ✅ media@beiersdorf.com, Tel. +49 40 4909-2001 | beiersdorf.de/presse/pressekontakte |
+| Kao (John Frieda, Guhl, Goldwell, Oribe) | 📝 keine Presse-Adresse; Goldwell ⚪ kontakt@kao.com; Zentrale +49 6151 39600 | kao.com/emea/…/germany |
+| Kenvue (OGX) | ✅ Media@Kenvue.com (weltweit, nicht Deutschland) | kenvue.com |
+| Wella Company (Wella Professionals, Sebastian, Nioxin, ghd) | 📝 nur Formular wellacompany.com/consumer-relations | wellacompany.com/contact-us |
+| Dermapharm (Ketozolin) | ⚪ service@dermapharm.de | ketozolin.com/de/impressum/kontakt |
+
+**Einzelne Marken**
+| Marke | Kontakt | Quelle |
+|---|---|---|
+| Gisou | ✅ press@gisou.com | gisou.com/pages/contact |
+| Amika | ✅ pr@loveamika.com | loveamika.com/pages/contact-us |
+| sebamed | ✅ s.kau@jeschenko.de (Produkt-PR, Agentur Jeschenko) | sebamed.de/…/presseverteiler |
+| Buly | ✅ presse@buly1803.com (bitte prüfen) | buly1803.com |
+| Olaplex (DE-Vertrieb New Flag) | ⚪ info@new-flag.com | olaplex.de/pages/impressum |
+| Color Wow | ⚪ hello@colorwowhair.com | colorwowhair.com/pages/contact-us |
+| K18 | ⚪ hello@k18hair.com | k18hair.com/pages/contact |
+| Dejan Garz | ⚪ info@dejangarz.de | dejangarz.com Impressum |
+| Pomélo+Co | ⚪ support@pomelo-co.de | pomelo-co.de/pages/imprint |
+| Langhaarmädchen | ⚪ shop@langhaarmaedchen.de | langhaarmaedchen.de Impressum |
+| Santé | ⚪ service@sante.de | sante.de |
+| Salthouse | ⚪ kundenservice@salthouse.de | salthouse.com |
+| lavera | ⚪ service@lavera.shop | lavera.de Impressum |
+| LILLYDOO | ⚪ service@lillydoo.de | lillydoo.de |
+| Laifen | ⚪ csteam@laifentech.com | laifentech.com |
+| MONDAY Haircare | 📝 Formular, Anfrageart „Press“ | mondayhaircare.com/contact-us |
+| Tangle Teezer | 📝 Formular, Grund „PR“ | tangleteezer.com/pages/contact-us |
+| Maria Nila | 📝 Presse-Portal (Link „Press“ auf marianila.com) | marianila.com |
+| Living Proof | 📝 Seite „Press“ ohne Adresse | livingproof.com/pages/press |
+| epres | 📝 nur Formular | epres.com/pages/contact |
+| Coco & Eve, Oribe, Moroccanoil, The Ordinary, Keune, Goldwell, Lee Stafford, Typebea, Dreame, Remington | 📝 nur Hilfe-Center oder Formular | jeweilige Website |
+| Noch offen (Seite nicht erreichbar oder nicht geprüft) | NEQI, Jean&Len, neboa, Bali Curls, IDA WARG, Dr. Scheller, Rhute, Christophe Robin, Shark, ghd, Dyson, MOVA, Niche Beauty Lab, Aromatica, Elizavecca, The INKEY List, Australian Bodycare, Shiseido fino | – |
+
+Tipp: Wo nur eine allgemeine Adresse oder ein Formular da ist, im Betreff „Presseanfrage“ schreiben und um Weiterleitung an PR bitten. Bei vielen Marken läuft PR über Agenturen; deren Kontakt steht oft unten in aktuellen Pressemitteilungen oder kommt mit PR-Paketen.
+
 ## Für Neuheiten (Laura 06.11.: Laden-Fotos nur als letzte Option)
 - Erlaubnis gleich **für alle Produkte der Marke, auch künftige** erbitten (steht in der E-Mail).
 - In den **Presseverteiler** der Marken aufnehmen lassen: Launch-Infos kommen dann meist mit Bildern, oft schon vor dem Verkaufsstart.
