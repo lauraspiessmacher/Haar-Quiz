@@ -26,6 +26,8 @@ Am besten gesammelt mit einer Anwältin / einem Anwalt für Medien- und Wettbewe
 - [ ] **Produktbilder:** Die Bilder stammen aus verschiedenen Shops und von Herstellerseiten, vor allem dm (products.dm-static.com, rund 1.450 Treffer), außerdem Hagel, Lookfantastic und Marken-Shops. Dürfen wir sie benutzen (Urheberrecht, Nutzungsrechte)? Mögliche Wege: Bilder aus Partnerprogrammen (Affiliate-Programme erlauben das oft für verlinkte Produkte), Pressebilder der Marken anfragen, eigene Fotos.
 - [ ] **Vorschlag von Claude, gleich mitfragen:** Inhaltsstofflisten, die wir aus Shops übernommen haben (dürfen wir die als Sammlung zeigen?); ehrliche Einschätzungen zu Marken und Produkten (Meinung vs. Tatsachenbehauptung); Kennzeichnung von Werbe- und Partnerlinks; Rechtstexte (Impressum, Datenschutz, AGB, Widerruf, siehe FRAGEN-TECHNIK-UND-PREIS.md).
 
+- [ ] **Bildanfragen an Marken (Laura 06.11.: abgelegt, bis sie danach fragt):** Dann E-Mail-Vorlage und Kontaktliste aus notizen/anfrage-produktbilder.md schicken, Adressen vorher kurz neu prüfen, und auf Wunsch pro Marke/Konzern die Produktliste fertig machen.
+
 ## Partnerlinks (Plan Laura 06.11.)
 - Start nur mit **Amazon-Partnerprogramm**: L'Oréal, Garnier & Co., High-End, soweit bei Amazon, Haarbürsten, Styling-Tools.
 - **Drogerie-Eigenmarken** (Balea, ISANA, alverde, babylove, Babydream …): kein Partnerprogramm, normaler Link zum Shop, damit kein Verdienst.
