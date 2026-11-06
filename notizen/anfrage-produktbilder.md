@@ -33,7 +33,9 @@ Gerade baue ich die Website „Haarpflege einfach erklärt“ auf. Dort erkläre
 Dabei sind auch folgende Produkte von [Marke / Ihren Marken]:
 [Liste der Produkte]
 
-Ich möchte Sie um Erlaubnis bitten, Ihre offiziellen Produktbilder (Packshots) dafür zu verwenden: unverändert, auf der Produktkarte und der Produktseite, gern mit Bildnachweis, wenn Sie das wünschen. Am liebsten würde die Erlaubnis auch für künftige Neuheiten Ihrer Marken gelten, damit ich neue Produkte direkt nach dem Launch aufnehmen kann. Wenn Sie einen Presseverteiler für Neuheiten haben, nehmen Sie mich gern auf. Die Website ist teilweise kostenpflichtig (Abo) und enthält gekennzeichnete Partnerlinks zu Shops.
+Ich möchte Sie um Erlaubnis bitten, Ihre offiziellen Produktbilder (Packshots) dafür zu verwenden: unverändert, auf der Produktkarte und der Produktseite, gern mit Bildnachweis, wenn Sie das wünschen. Die Website ist teilweise kostenpflichtig (Abo) und enthält gekennzeichnete Partnerlinks zu Shops.
+
+Am liebsten würde die Erlaubnis auch für künftige Neuheiten Ihrer Marken gelten, damit ich neue Produkte direkt nach dem Launch aufnehmen kann. Wenn Sie einen Presseverteiler für Neuheiten haben, nehmen Sie mich gern auf.
 
 Wenn Sie zustimmen, wäre eine kurze schriftliche Bestätigung per E-Mail super, gern mit dem Hinweis, wo ich die Bilder in guter Auflösung herunterladen kann (zum Beispiel aus Ihrem Pressebereich). Falls Sie Vorgaben zur Nutzung haben, halte ich mich natürlich daran.
 
