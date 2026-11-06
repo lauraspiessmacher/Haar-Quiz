@@ -1104,6 +1104,10 @@ html[data-stil] .grid .item > .txt > .buyrow:not(.sm){position:absolute;right:16
 .ll-bewegt .llschritte.ll-an .ll-tropfen{animation:lltropfen 1.8s ease-in infinite}
 @keyframes lltropfen{0%{transform:translateY(0);opacity:0}15%{opacity:1}80%{transform:translateY(30px);opacity:1}100%{transform:translateY(32px);opacity:0}}
 .wb-fort{position:fixed;left:0;top:0;height:3px;width:0;background:#382F2E;z-index:40;pointer-events:none;transition:width .1s linear}
+.wb-arzt{display:flex;gap:12px;align-items:flex-start;background:#ECE9E4;border-left:2px solid #3A3730;border-radius:0 12px 12px 0;padding:12px 16px;margin:6px 0 22px;font-size:13.5px;line-height:1.55;color:var(--ink)}
+.wb-arzt svg{flex:none;width:20px;height:20px;color:#3A3730;margin-top:1px}
+.wb-arzt p{margin:0}
+.wb-arzt b{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#3A3730;margin-bottom:3px}
 .wfine{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:16px;margin-top:30px}
 
 /* ---------- Hair Journey als Buch ---------- */
@@ -3159,6 +3163,9 @@ function wissenBausteine(art, w){
   });
   const h2 = art.querySelector("h2"), worte = w.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
   if(h2) h2.insertAdjacentHTML("afterend", `<div class="wb-meta"><span>ca. ${Math.max(1, Math.round(worte / 180))} Min. Lesezeit</span></div>`);
+  /* Gesundheitsthemen (06.11., Laura): Hinweis gleich oben, nicht erst am Ende */
+  const meta = art.querySelector(".wb-meta");
+  if(w.arzt && meta) meta.insertAdjacentHTML("afterend", `<div class="wb-arzt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><p><b>Wichtig vorab</b>Ich bin keine Ärztin. Hier erkläre ich euch, was ich zu diesem Thema recherchiert habe, damit ihr es besser versteht. Das ersetzt keine ärztliche Beratung, Diagnose oder Behandlung. Wenn ihr Beschwerden habt oder ein Mittel anwenden möchtet, sprecht bitte mit eurem Hautarzt oder in der Apotheke.</p></div>`);
   art.querySelectorAll(".wb-frage").forEach(f => f.querySelectorAll("button").forEach(b => b.onclick = () => {
     f.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
     const a = f.querySelector(".wb-antwort"); a.hidden = false;
