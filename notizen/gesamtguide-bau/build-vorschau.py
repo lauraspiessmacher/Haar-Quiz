@@ -144,7 +144,7 @@ t = t.replace('__HAARSTRAEHNE__', 'data:image/webp;base64,' + base64.b64encode(o
 t = t.replace('__TELEFON__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/telefon.webp','rb').read()).decode())
 t = t.replace('__SIEGEL_HHC__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/siegel-hhc.webp','rb').read()).decode())
 t = t.replace('__STECKNADEL__', 'data:image/webp;base64,' + base64.b64encode(open(f'{S}/../bilder/deko/stecknadel.webp','rb').read()).decode())
-t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-web.jpg','rb').read()).decode())
+t = t.replace('__LAURA_FOTO__', 'data:image/jpeg;base64,' + base64.b64encode(open(f'{S}/laura-startseite-neu.jpg','rb').read()).decode())  # 07.11. Test neues Foto; altes: laura-startseite-web.jpg
 t = t.replace('__QUIZ_HAAR__', 'quiz-haar.html').replace('__QUIZ_PFLEGE__', 'quiz-pflege.html').replace('__QUIZ_KOPF__', 'quiz-kopfhaut.html').replace('__QUIZ_ROUTINE__', 'quiz-routine.html').replace('__QUIZ_TOOLS__', 'quiz-tools.html').replace('__QUIZ_SCHNITT__', 'quiz-schnitt.html').replace('__QUIZ_SPLISS__', 'quiz-spliss.html').replace('__QUIZ_LEAVEIN__', 'quiz-leavein.html').replace('__QUIZ_KOPFPFLEGE__', 'quiz-kopfpflege.html').replace('__QUIZ_AUSFALL__', 'quiz-ausfall.html')
 t = t.replace('<p class="note-banner">Vorschau mit allen echten Produkten aus deinen 6 Guides. Quiz und Wissen sind noch Platzhalter.</p>',
               '<p class="note-banner">Wissen ist noch ein Platzhalter. Die Wissenstexte kommen später.</p>')
